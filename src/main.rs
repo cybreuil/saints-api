@@ -16,12 +16,8 @@ async fn main() -> std::io::Result<()> {
 
     println!("🚀 Démarrage de l'API Saints sur http://127.0.0.1:{}", port);
 
-    HttpServer::new(|| {
-        App::new()
-            .service(api::saints::list_saints)
-            .service(api::saints::get_saint)
-    })
-    .bind(("127.0.0.1", port))?
-    .run()
-    .await
+    HttpServer::new(|| App::new().service(api::saints::routes()))
+        .bind(("127.0.0.1", port))?
+        .run()
+        .await
 }

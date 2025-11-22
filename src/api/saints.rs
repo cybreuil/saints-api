@@ -1,7 +1,6 @@
 use crate::models::saint::Saint;
-use actix_web::{HttpResponse, Responder, get, web};
+use actix_web::{HttpResponse, Responder, Scope, get, web};
 
-#[get("/saints")]
 async fn list_saints() -> impl Responder {
     // Pour l'instant, retourne une liste statique
     let saints = vec![
@@ -21,7 +20,6 @@ async fn list_saints() -> impl Responder {
     HttpResponse::Ok().json(saints)
 }
 
-#[get("/saints/{id}")]
 async fn get_saint(path: web::Path<i32>) -> impl Responder {
     let saint_id = path.into_inner();
     // Pour l'instant, retourne un saint statique basé sur l'ID
@@ -45,4 +43,10 @@ async fn get_saint(path: web::Path<i32>) -> impl Responder {
         Some(s) => HttpResponse::Ok().json(s),
         None => HttpResponse::NotFound().body("Saint not found"),
     }
+}
+
+pub fn routes() -> Scope {
+    web::scope("/saints")
+        .route("", web::get().to(list_saints))
+        .route("/{id}", web::get().to(get_saint))
 }
