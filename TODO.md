@@ -1,5 +1,5 @@
 Full structure in rust ?
-Rest api design
+Rest api design ! json responses ! maybe a web server like actix-web or rocket ?
 - GET /saints - list all saints
 - GET /saints/{id} - get details of a specific saint
 - POST /saints - create a new saint
