@@ -1,12 +1,9 @@
 use crate::errors::ApiError;
 use crate::middleware::auth::require_auth;
-use crate::models::feast::{CreateFeast, Feast, FeastQuery, FeastTranslation, UpdateFeast};
+use crate::models::feast::{CreateFeast, Feast, FeastDateSummary, FeastQuery, FeastTranslation, UpdateFeast};
+use crate::pagination::Pagination;
 use actix_web::{HttpRequest, HttpResponse, Scope, web};
-use sqlx::PgPool;
-
-const DEFAULT_PAGE: i64 = 1;
-const DEFAULT_PER_PAGE: i64 = 20;
-const MAX_PER_PAGE: i64 = 100;
+use sqlx::{PgPool, QueryBuilder};
 
 // ── GET /feasts ───────────────────────────────────────────────────────────────
 
@@ -14,38 +11,27 @@ async fn list_feasts(
     pool: web::Data<PgPool>,
     query: web::Query<FeastQuery>,
 ) -> Result<HttpResponse, ApiError> {
-    let page = query.page.unwrap_or(DEFAULT_PAGE).max(1);
-    let per_page = query.per_page.unwrap_or(DEFAULT_PER_PAGE).max(1).min(MAX_PER_PAGE);
-    let offset = (page - 1) * per_page;
+    let p = Pagination::new(query.page, query.per_page);
 
-    let feasts = match &query.feast_type {
-        Some(ft) => {
-            sqlx::query_as::<_, Feast>(
-                "SELECT id, slug, default_name, feast_type, created_at \
-                 FROM feasts WHERE feast_type = $1 \
-                 ORDER BY default_name ASC LIMIT $2 OFFSET $3",
-            )
-            .bind(ft)
-            .bind(per_page)
-            .bind(offset)
-            .fetch_all(pool.get_ref())
-            .await?
-        }
-        None => {
-            sqlx::query_as::<_, Feast>(
-                "SELECT id, slug, default_name, feast_type, created_at \
-                 FROM feasts ORDER BY default_name ASC LIMIT $1 OFFSET $2",
-            )
-            .bind(per_page)
-            .bind(offset)
-            .fetch_all(pool.get_ref())
-            .await?
-        }
-    };
+    let mut qb = QueryBuilder::new(
+        "SELECT id, slug, default_name, feast_type, created_at FROM feasts",
+    );
+    if let Some(ref ft) = query.feast_type {
+        qb.push(" WHERE feast_type = ").push_bind(ft.as_str());
+    }
+    qb.push(" ORDER BY default_name ASC LIMIT ")
+        .push_bind(p.per_page)
+        .push(" OFFSET ")
+        .push_bind(p.offset);
+
+    let feasts = qb
+        .build_query_as::<Feast>()
+        .fetch_all(pool.get_ref())
+        .await?;
 
     Ok(HttpResponse::Ok().json(serde_json::json!({
-        "page": page,
-        "per_page": per_page,
+        "page": p.page,
+        "per_page": p.per_page,
         "data": feasts
     })))
 }
@@ -112,7 +98,6 @@ async fn get_feast_by_slug(
 async fn get_feasts_by_date(
     pool: web::Data<PgPool>,
     path: web::Path<(i16, i16)>,
-    _query: web::Query<FeastQuery>,
 ) -> Result<HttpResponse, ApiError> {
     let (month, day) = path.into_inner();
 
@@ -123,58 +108,22 @@ async fn get_feasts_by_date(
         return Err(ApiError::BadRequest("day must be between 1 and 31".into()));
     }
 
-    struct FeastDateRow {
-        feast_id: i32,
-        slug: String,
-        default_name: String,
-        feast_type: String,
-        calendar_id: i32,
-        date_kind: String,
-    }
-    impl sqlx::FromRow<'_, sqlx::postgres::PgRow> for FeastDateRow {
-        fn from_row(row: &sqlx::postgres::PgRow) -> Result<Self, sqlx::Error> {
-            use sqlx::Row;
-            Ok(Self {
-                feast_id: row.try_get("feast_id")?,
-                slug: row.try_get("slug")?,
-                default_name: row.try_get("default_name")?,
-                feast_type: row.try_get("feast_type")?,
-                calendar_id: row.try_get("calendar_id")?,
-                date_kind: row.try_get("date_kind")?,
-            })
-        }
-    }
-
-    let base_query = "SELECT f.id AS feast_id, f.slug, f.default_name, f.feast_type, \
-                      fd.calendar_id, fd.date_kind \
-                      FROM feasts f \
-                      JOIN feast_dates fd ON fd.feast_id = f.id \
-                      WHERE fd.date_kind = 'fixed' AND fd.month = $1 AND fd.day = $2";
-
-    let rows: Vec<FeastDateRow> = sqlx::query_as::<_, FeastDateRow>(base_query)
-        .bind(month)
-        .bind(day)
-        .fetch_all(pool.get_ref())
-        .await?;
-
-    let result: Vec<serde_json::Value> = rows
-        .into_iter()
-        .map(|r| {
-            serde_json::json!({
-                "feast_id": r.feast_id,
-                "slug": r.slug,
-                "default_name": r.default_name,
-                "feast_type": r.feast_type,
-                "calendar_id": r.calendar_id,
-                "date_kind": r.date_kind,
-            })
-        })
-        .collect();
+    let rows = sqlx::query_as::<_, FeastDateSummary>(
+        "SELECT f.id AS feast_id, f.slug, f.default_name, f.feast_type, \
+         fd.calendar_id, fd.date_kind \
+         FROM feasts f \
+         JOIN feast_dates fd ON fd.feast_id = f.id \
+         WHERE fd.date_kind = 'fixed' AND fd.month = $1 AND fd.day = $2",
+    )
+    .bind(month)
+    .bind(day)
+    .fetch_all(pool.get_ref())
+    .await?;
 
     Ok(HttpResponse::Ok().json(serde_json::json!({
         "month": month,
         "day": day,
-        "data": result
+        "data": rows
     })))
 }
 
