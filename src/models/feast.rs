@@ -18,6 +18,17 @@ pub struct FeastTranslation {
     pub description: Option<String>,
 }
 
+/// Projection returned by the fixed-date search endpoint (JOIN feasts + feast_dates).
+#[derive(Debug, Serialize, sqlx::FromRow)]
+pub struct FeastDateSummary {
+    pub feast_id: i32,
+    pub slug: String,
+    pub default_name: String,
+    pub feast_type: String,
+    pub calendar_id: i32,
+    pub date_kind: String,
+}
+
 #[allow(dead_code)]
 #[derive(Debug, Serialize, Deserialize, sqlx::FromRow)]
 pub struct FeastDate {

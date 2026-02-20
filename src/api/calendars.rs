@@ -2,12 +2,9 @@ use crate::errors::ApiError;
 use crate::middleware::auth::require_auth;
 use crate::models::calendar::{Calendar, CalendarQuery, CreateCalendar, LiturgicalRank, UpdateCalendar};
 use crate::models::celebration::Celebration;
+use crate::pagination::Pagination;
 use actix_web::{HttpRequest, HttpResponse, Scope, web};
-use sqlx::PgPool;
-
-const DEFAULT_PAGE: i64 = 1;
-const DEFAULT_PER_PAGE: i64 = 20;
-const MAX_PER_PAGE: i64 = 100;
+use sqlx::{PgPool, QueryBuilder};
 
 // ── GET /calendars ────────────────────────────────────────────────────────────
 
@@ -15,40 +12,28 @@ async fn list_calendars(
     pool: web::Data<PgPool>,
     query: web::Query<CalendarQuery>,
 ) -> Result<HttpResponse, ApiError> {
-    let page = query.page.unwrap_or(DEFAULT_PAGE).max(1);
-    let per_page = query.per_page.unwrap_or(DEFAULT_PER_PAGE).max(1).min(MAX_PER_PAGE);
-    let offset = (page - 1) * per_page;
+    let p = Pagination::new(query.page, query.per_page);
 
-    let calendars = match query.is_active {
-        Some(active) => {
-            sqlx::query_as::<_, Calendar>(
-                "SELECT id, code, name, description, parent_id, date_system, \
-                 easter_computation, is_active, created_at \
-                 FROM calendars WHERE is_active = $1 \
-                 ORDER BY name ASC LIMIT $2 OFFSET $3",
-            )
-            .bind(active)
-            .bind(per_page)
-            .bind(offset)
-            .fetch_all(pool.get_ref())
-            .await?
-        }
-        None => {
-            sqlx::query_as::<_, Calendar>(
-                "SELECT id, code, name, description, parent_id, date_system, \
-                 easter_computation, is_active, created_at \
-                 FROM calendars ORDER BY name ASC LIMIT $1 OFFSET $2",
-            )
-            .bind(per_page)
-            .bind(offset)
-            .fetch_all(pool.get_ref())
-            .await?
-        }
-    };
+    let mut qb = QueryBuilder::new(
+        "SELECT id, code, name, description, parent_id, date_system, \
+         easter_computation, is_active, created_at FROM calendars",
+    );
+    if let Some(active) = query.is_active {
+        qb.push(" WHERE is_active = ").push_bind(active);
+    }
+    qb.push(" ORDER BY name ASC LIMIT ")
+        .push_bind(p.per_page)
+        .push(" OFFSET ")
+        .push_bind(p.offset);
+
+    let calendars = qb
+        .build_query_as::<Calendar>()
+        .fetch_all(pool.get_ref())
+        .await?;
 
     Ok(HttpResponse::Ok().json(serde_json::json!({
-        "page": page,
-        "per_page": per_page,
+        "page": p.page,
+        "per_page": p.per_page,
         "data": calendars
     })))
 }
@@ -94,7 +79,6 @@ async fn get_calendar_celebrations(
 ) -> Result<HttpResponse, ApiError> {
     let calendar_id = path.into_inner();
 
-    // Verify calendar exists
     let exists: bool = sqlx::query_scalar("SELECT EXISTS(SELECT 1 FROM calendars WHERE id = $1)")
         .bind(calendar_id)
         .fetch_one(pool.get_ref())
@@ -104,9 +88,7 @@ async fn get_calendar_celebrations(
         return Err(ApiError::NotFound);
     }
 
-    let page = query.page.unwrap_or(DEFAULT_PAGE).max(1);
-    let per_page = query.per_page.unwrap_or(DEFAULT_PER_PAGE).max(1).min(MAX_PER_PAGE);
-    let offset = (page - 1) * per_page;
+    let p = Pagination::new(query.page, query.per_page);
 
     let celebrations = sqlx::query_as::<_, Celebration>(
         "SELECT id, feast_id, calendar_id, rank_id, color_id, \
@@ -115,15 +97,15 @@ async fn get_calendar_celebrations(
          ORDER BY id ASC LIMIT $2 OFFSET $3",
     )
     .bind(calendar_id)
-    .bind(per_page)
-    .bind(offset)
+    .bind(p.per_page)
+    .bind(p.offset)
     .fetch_all(pool.get_ref())
     .await?;
 
     Ok(HttpResponse::Ok().json(serde_json::json!({
         "calendar_id": calendar_id,
-        "page": page,
-        "per_page": per_page,
+        "page": p.page,
+        "per_page": p.per_page,
         "data": celebrations
     })))
 }

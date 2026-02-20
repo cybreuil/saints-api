@@ -1,12 +1,9 @@
 use crate::errors::ApiError;
 use crate::middleware::auth::require_auth;
 use crate::models::saint::{CreateSaint, Saint, SaintQuery, SaintTranslation, UpdateSaint};
+use crate::pagination::Pagination;
 use actix_web::{HttpRequest, HttpResponse, Scope, web};
 use sqlx::PgPool;
-
-const DEFAULT_PAGE: i64 = 1;
-const DEFAULT_PER_PAGE: i64 = 20;
-const MAX_PER_PAGE: i64 = 100;
 
 // ── GET /saints ──────────────────────────────────────────────────────────────
 
@@ -14,9 +11,7 @@ async fn list_saints(
     pool: web::Data<PgPool>,
     query: web::Query<SaintQuery>,
 ) -> Result<HttpResponse, ApiError> {
-    let page = query.page.unwrap_or(DEFAULT_PAGE).max(1);
-    let per_page = query.per_page.unwrap_or(DEFAULT_PER_PAGE).max(1).min(MAX_PER_PAGE);
-    let offset = (page - 1) * per_page;
+    let p = Pagination::new(query.page, query.per_page);
 
     let saints = sqlx::query_as::<_, Saint>(
         "SELECT id, slug, default_name, birth_date, death_date, \
@@ -25,14 +20,14 @@ async fn list_saints(
          ORDER BY default_name ASC \
          LIMIT $1 OFFSET $2",
     )
-    .bind(per_page)
-    .bind(offset)
+    .bind(p.per_page)
+    .bind(p.offset)
     .fetch_all(pool.get_ref())
     .await?;
 
     Ok(HttpResponse::Ok().json(serde_json::json!({
-        "page": page,
-        "per_page": per_page,
+        "page": p.page,
+        "per_page": p.per_page,
         "data": saints
     })))
 }

@@ -4,6 +4,7 @@ mod db;
 mod errors;
 mod middleware;
 mod models;
+mod pagination;
 
 use actix_cors::Cors;
 use actix_web::{App, HttpServer, middleware::Logger, web};
