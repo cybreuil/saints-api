@@ -22,7 +22,11 @@ async fn main() -> std::io::Result<()> {
     let cfg_data = web::Data::new(cfg.clone());
     let pool_data = web::Data::new(pool);
 
-    tracing::info!("🚀 Saints API listening on http://0.0.0.0:{}", cfg.port);
+    tracing::info!(
+        "🚀 Saints API listening on {}:{}",
+        cfg.bind_address,
+        cfg.port
+    );
 
     HttpServer::new(move || {
         let cors = Cors::default()
@@ -47,7 +51,7 @@ async fn main() -> std::io::Result<()> {
             .service(api::calendars::routes())
             .service(api::celebrations::routes())
     })
-    .bind(("0.0.0.0", cfg.port))?
+    .bind((cfg.bind_address, cfg.port))?
     .run()
     .await
 }
