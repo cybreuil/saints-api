@@ -7,17 +7,15 @@ mod models;
 mod pagination;
 
 use actix_cors::Cors;
-use actix_web::{App, HttpServer, middleware::Logger, web};
+use actix_web::{middleware::Logger, web, App, HttpServer};
 use dotenv::dotenv;
-use tracing_subscriber::{EnvFilter, fmt};
+use tracing_subscriber::{fmt, EnvFilter};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     dotenv().ok();
 
-    fmt()
-        .with_env_filter(EnvFilter::from_default_env())
-        .init();
+    fmt().with_env_filter(EnvFilter::from_default_env()).init();
 
     let cfg = config::Config::from_env();
     let pool = db::create_pool(&cfg.database_url).await;
@@ -38,14 +36,11 @@ async fn main() -> std::io::Result<()> {
             .wrap(Logger::default())
             .app_data(pool_data.clone())
             .app_data(cfg_data.clone())
-            .app_data(
-                web::JsonConfig::default()
-                    .error_handler(|err, _req| {
-                        let response = actix_web::HttpResponse::BadRequest()
-                            .json(serde_json::json!({ "error": err.to_string() }));
-                        actix_web::error::InternalError::from_response(err, response).into()
-                    }),
-            )
+            .app_data(web::JsonConfig::default().error_handler(|err, _req| {
+                let response = actix_web::HttpResponse::BadRequest()
+                    .json(serde_json::json!({ "error": err.to_string() }));
+                actix_web::error::InternalError::from_response(err, response).into()
+            }))
             .service(api::health::routes())
             .service(api::saints::routes())
             .service(api::feasts::routes())
@@ -56,4 +51,3 @@ async fn main() -> std::io::Result<()> {
     .run()
     .await
 }
-
