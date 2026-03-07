@@ -29,19 +29,20 @@ DROP TABLE IF EXISTS locales CASCADE;
 
 -- Langues disponibles
 CREATE TABLE locales (
-    code VARCHAR(10) PRIMARY KEY,                 -- ex: fr, en, la
-    name VARCHAR(50) NOT NULL
+    code TEXT PRIMARY KEY CHECK (char_length(code) <= 10),   -- ex: fr, en, la
+    name TEXT NOT NULL,
+    name_english TEXT NOT NULL
 );
 
 -- Calendriers liturgiques (avec héritage hiérarchique)
 CREATE TABLE calendars (
     id SERIAL PRIMARY KEY,
-    code VARCHAR(50) UNIQUE NOT NULL,             -- ex: ROMAN_GENERAL_1969, ROMAN_FRANCE
-    name VARCHAR(150) NOT NULL,
+    code TEXT UNIQUE NOT NULL,                               -- ex: ROMAN_GENERAL_1969, ROMAN_FRANCE
+    name TEXT NOT NULL,
     description TEXT,
     parent_id INTEGER REFERENCES calendars(id) ON DELETE SET NULL,
-    date_system VARCHAR(20) NOT NULL DEFAULT 'gregorian',   -- gregorian, julian
-    easter_computation VARCHAR(20) NOT NULL DEFAULT 'western', -- western, eastern
+    date_system TEXT NOT NULL DEFAULT 'gregorian' CHECK (date_system IN ('gregorian', 'julian')),   -- gregorian, julian
+    easter_computation TEXT NOT NULL DEFAULT 'western' CHECK (easter_computation IN ('western', 'eastern')), -- western, eastern
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -50,8 +51,8 @@ CREATE TABLE calendars (
 CREATE TABLE liturgical_ranks (
     id SERIAL PRIMARY KEY,
     calendar_id INTEGER NOT NULL REFERENCES calendars(id) ON DELETE CASCADE,
-    code VARCHAR(40) NOT NULL,                    -- ex: SOLEMNITY, FEAST, CLASS_I
-    label_fr VARCHAR(120) NOT NULL,
+    code TEXT NOT NULL,                                      -- ex: SOLEMNITY, FEAST, CLASS_I
+    label_fr TEXT NOT NULL,
     precedence SMALLINT NOT NULL CHECK (precedence > 0),
     UNIQUE (calendar_id, code),
     UNIQUE (calendar_id, precedence)
@@ -60,15 +61,15 @@ CREATE TABLE liturgical_ranks (
 -- Couleurs liturgiques
 CREATE TABLE liturgical_colors (
     id SERIAL PRIMARY KEY,
-    code VARCHAR(20) UNIQUE NOT NULL,             -- ex: WHITE, RED, GREEN
-    hex_color VARCHAR(7) NOT NULL                 -- ex: #FFFFFF, #FF0000
+    code TEXT UNIQUE NOT NULL,                               -- ex: WHITE, RED, GREEN
+    hex_color TEXT NOT NULL CHECK (hex_color ~ '^#[0-9A-Fa-f]{6}$') -- ex: #FFFFFF, #FF0000
 );
 
 -- Traductions des couleurs liturgiques
 CREATE TABLE liturgical_color_translations (
     color_id INTEGER NOT NULL REFERENCES liturgical_colors(id) ON DELETE CASCADE,
-    locale_code VARCHAR(10) NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
-    label VARCHAR(50) NOT NULL,
+    locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+    label TEXT NOT NULL,
     PRIMARY KEY (color_id, locale_code)
 );
 
@@ -78,19 +79,19 @@ CREATE TABLE liturgical_color_translations (
 
 CREATE TABLE saints (
     id SERIAL PRIMARY KEY,
-    slug VARCHAR(160) UNIQUE NOT NULL,            -- ex: saint-joseph
-    default_name VARCHAR(255) NOT NULL,
+    slug TEXT UNIQUE NOT NULL,                               -- ex: saint-joseph
+    default_name TEXT NOT NULL,
     birth_date DATE,
     death_date DATE,
     short_description TEXT,
-    image_url VARCHAR(512),
+    image_url TEXT,
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE saint_translations (
     saint_id INTEGER NOT NULL REFERENCES saints(id) ON DELETE CASCADE,
-    locale_code VARCHAR(10) NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
-    name VARCHAR(255) NOT NULL,
+    locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+    name TEXT NOT NULL,
     short_description TEXT,
     full_biography TEXT,
     PRIMARY KEY (saint_id, locale_code)
@@ -102,14 +103,14 @@ CREATE TABLE saint_translations (
 
 CREATE TABLE attributes (
     id SERIAL PRIMARY KEY,
-    code VARCHAR(120) UNIQUE NOT NULL,            -- ex: LILY, SWORD, SKULL, BOOK
-    category VARCHAR(50)                          -- ex: symbol, title, order
+    code TEXT UNIQUE NOT NULL,                               -- ex: LILY, SWORD, SKULL, BOOK
+    category TEXT                                            -- ex: symbol, title, order
 );
 
 CREATE TABLE attribute_translations (
     attribute_id INTEGER NOT NULL REFERENCES attributes(id) ON DELETE CASCADE,
-    locale_code VARCHAR(10) NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
-    label VARCHAR(255) NOT NULL,
+    locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+    label TEXT NOT NULL,
     description TEXT,
     PRIMARY KEY (attribute_id, locale_code)
 );
@@ -126,13 +127,13 @@ CREATE TABLE saint_attributes (
 
 CREATE TABLE patronages (
     id SERIAL PRIMARY KEY,
-    code VARCHAR(120) UNIQUE NOT NULL             -- ex: WORKERS, FRANCE, STUDENTS
+    code TEXT UNIQUE NOT NULL                                -- ex: WORKERS, FRANCE, STUDENTS
 );
 
 CREATE TABLE patronage_translations (
     patronage_id INTEGER NOT NULL REFERENCES patronages(id) ON DELETE CASCADE,
-    locale_code VARCHAR(10) NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
-    label VARCHAR(255) NOT NULL,
+    locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+    label TEXT NOT NULL,
     description TEXT,
     PRIMARY KEY (patronage_id, locale_code)
 );
@@ -149,16 +150,16 @@ CREATE TABLE saint_patronages (
 
 CREATE TABLE feasts (
     id SERIAL PRIMARY KEY,
-    slug VARCHAR(160) UNIQUE NOT NULL,            -- ex: assomption, saint-joseph-epoux
-    default_name VARCHAR(255) NOT NULL,
-    feast_type VARCHAR(50) NOT NULL,              -- ex: saint, marial, christologique, dedicace, autre
+    slug TEXT UNIQUE NOT NULL,                               -- ex: assomption, saint-joseph-epoux
+    default_name TEXT NOT NULL,
+    feast_type TEXT NOT NULL,                                -- ex: saint, marial, christologique, dedicace, autre
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE feast_translations (
     feast_id INTEGER NOT NULL REFERENCES feasts(id) ON DELETE CASCADE,
-    locale_code VARCHAR(10) NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
-    name VARCHAR(255) NOT NULL,
+    locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+    name TEXT NOT NULL,
     description TEXT,
     PRIMARY KEY (feast_id, locale_code)
 );
@@ -173,14 +174,14 @@ CREATE TABLE feast_dates (
     feast_id INTEGER NOT NULL REFERENCES feasts(id) ON DELETE CASCADE,
     calendar_id INTEGER NOT NULL REFERENCES calendars(id) ON DELETE CASCADE,
 
-    date_kind VARCHAR(20) NOT NULL CHECK (date_kind IN ('fixed', 'movable')),
+    date_kind TEXT NOT NULL CHECK (date_kind IN ('fixed', 'movable')),
 
     -- Pour fixed
     month SMALLINT CHECK (month BETWEEN 1 AND 12),
     day SMALLINT CHECK (day BETWEEN 1 AND 31),
 
     -- Pour movable (interprété selon calendar.easter_computation)
-    movable_base VARCHAR(30),                     -- ex: EASTER, CHRISTMAS
+    movable_base TEXT,                                       -- ex: EASTER, CHRISTMAS
     movable_offset_days INTEGER,
 
     -- Période de validité historique (optionnel)
@@ -190,9 +191,12 @@ CREATE TABLE feast_dates (
     notes TEXT,
 
     CHECK (
-        (date_kind = 'fixed' AND month IS NOT NULL AND day IS NOT NULL AND movable_base IS NULL)
+        (date_kind = 'fixed' AND month IS NOT NULL AND day IS NOT NULL AND movable_base IS NULL AND movable_offset_days IS NULL)
         OR
-        (date_kind = 'movable' AND movable_base IS NOT NULL)
+        (date_kind = 'movable' AND movable_base IS NOT NULL AND month IS NULL AND day IS NULL)
+    ),
+    CHECK (
+        valid_to IS NULL OR valid_from IS NULL OR valid_to >= valid_from
     )
 );
 
@@ -214,14 +218,17 @@ CREATE TABLE celebrations (
     valid_from DATE,
     valid_to DATE,
 
-    UNIQUE (feast_id, calendar_id)
+    UNIQUE (feast_id, calendar_id),
+    CHECK (
+        valid_to IS NULL OR valid_from IS NULL OR valid_to >= valid_from
+    )
 );
 
 -- Liaison célébrations <-> saints
 CREATE TABLE celebration_saints (
     celebration_id INTEGER NOT NULL REFERENCES celebrations(id) ON DELETE CASCADE,
     saint_id INTEGER NOT NULL REFERENCES saints(id) ON DELETE CASCADE,
-    role VARCHAR(100),                            -- ex: principal, compagnon, martyr
+    role TEXT,                                               -- ex: principal, compagnon, martyr
     PRIMARY KEY (celebration_id, saint_id)
 );
 
@@ -257,10 +264,10 @@ CREATE INDEX idx_liturgical_color_translations_locale ON liturgical_color_transl
 -- =========================================================
 
 -- Locales
-INSERT INTO locales (code, name) VALUES
-('fr', 'Français'),
-('en', 'English'),
-('la', 'Latin');
+INSERT INTO locales (code, name, name_english) VALUES
+('fr', 'Français', 'French'),
+('en', 'English', 'English'),
+('la', 'Latin', 'Latin');
 
 -- Calendriers (avec héritage)
 INSERT INTO calendars (code, name, description, parent_id, date_system, easter_computation) VALUES
