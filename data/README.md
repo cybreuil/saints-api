@@ -8,7 +8,6 @@ This directory contains the PostgreSQL schema for the `Ordo` database.
 Main schema file for the liturgical calendar database.
 
 It contains:
-
 - table drops in reverse dependency order
 - table creation
 - indexes
@@ -27,7 +26,6 @@ The schema separates technical entities from translated content.
 
 ### Technical/reference tables
 These tables store stable internal data used by the application:
-
 - `locales`
 - `calendars`
 - `liturgical_ranks`
@@ -37,7 +35,6 @@ These tables store stable internal data used by the application:
 
 ### Translation tables
 These tables store display text by language:
-
 - `calendar_translations`
 - `liturgical_rank_translations`
 - `liturgical_color_translations`
@@ -48,7 +45,6 @@ These tables store display text by language:
 
 ### Core liturgical/domain tables
 These tables model saints, feasts, and celebrations:
-
 - `saints`
 - `feasts`
 - `feast_dates`
@@ -131,6 +127,11 @@ Fields:
 ### `liturgical_color_translations`
 Localized labels for liturgical colors.
 
+Fields:
+- `color_id`
+- `locale_code`
+- `label`
+
 ### `saints`
 Core saint entity.
 
@@ -168,6 +169,10 @@ Examples:
 - `LILY`
 - `SWORD`
 - `BOOK`
+
+Fields:
+- `code`
+- `category`
 
 ### `attribute_translations`
 Localized labels and descriptions for attributes.
@@ -249,7 +254,6 @@ Optional field:
 ## Indexes
 
 The schema includes indexes for common lookups:
-
 - `calendars(parent_id)` for hierarchy traversal
 - partial indexes on `feast_dates` for:
   - fixed-date lookup
@@ -298,3 +302,60 @@ The included seed section currently provides minimal reference data for:
 ### Create a database
 ```/dev/null/setup.sh#L1-1
 createdb ordo
+```
+
+Load the schema
+Run from the `data` directory, or provide the full path to the SQL file.
+
+```/dev/null/setup.sh#L1-1
+psql ordo < createTables.sql
+```
+
+## Example Verification Queries
+
+### List calendars with French names
+```/dev/null/queries.sql#L1-6
+SELECT c.code, ct.name
+FROM calendars c
+JOIN calendar_translations ct
+  ON ct.calendar_id = c.id
+WHERE ct.locale_code = 'fr'
+ORDER BY c.code;
+```
+
+### List liturgical ranks for the Roman General calendar
+```/dev/null/queries.sql#L8-16
+SELECT c.code AS calendar_code, r.code AS rank_code, t.label, r.precedence
+FROM liturgical_ranks r
+JOIN calendars c ON c.id = r.calendar_id
+JOIN liturgical_rank_translations t ON t.rank_id = r.id
+WHERE c.code = 'ROMAN_GENERAL_1969'
+  AND t.locale_code = 'fr'
+ORDER BY r.precedence;
+```
+
+### List liturgical colors in English
+```/dev/null/queries.sql#L18-24
+SELECT lc.code, lct.label, lc.hex_color
+FROM liturgical_colors lc
+JOIN liturgical_color_translations lct
+  ON lct.color_id = lc.id
+WHERE lct.locale_code = 'en'
+ORDER BY lc.code;
+```
+
+## Notes
+
+- The schema is designed for PostgreSQL.
+- `created_at` fields use `TIMESTAMPTZ`.
+- Translation content is separated from technical reference tables.
+- Calendar inheritance is modeled through `calendars.parent_id`.
+- Resolution of inherited calendar data is expected to be handled by the application layer.
+
+## Next Possible Improvements
+
+Depending on project needs, you may later add:
+- stricter checks on date consistency in `saints`
+- a controlled vocabulary for `feast_type`
+- historical versioning for `celebrations`
+- additional indexes based on real query patterns
