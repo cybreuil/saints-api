@@ -1,9 +1,9 @@
 -- =========================================================
--- SCHÉMA SQL - Site "Fête du jour"
--- Compatible PostgreSQL
+-- SCHÉMA SQL - Site "Ordo"
+-- Compatible & optimisé pour PostgreSQL
 -- =========================================================
 
--- Nettoyage
+-- Nettoyage des tables existantes (ordre inverse des dépendances)
 DROP TABLE IF EXISTS celebration_saints CASCADE;
 DROP TABLE IF EXISTS celebrations CASCADE;
 DROP TABLE IF EXISTS feast_dates CASCADE;
@@ -29,40 +29,55 @@ DROP TABLE IF EXISTS locales CASCADE;
 
 -- Langues disponibles
 CREATE TABLE locales (
-    code TEXT PRIMARY KEY CHECK (char_length(code) <= 10),   -- ex: fr, en, la
-    name TEXT NOT NULL,
-    name_english TEXT NOT NULL
+    code TEXT PRIMARY KEY CHECK (char_length(code) <= 10),	-- ex: fr, en, la
+    native_name TEXT NOT NULL,
+    english_name TEXT NOT NULL,
+    is_active BOOLEAN NOT NULL DEFAULT TRUE
 );
 
 -- Calendriers liturgiques (avec héritage hiérarchique)
 CREATE TABLE calendars (
     id SERIAL PRIMARY KEY,
-    code TEXT UNIQUE NOT NULL,                               -- ex: ROMAN_GENERAL_1969, ROMAN_FRANCE
-    name TEXT NOT NULL,
-    description TEXT,
+    code TEXT UNIQUE NOT NULL,	-- ex: ROMAN_GENERAL_1969, ROMAN_FRANCE_1969, ORTHODOX_RUSSIAN etc
     parent_id INTEGER REFERENCES calendars(id) ON DELETE SET NULL,
-    date_system TEXT NOT NULL DEFAULT 'gregorian' CHECK (date_system IN ('gregorian', 'julian')),   -- gregorian, julian
-    easter_computation TEXT NOT NULL DEFAULT 'western' CHECK (easter_computation IN ('western', 'eastern')), -- western, eastern
+    date_system TEXT NOT NULL DEFAULT 'gregorian' CHECK (date_system IN ('gregorian', 'julian')),	-- gregorian, julian
+    easter_computation TEXT NOT NULL DEFAULT 'western' CHECK (easter_computation IN ('western', 'eastern')),	-- western, eastern
     is_active BOOLEAN NOT NULL DEFAULT TRUE,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Traductions des calendriers
+CREATE TABLE calendar_translations (
+	calendar_id INTEGER NOT NULL REFERENCES calendars(id) ON DELETE CASCADE,
+	locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+	name TEXT NOT NULL,
+	description TEXT,
+	PRIMARY KEY (calendar_id, locale_code)
 );
 
 -- Rangs liturgiques (dépendants du calendrier)
 CREATE TABLE liturgical_ranks (
     id SERIAL PRIMARY KEY,
     calendar_id INTEGER NOT NULL REFERENCES calendars(id) ON DELETE CASCADE,
-    code TEXT NOT NULL,                                      -- ex: SOLEMNITY, FEAST, CLASS_I
-    label_fr TEXT NOT NULL,
+	code TEXT NOT NULL,	-- ex: Modern Roman: SOLEMNITY, FEAST, MEM_OBL, MEM_OPT, FERIA / Traditional: CLASS_I, CLASS_II, CLASS_III, CLASS_IV
     precedence SMALLINT NOT NULL CHECK (precedence > 0),
     UNIQUE (calendar_id, code),
     UNIQUE (calendar_id, precedence)
 );
 
+-- Traduction des rangs liturgiques
+CREATE TABLE liturgical_rank_translations (
+	rank_id INTEGER NOT NULL REFERENCES liturgical_ranks(id) ON DELETE CASCADE,
+	locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+	label TEXT NOT NULL,
+	PRIMARY KEY (rank_id, locale_code)
+);
+
 -- Couleurs liturgiques
 CREATE TABLE liturgical_colors (
     id SERIAL PRIMARY KEY,
-    code TEXT UNIQUE NOT NULL,                               -- ex: WHITE, RED, GREEN
-    hex_color TEXT NOT NULL CHECK (hex_color ~ '^#[0-9A-Fa-f]{6}$') -- ex: #FFFFFF, #FF0000
+    code TEXT UNIQUE NOT NULL,	-- ex: WHITE, RED, GREEN
+    hex_color TEXT NOT NULL CHECK (hex_color ~ '^#[0-9A-Fa-f]{6}$')	-- ex: #FFFFFF, #FF0000
 );
 
 -- Traductions des couleurs liturgiques
@@ -79,13 +94,20 @@ CREATE TABLE liturgical_color_translations (
 
 CREATE TABLE saints (
     id SERIAL PRIMARY KEY,
-    slug TEXT UNIQUE NOT NULL,                               -- ex: saint-joseph
+    slug TEXT UNIQUE NOT NULL,	-- ex: saint-joseph
     default_name TEXT NOT NULL,
-    birth_date DATE,
-    death_date DATE,
+    birth_year SMALLINT,
+    birth_month SMALLINT CHECK (birth_month BETWEEN 1 AND 12),
+	birth_day SMALLINT CHECK (birth_day BETWEEN 1 AND 31),
+	birth_is_approximate BOOLEAN NOT NULL DEFAULT FALSE,	-- true si la date de naissance est approximative (ex: "vers l'an 400'")
+    death_year SMALLINT,
+	death_month SMALLINT CHECK (death_month BETWEEN 1 AND 12),
+	death_day SMALLINT CHECK (death_day BETWEEN 1 AND 31),
+	death_is_approximate BOOLEAN NOT NULL DEFAULT FALSE,	-- true si la date de décès est approximative (ex: "vers l'an 500'")
+    century SMALLINT CHECK (century > 0),	-- ex: 1 pour Ier siècle, 20 pour XXe siècle
     short_description TEXT,
     image_url TEXT,
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE saint_translations (
@@ -94,6 +116,7 @@ CREATE TABLE saint_translations (
     name TEXT NOT NULL,
     short_description TEXT,
     full_biography TEXT,
+    life_label TEXT,   -- C'est la date approximative ex: "Vers le IVe siècle"
     PRIMARY KEY (saint_id, locale_code)
 );
 
@@ -103,8 +126,8 @@ CREATE TABLE saint_translations (
 
 CREATE TABLE attributes (
     id SERIAL PRIMARY KEY,
-    code TEXT UNIQUE NOT NULL,                               -- ex: LILY, SWORD, SKULL, BOOK
-    category TEXT                                            -- ex: symbol, title, order
+    code TEXT UNIQUE NOT NULL, -- ex: LILY, SWORD, SKULL, BOOK
+    category TEXT -- ex: symbol, title, order
 );
 
 CREATE TABLE attribute_translations (
@@ -127,7 +150,7 @@ CREATE TABLE saint_attributes (
 
 CREATE TABLE patronages (
     id SERIAL PRIMARY KEY,
-    code TEXT UNIQUE NOT NULL                                -- ex: WORKERS, FRANCE, STUDENTS
+    code TEXT UNIQUE NOT NULL -- ex: WORKERS, FRANCE, STUDENTS
 );
 
 CREATE TABLE patronage_translations (
@@ -150,10 +173,10 @@ CREATE TABLE saint_patronages (
 
 CREATE TABLE feasts (
     id SERIAL PRIMARY KEY,
-    slug TEXT UNIQUE NOT NULL,                               -- ex: assomption, saint-joseph-epoux
+    slug TEXT UNIQUE NOT NULL, -- exemple: nativity-of-saint-john-the-baptist
     default_name TEXT NOT NULL,
-    feast_type TEXT NOT NULL,                                -- ex: saint, marial, christologique, dedicace, autre
-    created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+    feast_type TEXT NOT NULL, -- ex: saint, marial, christologique, dedicace, autre ou en anglais: saint, marian, christological, dedication, other
+    created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE feast_translations (
@@ -174,6 +197,7 @@ CREATE TABLE feast_dates (
     feast_id INTEGER NOT NULL REFERENCES feasts(id) ON DELETE CASCADE,
     calendar_id INTEGER NOT NULL REFERENCES calendars(id) ON DELETE CASCADE,
 
+    -- Type de date: fixed (date fixe) ou movable (date mobile selon Pâques ou autre fête mobile)
     date_kind TEXT NOT NULL CHECK (date_kind IN ('fixed', 'movable')),
 
     -- Pour fixed
@@ -181,10 +205,10 @@ CREATE TABLE feast_dates (
     day SMALLINT CHECK (day BETWEEN 1 AND 31),
 
     -- Pour movable (interprété selon calendar.easter_computation)
-    movable_base TEXT,                                       -- ex: EASTER, CHRISTMAS
+    movable_base TEXT,	-- ex: EASTER, CHRISTMAS
     movable_offset_days INTEGER,
 
-    -- Période de validité historique (optionnel)
+    -- Période de validité historique (optionnel); On utilisera probablement pas
     valid_from DATE,
     valid_to DATE,
 
@@ -215,20 +239,21 @@ CREATE TABLE celebrations (
     is_optional BOOLEAN NOT NULL DEFAULT FALSE,
     notes TEXT,
 
-    valid_from DATE,
-    valid_to DATE,
+    -- valid_from DATE,
+    -- valid_to DATE,
 
+    -- Enlever unique si on veut gerer les anciennes célébrations historiques avec from / to
     UNIQUE (feast_id, calendar_id),
-    CHECK (
-        valid_to IS NULL OR valid_from IS NULL OR valid_to >= valid_from
-    )
+    -- CHECK (
+    --     valid_to IS NULL OR valid_from IS NULL OR valid_to >= valid_from
+    -- )
 );
 
 -- Liaison célébrations <-> saints
 CREATE TABLE celebration_saints (
     celebration_id INTEGER NOT NULL REFERENCES celebrations(id) ON DELETE CASCADE,
     saint_id INTEGER NOT NULL REFERENCES saints(id) ON DELETE CASCADE,
-    role TEXT,                                               -- ex: principal, compagnon, martyr
+    role TEXT, -- ex: principal, compagnon, martyr
     PRIMARY KEY (celebration_id, saint_id)
 );
 
@@ -237,8 +262,6 @@ CREATE TABLE celebration_saints (
 -- =========================================================
 
 CREATE INDEX idx_calendars_parent ON calendars(parent_id);
-CREATE INDEX idx_saints_slug ON saints(slug);
-CREATE INDEX idx_feasts_slug ON feasts(slug);
 
 CREATE INDEX idx_feast_dates_fixed
     ON feast_dates(calendar_id, month, day)
@@ -264,53 +287,181 @@ CREATE INDEX idx_liturgical_color_translations_locale ON liturgical_color_transl
 -- =========================================================
 
 -- Locales
-INSERT INTO locales (code, name, name_english) VALUES
+INSERT INTO locales (code, native_name, english_name) VALUES
 ('fr', 'Français', 'French'),
 ('en', 'English', 'English'),
 ('la', 'Latin', 'Latin');
 
--- Calendriers (avec héritage)
-INSERT INTO calendars (code, name, description, parent_id, date_system, easter_computation) VALUES
-('ROMAN_GENERAL_1969', 'Calendrier romain général (1969+)', 'Forme ordinaire post-Vatican II', NULL, 'gregorian', 'western'),
-('TRIDENTINE_1962', 'Calendrier traditionnel (1962)', 'Missel de 1962, forme extraordinaire', NULL, 'gregorian', 'western');
+-- Calendriers techniques
+INSERT INTO calendars (code, parent_id, date_system, easter_computation) VALUES
+('ROMAN_GENERAL_1969', NULL, 'gregorian', 'western'),
+('TRIDENTINE_1962', NULL, 'gregorian', 'western'),
+('ORTHODOX_RUSSIAN', NULL, 'julian', 'eastern'),
+('ORTHODOX_GREEK', NULL, 'gregorian', 'eastern');
 
 -- Calendriers régionaux (héritage)
-INSERT INTO calendars (code, name, description, parent_id, date_system, easter_computation)
-SELECT 'ROMAN_FRANCE', 'Calendrier romain - France', 'Propre de France', id, 'gregorian', 'western'
-FROM calendars WHERE code = 'ROMAN_GENERAL_1969';
+INSERT INTO calendars (code, parent_id, date_system, easter_computation)
+SELECT 'ROMAN_FRANCE', id, 'gregorian', 'western'
+FROM calendars
+WHERE code = 'ROMAN_GENERAL_1969';
 
-INSERT INTO calendars (code, name, description, parent_id, date_system, easter_computation)
-SELECT 'ROMAN_ITALY', 'Calendrier romain - Italie', 'Propre d''Italie', id, 'gregorian', 'western'
-FROM calendars WHERE code = 'ROMAN_GENERAL_1969';
+INSERT INTO calendars (code, parent_id, date_system, easter_computation)
+SELECT 'ROMAN_ITALY', id, 'gregorian', 'western'
+FROM calendars
+WHERE code = 'ROMAN_GENERAL_1969';
 
--- Exemple orthodoxe
-INSERT INTO calendars (code, name, description, parent_id, date_system, easter_computation) VALUES
-('ORTHODOX_RUSSIAN', 'Calendrier orthodoxe russe', 'Patriarcat de Moscou', NULL, 'julian', 'eastern'),
-('ORTHODOX_GREEK', 'Calendrier orthodoxe grec', 'Nouveau calendrier', NULL, 'gregorian', 'eastern');
+-- Traductions des calendriers (FR)
+INSERT INTO calendar_translations (calendar_id, locale_code, name, description)
+SELECT c.id, 'fr', x.name, x.description
+FROM calendars c
+JOIN (VALUES
+    ('ROMAN_GENERAL_1969', 'Calendrier romain général (1969+)', 'Forme ordinaire post-Vatican II'),
+    ('TRIDENTINE_1962', 'Calendrier traditionnel (1962)', 'Missel de 1962, forme extraordinaire'),
+    ('ROMAN_FRANCE', 'Calendrier romain - France', 'Propre de France'),
+    ('ROMAN_ITALY', 'Calendrier romain - Italie', 'Propre d''Italie'),
+    ('ORTHODOX_RUSSIAN', 'Calendrier orthodoxe russe', 'Patriarcat de Moscou'),
+    ('ORTHODOX_GREEK', 'Calendrier orthodoxe grec', 'Nouveau calendrier')
+) AS x(code, name, description)
+ON c.code = x.code;
 
--- Rangs pour calendrier romain actuel
-INSERT INTO liturgical_ranks (calendar_id, code, label_fr, precedence)
-SELECT c.id, x.code, x.label_fr, x.precedence
+-- Traductions des calendriers (EN)
+INSERT INTO calendar_translations (calendar_id, locale_code, name, description)
+SELECT c.id, 'en', x.name, x.description
+FROM calendars c
+JOIN (VALUES
+    ('ROMAN_GENERAL_1969', 'General Roman Calendar (1969+)', 'Ordinary Form after Vatican II'),
+    ('TRIDENTINE_1962', 'Traditional Calendar (1962)', '1962 Missal, Extraordinary Form'),
+    ('ROMAN_FRANCE', 'Roman Calendar - France', 'Proper of France'),
+    ('ROMAN_ITALY', 'Roman Calendar - Italy', 'Proper of Italy'),
+    ('ORTHODOX_RUSSIAN', 'Russian Orthodox Calendar', 'Moscow Patriarchate'),
+    ('ORTHODOX_GREEK', 'Greek Orthodox Calendar', 'New Calendar')
+) AS x(code, name, description)
+ON c.code = x.code;
+
+-- Traductions des calendriers (LA) - optionnel/minimal
+INSERT INTO calendar_translations (calendar_id, locale_code, name, description)
+SELECT c.id, 'la', x.name, x.description
+FROM calendars c
+JOIN (VALUES
+    ('ROMAN_GENERAL_1969', 'Calendarium Romanum Generale (1969+)', 'Forma ordinaria post Concilium Vaticanum II'),
+    ('TRIDENTINE_1962', 'Calendarium Traditionale (1962)', 'Missale Romanum anni 1962'),
+    ('ROMAN_FRANCE', 'Calendarium Romanum - Gallia', 'Proprium Galliae'),
+    ('ROMAN_ITALY', 'Calendarium Romanum - Italia', 'Proprium Italiae'),
+    ('ORTHODOX_RUSSIAN', 'Calendarium Orthodoxum Russicum', 'Patriarchatus Moscoviae'),
+    ('ORTHODOX_GREEK', 'Calendarium Orthodoxum Graecum', 'Calendarium novum')
+) AS x(code, name, description)
+ON c.code = x.code;
+
+-- Rangs techniques pour calendrier romain actuel
+INSERT INTO liturgical_ranks (calendar_id, code, precedence)
+SELECT c.id, x.code, x.precedence
 FROM calendars c
 CROSS JOIN (VALUES
-    ('SOLEMNITY',  'Solennité',             1),
-    ('FEAST',      'Fête',                  2),
-    ('MEM_OBL',    'Mémoire obligatoire',   3),
-    ('MEM_OPT',    'Mémoire facultative',   4),
-    ('FERIA',      'Férie',                 5)
-) AS x(code, label_fr, precedence)
+    ('SOLEMNITY', 1),
+    ('FEAST', 2),
+    ('MEM_OBL', 3),
+    ('MEM_OPT', 4),
+    ('FERIA', 5)
+) AS x(code, precedence)
 WHERE c.code = 'ROMAN_GENERAL_1969';
 
--- Rangs pour calendrier traditionnel 1962
-INSERT INTO liturgical_ranks (calendar_id, code, label_fr, precedence)
-SELECT c.id, x.code, x.label_fr, x.precedence
+-- Traductions FR des rangs romains actuels
+INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
+SELECT r.id, 'fr', x.label
+FROM liturgical_ranks r
+JOIN calendars c ON c.id = r.calendar_id
+JOIN (VALUES
+    ('SOLEMNITY', 'Solennité'),
+    ('FEAST', 'Fête'),
+    ('MEM_OBL', 'Mémoire obligatoire'),
+    ('MEM_OPT', 'Mémoire facultative'),
+    ('FERIA', 'Férie')
+) AS x(code, label)
+ON r.code = x.code
+WHERE c.code = 'ROMAN_GENERAL_1969';
+
+-- Traductions EN des rangs romains actuels
+INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
+SELECT r.id, 'en', x.label
+FROM liturgical_ranks r
+JOIN calendars c ON c.id = r.calendar_id
+JOIN (VALUES
+    ('SOLEMNITY', 'Solemnity'),
+    ('FEAST', 'Feast'),
+    ('MEM_OBL', 'Obligatory Memorial'),
+    ('MEM_OPT', 'Optional Memorial'),
+    ('FERIA', 'Feria')
+) AS x(code, label)
+ON r.code = x.code
+WHERE c.code = 'ROMAN_GENERAL_1969';
+
+-- Traductions LA des rangs romains actuels
+INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
+SELECT r.id, 'la', x.label
+FROM liturgical_ranks r
+JOIN calendars c ON c.id = r.calendar_id
+JOIN (VALUES
+    ('SOLEMNITY', 'Sollemnitas'),
+    ('FEAST', 'Festum'),
+    ('MEM_OBL', 'Memoria obligatoria'),
+    ('MEM_OPT', 'Memoria ad libitum'),
+    ('FERIA', 'Feria')
+) AS x(code, label)
+ON r.code = x.code
+WHERE c.code = 'ROMAN_GENERAL_1969';
+
+-- Rangs techniques pour calendrier traditionnel 1962
+INSERT INTO liturgical_ranks (calendar_id, code, precedence)
+SELECT c.id, x.code, x.precedence
 FROM calendars c
 CROSS JOIN (VALUES
-    ('CLASS_I',    'Ire classe',            1),
-    ('CLASS_II',   'IIe classe',            2),
-    ('CLASS_III',  'IIIe classe',           3),
-    ('CLASS_IV',   'IVe classe / férie',    4)
-) AS x(code, label_fr, precedence)
+    ('CLASS_I', 1),
+    ('CLASS_II', 2),
+    ('CLASS_III', 3),
+    ('CLASS_IV', 4)
+) AS x(code, precedence)
+WHERE c.code = 'TRIDENTINE_1962';
+
+-- Traductions FR des rangs 1962
+INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
+SELECT r.id, 'fr', x.label
+FROM liturgical_ranks r
+JOIN calendars c ON c.id = r.calendar_id
+JOIN (VALUES
+    ('CLASS_I', 'Ire classe'),
+    ('CLASS_II', 'IIe classe'),
+    ('CLASS_III', 'IIIe classe'),
+    ('CLASS_IV', 'IVe classe / férie')
+) AS x(code, label)
+ON r.code = x.code
+WHERE c.code = 'TRIDENTINE_1962';
+
+-- Traductions EN des rangs 1962
+INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
+SELECT r.id, 'en', x.label
+FROM liturgical_ranks r
+JOIN calendars c ON c.id = r.calendar_id
+JOIN (VALUES
+    ('CLASS_I', 'First Class'),
+    ('CLASS_II', 'Second Class'),
+    ('CLASS_III', 'Third Class'),
+    ('CLASS_IV', 'Fourth Class / Feria')
+) AS x(code, label)
+ON r.code = x.code
+WHERE c.code = 'TRIDENTINE_1962';
+
+-- Traductions LA des rangs 1962
+INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
+SELECT r.id, 'la', x.label
+FROM liturgical_ranks r
+JOIN calendars c ON c.id = r.calendar_id
+JOIN (VALUES
+    ('CLASS_I', 'Classis I'),
+    ('CLASS_II', 'Classis II'),
+    ('CLASS_III', 'Classis III'),
+    ('CLASS_IV', 'Classis IV / Feria')
+) AS x(code, label)
+ON r.code = x.code
 WHERE c.code = 'TRIDENTINE_1962';
 
 -- Couleurs liturgiques
