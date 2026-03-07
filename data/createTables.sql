@@ -130,6 +130,9 @@ CREATE TABLE attributes (
     id SERIAL PRIMARY KEY,
     code TEXT UNIQUE NOT NULL, -- ex: LILY, SWORD, SKULL, BOOK
     category TEXT -- ex: symbol, title, order
+    -- symbol = attribut iconographique (ex: LILY, SWORD, SKULL, BOOK, etc )
+    -- title = titre honorifique (ex: MARTYR, VIRGIN, CONFESSOR, DOCTOR_OF_THE_CHURCH, etc)
+    -- Order = membre d'un ordre religieux (ex: BENEDICTINE, DOMINICAN, JESUIT etc)
 );
 
 CREATE TABLE attribute_translations (
