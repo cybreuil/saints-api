@@ -19,7 +19,9 @@ DROP TABLE IF EXISTS saints CASCADE;
 DROP TABLE IF EXISTS feasts CASCADE;
 DROP TABLE IF EXISTS liturgical_color_translations CASCADE;
 DROP TABLE IF EXISTS liturgical_colors CASCADE;
+DROP TABLE IF EXISTS liturgical_rank_translations CASCADE;
 DROP TABLE IF EXISTS liturgical_ranks CASCADE;
+DROP TABLE IF EXISTS calendar_translations CASCADE;
 DROP TABLE IF EXISTS calendars CASCADE;
 DROP TABLE IF EXISTS locales CASCADE;
 
