@@ -1,136 +1,300 @@
 # Database Schema and Seed Data
 
-This directory contains PostgreSQL database schema and seed data for the Saints Calendar Application.
+This directory contains the PostgreSQL schema for the `Ordo` database.
 
 ## Files
 
 ### `createTables.sql`
-Schema definition file that creates all necessary PostgreSQL tables for the saints calendar application.
+Main schema file for the liturgical calendar database.
 
-**Tables created:**
-- `calendars` - Different liturgical calendars (Roman 1970, Tridentine 1960, Orthodox, etc.)
-- `saints` - Biographical information about saints
-- `feasts` - Liturgical feast days
-- `feast_saints` - Many-to-many relationship between feasts and saints
-- `saint_biographies` - Detailed biography lines for each saint
-- `saint_attributes` - Iconographic attributes of saints
-- `saint_patronages` - What each saint is patron of
-- `feast_attributes` - Optional attributes specific to feasts
+It contains:
 
-### `seedData.sql`
-Complete seed data file that populates all tables with comprehensive data from the JSON saints database.
+- table drops in reverse dependency order
+- table creation
+- indexes
+- minimal seed data for:
+  - locales
+  - calendars
+  - calendar translations
+  - liturgical ranks
+  - liturgical rank translations
+  - liturgical colors
+  - liturgical color translations
 
-**Data included:**
-- 4 liturgical calendars:
-  - Roman Calendar 1970 (Paul VI) - Post-Vatican II
-  - Tridentine Calendar 1960 (John XXIII) - Pre-Vatican II
-  - Orthodox Calendar - Eastern Orthodox tradition
-  - Bonus Saints and Feasts - Additional local patrons
-- 1,463 unique saints with biographies, attributes, and patronages
-- 1,465 feast days throughout the liturgical year
-- Complete biographical information, attributes, and patronage data
+## Main Concepts
+
+The schema separates technical entities from translated content.
+
+### Technical/reference tables
+These tables store stable internal data used by the application:
+
+- `locales`
+- `calendars`
+- `liturgical_ranks`
+- `liturgical_colors`
+- `attributes`
+- `patronages`
+
+### Translation tables
+These tables store display text by language:
+
+- `calendar_translations`
+- `liturgical_rank_translations`
+- `liturgical_color_translations`
+- `saint_translations`
+- `feast_translations`
+- `attribute_translations`
+- `patronage_translations`
+
+### Core liturgical/domain tables
+These tables model saints, feasts, and celebrations:
+
+- `saints`
+- `feasts`
+- `feast_dates`
+- `celebrations`
+- `celebration_saints`
+- `saint_attributes`
+- `saint_patronages`
+
+## Schema Overview
+
+### `locales`
+Available languages used by translation tables.
+
+Fields:
+- `code`: locale code such as `fr`, `en`, `la`
+- `native_name`: language name in that language
+- `english_name`: language name in English
+- `is_active`: whether the locale is enabled
+
+### `calendars`
+Liturgical calendars, with optional hierarchical inheritance through `parent_id`.
+
+Examples:
+- `ROMAN_GENERAL_1969`
+- `ROMAN_FRANCE`
+- `TRIDENTINE_1962`
+- `ORTHODOX_RUSSIAN`
+- `ORTHODOX_GREEK`
+
+Fields:
+- `code`: stable technical identifier
+- `parent_id`: optional parent calendar
+- `date_system`: `gregorian` or `julian`
+- `easter_computation`: `western` or `eastern`
+- `is_active`
+- `created_at`
+
+### `calendar_translations`
+Localized display names and descriptions for calendars.
+
+Fields:
+- `calendar_id`
+- `locale_code`
+- `name`
+- `description`
+
+### `liturgical_ranks`
+Liturgical rank definitions per calendar.
+
+Examples:
+- modern Roman: `SOLEMNITY`, `FEAST`, `MEM_OBL`, `MEM_OPT`, `FERIA`
+- traditional: `CLASS_I`, `CLASS_II`, `CLASS_III`, `CLASS_IV`
+
+Fields:
+- `calendar_id`
+- `code`
+- `precedence`
+
+### `liturgical_rank_translations`
+Localized labels for liturgical ranks.
+
+Fields:
+- `rank_id`
+- `locale_code`
+- `label`
+
+### `liturgical_colors`
+Technical list of liturgical colors.
+
+Examples:
+- `WHITE`
+- `RED`
+- `GREEN`
+- `PURPLE`
+
+Fields:
+- `code`
+- `hex_color`
+
+### `liturgical_color_translations`
+Localized labels for liturgical colors.
+
+### `saints`
+Core saint entity.
+
+Fields include:
+- `slug`
+- `default_name`
+- partial life-date fields:
+  - `birth_year`, `birth_month`, `birth_day`
+  - `death_year`, `death_month`, `death_day`
+- approximate flags:
+  - `birth_is_approximate`
+  - `death_is_approximate`
+- `century`
+- `short_description`
+- `image_url`
+- `created_at`
+
+### `saint_translations`
+Localized saint content.
+
+Fields:
+- `name`
+- `short_description`
+- `full_biography`
+- `life_label`
+
+`life_label` is useful for human-readable historical dating such as:
+- `Vers le IVe siècle`
+- `c. 270–303`
+
+### `attributes`
+Normalized saint attributes.
+
+Examples:
+- `LILY`
+- `SWORD`
+- `BOOK`
+
+### `attribute_translations`
+Localized labels and descriptions for attributes.
+
+### `saint_attributes`
+Many-to-many relation between saints and attributes.
+
+### `patronages`
+Normalized patronage codes.
+
+Examples:
+- `WORKERS`
+- `FRANCE`
+- `STUDENTS`
+
+### `patronage_translations`
+Localized labels and descriptions for patronages.
+
+### `saint_patronages`
+Many-to-many relation between saints and patronages.
+
+### `feasts`
+Core feast entity.
+
+Fields:
+- `slug`
+- `default_name`
+- `feast_type`
+- `created_at`
+
+Examples of `feast_type`:
+- `saint`
+- `marial`
+- `christologique`
+- `dedicace`
+- `autre`
+
+### `feast_translations`
+Localized feast names and descriptions.
+
+### `feast_dates`
+Calendar-specific dating rules for feasts.
+
+Supports:
+- fixed dates:
+  - `month`
+  - `day`
+- movable dates:
+  - `movable_base`
+  - `movable_offset_days`
+
+Also supports optional historical validity windows:
+- `valid_from`
+- `valid_to`
+
+### `celebrations`
+Concrete liturgical celebration of a feast in a given calendar.
+
+Fields:
+- `feast_id`
+- `calendar_id`
+- `rank_id`
+- `color_id`
+- `is_optional`
+- `notes`
+
+A unique constraint on `(feast_id, calendar_id)` ensures one active celebration definition per feast/calendar pair in the current model.
+
+### `celebration_saints`
+Many-to-many relation between celebrations and saints.
+
+Useful when:
+- one celebration concerns one saint
+- one celebration concerns several saints or companions
+
+Optional field:
+- `role`
+
+## Indexes
+
+The schema includes indexes for common lookups:
+
+- `calendars(parent_id)` for hierarchy traversal
+- partial indexes on `feast_dates` for:
+  - fixed-date lookup
+  - movable-date lookup
+- indexes on `celebrations` foreign keys
+- indexes on translation tables by `locale_code`
+
+## Seed Data
+
+The included seed section currently provides minimal reference data for:
+
+- locales:
+  - `fr`
+  - `en`
+  - `la`
+
+- calendars:
+  - `ROMAN_GENERAL_1969`
+  - `TRIDENTINE_1962`
+  - `ROMAN_FRANCE`
+  - `ROMAN_ITALY`
+  - `ORTHODOX_RUSSIAN`
+  - `ORTHODOX_GREEK`
+
+- calendar translations in:
+  - French
+  - English
+  - Latin
+
+- liturgical ranks for:
+  - Roman General 1969
+  - Tridentine 1962
+
+- liturgical rank translations in:
+  - French
+  - English
+  - Latin
+
+- liturgical colors and their translations in:
+  - French
+  - English
+  - Latin
 
 ## Usage
 
-### Initial Setup
-
-1. Create a PostgreSQL database:
-```bash
-createdb saints_calendar
-```
-
-2. Run the schema creation script:
-```bash
-psql saints_calendar < createTables.sql
-```
-
-3. Load the seed data:
-```bash
-psql saints_calendar < seedData.sql
-```
-
-### Reset Database
-
-To completely reset the database with fresh data:
-```bash
-psql saints_calendar < seedData.sql
-```
-Note: The seedData.sql file includes TRUNCATE statements that will clean all tables before inserting data.
-
-### Verify Installation
-
-```sql
--- Check calendars
-SELECT id, name FROM calendars;
-
--- Count saints
-SELECT COUNT(*) FROM saints;
-
--- Count feasts by calendar
-SELECT c.name, COUNT(f.id) as feast_count 
-FROM calendars c 
-LEFT JOIN feasts f ON c.id = f.calendar_id 
-GROUP BY c.name;
-
--- Sample query: Get feasts for a specific date
-SELECT f.name, f.liturgical_rank, c.name as calendar 
-FROM feasts f 
-JOIN calendars c ON f.calendar_id = c.id 
-WHERE feast_date = '2024-01-01' 
-ORDER BY c.name;
-```
-
-## Database Schema Overview
-
-### Entity Relationships
-
-```
-calendars (1) ----< (n) feasts (n) ----< (n) saints
-                                            |
-                                            +----< saint_biographies
-                                            +----< saint_attributes
-                                            +----< saint_patronages
-```
-
-### Key Fields
-
-**saints table:**
-- `id` - Primary key
-- `name` - Saint's name
-- `birth_date`, `death_date` - Life dates (nullable)
-- `description` - Brief description
-- `image_url` - Optional image URL
-
-**feasts table:**
-- `id` - Primary key
-- `name` - Feast name
-- `feast_date` - Date in format YYYY-MM-DD
-- `liturgical_rank` - Solemnity, Feast, Memorial, Optional Memorial
-- `type` - Classification of feast type
-- `calendar_id` - Reference to calendar
-- `region` - Optional geographic specificity
-
-**calendars table:**
-- `id` - Primary key
-- `name` - Calendar name
-- `description` - Description of the calendar tradition
-
-## Data Source
-
-The seed data is generated from `src/data/saints.json`, which contains comprehensive information about saints and feast days across multiple liturgical traditions.
-
-## Notes
-
-- Dates in the `feasts` table use 2024 as a placeholder year since most liturgical dates recur annually
-- Some saints appear in multiple calendars with different feast dates
-- Biography, attributes, and patronage information may vary by calendar tradition
-- The `feast_saints` junction table allows for multiple saints to be celebrated on the same feast day
-
-## Maintenance
-
-To regenerate the seed data from the JSON source, use the Python script:
-```bash
-python3 /tmp/generate_seed_sql.py
-```
-
-This will create a fresh `seedData.sql` file with all current data from `src/data/saints.json`.
+### Create a database
+```/dev/null/setup.sh#L1-1
+createdb ordo
