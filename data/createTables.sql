@@ -107,7 +107,6 @@ CREATE TABLE saints (
 	death_day SMALLINT CHECK (death_day BETWEEN 1 AND 31),
 	death_is_approximate BOOLEAN NOT NULL DEFAULT FALSE,	-- true si la date de décès est approximative (ex: "vers l'an 500'")
     century SMALLINT CHECK (century > 0),	-- ex: 1 pour Ier siècle, 20 pour XXe siècle
-    short_description TEXT,
     image_url TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
