@@ -73,7 +73,6 @@ Table saints {
   death_day smallint
   death_is_approximate boolean
   century smallint
-  short_description text
   image_url text
   created_at timestamptz
 }
