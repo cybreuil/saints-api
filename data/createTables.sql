@@ -15,6 +15,8 @@ DROP TABLE IF EXISTS patronages CASCADE;
 DROP TABLE IF EXISTS saint_attributes CASCADE;
 DROP TABLE IF EXISTS attribute_translations CASCADE;
 DROP TABLE IF EXISTS attributes CASCADE;
+DROP TABLE IF EXISTS place_translations CASCADE;
+DROP TABLE IF EXISTS places CASCADE;
 DROP TABLE IF EXISTS saints CASCADE;
 DROP TABLE IF EXISTS feasts CASCADE;
 DROP TABLE IF EXISTS liturgical_color_translations CASCADE;
@@ -90,6 +92,25 @@ CREATE TABLE liturgical_color_translations (
     PRIMARY KEY (color_id, locale_code)
 );
 
+-- Lieux (normalisés)
+CREATE TABLE places (
+    id SERIAL PRIMARY KEY,
+    code TEXT UNIQUE NOT NULL, -- ex: ROME, ASSISI, CLUNY
+    country_code TEXT,         -- ex: IT, FR (optionnel)
+    latitude DOUBLE PRECISION, -- optionnel
+    longitude DOUBLE PRECISION -- optionnel
+);
+
+-- Traductions des lieux
+CREATE TABLE place_translations (
+    place_id INTEGER NOT NULL REFERENCES places(id) ON DELETE CASCADE,
+    locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+    name TEXT NOT NULL,        -- ex: Rome / Roma
+    description TEXT,          -- optionnel: contexte historique
+    PRIMARY KEY (place_id, locale_code)
+);
+
+
 -- =========================================================
 -- 2) Saints
 -- =========================================================
@@ -107,6 +128,9 @@ CREATE TABLE saints (
 	death_day SMALLINT CHECK (death_day BETWEEN 1 AND 31),
 	death_is_approximate BOOLEAN NOT NULL DEFAULT FALSE,	-- true si la date de décès est approximative (ex: "vers l'an 500'")
     century SMALLINT CHECK (century > 0),	-- ex: 1 pour Ier siècle, 20 pour XXe siècle
+    place_of_birth_id INTEGER REFERENCES places(id) ON DELETE SET NULL,
+	place_of_death_id INTEGER REFERENCES places(id) ON DELETE SET NULL,
+	place_of_activity_id INTEGER REFERENCES places(id) ON DELETE SET NULL,	-- lieu principal d'activité (ex: évêque de Rome -> place_of_activity = ROME)
     image_url TEXT,
     created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
@@ -285,6 +309,12 @@ CREATE INDEX idx_feast_translations_locale ON feast_translations(locale_code);
 CREATE INDEX idx_patronage_translations_locale ON patronage_translations(locale_code);
 CREATE INDEX idx_attribute_translations_locale ON attribute_translations(locale_code);
 CREATE INDEX idx_liturgical_color_translations_locale ON liturgical_color_translations(locale_code);
+
+CREATE INDEX idx_place_translations_locale ON place_translations(locale_code);
+
+CREATE INDEX idx_saints_place_of_birth ON saints(place_of_birth_id);
+CREATE INDEX idx_saints_place_of_death ON saints(place_of_death_id);
+CREATE INDEX idx_saints_place_of_activity ON saints(place_of_activity_id);
 
 -- =========================================================
 -- 9) Seeds minimaux
@@ -522,3 +552,31 @@ JOIN (VALUES
     ('GOLD',   'Aureum')
 ) AS x(code, label)
 ON lc.code = x.code;
+
+-- Lieux techniques
+INSERT INTO places (code, country_code, latitude, longitude) VALUES
+('ROME', 'IT', 41.902782, 12.496366),
+('ASSISI', 'IT', 43.070702, 12.619596),
+('CLUNY', 'FR', 46.433300, 4.658100);
+
+-- Traductions FR
+INSERT INTO place_translations (place_id, locale_code, name, description)
+SELECT p.id, 'fr', x.name, x.description
+FROM places p
+JOIN (VALUES
+    ('ROME', 'Rome', NULL),
+    ('ASSISI', 'Assise', NULL),
+    ('CLUNY', 'Cluny', 'Abbaye de Cluny')
+) AS x(code, name, description)
+ON p.code = x.code;
+
+-- Traductions EN
+INSERT INTO place_translations (place_id, locale_code, name, description)
+SELECT p.id, 'en', x.name, x.description
+FROM places p
+JOIN (VALUES
+    ('ROME', 'Rome', NULL),
+    ('ASSISI', 'Assisi', NULL),
+    ('CLUNY', 'Cluny', 'Abbey of Cluny')
+) AS x(code, name, description)
+ON p.code = x.code;
