@@ -60,6 +60,24 @@ Table liturgical_color_translations {
   }
 }
 
+Table places {
+  id serial [pk]
+  code text [unique]
+  country_code text
+  latitude double
+  longitude double
+}
+
+Table place_translations {
+  place_id int [ref: > places.id]
+  locale_code text [ref: > locales.code]
+  name text
+  description text
+  indexes {
+    (place_id, locale_code) [unique]
+  }
+}
+
 Table saints {
   id serial [pk]
   slug text [unique]
@@ -73,6 +91,9 @@ Table saints {
   death_day smallint
   death_is_approximate boolean
   century smallint
+  place_of_birth_id int [ref: > places.id]
+  place_of_death_id int [ref: > places.id]
+  place_of_activity_id int [ref: > places.id]
   image_url text
   created_at timestamptz
 }
