@@ -9,3 +9,5 @@ Rest api design ! json responses ! maybe a web server like actix-web or rocket ?
 - etc
 
 Maybe no modification alowed ? i should maybe prerssxent this as a definitive list of saints and feasts, with no option to add or remove entries. This would make it more of a reference API rather than a CRUD API.
+
+maybe romcal on node ? or scrap it ?
