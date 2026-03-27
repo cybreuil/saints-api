@@ -427,8 +427,284 @@ DO UPDATE SET
   full_biography = EXCLUDED.full_biography,
   life_label = EXCLUDED.life_label;
 
--- etc...
---
+-- Mars
+INSERT INTO saints (
+  slug, default_name,
+  birth_year, birth_month, birth_day, birth_is_approximate,
+  death_year, death_month, death_day, death_is_approximate,
+  century,
+  place_of_birth_id, place_of_death_id, place_of_activity_id
+) VALUES
+(
+  'saint-casimir', 'Saint Casimir',
+  1458, 10, 3, FALSE,
+  1484, 3, 4, FALSE,
+  15,
+  NULL, NULL, NULL
+),
+(
+  'saint-perpetua', 'Saint Perpetua',
+  182, NULL, NULL, TRUE,
+  203, 3, 7, FALSE,
+  3,
+  (SELECT id FROM places WHERE code='CARTHAGE'),
+  (SELECT id FROM places WHERE code='CARTHAGE'),
+  (SELECT id FROM places WHERE code='CARTHAGE')
+),
+(
+  'saint-felicity', 'Saint Felicity',
+  NULL, NULL, NULL, TRUE,
+  203, 3, 7, FALSE,
+  3,
+  (SELECT id FROM places WHERE code='CARTHAGE'),
+  (SELECT id FROM places WHERE code='CARTHAGE'),
+  (SELECT id FROM places WHERE code='CARTHAGE')
+),
+(
+  'saint-john-of-god', 'Saint John of God',
+  1495, NULL, NULL, TRUE,
+  1550, 3, 8, FALSE,
+  16,
+  NULL, NULL, NULL
+),
+(
+  'saint-frances-of-rome', 'Saint Frances of Rome',
+  1384, NULL, NULL, TRUE,
+  1440, 3, 9, FALSE,
+  15,
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
+),
+(
+  'saint-patrick', 'Saint Patrick',
+  385, NULL, NULL, TRUE,
+  461, 3, 17, TRUE,
+  5,
+  NULL,
+  (SELECT id FROM places WHERE code='DUBLIN'),
+  (SELECT id FROM places WHERE code='DUBLIN')
+),
+(
+  'saint-cyril-of-jerusalem', 'Saint Cyril of Jerusalem',
+  315, NULL, NULL, TRUE,
+  386, 3, 18, TRUE,
+  4,
+  (SELECT id FROM places WHERE code='JERUSALEM'),
+  (SELECT id FROM places WHERE code='JERUSALEM'),
+  (SELECT id FROM places WHERE code='JERUSALEM')
+),
+(
+  'saint-joseph-spouse-of-mary', 'Saint Joseph, Spouse of Mary',
+  NULL, NULL, NULL, TRUE,
+  NULL, NULL, NULL, TRUE,
+  1,
+  NULL, NULL,
+  (SELECT id FROM places WHERE code='NAZARETH')
+),
+(
+  'saint-turibius-of-mongrovejo', 'Saint Turibius of Mongrovejo',
+  1538, NULL, NULL, TRUE,
+  1606, 3, 23, FALSE,
+  17,
+  (SELECT id FROM places WHERE code='MOGROVEJO'),
+  (SELECT id FROM places WHERE code='LIMA'),
+  (SELECT id FROM places WHERE code='LIMA')
+)
+ON CONFLICT (slug) DO NOTHING;
 
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'en', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-casimir', 'Saint Casimir', 'Prince of Poland and Lithuania, model of Christian virtue.', 'Casimir, known for charity and purity of life, is venerated as a patron of Poland and Lithuania.', '1458–1484'),
+('saint-perpetua', 'Saint Perpetua', 'Martyr of Carthage.', 'Perpetua, together with Felicity and companions, gave one of the earliest and most moving testimonies of martyrdom in the early Church.', 'd. 203'),
+('saint-felicity', 'Saint Felicity', 'Martyr of Carthage.', 'Felicity, martyred with Perpetua, is remembered for steadfast faith under persecution.', 'd. 203'),
+('saint-john-of-god', 'Saint John of God', 'Religious founder dedicated to the sick and poor.', 'John of God founded a path of hospital charity and care for the vulnerable, inspiring the Hospitaller tradition.', '1495–1550'),
+('saint-frances-of-rome', 'Saint Frances of Rome', 'Wife, mother, and religious; witness of charity.', 'Frances of Rome lived holy marriage and later religious life, serving the poor and the sick in the city of Rome.', '1384–1440'),
+('saint-patrick', 'Saint Patrick', 'Missionary bishop and patron of Ireland.', 'Patrick evangelized Ireland and remains one of the most beloved missionary saints in Christian tradition.', 'c. 385–461'),
+('saint-cyril-of-jerusalem', 'Saint Cyril of Jerusalem', 'Bishop and Doctor of the Church.', 'Cyril is especially known for his catechetical instructions and his defense of orthodox faith in Jerusalem.', 'c. 315–386'),
+('saint-joseph-spouse-of-mary', 'Saint Joseph, Spouse of Mary', 'Spouse of the Blessed Virgin Mary, guardian of Jesus.', 'Joseph is honored as foster-father of Christ, patron of the universal Church and model of obedience and quiet fidelity.', '1st century'),
+('saint-turibius-of-mongrovejo', 'Saint Turibius of Mongrovejo', 'Archbishop and missionary pastor in Peru.', 'Turibius reformed church life in the New World, defended indigenous peoples and promoted evangelization with great zeal.', '1538–1606')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
 
-COMMIT;
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'fr', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-casimir', 'Saint Casimir', 'Prince de Pologne et de Lituanie, modèle de vertu chrétienne.', 'Casimir est honoré pour sa charité et sa pureté de vie; il est patron de la Pologne et de la Lituanie.', '1458–1484'),
+('saint-perpetua', 'Sainte Perpétue', 'Martyre de Carthage.', 'Perpétue, avec Félicité et leurs compagnons, a donné l’un des plus anciens témoignages de martyre de l’Église ancienne.', '† 203'),
+('saint-felicity', 'Sainte Félicité', 'Martyre de Carthage.', 'Félicité, martyre avec Perpétue, est vénérée pour sa constance dans la foi.', '† 203'),
+('saint-john-of-god', 'Saint Jean de Dieu', 'Religieux fondateur au service des malades et des pauvres.', 'Jean de Dieu a inspiré la tradition hospitalière chrétienne par son engagement envers les plus fragiles.', '1495–1550'),
+('saint-frances-of-rome', 'Sainte Françoise de Rome', 'Épouse, mère et religieuse, témoin de charité.', 'Françoise de Rome a vécu la sainteté dans le mariage puis dans la vie religieuse, au service des pauvres et des malades.', '1384–1440'),
+('saint-patrick', 'Saint Patrick', 'Évêque missionnaire et patron de l’Irlande.', 'Patrick évangélisa l’Irlande et demeure l’une des figures missionnaires les plus célèbres de l’Église.', 'v. 385–461'),
+('saint-cyril-of-jerusalem', 'Saint Cyrille de Jérusalem', 'Évêque et docteur de l’Église.', 'Cyrille est connu pour ses catéchèses baptismales et sa défense de la foi orthodoxe à Jérusalem.', 'v. 315–386'),
+('saint-joseph-spouse-of-mary', 'Saint Joseph, époux de Marie', 'Époux de la Vierge Marie, gardien de Jésus.', 'Joseph est honoré comme père nourricier du Christ, patron de l’Église universelle et modèle de fidélité silencieuse.', 'Ier siècle'),
+('saint-turibius-of-mongrovejo', 'Saint Turibe de Mogrovejo', 'Archevêque missionnaire au Pérou.', 'Turibe renouvela la vie de l’Église au Pérou, défendit les peuples autochtones et promut l’évangélisation.', '1538–1606')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'la', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-casimir', 'Sanctus Casimirus', 'Princeps Poloniae et Lituaniae, exemplar virtutis christianae.', 'Casimirus propter caritatem et puritatem vitae celebratur; inter patronos Poloniae et Lituaniae numeratur.', '1458–1484'),
+('saint-perpetua', 'Sancta Perpetua', 'Martyr Carthaginensis.', 'Perpetua cum Felicitate et sociis inter priscos martyrii testes eminuit.', '† 203'),
+('saint-felicity', 'Sancta Felicitas', 'Martyr Carthaginensis.', 'Felicitas, una cum Perpetua passa, ob constantiam fidei veneratur.', '† 203'),
+('saint-john-of-god', 'Sanctus Ioannes a Deo', 'Religiosus fundator in servitio infirmorum et pauperum.', 'Ioannes a Deo opere hospitali christiano novum impulsum dedit atque misericordiae exemplar praebuit.', '1495–1550'),
+('saint-frances-of-rome', 'Sancta Francisca Romana', 'Uxor, mater et religiosa, caritatis testis.', 'Francisca Romana sanctitatem in vita coniugali et religiosa coniunxit, pauperibus atque aegrotis serviens.', '1384–1440'),
+('saint-patrick', 'Sanctus Patricius', 'Episcopus missionarius et patronus Hiberniae.', 'Patricius Hiberniam evangelizavit et inter maximos missionarios Ecclesiae habetur.', 'c. 385–461'),
+('saint-cyril-of-jerusalem', 'Sanctus Cyrillus Hierosolymitanus', 'Episcopus et Ecclesiae doctor.', 'Cyrillus catechesibus suis notissimus est et fidem orthodoxam Hierosolymis strenue defendit.', 'c. 315–386'),
+('saint-joseph-spouse-of-mary', 'Sanctus Ioseph, Sponsus Mariae', 'Sponsus Beatae Mariae Virginis, custos Iesu.', 'Ioseph tamquam pater nutritius Christi et patronus Ecclesiae universalis colitur.', 'saec. I'),
+('saint-turibius-of-mongrovejo', 'Sanctus Turibius de Mogrovejo', 'Archiepiscopus missionarius in Peruvia.', 'Turibius vitam ecclesialem in Novo Orbe reformavit et evangelizationem cum zelo promovit.', '1538–1606')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+-- Avril
+INSERT INTO saints (
+  slug, default_name,
+  birth_year, birth_month, birth_day, birth_is_approximate,
+  death_year, death_month, death_day, death_is_approximate,
+  century,
+  place_of_birth_id, place_of_death_id, place_of_activity_id
+) VALUES
+(
+  'saint-francis-of-paola', 'Saint Francis of Paola',
+  1416, 3, 27, FALSE,
+  1507, 4, 2, FALSE,
+  16,
+  NULL, NULL, NULL
+),
+(
+  'saint-isidore', 'Saint Isidore',
+  560, NULL, NULL, TRUE,
+  636, 4, 4, FALSE,
+  7,
+  NULL, NULL, NULL
+),
+(
+  'saint-vincent-ferrer', 'Saint Vincent Ferrer',
+  1350, 1, 23, FALSE,
+  1419, 4, 5, FALSE,
+  15,
+  (SELECT id FROM places WHERE code='VALENCIA'),
+  NULL,
+  NULL
+),
+(
+  'saint-john-baptist-de-la-salle', 'Saint John Baptist de La Salle',
+  1651, 4, 30, FALSE,
+  1719, 4, 7, FALSE,
+  18,
+  (SELECT id FROM places WHERE code='REIMS'),
+  NULL,
+  NULL
+),
+(
+  'saint-stanislaus', 'Saint Stanislaus',
+  1030, NULL, NULL, TRUE,
+  1079, 4, 11, FALSE,
+  11,
+  NULL,
+  (SELECT id FROM places WHERE code='KRAKOW'),
+  (SELECT id FROM places WHERE code='KRAKOW')
+),
+(
+  'saint-martin-i', 'Saint Martin I',
+  NULL, NULL, NULL, TRUE,
+  655, 4, 13, FALSE,
+  7,
+  NULL, NULL,
+  (SELECT id FROM places WHERE code='ROME')
+),
+(
+  'saint-anselm', 'Saint Anselm',
+  1033, NULL, NULL, TRUE,
+  1109, 4, 21, FALSE,
+  12,
+  NULL,
+  (SELECT id FROM places WHERE code='CANTERBURY'),
+  (SELECT id FROM places WHERE code='CANTERBURY')
+),
+(
+  'saint-george', 'Saint George',
+  NULL, NULL, NULL, TRUE,
+  303, NULL, NULL, TRUE,
+  4,
+  NULL, NULL, NULL
+),
+(
+  'saint-adalbert', 'Saint Adalbert',
+  956, NULL, NULL, TRUE,
+  997, 4, 23, FALSE,
+  10,
+  NULL, NULL, NULL
+),
+(
+  'saint-fidelis-of-sigmaringen', 'Saint Fidelis of Sigmaringen',
+  1578, 10, 1, FALSE,
+  1622, 4, 24, FALSE,
+  17,
+  NULL, NULL, NULL
+),
+(
+  'saint-mark-evangelist', 'Saint Mark the Evangelist',
+  NULL, NULL, NULL, TRUE,
+  68, NULL, NULL, TRUE,
+  1,
+  NULL,
+  (SELECT id FROM places WHERE code='ALEXANDRIA'),
+  (SELECT id FROM places WHERE code='ALEXANDRIA')
+),
+(
+  'saint-peter-chanel', 'Saint Peter Chanel',
+  1803, 7, 12, FALSE,
+  1841, 4, 28, FALSE,
+  19,
+  NULL, NULL, NULL
+),
+(
+  'saint-louis-grignon-de-montfort', 'Saint Louis Grignion de Montfort',
+  1673, 1, 31, FALSE,
+  1716, 4, 28, FALSE,
+  18,
+  NULL, NULL, NULL
+),
+(
+  'saint-catherine-of-siena', 'Saint Catherine of Siena',
+  1347, 3, 25, FALSE,
+  1380, 4, 29, FALSE,
+  14,
+  (SELECT id FROM places WHERE code='SIENA'),
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='SIENA')
+),
+(
+  'saint-pius-v', 'Saint Pius V',
+  1504, 1, 17, FALSE,
+  1572, 5, 1, FALSE,
+  16,
+  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
+)
+ON CONFLICT (slug) DO NOTHING;
