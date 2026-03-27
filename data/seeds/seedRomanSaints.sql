@@ -2655,3 +2655,87 @@ INSERT INTO saints (
   NULL, NULL, NULL
 )
 ON CONFLICT (slug) DO NOTHING;
+
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'en', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-martin-de-porres', 'Saint Martin de Porres', 'Peruvian Dominican lay brother known for charity to the poor and the sick.', 'Martin de Porres combined deep humility and practical charity in service to the poorest in Lima; noted for his care of the sick, reconciliation and devotion, he remains a model of interracial and social solidarity.', '1579–1639'),
+('saint-charles-borromeo', 'Saint Charles Borromeo', 'Archbishop of Milan and leading figure of post‑Tridentine reform.', 'Charles Borromeo implemented reforms of the Council of Trent in Milan, fostering clergy formation, catechesis and charitable institutions; his pastoral zeal and administrative reforms influenced Catholic renewal in the late 16th century.', '1538–1584'),
+('saint-leo-the-great', 'Saint Leo the Great', 'Pope, Doctor of the Church and defender of doctrinal orthodoxy in a turbulent age.', 'Leo I strengthened the pastoral authority of the Roman See, confronted theological and political challenges of his era and is remembered for his sermons and letters that shaped Western ecclesial order and Christological reflection.', 'c. 400–461'),
+('saint-martin-of-tours', 'Saint Martin of Tours', 'Bishop and monastic founder remembered for charity and evangelical simplicity.', 'Martin, a former soldier turned monk and bishop, is famed for his act of charity toward a beggar and for founding monastic communities that shaped Western monasticism; his witness influenced medieval pastoral care and piety.', 'c. 316–397'),
+('saint-josaphat', 'Saint Josaphat, Bishop and Martyr', 'Monk and bishop who sought Eastern‑Latin reconciliation and died for the faith.', 'Josaphat Kuntsevych worked for unity and reform among Eastern Christians in the Polish‑Lithuanian Commonwealth and suffered martyrdom amid religious conflict; his life is remembered for ecclesial reconciliation and pastoral courage.', '1580–1623'),
+('saint-albert-the-great', 'Saint Albert the Great', 'Scholar, bishop and Doctor of the Church noted for learning and engagement with natural philosophy.', 'Albertus Magnus bridged Christian theology with extensive study of the natural world and Aristotelian thought, training figures such as Thomas Aquinas and contributing to medieval intellectual life as a model of learned pastoral service.', 'c. 1200–1280'),
+('saint-margaret-of-scotland', 'Saint Margaret of Scotland', 'Queen and reformer noted for piety, charity and support for the Church.', 'Margaret used her position to promote ecclesial reform, care for the poor and monastic foundations; her Christian witness shaped the religious life of the Scottish court and broader society.', 'c. 1045–1093'),
+('saint-gertrude', 'Saint Gertrude', 'Religious venerated for devotion and spiritual care (various saints named Gertrude).', 'Various women named Gertrude are honored in Christian tradition; they are remembered generally for lives of prayer, hospitality and care for the needy, with particular local cults and spiritual writings in some cases.', ''),
+('saint-elizabeth-of-hungary', 'Saint Elizabeth of Hungary', 'Princess known for exemplary charity and care for the poor.', 'Elizabeth used her royal resources to found hospitals and serve the poor, living a life of penance and charity that inspired medieval models of Christian service and sanctity.', '1207–1231'),
+('saint-cecilia', 'Saint Cecilia, Virgin and Martyr', 'Patroness of musicians, venerated for faith and martyrdom.', 'Cecilia is celebrated as a virgin‑martyr whose cult inspired musical and liturgical devotion; traditions associate her with the protection of sacred song and steadfast witness in persecution.', ''),
+('saint-clement-i', 'Saint Clement I, Pope and Martyr', 'Early pope remembered for pastoral leadership in the apostolic age.', 'Clement of Rome is linked to early efforts to preserve apostolic order and charity in the Church; his letter to the Corinthians and his martyrdom mark him as a formative figure in Roman ecclesial memory.', '1st century'),
+('saint-columban', 'Saint Columban, Abbot', 'Missionary‑founder whose monastic foundations influenced Europe.', 'Columban (Columbanus) led Irish missionary activity on the Continent, founding monasteries that became centers of learning and reform and shaping early medieval monasticism through discipline and evangelization.', 'd. 615'),
+('saint-andrew-dung-lac-and-companions', 'Saints Andrew Dũng‑Lạc and Companions', 'Vietnamese martyrs who witnessed to the faith under persecution.', 'Andrew Dũng‑Lạc and many companions suffered martyrdom in Vietnam across different eras; their witness strengthened local Christian communities and remains a formative testimony of Asian Catholic witness.', ''),
+('saint-catherine-of-alexandria', 'Saint Catherine of Alexandria', 'Virgin and martyr traditionally venerated for learning and courage.', 'Catherine is celebrated as a learned maiden who defended the faith before pagan magistrates and bore martyrdom; her cult inspired monastic and intellectual devotion in the medieval Church.', ''),
+('saint-andrew-apostle', 'Saint Andrew, Apostle', 'Apostle, missionary and brother of Saint Peter; early witness to the Gospel.', 'Andrew is venerated as one of the Twelve who preached to various regions and whose memory became important in apostolic tradition, marked by missionary zeal and martyrdom in several local traditions.', '1st century')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'fr', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-martin-de-porres', 'Saint Martin de Porres', 'Frère dominicain péruvien connu pour sa charité envers les pauvres et les malades.', 'Martin de Porres allia une grande humilité à une charité active au service des plus démunis à Lima; reconnu pour son soin des malades, sa réconciliation et sa dévotion, il demeure un modèle de solidarité sociale et interculturelle.', '1579–1639'),
+('saint-charles-borromeo', 'Saint Charles Borromée', 'Archevêque de Milan et acteur majeur de la réforme post‑tridentine.', 'Charles Borromée mit en œuvre les réformes du Concile de Trente à Milan, développant la formation du clergé, la catéchèse et les œuvres de charité; son zèle pastoral a marqué le renouveau catholique de la fin du XVIe siècle.', '1538–1584'),
+('saint-leo-the-great', 'Saint Léon le Grand', 'Pape et docteur de l''Église, défenseur de l''orthodoxie doctrinale en temps troublé.', 'Léon I renforça l''autorité pastorale de l''Siège romain, affronta difficultés théologiques et politiques de son époque et demeure connu pour ses sermons et lettres qui influencèrent l''ordre ecclésial occidental et la christologie.', 'v. 400–461'),
+('saint-martin-of-tours', 'Saint Martin de Tours', 'Évêque et fondateur monastique, célèbre pour sa charité et sa simplicité évangélique.', 'Martin, ancien soldat devenu moine puis évêque, est célèbre pour le geste de partage du manteau avec un mendiant et pour la fondation de communautés monastiques; son témoignage a nourri la piété et la pastorale médiévales.', 'v. 316–397'),
+('saint-josaphat', 'Saint Josaphat, évêque et martyr', 'Moine et évêque engagé pour la réconciliation entre traditions orientales et latines, mort en martyr.', 'Josaphat Kuntsevych chercha l''unité et la réforme parmi les chrétiens orientaux dans la république polono‑lituanienne et fut assassiné dans un contexte de tensions religieuses; sa vie rappelle l''appel à la paix et à la fidélité ecclésiale.', '1580–1623'),
+('saint-albert-the-great', 'Saint Albert le Grand', 'Érudit, évêque et docteur de l''Église, connu pour sa culture scientifique.', 'Albert le Grand rapprocha la théologie chrétienne des études sur la nature et la pensée aristotélienne, formant des disciples comme Thomas d''Aquin et jouant un rôle central dans la vie intellectuelle médiévale.', 'v. 1200–1280'),
+('saint-margaret-of-scotland', 'Sainte Marguerite d''Écosse', 'Reine et réformatrice connue pour sa piété et sa charité.', 'Marguerite mit sa position au service de la réforme ecclésiale, de l''aide aux pauvres et du soutien aux fondations monastiques; son témoignage a façonné la vie religieuse de la cour écossaise.', 'v. 1045–1093'),
+('saint-gertrude', 'Sainte Gertrude', 'Religieuse vénérée pour sa dévotion et ses soins spirituels (plusieurs saintes nommées Gertrude).', 'Différentes saintes nommées Gertrude sont honorées dans la tradition chrétienne; elles sont généralement commémorées pour leur vie de prière, leur hospitalité et leur attention aux nécessiteux, avec des cultes locaux spécifiques.', ''),
+('saint-elizabeth-of-hungary', 'Sainte Élisabeth de Hongrie', 'Princesse célèbre pour sa charité exemplaire envers les pauvres.', 'Élisabeth utilisa ses ressources pour fonder des hôpitaux et servir les pauvres, menant une vie de pénitence et de charité qui inspira des modèles médiévaux de sainteté et de service chrétien.', '1207–1231'),
+('saint-cecilia', 'Sainte Cécile, vierge et martyre', 'Patronne des musiciens, vénérée pour sa foi et son martyre.', 'Cécile est célébrée comme une vierge‑martyre dont le culte inspira la dévotion musicale et liturgique; les traditions la relient à la protection du chant sacré et au témoignage inébranlable dans la persécution.', ''),
+('saint-clement-i', 'Saint Clément I', 'Pape ancien, rappelé pour son ministère pastoral à l''âge apostolique.', 'Clément de Rome est associé aux premiers efforts pour préserver l''ordre apostolique et la charité dans l''Église; sa lettre aux Corinthiens et son martyre le désignent comme une figure formative de la mémoire romaine.', 'Ier siècle'),
+('saint-columban', 'Saint Colomban', 'Fondateur missionnaire dont les monastères marquèrent l''Europe.', 'Colomban mena la mission irlandaise sur le Continent, fondant monastères devenus centres d''étude et de réforme; sa discipline et son zèle évangélisateur influencèrent le monachisme médiéval.', 'm. 615'),
+('saint-andrew-dung-lac-and-companions', 'Saints André Dũng‑Lạc et compagnons', 'Martyrs vietnamiens témoignants de la foi sous la persécution.', 'André Dũng‑Lạc et de nombreux compagnons subirent le martyre au Vietnam à différentes époques; leur mémoire fortifia les communautés chrétiennes locales et demeure un témoignage marquant de la foi asiatique.', ''),
+('saint-catherine-of-alexandria', 'Sainte Catherine d''Alexandrie', 'Vierge et martyre traditionnellement honorée pour son savoir et son courage.', 'Catherine est fêtée comme une jeune érudite ayant défendu la foi devant les magistrats païens et ayant subi le martyre; son culte a inspiré la dévotion monastique et intellectuelle au Moyen Âge.', ''),
+('saint-andrew-apostle', 'Saint André, apôtre', 'Apôtre, missionnaire et frère de saint Pierre; témoin précoce de l''Évangile.', 'André est vénéré comme l''un des Douze qui prêcha dans diverses régions; sa mémoire s''est imposée dans la tradition apostolique, marquée par le zèle missionnaire et le martyre.', 'Ier siècle')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'la', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-martin-de-porres', 'Sanctus Martinus de Porres', 'Frater Dominicus Peruvianus notus pro caritate erga pauperes et aegros.', 'Martinus de Porres humilitate et caritate erga pauperes Limiensis claruit; curis infirmorum et reconciliationi dedutus, exemplum socialis et interracialis solidarietatis praebet.', '1579–1639'),
+('saint-charles-borromeo', 'Sanctus Carolus Borromaeus', 'Archiepiscopus Mediolani et reformator post‑Tridentinus.', 'Carolus Borromaeus reformis Concilii Tridentini in Mediolano operam dedit, formationem clericorum, catechesin et instituta caritatis promovens; pastoralis eius zelus renovationem Catholicam saeculi XVI impulit.', '1538–1584'),
+('saint-leo-the-great', 'Sanctus Leo Magnus', 'Papa et Doctor Ecclesiae, defensor orthodoxiae in tempore turbido.', 'Leo I auctoritatem pastoralem Sedis Romanae firmavit, difficultates theologicæ et politicas suscepit et sermones ac epistulas reliquit quae ordinem ecclesiasticum occidentalem et christologiam moderatam formaverunt.', 'c. 400–461'),
+('saint-martin-of-tours', 'Sanctus Martinus Turonensis', 'Episcopus et fundator monachicus, memor caritatis et simplicitatis evangelicae.', 'Martinus, miles factus monachus et postea episcopus, pro veste socia cum mendico notus est et monasteria condidit quae monachismum occidentalem signaverunt; eius testimonium in pietate medievali valde resonat.', 'c. 316–397'),
+('saint-josaphat', 'Sanctus Iosaphat, Episcopus et Martyr', 'Monachus et episcopus unitatem ecclesiasticam instituebans, ob fidem martyrizatus.', 'Iosaphat Kuntsevych unitatem et reformationem inter traditiones orientales et latinas quaesivit et in conflictu religioso martyrio coronatus est; vita eius unitatem ecclesiae et pastoralem constantiam commemorat.', '1580–1623'),
+('saint-albert-the-great', 'Sanctus Albertus Magnus', 'Doctor Ecclesiae, episcopus et eruditus naturae philosophiæ.', 'Albertus Magnus theologiae et naturalium studia coniunxit, Aristotelicam traditionem integrans et discipulos ut Thomam Aquinatem formans; exemplo eruditionis pastoralis medii aevi permansit.', 'c. 1200–1280'),
+('saint-margaret-of-scotland', 'Sancta Margarita Scotiae', 'Regina et reformatrix nota pro pietate et caritate.', 'Margarita officio suo ut regina ad reformam ecclesiasticam, pauperum curam et subsidium monachiorum se dedicavit; eius testimonium vitam religiosam curiae Scoticae formavit.', 'c. 1045–1093'),
+('saint-gertrude', 'Sancta Gertrudis', 'Religiosa veneranda pro devotionibus et curis spiritualibus (plures sanctae Gertrudis).', 'Plurimae Gertrudises in traditione Christiana venerantur; plerumque memorantur propter vitam orationis, hospitalitatem et curam pauperum, cum cultibus localibus.', ''),
+('saint-elizabeth-of-hungary', 'Sancta Elisabeth Hungariae', 'Principissa nota ob caritatem erga pauperes.', 'Elisabeth opes regias ad hospitia fundanda et pauperibus serviendum impendit, vitam poenitentiae et caritatis agente, quae exempla medievalia sanctitatis produxit.', '1207–1231'),
+('saint-cecilia', 'Sancta Caecilia, Virgo et Martyr', 'Patrona musicorum, venerata pro fide et martyrio.', 'Caecilia ut virgo‑martyr celebratur et cultus eius devotionem musicam et liturgicam excitavit; traditiones eam cum tutela cantus sacri et firma constantia in persecutione coniungunt.', ''),
+('saint-clement-i', 'Sanctus Clemens I', 'Papa antiquus memor pastoralis in aetate apostolica.', 'Clemens Romae ordinis apostolici et caritatis servitium fovere coniunctus est; epistula eius ad Corinthios et martyrium eum in memoria Romana collocat.', 'saec. I'),
+('saint-columban', 'Sanctus Columbanus', 'Abbas et fundator missionum, cuius monasteria Europam signaverunt.', 'Columbanus missionem Hibernicam in continentem duxit, monasteria condidit quae centros studii et reformationis effecerunt et monachismum medievalem formaverunt.', 'ob. 615'),
+('saint-andrew-dung-lac-and-companions', 'Sancti Andreas Dung‑Lac et Socii', 'Martyrs Vietnamenses qui fidem sub persecutione professi sunt.', 'Andreas Dung‑Lac et multi socii martyrio affecti sunt in Vietnamia; eorum memoria communitates christianas localiter firmavit et testimonium fidei Asiaticum repraesentationem habet.', ''),
+('saint-catherine-of-alexandria', 'Sancta Catharina Alexandrina', 'Virgo et martyr, tradita pro eruditione et fortitudine.', 'Catharina ut puella erudita memorialiter celebratur quae fidem coram magistratibus paganorum defendit et martyrio coronata est; cultus eius devotionem monasticam et intellectualem in Medio Aevo excitavit.', ''),
+('saint-andrew-apostle', 'Sanctus Andreas, Apostolus', 'Apostolus et missionarius, frater Sancti Petri; primus testis Evangelii.', 'Andreas una ex Duodecim venerated est qui in varias regiones praedicationem retulit; memoria eius in traditione apostolica, zelo missionario et martyrio consistit.', 'saec. I')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
