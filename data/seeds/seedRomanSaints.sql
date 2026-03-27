@@ -2525,3 +2525,133 @@ DO UPDATE SET
 -- ==============
 -- NOVEMBER SAINTS
 -- ==============
+
+INSERT INTO saints (
+  slug, default_name,
+  birth_year, birth_month, birth_day, birth_is_approximate,
+  death_year, death_month, death_day, death_is_approximate,
+  century,
+  place_of_birth_id, place_of_death_id, place_of_activity_id
+) VALUES
+(
+  'saint-martin-de-porres', 'Saint Martin de Porres',
+  1579, NULL, NULL, FALSE,
+  1639, 11, 3, FALSE,
+  17,
+  (SELECT id FROM places WHERE code='LIMA'),
+  (SELECT id FROM places WHERE code='LIMA'),
+  NULL
+),
+(
+  'saint-charles-borromeo', 'Saint Charles Borromeo',
+  1538, NULL, NULL, FALSE,
+  1584, 11, 4, FALSE,
+  16,
+  NULL,
+  (SELECT id FROM places WHERE code='MILAN'),
+  (SELECT id FROM places WHERE code='MILAN')
+),
+(
+  'saint-leo-the-great', 'Saint Leo the Great',
+  NULL, NULL, NULL, TRUE,
+  461, 11, 10, TRUE,
+  5,
+  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
+),
+(
+  'saint-martin-of-tours', 'Saint Martin of Tours',
+  NULL, NULL, NULL, TRUE,
+  397, 11, 11, TRUE,
+  4,
+  NULL,
+  (SELECT id FROM places WHERE code='TOURS'),
+  (SELECT id FROM places WHERE code='TOURS')
+),
+(
+  'saint-josaphat', 'Saint Josaphat, Bishop and Martyr',
+  NULL, NULL, NULL, TRUE,
+  1623, 11, 12, TRUE,
+  17,
+  NULL, NULL, NULL
+),
+(
+  'saint-albert-the-great', 'Saint Albert the Great',
+  NULL, NULL, NULL, TRUE,
+  1280, 11, 15, TRUE,
+  13,
+  NULL,
+  (SELECT id FROM places WHERE code='COLOGNE'),
+  (SELECT id FROM places WHERE code='COLOGNE')
+),
+(
+  'saint-margaret-of-scotland', 'Saint Margaret of Scotland',
+  NULL, NULL, NULL, TRUE,
+  1093, 11, 16, TRUE,
+  11,
+  NULL, NULL, NULL
+),
+(
+  'saint-gertrude', 'Saint Gertrude',
+  NULL, NULL, NULL, TRUE,
+  NULL, 11, 16, TRUE,
+  NULL,
+  NULL, NULL, NULL
+),
+(
+  'saint-elizabeth-of-hungary', 'Saint Elizabeth of Hungary',
+  1207, NULL, NULL, TRUE,
+  1231, 11, 17, FALSE,
+  13,
+  NULL, NULL, NULL
+),
+(
+  'saint-cecilia', 'Saint Cecilia, Virgin and Martyr',
+  NULL, NULL, NULL, TRUE,
+  NULL, 11, 22, TRUE,
+  NULL,
+  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
+),
+(
+  'saint-clement-i', 'Saint Clement I, Pope and Martyr',
+  NULL, NULL, NULL, TRUE,
+  NULL, 11, 23, TRUE,
+  1,
+  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
+),
+(
+  'saint-columban', 'Saint Columban, Abbot',
+  NULL, NULL, NULL, TRUE,
+  615, 11, 23, TRUE,
+  7,
+  NULL, NULL, NULL
+),
+(
+  'saint-andrew-dung-lac-and-companions', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs',
+  NULL, NULL, NULL, TRUE,
+  NULL, 11, 24, TRUE,
+  NULL,
+  NULL, NULL, NULL
+),
+(
+  'saint-catherine-of-alexandria', 'Saint Catherine of Alexandria',
+  NULL, NULL, NULL, TRUE,
+  NULL, 11, 25, TRUE,
+  NULL,
+  NULL,
+  (SELECT id FROM places WHERE code='ALEXANDRIA'),
+  (SELECT id FROM places WHERE code='ALEXANDRIA')
+),
+(
+  'saint-andrew-apostle', 'Saint Andrew, Apostle',
+  NULL, NULL, NULL, TRUE,
+  NULL, 11, 30, TRUE,
+  1,
+  NULL, NULL, NULL
+)
+ON CONFLICT (slug) DO NOTHING;
