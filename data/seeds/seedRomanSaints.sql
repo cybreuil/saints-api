@@ -1,6 +1,152 @@
 BEGIN;
 
 -- ==============
+-- IMPORTANT SAINTS
+-- ==============
+
+INSERT INTO saints (
+  slug, default_name,
+  birth_year, birth_month, birth_day, birth_is_approximate,
+  death_year, death_month, death_day, death_is_approximate,
+  century,
+  place_of_birth_id, place_of_death_id, place_of_activity_id
+) VALUES
+(
+  'saint-mary', 'Saint Mary (Blessed Virgin Mary)',
+  NULL, NULL, NULL, TRUE,
+  NULL, NULL, NULL, TRUE,
+  1,
+  (SELECT id FROM places WHERE code='NAZARETH'),
+  NULL,
+  (SELECT id FROM places WHERE code='NAZARETH')
+),
+(
+  'saint-joseph', 'Saint Joseph',
+  NULL, NULL, NULL, TRUE,
+  NULL, NULL, NULL, TRUE,
+  1,
+  NULL,
+  NULL,
+  (SELECT id FROM places WHERE code='NAZARETH')
+),
+(
+  'saint-john-the-baptist', 'Saint John the Baptist',
+  NULL, NULL, NULL, TRUE,
+  NULL, NULL, NULL, TRUE,
+  1,
+  NULL,
+  NULL,
+  NULL
+)
+ON CONFLICT (slug) DO NOTHING;
+
+-- EN (expanded)
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'en', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+(
+  'saint-mary',
+  'Saint Mary (Blessed Virgin Mary)',
+  'Mother of Jesus Christ, model disciple of the Lord, and preeminent figure of the Church''s faith and Marian devotion.',
+  'Mary of Nazareth, the Blessed Virgin, is contemplated by the Church as a central and singular figure in the economy of salvation. Her vocation unfolds in Scripture within the history of Israel and reaches its fullness in her free assent to God''s saving plan at the Annunciation: she receives the Word in faith before she receives him in her womb. In her person, listening and obedience are inseparable: she hears, believes, consents, and perseveres.\n\nThe Gospel portrays Mary at decisive moments of Christ''s mystery. She bears the Son in humility, ponders events in her heart, presents him in the Temple, accompanies him through hidden years, and appears at moments where revelation deepens—especially at Cana and at Calvary. At Cana she directs servants to Christ with enduring ecclesial relevance: "Do whatever he tells you." At the Cross she stands in fidelity, sharing in the sorrow of the Passion and receiving a maternal mission toward the disciples. In the upper room she is present in prayer with the Apostles, a sign of continuity between Christ''s paschal mystery and the life of the early Church.\n\nDoctrinally, Christian tradition venerates Mary as Theotokos (Mother of God), affirming the unity of Christ''s person and the truth of the Incarnation. Her perpetual virginity, holiness, and maternal vocation are contemplated not as isolated privileges but as dimensions of her total orientation to Christ and his mission. Mariology, at its best, remains Christological and ecclesial: Mary points to the Son, magnifies divine mercy, and serves the communion of believers.\n\nMary''s Magnificat gives the Church a theology of praise and justice: God exalts the humble, remembers his covenant, and acts with mercy across generations. Thus she is invoked as Mother of the faithful and image of the Church''s future glory—already fulfilled in her, hoped for by all the baptized. Across cultures and centuries, Marian devotion has generated prayer, art, theology, and pastoral renewal; yet the core remains evangelical simplicity: Mary leads believers to Christ, teaches persevering trust, and embodies discipleship fully open to grace.\n\nFor this reason many distinct liturgical celebrations—while differing by mystery, title, or historical context—are rooted in the one person of Mary. She is not a set of separate figures but one saintly person contemplated under different aspects of the same maternal and salvific vocation.',
+  ''
+),
+(
+  'saint-joseph',
+  'Saint Joseph',
+  'Spouse of the Blessed Virgin Mary, guardian of the Redeemer, and just man entrusted with the care of Jesus and the Holy Family.',
+  'Saint Joseph stands in the Gospel as a discreet yet foundational witness to God''s fidelity in salvation history. Descended from the house of David, he receives a mission that is both humble and decisive: to provide legal and familial protection to Jesus, to welcome Mary in faithful love, and to safeguard the hidden beginnings of the Incarnation. Scripture calls him a "just man"—a title expressing not mere legal rectitude but covenantal righteousness: reverence before God, mercy toward others, and concrete obedience in difficult circumstances.\n\nJoseph''s vocation unfolds through faithful action more than spoken discourse. In dreams he receives divine guidance, and each time he responds promptly: he takes Mary into his home, protects the Child from mortal danger, accepts exile, returns when called, and establishes family life at Nazareth. Through ordinary labor he supports the Holy Family, sanctifying daily work as participation in God''s providence. His fatherhood is real in responsibility, tenderness, authority, and sacrifice—though not biological—making him a permanent model for spiritual fatherhood and protective love.\n\nChristian tradition venerates Joseph as Custos Redemptoris (Guardian of the Redeemer) and Patron of the Universal Church. He is invoked by spouses, parents, workers, migrants, and all who bear hidden burdens with faithful courage. His silence in Scripture is not absence, but depth: a contemplative silence full of discernment, humility, and readiness to serve. He teaches that holiness is often lived without visibility, in steadfast fidelity to one''s duties and in trustful surrender to divine timing.\n\nTheologically, Joseph''s mission belongs intrinsically to the mystery of the Incarnation. He ensures Jesus'' insertion into Davidic lineage according to the law, protects Mary''s dignity, and shelters the Child through vulnerable years in a world marked by violence and instability. His figure reveals that salvation history advances not only through public preaching and miracles, but also through hidden obedience, domestic charity, and persevering responsibility.\n\nAs model of the interior life, Joseph embodies chaste love, disciplined freedom, and practical wisdom. As model of social virtue, he honors work, family stability, and care for the vulnerable. As model of ecclesial service, he points beyond himself to Christ while remaining entirely faithful to the mission entrusted to him. In every age, devotion to Saint Joseph renews confidence that God acts powerfully through those who accept humble tasks with wholehearted faith.',
+  ''
+),
+(
+  'saint-john-the-baptist',
+  'Saint John the Baptist',
+  'Prophet of the Most High and forerunner of Christ, who prepared the people for the coming of the Lord and sealed his witness in martyrdom.',
+  'John the Baptist occupies a unique place in biblical revelation as the forerunner of the Messiah and the final great voice of prophetic expectation before the public ministry of Jesus. Consecrated from the womb and marked by ascetic life, he appears in the wilderness as a sign of radical return to God. His preaching is direct, moral, and universal: repentance is not sentiment but concrete conversion—justice in social relations, integrity in public office, humility before God, and readiness for the Kingdom.\n\nAt the Jordan, John administers a baptism of repentance, gathering Israel in an eschatological moment of preparation. Yet he consistently relativizes himself: he is the voice, not the Word; the friend, not the Bridegroom; the witness, not the Light. His Christological humility culminates in his testimony to Jesus as the One who comes from above and takes away the sin of the world. In this way John becomes a model for all ministry: authentic authority points away from self and toward Christ.\n\nJohn''s mission is also ecclesially formative. He links old and new covenants: rooted in Israel''s prophetic tradition, he inaugurates the threshold of the Gospel era. He identifies ethical conversion with readiness for divine visitation, and he teaches that external religious identity cannot replace the fruits of righteousness. His call reaches every social class, making him a prophet of moral accountability and public truth.\n\nHis martyrdom reveals the cost of fidelity. John denounces injustice and moral corruption even at political risk; his imprisonment and execution show that prophetic speech confronts powers resistant to conversion. The Church therefore venerates him not only as precursor but also as martyr whose blood confirms his message.\n\nLiturgically and spiritually, John is remembered through multiple commemorations (birth, mission, martyrdom), yet these moments belong to one coherent vocation: to prepare a people for the Lord and to decrease so that Christ may increase. He remains a perennial guide for preaching, penance, and spiritual discernment—calling believers to simplicity, truth, and total openness to the coming of God.',
+  ''
+)
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+-- FR (expanded)
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'fr', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+(
+  'saint-mary',
+  'Sainte Marie (Bienheureuse Vierge Marie)',
+  'Mère de Jésus-Christ, disciple parfaite du Seigneur et figure centrale de la foi de l''Église et de la dévotion mariale.',
+  'Marie de Nazareth est contemplée par l''Église comme une figure centrale et unique de l''histoire du salut. Sa vocation s''inscrit dans l''alliance biblique d''Israël et atteint son accomplissement dans son assentiment libre au dessein de Dieu lors de l''Annonciation: elle accueille la Parole dans la foi avant de l''accueillir dans sa chair. En elle, écoute et obéissance sont indissociables: elle entend, croit, consent et persévère.\n\nL''Évangile la montre aux moments décisifs du mystère du Christ. Elle enfante dans l''humilité, médite les événements dans son cœur, présente l''enfant au Temple, accompagne les années cachées et apparaît quand la révélation s''intensifie, notamment à Cana et au Calvaire. À Cana, sa parole demeure programmatique pour l''Église: « Faites tout ce qu''il vous dira ». Au pied de la Croix, elle demeure fidèle, participe dans la douleur au mystère pascal et reçoit une mission maternelle envers les disciples. Au Cénacle, elle prie avec les Apôtres, signe de continuité entre Pâques et la vie de l''Église naissante.\n\nSur le plan doctrinal, la tradition chrétienne la vénère comme Theotokos (Mère de Dieu), vérité inséparable de la confession du Christ vrai Dieu et vrai homme. Sa virginité perpétuelle, sa sainteté et sa maternité ne sont pas des privilèges isolés, mais l''expression d''une orientation totale au Christ et à son œuvre. Une mariologie authentique demeure toujours christologique et ecclésiale: Marie renvoie au Fils, magnifie la miséricorde de Dieu et sert la communion des croyants.\n\nSon Magnificat offre une théologie de la louange et de la justice: Dieu élève les humbles, se souvient de son alliance, déploie sa miséricorde de génération en génération. Ainsi Marie est invoquée comme Mère des fidèles et image de l''accomplissement futur de l''Église. À travers les siècles, la dévotion mariale a nourri la prière, l''art, la doctrine et la pastorale; mais son cœur demeure évangélique: conduire au Christ, apprendre la confiance persévérante, et vivre une disponibilité totale à la grâce.\n\nC''est pourquoi de nombreuses célébrations liturgiques, bien que variées dans leurs titres et leurs accentuations, se rapportent à l''unique personne de Marie: non pas des figures distinctes, mais une seule sainte contemplée sous plusieurs aspects de sa vocation maternelle et salvifique.',
+  ''
+),
+(
+  'saint-joseph',
+  'Saint Joseph',
+  'Époux de la Bienheureuse Vierge Marie, gardien du Rédempteur et homme juste chargé de veiller sur Jésus et la Sainte Famille.',
+  'Saint Joseph apparaît dans l''Évangile comme un témoin discret mais fondamental de la fidélité de Dieu dans l''histoire du salut. Issu de la maison de David, il reçoit une mission humble et décisive: garantir l''inscription familiale et légale de Jésus, accueillir Marie dans une fidélité chaste, et protéger les commencements cachés de l''Incarnation. L''Écriture le qualifie d''« homme juste », c''est-à-dire non seulement droit selon la loi, mais profondément ajusté à Dieu: respectueux, miséricordieux, docile à la volonté divine.\n\nLa vocation de Joseph se déploie surtout par des actes. Dans les songes, Dieu l''éclaire; chaque fois, il répond sans délai: il prend Marie chez lui, protège l''enfant menacé, assume l''exil, revient au moment voulu et établit la famille à Nazareth. Par son travail quotidien, il soutient la Sainte Famille et sanctifie la vie ordinaire. Sa paternité est réelle dans la responsabilité, l''autorité bienveillante, la tendresse et le sacrifice, même sans génération biologique; il devient ainsi un modèle durable de paternité spirituelle et de protection fidèle.\n\nLa tradition chrétienne l''honore comme Custos Redemptoris (Gardien du Rédempteur) et Patron de l''Église universelle. Il est invoqué par les époux, les parents, les travailleurs, les migrants et tous ceux qui portent des charges cachées avec courage. Son silence évangélique n''est pas absence, mais profondeur: un silence habité de discernement, d''humilité et de disponibilité.\n\nThéologiquement, sa mission appartient au mystère même de l''Incarnation. Joseph assure l''appartenance davidique de Jésus selon la loi, protège la dignité de Marie et préserve l''enfant durant des années vulnérables dans un monde violent et instable. Sa figure rappelle que l''histoire du salut avance aussi par l''obéissance cachée, la charité domestique et la fidélité persévérante.\n\nComme maître de vie intérieure, Joseph unit chasteté du cœur, liberté disciplinée et sagesse concrète. Comme modèle social, il honore le travail, la stabilité familiale et le soin des plus fragiles. Comme serviteur ecclésial, il s''efface devant le Christ tout en accomplissant pleinement sa mission. En tout temps, sa dévotion ravive la confiance que Dieu agit puissamment par ceux qui acceptent humblement la tâche reçue.',
+  ''
+),
+(
+  'saint-john-the-baptist',
+  'Saint Jean-Baptiste',
+  'Prophète du Très-Haut et précurseur du Christ, qui a préparé le peuple à la venue du Seigneur et scellé son témoignage par le martyre.',
+  'Jean-Baptiste occupe dans la révélation biblique une place singulière: précurseur du Messie, il est la dernière grande voix prophétique avant la manifestation publique de Jésus. Consacré dès le sein maternel et marqué par une vie ascétique, il surgit au désert comme signe d''un retour radical à Dieu. Sa prédication est directe, exigeante et universelle: la conversion ne se réduit pas à un sentiment, elle implique des actes de justice, de vérité, de partage et d''intégrité personnelle.\n\nAu Jourdain, Jean administre un baptême de conversion et rassemble le peuple dans un temps de préparation décisive. Pourtant, il se relativise constamment: il est la voix, non la Parole; l''ami, non l''Époux; le témoin, non la Lumière. Son humilité christologique culmine quand il désigne Jésus comme celui qui vient d''en haut et enlève le péché du monde. Il devient ainsi un modèle de tout ministère authentique: l''autorité véritable conduit au Christ, non à soi-même.\n\nSa mission a aussi une portée ecclésiale. Jean relie l''Ancienne et la Nouvelle Alliance: enraciné dans la tradition prophétique d''Israël, il ouvre le seuil du temps évangélique. Il rappelle que l''identité religieuse extérieure ne remplace jamais les fruits concrets de justice. Son appel touche toutes les catégories sociales, faisant de lui un prophète de responsabilité morale et de vérité publique.\n\nSon martyre révèle le prix de la fidélité. Jean dénonce l''injustice et la corruption morale même face au pouvoir politique; son emprisonnement puis sa mort manifestent que la parole prophétique rencontre la résistance des cœurs fermés. L''Église le vénère donc à la fois comme précurseur et comme martyr.\n\nDans la liturgie comme dans la vie spirituelle, plusieurs commémorations (naissance, mission, passion) renvoient à une vocation unique et cohérente: préparer un peuple au Seigneur et consentir à diminuer pour que le Christ grandisse. Jean demeure un guide permanent pour la prédication, la pénitence et le discernement, appelant les croyants à la simplicité, à la vérité et à l''ouverture totale à l''action de Dieu.',
+  ''
+)
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+-- LA (expanded)
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'la', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+(
+  'saint-mary',
+  'Sancta Maria (Beata Virgo Maria)',
+  'Mater Iesu Christi, discipula perfecta Domini, et praecipua figura fidei Ecclesiae ac devotionis marianae.',
+  'Maria Nazarethana in Ecclesia contemplatur ut figura centralis et singularis in oeconomia salutis. Vocatio eius intra historiam foederis Israel enucleatur et ad plenitudinem pervenit cum libero assensu in Annuntiatione: Verbum prius fide recipit quam in utero concipiat. In ea auditus et oboedientia inseparabiles sunt: audit, credit, consentit, perseverat.\n\nEvangelium Mariam ostendit in momentis decisivis mysterii Christi. Filium in humilitate parit, eventa in corde meditatur, puerum in Templo offert, annos absconditos comitatur, atque in locis ubi revelatio profundius fulget adest, praesertim Canae et sub Cruce. Canae ad Christum servos dirigit verbis in Ecclesia perennibus: « Quodcumque dixerit vobis, facite ». Sub Cruce fidelis stat, dolori passionis sociatur, ac missionem maternam erga discipulos suscipit. In cenaculo cum Apostolis in oratione perseverat, signum continuitatis inter mysterium paschale et vitam Ecclesiae nascentis.\n\nDoctrinaliter traditio christiana Mariam veneratur ut Theotokos, id est Dei Genetricem, unde veritas Incarnationis et unitas personae Christi confirmantur. Virginitas perpetua, sanctitas et maternitas eius non sunt privilegia separata, sed dimensiones totius orientationis ad Christum et missionem eius. Vera mariologia semper christologica et ecclesialis manet: Maria ad Filium remittit, misericordiam Dei magnificat, communionem fidelium servit.\n\nMagnificat Mariae theologiam laudis et iustitiae exprimit: Deus humiles exaltat, foederis memor est, misericordiam per generationes diffundit. Ideo invocatur ut Mater fidelium et imago futuri Ecclesiae gloriae, in ea iam praegustatae, ab omnibus baptizatis sperandae. Per saecula devotio mariana orationem, artem, theologiam et renovationem pastoralem aluit; centrum tamen evangelica simplicitas manet: Maria ad Christum ducit, fiduciam perseverantem docet, atque plenam gratiae disponibilitatem incarnat.\n\nQuapropter multae celebrationes liturgicae, licet titulo vel accentu diversae, ad unam eandemque personam Mariae referuntur: non plures figurae separatae, sed una sancta persona sub variis aspectibus maternae vocationis in mysterio salutis contemplata.',
+  ''
+),
+(
+  'saint-joseph',
+  'Sanctus Ioseph',
+  'Sponsus Beatae Mariae Virginis, custos Redemptoris, vir iustus cui Iesu et Sanctae Familiae cura commissa est.',
+  'Sanctus Ioseph in Evangelio apparet testis discretus sed fundamentalis fidelitatis Dei in historia salutis. Ex domo David oriundus missionem accipit humilem simul et decisivam: Iesum tutela legali ac familiari custodire, Mariam in fide castoque amore recipere, atque initia abscondita Incarnationis servare. Scriptura eum « virum iustum » appellat, quod non solam rectitudinem legalem significat sed iustitiam foederalem: timorem Dei, misericordiam, oboedientiam concretam in rebus arduis.\n\nVocatio Ioseph praecipue in operibus potius quam in verbis manifestatur. Per somnia monita divina accipit et semper celeriter obtemperat: Mariam domum recipit, Puerum a periculo defendit, exsilium suscipit, ad reditum paratus est, ac vitam domesticam Nazareth stabilit. Per laborem cotidianum Sanctam Familiam sustentat et opus humanum sanctificat ut participationem providentiae Dei. Paternitas eius, etsi non biologica, vera est in responsabilitate, auctoritate benevola, teneritudine et sacrificio; ideo permanens exemplar paternitatis spiritualis et amoris tutelae fit.\n\nTraditio christiana eum colit ut Custodem Redemptoris et Patronum Ecclesiae universalis. Invocatur a coniugibus, parentibus, opificibus, migrantibus, et omnibus qui onera abscondita cum fortitudine ferunt. Silentium eius evangelicum non vacuum est, sed profundum: silentium discernimento, humilitate et prompta disponibilitate plenum.\n\nTheologice missio Ioseph ad ipsum mysterium Incarnationis intrinsece pertinet. Ipse insertionem Iesu in lineam Davidicam secundum legem efficit, dignitatem Mariae custodit, et Puerum in annis fragilibus in mundo violento ac instabili tuetur. Figura eius ostendit historiam salutis non solum per praedicationes publicas et miracula procedere, sed etiam per oboedientiam absconditam, caritatem domesticam, et perseverantem responsabilitatem.\n\nUt magister vitae interioris, Ioseph castum amorem, libertatem disciplinatam et sapientiam practicam coniungit. Ut exemplar sociale, dignitatem laboris, stabilitatem familiaris vitae, curam infirmorum honorat. Ut minister ecclesialis, ad Christum dirigit dum missionem suam plene peragit. In omni aetate devotio ad Sanctum Ioseph fiduciam renovat Deum potenter operari per eos qui humilia munera corde integro suscipiunt.',
+  ''
+),
+(
+  'saint-john-the-baptist',
+  'Sanctus Ioannes Baptista',
+  'Propheta Altissimi et praecursor Christi, qui populum ad adventum Domini praeparavit et testimonium suum martyrio consummavit.',
+  'Ioannes Baptista locum unicum in revelatione biblica obtinet ut praecursor Messiae atque ultima magna vox prophetica ante publicum ministerium Iesu. Ab utero consecratus et vita ascetica insignis, in deserto apparet quasi signum reditus radicalis ad Deum. Praedicatio eius directa est, moralis, universalis: paenitentia non affectus tantum est, sed conversio concreta—iustitia socialis, integritas officii publici, humilitas coram Deo, et promptitudo ad Regnum.\n\nAd Iordanem Ioannes baptismum paenitentiae ministrat, populum in momentum eschatologicum praeparationis congregans. Tamen se ipsum constanter relativizat: vox est, non Verbum; amicus est, non Sponsus; testis est, non Lux. Humilitas eius christologica culmen attingit cum Iesum designat ut eum qui desuper venit et peccatum mundi tollit. Sic Ioannes exemplar fit omnis veri ministerii: auctoritas authentica non ad se, sed ad Christum ducit.\n\nMissio Ioannis etiam momentum ecclesiale habet. Vetus et Novum Foedus connectit: in traditione prophetica Israel radicatus, limen temporis evangelici inaugurat. Docet conversionem ethicam necessariam esse ad visitationem divinam recipiendam, et identitatem religiosam externam sine fructibus iustitiae insufficere. Vox eius ad omnes ordines sociales pervenit, eum faciens prophetam responsabilitatis moralis et veritatis publicae.\n\nMartyrium eius pretium fidelitatis ostendit. Iniquitatem et corruptionem moralem etiam coram potestate politica denuntiat; carcer et mors declarant verbum propheticum potestatibus conversioni repugnantibus occurrere. Ideo Ecclesia eum non solum ut praecursorem, sed etiam ut martyrem veneratur.\n\nLiturgice ac spiritualiter Ioannes per plures commemorationes recolitur (nativitas, ministerium, passio), attamen omnia ad unam vocationem cohaerentem pertinent: populum Domino praeparare et se ipsum minuere ut Christus crescat. Permanet magister perennis praedicationis, paenitentiae et discretionis spiritualis, fideles vocans ad simplicitatem, veritatem et plenam aperturae erga adventum Dei.',
+  ''
+)
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+
+-- ==============
 -- JANUARY SAINTS
 -- ==============
 
@@ -500,14 +646,14 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='JERUSALEM'),
   (SELECT id FROM places WHERE code='JERUSALEM')
 ),
-(
-  'saint-joseph-spouse-of-mary', 'Saint Joseph, Spouse of Mary',
-  NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
-  1,
-  NULL, NULL,
-  (SELECT id FROM places WHERE code='NAZARETH')
-),
+-- (
+--   'saint-joseph-spouse-of-mary', 'Saint Joseph, Spouse of Mary',
+--   NULL, NULL, NULL, TRUE,
+--   NULL, NULL, NULL, TRUE,
+--   1,
+--   NULL, NULL,
+--   (SELECT id FROM places WHERE code='NAZARETH')
+-- ),
 (
   'saint-turibius-of-mongrovejo', 'Saint Turibius of Mongrovejo',
   1538, NULL, NULL, TRUE,
@@ -530,7 +676,7 @@ JOIN (VALUES
 ('saint-frances-of-rome', 'Saint Frances of Rome', 'Wife, mother, and religious; witness of charity.', 'Frances of Rome lived holy marriage and later religious life, serving the poor and the sick in the city of Rome.', '1384–1440'),
 ('saint-patrick', 'Saint Patrick', 'Missionary bishop and patron of Ireland.', 'Patrick evangelized Ireland and remains one of the most beloved missionary saints in Christian tradition.', 'c. 385–461'),
 ('saint-cyril-of-jerusalem', 'Saint Cyril of Jerusalem', 'Bishop and Doctor of the Church.', 'Cyril is especially known for his catechetical instructions and his defense of orthodox faith in Jerusalem.', 'c. 315–386'),
-('saint-joseph-spouse-of-mary', 'Saint Joseph, Spouse of Mary', 'Spouse of the Blessed Virgin Mary, guardian of Jesus.', 'Joseph is honored as foster-father of Christ, patron of the universal Church and model of obedience and quiet fidelity.', '1st century'),
+-- ('saint-joseph-spouse-of-mary', 'Saint Joseph, Spouse of Mary', 'Spouse of the Blessed Virgin Mary, guardian of Jesus.', 'Joseph is honored as foster-father of Christ, patron of the universal Church and model of obedience and quiet fidelity.', '1st century'),
 ('saint-turibius-of-mongrovejo', 'Saint Turibius of Mongrovejo', 'Archbishop and missionary pastor in Peru.', 'Turibius reformed church life in the New World, defended indigenous peoples and promoted evangelization with great zeal.', '1538–1606')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
@@ -552,7 +698,7 @@ JOIN (VALUES
 ('saint-frances-of-rome', 'Sainte Françoise de Rome', 'Épouse, mère et religieuse, témoin de charité.', 'Françoise de Rome a vécu la sainteté dans le mariage puis dans la vie religieuse, au service des pauvres et des malades.', '1384–1440'),
 ('saint-patrick', 'Saint Patrick', 'Évêque missionnaire et patron de l’Irlande.', 'Patrick évangélisa l’Irlande et demeure l’une des figures missionnaires les plus célèbres de l’Église.', 'v. 385–461'),
 ('saint-cyril-of-jerusalem', 'Saint Cyrille de Jérusalem', 'Évêque et docteur de l’Église.', 'Cyrille est connu pour ses catéchèses baptismales et sa défense de la foi orthodoxe à Jérusalem.', 'v. 315–386'),
-('saint-joseph-spouse-of-mary', 'Saint Joseph, époux de Marie', 'Époux de la Vierge Marie, gardien de Jésus.', 'Joseph est honoré comme père nourricier du Christ, patron de l’Église universelle et modèle de fidélité silencieuse.', 'Ier siècle'),
+-- ('saint-joseph-spouse-of-mary', 'Saint Joseph, époux de Marie', 'Époux de la Vierge Marie, gardien de Jésus.', 'Joseph est honoré comme père nourricier du Christ, patron de l’Église universelle et modèle de fidélité silencieuse.', 'Ier siècle'),
 ('saint-turibius-of-mongrovejo', 'Saint Turibe de Mogrovejo', 'Archevêque missionnaire au Pérou.', 'Turibe renouvela la vie de l’Église au Pérou, défendit les peuples autochtones et promut l’évangélisation.', '1538–1606')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
@@ -574,7 +720,7 @@ JOIN (VALUES
 ('saint-frances-of-rome', 'Sancta Francisca Romana', 'Uxor, mater et religiosa, caritatis testis.', 'Francisca Romana sanctitatem in vita coniugali et religiosa coniunxit, pauperibus atque aegrotis serviens.', '1384–1440'),
 ('saint-patrick', 'Sanctus Patricius', 'Episcopus missionarius et patronus Hiberniae.', 'Patricius Hiberniam evangelizavit et inter maximos missionarios Ecclesiae habetur.', 'c. 385–461'),
 ('saint-cyril-of-jerusalem', 'Sanctus Cyrillus Hierosolymitanus', 'Episcopus et Ecclesiae doctor.', 'Cyrillus catechesibus suis notissimus est et fidem orthodoxam Hierosolymis strenue defendit.', 'c. 315–386'),
-('saint-joseph-spouse-of-mary', 'Sanctus Ioseph, Sponsus Mariae', 'Sponsus Beatae Mariae Virginis, custos Iesu.', 'Ioseph tamquam pater nutritius Christi et patronus Ecclesiae universalis colitur.', 'saec. I'),
+-- ('saint-joseph-spouse-of-mary', 'Sanctus Ioseph, Sponsus Mariae', 'Sponsus Beatae Mariae Virginis, custos Iesu.', 'Ioseph tamquam pater nutritius Christi et patronus Ecclesiae universalis colitur.', 'saec. I'),
 ('saint-turibius-of-mongrovejo', 'Sanctus Turibius de Mogrovejo', 'Archiepiscopus missionarius in Peruvia.', 'Turibius vitam ecclesialem in Novo Orbe reformavit et evangelizationem cum zelo promovit.', '1538–1606')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
@@ -813,15 +959,15 @@ INSERT INTO saints (
   century,
   place_of_birth_id, place_of_death_id, place_of_activity_id
 ) VALUES
-(
-  'saint-joseph-the-worker', 'Saint Joseph the Worker',
-  NULL, NULL, NULL, TRUE,
-  NULL, 5, 1, TRUE,
-  1,
-  NULL,
-  NULL,
-  (SELECT id FROM places WHERE code='NAZARETH')
-),
+-- (
+--   'saint-joseph-the-worker', 'Saint Joseph the Worker',
+--   NULL, NULL, NULL, TRUE,
+--   NULL, 5, 1, TRUE,
+--   1,
+--   NULL,
+--   NULL,
+--   (SELECT id FROM places WHERE code='NAZARETH')
+-- ),
 (
   'saint-athanasius', 'Saint Athanasius',
   296, NULL, NULL, TRUE,
@@ -965,7 +1111,7 @@ INSERT INTO saint_translations (saint_id, locale_code, name, short_description, 
 SELECT s.id, 'en', x.name, x.short_description, x.full_biography, x.life_label
 FROM saints s
 JOIN (VALUES
-('saint-joseph-the-worker', 'Saint Joseph the Worker', 'Patron of workers and model of quiet fidelity.', 'Saint Joseph, spouse of the Blessed Virgin Mary, is honored for his humble service, protective care of the Holy Family and as a model of faithful labor; the feast of Saint Joseph the Worker highlights the dignity of human work and Joseph''s patronage of workers.', '1st century'),
+-- ('saint-joseph-the-worker', 'Saint Joseph the Worker', 'Patron of workers and model of quiet fidelity.', 'Saint Joseph, spouse of the Blessed Virgin Mary, is honored for his humble service, protective care of the Holy Family and as a model of faithful labor; the feast of Saint Joseph the Worker highlights the dignity of human work and Joseph''s patronage of workers.', '1st century'),
 ('saint-athanasius', 'Saint Athanasius', 'Bishop of Alexandria and staunch defender of Nicene orthodoxy.', 'Athanasius of Alexandria is renowned for his uncompromising defense of the Nicene faith against Arianism, for guiding the Alexandrian church through repeated exiles and persecutions, and for his theological writings such as On the Incarnation which articulate a coherent Christology and the doctrine of salvation; his pastoral courage and doctrinal clarity shaped both Eastern and Western theology and earned him recognition as a Doctor of the Church.', 'c. 296–373'),
 ('saints-philip-and-james', 'Saints Philip and James', 'Apostles and witnesses of the early apostolic mission.', 'Philip and James the Less are remembered among the Twelve Apostles whose missionary activity and leadership helped establish the first Christian communities; Philip is often associated with mission in the eastern Mediterranean while James is traditionally linked to early leadership in Jerusalem, and together they symbolize the apostolic continuity of the Church.', '1st century'),
 ('saint-john-of-avila', 'Saint John of Ávila', 'Priest, preacher and spiritual master of 16th-century Spain.', 'John of Ávila was a leading preacher and spiritual teacher in sixteenth-century Spain whose pastoral initiatives revitalized parishes, improved clergy formation, and provided practical spiritual guidance to lay and clerical audiences; his writings on prayer and the Christian life influenced generations of spiritual directors and earned him recognition as a Doctor of the Church for the pastoral depth of his teaching.', '1500–1569'),
@@ -995,7 +1141,7 @@ INSERT INTO saint_translations (saint_id, locale_code, name, short_description, 
 SELECT s.id, 'fr', x.name, x.short_description, x.full_biography, x.life_label
 FROM saints s
 JOIN (VALUES
-('saint-joseph-the-worker', 'Saint Joseph travailleur', 'Patron des travailleurs et modèle de fidélité silencieuse.', 'Saint Joseph, époux de la Bienheureuse Vierge Marie, est honoré pour son service humble, son rôle de protecteur de la Sainte Famille et son exemple de travail fidèle. La fête de Saint Joseph travailleur souligne la dignité du travail humain et l''exemple du saint pour les familles et les artisans.', 'Ier siècle'),
+-- ('saint-joseph-the-worker', 'Saint Joseph travailleur', 'Patron des travailleurs et modèle de fidélité silencieuse.', 'Saint Joseph, époux de la Bienheureuse Vierge Marie, est honoré pour son service humble, son rôle de protecteur de la Sainte Famille et son exemple de travail fidèle. La fête de Saint Joseph travailleur souligne la dignité du travail humain et l''exemple du saint pour les familles et les artisans.', 'Ier siècle'),
 ('saint-athanasius', 'Saint Athanase d''Alexandrie', 'Évêque d''Alexandrie et défenseur résolu de l''orthodoxie nicéenne.', 'Athanase d''Alexandrie est surtout connu pour sa défense sans compromis de la foi nicéenne contre l''arianisme. Évêque en des temps de crise doctrinale et d''exil, il guida l''Église d''Alexandrie et produisit des œuvres théologiques majeures, notamment ''De incarnatione'', qui apportent un exposé profond du mystère du Christ et de la rédemption. Son influence se prolongea bien au‑delà de sa vie et ses écrits façonnèrent la théologie ecclésiastique tant en Orient qu''en Occident.', 'v. 296–373'),
 ('saints-philip-and-james', 'Saints Philippe et Jacques', 'Apôtres et témoins de la mission apostolique primitive.', 'Philippe et Jacques (le Mineur) sont commémorés parmi les Douze et symbolisent la continuité de la mission apostolique qui établit les premières communautés chrétiennes. Philippe est souvent associé à l''activité missionnaire en Méditerranée orientale tandis que Jacques est lié à la tradition de leadership dans l''Église de Jérusalem ; ensemble, ils incarnent le lien direct avec l''enseignement apostolique.', 'Ier siècle'),
 ('saint-john-of-avila', 'Saint Jean d''Ávila', 'Prêtre, prédicateur et maître spirituel de l''Espagne du XVIe siècle.', 'Jean d''Ávila fut une figure centrale de la réforme spirituelle en Espagne durant le XVIe siècle. Prédicateur recherché, il renouvela la vie paroissiale, forma les clercs et conseilla des évêques et des communautés religieuses. Ses écrits sur la prière et la direction spirituelle allient profondeur doctrinale et pastorale, et sa démarche, qui marie une ascèse authentique à une sollicitude pratique pour les âmes, lui valut une grande influence parmi les enseignants spirituels de son temps.', '1500–1569'),
@@ -1025,7 +1171,7 @@ INSERT INTO saint_translations (saint_id, locale_code, name, short_description, 
 SELECT s.id, 'la', x.name, x.short_description, x.full_biography
 FROM saints s
 JOIN (VALUES
-('saint-joseph-the-worker', 'Sanctus Iosephus Opifex', 'Patronus operariorum et exemplar humilitatis.', 'Sanctus Iosephus, sponsus Beatae Mariae Virginis, honoratur ob humilem servitium et diligentem curam Sanctae Familiae; eius vita exemplum devotionis et laboris fidelis est et festum eius significat dignitatem operis humanioris.', 'saec. I'),
+-- ('saint-joseph-the-worker', 'Sanctus Iosephus Opifex', 'Patronus operariorum et exemplar humilitatis.', 'Sanctus Iosephus, sponsus Beatae Mariae Virginis, honoratur ob humilem servitium et diligentem curam Sanctae Familiae; eius vita exemplum devotionis et laboris fidelis est et festum eius significat dignitatem operis humanioris.', 'saec. I'),
 ('saint-athanasius', 'Sanctus Athanasius', 'Episcopus Alexandrinus et strenuus defensor fidae Nicaenae.', 'Athanasius Alexandrinus clarus est propter intransigentem defensionem fidei Nicaenae contra Arianismum, propter gubernationem ecclesiae Alexandrinae per persecutiones et exilia, atque propter scripta theologica praeclare exposita, inter quae "De Incarnatione" principatum obtinet; doctrina et patientia eius multum contulerunt ad formandam theologiam Trinitatis.', 'c. 296–373'),
 ('saints-philip-and-james', 'Sancti Philippus et Jacobus', 'Apostoli et testes missionis apostolicae antiquae.', 'Philippus et Jacobus Minor commemorantur inter Duodecim Apostolos quorum ministerium missionarium et regimen ecclesiale primam formam Christianarum communitatum confirmavit; Philippus saepe cum missionibus in oriente Mediterraneo coniungitur, Jacobus autem traditur habuisse officium in ecclesia Hierosolymitana.', 'saec. I'),
 ('saint-john-of-avila', 'Sanctus Ioannes Abilaeus', 'Presbyter, praedicator et magister spiritualis saeculi XVI Hispaniae.', 'Ioannes Abilaeus, praedicator clarus et magister spiritualis, ecclesias et parochias in Andalusia et Castella renovavit, clerum formavit et animarum curam promovit; scriptis de oratione et vita christiana multos ad dirigendum et reformandum animas contulit, merens honorem doctoris Ecclesiae pro prudentia pastorali.', '1500–1569'),
@@ -1731,13 +1877,6 @@ INSERT INTO saints (
   NULL
 ),
 (
-  'assumption-of-the-blessed-virgin-mary', 'The Assumption of the Blessed Virgin Mary',
-  NULL, NULL, NULL, TRUE,
-  NULL, 8, 15, TRUE,
-  NULL,
-  NULL, NULL, NULL
-),
-(
   'saint-stephen-of-hungary', 'Saint Stephen of Hungary',
   975, NULL, NULL, TRUE,
   1038, 8, 16, FALSE,
@@ -1766,13 +1905,6 @@ INSERT INTO saints (
   NULL,
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
-),
-(
-  'queenship-of-the-blessed-virgin-mary', 'The Queenship of the Blessed Virgin Mary',
-  NULL, NULL, NULL, TRUE,
-  NULL, 8, 22, TRUE,
-  NULL,
-  NULL, NULL, NULL
 ),
 (
   'saint-rose-of-lima', 'Saint Rose of Lima',
@@ -1821,13 +1953,6 @@ INSERT INTO saints (
   NULL,
   (SELECT id FROM places WHERE code='HIPPO_REGIUS'),
   (SELECT id FROM places WHERE code='HIPPO_REGIUS')
-),
-(
-  'passion-of-saint-john-the-baptist', 'The Passion of Saint John the Baptist',
-  NULL, NULL, NULL, TRUE,
-  NULL, 8, 29, TRUE,
-  NULL,
-  NULL, NULL, NULL
 )
 ON CONFLICT (slug) DO NOTHING;
 
@@ -1851,19 +1976,16 @@ JOIN (VALUES
 ('saint-pontian-and-hippolytus', 'Saints Pontian and Hippolytus', 'Pope and theologian, reconciled in martyrdom.', 'Pontian and Hippolytus, figures of early Roman ecclesial life who experienced exile and death, symbolize the Church''s capacity for reconciliation and the witness of leaders who suffered for the faith in the third century.', '† 235'),
 ('saint-maximus-the-confessor', 'Saint Maximus the Confessor', 'Monk and theologian who defended the two wills of Christ.', 'Maximus the Confessor contributed crucially to Christological theology by defending the full humanity and divinity of Christ and articulating the orthodox doctrine of wills in Christ amid seventh-century controversies, enduring exile and suffering for his witness.', 'c. 580–662'),
 ('saint-maximilian-kolbe', 'Saint Maximilian Kolbe', 'Franciscan friar and martyr who volunteered to die at Auschwitz for another prisoner.', 'Maximilian Kolbe''s self-sacrificial offer to take the place of a condemned man at Auschwitz and his life of missionary zeal and Marian devotion have made him a powerful modern witness to charity and courage in the face of evil.', '1894–1941'),
-('assumption-of-the-blessed-virgin-mary', 'The Assumption of the Blessed Virgin Mary', 'Solemnity celebrating Mary''s entry into heavenly life.', 'The Assumption proclaims the Church''s belief in Mary''s being assumed body and soul into heavenly glory, a feast marking the culmination of her vocation and a sign of hope in the resurrection for all believers.', ''),
 ('saint-stephen-of-hungary', 'Saint Stephen of Hungary', 'First king of Hungary and promoter of Christian institutions.', 'Stephen I consolidated the Christian kingdom of Hungary, established dioceses and monasteries and promoted Christian law and institutions, becoming a national patron for the Church''s role in shaping society.', '975–1038'),
 ('saint-john-eudes', 'Saint John Eudes', 'Priest and founder noted for devotion to the Sacred Hearts and missionary formation.', 'John Eudes promoted devotion to the Hearts of Jesus and Mary and engaged in priestly formation and missionary work, founding congregations and writing popular devotional works that influenced French spirituality.', '1601–1680'),
 ('saint-bernard', 'Saint Bernard of Clairvaux', 'Cistercian abbot, preacher and influential medieval theologian.', 'Bernard of Clairvaux combined reforming monastic zeal, effective preaching and mystical theology, helping to shape twelfth-century spirituality and ecclesial reform through his pastoral letters, sermons and leadership of the Cistercian movement.', '1090–1153'),
 ('saint-pius-x', 'Saint Pius X', 'Pope and liturgical reformer who promoted frequent communion and catechesis.', 'Pope Pius X championed liturgical renewal, catechetical instruction, the promotion of frequent communion and reforms aimed at clerical discipline and pastoral care in the early twentieth century.', '1835–1914'),
-('queenship-of-the-blessed-virgin-mary', 'The Queenship of the Blessed Virgin Mary', 'Memorial honoring Mary as Queen of Heaven and advocate for the Church.', 'The Queenship of Mary highlights her royal dignity rooted in divine motherhood and her maternal intercession for the Church, celebrated as a complement to Marian devotion after the Assumption.', ''),
 ('saint-rose-of-lima', 'Saint Rose of Lima', 'Lay Dominican mystic and patroness of Peru, model of ascetic charity.', 'Rose of Lima lived a life of austere devotion, care for the poor and deep prayer while advancing Dominican spirituality in the Americas; her sanctity and social concern made her the first canonized saint of the Americas.', '1586–1617'),
 ('saint-bartholomew', 'Saint Bartholomew', 'Apostle traditionally linked to early missions beyond the Mediterranean.', 'Bartholomew, counted among the Twelve, figures in various apostolic traditions associating him with early missionary outreach; his identity in some traditions is associated with Nathanael of the Gospels and apostolic preaching.', '1st century'),
 ('saint-louis', 'Saint Louis (King of France)', 'King and crusader known for personal piety and justice.', 'Louis IX of France is remembered for his personal devotion, promotion of justice, care for the poor and participation in crusading efforts; his reign sought to align royal power with Christian principles and he became a model medieval Christian monarch.', '1214–1270'),
 ('saint-joseph-calasanz', 'Saint Joseph Calasanz', 'Priest and pioneer of popular Christian education, founder of the Piarists.', 'Joseph Calasanz founded the Order of Poor Clerics Regular of the Mother of God of the Pious Schools to provide free education to poor children and to promote catechesis and civic formation through schooling.', '1557–1648'),
 ('saint-monica', 'Saint Monica', 'Mother of Augustine and exemplar of persistent prayer and conversion.', 'Monica''s persistent prayer and pastoral care for her son Augustine led to his conversion; she is venerated for maternal fidelity, penitential prayer and enduring trust in God''s mercy.', 'c. 332–387'),
-('saint-augustine-of-hippo', 'Saint Augustine of Hippo', 'Bishop, theologian and Doctor of the Church whose writings shaped Western Christianity.', 'Augustine''s Confessions and theological corpus on grace, sin, church and sacraments profoundly influenced Western theology, pastoral practice and Christian self-understanding across centuries.', '354–430'),
-('passion-of-saint-john-the-baptist', 'The Passion of Saint John the Baptist', 'Commemoration of the martyrdom of John the Baptist.', 'The Passion of Saint John the Baptist recalls the prophetic witness and martyrdom of John, whose fidelity and role in preparing the way for Christ are honored in the Church''s liturgical memory.', '')
+('saint-augustine-of-hippo', 'Saint Augustine of Hippo', 'Bishop, theologian and Doctor of the Church whose writings shaped Western Christianity.', 'Augustine''s Confessions and theological corpus on grace, sin, church and sacraments profoundly influenced Western theology, pastoral practice and Christian self-understanding across centuries.', '354–430')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -1893,19 +2015,16 @@ JOIN (VALUES
 ('saint-pontian-and-hippolytus', 'Saints Pontien et Hippolyte', 'Pape et théologien, réconciliés dans le martyre.', 'Pontien et Hippolyte, figures de la vie ecclésiale romaine primitive, connurent l''exil et la mort; ils symbolisent la capacité de réconciliation de l''Église et le témoignage des dirigeants qui souffrirent pour la foi.', '† 235'),
 ('saint-maximus-the-confessor', 'Saint Maxime le Confesseur', 'Moine et théologien qui défendit la double volonté du Christ.', 'Maxime le Confesseur apporta une contribution fondamentale à la christologie en défendant l''humanité et la divinité du Christ et en articulant la doctrine orthodoxe des volontés dans le Christ pendant les controverses du VIIe siècle; il subit exil et souffrance pour sa fidélité.', 'v. 580–662'),
 ('saint-maximilian-kolbe', 'Saint Maximilien Kolbe', 'Frère franciscain et martyr qui se porta volontaire pour mourir à Auschwitz à la place d''un autre prisonnier.', 'Maximilien Kolbe est honoré pour son sacrifice volontaire à Auschwitz, sa vita missionnaire et sa dévotion mariale; son geste est devenu un puissant symbole de charité et de résistance spirituelle face au mal.', '1894–1941'),
-('assumption-of-the-blessed-virgin-mary', 'Assomption de la Bienheureuse Vierge Marie', 'Solennité célébrant l''entrée de Marie dans la vie céleste.', 'L''Assomption proclame la foi de l''Église en l''élévation corporelle et spirituelle de Marie dans la gloire céleste, signe d''espérance pour la résurrection de tous les croyants.', ''),
 ('saint-stephen-of-hungary', 'Saint Étienne de Hongrie', 'Premier roi de Hongrie et promoteur des institutions chrétiennes.', 'Étienne Ier consolida le royaume chrétien de Hongrie, établit diocèses et monastères et promut les lois chrétiennes et les institutions ecclésiales, devenant un patron national pour le rôle de l''Église dans la société.', '975–1038'),
 ('saint-john-eudes', 'Saint Jean Eudes', 'Prêtre fondateur, promoteur des Sacrés-Cœurs et formateur missionnaire.', 'Jean Eudes encouragea la dévotion aux Sacrés-Cœurs et travailla à la formation sacerdotale et missionnaire en fondant congrégations et en rédigeant œuvres dévotionnelles qui influencèrent la spiritualité française.', '1601–1680'),
 ('saint-bernard', 'Saint Bernard de Clairvaux', 'Abbé cistercien, prédicateur et théologien médiéval influent.', 'Bernard de Clairvaux sut allier réforme monastique, prédication efficace et mystique théologique; ses lettres, sermons et son rôle dans le mouvement cistercien marquèrent profondément la spiritualité du XIIe siècle.', '1090–1153'),
 ('saint-pius-x', 'Saint Pie X', 'Pape réformateur liturgique, promoteur de la communion fréquente et de la catéchèse.', 'Le pape Pie X favorisa le renouveau liturgique, la catéchèse et la communion fréquente, et mena des réformes visant la discipline cléricale et le soin pastoral des fidèles au début du XXe siècle.', '1835–1914'),
-('queenship-of-the-blessed-virgin-mary', 'Règne de la Bienheureuse Vierge Marie', 'Commémoration de Marie comme Reine du Ciel et avocate de l''Église.', 'La fête de la Royauté de Marie met en valeur sa dignité maternelle fondée sur la maternité divine et son intercession pour l''Église, célébrée comme complément de la dévotion mariale après l''Assomption.', ''),
 ('saint-rose-of-lima', 'Sainte Rose de Lima', 'Mystique dominicaine et patronne du Pérou, modèle d''ascèse et de charité.', 'Rose de Lima vécut une dévotion austère, un soin des pauvres et une intense vie de prière, renouvelant la spiritualité dominicaine en Amérique et devenant la première sainte canonisée du Nouveau Monde.', '1586–1617'),
 ('saint-bartholomew', 'Saint Barthélemy', 'Apôtre traditionnellement lié aux premières missions au-delà de la Méditerranée.', 'Barthélemy, inclus parmi les Douze, apparaît dans diverses traditions apostoliques liées à l''expansion missionnaire; son identification avec Nathanaël dans certains récits enrichit la réflexion sur l''origine apostolique.', 'Ier siècle'),
 ('saint-louis', 'Saint Louis (roi de France)', 'Roi et croisé connu pour sa piété personnelle et sa justice.', 'Louis IX est reconnu pour sa piété, sa promotion de la justice, son souci des pauvres et sa participation aux croisades; son règne chercha à subordonner le pouvoir royal aux principes chrétiens et il resta un modèle de souverain pieux.', '1214–1270'),
 ('saint-joseph-calasanz', 'Saint Joseph Calasanz', 'Prêtre et pionnier de l''éducation chrétienne populaire, fondateur des Piaristes.', 'Joseph Calasanz fonda les Écoles Pies pour offrir une instruction gratuite aux enfants pauvres, promouvant la catéchèse et la formation civique par l''école et posant les bases de l''éducation chrétienne populaire.', '1557–1648'),
 ('saint-monica', 'Sainte Monique', 'Mère de saint Augustin, exemple de prière persévérante et de conversion.', 'Monique se distingua par sa prière persévérante et son soin pastoral pour la conversion de son fils Augustin; vénérée pour sa fidélité maternelle, sa pénitence et son espérance confiante, elle demeure un modèle de prière pour les familles.', 'v. 332–387'),
-('saint-augustine-of-hippo', 'Saint Augustin d''Hippo', 'Évêque, théologien et docteur de l''Église dont les écrits ont façonné le christianisme occidental.', 'Les Confessions et l''œuvre théologique d''Augustin ont profondément marqué la théologie occidentale sur la grâce, le péché, l''Église et les sacrements, influençant la pensée chrétienne et la pastorale pendant des siècles.', '354–430'),
-('passion-of-saint-john-the-baptist', 'Passion de Saint Jean-Baptiste', 'Commémoration du martyre de Jean-Baptiste.', 'La Passion de Saint Jean-Baptiste rappelle le témoignage prophétique et le martyre de Jean, dont la fidélité et la préparation du peuple à la venue du Christ sont honorées dans la mémoire liturgique de l''Église.', '')
+('saint-augustine-of-hippo', 'Saint Augustin d''Hippo', 'Évêque, théologien et docteur de l''Église dont les écrits ont façonné le christianisme occidental.', 'Les Confessions et l''œuvre théologique d''Augustin ont profondément marqué la théologie occidentale sur la grâce, le péché, l''Église et les sacrements, influençant la pensée chrétienne et la pastorale pendant des siècles.', '354–430')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -1935,19 +2054,16 @@ JOIN (VALUES
 ('saint-pontian-and-hippolytus', 'Sancti Pontianus et Hippolytus', 'Pope et theologia, reconciliati in martyrio.', 'Pontianus et Hippolytus, exsilio afflicti, in martyrio reconciliati symbolum pacis et perseverantiae ecclesiasticae repraesentant.', '† 235'),
 ('saint-maximus-the-confessor', 'Sanctus Maximus Confessor', 'Monachus et theologia qui de voluntatibus Christi disputavit.', 'Maximus Confessor doctrinam de duabus voluntatibus in Christo defendit et propter fidei constantiam exsilium passa est.', 'c. 580–662'),
 ('saint-maximilian-kolbe', 'Sanctus Maximilianus Kolbe', 'Frater Franciscanus et martyr, se pro altero in Auschwitz obtulit.', 'Maximilianus Kolbe sacrificium suum in Auschwitz obtulit, exemplum caritatis et fortitudinis spiritualis in tempore persecutionis reddens.', '1894–1941'),
-('assumption-of-the-blessed-virgin-mary', 'Assumptio Beatae Mariae Virginis', 'Sollemnitas de assumptione Mariae in vitam caelestem.', 'Assumptio Beatae Mariae Virginis fidem Ecclesiae in gloriam corporalem et spiritualem Mariae celebrat et spem resurrectionis fidelibus ostendit.', ''),
 ('saint-stephen-of-hungary', 'Sanctus Stephanus Hungariae', 'Primus rex Hungariae et promotrix institutionum christianarum.', 'Stephanus I regnum christiane in Hungaria consolidavit, dioceses et monasteria instituit et leges Christianas promulgavit, ut ecclesiam in societate firmaret.', '975–1038'),
 ('saint-john-eudes', 'Sanctus Ioannes Eudes', 'Presbyter et fundator, promotio devotionum Sacrorum Cordium.', 'Ioannes Eudes devotionem ad Sacra Cordia Iesu et Mariae propagavit, institutis sacerdotibus et missionibus operam dedit et scriptis pietatem populari formavit.', '1601–1680'),
 ('saint-bernard', 'Sanctus Bernardus Claravallensis', 'Abbas Cisterciensis, praedicator et theologus mediivalis.', 'Bernardus Claravallensis reformam monasticam, praedicationem ferventem et mysticam theologiamm exercuit, cuius litterae et sermones magnum in XII saeculo impactum habuerunt.', '1090–1153'),
 ('saint-pius-x', 'Sanctus Pius X', 'Papa et reformator liturgicus, promotio communionis frequenti et catechesis.', 'Pius X liturgica et catechetica reformatione studuit, communionem frequentem et disciplinam cleri promote, curam pastoralis ac doctrinalis servans.', '1835–1914'),
-('queenship-of-the-blessed-virgin-mary', 'Regnum Beatae Mariae Virginis', 'Festum de regimine Mariae in caelis et advocatia pro Ecclesia.', 'Regnum Mariae dignitatem maternam et officium intercessionis pro Ecclesia celebrat,quamvis complementum festi Assumptionis sit.', ''),
 ('saint-rose-of-lima', 'Sancta Rosa Limae', 'Mystica Dominicana et patrona Peruviae, exemplar ascese et caritatis.', 'Rosa Limae vitam asceticam et operam caritativam in America Meridionali vixit, primam sanctorum canonizationem in Novo Mundo consequuta.', '1586–1617'),
 ('saint-bartholomew', 'Sanctus Bartholomaeus', 'Apostolus traditione ad missiones extra Mediterraneum relatus.', 'Bartholomaeus inter Duodecim memoratur et in traditionibus missionum extra Mediterraneanus conexus est; eius persona in evangelizatione antiquae tractatur.', 'saec. I'),
 ('saint-louis', 'Sanctus Ludovicus Franciae', 'Rex et cruciatus notus ob pietatem personalem et iustitiam.', 'Ludovicus IX Franciae notus est ob pietatem, iustitiam erga pauperes et participationem in expeditionibus Terra Sancta; eius regnum exemplum monarchiae christianae exhibuit.', '1214–1270'),
 ('saint-joseph-calasanz', 'Sanctus Iosephus Calasanctius', 'Presbyter et pioniere educationis christianae pauperum, fundator Piaristarum.', 'Iosephus Calasanctius scholas pie fundavit ad pueros pauperes educandos, catechesim et formationem civem promote, fundamenta educationis popularis catholica posuit.', '1557–1648'),
 ('saint-monica', 'Sancta Monica', 'Mater Augustini, exemplar orationis perseverantis et conversionis filii.', 'Monica devotionem perseverantem et curam pastoralis ad filium Augustinum dedicavit; ob orationes et patientiam eius memorata est pro conversione et paternitate spirituali.', 'c. 332–387'),
-('saint-augustine-of-hippo', 'Sanctus Augustinus Hipponensis', 'Episcopus, theologus et Ecclesiae doctor cuius opera Christianitatem Occidentalem formaverunt.', 'Augustinus Confessiones et opera theologica de gratia, peccato, ecclesia et sacramentis doctrinam occidentalem et praxis pastoralis per saecula informaverunt.', '354–430'),
-('passion-of-saint-john-the-baptist', 'Passio Sancti Ioannis Baptistae', 'Commemoatio martyrii Ioannis Baptistae.', 'Passio Ioannis Baptistae memoriam testimoni propheticii et martyrii cuius fidelitas et munus praeparandi populum ad adventum Christi celebrantur.', '')
+('saint-augustine-of-hippo', 'Sanctus Augustinus Hipponensis', 'Episcopus, theologus et Ecclesiae doctor cuius opera Christianitatem Occidentalem formaverunt.', 'Augustinus Confessiones et opera theologica de gratia, peccato, ecclesia et sacramentis doctrinam occidentalem et praxis pastoralis per saecula informaverunt.', '354–430')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -2731,6 +2847,226 @@ JOIN (VALUES
 ('saint-andrew-dung-lac-and-companions', 'Sancti Andreas Dung‑Lac et Socii', 'Martyrs Vietnamenses qui fidem sub persecutione professi sunt.', 'Andreas Dung‑Lac et multi socii martyrio affecti sunt in Vietnamia; eorum memoria communitates christianas localiter firmavit et testimonium fidei Asiaticum repraesentationem habet.', ''),
 ('saint-catherine-of-alexandria', 'Sancta Catharina Alexandrina', 'Virgo et martyr, tradita pro eruditione et fortitudine.', 'Catharina ut puella erudita memorialiter celebratur quae fidem coram magistratibus paganorum defendit et martyrio coronata est; cultus eius devotionem monasticam et intellectualem in Medio Aevo excitavit.', ''),
 ('saint-andrew-apostle', 'Sanctus Andreas, Apostolus', 'Apostolus et missionarius, frater Sancti Petri; primus testis Evangelii.', 'Andreas una ex Duodecim venerated est qui in varias regiones praedicationem retulit; memoria eius in traditione apostolica, zelo missionario et martyrio consistit.', 'saec. I')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+-- ==============
+-- DECEMBER SAINTS (sans dédicaces ni vocables marials)
+-- ==============
+
+INSERT INTO saints (
+  slug, default_name,
+  birth_year, birth_month, birth_day, birth_is_approximate,
+  death_year, death_month, death_day, death_is_approximate,
+  century,
+  place_of_birth_id, place_of_death_id, place_of_activity_id
+) VALUES
+(
+  'saint-francis-xavier', 'Saint Francis Xavier',
+  1506, 4, 7, FALSE,
+  1552, 12, 3, FALSE,
+  16,
+  (SELECT id FROM places WHERE code='XAVIER'),
+  NULL,
+  NULL
+),
+(
+  'saint-john-damascene', 'Saint John Damascene',
+  NULL, NULL, NULL, TRUE,
+  749, 12, 4, TRUE,
+  8,
+  (SELECT id FROM places WHERE code='DAMASCUS'),
+  (SELECT id FROM places WHERE code='JERUSALEM'),
+  NULL
+),
+(
+  'saint-nicholas', 'Saint Nicholas, Bishop',
+  NULL, NULL, NULL, TRUE,
+  343, 12, 6, TRUE,
+  4,
+  NULL,
+  (SELECT id FROM places WHERE code='MYRA'),
+  (SELECT id FROM places WHERE code='MYRA')
+),
+(
+  'saint-ambrose', 'Saint Ambrose',
+  NULL, NULL, NULL, TRUE,
+  397, 12, 7, FALSE,
+  4,
+  NULL,
+  (SELECT id FROM places WHERE code='MILAN'),
+  (SELECT id FROM places WHERE code='MILAN')
+),
+(
+  'saint-juan-diego', 'Saint Juan Diego Cuauhtlatoatzin',
+  1474, NULL, NULL, TRUE,
+  1548, 5, 30, FALSE,
+  15,
+  NULL, NULL, NULL
+),
+(
+  'saint-damasus-i', 'Saint Damasus I, Pope',
+  NULL, NULL, NULL, TRUE,
+  384, 12, 11, TRUE,
+  4,
+  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
+),
+(
+  'saint-lucy', 'Saint Lucy, Virgin and Martyr',
+  NULL, NULL, NULL, TRUE,
+  304, 12, 13, TRUE,
+  4,
+  NULL,
+  (SELECT id FROM places WHERE code='SIRACUSA'),
+  (SELECT id FROM places WHERE code='SIRACUSA')
+),
+(
+  'saint-john-of-the-cross', 'Saint John of the Cross',
+  1542, NULL, NULL, FALSE,
+  1591, 12, 14, FALSE,
+  16,
+  (SELECT id FROM places WHERE code='AVILA'),
+  NULL,
+  (SELECT id FROM places WHERE code='AVILA')
+),
+(
+  'saint-peter-canisius', 'Saint Peter Canisius',
+  1521, NULL, NULL, FALSE,
+  1597, 12, 21, FALSE,
+  16,
+  NULL, NULL, NULL
+),
+(
+  'saint-john-of-kanty', 'Saint John of Kanty',
+  1390, NULL, NULL, TRUE,
+  1473, 12, 23, FALSE,
+  15,
+  NULL, NULL, NULL
+),
+(
+  'saint-stephen-martyr', 'Saint Stephen, the First Martyr',
+  NULL, NULL, NULL, TRUE,
+  NULL, 12, 26, TRUE,
+  1,
+  NULL, NULL, NULL
+),
+(
+  'saint-john-apostle', 'Saint John, Apostle and Evangelist',
+  NULL, NULL, NULL, TRUE,
+  NULL, 12, 27, TRUE,
+  1,
+  NULL, NULL, NULL
+),
+(
+  'holy-innocents', 'The Holy Innocents, Martyrs',
+  NULL, NULL, NULL, TRUE,
+  NULL, 12, 28, TRUE,
+  1,
+  NULL, NULL, NULL
+),
+(
+  'saint-thomas-becket', 'Saint Thomas Becket',
+  1118, NULL, NULL, TRUE,
+  1170, 12, 29, FALSE,
+  12,
+  NULL,
+  (SELECT id FROM places WHERE code='CANTERBURY'),
+  (SELECT id FROM places WHERE code='CANTERBURY')
+),
+(
+  'saint-sylvester-i', 'Saint Sylvester I',
+  NULL, NULL, NULL, TRUE,
+  335, 12, 31, TRUE,
+  4,
+  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
+)
+ON CONFLICT (slug) DO NOTHING;
+
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'en', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-francis-xavier', 'Saint Francis Xavier', 'Jesuit missionary and pioneer of evangelization in Asia.', 'Francis Xavier, one of the first companions of Ignatius of Loyola, carried the Gospel to India, Southeast Asia and Japan; his missionary zeal, pastoral creativity and endurance under hardship made him a model for global mission in the early modern Church.', '1506–1552'),
+('saint-john-damascene', 'Saint John Damascene', 'Priest and Doctor of the Church, defender of sacred images.', 'John Damascene is remembered for theological synthesis and his defense of holy images during iconoclastic controversies; his writings on Christology, liturgy and Marian doctrine deeply shaped Eastern and Western Christian thought.', 'c. 675–749'),
+('saint-nicholas', 'Saint Nicholas, Bishop', 'Bishop revered for pastoral charity and protection of the vulnerable.', 'Nicholas of Myra became one of the most beloved saints of Christian tradition, associated with care for the poor, defense of the innocent and generous almsgiving; his cult spread widely in both East and West.', 'c. 270–343'),
+('saint-ambrose', 'Saint Ambrose', 'Bishop of Milan and Doctor of the Church, influential pastor and theologian.', 'Ambrose guided the Church of Milan through political and theological tensions, promoted liturgical life and biblical preaching, and influenced major figures such as Augustine; his legacy remains foundational for Latin ecclesial tradition.', 'c. 340–397'),
+('saint-juan-diego', 'Saint Juan Diego Cuauhtlatoatzin', 'Lay indigenous witness associated with the Guadalupan tradition.', 'Juan Diego is honored as a humble layman whose testimony is linked to the apparitions of Our Lady of Guadalupe in 1531; his life became a sign of inculturated faith and evangelization in the Americas.', 'c. 1474–1548'),
+('saint-damasus-i', 'Saint Damasus I, Pope', 'Pope who promoted Roman liturgy and the cult of martyrs.', 'Damasus strengthened the memory of the Roman martyrs, encouraged biblical scholarship and supported Jerome''s scriptural work; his pontificate helped consolidate Roman ecclesial identity in late antiquity.', 'c. 305–384'),
+('saint-lucy', 'Saint Lucy, Virgin and Martyr', 'Virgin martyr venerated for steadfast faith and purity.', 'Lucy of Syracuse became a widely honored martyr in Christian devotion, remembered for courageous witness under persecution and associated in tradition with spiritual and bodily light.', 'd. 304'),
+('saint-john-of-the-cross', 'Saint John of the Cross', 'Carmelite reformer, mystic and Doctor of the Church.', 'John of the Cross collaborated with Teresa of Ávila in Carmelite reform and authored major mystical works on purification, union with God and contemplative prayer, shaping Christian spirituality for centuries.', '1542–1591'),
+('saint-peter-canisius', 'Saint Peter Canisius', 'Jesuit priest and Doctor of the Church, leading catechist of the Counter‑Reformation.', 'Peter Canisius worked across German-speaking lands to renew Catholic life through preaching, education and influential catechisms; his pastoral clarity and intellectual rigor strengthened the Church in confessional conflict.', '1521–1597'),
+('saint-john-of-kanty', 'Saint John of Kanty', 'Priest and professor known for learning, humility and charity.', 'John Cantius taught theology at Kraków and became renowned for his personal austerity, care for students and poor, and fidelity to pastoral and academic vocation.', 'c. 1390–1473'),
+('saint-stephen-martyr', 'Saint Stephen, the First Martyr', 'Protomartyr of the Church and witness to Christ in the apostolic age.', 'Stephen, one of the first deacons, proclaimed Christ with courage and became the first to shed his blood for the Gospel; his martyrdom in Acts remains a foundational witness to forgiveness and fidelity.', '1st century'),
+('saint-john-apostle', 'Saint John, Apostle and Evangelist', 'Apostle and evangelist, theologian of divine love and incarnation.', 'John, traditionally identified as the beloved disciple, is associated with the Fourth Gospel, Johannine letters and Revelation; his witness shaped Christological reflection and contemplative theology in the Church.', '1st century'),
+('holy-innocents', 'The Holy Innocents, Martyrs', 'Children of Bethlehem commemorated as martyrs in the infancy narrative.', 'The Holy Innocents are remembered as children killed in Herod''s persecution after Christ''s birth; their commemoration expresses the Church''s memory of innocent suffering and witness linked to the coming of the Messiah.', ''),
+('saint-thomas-becket', 'Saint Thomas Becket', 'Archbishop of Canterbury and martyr for ecclesial freedom.', 'Thomas Becket defended the rights and autonomy of the Church in conflict with royal authority; his martyrdom in Canterbury became a symbol of conscience, episcopal responsibility and fidelity to ecclesial justice.', 'c. 1118–1170'),
+('saint-sylvester-i', 'Saint Sylvester I', 'Pope of the Constantinian era associated with early public peace of the Church.', 'Sylvester governed the Church during a period of transition after imperial toleration, remembered in tradition for the consolidation of ecclesial life and worship in fourth-century Rome.', 'd. 335')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'fr', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-francis-xavier', 'Saint François Xavier', 'Missionnaire jésuite et pionnier de l''évangélisation en Asie.', 'François Xavier, l''un des premiers compagnons d''Ignace de Loyola, porta l''Évangile en Inde, en Asie du Sud-Est et au Japon; son zèle missionnaire, sa créativité pastorale et son endurance dans l''épreuve en firent une figure majeure de la mission catholique moderne.', '1506–1552'),
+('saint-john-damascene', 'Saint Jean Damascène', 'Prêtre et docteur de l''Église, défenseur des saintes images.', 'Jean Damascène est reconnu pour sa synthèse théologique et sa défense des icônes pendant les controverses iconoclastes; ses écrits sur la christologie, la liturgie et la doctrine mariale ont marqué durablement l''Orient et l''Occident chrétiens.', 'v. 675–749'),
+('saint-nicholas', 'Saint Nicolas, évêque', 'Évêque vénéré pour sa charité pastorale et sa protection des plus vulnérables.', 'Nicolas de Myre est l''un des saints les plus populaires de la tradition chrétienne, associé au soin des pauvres, à la défense des innocents et à la générosité; son culte s''est largement diffusé en Orient comme en Occident.', 'v. 270–343'),
+('saint-ambrose', 'Saint Ambroise', 'Évêque de Milan et docteur de l''Église, pasteur et théologien influent.', 'Ambroise guida l''Église de Milan dans un contexte de tensions politiques et doctrinales, développa la vie liturgique et la prédication biblique, et influença des figures majeures comme Augustin; son héritage est fondamental pour la tradition latine.', 'v. 340–397'),
+('saint-juan-diego', 'Saint Juan Diego Cuauhtlatoatzin', 'Laïc autochtone lié à la tradition guadalupéenne.', 'Juan Diego est honoré comme un humble laïc dont le témoignage est lié aux apparitions de Notre-Dame de Guadalupe en 1531; sa figure est devenue un signe d''inculturation de la foi et d''évangélisation sur le continent américain.', 'v. 1474–1548'),
+('saint-damasus-i', 'Saint Damase I', 'Pape ayant promu la liturgie romaine et la mémoire des martyrs.', 'Damase renforça le culte des martyrs romains, encouragea les études bibliques et soutint le travail scripturaire de Jérôme; son pontificat contribua à consolider l''identité ecclésiale romaine à la fin de l''Antiquité.', 'v. 305–384'),
+('saint-lucy', 'Sainte Lucie, vierge et martyre', 'Vierge martyre vénérée pour sa fidélité et sa pureté.', 'Lucie de Syracuse est largement honorée dans la dévotion chrétienne pour son courage dans la persécution; la tradition associe son témoignage à la lumière spirituelle et à l''espérance chrétienne.', 'm. 304'),
+('saint-john-of-the-cross', 'Saint Jean de la Croix', 'Réformateur carmélite, mystique et docteur de l''Église.', 'Jean de la Croix collabora avec Thérèse d''Avila à la réforme du Carmel et composa des œuvres majeures de mystique sur la purification, l''union à Dieu et la prière contemplative, influençant profondément la spiritualité chrétienne.', '1542–1591'),
+('saint-peter-canisius', 'Saint Pierre Canisius', 'Prêtre jésuite et docteur de l''Église, grand catéchiste de la Contre-Réforme.', 'Pierre Canisius œuvra dans les régions germaniques pour le renouveau catholique par la prédication, l''éducation et ses catéchismes influents; sa clarté pastorale et sa rigueur intellectuelle renforcèrent l''Église en temps de conflits confessionnels.', '1521–1597'),
+('saint-john-of-kanty', 'Saint Jean de Kenty', 'Prêtre et professeur connu pour son savoir, son humilité et sa charité.', 'Jean de Kenty enseigna la théologie à Cracovie et se distingua par son austérité, son attention aux étudiants et aux pauvres, et sa fidélité à sa vocation académique et pastorale.', 'v. 1390–1473'),
+('saint-stephen-martyr', 'Saint Étienne, premier martyr', 'Protomartyr de l''Église et témoin du Christ à l''âge apostolique.', 'Étienne, l''un des premiers diacres, annonça le Christ avec courage et fut le premier à verser son sang pour l''Évangile; son martyre, rapporté dans les Actes, demeure un témoignage fondateur de fidélité et de pardon.', 'Ier siècle'),
+('saint-john-apostle', 'Saint Jean, apôtre et évangéliste', 'Apôtre et évangéliste, théologien de l''amour divin et de l''Incarnation.', 'Jean, traditionnellement identifié comme le disciple bien-aimé, est associé au quatrième évangile, aux lettres johanniques et à l''Apocalypse; son témoignage a marqué la christologie et la théologie contemplative.', 'Ier siècle'),
+('holy-innocents', 'Les Saints Innocents, martyrs', 'Enfants de Bethléem commémorés comme martyrs dans le récit de l''enfance du Christ.', 'Les Saints Innocents rappellent les enfants mis à mort sous Hérode après la naissance de Jésus; leur mémoire exprime la souffrance innocente et le témoignage lié à la venue du Messie.', ''),
+('saint-thomas-becket', 'Saint Thomas Becket', 'Archevêque de Cantorbéry et martyr pour la liberté de l''Église.', 'Thomas Becket défendit les droits et l''autonomie de l''Église face au pouvoir royal; son martyre à Cantorbéry devint un symbole de conscience, de responsabilité épiscopale et de fidélité ecclésiale.', 'v. 1118–1170'),
+('saint-sylvester-i', 'Saint Sylvestre I', 'Pape de l''époque constantinienne associé à la paix publique de l''Église.', 'Sylvestre gouverna l''Église durant la période de transition après la tolérance impériale, et demeure lié à la consolidation de la vie ecclésiale et liturgique dans la Rome du IVe siècle.', 'm. 335')
+) AS x(slug, name, short_description, full_biography, life_label)
+ON s.slug = x.slug
+ON CONFLICT (saint_id, locale_code)
+DO UPDATE SET
+  name = EXCLUDED.name,
+  short_description = EXCLUDED.short_description,
+  full_biography = EXCLUDED.full_biography,
+  life_label = EXCLUDED.life_label;
+
+INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
+SELECT s.id, 'la', x.name, x.short_description, x.full_biography, x.life_label
+FROM saints s
+JOIN (VALUES
+('saint-francis-xavier', 'Sanctus Franciscus Xaverius', 'Missionarius Societatis Iesu et praeco Evangelii in Asia.', 'Franciscus Xaverius, inter primos socios Ignatii de Loyola, Evangelium in Indiam, Asiam Australem et Iaponiam attulit; zelo missionario, prudentia pastorali et patientia in laboribus claruit.', '1506–1552'),
+('saint-john-damascene', 'Sanctus Ioannes Damascenus', 'Presbyter et Doctor Ecclesiae, defensor imaginum sacrarum.', 'Ioannes Damascenus pro synthesi theologica et defensione imaginum in controversiis iconoclasticis memoratur; eius opera de christologia, liturgia et doctrina mariana magnam vim in Oriente et Occidente habuerunt.', 'c. 675–749'),
+('saint-nicholas', 'Sanctus Nicolaus, Episcopus', 'Episcopus ob caritatem pastoralem et tutelam infirmorum celebratus.', 'Nicolaus Myrensis unus ex dilectissimis sanctis traditionis christianae factus est, cum cura pauperum, tutela innocentium et largitate eleemosynarum coniunctus; cultus eius late per Orientem et Occidentem diffusus est.', 'c. 270–343'),
+('saint-ambrose', 'Sanctus Ambrosius', 'Episcopus Mediolanensis et Doctor Ecclesiae, pastor et theologus insignis.', 'Ambrosius Ecclesiam Mediolanensem inter difficultates politicas et doctrinales rexit, vitam liturgicam et praedicationem biblicam promovit atque Augustinum aliosque valde movit; hereditas eius fundamentalis mansit in traditione Latina.', 'c. 340–397'),
+('saint-juan-diego', 'Sanctus Ioannes Didacus Cuauhtlatoatzin', 'Laicus indigena testis traditionis Guadalupensis.', 'Ioannes Didacus ut humilis laicus honoratur, cuius testimonium cum apparitionibus Guadalupensibus anno 1531 connectitur; vita eius signum fidei inculturatae et evangelizationis in America facta est.', 'c. 1474–1548'),
+('saint-damasus-i', 'Sanctus Damasus I', 'Papa qui liturgiam Romanam et cultum martyrum promovit.', 'Damasus memoriam martyrum Romanorum roboravit, studia biblica fovit et operi Hieronymi favit; pontificatus eius identitatem ecclesialem Romanam in antiquitatis fine consolidavit.', 'c. 305–384'),
+('saint-lucy', 'Sancta Lucia, Virgo et Martyr', 'Virgo martyr ob fidei constantiam et puritatem venerata.', 'Lucia Syracusana late colitur ut martyr fortis sub persecutione; traditio eius testimonium cum lumine spirituali et spe christiana coniungit.', 'ob. 304'),
+('saint-john-of-the-cross', 'Sanctus Ioannes a Cruce', 'Reformator Carmelitarum, mysticus et Doctor Ecclesiae.', 'Ioannes a Cruce cum Theresia Abulensi in reformatione Carmelitana cooperatus est et opera mystica praecipua de purgatione, unione cum Deo et oratione contemplativa composuit.', '1542–1591'),
+('saint-peter-canisius', 'Sanctus Petrus Canisius', 'Presbyter Societatis Iesu et Doctor Ecclesiae, magnus catechista Contrareformationis.', 'Petrus Canisius in regionibus Germanicis ad renovationem catholicam per praedicationem, institutionem et catechismos contulit; claritas pastoralis et rigor intellectualis eius Ecclesiam in contentionibus confessionum firmaverunt.', '1521–1597'),
+('saint-john-of-kanty', 'Sanctus Ioannes de Cantiis', 'Presbyter et professor, notus doctrina, humilitate et caritate.', 'Ioannes de Cantiis Cracoviae theologiam docuit et austeritate vitae, cura discipulorum pauperumque atque fidelitate vocationis academicae pastoralisque eminuit.', 'c. 1390–1473'),
+('saint-stephen-martyr', 'Sanctus Stephanus, Protomartyr', 'Protomartyr Ecclesiae et testis Christi in aetate apostolica.', 'Stephanus, unus e primis diaconis, Christum fortiter praedicavit et primus sanguinem pro Evangelio fudit; eius martyrium in Actibus Apostolorum testimonium fundamentale mansit.', 'saec. I'),
+('saint-john-apostle', 'Sanctus Ioannes, Apostolus et Evangelista', 'Apostolus et evangelista, theologus amoris divini et Incarnationis.', 'Ioannes, discipulus dilectus traditus, cum quarto Evangelio, epistulis Ioanneis et Apocalypsi coniungitur; testimonium eius christologiam et theologiam contemplativam valde formavit.', 'saec. I'),
+('holy-innocents', 'Sancti Innocentes, Martyres', 'Pueri Bethlehemitici ut martyres in narratione infantiae commemorati.', 'Sancti Innocentes memorant pueros a Herode occisos post nativitatem Christi; eorum commemoratio innocentis doloris et testimonii in adventu Messiae signum est.', ''),
+('saint-thomas-becket', 'Sanctus Thomas Becket', 'Archiepiscopus Cantuariensis et martyr pro libertate Ecclesiae.', 'Thomas Becket iura et libertatem Ecclesiae contra potestatem regiam defendit; martyrium eius Cantuariae symbolum conscientiae, officii episcopalis et fidelitatis ecclesialis factum est.', 'c. 1118–1170'),
+('saint-sylvester-i', 'Sanctus Silvester I', 'Papa aetatis Constantini, cum pace publica Ecclesiae coniunctus.', 'Silvester Ecclesiam rexit tempore transitionis post tolerantiam imperialem, et in traditione cum consolidatione vitae ecclesialis et cultus in Roma saeculi quarti coniungitur.', 'ob. 335')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
