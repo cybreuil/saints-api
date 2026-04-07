@@ -112,7 +112,9 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('XAVIER', 'ES', 43.3623, -8.4115), -- St Francis Xavier context
 ('DAMASCUS', 'SY', 33.5138, 36.2765),
 ('MYRA', 'TR', 36.2167, 29.1167),
-('SIRACUSA', 'IT', 37.0755, 14.2018)
+('SIRACUSA', 'IT', 37.0755, 14.2018),
+('POISSY', 'FR', 48.9333, 2.0333) -- St Louis context (birthplace region alternative not ideal)
+('TUNIS', 'TN', 36.8065, 10.1815) -- St Louis context (death place region alternative not ideal)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -229,7 +231,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='XAVIER'), 'en', 'Xavier'),
 ((SELECT id FROM places WHERE code='DAMASCUS'), 'en', 'Damascus'),
 ((SELECT id FROM places WHERE code='MYRA'), 'en', 'Myra'),
-((SELECT id FROM places WHERE code='SIRACUSA'), 'en', 'Siracusa')
+((SELECT id FROM places WHERE code='SIRACUSA'), 'en', 'Siracusa'),
+((SELECT id FROM places WHERE code='POISSY'), 'en', 'Poissy'),
+((SELECT id FROM places WHERE code='TUNIS'), 'en', 'Tunis')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -346,7 +350,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='XAVIER'), 'fr', 'Xavier'),
 ((SELECT id FROM places WHERE code='DAMASCUS'), 'fr', 'Damas'),
 ((SELECT id FROM places WHERE code='MYRA'), 'fr', 'Myre'),
-((SELECT id FROM places WHERE code='SIRACUSA'), 'fr', 'Syracuse')
+((SELECT id FROM places WHERE code='SIRACUSA'), 'fr', 'Syracuse'),
+((SELECT id FROM places WHERE code='POISSY'), 'fr', 'Poissy'),
+((SELECT id FROM places WHERE code='TUNIS'), 'fr', 'Tunis')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -463,7 +469,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='XAVIER'), 'la', 'Xavier'),
 ((SELECT id FROM places WHERE code='DAMASCUS'), 'la', 'Damascus'),
 ((SELECT id FROM places WHERE code='MYRA'), 'la', 'Myra'),
-((SELECT id FROM places WHERE code='SIRACUSA'), 'la', 'Syracusae')
+((SELECT id FROM places WHERE code='SIRACUSA'), 'la', 'Syracusae'),
+((SELECT id FROM places WHERE code='POISSY'), 'la', 'Poissy'),
+((SELECT id FROM places WHERE code='TUNIS'), 'la', 'Tunis')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
