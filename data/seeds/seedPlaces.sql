@@ -108,9 +108,11 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('GLOGOWIEC', 'PL', 51.6025, 18.9397), -- St Faustina Kowalska context
 ('COLOGNE', 'DE', 50.9375, 6.9603), -- St Albertus Magnus context
 ('WADOWICE', 'PL', 49.8833, 19.5000), -- St John Paul II context
-('TOURS', 'FR', 47.3941, 0.6848) -- St Martin of Tours context
-
-
+('TOURS', 'FR', 47.3941, 0.6848), -- St Martin of Tours context
+('XAVIER', 'ES', 43.3623, -8.4115), -- St Francis Xavier context
+('DAMASCUS', 'SY', 33.5138, 36.2765),
+('MYRA', 'TR', 36.2167, 29.1167),
+('SIRACUSA', 'IT', 37.0755, 14.2018)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -223,7 +225,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='GLOGOWIEC'), 'en', 'Glogowiec'),
 ((SELECT id FROM places WHERE code='COLOGNE'), 'en', 'Cologne'),
 ((SELECT id FROM places WHERE code='WADOWICE'), 'en', 'Wadowice'),
-((SELECT id FROM places WHERE code='TOURS'), 'en', 'Tours')
+((SELECT id FROM places WHERE code='TOURS'), 'en', 'Tours'),
+((SELECT id FROM places WHERE code='XAVIER'), 'en', 'Xavier'),
+((SELECT id FROM places WHERE code='DAMASCUS'), 'en', 'Damascus'),
+((SELECT id FROM places WHERE code='MYRA'), 'en', 'Myra'),
+((SELECT id FROM places WHERE code='SIRACUSA'), 'en', 'Siracusa')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -336,7 +342,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='GLOGOWIEC'), 'fr', 'Glogowiec'),
 ((SELECT id FROM places WHERE code='COLOGNE'), 'fr', 'Cologne'),
 ((SELECT id FROM places WHERE code='WADOWICE'), 'fr', 'Wadowice'),
-((SELECT id FROM places WHERE code='TOURS'), 'fr', 'Tours')
+((SELECT id FROM places WHERE code='TOURS'), 'fr', 'Tours'),
+((SELECT id FROM places WHERE code='XAVIER'), 'fr', 'Xavier'),
+((SELECT id FROM places WHERE code='DAMASCUS'), 'fr', 'Damas'),
+((SELECT id FROM places WHERE code='MYRA'), 'fr', 'Myre'),
+((SELECT id FROM places WHERE code='SIRACUSA'), 'fr', 'Syracuse')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -449,7 +459,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='GLOGOWIEC'), 'la', 'Glogowiec'),
 ((SELECT id FROM places WHERE code='COLOGNE'), 'la', 'Colonia'),
 ((SELECT id FROM places WHERE code='WADOWICE'), 'la', 'Wadowice'),
-((SELECT id FROM places WHERE code='TOURS'), 'la', 'Turones')
+((SELECT id FROM places WHERE code='TOURS'), 'la', 'Turones'),
+((SELECT id FROM places WHERE code='XAVIER'), 'la', 'Xavier'),
+((SELECT id FROM places WHERE code='DAMASCUS'), 'la', 'Damascus'),
+((SELECT id FROM places WHERE code='MYRA'), 'la', 'Myra'),
+((SELECT id FROM places WHERE code='SIRACUSA'), 'la', 'Syracusae')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
