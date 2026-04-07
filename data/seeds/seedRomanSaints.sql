@@ -2331,9 +2331,16 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='PIETRELCINA')
 ),
 (
-  'saints-cosmas-and-damian', 'Saints Cosmas and Damian',
+  'saint-cosmas', 'Saint Cosmas',
   NULL, NULL, NULL, TRUE,
-  NULL, 9, 26, TRUE,
+  NULL, NULL, NULL, TRUE,
+  3,
+  NULL, NULL, (SELECT id FROM places WHERE code='ANTIOCH')
+),
+(
+  'saint-damian', 'Saint Damian',
+  NULL, NULL, NULL, TRUE,
+  NULL, NULL, NULL, TRUE,
   3,
   NULL, NULL, (SELECT id FROM places WHERE code='ANTIOCH')
 ),
@@ -2362,13 +2369,13 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='JAPAN'),
   (SELECT id FROM places WHERE code='MANILA')
 ),
-(
-  'saints-michael-gabriel-and-raphael', 'Saints Michael, Gabriel and Raphael, Archangels',
-  NULL, NULL, NULL, TRUE,
-  NULL, 9, 29, TRUE,
-  NULL,
-  NULL, NULL, NULL
-),
+-- (
+--   'saints-michael-gabriel-and-raphael', 'Saints Michael, Gabriel and Raphael, Archangels',
+--   NULL, NULL, NULL, TRUE,
+--   NULL, 9, 29, TRUE,
+--   NULL,
+--   NULL, NULL, NULL
+-- ),
 (
   'saint-jerome', 'Saint Jerome',
   347, NULL, NULL, TRUE,
@@ -2396,11 +2403,12 @@ JOIN (VALUES
 ('saint-andrew-kim-tae-gon', 'Saint Andrew Kim Tae-gon', 'First Korean-born Catholic priest and martyr.', 'Andrew Kim Tae-gon was ordained as the first native Korean priest and served clandestinely amid persecution, organizing pastoral networks and sustaining persecuted communities; his martyrdom became a foundational symbol of the Korean Church''s courage, missionary commitment and fidelity under oppression.', '1821–1846'),
 ('saint-matthew', 'Saint Matthew, Apostle and Evangelist', 'Apostle, evangelist and witness to Christ''s teaching and mission.', 'Matthew, traditionally identified as a former tax collector called by Jesus, is honored as one of the Twelve and as the evangelist associated with the first canonical Gospel, whose theological portrait of Christ and fulfillment themes profoundly shaped Christian catechesis and liturgy.', '1st century'),
 ('saint-pius-of-pietrelcina', 'Saint Pius of Pietrelcina', 'Capuchin friar, confessor and stigmatist known for prayer and pastoral care.', 'Pius of Pietrelcina, known as Padre Pio, became internationally known for his intense sacramental ministry, spiritual direction, charity and reported mystical phenomena; his witness emphasized conversion, confession, Eucharistic devotion and compassionate accompaniment of suffering people.', '1887–1968'),
-('saints-cosmas-and-damian', 'Saints Cosmas and Damian', 'Physician martyrs revered as patrons of medical charity.', 'Cosmas and Damian are remembered in Christian tradition as physician brothers who served the sick without payment and gave witness in martyrdom; their cult spread widely in East and West as a sign of healing ministry joined to evangelical witness.', '3rd century'),
+('saint-cosmas', 'Saint Cosmas', 'Early Christian physician-martyr, traditionally commemorated with Saint Damian.', 'Cosmas is venerated in Christian tradition as a physician-martyr who, with Damian, cared for the sick and witnessed to Christ in the age of persecution. Their cult spread widely in East and West as a model of medical charity joined to steadfast faith. Although precise biographical data are limited, ecclesial memory preserves Cosmas as a figure of healing service and evangelical generosity.', '3rd century'),
+('saint-damian', 'Saint Damian', 'Early Christian physician-martyr, traditionally commemorated with Saint Cosmas.', 'Damian is honored as an early Christian physician-martyr, remembered together with Cosmas for charitable care of the sick and courageous witness to the Gospel. Their shared veneration became deeply rooted in liturgical tradition and Christian devotion, especially as patrons linked to medicine and compassionate service.', '3rd century'),
 ('saint-vincent-de-paul', 'Saint Vincent de Paul', 'Priest and organizer of charitable service to the poor.', 'Vincent de Paul transformed early modern Catholic charity by founding institutions and collaborating with lay and religious networks for care of the poor, abandoned children, prisoners and rural populations; his pastoral strategy united practical organization, spiritual formation and social compassion.', '1581–1660'),
 ('saint-wenceslaus', 'Saint Wenceslaus', 'Duke and martyr, patron of Bohemia.', 'Wenceslaus, duke of Bohemia, is remembered for promoting Christian faith, justice and peace in a politically unstable context; his death in dynastic conflict was interpreted as martyrdom, and his memory became central to Bohemian Christian identity and royal sanctity traditions.', 'c. 907–935'),
 ('saint-lawrence-ruiz-and-companions', 'Saint Lawrence Ruiz and Companions', 'Filipino protomartyr with companions martyred in Japan.', 'Lawrence Ruiz, a layman from Manila, was martyred in seventeenth-century Japan with missionary companions after refusing to renounce the faith; his witness symbolizes the transnational character of Catholic mission in Asia and the steadfast courage of lay and clerical believers under severe persecution.', 'c. 1600–1637'),
-('saints-michael-gabriel-and-raphael', 'Saints Michael, Gabriel and Raphael, Archangels', 'Archangels revered as messengers and servants of God in salvation history.', 'Michael, Gabriel and Raphael are venerated as archangels whose biblical missions reveal divine protection, proclamation and healing; their joint celebration in the Roman calendar expresses the Church''s faith in angelic ministry and God''s providential care.', ''),
+-- ('saints-michael-gabriel-and-raphael', 'Saints Michael, Gabriel and Raphael, Archangels', 'Archangels revered as messengers and servants of God in salvation history.', 'Michael, Gabriel and Raphael are venerated as archangels whose biblical missions reveal divine protection, proclamation and healing; their joint celebration in the Roman calendar expresses the Church''s faith in angelic ministry and God''s providential care.', ''),
 ('saint-jerome', 'Saint Jerome', 'Priest, biblical scholar and Doctor of the Church; translator of the Vulgate.', 'Jerome devoted his life to biblical study, ascetic discipline and pastoral correspondence, producing the Latin Vulgate that became foundational for Western Christianity; his scholarship, polemical writings and monastic engagement in Bethlehem left a decisive mark on scriptural theology and Christian learning.', 'c. 347–420')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
@@ -2427,11 +2435,12 @@ JOIN (VALUES
 ('saint-andrew-kim-tae-gon', 'Saint André Kim Tae-gon', 'Premier prêtre catholique coréen et martyr.', 'André Kim Tae-gon fut ordonné comme premier prêtre coréen autochtone et exerça un ministère clandestin dans un contexte de persécution, organisant des réseaux pastoraux et soutenant des communautés opprimées; son martyre est devenu un symbole fondateur de la fidélité de l''Église de Corée.', '1821–1846'),
 ('saint-matthew', 'Saint Matthieu, apôtre et évangéliste', 'Apôtre, évangéliste et témoin de l''enseignement du Christ.', 'Matthieu, traditionnellement identifié comme ancien publicain appelé par Jésus, est honoré comme membre des Douze et évangéliste du premier évangile canonique; sa présentation théologique du Christ et des accomplissements scripturaires a profondément marqué la catéchèse et la liturgie.', 'Ier siècle'),
 ('saint-pius-of-pietrelcina', 'Saint Pio de Pietrelcina', 'Frère capucin, confesseur et stigmatisé connu pour la prière et l''accompagnement pastoral.', 'Padre Pio est devenu mondialement connu pour son ministère sacramentel intense, sa direction spirituelle, sa charité et des phénomènes mystiques rapportés; son témoignage insiste sur la conversion, la confession, l''Eucharistie et la compassion envers les souffrants.', '1887–1968'),
-('saints-cosmas-and-damian', 'Saints Côme et Damien', 'Médecins martyrs vénérés comme patrons de la charité médicale.', 'Côme et Damien sont commémorés comme frères médecins qui soignaient sans réclamer de paiement et donnèrent le témoignage du martyre; leur culte, largement diffusé en Orient et en Occident, unit service de guérison et fidélité évangélique.', 'IIIe siècle'),
+('saint-cosmas', 'Saint Côme', 'Médecin-martyr des premiers siècles, traditionnellement commémoré avec saint Damien.', 'Côme est vénéré dans la tradition chrétienne comme médecin-martyr qui, avec Damien, soigna les malades et rendit témoignage au Christ durant les persécutions. Leur culte s’est largement diffusé en Orient et en Occident comme modèle de charité médicale unie à la fidélité de la foi. Même si les données biographiques précises sont limitées, la mémoire ecclésiale conserve Côme comme figure de service guérissant et de générosité évangélique.', 'IIIe siècle'),
+('saint-damian', 'Saint Damien', 'Médecin-martyr des premiers siècles, traditionnellement commémoré avec saint Côme.', 'Damien est honoré comme médecin-martyr de l’antiquité chrétienne, commémoré avec Côme pour le soin charitable des malades et le témoignage courageux de l’Évangile. Leur vénération commune est devenue profondément enracinée dans la liturgie et la dévotion chrétienne, notamment comme patrons liés à la médecine et à la compassion.', 'IIIe siècle'),
 ('saint-vincent-de-paul', 'Saint Vincent de Paul', 'Prêtre et organisateur majeur de la charité au service des pauvres.', 'Vincent de Paul transforma les pratiques caritatives de l''époque moderne en fondant des institutions et en mobilisant réseaux laïcs et religieux pour servir pauvres, enfants abandonnés, prisonniers et populations rurales; son approche unit organisation concrète, formation spirituelle et compassion sociale.', '1581–1660'),
 ('saint-wenceslaus', 'Saint Venceslas', 'Duc et martyr, patron de la Bohême.', 'Venceslas, duc de Bohême, est honoré pour la promotion de la foi chrétienne, de la justice et de la paix dans un contexte politique instable; sa mort dans un conflit dynastique fut reçue comme martyre et sa mémoire devint centrale dans l''identité chrétienne bohémienne.', 'v. 907–935'),
 ('saint-lawrence-ruiz-and-companions', 'Saint Laurent Ruiz et compagnons', 'Protomartyr philippin et compagnons martyrisés au Japon.', 'Laurent Ruiz, laïc originaire de Manille, fut martyrisé au Japon au XVIIe siècle avec des compagnons missionnaires après avoir refusé d''abjurer la foi; son témoignage manifeste le caractère transnational de la mission catholique en Asie et le courage des fidèles, laïcs et clercs.', 'v. 1600–1637'),
-('saints-michael-gabriel-and-raphael', 'Saints Michel, Gabriel et Raphaël, archanges', 'Archanges vénérés comme messagers et serviteurs de Dieu dans l''histoire du salut.', 'Michel, Gabriel et Raphaël sont honorés comme archanges dont les missions bibliques expriment protection divine, annonce du salut et guérison; leur célébration conjointe dans le calendrier romain rappelle la foi de l''Église en l''assistance angélique.', ''),
+-- ('saints-michael-gabriel-and-raphael', 'Saints Michel, Gabriel et Raphaël, archanges', 'Archanges vénérés comme messagers et serviteurs de Dieu dans l''histoire du salut.', 'Michel, Gabriel et Raphaël sont honorés comme archanges dont les missions bibliques expriment protection divine, annonce du salut et guérison; leur célébration conjointe dans le calendrier romain rappelle la foi de l''Église en l''assistance angélique.', ''),
 ('saint-jerome', 'Saint Jérôme', 'Prêtre, bibliste et docteur de l''Église; traducteur de la Vulgate.', 'Jérôme consacra sa vie à l''étude de l''Écriture, à l''ascèse et à la direction spirituelle; sa traduction latine de la Bible (Vulgate) devint une référence fondamentale pour l''Occident chrétien, et ses travaux exégétiques influencèrent durablement la théologie biblique.', 'v. 347–420')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
@@ -2458,11 +2467,12 @@ JOIN (VALUES
 ('saint-andrew-kim-tae-gon', 'Sanctus Andreas Kim Tae-gon', 'Primus sacerdos coreanus nativus et martyr.', 'Andreas Kim Tae-gon primus sacerdos nativus Coreae ordinatus est et sub persecutione clandestine pastorem gessit, retia pastoralia ordinavit et communitates sustentavit; martyrio factus signum est virtutis et missionis coreanae.', '1821–1846'),
 ('saint-matthew', 'Sanctus Matthaeus, apostolus et evangelista', 'Apostolus et evangelista, testis doctrinae et missionis Christi.', 'Matthaeus, traditus ut publicanus et a Christo vocatus, inter Duodecim numeratur; evangelium illi attributum thema complendi et personam Christi theologicam in ecclesia primitiva firmavit.', 'saec. I'),
 ('saint-pius-of-pietrelcina', 'Sanctus Pius a Pietrelcina', 'Frater Capucinus, confessarius et stigmatisatus notus pro oratione et cura pastorali.', 'Pius a Pietrelcina (Padre Pio) amplam famam assecutus est propter ministerium sacramentale intensum, directionem spiritualem, caritatem et relationes mysticas reportatas; eius vita conversionem, confessionem et devotionem eucharisticam extollit.', '1887–1968'),
-('saints-cosmas-and-damian', 'Sancti Cosmas et Damianus', 'Medici et martyres, patroni curae medicae et caritatis.', 'Cosmas et Damianus, fratres medici, sine pretio aegrotis curam praebuerunt et fidei testimonio martirio coronati sunt; cultus eorum tam in Oriente quam Occidente late diffusus est.', 'saec. III'),
+('saint-cosmas', 'Sanctus Cosmas', 'Medicus-martyr antiquae Ecclesiae, cum Sancto Damiano tradite commemoratus.', 'Cosmas in traditione christiana colitur ut medicus-martyr qui, una cum Damiano, aegrotis ministravit et Christo sub persecutione testimonium dedit. Cultus eorum late in Oriente et Occidente diffusus est ut exemplar caritatis medicae cum fide constanti coniunctae. Etsi notitiae biographicae certae paucae sunt, memoria ecclesialis Cosmam servat ut figuram ministerii sanantis et liberalitatis evangelicae.', 'saec. III'),
+('saint-damian', 'Sanctus Damianus', 'Medicus-martyr antiquae Ecclesiae, cum Sancto Cosma tradite commemoratus.', 'Damianus honoratur ut medicus-martyr antiquae christianitatis, cum Cosma commemoratus propter curam misericordem infirmorum et fortem Evangelii confessionem. Communis eorum veneratio in traditione liturgica et devotione christiana alte radicata est, praesertim ut patroni medicinae et caritatis.', 'saec. III'),
 ('saint-vincent-de-paul', 'Sanctus Vincentius a Paulo', 'Presbyter et architectus operum caritatis pro pauperibus.', 'Vincentius a Paulo instituta caritatis condidit et per nexus laicorum et religiosorum curam pauperum, orphanorum et captivorum ordinavit; eius praxis unit organizationem practicam cum formatione spirituali.', '1581–1660'),
 ('saint-wenceslaus', 'Sanctus Venceslaus', 'Dux et martyr; patronus Bohemiae.', 'Venceslaus, dux Bohemiae, fidem Christianam, iustitiam et pacem propagavit in temporibus instabilibus; occisio eius in conflictu dynastico quasi martyria accipitur et memoria eius nationalem identitatem religiosam formavit.', 'c. 907–935'),
 ('saint-lawrence-ruiz-and-companions', 'Sanctus Laurentius Ruiz et Socii', 'Protomartyr Philippinus cum sociis in Iaponia martyrizatus.', 'Laurentius Ruiz, laicus Manilae oriundus, in Iaponia saeculo XVII cum missionariis martyrizatus est post recusationem abjurationis; eius vita exemplum missionis transnationalis et constantiae laicorum in fide praebet.', 'c. 1600–1637'),
-('saints-michael-gabriel-and-raphael', 'Sancti Michael, Gabriel et Raphaël, Archangeli', 'Archangeli venerandi ut nuntii et ministri Dei.', 'Michael, Gabriel et Raphaël archangeli sunt quorum scripturae missiones protectionem, nuntiationem et sanationem significant; communis celebratio in calendario Romano fidem Ecclesiae in ministerio angelico et providentia Dei exprimit.', ''),
+-- ('saints-michael-gabriel-and-raphael', 'Sancti Michael, Gabriel et Raphaël, Archangeli', 'Archangeli venerandi ut nuntii et ministri Dei.', 'Michael, Gabriel et Raphaël archangeli sunt quorum scripturae missiones protectionem, nuntiationem et sanationem significant; communis celebratio in calendario Romano fidem Ecclesiae in ministerio angelico et providentia Dei exprimit.', ''),
 ('saint-jerome', 'Sanctus Hieronymus', 'Presbyter, biblio-criticus et Doctor Ecclesiae; Vulgatae auctor.', 'Hieronymus vitam suam studiis scripturarum, asceti et directioni spirituali dedicavit; interpretatio Latina Bibliorum (Vulgata) ab eo completa fundamentum doctrinae et liturgiae in Occidente posuit, et opera exegetica eius usque hodie valde influunt.', 'c. 347–420')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
@@ -2493,13 +2503,13 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='LISIEUX'),
   (SELECT id FROM places WHERE code='LISIEUX')
 ),
-(
-  'holy-guardian-angels', 'The Holy Guardian Angels',
-  NULL, NULL, NULL, TRUE,
-  NULL, 10, 2, TRUE,
-  NULL,
-  NULL, NULL, NULL
-),
+-- (
+--   'holy-guardian-angels', 'The Holy Guardian Angels',
+--   NULL, NULL, NULL, TRUE,
+--   NULL, 10, 2, TRUE,
+--   NULL,
+--   NULL, NULL, NULL
+-- ),
 (
   'saint-francis-of-assisi', 'Saint Francis of Assisi',
   1182, NULL, NULL, TRUE,
@@ -2656,9 +2666,16 @@ INSERT INTO saints (
   NULL, NULL, NULL
 ),
 (
-  'saints-simon-and-jude', 'Saints Simon and Jude, Apostles',
+  'saint-simon-apostle', 'Saint Simon, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, 10, 28, TRUE,
+  NULL, NULL, NULL, TRUE,
+  1,
+  NULL, NULL, NULL
+),
+(
+  'saint-jude-apostle', 'Saint Jude, Apostle',
+  NULL, NULL, NULL, TRUE,
+  NULL, NULL, NULL, TRUE,
   1,
   NULL, NULL, NULL
 )
@@ -2669,7 +2686,7 @@ SELECT s.id, 'en', x.name, x.short_description, x.full_biography, x.life_label
 FROM saints s
 JOIN (VALUES
 ('saint-therese-of-the-child-jesus', 'Saint Thérèse of the Child Jesus, Virgin and Doctor of the Church', 'Carmelite nun and Doctor of the Church known for her "little way" of spiritual childhood.', 'Thérèse of Lisieux proposed a path of simple trust and love — the "little way" — through a life of prayer and hidden sacrifice; her autobiographical work and example influenced modern spirituality.', '1873–1897'),
-('holy-guardian-angels', 'The Holy Guardian Angels', 'Memorial honoring angels entrusted with the protection of individuals.', 'The memorial recognizes the Church''s belief in guardian angels assigned to accompany and protect each person, encouraging devotion and prayer for heavenly assistance.', ''),
+-- ('holy-guardian-angels', 'The Holy Guardian Angels', 'Memorial honoring angels entrusted with the protection of individuals.', 'The memorial recognizes the Church''s belief in guardian angels assigned to accompany and protect each person, encouraging devotion and prayer for heavenly assistance.', ''),
 ('saint-francis-of-assisi', 'Saint Francis of Assisi', 'Founder of the Franciscan family, model of poverty and care for creation.', 'Francis embraced radical poverty, preaching and service; he founded the Friars Minor and inspired a spiritual renewal that emphasized simplicity, fraternity and reverence for creation.', '1182–1226'),
 ('saint-faustina-kowalska', 'Saint Faustina Kowalska', 'Polish nun and mystic associated with the Divine Mercy devotion.', 'Sister Faustina''s diary recorded revelations that promoted the message of Divine Mercy; her spirituality encouraged trust in God''s mercy and led to a global devotion and feast.', '1905–1938'),
 ('saint-bruno', 'Saint Bruno', 'Priest and founder of the Carthusian Order, noted for contemplative rigor.', 'Bruno of Cologne established the Carthusian hermit-monastic life, combining solitude and communal observance, and became a model for contemplative discipline in the Latin West.', 'c. 1030–1101'),
@@ -2688,7 +2705,8 @@ JOIN (VALUES
 ('saint-john-paul-ii', 'Saint John Paul II', 'Pope, theologian and global pastor who engaged culture and evangelization.', 'Karol Wojtyła''s papacy combined philosophical reflection, pastoral outreach and charismatic leadership, with a strong emphasis on human dignity, evangelization and engagement with the modern world.', '1920–2005'),
 ('saint-john-of-capistrano', 'Saint John of Capistrano', 'Franciscan friar, preacher and missionary leader.', 'John of Capistrano was known for his preaching, reform efforts and missionary zeal in fifteenth‑century Europe, playing a notable role in popular mobilization and pastoral renewal.', '1386–1456'),
 ('saint-anthony-mary-claret', 'Saint Anthony Mary Claret, Bishop', 'Founder of the Claretians, missionary and confessor to the poor.', 'Anthony Mary Claret combined pastoral care, missionary activity and publishing to promote catechesis, social reform and devotion in nineteenth‑century Spain and Latin America.', '1807–1870'),
-('saints-simon-and-jude', 'Saints Simon and Jude, Apostles', 'Two Apostles remembered for their missionary witness and teaching.', 'Simon and Jude, among the Twelve, are commemorated for their apostolic mission and martyrdom in the early expansion of the Church.', '1st century')
+('saint-simon-apostle', 'Saint Simon, Apostle', 'Apostle of the Lord, honored among the Twelve for apostolic witness.', 'Simon is venerated as one of the Twelve Apostles of Christ. Although historical details about his later ministry are limited, Christian tradition consistently honors him as a faithful witness to the Resurrection and participant in the apostolic mission of the early Church. In liturgical memory he is frequently commemorated together with Jude, while remaining a distinct apostolic person.', '1st century'),
+('saint-jude-apostle', 'Saint Jude, Apostle', 'Apostle of the Lord, traditionally invoked as intercessor in difficult causes.', 'Jude, also called Thaddaeus in some traditions, is honored as one of the Twelve Apostles. Ecclesial memory venerates him as a faithful herald of the Gospel and a witness of Christ in the apostolic age. Over time he became widely invoked by the faithful in situations of great difficulty, while liturgy often commemorates him jointly with Simon.', '1st century')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -2703,7 +2721,7 @@ SELECT s.id, 'fr', x.name, x.short_description, x.full_biography, x.life_label
 FROM saints s
 JOIN (VALUES
 ('saint-therese-of-the-child-jesus', 'Sainte Thérèse de l''Enfant-Jésus, vierge et docteur de l''Église', 'Carmélite et docteur de l''Église connue pour sa "petite voie".', 'Thérèse de Lisieux proposa une voie de confiance et d''amour simple — la "petite voie" — à travers une vie de prière et de sacrifice discret; son autobiographie et son exemple ont profondément marqué la spiritualité moderne.', '1873–1897'),
-('holy-guardian-angels', 'Les Saints Anges Gardiens', 'Commémoration des anges chargés de la protection des personnes.', 'La fête invite à reconnaître la présence et l''assistance des anges gardiens, encourageant la dévotion et la prière pour leur aide céleste.', ''),
+-- ('holy-guardian-angels', 'Les Saints Anges Gardiens', 'Commémoration des anges chargés de la protection des personnes.', 'La fête invite à reconnaître la présence et l''assistance des anges gardiens, encourageant la dévotion et la prière pour leur aide céleste.', ''),
 ('saint-francis-of-assisi', 'Saint François d''Assise', 'Fondateur de la famille franciscaine, modèle de pauvreté et de soin de la création.', 'François embrassa la pauvreté évangélique, la prédication et le service; fondateur des Frères Mineurs, il inspira un renouveau spirituel axé sur la simplicité, la fraternité et le respect de la création.', '1182–1226'),
 ('saint-faustina-kowalska', 'Sainte Faustine Kowalska', 'Religieuse et mystique polonaise liée à la dévotion à la Divine Miséricorde.', 'Le journal de Sœur Faustine rapporte des révélations qui ont diffusé le message de la Miséricorde Divine; sa spiritualité a encouragé la confiance en la miséricorde de Dieu et a conduit à une dévotion mondiale.', '1905–1938'),
 ('saint-bruno', 'Saint Bruno', 'Prêtre et fondateur de l''ordre des Chartreux, renommé pour la vie contemplative.', 'Bruno de Cologne institua une forme de vie monastique combinant solitude et vie communautaire, devenant un modèle de discipline contemplative en Occident.', 'c. 1030–1101'),
@@ -2722,7 +2740,8 @@ JOIN (VALUES
 ('saint-john-paul-ii', 'Saint Jean-Paul II', 'Pape, théologien et pasteur mondial engagé dans la culture et l''évangélisation.', 'Le pontificat de Karol Wojtyła allia réflexion philosophique, pastorale et leadership charismatique, insistant sur la dignité humaine, l''évangélisation et le dialogue avec le monde moderne.', '1920–2005'),
 ('saint-john-of-capistrano', 'Saint Jean de Capistran', 'Religieux franciscain, prédicateur et chef missionnaire.', 'Jean de Capistran se distingua par sa prédication, ses efforts de réforme et son zèle missionnaire au XVe siècle, jouant un rôle important dans la mobilisation populaire et le renouveau pastoral.', '1386–1456'),
 ('saint-anthony-mary-claret', 'Saint Antoine-Marie Claret', 'Fondateur des Clarétains, missionnaire et confesseur des pauvres.', 'Antoine-Marie Claret associe soin pastoral, activité missionnaire et publications pour promouvoir la catéchèse, la réforme sociale et la piété au XIXe siècle.', '1807–1870'),
-('saints-simon-and-jude', 'Saints Simon et Jude, apôtres', 'Deux apôtres commémorés pour leur témoignage missionnaire et doctrinal.', 'Simon et Jude, inclus parmi les Douze, sont honorés pour leur mission apostolique et le témoignage éventuel du martyre durant l''expansion primitive de l''Église.', 'Ier siècle')
+('saint-simon-apostle', 'Saint Simon, apôtre', 'Apôtre du Seigneur, honoré parmi les Douze pour son témoignage apostolique.', 'Simon est vénéré comme l’un des Douze Apôtres du Christ. Même si les données historiques sur son ministère ultérieur sont limitées, la tradition chrétienne l’honore constamment comme témoin fidèle de la Résurrection et acteur de la mission apostolique de l’Église primitive. Dans la mémoire liturgique, il est souvent célébré avec Jude tout en demeurant une personne apostolique distincte.', 'Ier siècle'),
+('saint-jude-apostle', 'Saint Jude, apôtre', 'Apôtre du Seigneur, traditionnellement invoqué dans les causes difficiles.', 'Jude, aussi appelé Thaddée dans certaines traditions, est honoré comme l’un des Douze Apôtres. La mémoire ecclésiale le vénère comme annonciateur fidèle de l’Évangile et témoin du Christ à l’âge apostolique. Au fil du temps, il a été largement invoqué par les fidèles dans les situations de grande épreuve, tandis que la liturgie le commémore souvent avec Simon.', 'Ier siècle')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -2737,7 +2756,7 @@ SELECT s.id, 'la', x.name, x.short_description, x.full_biography, x.life_label
 FROM saints s
 JOIN (VALUES
 ('saint-therese-of-the-child-jesus', 'Sancta Theresia a Iesu Infante, Virgo et Doctor Ecclesiae', 'Monacha Carmelitana et doctor Ecclesiae, nota "via parva".', 'Theresia Liseviensis viam fidei simplicem et caritatis docuit — "viam parvam" — per vitam orationis et sacrificii humilis; eius opus autobiographicum modernam spiritualitatem valde affecit.', '1873–1897'),
-('holy-guardian-angels', 'Sancti Angeli Custodes', 'Memoria angelorum singulorum ad guardianam personarum deputatorum.', 'Memoria veneratur fidem Ecclesiae in angelos custodes, qui singulos homines comitentur et protegent; festivitas hortatur ad orationem et devotionem ad eorum auxilium.', ''),
+-- ('holy-guardian-angels', 'Sancti Angeli Custodes', 'Memoria angelorum singulorum ad guardianam personarum deputatorum.', 'Memoria veneratur fidem Ecclesiae in angelos custodes, qui singulos homines comitentur et protegent; festivitas hortatur ad orationem et devotionem ad eorum auxilium.', ''),
 ('saint-francis-of-assisi', 'Sanctus Franciscus Assisiensis', 'Fundator Familiae Franciscalis, exemplar paupertatis et curae creaturae.', 'Franciscus paupertatem evangelicam, predicationem et ministerium diligenter amplectitus est; Fratres Minores condidit et renovatio spiritualis per simplicitatem et fraternitatem diffusa est.', '1182–1226'),
 ('saint-faustina-kowalska', 'Sancta Faustina Kowalska', 'Religiosa Polona et mystica, associata devotioni Misericordiae Divinae.', 'Sister Faustina diarium reliquit cum revelationibus quae message Misericordiae Divinae propagaverunt; eius spiritualitas fiduciam in Dei misericordia et devotionem globalem excitavit.', '1905–1938'),
 ('saint-bruno', 'Sanctus Bruno', 'Presbyter et fundator Ordinis Cartusiensium, notus ob rigor contemplativum.', 'Bruno Coloniensis vitam chartusianam instituit, solitudinem cum vita communi coniungens; factus est exemplar disciplinae contemplativae in Occidente.', 'c. 1030–1101'),
@@ -2756,7 +2775,8 @@ JOIN (VALUES
 ('saint-john-paul-ii', 'Sanctus Ioannes Paulus II', 'Pontifex, theologus et pastor globalis; actor culturae et evangelizationis.', 'Karolus Wojtyła pontificatum combinavit philosophicam reflectionem, pastoralem actionem et charisma, dum dignitatem humanam, evangelizationem et dialogum cum mundo moderno in primis promovebat.', '1920–2005'),
 ('saint-john-of-capistrano', 'Sanctus Ioannes Capistranus', 'Franciscanus, praeconius et dux missionarius.', 'Ioannes Capistranus praeceptione, reformis et zilio missionario clarus fuit in saeculo XV, mobilizationem popularem et renovationem pastoralem promovendus.', '1386–1456'),
 ('saint-anthony-mary-claret', 'Sanctus Antonius Maria Claret', 'Fundator Congregationis Claretianae, missionarius et pastor pauperum.', 'Antonius Maria Claret officium pastoralem, missionariam et typographicam coniunxit ad catechesim, reformam socialem et pietatem in saeculo XIX propagandam.', '1807–1870'),
-('saints-simon-and-jude', 'Sancti Simon et Iudas, Apostoli', 'Duo Apostoli memorati propter missionem et doctrinam.', 'Simon et Iudas, inter Duodecim numerati, commemorantur propter missiones apostolicas et testimonium martyriale in primis expansionis Ecclesiae.', 'saec. I')
+('saint-simon-apostle', 'Sanctus Simon, Apostolus', 'Apostolus Domini, inter Duodecim propter testimonium apostolicum honoratus.', 'Simon colitur ut unus ex Duodecim Apostolis Christi. Etsi notitiae historicae de ministerio posteriori paucae sunt, traditio christiana eum constanter veneratur ut fidelem Resurrectionis testem et participem missionis apostolicae Ecclesiae primae. In memoria liturgica saepe cum Iuda commemoratur, manens tamen persona apostolica distincta.', 'saec. I'),
+('saint-jude-apostle', 'Sanctus Iudas, Apostolus', 'Apostolus Domini, in causis difficilibus tradite invocatus.', 'Iudas, qui in quibusdam traditionibus Thaddaeus appellatur, honoratur ut unus ex Duodecim Apostolis. Memoria ecclesialis eum veneratur ut fidelem Evangelii praeconem et Christi testem in aetate apostolica. Decursu temporis a fidelibus late invocatus est in gravibus necessitatibus, cum in liturgia saepe una cum Simone celebretur.', 'saec. I')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
