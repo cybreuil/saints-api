@@ -4,3 +4,5 @@ Mais la **meilleure pratique** reste de :
 - **Et non dans chaque ligne de `attribute_translations`** (sinon tu dupliques la traduction pour chaque attribut de la même catégorie).
 
 script seed gcatholic / nominis.fr etc wip !
+
+feast date --> to celebration_date; might be cleaner
