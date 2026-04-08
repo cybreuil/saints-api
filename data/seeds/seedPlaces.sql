@@ -113,7 +113,7 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('DAMASCUS', 'SY', 33.5138, 36.2765),
 ('MYRA', 'TR', 36.2167, 29.1167),
 ('SIRACUSA', 'IT', 37.0755, 14.2018),
-('POISSY', 'FR', 48.9333, 2.0333) -- St Louis context (birthplace region alternative not ideal)
+('POISSY', 'FR', 48.9333, 2.0333), -- St Louis context (birthplace region alternative not ideal)
 ('TUNIS', 'TN', 36.8065, 10.1815) -- St Louis context (death place region alternative not ideal)
 ON CONFLICT (code) DO NOTHING;
 
