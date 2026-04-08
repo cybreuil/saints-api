@@ -144,34 +144,36 @@ JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 WHERE f.slug = 'the-baptism-of-the-lord';
 
 -- 6) CELEBRATIONS
-INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
-SELECT f.id, c.id, r.id, lc.id, x.is_optional, x.notes
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('solemnity-of-mary-the-holy-mother-of-god', 'SOLEMNITY', NULL, FALSE, 'Wikipedia'),
-('saints-basil-the-great-and-gregory-nazianzen-bishops-and-doctors-of-the-church', 'MEM_OBL', NULL, FALSE, 'Wikipedia'),
-('the-most-holy-name-of-jesus', 'MEM_OPT', NULL, TRUE, 'Wikipedia'),
-('the-epiphany-of-the-lord', 'SOLEMNITY', NULL, FALSE, 'Wikipedia'),
-('saint-raymond-of-penyafort-priest', 'MEM_OPT', NULL, TRUE, 'Wikipedia'),
-('saint-hilary-bishop-and-doctor-of-the-church', 'MEM_OPT', NULL, TRUE, 'Wikipedia'),
-('saint-anthony-abbot', 'MEM_OBL', NULL, FALSE, 'Wikipedia'),
-('saint-fabian-pope-and-martyr', 'MEM_OPT', 'RED', TRUE, 'Wikipedia'),
-('saint-sebastian-martyr', 'MEM_OPT', 'RED', TRUE, 'Wikipedia'),
-('saint-agnes-virgin-and-martyr', 'MEM_OBL', 'RED', FALSE, 'Wikipedia'),
-('saint-vincent-deacon-and-martyr', 'MEM_OPT', 'RED', TRUE, 'Wikipedia'),
-('saint-francis-de-sales-bishop-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE, 'Wikipedia'),
-('the-conversion-of-saint-paul-the-apostle', 'FEAST', NULL, FALSE, 'Wikipedia'),
-('saints-timothy-and-titus-bishops', 'MEM_OBL', NULL, FALSE, 'Wikipedia'),
-('saint-angela-merici-virgin', 'MEM_OPT', NULL, TRUE, 'Wikipedia'),
-('saint-thomas-aquinas-priest-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE, 'Wikipedia'),
-('saint-john-bosco-priest', 'MEM_OBL', NULL, FALSE, 'Wikipedia'),
-('the-baptism-of-the-lord', 'FEAST', NULL, FALSE, 'Wikipedia movable')
-) AS x(slug, rank_code, color_code, is_optional, notes)
+-- Christmas octave
+('solemnity-of-mary-the-holy-mother-of-god', 'SOLEMNITY', NULL, 'octave', FALSE, 'Wikipedia'),
+('saints-basil-the-great-and-gregory-nazianzen-bishops-and-doctors-of-the-church', 'MEM_OBL', NULL, 'normal', FALSE, 'Wikipedia'),
+('the-most-holy-name-of-jesus', 'MEM_OPT', NULL, 'normal', TRUE, 'Wikipedia'),
+('the-epiphany-of-the-lord', 'SOLEMNITY', NULL, 'normal', FALSE, 'Wikipedia'),
+('saint-raymond-of-penyafort-priest', 'MEM_OPT', NULL, 'normal', TRUE, 'Wikipedia'),
+('saint-hilary-bishop-and-doctor-of-the-church', 'MEM_OPT', NULL, 'normal', TRUE, 'Wikipedia'),
+('saint-anthony-abbot', 'MEM_OBL', NULL, 'normal', FALSE, 'Wikipedia'),
+('saint-fabian-pope-and-martyr', 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
+('saint-sebastian-martyr', 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
+('saint-agnes-virgin-and-martyr', 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
+('saint-vincent-deacon-and-martyr', 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
+('saint-francis-de-sales-bishop-and-doctor-of-the-church', 'MEM_OBL', NULL, 'normal', FALSE, 'Wikipedia'),
+('the-conversion-of-saint-paul-the-apostle', 'FEAST', NULL, 'normal', FALSE, 'Wikipedia'),
+('saints-timothy-and-titus-bishops', 'MEM_OBL', NULL, 'normal', FALSE, 'Wikipedia'),
+('saint-angela-merici-virgin', 'MEM_OPT', NULL, 'normal', TRUE, 'Wikipedia'),
+('saint-thomas-aquinas-priest-and-doctor-of-the-church', 'MEM_OBL', NULL, 'normal', FALSE, 'Wikipedia'),
+('saint-john-bosco-priest', 'MEM_OBL', NULL, 'normal', FALSE, 'Wikipedia'),
+('the-baptism-of-the-lord', 'FEAST', NULL, 'normal', FALSE, 'Wikipedia movable')
+) AS x(slug, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
 LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
 
 -- =========================================================
 -- Roman General Calendar - February (append mode, EN/FR/LA)
@@ -626,9 +628,6 @@ INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ('saint-augustine-of-canterbury-bishop', 'Saint Augustine of Canterbury, Bishop', 'saint'),
 ('saint-paul-vi-pope', 'Saint Paul VI, Pope', 'saint'),
 ('the-visitation-of-the-blessed-virgin-mary', 'The Visitation of the Blessed Virgin Mary', 'marian'),
-('blessed-virgin-mary-mother-of-the-church', 'Blessed Virgin Mary, Mother of the Church', 'marian'),
-('the-most-holy-trinity', 'The Most Holy Trinity', 'christological'),
-('the-most-holy-body-and-blood-of-christ', 'The Most Holy Body and Blood of Christ', 'christological')
 ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
@@ -655,9 +654,6 @@ JOIN (VALUES
 ('saint-augustine-of-canterbury-bishop', 'Saint Augustine of Canterbury, Bishop'),
 ('saint-paul-vi-pope', 'Saint Paul VI, Pope'),
 ('the-visitation-of-the-blessed-virgin-mary', 'The Visitation of the Blessed Virgin Mary'),
-('blessed-virgin-mary-mother-of-the-church', 'Blessed Virgin Mary, Mother of the Church'),
-('the-most-holy-trinity', 'The Most Holy Trinity'),
-('the-most-holy-body-and-blood-of-christ', 'The Most Holy Body and Blood of Christ')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -686,9 +682,6 @@ JOIN (VALUES
 ('saint-augustine-of-canterbury-bishop', 'Saint Augustin de Cantorbéry, évêque'),
 ('saint-paul-vi-pope', 'Saint Paul VI, pape'),
 ('the-visitation-of-the-blessed-virgin-mary', 'Visitation de la Bienheureuse Vierge Marie'),
-('blessed-virgin-mary-mother-of-the-church', 'Bienheureuse Vierge Marie, Mère de l’Église'),
-('the-most-holy-trinity', 'La Très Sainte Trinité'),
-('the-most-holy-body-and-blood-of-christ', 'Le Très Saint Corps et Sang du Christ')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -717,9 +710,6 @@ JOIN (VALUES
 ('saint-augustine-of-canterbury-bishop', 'Sanctus Augustinus Cantuariensis, episcopus'),
 ('saint-paul-vi-pope', 'Sanctus Paulus VI, papa'),
 ('the-visitation-of-the-blessed-virgin-mary', 'Visitatio Beatae Mariae Virginis'),
-('blessed-virgin-mary-mother-of-the-church', 'Beata Maria Virgo, Mater Ecclesiae'),
-('the-most-holy-trinity', 'Sanctissima Trinitas'),
-('the-most-holy-body-and-blood-of-christ', 'Sanctissimi Corporis et Sanguinis Christi')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -754,26 +744,6 @@ ON f.slug = x.slug;
 
 -- MOVABLE rules from source list
 
--- Monday after Pentecost: Blessed Virgin Mary, Mother of the Church (memorial)
-INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
-SELECT f.id, c.id, 'movable', 'PENTECOST', 1, 'Wikipedia movable'
-FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-WHERE f.slug = 'blessed-virgin-mary-mother-of-the-church';
-
--- First Sunday after Pentecost: Most Holy Trinity (solemnity)
-INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
-SELECT f.id, c.id, 'movable', 'PENTECOST', 7, 'Wikipedia movable'
-FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-WHERE f.slug = 'the-most-holy-trinity';
-
--- Thursday after Holy Trinity: Corpus Christi (solemnity)
-INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
-SELECT f.id, c.id, 'movable', 'TRINITY_SUNDAY', 4, 'Wikipedia movable (local transfer possible)'
-FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-WHERE f.slug = 'the-most-holy-body-and-blood-of-christ';
 
 -- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
@@ -802,9 +772,6 @@ JOIN (VALUES
 ('saint-augustine-of-canterbury-bishop', 'MEM_OPT', NULL, TRUE),
 ('saint-paul-vi-pope', 'MEM_OPT', NULL, TRUE),
 ('the-visitation-of-the-blessed-virgin-mary', 'FEAST', NULL, FALSE),
-('blessed-virgin-mary-mother-of-the-church', 'MEM_OBL', NULL, FALSE),
-('the-most-holy-trinity', 'SOLEMNITY', NULL, FALSE),
-('the-most-holy-body-and-blood-of-christ', 'SOLEMNITY', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
@@ -836,8 +803,6 @@ INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Saint Irenaeus, Bishop, Martyr and Doctor of the Church', 'saint'),
 ('saints-peter-and-paul-apostles', 'Saints Peter and Paul, Apostles', 'saint'),
 ('the-first-martyrs-of-holy-roman-church', 'The First Martyrs of Holy Roman Church', 'saint'),
-('the-most-sacred-heart-of-jesus', 'The Most Sacred Heart of Jesus', 'christological'),
-('the-immaculate-heart-of-the-blessed-virgin-mary', 'The Immaculate Heart of the Blessed Virgin Mary', 'marian')
 ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
@@ -862,8 +827,6 @@ JOIN (VALUES
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Saint Irenaeus, Bishop, Martyr and Doctor of the Church'),
 ('saints-peter-and-paul-apostles', 'Saints Peter and Paul, Apostles'),
 ('the-first-martyrs-of-holy-roman-church', 'The First Martyrs of Holy Roman Church'),
-('the-most-sacred-heart-of-jesus', 'The Most Sacred Heart of Jesus'),
-('the-immaculate-heart-of-the-blessed-virgin-mary', 'The Immaculate Heart of the Blessed Virgin Mary')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -890,8 +853,6 @@ JOIN (VALUES
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Saint Irénée, évêque, martyr et docteur de l’Église'),
 ('saints-peter-and-paul-apostles', 'Saints Pierre et Paul, apôtres'),
 ('the-first-martyrs-of-holy-roman-church', 'Les premiers martyrs de la sainte Église de Rome'),
-('the-most-sacred-heart-of-jesus', 'Le Sacré-Cœur de Jésus'),
-('the-immaculate-heart-of-the-blessed-virgin-mary', 'Le Cœur Immaculé de la Bienheureuse Vierge Marie')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -918,8 +879,6 @@ JOIN (VALUES
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Sanctus Irenaeus, episcopus, martyr et Ecclesiae doctor'),
 ('saints-peter-and-paul-apostles', 'Sancti Petrus et Paulus, Apostoli'),
 ('the-first-martyrs-of-holy-roman-church', 'Sancti Primi Martyres Sanctae Romanae Ecclesiae'),
-('the-most-sacred-heart-of-jesus', 'Sacratissimum Cor Iesu'),
-('the-immaculate-heart-of-the-blessed-virgin-mary', 'Cor Immaculatum Beatae Mariae Virginis')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -950,20 +909,6 @@ JOIN (VALUES
 ) AS x(slug, month, day)
 ON f.slug = x.slug;
 
--- MOVABLE rules (from source list)
--- Friday after the Second Sunday after Pentecost: Sacred Heart
-INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
-SELECT f.id, c.id, 'movable', 'SECOND_SUNDAY_AFTER_PENTECOST', 5, 'Wikipedia movable'
-FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-WHERE f.slug = 'the-most-sacred-heart-of-jesus';
-
--- Saturday after the Second Sunday after Pentecost: Immaculate Heart
-INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
-SELECT f.id, c.id, 'movable', 'SECOND_SUNDAY_AFTER_PENTECOST', 6, 'Wikipedia movable'
-FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-WHERE f.slug = 'the-immaculate-heart-of-the-blessed-virgin-mary';
 
 -- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
@@ -990,8 +935,6 @@ JOIN (VALUES
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'MEM_OBL', 'RED', FALSE),
 ('saints-peter-and-paul-apostles', 'SOLEMNITY', NULL, FALSE),
 ('the-first-martyrs-of-holy-roman-church', 'MEM_OPT', 'RED', TRUE),
-('the-most-sacred-heart-of-jesus', 'SOLEMNITY', NULL, FALSE),
-('the-immaculate-heart-of-the-blessed-virgin-mary', 'MEM_OBL', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
@@ -1805,7 +1748,6 @@ INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs', 'saint'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'Saint Catherine of Alexandria, Virgin and Martyr', 'saint'),
 ('saint-andrew-apostle', 'Saint Andrew, Apostle', 'saint'),
-('our-lord-jesus-christ-king-of-the-universe', 'Our Lord Jesus Christ, King of the Universe', 'christological')
 ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
@@ -1833,7 +1775,6 @@ JOIN (VALUES
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'Saint Catherine of Alexandria, Virgin and Martyr'),
 ('saint-andrew-apostle', 'Saint Andrew, Apostle'),
-('our-lord-jesus-christ-king-of-the-universe', 'Our Lord Jesus Christ, King of the Universe')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -1863,7 +1804,6 @@ JOIN (VALUES
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints André Dung-Lac, prêtre, et ses compagnons, martyrs'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'Sainte Catherine d’Alexandrie, vierge et martyre'),
 ('saint-andrew-apostle', 'Saint André, apôtre'),
-('our-lord-jesus-christ-king-of-the-universe', 'Notre Seigneur Jésus Christ, Roi de l’Univers')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -1893,7 +1833,6 @@ JOIN (VALUES
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Sancti Andreas Dung-Lac et Socii, martyres'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'Sancta Catharina Alexandrina, virgo et martyr'),
 ('saint-andrew-apostle', 'Sanctus Andreas, Apostolus'),
-('our-lord-jesus-christ-king-of-the-universe', 'Dominus Noster Iesus Christus, Universorum Rex')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -1927,13 +1866,6 @@ JOIN (VALUES
 ) AS x(slug, month, day)
 ON f.slug = x.slug;
 
--- MOVABLE rule:
--- Last Sunday in Ordinary Time: Christ the King
-INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
-SELECT f.id, c.id, 'movable', 'LAST_SUNDAY_IN_ORDINARY_TIME', 0, 'Wikipedia movable'
-FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-WHERE f.slug = 'our-lord-jesus-christ-king-of-the-universe';
 
 -- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
@@ -1963,7 +1895,6 @@ JOIN (VALUES
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'MEM_OBL', 'RED', FALSE),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'MEM_OPT', 'RED', TRUE),
 ('saint-andrew-apostle', 'FEAST', NULL, FALSE),
-('our-lord-jesus-christ-king-of-the-universe', 'SOLEMNITY', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
@@ -2124,36 +2055,122 @@ JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 WHERE f.slug = 'the-holy-family-of-jesus-mary-and-joseph';
 
 -- Celebrations (RED only explicit martyrs)
-INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
-SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, x.observance_type, x.is_optional, 'Wikipedia'
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('saint-francis-xavier-priest', 'MEM_OBL', NULL, 'normal', FALSE),
+('saint-john-damascene-priest-and-doctor-of-the-church', 'MEM_OPT', NULL, 'normal', TRUE),
+('saint-nicholas-bishop', 'MEM_OPT', NULL, 'normal', TRUE),
+('saint-ambrose-bishop-and-doctor-of-the-church', 'MEM_OBL', NULL, 'normal', FALSE),
+('the-immaculate-conception-of-the-blessed-virgin-mary', 'SOLEMNITY', NULL, 'normal', FALSE),
+('saint-juan-diego-cuauhtlatoatzin', 'MEM_OPT', NULL, 'normal', TRUE),
+('our-lady-of-loreto', 'MEM_OPT', NULL, 'normal', TRUE),
+('saint-damasus-i-pope', 'MEM_OPT', NULL, 'normal', TRUE),
+('our-lady-of-guadalupe', 'MEM_OPT', NULL, 'normal', TRUE),
+('saint-lucy-virgin-and-martyr', 'MEM_OBL', 'RED', 'normal', FALSE),
+('saint-john-of-the-cross-priest-and-doctor-of-the-church', 'MEM_OBL', NULL, 'normal', FALSE),
+('saint-peter-canisius-priest-and-doctor-of-the-church', 'MEM_OPT', NULL, 'normal', TRUE),
+('saint-john-of-kanty-priest', 'MEM_OPT', NULL, 'normal', TRUE),
+
+('nativity-of-the-lord', 'SOLEMNITY', NULL, 'octave', FALSE),
+('saint-stephen-the-first-martyr', 'FEAST', 'RED', 'octave', FALSE),
+('saint-john-apostle-and-evangelist', 'FEAST', NULL, 'octave', FALSE),
+('the-holy-innocents-martyrs', 'FEAST', 'RED', 'octave', FALSE),
+('saint-thomas-becket-bishop-and-martyr', 'MEM_OPT', 'RED', 'octave', TRUE),
+('saint-sylvester-i-pope', 'MEM_OPT', NULL, 'octave', TRUE),
+
+('the-holy-family-of-jesus-mary-and-joseph', 'FEAST', NULL, 'normal', FALSE)
+) AS x(slug, rank_code, color_code, observance_type, is_optional)
+ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
 LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
-JOIN (VALUES
-('saint-francis-xavier-priest', 'MEM_OBL', NULL, FALSE),
-('saint-john-damascene-priest-and-doctor-of-the-church', 'MEM_OPT', NULL, TRUE),
-('saint-nicholas-bishop', 'MEM_OPT', NULL, TRUE),
-('saint-ambrose-bishop-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE),
-('the-immaculate-conception-of-the-blessed-virgin-mary', 'SOLEMNITY', NULL, FALSE),
-('saint-juan-diego-cuauhtlatoatzin', 'MEM_OPT', NULL, TRUE),
-('our-lady-of-loreto', 'MEM_OPT', NULL, TRUE),
-('saint-damasus-i-pope', 'MEM_OPT', NULL, TRUE),
-('our-lady-of-guadalupe', 'MEM_OPT', NULL, TRUE),
-('saint-lucy-virgin-and-martyr', 'MEM_OBL', 'RED', FALSE),
-('saint-john-of-the-cross-priest-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE),
-('saint-peter-canisius-priest-and-doctor-of-the-church', 'MEM_OPT', NULL, TRUE),
-('saint-john-of-kanty-priest', 'MEM_OPT', NULL, TRUE),
-('nativity-of-the-lord', 'SOLEMNITY', NULL, FALSE),
-('saint-stephen-the-first-martyr', 'FEAST', 'RED', FALSE),
-('saint-john-apostle-and-evangelist', 'FEAST', NULL, FALSE),
-('the-holy-innocents-martyrs', 'FEAST', 'RED', FALSE),
-('saint-thomas-becket-bishop-and-martyr', 'MEM_OPT', 'RED', TRUE),
-('saint-sylvester-i-pope', 'MEM_OPT', NULL, TRUE),
-('the-holy-family-of-jesus-mary-and-joseph', 'FEAST', NULL, FALSE)
-) AS x(slug, rank_code, color_code, is_optional)
-ON f.slug = x.slug
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- =========================================================
+-- Christmas Vigil (Dec 24)
+-- =========================================================
+
+-- FEAST
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('christmas-vigil', 'Christmas Vigil', 'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+-- TRANSLATIONS
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', 'Christmas Vigil', NULL
+FROM feasts f
+WHERE f.slug = 'christmas-vigil'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', 'Vigile de Noël', NULL
+FROM feasts f
+WHERE f.slug = 'christmas-vigil'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', 'Vigilia Nativitatis Domini', NULL
+FROM feasts f
+WHERE f.slug = 'christmas-vigil'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- DATE RULE (fixed Dec 24)
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, month, day, notes)
+SELECT f.id, c.id, 'fixed', 12, 24, 'Roman General Calendar'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+WHERE f.slug = 'christmas-vigil';
+
+-- CELEBRATION
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'vigil', FALSE, 'Roman General Calendar'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SOLEMNITY'
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
+WHERE f.slug = 'christmas-vigil'
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- Octave marker for Dec 30
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('sixth-day-in-the-octave-of-christmas', 'Sixth Day in the Octave of Christmas', 'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', 'Sixth Day in the Octave of Christmas', NULL
+FROM feasts f
+WHERE f.slug = 'sixth-day-in-the-octave-of-christmas'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', 'Sixième jour dans l’Octave de Noël', NULL
+FROM feasts f
+WHERE f.slug = 'sixth-day-in-the-octave-of-christmas'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', 'Dies Sextus infra Octavam Nativitatis Domini', NULL
+FROM feasts f
+WHERE f.slug = 'sixth-day-in-the-octave-of-christmas'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, month, day, notes)
+SELECT f.id, c.id, 'fixed', 12, 30, 'Octave marker'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+WHERE f.slug = 'sixth-day-in-the-octave-of-christmas';
+
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'octave', FALSE, 'Parallel octave marker'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FERIA'
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
+WHERE f.slug = 'sixth-day-in-the-octave-of-christmas'
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
 
 -- =========================================================
 -- Easter Octave (Sunday INCLUDED as observance_type='octave')
@@ -2301,6 +2318,411 @@ JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SOLEMNITY'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'easter-vigil-in-the-holy-night'
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- =========================================================
+-- Holy Week (Roman General Calendar)
+-- =========================================================
+
+-- FEASTS
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('palm-sunday-of-the-passion-of-the-lord', 'Palm Sunday of the Passion of the Lord', 'christological'),
+('monday-of-holy-week', 'Monday of Holy Week', 'christological'),
+('tuesday-of-holy-week', 'Tuesday of Holy Week', 'christological'),
+('wednesday-of-holy-week', 'Wednesday of Holy Week', 'christological'),
+('holy-thursday-evening-mass-of-the-lords-supper', 'Holy Thursday: Evening Mass of the Lord''s Supper', 'christological'),
+('friday-of-the-passion-of-the-lord', 'Friday of the Passion of the Lord', 'christological'),
+('holy-saturday', 'Holy Saturday', 'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+-- TRANSLATIONS EN
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('palm-sunday-of-the-passion-of-the-lord', 'Palm Sunday of the Passion of the Lord'),
+('monday-of-holy-week', 'Monday of Holy Week'),
+('tuesday-of-holy-week', 'Tuesday of Holy Week'),
+('wednesday-of-holy-week', 'Wednesday of Holy Week'),
+('holy-thursday-evening-mass-of-the-lords-supper', 'Holy Thursday: Evening Mass of the Lord''s Supper'),
+('friday-of-the-passion-of-the-lord', 'Friday of the Passion of the Lord'),
+('holy-saturday', 'Holy Saturday')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- TRANSLATIONS FR
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('palm-sunday-of-the-passion-of-the-lord', 'Dimanche des Rameaux et de la Passion du Seigneur'),
+('monday-of-holy-week', 'Lundi de la Semaine sainte'),
+('tuesday-of-holy-week', 'Mardi de la Semaine sainte'),
+('wednesday-of-holy-week', 'Mercredi de la Semaine sainte'),
+('holy-thursday-evening-mass-of-the-lords-supper', 'Jeudi saint : Messe du soir de la Cène du Seigneur'),
+('friday-of-the-passion-of-the-lord', 'Vendredi de la Passion du Seigneur'),
+('holy-saturday', 'Samedi saint')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- TRANSLATIONS LA
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('palm-sunday-of-the-passion-of-the-lord', 'Dominica in Palmis de Passione Domini'),
+('monday-of-holy-week', 'Feria II Hebdomadae Sanctae'),
+('tuesday-of-holy-week', 'Feria III Hebdomadae Sanctae'),
+('wednesday-of-holy-week', 'Feria IV Hebdomadae Sanctae'),
+('holy-thursday-evening-mass-of-the-lords-supper', 'Feria V in Cena Domini'),
+('friday-of-the-passion-of-the-lord', 'Feria VI in Passione Domini'),
+('holy-saturday', 'Sabbatum Sanctum')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- DATE RULES (relative to Easter Sunday)
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
+SELECT f.id, c.id, 'movable', 'EASTER_SUNDAY', x.offset_days, 'Computed by API (Holy Week)'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('palm-sunday-of-the-passion-of-the-lord', -7),
+('monday-of-holy-week', -6),
+('tuesday-of-holy-week', -5),
+('wednesday-of-holy-week', -4),
+('holy-thursday-evening-mass-of-the-lords-supper', -3),
+('friday-of-the-passion-of-the-lord', -2),
+('holy-saturday', -1)
+) AS x(slug, offset_days)
+ON f.slug = x.slug;
+
+-- CELEBRATIONS (compatible with rank codes: SOLEMNITY, FEAST, MEM_OBL, MEM_OPT, FERIA)
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, x.observance_type, FALSE, 'Roman General Calendar (Holy Week)'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('palm-sunday-of-the-passion-of-the-lord', 'SOLEMNITY', 'RED', 'normal'),
+('monday-of-holy-week', 'FERIA', 'PURPLE', 'normal'),
+('tuesday-of-holy-week', 'FERIA', 'PURPLE', 'normal'),
+('wednesday-of-holy-week', 'FERIA', 'PURPLE', 'normal'),
+('holy-thursday-evening-mass-of-the-lords-supper', 'SOLEMNITY', 'WHITE', 'normal'),
+('friday-of-the-passion-of-the-lord', 'SOLEMNITY', 'RED', 'normal'),
+('holy-saturday', 'FERIA', 'PURPLE', 'normal')
+) AS x(slug, rank_code, color_code, observance_type)
+ON f.slug = x.slug
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- =========================================================
+-- Lent core block (Roman General Calendar)
+-- - Ash Wednesday
+-- - 1st to 5th Sundays of Lent
+-- =========================================================
+
+-- FEASTS
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('ash-wednesday', 'Ash Wednesday', 'christological'),
+('first-sunday-of-lent', 'First Sunday of Lent', 'christological'),
+('second-sunday-of-lent', 'Second Sunday of Lent', 'christological'),
+('third-sunday-of-lent', 'Third Sunday of Lent', 'christological'),
+('fourth-sunday-of-lent', 'Fourth Sunday of Lent', 'christological'),
+('fifth-sunday-of-lent', 'Fifth Sunday of Lent', 'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+-- EN translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('ash-wednesday', 'Ash Wednesday'),
+('first-sunday-of-lent', 'First Sunday of Lent'),
+('second-sunday-of-lent', 'Second Sunday of Lent'),
+('third-sunday-of-lent', 'Third Sunday of Lent'),
+('fourth-sunday-of-lent', 'Fourth Sunday of Lent'),
+('fifth-sunday-of-lent', 'Fifth Sunday of Lent')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- FR translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('ash-wednesday', 'Mercredi des Cendres'),
+('first-sunday-of-lent', 'Premier dimanche de Carême'),
+('second-sunday-of-lent', 'Deuxième dimanche de Carême'),
+('third-sunday-of-lent', 'Troisième dimanche de Carême'),
+('fourth-sunday-of-lent', 'Quatrième dimanche de Carême'),
+('fifth-sunday-of-lent', 'Cinquième dimanche de Carême')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- LA translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('ash-wednesday', 'Feria IV Cinerum'),
+('first-sunday-of-lent', 'Dominica I in Quadragesima'),
+('second-sunday-of-lent', 'Dominica II in Quadragesima'),
+('third-sunday-of-lent', 'Dominica III in Quadragesima'),
+('fourth-sunday-of-lent', 'Dominica IV in Quadragesima'),
+('fifth-sunday-of-lent', 'Dominica V in Quadragesima')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- DATE RULES (movable relative to Easter Sunday)
+-- Ash Wednesday = Easter - 46
+-- Lent Sundays = Easter -42, -35, -28, -21, -14
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
+SELECT f.id, c.id, 'movable', 'EASTER_SUNDAY', x.offset_days, x.notes
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('ash-wednesday', -46, 'Computed by API: Easter - 46 days'),
+('first-sunday-of-lent', -42, 'Computed by API: Easter - 42 days'),
+('second-sunday-of-lent', -35, 'Computed by API: Easter - 35 days'),
+('third-sunday-of-lent', -28, 'Computed by API: Easter - 28 days'),
+('fourth-sunday-of-lent', -21, 'Computed by API: Easter - 21 days'),
+('fifth-sunday-of-lent', -14, 'Computed by API: Easter - 14 days')
+) AS x(slug, offset_days, notes)
+ON f.slug = x.slug;
+
+-- CELEBRATIONS
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'normal', FALSE, 'Roman General Calendar (Lent core)'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('ash-wednesday', 'FERIA', 'PURPLE'),
+('first-sunday-of-lent', 'SOLEMNITY', 'PURPLE'),
+('second-sunday-of-lent', 'SOLEMNITY', 'PURPLE'),
+('third-sunday-of-lent', 'SOLEMNITY', 'PURPLE'),
+('fourth-sunday-of-lent', 'SOLEMNITY', 'ROSE'),
+('fifth-sunday-of-lent', 'SOLEMNITY', 'PURPLE')
+) AS x(slug, rank_code, color_code)
+ON f.slug = x.slug
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- =========================================================
+-- Advent core block (Roman General Calendar)
+-- - First to Fourth Sunday of Advent
+-- - Christmas Eve day (optional explicit marker)
+-- =========================================================
+
+-- FEASTS
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('first-sunday-of-advent', 'First Sunday of Advent', 'christological'),
+('second-sunday-of-advent', 'Second Sunday of Advent', 'christological'),
+('third-sunday-of-advent', 'Third Sunday of Advent', 'christological'),
+('fourth-sunday-of-advent', 'Fourth Sunday of Advent', 'christological'),
+('december-24-advent-feria', '24 December (Advent Feria)', 'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+-- EN translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('first-sunday-of-advent', 'First Sunday of Advent'),
+('second-sunday-of-advent', 'Second Sunday of Advent'),
+('third-sunday-of-advent', 'Third Sunday of Advent'),
+('fourth-sunday-of-advent', 'Fourth Sunday of Advent'),
+('december-24-advent-feria', '24 December (Advent Feria)')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- FR translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('first-sunday-of-advent', 'Premier dimanche de l’Avent'),
+('second-sunday-of-advent', 'Deuxième dimanche de l’Avent'),
+('third-sunday-of-advent', 'Troisième dimanche de l’Avent'),
+('fourth-sunday-of-advent', 'Quatrième dimanche de l’Avent'),
+('december-24-advent-feria', '24 décembre (Férie de l’Avent)')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- LA translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('first-sunday-of-advent', 'Dominica I Adventus'),
+('second-sunday-of-advent', 'Dominica II Adventus'),
+('third-sunday-of-advent', 'Dominica III Adventus'),
+('fourth-sunday-of-advent', 'Dominica IV Adventus'),
+('december-24-advent-feria', 'Die 24 Decembris (Feria Adventus)')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- DATE RULES
+-- 1st Sunday of Advent = movable base
+-- then +7, +14, +21
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
+SELECT f.id, c.id, 'movable', 'FIRST_ADVENT_SUNDAY', x.offset_days, x.notes
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('first-sunday-of-advent', 0, 'Computed by API'),
+('second-sunday-of-advent', 7, 'Computed by API'),
+('third-sunday-of-advent', 14, 'Computed by API'),
+('fourth-sunday-of-advent', 21, 'Computed by API')
+) AS x(slug, offset_days, notes)
+ON f.slug = x.slug;
+
+-- Dec 24 as fixed Advent feria marker (daytime)
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, month, day, notes)
+SELECT f.id, c.id, 'fixed', 12, 24, 'Advent feria (daytime before Christmas Vigil)'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+WHERE f.slug = 'december-24-advent-feria';
+
+-- CELEBRATIONS
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, x.observance_type, FALSE, 'Roman General Calendar'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('first-sunday-of-advent', 'SOLEMNITY', 'PURPLE', 'normal'),
+('second-sunday-of-advent', 'SOLEMNITY', 'PURPLE', 'normal'),
+('third-sunday-of-advent', 'SOLEMNITY', 'ROSE', 'normal'),
+('fourth-sunday-of-advent', 'SOLEMNITY', 'PURPLE', 'normal'),
+('december-24-advent-feria', 'FERIA', 'PURPLE', 'normal')
+) AS x(slug, rank_code, color_code, observance_type)
+ON f.slug = x.slug
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+
+-- =========================================================
+-- CENTRAL MOVABLE TEMPORAL BLOCK
+-- (Ascension, Pentecost, Trinity, Corpus Christi,
+--  Sacred Heart, Immaculate Heart, Christ the King)
+-- =========================================================
+
+-- FEASTS
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('the-ascension-of-the-lord', 'The Ascension of the Lord', 'christological'),
+('pentecost-sunday', 'Pentecost Sunday', 'christological'),
+('blessed-virgin-mary-mother-of-the-church', 'Blessed Virgin Mary, Mother of the Church', 'marian'),
+('the-most-holy-trinity', 'The Most Holy Trinity', 'christological'),
+('the-most-holy-body-and-blood-of-christ', 'The Most Holy Body and Blood of Christ', 'christological'),
+('the-most-sacred-heart-of-jesus', 'The Most Sacred Heart of Jesus', 'christological'),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'The Immaculate Heart of the Blessed Virgin Mary', 'marian'),
+('our-lord-jesus-christ-king-of-the-universe', 'Our Lord Jesus Christ, King of the Universe', 'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+-- EN translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('the-ascension-of-the-lord', 'The Ascension of the Lord'),
+('pentecost-sunday', 'Pentecost Sunday'),
+('blessed-virgin-mary-mother-of-the-church', 'Blessed Virgin Mary, Mother of the Church'),
+('the-most-holy-trinity', 'The Most Holy Trinity'),
+('the-most-holy-body-and-blood-of-christ', 'The Most Holy Body and Blood of Christ'),
+('the-most-sacred-heart-of-jesus', 'The Most Sacred Heart of Jesus'),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'The Immaculate Heart of the Blessed Virgin Mary'),
+('our-lord-jesus-christ-king-of-the-universe', 'Our Lord Jesus Christ, King of the Universe')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- FR translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('the-ascension-of-the-lord', 'Ascension du Seigneur'),
+('pentecost-sunday', 'Dimanche de la Pentecôte'),
+('blessed-virgin-mary-mother-of-the-church', 'Bienheureuse Vierge Marie, Mère de l’Église'),
+('the-most-holy-trinity', 'La Très Sainte Trinité'),
+('the-most-holy-body-and-blood-of-christ', 'Le Très Saint Corps et Sang du Christ'),
+('the-most-sacred-heart-of-jesus', 'Le Sacré-Cœur de Jésus'),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'Le Cœur Immaculé de la Bienheureuse Vierge Marie'),
+('our-lord-jesus-christ-king-of-the-universe', 'Notre Seigneur Jésus-Christ, Roi de l’Univers')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- LA translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('the-ascension-of-the-lord', 'Ascensio Domini'),
+('pentecost-sunday', 'Dominica Pentecostes'),
+('blessed-virgin-mary-mother-of-the-church', 'Beata Maria Virgo, Mater Ecclesiae'),
+('the-most-holy-trinity', 'Sanctissima Trinitas'),
+('the-most-holy-body-and-blood-of-christ', 'Sanctissimi Corporis et Sanguinis Christi'),
+('the-most-sacred-heart-of-jesus', 'Sacratissimum Cor Iesu'),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'Cor Immaculatum Beatae Mariae Virginis'),
+('our-lord-jesus-christ-king-of-the-universe', 'Domini Nostri Iesu Christi Universorum Regis')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- DATE RULES (movable)
+-- Ascension: Easter +39
+-- Pentecost: Easter +49
+-- Mother of the Church: Pentecost +1 (Monday)
+-- Trinity: Pentecost +7 (Sunday)
+-- Corpus Christi: Trinity +4 (Thursday)
+-- Sacred Heart: Second Sunday after Pentecost +5 (Friday)
+-- Immaculate Heart: Second Sunday after Pentecost +6 (Saturday)
+-- Christ the King: last Sunday of Ordinary Time = Sunday before 1st Advent Sunday
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
+SELECT f.id, c.id, 'movable', x.movable_base, x.offset_days, x.notes
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('the-ascension-of-the-lord', 'EASTER_SUNDAY', 39, 'Roman General movable'),
+('pentecost-sunday', 'EASTER_SUNDAY', 49, 'Roman General movable'),
+('blessed-virgin-mary-mother-of-the-church', 'PENTECOST', 1, 'Monday after Pentecost'),
+('the-most-holy-trinity', 'PENTECOST', 7, 'Sunday after Pentecost'),
+('the-most-holy-body-and-blood-of-christ', 'TRINITY_SUNDAY', 4, 'Thursday after Trinity (local transfer possible)'),
+('the-most-sacred-heart-of-jesus', 'SECOND_SUNDAY_AFTER_PENTECOST', 5, 'Friday after second Sunday after Pentecost'),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'SECOND_SUNDAY_AFTER_PENTECOST', 6, 'Saturday after second Sunday after Pentecost'),
+('our-lord-jesus-christ-king-of-the-universe', 'FIRST_ADVENT_SUNDAY', -7, 'Last Sunday in Ordinary Time')
+) AS x(slug, movable_base, offset_days, notes)
+ON f.slug = x.slug;
+
+-- CELEBRATIONS
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'normal', x.is_optional, 'Roman General Calendar'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('the-ascension-of-the-lord', 'SOLEMNITY', 'WHITE', FALSE),
+('pentecost-sunday', 'SOLEMNITY', 'RED', FALSE),
+('blessed-virgin-mary-mother-of-the-church', 'MEM_OBL', 'WHITE', FALSE),
+('the-most-holy-trinity', 'SOLEMNITY', 'WHITE', FALSE),
+('the-most-holy-body-and-blood-of-christ', 'SOLEMNITY', 'WHITE', FALSE),
+('the-most-sacred-heart-of-jesus', 'SOLEMNITY', 'WHITE', FALSE),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'MEM_OBL', 'WHITE', FALSE),
+('our-lord-jesus-christ-king-of-the-universe', 'SOLEMNITY', 'WHITE', FALSE)
+) AS x(slug, rank_code, color_code, is_optional)
+ON f.slug = x.slug
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 COMMIT;
