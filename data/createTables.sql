@@ -328,7 +328,7 @@ CREATE TABLE celebrations (
     is_optional BOOLEAN NOT NULL DEFAULT FALSE,
     notes TEXT,
 
-    day_type TEXT NOT NULL CHECK (day_type IN ('normal', 'vigil', 'octave')),	-- normal, vigil (veille), octave (8 jours)
+    observance_type TEXT NOT NULL CHECK (observance_type IN ('normal', 'vigil', 'octave')) DEFAULT 'normal',	-- normal, vigil (veille), octave (8 jours)
 
     -- valid_from DATE,
     -- valid_to DATE,

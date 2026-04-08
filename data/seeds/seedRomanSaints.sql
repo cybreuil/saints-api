@@ -1188,7 +1188,7 @@ DO UPDATE SET
   life_label = EXCLUDED.life_label;
 
 INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
-SELECT s.id, 'la', x.name, x.short_description, x.full_biography
+SELECT s.id, 'la', x.name, x.short_description, x.full_biography, x.life_label
 FROM saints s
 JOIN (VALUES
 -- ('saint-joseph-the-worker', 'Sanctus Iosephus Opifex', 'Patronus operariorum et exemplar humilitatis.', 'Sanctus Iosephus, sponsus Beatae Mariae Virginis, honoratur ob humilem servitium et diligentem curam Sanctae Familiae; eius vita exemplum devotionis et laboris fidelis est et festum eius significat dignitatem operis humanioris.', 'saec. I'),

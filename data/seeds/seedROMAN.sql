@@ -148,8 +148,6 @@ INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional,
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('solemnity-of-mary-the-holy-mother-of-god', 'SOLEMNITY', NULL, FALSE, 'Wikipedia'),
 ('saints-basil-the-great-and-gregory-nazianzen-bishops-and-doctors-of-the-church', 'MEM_OBL', NULL, FALSE, 'Wikipedia'),
@@ -171,6 +169,8 @@ JOIN (VALUES
 ('the-baptism-of-the-lord', 'FEAST', NULL, FALSE, 'Wikipedia movable')
 ) AS x(slug, rank_code, color_code, is_optional, notes)
 ON f.slug = x.slug
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -2153,6 +2153,154 @@ JOIN (VALUES
 ('the-holy-family-of-jesus-mary-and-joseph', 'FEAST', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- =========================================================
+-- Easter Octave (Sunday INCLUDED as observance_type='octave')
+-- =========================================================
+
+-- FEASTS
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('easter-sunday-of-the-resurrection-of-the-lord', 'Easter Sunday of the Resurrection of the Lord', 'christological'),
+('monday-in-the-octave-of-easter', 'Monday in the Octave of Easter', 'christological'),
+('tuesday-in-the-octave-of-easter', 'Tuesday in the Octave of Easter', 'christological'),
+('wednesday-in-the-octave-of-easter', 'Wednesday in the Octave of Easter', 'christological'),
+('thursday-in-the-octave-of-easter', 'Thursday in the Octave of Easter', 'christological'),
+('friday-in-the-octave-of-easter', 'Friday in the Octave of Easter', 'christological'),
+('saturday-in-the-octave-of-easter', 'Saturday in the Octave of Easter', 'christological'),
+('second-sunday-of-easter-divine-mercy-sunday', 'Second Sunday of Easter (Divine Mercy Sunday)', 'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+-- EN translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('easter-sunday-of-the-resurrection-of-the-lord', 'Easter Sunday of the Resurrection of the Lord'),
+('monday-in-the-octave-of-easter', 'Monday in the Octave of Easter'),
+('tuesday-in-the-octave-of-easter', 'Tuesday in the Octave of Easter'),
+('wednesday-in-the-octave-of-easter', 'Wednesday in the Octave of Easter'),
+('thursday-in-the-octave-of-easter', 'Thursday in the Octave of Easter'),
+('friday-in-the-octave-of-easter', 'Friday in the Octave of Easter'),
+('saturday-in-the-octave-of-easter', 'Saturday in the Octave of Easter'),
+('second-sunday-of-easter-divine-mercy-sunday', 'Second Sunday of Easter (Divine Mercy Sunday)')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- FR translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('easter-sunday-of-the-resurrection-of-the-lord', 'Dimanche de Pâques de la Résurrection du Seigneur'),
+('monday-in-the-octave-of-easter', 'Lundi dans l’Octave de Pâques'),
+('tuesday-in-the-octave-of-easter', 'Mardi dans l’Octave de Pâques'),
+('wednesday-in-the-octave-of-easter', 'Mercredi dans l’Octave de Pâques'),
+('thursday-in-the-octave-of-easter', 'Jeudi dans l’Octave de Pâques'),
+('friday-in-the-octave-of-easter', 'Vendredi dans l’Octave de Pâques'),
+('saturday-in-the-octave-of-easter', 'Samedi dans l’Octave de Pâques'),
+('second-sunday-of-easter-divine-mercy-sunday', 'Deuxième dimanche de Pâques (Dimanche de la Divine Miséricorde)')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- LA translations
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+('easter-sunday-of-the-resurrection-of-the-lord', 'Dominica Resurrectionis Domini'),
+('monday-in-the-octave-of-easter', 'Feria II infra Octavam Paschae'),
+('tuesday-in-the-octave-of-easter', 'Feria III infra Octavam Paschae'),
+('wednesday-in-the-octave-of-easter', 'Feria IV infra Octavam Paschae'),
+('thursday-in-the-octave-of-easter', 'Feria V infra Octavam Paschae'),
+('friday-in-the-octave-of-easter', 'Feria VI infra Octavam Paschae'),
+('saturday-in-the-octave-of-easter', 'Sabbato infra Octavam Paschae'),
+('second-sunday-of-easter-divine-mercy-sunday', 'Dominica II Paschae seu de divina Misericordia')
+) AS x(slug, name)
+ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- DATE RULES (relative to Easter Sunday)
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
+SELECT f.id, c.id, 'movable', 'EASTER_SUNDAY', x.offset_days, 'Computed by API (Easter octave)'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('easter-sunday-of-the-resurrection-of-the-lord', 0),
+('monday-in-the-octave-of-easter', 1),
+('tuesday-in-the-octave-of-easter', 2),
+('wednesday-in-the-octave-of-easter', 3),
+('thursday-in-the-octave-of-easter', 4),
+('friday-in-the-octave-of-easter', 5),
+('saturday-in-the-octave-of-easter', 6),
+('second-sunday-of-easter-divine-mercy-sunday', 7)
+) AS x(slug, offset_days)
+ON f.slug = x.slug;
+
+-- CELEBRATIONS (all octave, including Easter Sunday)
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'octave', FALSE, 'Roman General Calendar (Easter Octave)'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SOLEMNITY'
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
+WHERE f.slug IN (
+  'easter-sunday-of-the-resurrection-of-the-lord',
+  'monday-in-the-octave-of-easter',
+  'tuesday-in-the-octave-of-easter',
+  'wednesday-in-the-octave-of-easter',
+  'thursday-in-the-octave-of-easter',
+  'friday-in-the-octave-of-easter',
+  'saturday-in-the-octave-of-easter',
+  'second-sunday-of-easter-divine-mercy-sunday'
+)
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- =========================================================
+-- Easter Vigil (J-1)
+-- =========================================================
+
+-- FEAST
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('easter-vigil-in-the-holy-night', 'Easter Vigil in the Holy Night', 'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+-- TRANSLATIONS
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', 'Easter Vigil in the Holy Night', NULL
+FROM feasts f
+WHERE f.slug = 'easter-vigil-in-the-holy-night'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', 'Vigile pascale dans la Nuit sainte', NULL
+FROM feasts f
+WHERE f.slug = 'easter-vigil-in-the-holy-night'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', 'Vigilia Paschalis in Nocte Sancta', NULL
+FROM feasts f
+WHERE f.slug = 'easter-vigil-in-the-holy-night'
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- DATE RULE (J-1 from Easter Sunday)
+INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
+SELECT f.id, c.id, 'movable', 'EASTER_SUNDAY', -1, 'Computed by API: Easter Sunday - 1 day'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+WHERE f.slug = 'easter-vigil-in-the-holy-night';
+
+-- CELEBRATION
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'vigil', FALSE, 'Roman General Calendar'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SOLEMNITY'
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
+WHERE f.slug = 'easter-vigil-in-the-holy-night'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 COMMIT;
