@@ -162,7 +162,14 @@ CREATE TABLE liturgical_season_rules (
     )
 );
 
-
+-- Couleur par défaut des temps liturgiques (fallback affichage)
+-- Permet: celebration.color_id NULL => prendre la couleur de la saison
+CREATE TABLE liturgical_season_colors (
+    season_code TEXT NOT NULL REFERENCES liturgical_seasons(code) ON DELETE CASCADE,
+    calendar_id INTEGER NOT NULL REFERENCES calendars(id) ON DELETE CASCADE,
+    color_id INTEGER NOT NULL REFERENCES liturgical_colors(id) ON DELETE RESTRICT,
+    PRIMARY KEY (season_code, calendar_id)
+);
 
 
 -- =========================================================

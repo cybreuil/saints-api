@@ -149,8 +149,11 @@ SELECT f.id, c.id, r.id, lc.id, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
+
 -- Christmas octave
 ('solemnity-of-mary-the-holy-mother-of-god', 'SOLEMNITY', NULL, 'octave', FALSE, 'Wikipedia'),
+-- Christmas octave ended
+
 ('saints-basil-the-great-and-gregory-nazianzen-bishops-and-doctors-of-the-church', 'MEM_OBL', NULL, 'normal', FALSE, 'Wikipedia'),
 ('the-most-holy-name-of-jesus', 'MEM_OPT', NULL, 'normal', TRUE, 'Wikipedia'),
 ('the-epiphany-of-the-lord', 'SOLEMNITY', NULL, 'normal', FALSE, 'Wikipedia'),
