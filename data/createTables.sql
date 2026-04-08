@@ -623,34 +623,6 @@ JOIN (VALUES
 ) AS x(code, label)
 ON lc.code = x.code;
 
--- Lieux techniques
-INSERT INTO places (code, country_code, latitude, longitude) VALUES
-('ROME', 'IT', 41.902782, 12.496366),
-('ASSISI', 'IT', 43.070702, 12.619596),
-('CLUNY', 'FR', 46.433300, 4.658100);
-
--- Traductions FR
-INSERT INTO place_translations (place_id, locale_code, name, description)
-SELECT p.id, 'fr', x.name, x.description
-FROM places p
-JOIN (VALUES
-    ('ROME', 'Rome', NULL),
-    ('ASSISI', 'Assise', NULL),
-    ('CLUNY', 'Cluny', 'Abbaye de Cluny')
-) AS x(code, name, description)
-ON p.code = x.code;
-
--- Traductions EN
-INSERT INTO place_translations (place_id, locale_code, name, description)
-SELECT p.id, 'en', x.name, x.description
-FROM places p
-JOIN (VALUES
-    ('ROME', 'Rome', NULL),
-    ('ASSISI', 'Assisi', NULL),
-    ('CLUNY', 'Cluny', 'Abbey of Cluny')
-) AS x(code, name, description)
-ON p.code = x.code;
-
 -- Temps liturgiques
 INSERT INTO liturgical_seasons (code, default_name) VALUES
 ('ADVENT', 'Advent'),
