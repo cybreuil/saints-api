@@ -16,4 +16,8 @@ fix sql
 +++ ALL LIST OF MODERN REGIONAL CALENDAR ON WIKIPEDIA
 https://en.wikipedia.org/wiki/National_calendars_of_the_Roman_Rite
 
-+ ajouter accompagnements / liens avec probleme de tous les jours: saint des troubles du sommeil, saint des voyageurs, etc sans forcement passer par le patronage officiel, mais en se basant sur les traditions populaires et les croyances associées à certains saints.
+full list of saints
+https://en.wikipedia.org/wiki/List_of_Catholic_saints
+
++ ajouter accompagnements / liens avec probleme de tous les jours: saint des troubles du sommeil, saint des voyageurs, etc sans forcement passer par le patronage officiel, mais en se basant sur les traditions populaires et les croyances associées à certains saints. (terme intercession me parait plus approprié que patronage dans ce cas)
+

@@ -11,3 +11,13 @@ Les autres Saints qui suivent dans la liste quotidienne sont fêtés dans diffé
 Outre le Martyrologe Romain, il y a les Martyrologes locaux : pour les pays (« Propre de France » par exemple), pour les diocèses (« Propre du diocèse de Nice »), pour les ordres religieux (« Propre de l’Ordre des Prêcheurs » ou Dominicains). Il peut y avoir concurrence entre ces calendriers, et des règles précisent quel Saint l’emporte en fonction de la « classe » du Saint local.
 
 source: cassicia.com
+
+
+---
+Pour les photos: 
+- caravage
+- georges de la tour
+- zurbaran
+- guido reni
+- jusepe de ribera
+- giambattista tiepolo
