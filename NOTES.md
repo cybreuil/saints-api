@@ -21,3 +21,6 @@ Pour les photos:
 - guido reni
 - jusepe de ribera
 - giambattista tiepolo
+- diego velasquez
+- bartolome esteban murillo
+-
