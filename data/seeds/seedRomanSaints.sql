@@ -20,8 +20,8 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='NAZARETH'),
   NULL,
   (SELECT id FROM places WHERE code='NAZARETH'),
-  'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Mary_Mother_of_Jesus_Christ.jpg/800px-Mary_Mother_of_Jesus_Christ.jpg'
-),
+  '/saints/saint-mary_tiepolo.jpg'
+  ),
 (
   'saint-joseph', 'Saint Joseph',
   NULL, NULL, NULL, TRUE,
