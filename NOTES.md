@@ -14,6 +14,8 @@ source: cassicia.com
 
 
 ---
+V1 images infos english - 
+V2 i18n table traduction image
 Pour les photos: 
 - caravage
 - georges de la tour
@@ -23,4 +25,4 @@ Pour les photos:
 - giambattista tiepolo
 - diego velasquez
 - bartolome esteban murillo
--
+- del piombo

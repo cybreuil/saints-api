@@ -226,6 +226,8 @@ CREATE TABLE saint_images (
     credit TEXT,
     license TEXT,
     source_url TEXT,
+    author TEXT,
+    date TEXT,	-- ex: "XVIIe siècle", "vers 1500", etc
     sort_order SMALLINT NOT NULL DEFAULT 1,
     is_primary BOOLEAN NOT NULL DEFAULT FALSE,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now()

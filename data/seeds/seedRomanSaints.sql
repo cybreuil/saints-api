@@ -9,8 +9,7 @@ INSERT INTO saints (
   birth_year, birth_month, birth_day, birth_is_approximate,
   death_year, death_month, death_day, death_is_approximate,
   century,
-  place_of_birth_id, place_of_death_id, place_of_activity_id,
-  image_url
+  place_of_birth_id, place_of_death_id, place_of_activity_id
 ) VALUES
 (
   'saint-mary', 'Saint Mary (Blessed Virgin Mary)',
@@ -19,8 +18,7 @@ INSERT INTO saints (
   1,
   (SELECT id FROM places WHERE code='NAZARETH'),
   NULL,
-  (SELECT id FROM places WHERE code='NAZARETH'),
-  '/saints/saint-mary_tiepolo.jpg'
+  (SELECT id FROM places WHERE code='NAZARETH')
   ),
 (
   'saint-joseph', 'Saint Joseph',
