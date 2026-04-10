@@ -46,9 +46,36 @@ JOIN (VALUES
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_caravaggio.jpg', 'Saint John the Baptist in the Wilderness Painting', 'Saint John the Baptist in the Wilderness, by Caravaggio, from the Nelson-Atkins Museum of Art', 'Caravaggio', '1604-1605', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_leonardo-da-vinci.jpg', 'Saint John the Baptist Painting', 'Saint John the Baptist, by Leonardo da Vinci, from Musée du Louvre', 'Leonardo da Vinci', '1513-1516', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_lemoine.jpg', 'Saint John the Baptist Painting', 'Saint John the Baptist, by François Lemoine, from Saint-Eustache (Paris)', 'François Lemoine', '1726', NULL, 'Public Domain', NULL, 3, FALSE),
----
-)
 
+
+-- =========================
+-- January saints
+-- =========================
+
+-- Saint Basil the Great
+('saint-basil-the-great', '/saints/saint-basil-the-great_grottaferrata.jpg', 'Saint Basil the Great Fresco', 'Saint Basil the Great, by an unknown artist, from Grottaferrata Abbey', NULL, '1609-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-basil-the-great', '/saints/saint-basil-the-great.webp', 'Saint Basil the Great Painting', 'Saint Basil the Great, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-basil-the-great', '/saints/saint-basil-the-great_mosaic.jpg', 'Saint Basil the Great Mosaic', 'Saint Basil the Great, by an unknown artist', NULL, '11th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Gregory Nazianzen
+('saint-gregory-nazianzen', '/saints/saint-gregory-nazianzen_grottaferrata.jpg', 'Saint Gregory Nazianzen Fresco', 'Saint Gregory Nazianzen, by an unknown artist, from Grottaferrata Abbey', NULL, '1609-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-gregory-nazianzen', '/saints/saint-gregory-nazianzen.jpg', 'Saint Gregory Nazianzen Fresco', 'Saint Gregory Nazianzen, by an unknown artist, from Kariye Camii (Istanbul)', NULL, '14th century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Raymond of Penyafort
+('saint-raymond-of-penyafort', '/saints/saint-raymond-of-penyafort_francisco-de-reyna.jpg', 'Saint Raymond of Penyafort Painting', 'Saint Raymond of Penyafort, by Francisco de Reyna', 'Francisco de Reyna', '17th century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-raymond-of-penyafort', '/saints/saint-raymond-of-penyafort_tommaso-dolabella.jpg', 'Saint Raymond of Penyafort Painting', 'Saint Raymond of Penyafort, by Tommaso Dolabella, from the Church of the Holy Trinity (Kraków)', 'Tommaso Dolabella', '1627', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Hilary of Poitiers
+--
+
+
+
+
+
+
+
+
+)
 AS x (slug, image_url, alt_text, caption, credit, license, author, date, source_url, sort_order, is_primary)
 
 ON s.slug = x.slug
