@@ -66,15 +66,36 @@ JOIN (VALUES
 ('saint-raymond-of-penyafort', '/saints/saint-raymond-of-penyafort_tommaso-dolabella.jpg', 'Saint Raymond of Penyafort Painting', 'Saint Raymond of Penyafort, by Tommaso Dolabella, from the Church of the Holy Trinity (Kraków)', 'Tommaso Dolabella', '1627', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Hilary of Poitiers
---
+('saint-hilary-of-poitiers', '/saints/saint-hilary-of-poitiers_cremiere.jpg', 'Saint Hilary of Poitiers Painting', 'Saint Hilary of Poitiers, by Pierre-Floréal Crémière, from Saint-Hilaire du Martray (Loudun)', 'Pierre-Floréal Crémière', '1846', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-hilary-of-poitiers', '/saints/saint-hilary-of-poitiers.png', 'Saint Hilary of Poitiers Icon', 'Saint Hilary of Poitiers, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Anthony, Abbot
+('saint-anthony-abbot', '/saints/saint-anthony-abbot_zurbaran.jpg', 'Saint Anthony the Great Painting', 'Saint Anthony, Abbot, by Francisco de Zurbarán, from Uffizi Gallery', 'Francisco de Zurbarán', '1640', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-anthony-abbot', '/saints/saint-anthony-abbot_icon.jpg', 'Saint Anthony the Great Icon', 'Saint Anthony, Abbot, by Michael Damaskinos, from Byzantine and Christian Museum (Athens)', 'Michael Damaskinos', '16th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-anthony-abbot', '/saints/saint-anthony-abbot_osservanza-master_gold-temptation.jpg', 'The Temptation of Saint Anthony Painting', 'The Gold Temptation of Saint Anthony, by the Osservanza Master, from Metropolitan Museum of Art', 'Osservanza Master', '1435-1440', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-anthony-abbot', '/saints/saint-anthony-abbot_osservanza-master_woman-temptation.jpg', 'The Temptation of Saint Anthony Painting', 'The Woman Temptation of Saint Anthony, by the Osservanza Master, from Yale University Art Gallery', 'Osservanza Master', '1435-1440', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-anthony-abbot', '/saints/saint-anthony-abbot_bosch.jpg', 'The Temptation of Saint Anthony Painting', 'The Temptation of Saint Anthony, by Hieronymus Bosch, from Museo del Prado', 'Hieronymus Bosch', '16th Century', NULL, 'Public Domain', NULL, 5, FALSE),
+
+-- Saint Fabian Pope
+('saint-fabian-pope', '/saints/saint-fabian-pope.jpg', 'Saint Fabian Pope Painting', 'Saint Fabian, Pope, by Giovanni di Paolo, from National Gallery (London)', 'Giovanni di Paolo', '15th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-fabian-pope', '/saints/saint-fabian-pope_master-of-messkirch.jpg', 'Saint Fabian Pope Painting', 'Saint Fabian, Pope, by the Master of Messkirch, from Veste Coburg Art Collections', 'Master of Messkirch', '16th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Sebastian
+('saint-sebastian', '/saints/saint-sebastian_sodoma.jpg', 'Saint Sebastian Painting', 'Saint Sebastian, by Il Sodoma, from Uffizi Gallery', 'Il Sodoma', '1525', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-sebastian', '/saints/saint-sebastian_guido-reni.jpg', 'Saint Sebastian Painting', 'Saint Sebastian, by Guido Reni, from Musei di Strada Nuova', 'Guido Reni', '1615', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-sebastian', '/saints/saint-sebastian_ribera.jpg', 'Saint Sebastian Painting', 'Saint Sebastian, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1636', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Agnes of Rome
+('saint-agnes-of-rome', '/saints/saint-agnes-of-rome_domenichino.jpg', 'Saint Agnes of Rome Painting', 'Saint Agnes of Rome, by Domenichino, from the Royal Collection of the British royal family', 'Domenichino', '1620', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-agnes-of-rome', '/saints/saint-agnes-of-rome_massimo-stanzione.jpg', 'Saint Agnes of Rome Painting', 'Saint Agnes of Rome, by Massimo Stanzione, from Museu Nacional d''Art de Catalunya', 'Massimo Stanzione', '1635-1640', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-agnes-of-rome', '/saints/saint-agnes-of-rome_andrea-del-sarto.jpg', 'Saint Agnes of Rome Painting', 'Saint Agnes of Rome, by Andrea del Sarto, from Pisa Cathedral', 'Andrea del Sarto', '16th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Vincent of Saragossa
+('saint-vincent-of-saragossa', '/saints/saint-vincent-of-saragossa_tomas-giner.jpg', 'Saint Vincent of Saragossa Painting', 'Saint Vincent of Saragossa, by Tomás Giner, from Museo del Prado', 'Tomás Giner', '1462-1466', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-vincent-of-saragossa', '/saints/saint-vincent-of-saragossa_school-of-francisco-ribalta.jpg', 'Saint Vincent of Saragossa Painting', 'Saint Vincent of Saragossa, by the School of Francisco Ribalta, from Museo del Prado', 'School of Francisco Ribalta', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
-
-
-
-
-
-
+---
 )
 AS x (slug, image_url, alt_text, caption, credit, license, author, date, source_url, sort_order, is_primary)
 
