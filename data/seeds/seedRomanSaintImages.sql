@@ -126,7 +126,7 @@ JOIN (VALUES
 
 -- Saint John Bosco
 ('saint-john-bosco', '/saints/saint-john-bosco_painting-from-picture.png', 'Saint John Bosco Painting', 'Saint John Bosco, by an unknown artist, from a picture', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-john-bosco', '/saints/saint-john-bosco_picture.jpg', 'Saint John Bosco Picture', 'Saint John Bosco Picture taken by Carlo Felice in 1880', 'Carlo Felice', '1880', NULL, 'Public Domain', NULL, 2, FALSE)
+('saint-john-bosco', '/saints/saint-john-bosco_picture.jpg', 'Saint John Bosco Picture', 'Saint John Bosco, Photographed by Carlo Felice in 1880', 'Carlo Felice', '1880', NULL, 'Public Domain', NULL, 2, FALSE)
 
 -- =========================
 -- February saints
