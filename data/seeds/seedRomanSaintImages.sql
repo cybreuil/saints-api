@@ -47,7 +47,6 @@ JOIN (VALUES
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_leonardo-da-vinci.jpg', 'Saint John the Baptist Painting', 'Saint John the Baptist, by Leonardo da Vinci, from Musée du Louvre', 'Leonardo da Vinci', '1513-1516', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_lemoine.jpg', 'Saint John the Baptist Painting', 'Saint John the Baptist, by François Lemoine, from Saint-Eustache (Paris)', 'François Lemoine', '1726', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
 -- =========================
 -- January saints
 -- =========================
@@ -125,7 +124,15 @@ JOIN (VALUES
 ('saint-thomas-aquinas', '/saints/saint-thomas-aquinas.jpg', 'Saint Thomas Aquinas Painting', 'Saint Thomas Aquinas, by Carlo Crivelli, from National Gallery', 'Carlo Crivelli', '1476', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-thomas-aquinas', '/saints/saint-thomas-aquinas_velasquez_temptation.jpg', 'The Temptation of Saint Thomas Aquinas Painting', 'The temptation of Saint Thomas Aquinas, by Diego Velázquez, from Orihuela Cathedral Museum', 'Diego Velázquez', '1632', NULL, 'Public Domain', NULL, 2, FALSE),
 
+-- Saint John Bosco
+('saint-john-bosco', '/saints/saint-john-bosco_painting-from-picture.png', 'Saint John Bosco Painting', 'Saint John Bosco, by an unknown artist, from a picture', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-bosco', '/saints/saint-john-bosco_picture.jpg', 'Saint John Bosco Picture', 'Saint John Bosco Picture taken by Carlo Felice in 1880', 'Carlo Felice', '1880', NULL, 'Public Domain', NULL, 2, FALSE)
 
+-- =========================
+-- February saints
+-- =========================
+
+-- Saint Blaise
 
 
 
