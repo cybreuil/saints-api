@@ -94,6 +94,14 @@ JOIN (VALUES
 ('saint-vincent-of-saragossa', '/saints/saint-vincent-of-saragossa_tomas-giner.jpg', 'Saint Vincent of Saragossa Painting', 'Saint Vincent of Saragossa, by Tomás Giner, from Museo del Prado', 'Tomás Giner', '1462-1466', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-vincent-of-saragossa', '/saints/saint-vincent-of-saragossa_school-of-francisco-ribalta.jpg', 'Saint Vincent of Saragossa Painting', 'Saint Vincent of Saragossa, by the School of Francisco Ribalta, from Museo del Prado', 'School of Francisco Ribalta', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
+-- Saint Francis de Sales
+('saint-francis-de-sales', '/saints/saint-francis-de-sales.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by an unknown artist, from the Château de Bussy-Rabutin', NULL, '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales_bayeu.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Francisco Bayeu, from Museo del Prado', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales_brenet.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Nicolas Guy Brenet, from Château de Blois', 'Nicolas Guy Brenet', '18th Century', NULL, 'Public Domain', NULL, 3, FALSE)
+
+
+
+
 
 ---
 )
