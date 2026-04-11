@@ -414,6 +414,10 @@ WHERE is_primary = TRUE;
 -- Ordre d'affichage
 CREATE INDEX saint_images_saint_sort_idx
 ON saint_images (saint_id, sort_order);
+-- un order d'image doit être unique pour un saint donné
+CREATE UNIQUE INDEX saint_images_saint_order_idx
+ON saint_images (saint_id, sort_order)
+WHERE sort_order IS NOT NULL;
 
 -- =========================================================
 -- 9) Seeds minimaux
