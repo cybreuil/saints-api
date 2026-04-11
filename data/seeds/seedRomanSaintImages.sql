@@ -84,6 +84,7 @@ JOIN (VALUES
 ('saint-sebastian', '/saints/saint-sebastian_sodoma.jpg', 'Saint Sebastian Painting', 'Saint Sebastian, by Il Sodoma, from Uffizi Gallery', 'Il Sodoma', '1525', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-sebastian', '/saints/saint-sebastian_guido-reni.jpg', 'Saint Sebastian Painting', 'Saint Sebastian, by Guido Reni, from Musei di Strada Nuova', 'Guido Reni', '1615', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-sebastian', '/saints/saint-sebastian_ribera.jpg', 'Saint Sebastian Painting', 'Saint Sebastian, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1636', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-sebastian', '/saints/saint-sebastian_rubens.jpg', 'Saint Sebastian Painting', 'Saint Sebastian, by Peter Paul Rubens, from Private Collection', 'Peter Paul Rubens', '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Agnes of Rome
 ('saint-agnes-of-rome', '/saints/saint-agnes-of-rome_domenichino.jpg', 'Saint Agnes of Rome Painting', 'Saint Agnes of Rome, by Domenichino, from the Royal Collection of the British royal family', 'Domenichino', '1620', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -97,7 +98,36 @@ JOIN (VALUES
 -- Saint Francis de Sales
 ('saint-francis-de-sales', '/saints/saint-francis-de-sales.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by an unknown artist, from the Château de Bussy-Rabutin', NULL, '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-francis-de-sales', '/saints/saint-francis-de-sales_bayeu.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Francisco Bayeu, from Museo del Prado', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-francis-de-sales', '/saints/saint-francis-de-sales_brenet.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Nicolas Guy Brenet, from Château de Blois', 'Nicolas Guy Brenet', '18th Century', NULL, 'Public Domain', NULL, 3, FALSE)
+('saint-francis-de-sales', '/saints/saint-francis-de-sales_brenet.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Nicolas Guy Brenet, from Château de Blois', 'Nicolas Guy Brenet', '18th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Paul Apostle
+('saint-paul-apostle', '/saints/saint-paul-apostle_rubens.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_ribera.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1615-1616', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_velasquez.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Diego Velázquez, from Museo del Prado', 'Diego Velázquez', '1619-1620', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_caravaggio_conversion.jpg', 'The Conversion of Saint Paul Painting', 'The Conversion of Saint Paul, by Caravaggio, from Odescalchi Balbi Collection', 'Caravaggio', '1601', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt_prison.jpg', 'The Apostle Paul in Prison Painting', 'The Apostle Paul in Prison, by Rembrandt, from Rijksmuseum', 'Rembrandt', '1627', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Rembrandt, from National Gallery of Art', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 6, FALSE),
+
+-- Saint Timothy of Ephesus
+('saint-timothy-of-ephesus', '/saints/saint-timothy-of-ephesus_icon.jpg', 'Saint Timothy of Ephesus Icon', 'Saint Timothy of Ephesus, by an unknown artist, from an orthodox parish (USA)', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 1, TRUE),
+('saint-timothy-of-ephesus', '/saints/saint-timothy-of-ephesus_drost_timothy-with-grandmother-lois.jpg', 'Saint Timothy of Ephesus with his Grandmother Lois Painting', 'Saint Timothy of Ephesus, by Willem Drost, from Hermitage Museum', 'Rembrandt', '1650', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-timothy-of-ephesus', '/saints/saint-timothy-of-ephesus.jpg', 'Saint Timothy of Ephesus Painting', 'Saint Timothy of Ephesus, by Bernardino Nocchi, from Basilica of Santa Pudentiana (Rome)', '1803', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Titus of Crete
+('saint-titus-of-crete', '/saints/saint-titus-of-crete_icon.jpg', 'Saint Titus of Crete Icon', 'Saint Titus of Crete, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-titus-of-crete', '/saints/saint-titus-of-crete.jpg', 'Saint Titus of Crete Painting', 'Saint Titus of Crete', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Angela Merici
+('saint-angela-merici', '/saints/saint-angela-merici.webp', 'Saint Angela Merici Painting', 'Saint Angela Merici, by an unknown artist', NULL, '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-angela-merici', '/saints/saint-angela-merici_crucifix.jpg', 'Saint Angela Merici Painting', 'Saint Angela Merici, by unknown artist', NULL, '17th Century', NULL, 'Creative Commons Attribution', NULL, 2, FALSE),
+
+-- Saint Thomas Aquinas
+('saint-thomas-aquinas', '/saints/saint-thomas-aquinas.jpg', 'Saint Thomas Aquinas Painting', 'Saint Thomas Aquinas, by Carlo Crivelli, from National Gallery', 'Carlo Crivelli', '1476', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-thomas-aquinas', '/saints/saint-thomas-aquinas_velasquez_temptation.jpg', 'The Temptation of Saint Thomas Aquinas Painting', 'The temptation of Saint Thomas Aquinas, by Diego Velázquez, from Orihuela Cathedral Museum', 'Diego Velázquez', '1632', NULL, 'Public Domain', NULL, 2, FALSE),
+
+
+
+
 
 
 
