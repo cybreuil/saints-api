@@ -138,8 +138,12 @@ JOIN (VALUES
 --Saint Ansgar
 ('saint-ansgar', '/saints/saint-ansgar.jpg', 'Saint Ansgar Painting', 'Saint Ansgar, by Hans Bornemann, from Church Trinitatis (Hamburg)', NULL, '1457', NULL, 'Public Domain', NULL, 1, TRUE),
 
+-- Saint Agatha
+('saint-agatha', '/saints/saint-agatha.jpg', 'The Martyrdom of Saint Agatha Painting', 'The Martyrdom of Saint Agatha, by Massimo Stanzione, from Museo nazionale di Capodimonte', NULL, '1619', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-agatha', '/saints/saint-agatha_tiepolo.jpg', 'The Martyrdom of Saint Agatha Painting', 'The Martyrdom of Saint Agatha, by Giambattista Tiepolo, from Gemäldegalerie', 'Giambattista Tiepolo', '1750', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
+-- sAINT ROCH TIEPOLO A NE APS OUBLIER
 
 
 ---
