@@ -148,10 +148,11 @@ JOIN (VALUES
 ('saint-paul-miki', '/saints/saint-paul-miki_tanzio.png', 'The Martyrdom of Saint Paul Miki & Companions Painting', 'The Martyrdom of Saint Paul Miki & Companions, by Tanzio da Varallo, from Pinacoteca di Brera', 'Tanzio da Varallo', '1625-1632', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-paul-miki', '/saints/saint-paul-miki.jpg', 'Saint Paul Miki Painting', 'Saint Paul Miki, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
--- Saint Jerome Emiliani
+-- Saint Jerome Emiliani (need double checking)
 ('saint-jerome-emiliani', '/saints/saint-jerome-emiliani_traverso.jpg', 'Saint Jerome Emiliani presents the orphans to the Virgin Painting', 'Saint Jerome Emiliani, by Mattia Traverso, from Church of Santa Maria del Popolo (Cherasco)', 'Mattia Traverso', '1943', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-jerome-emiliani', '/saints/saint-jerome-emiliani_crespi.jpg', 'Saint Jerome Emiliani Painting', 'Saint Jerome Emiliani, by Daniele Crespi, from Vercurago', 'Daniele Crespi', '1620', NULL, 'Public Domain', NULL, 2, FALSE),
-
+('saint-jerome-emiliani', '/saints/saint-jerome-emiliani.jpg', 'Saint Jerome Emiliani Painting', 'Saint Jerome Emiliani, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-jerome-emiliani', '/saints/saint-jerome-emiliani_2.jpg', 'Saint Jerome Emiliani Painting', 'Saint Jerome Emiliani, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 -- sAINT ROCH TIEPOLO A NE APS OUBLIER
