@@ -154,6 +154,20 @@ JOIN (VALUES
 ('saint-jerome-emiliani', '/saints/saint-jerome-emiliani.jpg', 'Saint Jerome Emiliani Painting', 'Saint Jerome Emiliani, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-jerome-emiliani', '/saints/saint-jerome-emiliani_2.jpg', 'Saint Jerome Emiliani Painting', 'Saint Jerome Emiliani, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Josephine Bakhita (need small watermark correction)
+('saint-josephine-bakhita', '/saints/saint-josephine-bakhita_warford.jpg', 'Saint Josephine Bakhita Painting', 'Saint Josephine Bakhita, by John Alan Warford', NULL, '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-josephine-bakhita', '/saints/saint-josephine-bakhita.jpg', 'Saint Josephine Bakhita Portrait', 'Saint Josephine Bakhita Portrait', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+
+
+-- Saint Scholastica
+('saint-scholastica', '/saints/saint-scholastica.jpg', 'The Death of Saint Scholastica Painting', 'The Death of Saint Scholastica, by Johann Baptist Wenzel Bergl, from Basilica of Kleinmariazell', 'Johann Baptist Wenzel Bergl', '1765', NULL, 'Public Domain', NULL, 1, TRUE),
+
+
+
+
+
+
+
 
 -- sAINT ROCH TIEPOLO A NE APS OUBLIER
 
