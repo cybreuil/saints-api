@@ -46,6 +46,7 @@ JOIN (VALUES
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_caravaggio.jpg', 'Saint John the Baptist in the Wilderness Painting', 'Saint John the Baptist in the Wilderness, by Caravaggio, from the Nelson-Atkins Museum of Art', 'Caravaggio', '1604-1605', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_leonardo-da-vinci.jpg', 'Saint John the Baptist Painting', 'Saint John the Baptist, by Leonardo da Vinci, from Musée du Louvre', 'Leonardo da Vinci', '1513-1516', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_lemoine.jpg', 'Saint John the Baptist Painting', 'Saint John the Baptist, by François Lemoine, from Saint-Eustache (Paris)', 'François Lemoine', '1726', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john-the-baptist', '/saints/saint-john-the-baptist_tanzio.jpg', 'Saint John the Baptist Painting', 'Saint John the Baptist, by Tanzio da Varallo, from Philbrook Museum of Art', 'Tanzio da Varallo', '1627-1629', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- =========================
 -- January saints
@@ -132,15 +133,24 @@ JOIN (VALUES
 -- February saints
 -- =========================
 
--- Saint Blaise (TO DOWNLOAD ON T470S)
-('saint-blaise', '/saints/saint-blaise.jpg', 'Saint Blaise Painting', 'Saint Blaise, by Giovanni Battista Trotti, from Museum of Fine Arts (Budapest)', 'Giovanni Battista Trotti', '1590', NULL, 'Public Domain', NULL, 1, TRUE),
+-- Saint Blaise
+('saint-blaise', '/saints/saint-blaise_trotti.jpg', 'Saint Blaise Painting', 'Saint Blaise, by Giovanni Battista Trotti, from Museum of Fine Arts (Budapest)', 'Giovanni Battista Trotti', '1590', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-blaise', '/saints/saint-blaise_tiepolo.jpg', 'Saint Blaise Painting', 'Saint Blaise, by Giovanni Battista Tiepolo, from Ca'' Rezzonico', 'Giovanni Battista Tiepolo', '1734', NULL, 'Public Domain', NULL, 2, FALSE),
 
 --Saint Ansgar
 ('saint-ansgar', '/saints/saint-ansgar.jpg', 'Saint Ansgar Painting', 'Saint Ansgar, by Hans Bornemann, from Church Trinitatis (Hamburg)', NULL, '1457', NULL, 'Public Domain', NULL, 1, TRUE),
 
 -- Saint Agatha
 ('saint-agatha', '/saints/saint-agatha.jpg', 'The Martyrdom of Saint Agatha Painting', 'The Martyrdom of Saint Agatha, by Massimo Stanzione, from Museo nazionale di Capodimonte', NULL, '1619', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-agatha', '/saints/saint-agatha_tiepolo.jpg', 'The Martyrdom of Saint Agatha Painting', 'The Martyrdom of Saint Agatha, by Giambattista Tiepolo, from Gemäldegalerie', 'Giambattista Tiepolo', '1750', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-agatha', '/saints/saint-agatha_tiepolo.jpg', 'The Martyrdom of Saint Agatha Painting', 'The Martyrdom of Saint Agatha, by Giovanni Battista Tiepolo, from Gemäldegalerie', 'Giovanni Battista Tiepolo', '1756', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Paul Miki
+('saint-paul-miki', '/saints/saint-paul-miki_tanzio.png', 'The Martyrdom of Saint Paul Miki & Companions Painting', 'The Martyrdom of Saint Paul Miki & Companions, by Tanzio da Varallo, from Pinacoteca di Brera', 'Tanzio da Varallo', '1625-1632', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-paul-miki', '/saints/saint-paul-miki.jpg', 'Saint Paul Miki Painting', 'Saint Paul Miki, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+
+
+
+
 
 
 -- sAINT ROCH TIEPOLO A NE APS OUBLIER
