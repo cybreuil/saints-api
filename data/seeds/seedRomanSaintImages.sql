@@ -193,7 +193,34 @@ JOIN (VALUES
 -- March saints
 -- =========================
 
+-- Saint Casimir
+('saint-casimir', '/saints/saint-casimir_masucci.jpg', 'Saint Casimir Painting', 'Saint Casimir, by Agostino Masucci, from the Royal Castle in Warsaw', 'Agostino Masucci', '18th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-casimir', '/saints/saint-casimir_collenius.jpg', 'Saint Casimir Painting', 'Saint Casimir, by Hermannus Collenius', 'Hermannus Collenius', '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-casimir', '/saints/saint-casimir.jpg', 'Saint Casimir Painting', 'Saint Casimir, by an unknown artist, from Vilnius Cathedral', NULL, '1594', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Perpetua
+('saint-perpetua', '/saints/saint-perpetua_ridolfi.jpg', 'Saint Perpetua Painting', 'Saint Perpetua, by Antonio Ridolfi, from Istituto d’Arte de Sienne', 'Antonio Ridolfi', '1857', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-perpetua', '/saint-perpetua_bouguereau.jpg', 'Saint Perpetua Painting', 'Saint Perpetua, by William-Adolphe Bouguereau, from Private Collection', 'William-Adolphe Bouguereau', '1877', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-perpetua', '/saints/saint-perpetua_mosaic.jpg', 'Saint Perpetua Mosaic', 'Saint Perpetua, by an unknown artist, from Euphrasian Basilica (Croatia)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-perpetua', '/saints/saint-perpetua-&-felicity.jpg', 'Saint Perpetua and Saint Felicity Painting', 'Saint Perpetua and Saint Felicity, by an unknown artist, from National Museum in Warsaw', NULL, '1520', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-perpetua', '/saints/saint-perpetua_martyr.webp', 'The Martyrdom of Saint Perpetua Painting', 'The Martyrdom of Saint Perpetua, by an unknown artist', NULL, '21th Century', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-perpetua', '/saints/saint-perpetua-&-felicity_2.jpg', 'Saint Perpetua and Saint Felicity Mosaic', 'Saint Perpetua and Saint Felicity, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-perpetua', '/saints/saint-perpetua-&-felicity_3.jpg', 'Saint Perpetua and Saint Felicity Mosaic', 'Saint Perpetua and Saint Felicity, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 7, FALSE),
+
+-- Saint Felicity (maybe should find solo felicty painting -- CARE felicity of rome)
+('saint-felicity', '/saints/saint-perpetua-&-felicity.jpg', 'Saint Perpetua and Saint Felicity Painting', 'Saint Perpetua and Saint Felicity, by an unknown artist, from National Museum in Warsaw', NULL, '1520', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-felicity', '/saints/saint-perpetua-&-felicity_2.jpg', 'Saint Perpetua and Saint Felicity Mosaic', 'Saint Perpetua and Saint Felicity, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-felicity', '/saints/saint-perpetua-&-felicity_3.jpg', 'Saint Perpetua and Saint Felicity Mosaic', 'Saint Perpetua and Saint Felicity, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint John of God
+('saint-john-of-god', '/saints/saint-john-of-god_murillo.jpg', 'Saint John of God Painting', 'Saint John of God, by Bartolomé Esteban Murillo, from Hospital de la Caridad', 'Bartolomé Esteban Murillo', '1672', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-of-god', '/saints/saint-john-of-god_coello.jpg', 'Saint John of God Painting', 'Saint John of God with an Angel, by Claudio Coello', 'Claudio Coello', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-of-god', '/saints/saint-john-of-god_gonzalez.jpg', 'Saint John of God Painting', 'Saint John of God, by Manuel Gómez-Moreno González, from Museo de Bellas Artes de Granada', 'Manuel Gómez-Moreno González', '1880', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Frances of Rome
+-- Saint Patrick
+-- Saint Cyril of Jerusalem
+-- Saint Turibius of Mogrovejo
 
 
 
