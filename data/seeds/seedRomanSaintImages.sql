@@ -224,8 +224,16 @@ JOIN (VALUES
 ('saint-frances-of-rome', '/saints/saint-frances-of-rome.jpg', 'Saint Frances of Rome Painting', 'Saint Frances of Rome, by an unknown artist', NULL, '1650', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Patrick
+('saint-patrick', '/saints/saint-patrick.jpg', 'Saint Patrick and the Snakes Painting', 'Saint Patrick and the Snakes, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-patrick', '/saints/saint-patrick_tiepolo.jpg', 'Saint Patrick Painting', 'Saint Patrick, by Giovanni Battista Tiepolo, from Musei Civici di Padova', 'Giovanni Battista Tiepolo', '1746', NULL, 'Public Domain', NULL, 2, TRUE),
+('saint-patrick', '/saints/saint-patrick_collaert.jpg', 'Saint Patrick Painting', 'Saint Patrick, by Adriaen Collaert, from National Gallery of Ireland', 'Adriaen Collaert', '1603', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-patrick', '/saints/saint-patrick_stained-glass.jpg', 'Saint Patrick Stained Glass', 'Saint Patrick, by an unknown artist, from Saint Patrick Catholic Church (Ohio)', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Cyril of Jerusalem
+('saint-cyril-of-jerusalem', '/saints/saint-cyril-of-jerusalem_bartolozzi.jpg', 'Saint Cyril of Jerusalem Painting', 'Saint Cyril of Jerusalem, by Francesco Bartolozzi', 'Francesco Bartolozzi', '18th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-cyril-of-jerusalem', '/saints/saint-cyril-of-jerusalem.jpg', 'Saint Cyril of Jerusalem Fresco', 'Saint Cyril of Jerusalem, by an unknown artist, from an Orthodox Church', NULL, '14th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-cyril-of-jerusalem', '/saints/saint-cyril-of-jerusalem_2.png', 'Saint Cyril of Jerusalem Icon', 'Saint Cyril of Jerusalem, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
 -- Saint Turibius of Mogrovejo
 
 
