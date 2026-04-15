@@ -177,6 +177,26 @@ JOIN (VALUES
 ('saint-methodius', '/saints/saint-cyril-&-methodius_3.jpg', 'Saint Cyril and Saint Methodius Icon', 'Saint Cyril and Saint Methodius, by an unknown artist, from the Holy Trinity Monastery (New York)', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Peter Damian
+('saint-peter-damian', '/saints/saint-peter-damian.jpg', 'Saint Peter Damian Painting', 'Saint Peter Damian, by Andrea Barbiani, from Biblioteca Classense', 'Andrea Barbiani', '18th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-peter-damian', '/saints/saint-peter-damian_briggs.jpg', 'Saint Peter Damian Painting', 'Saint Peter Damian, by an Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Polycarp
+('saint-polycarp', '/saints/saint-polycarp.jpg', 'Saint Polycarp Icon', 'Saint Polycarp, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-polycarp', '/saints/saint-polycarp_2.jpg', 'Saint Polycarp Icon', 'Saint Polycarp, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-polycarp', '/saints/saint-polycarp_3.png', 'Saint Polycarp Icon', 'Saint Polycarp, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Gregory of Narek
+('saint-gregory-of-narek', '/saints/saint-gregory-of-narek_minin.jpg', 'Saint Gregory of Narek Painting', 'Saint Gregory of Narek, by Sergei Minin', 'Sergei Minin', '2004', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-gregory-of-narek', '/saints/saint-gregory-of-narek.jpg', 'Saint Gregory of Narek Painting', 'Saint Gregory of Narek, by Arshak Fetvadjian', 'Arshak Fetvadjian', '20th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- =========================
+-- March saints
+-- =========================
+
+
+
+
+
 
 
 
