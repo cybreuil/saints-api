@@ -164,6 +164,20 @@ JOIN (VALUES
 ('saint-scholastica', '/saints/saint-scholastica_sassoferrato.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by Sassoferrato, from Museum of Fine Arts of Lyon', 'Sassoferrato', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-scholastica', '/saints/saint-scholastica_briggs.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Cyril (brother of Saint Methodius)
+('saint-cyril', '/saints/saint-cyril.jpg', 'Saint Cyril Icon', 'Saint Cyril, by an unknown artist, from the Holy Mount of Grabarka (Poland)', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-cyril', '/saints/saint-cyril-&-methodius.jpg', 'Saint Cyril and Saint Methodius Painting', 'Saint Cyril and Saint Methodius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-cyril', '/saints/saint-cyril-&-methodius_2.jpg', 'Saint Cyril and Saint Methodius Icon', 'Saint Cyril and Saint Methodius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-cyril', '/saints/saint-cyril-&-methodius_3.jpg', 'Saint Cyril and Saint Methodius Icon', 'Saint Cyril and Saint Methodius, by an unknown artist, from the Holy Trinity Monastery (New York)', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint Methodius (brother of Saint Cyril)
+('saint-methodius', '/saints/saint-methodius.jpg', 'Saint Methodius Icon', 'Saint Methodius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-methodius', '/saints/saint-cyril-&-methodius.jpg', 'Saint Cyril and Saint Methodius Painting', 'Saint Cyril and Saint Methodius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-methodius', '/saints/saint-cyril-&-methodius_2.jpg', 'Saint Cyril and Saint Methodius Icon', 'Saint Cyril and Saint Methodius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-methodius', '/saints/saint-cyril-&-methodius_3.jpg', 'Saint Cyril and Saint Methodius Icon', 'Saint Cyril and Saint Methodius, by an unknown artist, from the Holy Trinity Monastery (New York)', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint Peter Damian
+
 
 
 
