@@ -218,7 +218,13 @@ JOIN (VALUES
 ('saint-john-of-god', '/saints/saint-john-of-god_gonzalez.jpg', 'Saint John of God Painting', 'Saint John of God, by Manuel Gómez-Moreno González, from Museo de Bellas Artes de Granada', 'Manuel Gómez-Moreno González', '1880', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Frances of Rome
+('saint-frances-of-rome', '/saints/saint-frances-of-rome_sparadino.jpg', 'Saint Frances of Rome with the Angel Painting', 'Saint Frances of Rome with the Angel, by lo Sparadino, from Private Collection', 'lo Sparadino', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-frances-of-rome', '/saints/saint-frances-of-rome_gentileschi.jpg', 'Saint Frances of Rome Painting', 'Saint Frances of Rome, by Orazio Gentileschi, from Galleria Nazionale delle Marche', 'Orazio Gentileschi', '1620', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-frances-of-rome', '/saints/saint-frances-of-rome_poussin.jpg', 'Saint Frances Announcing the End of the Plague in Rome Painting', 'Saint Frances Announcing the End of the Plague in Rome, by Nicolas Poussin, from Musée du Louvre', 'Nicolas Poussin', '1657', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-frances-of-rome', '/saints/saint-frances-of-rome.jpg', 'Saint Frances of Rome Painting', 'Saint Frances of Rome, by an unknown artist', NULL, '1650', NULL, 'Public Domain', NULL, 4, FALSE),
+
 -- Saint Patrick
+
 -- Saint Cyril of Jerusalem
 -- Saint Turibius of Mogrovejo
 
