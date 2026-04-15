@@ -158,9 +158,12 @@ JOIN (VALUES
 ('saint-josephine-bakhita', '/saints/saint-josephine-bakhita_warford.jpg', 'Saint Josephine Bakhita Painting', 'Saint Josephine Bakhita, by John Alan Warford', NULL, '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-josephine-bakhita', '/saints/saint-josephine-bakhita.jpg', 'Saint Josephine Bakhita Portrait', 'Saint Josephine Bakhita Portrait', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
-
 -- Saint Scholastica
-('saint-scholastica', '/saints/saint-scholastica.jpg', 'The Death of Saint Scholastica Painting', 'The Death of Saint Scholastica, by Johann Baptist Wenzel Bergl, from Basilica of Kleinmariazell', 'Johann Baptist Wenzel Bergl', '1765', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-scholastica', '/saints/saint-scholastica_bergl.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by Johann Baptist Wenzel Bergl, from Basilica of Kleinmariazell', 'Johann Baptist Wenzel Bergl', '1765', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-scholastica', '/saints/saint-scholastica.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-scholastica', '/saints/saint-scholastica_sassoferrato.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by Sassoferrato, from Museum of Fine Arts of Lyon', 'Sassoferrato', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-scholastica', '/saints/saint-scholastica_briggs.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+
 
 
 
