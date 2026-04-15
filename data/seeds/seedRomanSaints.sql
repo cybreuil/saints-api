@@ -655,7 +655,7 @@ INSERT INTO saints (
 --   (SELECT id FROM places WHERE code='NAZARETH')
 -- ),
 (
-  'saint-turibius-of-mongrovejo', 'Saint Turibius of Mongrovejo',
+  'saint-turibius-of-mogrovejo', 'Saint Turibius of Mogrovejo',
   1538, NULL, NULL, TRUE,
   1606, 3, 23, FALSE,
   17,
@@ -677,7 +677,7 @@ JOIN (VALUES
 ('saint-patrick', 'Saint Patrick', 'Missionary bishop and patron of Ireland.', 'Patrick evangelized Ireland and remains one of the most beloved missionary saints in Christian tradition.', 'c. 385–461'),
 ('saint-cyril-of-jerusalem', 'Saint Cyril of Jerusalem', 'Bishop and Doctor of the Church.', 'Cyril is especially known for his catechetical instructions and his defense of orthodox faith in Jerusalem.', 'c. 315–386'),
 -- ('saint-joseph-spouse-of-mary', 'Saint Joseph, Spouse of Mary', 'Spouse of the Blessed Virgin Mary, guardian of Jesus.', 'Joseph is honored as foster-father of Christ, patron of the universal Church and model of obedience and quiet fidelity.', '1st century'),
-('saint-turibius-of-mongrovejo', 'Saint Turibius of Mongrovejo', 'Archbishop and missionary pastor in Peru.', 'Turibius reformed church life in the New World, defended indigenous peoples and promoted evangelization with great zeal.', '1538–1606')
+('saint-turibius-of-mogrovejo', 'Saint Turibius of Mogrovejo', 'Archbishop and missionary pastor in Peru.', 'Turibius reformed church life in the New World, defended indigenous peoples and promoted evangelization with great zeal.', '1538–1606')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -699,7 +699,7 @@ JOIN (VALUES
 ('saint-patrick', 'Saint Patrick', 'Évêque missionnaire et patron de l’Irlande.', 'Patrick évangélisa l’Irlande et demeure l’une des figures missionnaires les plus célèbres de l’Église.', 'v. 385–461'),
 ('saint-cyril-of-jerusalem', 'Saint Cyrille de Jérusalem', 'Évêque et docteur de l’Église.', 'Cyrille est connu pour ses catéchèses baptismales et sa défense de la foi orthodoxe à Jérusalem.', 'v. 315–386'),
 -- ('saint-joseph-spouse-of-mary', 'Saint Joseph, époux de Marie', 'Époux de la Vierge Marie, gardien de Jésus.', 'Joseph est honoré comme père nourricier du Christ, patron de l’Église universelle et modèle de fidélité silencieuse.', 'Ier siècle'),
-('saint-turibius-of-mongrovejo', 'Saint Turibe de Mogrovejo', 'Archevêque missionnaire au Pérou.', 'Turibe renouvela la vie de l’Église au Pérou, défendit les peuples autochtones et promut l’évangélisation.', '1538–1606')
+('saint-turibius-of-mogrovejo', 'Saint Turibe de Mogrovejo', 'Archevêque missionnaire au Pérou.', 'Turibe renouvela la vie de l’Église au Pérou, défendit les peuples autochtones et promut l’évangélisation.', '1538–1606')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -721,7 +721,7 @@ JOIN (VALUES
 ('saint-patrick', 'Sanctus Patricius', 'Episcopus missionarius et patronus Hiberniae.', 'Patricius Hiberniam evangelizavit et inter maximos missionarios Ecclesiae habetur.', 'c. 385–461'),
 ('saint-cyril-of-jerusalem', 'Sanctus Cyrillus Hierosolymitanus', 'Episcopus et Ecclesiae doctor.', 'Cyrillus catechesibus suis notissimus est et fidem orthodoxam Hierosolymis strenue defendit.', 'c. 315–386'),
 -- ('saint-joseph-spouse-of-mary', 'Sanctus Ioseph, Sponsus Mariae', 'Sponsus Beatae Mariae Virginis, custos Iesu.', 'Ioseph tamquam pater nutritius Christi et patronus Ecclesiae universalis colitur.', 'saec. I'),
-('saint-turibius-of-mongrovejo', 'Sanctus Turibius de Mogrovejo', 'Archiepiscopus missionarius in Peruvia.', 'Turibius vitam ecclesialem in Novo Orbe reformavit et evangelizationem cum zelo promovit.', '1538–1606')
+('saint-turibius-of-mogrovejo', 'Sanctus Turibius de Mogrovejo', 'Archiepiscopus missionarius in Peruvia.', 'Turibius vitam ecclesialem in Novo Orbe reformavit et evangelizationem cum zelo promovit.', '1538–1606')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
