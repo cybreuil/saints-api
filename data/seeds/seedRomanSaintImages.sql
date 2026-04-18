@@ -277,10 +277,10 @@ JOIN (VALUES
 
 -- Saint George
 ('saint-george', '/saints/saint-george_raphael.jpg', 'Saint George and the Dragon Painting', 'Saint George and the Dragon, by Raphael, from National Gallery of Art', 'Raphael', '1505-1506', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-george', '/saints/saint-george_moreau.jpg', 'Saint George Slaying the Dragon Painting', 'Saint George and the Dragon, by Gustave Moreau, from National Gallery', 'Gustave Moreau', '1889-1890', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-george', '/saints/saint-george_martorell.jpg', 'Saint George and the Dragon Painting', 'Saint George and the Dragon, by Bernat Martorell, from Art Institute of Chicago', 'Bernat Martorell', '1434-1435', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-george', '/saints/saint-george_schut.jpg', 'The Beheading of Saint George Painting', 'The Beheading of Saint George, by Cornelis Schut, from Royal Museum of Fine Arts Antwerp', 'Cornelis Schut', '1643', NULL, 'Public Domain', NULL, 4, FALSE),
-('saint-george', '/saints/saint-george_rubens.jpg', 'Saint George Battles the Dragon Painting', 'Saint George Battles the Dragon, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1606-1608', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-george', '/saints/saint-george_martorell.jpg', 'Saint George and the Dragon Painting', 'Saint George and the Dragon, by Bernat Martorell, from Art Institute of Chicago', 'Bernat Martorell', '1434-1435', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-george', '/saints/saint-george_rubens.jpg', 'Saint George Battles the Dragon Painting', 'Saint George Battles the Dragon, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1606-1608', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-george', '/saints/saint-george_moreau.jpg', 'Saint George Slaying the Dragon Painting', 'Saint George and the Dragon, by Gustave Moreau, from National Gallery', 'Gustave Moreau', '1889-1890', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-george', '/saints/saint-george_schut.jpg', 'The Beheading of Saint George Painting', 'The Beheading of Saint George, by Cornelis Schut, from Royal Museum of Fine Arts Antwerp', 'Cornelis Schut', '1643', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-george', '/saints/saint-george_domenichino.jpg', 'Saint George Painting', 'Saint George, by Domenichino', 'Domenichino', '17th Century', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-george', '/saints/saint-george_rossetti.jpg', 'The Wedding of Saint George and Princess Sabra Painting', 'The Wedding of Saint George and Princess Sabra, by Dante Gabriel Rossetti, from Tate Britain', 'Dante Gabriel Rossetti', '1857', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-george', '/saints/saint-george_icon.jpg', 'Saint George Byzantine Icon', 'Saint George, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 8, FALSE),
