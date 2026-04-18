@@ -246,6 +246,7 @@ JOIN (VALUES
 ('saint-francis-of-paola', '/saints/saint-francis-of-paola_ribera.jpg', 'Saint Francis of Paola Painting', 'Saint Francis of Paola, by Jusepe de Ribera, from Private Collection, ', 'Jusepe de Ribera', '1652', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-francis-of-paola', '/saints/saint-francis-of-paola_bianchi.jpg', 'Saint Francis of Paola in Ecstasy Painting', 'Saint Francis of Paola in Ecstasy, by Pietro Bianchi, from Musée du Louvre', 'Pietro Bianchi', '1728', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-francis-of-paola', '/saints/saint-francis-of-paola_gandolfi.jpg', 'The Vision of Saint Francis of Paola Painting', 'The Vision of Saint Francis of Paola, by Ubaldo Gandolfi, from Pinacoteca Nazionale di Bologna', 'Ubaldo Gandolfi', '1778', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-francis-of-paola', '/saints/saint-francis-of-paola_giordano.jpg', 'Saint Francis of Paola crosses the straits of Messina Painting', 'Saint Francis of Paola crosses the straits of Messina, by Luca Giordano, from a private collection', NULL, '1692', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Isidore
 ('saint-isidore', '/saints/saint-isidore_murillo.jpg', 'Saint Isidore Painting', 'Saint Isidore, by Bartolomé Esteban Murillo, from Seville Cathedral', 'Bartolomé Esteban Murillo', '1655', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -285,10 +286,20 @@ JOIN (VALUES
 ('saint-george', '/saints/saint-george_rossetti.jpg', 'The Wedding of Saint George and Princess Sabra Painting', 'The Wedding of Saint George and Princess Sabra, by Dante Gabriel Rossetti, from Tate Britain', 'Dante Gabriel Rossetti', '1857', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-george', '/saints/saint-george_icon.jpg', 'Saint George Byzantine Icon', 'Saint George, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 8, FALSE),
 
+-- Saint Adalbert
+('saint-adalbert', '/saints/saint-adalbert_kovacz.jpg', 'Saint Adalbert Painting', 'Saint Adalbert, by Mihály Kovács, from Dobó István Castle Museum', 'Mihály Kovács', '1855', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-adalbert', '/saints/saint-adalbert-&-procopius.jpg', 'Saint Adalbert and Saint Procopius Painting', 'Saint Adalbert and Saint Procopius, by the Master of Eggenburg, from Metropolitan Museum of Art', 'Master of Eggenburg', '1490-1500', NULL, 'Public Domain', NULL, 2, FALSE),
 
+-- Saint Fidelis of Sigmaringen
+('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen.jpg', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', 'The Martyrdom of Saint Fidelis of Sigmaringen, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen.webp', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', 'The Martyrdom of Saint Fidelis of Sigmaringen, by an unknown artist, from a private collection', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen-&-joseph-of-leonessa_tiepolo.jpg', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa Painting', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa, by Giovanni Battista Tiepolo, from Galleria nazionale di Parma', 'Giovanni Battista Tiepolo', '1752-1758', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
+-- Saint Mark the Evangelist
+('saint-mark-evangelist', '/saints/saint-mark-evangelist_hals.jpg', 'Saint Mark the Evangelist Painting', 'Saint Mark the Evangelist, by Frans Hals, from Pushkin Museum', 'Frans Hals', '1625-1630', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-mark-evangelist', '/saints/saint-mark-evangelist_borovikovsky.jpg', 'Saint Mark the Evangelist Painting', 'Saint Mark the Evangelist, by Vladimir Borovikovsky, from State Russian Museum', 'Vladimir Borovikovsky', '1804-1809', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-mark-evangelist', '/saints/saint-mark-evangelist_tintoretto_finding.jpg', 'Finding of the Body of Saint Mark Painting', 'Finding of the Body of Saint Mark, by Jacopo Tintoretto, from Pinacoteca di Brera', 'Jacopo Tintoretto', '1562', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-mark-evangelist', '/saints/saint-mark-evangelist_tintoretto_translation.jpg', 'The Translation of the Body of Saint Mark Painting', 'The Translation of the Body of Saint Mark, by Jacopo Tintoretto, from Gallerie dell''Accademia', 'Jacopo Tintoretto', '1562-1566', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
