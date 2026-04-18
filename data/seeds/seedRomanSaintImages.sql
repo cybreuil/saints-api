@@ -260,7 +260,7 @@ JOIN (VALUES
 -- Saint John Baptist de La Salle
 ('saint-john-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle.jpg', 'Saint John Baptist de la Salle Painting', 'Saint John Baptist de la Salle, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-john-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle_muller.jpg', 'Saint John Baptist de la Salle Engraving', 'Saint John Baptist de la Salle, engraving by Chapon, from a Painting by Charles Muller', 'Chapon', '1887', NULL, 'Public Domain', NULL, 2, FALSE),
-
+('saint-jonh-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle_2.jpg', 'Saint John Baptist de la Salle Painting', 'Saint John Baptist de la Salle, by Gagliardi Giovanni', 'Gagliardi Giovanni', '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
