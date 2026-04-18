@@ -803,7 +803,7 @@ INSERT INTO saints (
 (
   'saint-george', 'Saint George',
   NULL, NULL, NULL, TRUE,
-  303, NULL, NULL, TRUE,
+  303, 4, 23, FALSE,
   4,
   NULL, NULL, NULL
 ),
