@@ -235,8 +235,8 @@ JOIN (VALUES
 ('saint-cyril-of-jerusalem', '/saints/saint-cyril-of-jerusalem_2.png', 'Saint Cyril of Jerusalem Icon', 'Saint Cyril of Jerusalem, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Turibius of Mogrovejo
-
-
+('saint-turibius-of-mogrovejo', '/saints/saint-turibius-of-mogrovejo.jpg', 'Saint Turibius of Mogrovejo Painting', 'Saint Turibius of Mogrovejo, by an unknown artist, from Museo Nacional de Bellas Artes (Buenos Aires)', NULL, '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-turibius-of-mogrovejo', '/saints/saint-turibius-of-mogrovejo_conca.jpg', 'The Miracle of Saint Turibius of Mogrovejo Painting', 'The Miracle of Saint Turibius of Mogrovejo, by Sebastiano Conca, from Musei Vaticani', 'Giovanni Conca', '1723', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 
