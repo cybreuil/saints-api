@@ -238,6 +238,34 @@ JOIN (VALUES
 ('saint-turibius-of-mogrovejo', '/saints/saint-turibius-of-mogrovejo.jpg', 'Saint Turibius of Mogrovejo Painting', 'Saint Turibius of Mogrovejo, by an unknown artist, from Museo Nacional de Bellas Artes (Buenos Aires)', NULL, '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-turibius-of-mogrovejo', '/saints/saint-turibius-of-mogrovejo_conca.jpg', 'The Miracle of Saint Turibius of Mogrovejo Painting', 'The Miracle of Saint Turibius of Mogrovejo, by Sebastiano Conca, from Musei Vaticani', 'Giovanni Conca', '1723', NULL, 'Public Domain', NULL, 2, FALSE),
 
+-- =========================
+-- April saints
+-- =========================
+
+-- Saint Francis of Paola
+('saint-francis-of-paola', '/saints/saint-francis-of-paola_ribera.jpg', 'Saint Francis of Paola Painting', 'Saint Francis of Paola, by Jusepe de Ribera, from Private Collection, ', 'Jusepe de Ribera', '1652', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-francis-of-paola', '/saints/saint-francis-of-paola_bianchi.jpg', 'Saint Francis of Paola in Ecstasy Painting', 'Saint Francis of Paola in Ecstasy, by Pietro Bianchi, from Musée du Louvre', 'Pietro Bianchi', '1728', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-francis-of-paola', '/saints/saint-francis-of-paola_gandolfi.jpg', 'The Vision of Saint Francis of Paola Painting', 'The Vision of Saint Francis of Paola, by Ubaldo Gandolfi, from Pinacoteca Nazionale di Bologna', 'Ubaldo Gandolfi', '1778', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Isidore
+('saint-isidore', '/saints/saint-isidore_murillo.jpg', 'Saint Isidore Painting', 'Saint Isidore, by Bartolomé Esteban Murillo, from Seville Cathedral', 'Bartolomé Esteban Murillo', '1655', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-isidore', '/saints/saint-isidore_pacully.jpg', 'Saint Isidore Painting', 'Saint Isidore, by the Master of the Pacully collection, from National Museum of Sculpture (Valladolid)', 'Master of the Pacully collection', '1480-1490', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Vincent Ferrer
+('saint-vincent-ferrer', '/saints/saint-vincent-ferrer_miranda.jpg', 'Saint Vincent Ferrer Painting', 'Saint Vincent Ferrer, by Juan Carreño de Miranda, from Museum of Fine Arts (Budapest)', 'Francisco de Miranda', '1661', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-vincent-ferrer', '/saints/saint-vincent-ferrer_pace.jpg', 'Saint Vincent Ferrer Painting', 'Saint Vincent Ferrer, by Ranieri Del Pace, from Private Collection', 'Ranieri Del Pace', '1709', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-vincent-ferrer', '/saints/saint-vincent-ferrer_cano.jpg', 'Saint Vincent Ferrer Preaching Painting', 'Saint Vincent Ferrer Preaching, by Alonso Cano, from Fundación Banco Santander', 'Alonso Cano', '1644-1645', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-vincent-ferrer', '/saints/saint-vincent-ferrer_juanes.jpg', 'Saint Vincent Ferrer Painting', 'Saint Vincent Ferrer, by Juan de Juanes, from Private Collection', 'Juan de Juanes', '1445-1450', NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint John Baptist de La Salle
+('saint-john-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle.jpg', 'Saint John Baptist de la Salle Painting', 'Saint John Baptist de la Salle, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle_muller.jpg', 'Saint John Baptist de la Salle Engraving', 'Saint John Baptist de la Salle, engraving by Chapon, from a Painting by Charles Muller', 'Chapon', '1887', NULL, 'Public Domain', NULL, 2, FALSE),
+
+
+
+
+
+
 
 
 
