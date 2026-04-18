@@ -262,10 +262,14 @@ JOIN (VALUES
 ('saint-john-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle_muller.jpg', 'Saint John Baptist de la Salle Engraving', 'Saint John Baptist de la Salle, engraving by Chapon, from a Painting by Charles Muller', 'Chapon', '1887', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-jonh-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle_2.jpg', 'Saint John Baptist de la Salle Painting', 'Saint John Baptist de la Salle, by Gagliardi Giovanni', 'Gagliardi Giovanni', '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Stanislaus
+('saint-stanislaus', '/saints/saint-stanislaus_samostrzelnik.jpg', 'Saint Stanislaus Painting', 'Saint Stanislaus, by Stanisław Samostrzelnik, from National Library of Poland', 'Stanisław Samostrzelnik', '1530-1535', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-stanislaus', '/saints/saint-stanislaus.jpg', 'Saint Stanislaus Painting', 'Saint Stanislaus, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
-
-
-
+-- Saint Martin I
+('saint-martin-i', '/saints/saint-martin-i_montor.jpg', 'Saint Martin I Painting', 'Saint Martin I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-martin-i', '/saints/saint-martin-i_stained-glass.jpg', 'Saint Martin I Stained Glass', 'Saint Martin I, by an unknown artist, from Saint Martin Church (Arc-en-Barrois)', NULL, '1888', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-martin-i', '/saints/saint-martin-i.png', 'Saint Martin I Painting', 'Saint Martin I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
