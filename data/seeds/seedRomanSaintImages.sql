@@ -312,10 +312,10 @@ JOIN (VALUES
 ('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort_3.jpg', 'Saint Louis Grignion de Montfort Illustration', 'Saint Louis Grignion de Montfort, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Catherine of Siena
-('saint-catherine-of-siena_dolci.jpg', '/saints/saint-catherine-of-siena_dolci.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by Carlo Dolci, from Galleria Palatina', 'Carlo Dolci', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-catherine-of-siena_tiepolo.jpg', '/saints/saint-catherine-of-siena_tiepolo.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by Giambattista Tiepolo, from Gallerie dell''Accademia', 'Giambattista Tiepolo', '1746-1750', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-catherine-of-siena_dolci.jpg', '/saints/saint-catherine-of-siena_dolci.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by Carlo Dolci, from Dulwich Picture Gallery', 'Carlo Dolci', '1665', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-catherine-of-siena_tiepolo.jpg', '/saints/saint-catherine-of-siena_tiepolo.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by Giambattista Tiepolo, from Gemäldegalerie (Berlin)', 'Giambattista Tiepolo', '1746', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-catherine-of-siena.jpg', '/saints/saint-catherine-of-siena.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by an unknown artist, from Santa Maria del Rosario in Prati', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-catherine-of-siena', '/saints/saint-catherine-of-siena-&-rose-of-lima-&-agnes-of-montepulciano_tiepolo.jpg', 'Saint Catherine of Siena, Saint Rose of Lima and Saint Agnes of Montepulciano Painting', 'Saint Catherine of Siena and Saint Rose of Lima and Saint Agnes of Montepulciano, by Giambattista Tiepolo, from Gesuati', 'Giambattista Tiepolo', '1746-1750', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-catherine-of-siena', '/saints/saint-catherine-of-siena-&-rose-of-lima-&-agnes-of-montepulciano_tiepolo.jpg', 'The Virgin Appearing to Saint Catherine of Siena, Saint Rose of Lima and Saint Agnes of Montepulciano Painting', 'The Virgin Appearing to Saint Catherine of Siena and Saint Rose of Lima and Saint Agnes of Montepulciano, by Giambattista Tiepolo, from Gesuati', 'Giambattista Tiepolo', '1747-1748', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
