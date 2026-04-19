@@ -283,7 +283,8 @@ JOIN (VALUES
 ('saint-george', '/saints/saint-george_moreau.jpg', 'Saint George Slaying the Dragon Painting', 'Saint George and the Dragon, by Gustave Moreau, from National Gallery', 'Gustave Moreau', '1889-1890', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-george', '/saints/saint-george_schut.jpg', 'The Beheading of Saint George Painting', 'The Beheading of Saint George, by Cornelis Schut, from Royal Museum of Fine Arts Antwerp', 'Cornelis Schut', '1643', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-george', '/saints/saint-george_domenichino.jpg', 'Saint George Painting', 'Saint George, by Domenichino', 'Domenichino', '17th Century', NULL, 'Public Domain', NULL, 6, FALSE),
-('saint-george', '/saints/saint-george_rossetti.jpg', 'The Wedding of Saint George and Princess Sabra Painting', 'The Wedding of Saint George and Princess Sabra, by Dante Gabriel Rossetti, from Tate Britain', 'Dante Gabriel Rossetti', '1857', NULL, 'Public Domain', NULL, 7, FALSE),
+-- Not really catholic
+-- ('saint-george', '/saints/saint-george_rossetti.jpg', 'The Wedding of Saint George and Princess Sabra Painting', 'The Wedding of Saint George and Princess Sabra, by Dante Gabriel Rossetti, from Tate Britain', 'Dante Gabriel Rossetti', '1857', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-george', '/saints/saint-george_icon.jpg', 'Saint George Byzantine Icon', 'Saint George, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 8, FALSE),
 
 -- Saint Adalbert
