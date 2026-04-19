@@ -21,7 +21,7 @@ JOIN (VALUES
 -- =========================
 
 -- Saint Mary
-('saint-mary', '/saints/saint-mary_tiepolo.jpg', 'The Immaculate Conception Painting', 'The Immaculate Conception, by Giovanni Battista Tiepolo, from Museo del Prado', 'Giovanni Battista Tiepolo', '1748', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-mary', '/saints/saint-mary_tiepolo.jpg', 'The Immaculate Conception Painting', 'The Immaculate Conception, by Giambattista Tiepolo, from Museo del Prado', 'Giambattista Tiepolo', '1748', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-mary', '/saints/saint-mary_velazquez.jpg', 'The Coronation of the Virgin Painting', 'The Coronation of the Virgin, by Diego Velázquez, from Museo del Prado', 'Diego Velázquez', '1645-1650', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-mary', '/saints/saint-mary_caravaggio_annunciation.jpg', 'The Annunciation Painting', 'The Annunciation, by Caravaggio, from Musée des Beaux-Arts de Nancy', 'Caravaggio', '1608', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-mary', '/saints/saint-mary_raphael.jpg', 'The Sistine Madonna Painting', 'The Sistine Madonna, by Raphael, from Gemäldegalerie Alte Meister', 'Raphael', '1513-1514', NULL, 'Public Domain', NULL, 4, FALSE),
@@ -135,14 +135,14 @@ JOIN (VALUES
 
 -- Saint Blaise
 ('saint-blaise', '/saints/saint-blaise_trotti.jpg', 'Saint Blaise Painting', 'Saint Blaise, by Giovanni Battista Trotti, from Museum of Fine Arts (Budapest)', 'Giovanni Battista Trotti', '1590', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-blaise', '/saints/saint-blaise_tiepolo.jpg', 'Saint Blaise Painting', 'Saint Blaise, by Giovanni Battista Tiepolo, from Ca'' Rezzonico', 'Giovanni Battista Tiepolo', '1734', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-blaise', '/saints/saint-blaise_tiepolo.jpg', 'Saint Blaise Painting', 'Saint Blaise, by Giambattista Tiepolo, from Ca'' Rezzonico', 'Giambattista Tiepolo', '1734', NULL, 'Public Domain', NULL, 2, FALSE),
 
 --Saint Ansgar
 ('saint-ansgar', '/saints/saint-ansgar.jpg', 'Saint Ansgar Painting', 'Saint Ansgar, by Hans Bornemann, from Church Trinitatis (Hamburg)', NULL, '1457', NULL, 'Public Domain', NULL, 1, TRUE),
 
 -- Saint Agatha
 ('saint-agatha', '/saints/saint-agatha.jpg', 'The Martyrdom of Saint Agatha Painting', 'The Martyrdom of Saint Agatha, by Massimo Stanzione, from Museo nazionale di Capodimonte', NULL, '1619', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-agatha', '/saints/saint-agatha_tiepolo.jpg', 'The Martyrdom of Saint Agatha Painting', 'The Martyrdom of Saint Agatha, by Giovanni Battista Tiepolo, from Gemäldegalerie', 'Giovanni Battista Tiepolo', '1756', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-agatha', '/saints/saint-agatha_tiepolo.jpg', 'The Martyrdom of Saint Agatha Painting', 'The Martyrdom of Saint Agatha, by Giambattista Tiepolo, from Gemäldegalerie', 'Giambattista Tiepolo', '1756', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Paul Miki
 ('saint-paul-miki', '/saints/saint-paul-miki_tanzio.png', 'The Martyrdom of Saint Paul Miki & Companions Painting', 'The Martyrdom of Saint Paul Miki & Companions, by Tanzio da Varallo, from Pinacoteca di Brera', 'Tanzio da Varallo', '1625-1632', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -225,7 +225,7 @@ JOIN (VALUES
 
 -- Saint Patrick
 ('saint-patrick', '/saints/saint-patrick.jpg', 'Saint Patrick and the Snakes Painting', 'Saint Patrick and the Snakes, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-patrick', '/saints/saint-patrick_tiepolo.jpg', 'Saint Patrick Painting', 'Saint Patrick, by Giovanni Battista Tiepolo, from Musei Civici di Padova', 'Giovanni Battista Tiepolo', '1746', NULL, 'Public Domain', NULL, 2, TRUE),
+('saint-patrick', '/saints/saint-patrick_tiepolo.jpg', 'Saint Patrick Painting', 'Saint Patrick, by Giambattista Tiepolo, from Musei Civici di Padova', 'Giambattista Tiepolo', '1746', NULL, 'Public Domain', NULL, 2, TRUE),
 ('saint-patrick', '/saints/saint-patrick_collaert.jpg', 'Saint Patrick Painting', 'Saint Patrick, by Adriaen Collaert, from National Gallery of Ireland', 'Adriaen Collaert', '1603', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-patrick', '/saints/saint-patrick_stained-glass.jpg', 'Saint Patrick Stained Glass', 'Saint Patrick, by an unknown artist, from Saint Patrick Catholic Church (Ohio)', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
@@ -294,7 +294,7 @@ JOIN (VALUES
 -- Saint Fidelis of Sigmaringen
 ('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen.jpg', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', 'The Martyrdom of Saint Fidelis of Sigmaringen, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen.webp', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', 'The Martyrdom of Saint Fidelis of Sigmaringen, by an unknown artist, from a private collection', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen-&-joseph-of-leonessa_tiepolo.jpg', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa Painting', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa, by Giovanni Battista Tiepolo, from Galleria nazionale di Parma', 'Giovanni Battista Tiepolo', '1752-1758', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen-&-joseph-of-leonessa_tiepolo.jpg', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa Painting', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa, by Giambattista Tiepolo, from Galleria nazionale di Parma', 'Giambattista Tiepolo', '1752-1758', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Mark the Evangelist
 ('saint-mark-evangelist', '/saints/saint-mark-evangelist_hals.jpg', 'Saint Mark the Evangelist Painting', 'Saint Mark the Evangelist, by Frans Hals, from Pushkin Museum', 'Frans Hals', '1625-1630', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -306,10 +306,23 @@ JOIN (VALUES
 ('saint-peter-chanel', '/saints/saint-peter-chanel.jpg', 'Saint Peter Chanel Painting', 'Saint Peter Chanel, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-peter-chanel', '/saints/saint-peter-chanel_nicolet.jpg', 'Saint Peter Chanel Illustration', 'Saint Peter Chanel, by Claude Nicolet, from Book : "Vie du bienheureux Pierre-Louis-Marie Chanel : prêtre mariste et premier martyr de l''Océanie"', 'Claude Nicolet', '1923', NULL, 'Public Domain', NULL, 2, FALSE),
 
--- Saint Louis Grignion de Montfort (to edit)
-('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort.jpg', 'Saint Louis Grignion de Montfort Painting', 'Saint Louis Grignion de Montfort, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort_briggs.jpg', 'Saint Louis Grignion de Montfort Painting', 'Saint Louis Grignion de Montfort, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort_2.jpg', 'Saint Louis Grignion de Montfort Painting', 'Saint Louis Grignion de Montfort, by an unknown artist, from a private collection', NULL, '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+-- Saint Louis Grignion de Montfort
+('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort.jpg', 'Saint Louis Grignion de Montfort Painting', 'Saint Louis Grignion de Montfort, by an unknown artist', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort_2.jpg', 'Saint Louis Grignion de Montfort and Blessed Marie-Louise Trichet Illustration', 'Saint Louis Grignion de Montfort and Blessed Marie-Louise Trichet, by an unknown artist', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort_3.jpg', 'Saint Louis Grignion de Montfort Illustration', 'Saint Louis Grignion de Montfort, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Catherine of Siena
+('saint-catherine-of-siena_dolci.jpg', '/saints/saint-catherine-of-siena_dolci.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by Carlo Dolci, from Galleria Palatina', 'Carlo Dolci', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-catherine-of-siena_tiepolo.jpg', '/saints/saint-catherine-of-siena_tiepolo.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by Giambattista Tiepolo, from Gallerie dell''Accademia', 'Giambattista Tiepolo', '1746-1750', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-catherine-of-siena.jpg', '/saints/saint-catherine-of-siena.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by an unknown artist, from Santa Maria del Rosario in Prati', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-catherine-of-siena', '/saints/saint-catherine-of-siena-&-rose-of-lima-&-agnes-of-montepulciano_tiepolo.jpg', 'Saint Catherine of Siena, Saint Rose of Lima and Saint Agnes of Montepulciano Painting', 'Saint Catherine of Siena and Saint Rose of Lima and Saint Agnes of Montepulciano, by Giambattista Tiepolo, from Gesuati', 'Giambattista Tiepolo', '1746-1750', NULL, 'Public Domain', NULL, 4, FALSE),
+
+
+
+
+
+
+
 
 
 
