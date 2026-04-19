@@ -306,7 +306,10 @@ JOIN (VALUES
 ('saint-peter-chanel', '/saints/saint-peter-chanel.jpg', 'Saint Peter Chanel Painting', 'Saint Peter Chanel, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-peter-chanel', '/saints/saint-peter-chanel_nicolet.jpg', 'Saint Peter Chanel Illustration', 'Saint Peter Chanel, by Claude Nicolet, from Book : "Vie du bienheureux Pierre-Louis-Marie Chanel : prêtre mariste et premier martyr de l''Océanie"', 'Claude Nicolet', '1923', NULL, 'Public Domain', NULL, 2, FALSE),
 
-
+-- Saint Louis Grignion de Montfort (to edit)
+('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort.jpg', 'Saint Louis Grignion de Montfort Painting', 'Saint Louis Grignion de Montfort, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort_briggs.jpg', 'Saint Louis Grignion de Montfort Painting', 'Saint Louis Grignion de Montfort, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-louis-grignion-de-montfort', '/saints/saint-louis-grignion-de-montfort_2.jpg', 'Saint Louis Grignion de Montfort Painting', 'Saint Louis Grignion de Montfort, by an unknown artist, from a private collection', NULL, '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
