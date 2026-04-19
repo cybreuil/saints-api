@@ -302,8 +302,9 @@ JOIN (VALUES
 ('saint-mark-evangelist', '/saints/saint-mark-evangelist_tintoretto_finding.jpg', 'Finding of the Body of Saint Mark Painting', 'Finding of the Body of Saint Mark, by Jacopo Tintoretto, from Pinacoteca di Brera', 'Jacopo Tintoretto', '1562', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-mark-evangelist', '/saints/saint-mark-evangelist_tintoretto_translation.jpg', 'The Translation of the Body of Saint Mark Painting', 'The Translation of the Body of Saint Mark, by Jacopo Tintoretto, from Gallerie dell''Accademia', 'Jacopo Tintoretto', '1562-1566', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
-
+-- Saint Peter Chanel
+('saint-peter-chanel', '/saints/saint-peter-chanel.jpg', 'Saint Peter Chanel Painting', 'Saint Peter Chanel, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-peter-chanel', '/saints/saint-peter-chanel_nicolet.jpg', 'Saint Peter Chanel Illustration', 'Saint Peter Chanel, by Claude Nicolet, from Book : "Vie du bienheureux Pierre-Louis-Marie Chanel : prêtre mariste et premier martyr de l''Océanie"', 'Claude Nicolet', '1923', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 
