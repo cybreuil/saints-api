@@ -8,7 +8,11 @@ BEGIN;
 -- - one primary image per saint
 -- - sort_order controls gallery order
 
+-- NOTE :
+-- all apostles painted by rubens
+-- all evangelist by hals
 
+-- =========================================================
 INSERT INTO saint_images (
   saint_id, image_url, alt_text, caption, author, date, credit, license, source_url, sort_order, is_primary
 )
@@ -53,12 +57,12 @@ JOIN (VALUES
 -- =========================
 
 -- Saint Basil the Great
-('saint-basil-the-great', '/saints/saint-basil-the-great_grottaferrata.jpg', 'Saint Basil the Great Fresco', 'Saint Basil the Great, by an unknown artist, from Grottaferrata Abbey', NULL, '1609-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-basil-the-great', '/saints/saint-basil-the-great_domenichino_grottaferrata.jpg', 'Saint Basil the Great Fresco', 'Saint Basil the Great, by Domenichino, from Grottaferrata Abbey', 'Domenichino', '1609-1612', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-basil-the-great', '/saints/saint-basil-the-great.webp', 'Saint Basil the Great Painting', 'Saint Basil the Great, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-basil-the-great', '/saints/saint-basil-the-great_mosaic.jpg', 'Saint Basil the Great Mosaic', 'Saint Basil the Great, by an unknown artist', NULL, '11th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Gregory Nazianzen
-('saint-gregory-nazianzen', '/saints/saint-gregory-nazianzen_grottaferrata.jpg', 'Saint Gregory Nazianzen Fresco', 'Saint Gregory Nazianzen, by an unknown artist, from Grottaferrata Abbey', NULL, '1609-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-gregory-nazianzen', '/saints/saint-gregory-nazianzen_domenichino_grottaferrata.jpg', 'Saint Gregory Nazianzen Fresco', 'Saint Gregory Nazianzen, by Domenichino, from Grottaferrata Abbey', 'Domenichino', '1609-1612', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-gregory-nazianzen', '/saints/saint-gregory-nazianzen.jpg', 'Saint Gregory Nazianzen Fresco', 'Saint Gregory Nazianzen, by an unknown artist, from Kariye Camii (Istanbul)', NULL, '14th century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Raymond of Penyafort
@@ -100,7 +104,7 @@ JOIN (VALUES
 ('saint-francis-de-sales', '/saints/saint-francis-de-sales_bayeu.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Francisco Bayeu, from Museo del Prado', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-francis-de-sales', '/saints/saint-francis-de-sales_brenet.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Nicolas Guy Brenet, from Château de Blois', 'Nicolas Guy Brenet', '18th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
--- Saint Paul Apostle
+-- Saint Paul, Apostle
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rubens.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611-1612', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_ribera.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1615-1616', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_velasquez.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Diego Velázquez, from Museo del Prado', 'Diego Velázquez', '1619-1620', NULL, 'Public Domain', NULL, 3, FALSE),
@@ -317,6 +321,24 @@ JOIN (VALUES
 ('saint-catherine-of-siena.jpg', '/saints/saint-catherine-of-siena.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by an unknown artist, from Santa Maria del Rosario in Prati', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-catherine-of-siena', '/saints/saint-catherine-of-siena-&-rose-of-lima-&-agnes-of-montepulciano_tiepolo.jpg', 'The Virgin Appearing to Saint Catherine of Siena, Saint Rose of Lima and Saint Agnes of Montepulciano Painting', 'The Virgin Appearing to Saint Catherine of Siena and Saint Rose of Lima and Saint Agnes of Montepulciano, by Giambattista Tiepolo, from Gesuati', 'Giambattista Tiepolo', '1747-1748', NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Pius V
+('saint-pius-v', '/saints/saint-pius-v_passarotti.jpg', 'Saint Pius V Painting', 'Saint Pius V, by Bartolomeo Passarotti, from Walters Art Museum', 'Bartolomeo Passarotti', '1566', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-pius-v', '/saints/saint-pius-v_giovane.jpg', 'Saint Pius V Painting', 'Saint Pius V, by Palma il Giovane, from Museo d''Arte di Chianciano Terme', 'Palma il Giovane', '1600', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-pius-v', '/saints/saint-pius-v.jpg', 'Saint Pius V Painting', 'Saint Pius V, by an unknown artist', NULL, '18th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- =========================
+-- May saints
+-- =========================
+
+-- Saint Athanasius
+('saint-athanasius', '/saints/saint-athanasius_domenichino_grottaferrata.jpg', 'Saint Athanasius Fresco', 'Saint Athanasius, by Domenichino, from Grottaferata Abbey', 'Domenichino', '1609-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-athanasius', '/saints/saint-athanasius_solimena.jpg', 'Saint Athanasius Painting', 'Saint Athanasius, by Francesco Solimena, from Naples Cathedral', 'Francesco Solimena', '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-athanasius', '/saints/saint-athanasius_icon.jpg', 'Saint Athanasius Icon', 'Saint Athanasius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+-- Saint Philip, Apostle
+('saint-phillip-apostle', '/saints/saint-phillip-apostle_rubens.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-phillip-apostle', '/saints/saint-phillip-apostle_dyck.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Anthony van Dyck, from Kunsthistorisches Museum', 'Anthony van Dyck', '1619-1621', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 
