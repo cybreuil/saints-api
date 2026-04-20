@@ -11,6 +11,7 @@ BEGIN;
 -- NOTE :
 -- all apostles painted by rubens
 -- all evangelist by hals
+-- all apostles by La Tour painted as well but some paintings are missing
 
 -- =========================================================
 INSERT INTO saint_images (
@@ -338,10 +339,9 @@ JOIN (VALUES
 
 -- Saint Philip, Apostle
 ('saint-phillip-apostle', '/saints/saint-phillip-apostle_rubens.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-phillip-apostle', '/saints/saint-phillip-apostle_dyck.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Anthony van Dyck, from Kunsthistorisches Museum', 'Anthony van Dyck', '1619-1621', NULL, 'Public Domain', NULL, 2, FALSE),
-
-
-
+('saint-phillip-apostle', '/saints/saint-phillip-apostle_ribera.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Jusepe de Ribera, from Fondazione Roberto Longhi', 'Jusepe de Ribera', '1610', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-phillip-apostle', '/saints/saint-phillip-apostle_la-tour.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Georges de La Tour, from Chrysler Museum of Art', 'Georges de La Tour', '1625', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-phillip-apostle', '/saints/saint-phillip-apostle_dyck.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Anthony van Dyck, from Kunsthistorisches Museum', 'Anthony van Dyck', '1619-1621', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
