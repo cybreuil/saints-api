@@ -134,6 +134,8 @@ JOIN (VALUES
 -- Saint Thomas Aquinas
 ('saint-thomas-aquinas', '/saints/saint-thomas-aquinas.jpg', 'Saint Thomas Aquinas Painting', 'Saint Thomas Aquinas, by Carlo Crivelli, from National Gallery', 'Carlo Crivelli', '1476', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-thomas-aquinas', '/saints/saint-thomas-aquinas_velasquez_temptation.jpg', 'The Temptation of Saint Thomas Aquinas Painting', 'The temptation of Saint Thomas Aquinas, by Diego Velázquez, from Orihuela Cathedral Museum', 'Diego Velázquez', '1632', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-thomas-aquinas', '/saints/saint-thomas-aquinas_tito.jpg', 'The Vision of Saint Thomas Aquinas Painting', 'The Vision of Saint Thomas Aquinas, by Santi di Tito, from Basilica of St. Mark (Florence)', 'Santi di Tito', '1593', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-thomas-aquinas', '/saints/saint-thomas-aquinas_zurbaran.jpg', 'The Apotheosis of Saint Thomas Aquinas Painting', 'The Apotheosis of Saint Thomas Aquinas, by Francisco de Zurbarán, from Museum of Fine Arts of Seville', 'Francisco de Zurbarán', '1631', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint John Bosco
 ('saint-john-bosco', '/saints/saint-john-bosco_painting-from-picture.png', 'Saint John Bosco Painting', 'Saint John Bosco, by an unknown artist, from a picture', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
@@ -278,7 +280,7 @@ JOIN (VALUES
 ('saint-stanislaus', '/saints/saint-stanislaus.jpg', 'Saint Stanislaus Painting', 'Saint Stanislaus, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Martin I
-('saint-martin-i', '/saints/saint-martin-i_montor.jpg', 'Saint Martin I Painting', 'Saint Martin I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-martin-i', '/saints/saint-martin-i_montor.jpg', 'Saint Martin I Illustration', 'Saint Martin I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-martin-i', '/saints/saint-martin-i_stained-glass.jpg', 'Saint Martin I Stained Glass', 'Saint Martin I, by an unknown artist, from Saint Martin Church (Arc-en-Barrois)', NULL, '1888', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-martin-i', '/saints/saint-martin-i.png', 'Saint Martin I Painting', 'Saint Martin I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
@@ -374,6 +376,35 @@ JOIN (VALUES
 ('saint-matthias-apostle', '/saints/saint-matthias-apostle_rubens.jpg', 'Saint Matthias Apostle Painting', 'Saint Matthias the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-matthias-apostle', '/saints/saint-matthias-apostle_dyck.jpg', 'Saint Matthias Apostle Painting', 'Saint Matthias the Apostle, by Anthony van Dyck, from Yale University Art Gallery', 'Anthony van Dyck', '1619', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-matthias-apostle', '/saints/saint-matthias-apostle_tristan.jpg', 'Saint Matthias Apostle Painting', 'Saint Matthias the Apostle, by Luis Tristán, from El Greco Museum', 'Luis Tristán', '1620', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint John I
+('saint-john-i', '/saints/saint-john-i_montor.jpg', 'Saint John I Illustration', 'Saint John I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-i', '/saints/saint-john-i.jpg', 'Saint John I Painting', 'Saint John I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Bernardine of Siena
+('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena_bellini.png', 'Saint Bernardine of Siena Painting', 'Saint Bernardine of Siena, by Jacopo Bellini, from Metropolitan Museum of Art', 'Jacopo Bellini', '1450-1455', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena.jpg', 'Saint Bernardine of Siena Painting', 'Saint Bernardine of Siena, by an unknown artist, from Langeais Castle (France)', NULL, '16th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena_greco.jpg', 'Saint Bernardine of Siena Painting', 'Saint Bernardine of Siena, by El Greco, from El Greco Museum', 'El Greco', '1603', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena_brescia.jpg', 'The Virgin and Child with Saint Bernardino and Other Saints', 'The Virgin and Child with Saint Bernardino and Other Saints, by Moretto da Brescia, from National Gallery', 'Moretto da Brescia', '1540', NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint Christopher Magallanes
+('saint-christopher-magallanes', '/saints/saint-christopher-magallanes.jpg', 'Saint Christopher Magallanes Painting', 'Saint Christopher Magallanes, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-christopher-magallanes', '/saints/saint-christopher-magallanes_2.jpg', 'Saint Christopher Magallanes Painting', 'Saint Christopher Magallanes, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-christopher-magallanes', '/saints/saint-christopher-magallanes_picture.jpg', 'Saint Christopher Magallanes Picture', 'Saint Christopher Magallanes', NULL, '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Rita of Cascia
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia.jpg', 'Saint Rita of Cascia Painting', 'Saint Rita of Cascia, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_bellini.jpg', 'Saint Rita of Cascia Painting', 'Saint Rita of Cascia, by Jacopo Bellini, from Metropolitan Museum of Art', 'Jacopo Bellini', '1450-1455', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_tiepolo.jpg', 'The Vision of Saint Rita of Cascia Painting', 'The Vision of Saint Rita of Cascia, by Giambattista Tiepolo, from Gallerie dell''Accademia', 'Giambattista Tiepolo', '1747-1748', NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+
+
+
+
+
+
+
 
 
 
