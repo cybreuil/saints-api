@@ -109,9 +109,12 @@ JOIN (VALUES
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rubens.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611-1612', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_ribera.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1615-1616', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_velasquez.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Diego Velázquez, from Museo del Prado', 'Diego Velázquez', '1619-1620', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-paul-apostle', '/saints/saint-paul-apostle_caravaggio_conversion.jpg', 'The Conversion of Saint Paul Painting', 'The Conversion of Saint Paul, by Caravaggio, from Odescalchi Balbi Collection', 'Caravaggio', '1601', NULL, 'Public Domain', NULL, 4, FALSE),
-('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt_prison.jpg', 'The Apostle Paul in Prison Painting', 'The Apostle Paul in Prison, by Rembrandt, from Rijksmuseum', 'Rembrandt', '1627', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Rembrandt, from National Gallery of Art', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_zurbaran.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art', 'Francisco de Zurbarán', '1633', NULL, 'Attribution 3.0 Unported', NULL, 4, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_dyck.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Anthony van Dyck, from Landesmuseum Hannover', 'Anthony van Dyck', '1618-1620', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_caravaggio_conversion.jpg', 'The Conversion of Saint Paul Painting', 'The Conversion of Saint Paul, by Caravaggio, from Odescalchi Balbi Collection', 'Caravaggio', '1601', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt_prison.jpg', 'The Apostle Paul in Prison Painting', 'The Apostle Paul in Prison, by Rembrandt, from Rijksmuseum', 'Rembrandt', '1627', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Rembrandt, from National Gallery of Art', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_la-tour.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Georges de La Tour (copy), from Musée Toulouse-Lautrec', 'Georges de La Tour', '1820', NULL, 'Public Domain', NULL, 9, FALSE),
 
 -- Saint Timothy of Ephesus
 ('saint-timothy-of-ephesus', '/saints/saint-timothy-of-ephesus_icon.jpg', 'Saint Timothy of Ephesus Icon', 'Saint Timothy of Ephesus, by an unknown artist, from an orthodox parish (USA)', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 1, TRUE),
@@ -339,9 +342,25 @@ JOIN (VALUES
 
 -- Saint Philip, Apostle
 ('saint-phillip-apostle', '/saints/saint-phillip-apostle_rubens.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-phillip-apostle', '/saints/saint-phillip-apostle_ribera.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Jusepe de Ribera, from Fondazione Roberto Longhi', 'Jusepe de Ribera', '1610', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-phillip-apostle', '/saints/saint-phillip-apostle_la-tour.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Georges de La Tour, from Chrysler Museum of Art', 'Georges de La Tour', '1625', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-phillip-apostle', '/saints/saint-phillip-apostle_la-tour.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Georges de La Tour, from Chrysler Museum of Art', 'Georges de La Tour', '1625', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-phillip-apostle', '/saints/saint-phillip-apostle_ribera.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Jusepe de Ribera, from Fondazione Roberto Longhi', 'Jusepe de Ribera', '1610', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-phillip-apostle', '/saints/saint-phillip-apostle_dyck.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Anthony van Dyck, from Kunsthistorisches Museum', 'Anthony van Dyck', '1619-1621', NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint James the Less, Apostle
+('saint-james-the-less-apostle', '/saints/saint-james-the-less-apostle_rubens.jpg', 'Saint James the Less Apostle Painting', 'Saint James the Less the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1610-1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-james-the-less-apostle', '/saints/saint-james-the-less-apostle_la-tour.jpg', 'Saint James the Less Apostle Painting', 'Saint James the Less the Apostle, by Georges de La Tour, from Chrysler Museum of Art', 'Georges de La Tour', '1625', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-james-the-less-apostle', '/saints/saint-james-the-less-apostle_ribera.jpg', 'Saint James the Less Apostle Painting', 'Saint James the Less the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1652', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-james-the-less-apostle', '/saints/saint-james-the-less-apostle_batoni.jpg', 'Saint James the Less Apostle Painting', 'Saint James the Less the Apostle, by Pompeo Batoni, from National Trust', 'Pompeo Batoni', '1740-1743', NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint John of Ávila
+('saint-john-of-avila', '/saints/saint-john-of-avila.jpg', 'Saint John of Avila Painting', 'Saint John of Avila, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-of-avila', '/saints/saint-john-of-avila_2.jpg', 'Saint John of Avila Painting', 'Saint John of Avila, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+
+
+
+
+
 
 
 
