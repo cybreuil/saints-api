@@ -115,6 +115,8 @@ JOIN (VALUES
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt_prison.jpg', 'The Apostle Paul in Prison Painting', 'The Apostle Paul in Prison, by Rembrandt, from Rijksmuseum', 'Rembrandt', '1627', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Rembrandt, from National Gallery of Art', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 8, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_la-tour.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Georges de La Tour (copy), from Musée Toulouse-Lautrec', 'Georges de La Tour', '1820', NULL, 'Public Domain', NULL, 9, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_guercino.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Il Guercino, from Royal Collection', 'Il Guercino', '1650', NULL, 'Public Domain', NULL, 10, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_guercino_2.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Il Guercino (or student), from Slovak National Gallery', 'Il Guercino', '17th Century', NULL, 'Public Domain', NULL, 11, FALSE),
 
 -- Saint Timothy of Ephesus
 ('saint-timothy-of-ephesus', '/saints/saint-timothy-of-ephesus_icon.jpg', 'Saint Timothy of Ephesus Icon', 'Saint Timothy of Ephesus, by an unknown artist, from an orthodox parish (USA)', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 1, TRUE),
@@ -353,8 +355,26 @@ JOIN (VALUES
 ('saint-james-the-less-apostle', '/saints/saint-james-the-less-apostle_batoni.jpg', 'Saint James the Less Apostle Painting', 'Saint James the Less the Apostle, by Pompeo Batoni, from National Trust', 'Pompeo Batoni', '1740-1743', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint John of Ávila
-('saint-john-of-avila', '/saints/saint-john-of-avila.jpg', 'Saint John of Avila Painting', 'Saint John of Avila, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-john-of-avila', '/saints/saint-john-of-avila_2.jpg', 'Saint John of Avila Painting', 'Saint John of Avila, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-of-avila', '/saints/saint-john-of-avila_greco.jpg', 'Saint John of Ávila Painting', 'Saint John of Ávila, by El Greco, from El Greco Museum', 'El Greco', '1580', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-of-avila', '/saints/saint-john-of-avila_subleyras.jpg', 'Saint John of Ávila Painting', 'Saint John of Ávila, by Pierre Subleyras, from Birmingham Museums Trust', 'Pierre Subleyras', '1745-1746', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Nereus
+('saint-nereus', '/saints/saint-domitilla-&-nereus-&-achilleus_rubens.jpg', 'Saint Domitilla with Saint Nereus and Saint Achilleus Painting', 'Saint Domitilla with Saint Nereus and Saint Achilleus, by Peter Paul Rubens, from Santa Maria in Vallicella', 'Peter Paul Rubens', '1608', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-nereus', '/saints/saint-domitilla-&-nereus-&-achilleus_pomarancio.jpg', 'Saint Domitilla with Saint Nereus and Saint Achilleus Painting', 'Saint Domitilla with Saint Nereus and Saint Achilleus, by Cristoforo Roncalli (Il Pomarancio), from Santi Nereo e Achilleo', 'Cristoforo Roncalli (Il Pomarancio)', '1598', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Achilleus
+('saint-achilleus', '/saints/saint-domitilla-&-nereus-&-achilleus_rubens.jpg', 'Saint Domitilla with Saint Nereus and Saint Achilleus Painting', 'Saint Domitilla with Saint Nereus and Saint Achilleus, by Peter Paul Rubens, from Santa Maria in Vallicella', 'Peter Paul Rubens', '1608', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-achilleus', '/saints/saint-domitilla-&-nereus-&-achilleus_pomarancio.jpg', 'Saint Domitilla with Saint Nereus and Saint Achilleus Painting', 'Saint Domitilla with Saint Nereus and Saint Achilleus, by Cristoforo Roncalli (Il Pomarancio), from Santi Nereo e Achilleo', 'Cristoforo Roncalli (Il Pomarancio)', '1598', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Pancras
+('saint-pancras', '/saints/saint-pancras_sachs.jpg', 'Saint Pancras Painting', 'Saint Pancras, by Lambert Sachs', 'Lambert Sachs', '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-pancras', '/saints/saint-pancras_guercino.jpg', 'Saint Pancras Painting', 'Saint Pancras, by Il Guercino, from Pinacoteca di Brera', 'Guercino', '1620-1625', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Matthias, Apostle
+('saint-matthias-apostle', '/saints/saint-matthias-apostle_rubens.jpg', 'Saint Matthias Apostle Painting', 'Saint Matthias the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-matthias-apostle', '/saints/saint-matthias-apostle_dyck.jpg', 'Saint Matthias Apostle Painting', 'Saint Matthias the Apostle, by Anthony van Dyck, from Yale University Art Gallery', 'Anthony van Dyck', '1619', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-matthias-apostle', '/saints/saint-matthias-apostle_tristan.jpg', 'Saint Matthias Apostle Painting', 'Saint Matthias the Apostle, by Luis Tristán, from El Greco Museum', 'Luis Tristán', '1620', NULL, 'Public Domain', NULL, 3, FALSE),
+
 
 
 
