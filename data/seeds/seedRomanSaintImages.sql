@@ -402,14 +402,9 @@ JOIN (VALUES
 ('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_torres.jpg', 'Saint Rita of Cascia Painting', 'Saint Rita of Cascia, by Antonio de Torres, from El Paso Museum of Art', 'Antonio de Torres', '1720', NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Bede the Venerable
-('saint-bede-the-venerable', '/saints/saint-bede-the-venerable.jpg', 'Saint Bede the Venerable Painting', 'Saint Bede the Venerable, by an unknown artist, from Durham Cathedral', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-bede-the-venerable', '/saints/saint-bede-the-venerable_2.jpg', 'Saint Bede the Venerable Painting', 'Saint Bede the Venerable, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
-
-
-
-
-
-
+('saint-bede-the-venerable', '/saints/saint-bede-the-venerable.webp', 'Saint Bede the Venerable Engraving', 'Saint Bede the Venerable, engraving by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-bede-the-venerable', '/saints/saint-bede-the-venerable_penrose.jpg', 'Saint Bede the Venerable translating the Last Chapter of the Gospel of John on his Deathbed Painting', 'Saint Bede the Venerable translating the Last Chapter of the Gospel of John on his Deathbed, by James Doyle Penrose, from the Royal Academy (London)', 'James Doyle Penrose', '1902', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-bede-the-venerable', '/saints/saint-bede-the-venerable_icon.webp', 'Saint Bede the Venerable Icon', 'Saint Bede the Venerable, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
