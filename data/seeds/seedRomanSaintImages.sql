@@ -175,6 +175,7 @@ JOIN (VALUES
 ('saint-scholastica', '/saints/saint-scholastica.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-scholastica', '/saints/saint-scholastica_sassoferrato.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by Sassoferrato, from Museum of Fine Arts of Lyon', 'Sassoferrato', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-scholastica', '/saints/saint-scholastica_briggs.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-scholastica', '/saints/saint-benedict-&-scholastica.jpg', 'Saint Benedict and Saint Scholastica Painting', 'Saint Benedict and Saint Scholastica, by Yan'' Dargent', 'Yan'' Dargent', '19th Century', NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Cyril (brother of Saint Methodius)
 ('saint-cyril', '/saints/saint-cyril.jpg', 'Saint Cyril Icon', 'Saint Cyril, by an unknown artist, from the Holy Mount of Grabarka (Poland)', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
@@ -328,6 +329,7 @@ JOIN (VALUES
 ('saint-catherine-of-siena_tiepolo.jpg', '/saints/saint-catherine-of-siena_tiepolo.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by Giambattista Tiepolo, from Gemäldegalerie (Berlin)', 'Giambattista Tiepolo', '1746', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-catherine-of-siena.jpg', '/saints/saint-catherine-of-siena.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by an unknown artist, from Santa Maria del Rosario in Prati', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-catherine-of-siena', '/saints/saint-catherine-of-siena-&-rose-of-lima-&-agnes-of-montepulciano_tiepolo.jpg', 'The Virgin Appearing to Saint Catherine of Siena, Saint Rose of Lima and Saint Agnes of Montepulciano Painting', 'The Virgin Appearing to Saint Catherine of Siena and Saint Rose of Lima and Saint Agnes of Montepulciano, by Giambattista Tiepolo, from Gesuati', 'Giambattista Tiepolo', '1747-1748', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-catherine-of-siena', '/saints/saint-catherine-of-siena_sassoferrato.jpg', 'Saint Catherine of Siena Painting', 'Saint Catherine of Siena, by Sassoferrato, from Museo del Settecento Veneziano', 'Sassoferrato', '17th Century', NULL, 'Attribution 3.0 Unported', NULL, 5, FALSE),
 
 -- Saint Pius V
 ('saint-pius-v', '/saints/saint-pius-v_passarotti.jpg', 'Saint Pius V Painting', 'Saint Pius V, by Bartolomeo Passarotti, from Walters Art Museum', 'Bartolomeo Passarotti', '1566', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -393,16 +395,15 @@ JOIN (VALUES
 ('saint-christopher-magallanes', '/saints/saint-christopher-magallanes_picture.jpg', 'Saint Christopher Magallanes Picture', 'Saint Christopher Magallanes', NULL, '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Rita of Cascia
-('saint-rita-of-cascia', '/saints/saint-rita-of-cascia.jpg', 'Saint Rita of Cascia Painting', 'Saint Rita of Cascia, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_bellini.jpg', 'Saint Rita of Cascia Painting', 'Saint Rita of Cascia, by Jacopo Bellini, from Metropolitan Museum of Art', 'Jacopo Bellini', '1450-1455', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_tiepolo.jpg', 'The Vision of Saint Rita of Cascia Painting', 'The Vision of Saint Rita of Cascia, by Giambattista Tiepolo, from Gallerie dell''Accademia', 'Giambattista Tiepolo', '1747-1748', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia.png', 'Saint Rita of Cascia Painting', 'Saint Rita of Cascia, by an unknown artist', NULL, '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_2.jpg', 'Saint Rita of Cascia Painting', 'Saint Rita of Cascia, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_brandi.jpg', 'Saint Rita of Cascia in Ecstasy Painting', 'Saint Rita of Cascia in Ecstasy, by Giacinto Brandi, from Sant''Agostino (Rome)', 'Giacinto Brandi', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_poussin.jpg', 'The Translation of Saint Rita of Cascia Painting', 'The Translation of Saint Rita of Cascia, by Nicolas Poussin, from Dulwich Picture Gallery', 'Nicolas Poussin', '1635', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_torres.jpg', 'Saint Rita of Cascia Painting', 'Saint Rita of Cascia, by Antonio de Torres, from El Paso Museum of Art', 'Antonio de Torres', '1720', NULL, 'Public Domain', NULL, 5, FALSE),
 
-
-
-
-
-
-
+-- Saint Bede the Venerable
+('saint-bede-the-venerable', '/saints/saint-bede-the-venerable.jpg', 'Saint Bede the Venerable Painting', 'Saint Bede the Venerable, by an unknown artist, from Durham Cathedral', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-bede-the-venerable', '/saints/saint-bede-the-venerable_2.jpg', 'Saint Bede the Venerable Painting', 'Saint Bede the Venerable, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 
