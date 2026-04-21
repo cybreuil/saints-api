@@ -438,7 +438,9 @@ JOIN (VALUES
 ('saint-paul-vi', '/saints/saint-paul-vi_picture.jpg', 'Saint Paul VI Picture', 'Saint Paul VI, Photographed by Fotografia Felici', 'Fotografia Felici', '1969', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-paul-vi', '/saints/saint-paul-vi_picture_2.webp', 'Saint Paul VI Picture', 'Saint Paul VI', NULL, '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
+-- =========================
+-- June saints
+-- =========================
 
 
 
