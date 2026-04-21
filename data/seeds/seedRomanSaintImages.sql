@@ -442,6 +442,24 @@ JOIN (VALUES
 -- June saints
 -- =========================
 
+-- Saint Justin Martyr
+('saint-justin-martyr', '/saints/saint-justin-martyr_thevet.jpg', 'Saint Justin Martyr Illustration', 'Saint Justin Martyr, by André Thevet, from Book: "Les Vrais Pourtraits et Vies des Hommes Illustres"', 'André Thévet', '1584', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-justin-martyr', '/saints/saint-justin-martyr_icon.jpg', 'Saint Justin Martyr Icon', 'Saint Justin Martyr, by Theophanes the Cretan, from Stavronikita Monastery', 'Theophanes the Cretan', '1545-1546', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Marcellinus
+('saint-marcellinus', '/saints/saint-marcellinus-&-peter.jpg', 'Saint Marcellinus and Saint Peter (exorcist) Painting', 'Saint Marcellinus and Saint Peter, by an unknown artist, from Santi Marcellino e Pietro al Laterano (Rome)', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-marcellinus', '/saints/saint-marcellinus-&-peter_martyr.jpg', 'The Martyrdom of Saint Marcellinus and Saint Peter (exorcist) Illustration', 'The Martyrdom of Saint Marcellinus and Saint Peter (exorcist), by an unknown artist, from Codex Bodmer', NULL, '1170-1200', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-marcellinus', '/saints/saint-marcellinus-&-peter_2.jpg', 'Saint Marcellinus and Saint Peter (exorcist) Illustration', 'Saint Marcellinus and Saint Peter (exorcist)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Peter (Exorcist)
+('saint-peter-exorcist', '/saints/saint-marcellinus-&-peter.jpg', 'Saint Marcellinus and Saint Peter (exorcist) Painting', 'Saint Marcellinus and Saint Peter, by an unknown artist, from Santi Marcellino e Pietro al Laterano (Rome)', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-peter-exorcist', '/saints/saint-marcellinus-&-peter_martyr.jpg', 'The Martyrdom of Saint Marcellinus and Saint Peter (exorcist) Illustration', 'The Martyrdom of Saint Marcellinus and Saint Peter (exorcist), by an unknown artist, from Codex Bodmer', NULL, '1170-1200', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-peter-exorcist', '/saints/saint-marcellinus-&-peter_2.jpg', 'Saint Marcellinus and Saint Peter (exorcist) Illustration', 'Saint Marcellinus and Saint Peter (exorcist)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Charles Lwanga and Companions (maybe should optimize by creating a "saint-charles-lwanga" slug only)
+
+
+
 
 
 
