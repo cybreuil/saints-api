@@ -457,11 +457,10 @@ JOIN (VALUES
 ('saint-peter-exorcist', '/saints/saint-marcellinus-&-peter_2.jpg', 'Saint Marcellinus and Saint Peter (exorcist) Illustration', 'Saint Marcellinus and Saint Peter (exorcist)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Charles Lwanga and Companions (maybe should optimize by creating a "saint-charles-lwanga" slug only)
-
-
-
-
-
+('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions_icon.jpg', 'Saint Charles Lwanga and Companions Icon', 'Saint Charles Lwanga and Companions, by Teresa Satola', 'Teresa Satola', '2013', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions.avif', 'Saint Charles Lwanga and Companions Painting', 'Saint Charles Lwanga and Companions', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions_2.jpg', 'Saint Charles Lwanga and Companions Painting', 'Saint Charles Lwanga and Companions', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+-- WIP
 
 
 
