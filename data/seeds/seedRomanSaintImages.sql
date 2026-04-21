@@ -283,7 +283,7 @@ JOIN (VALUES
 -- Saint Martin I
 ('saint-martin-i', '/saints/saint-martin-i_montor.jpg', 'Saint Martin I Illustration', 'Saint Martin I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-martin-i', '/saints/saint-martin-i_stained-glass.jpg', 'Saint Martin I Stained Glass', 'Saint Martin I, by an unknown artist, from Saint Martin Church (Arc-en-Barrois)', NULL, '1888', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-martin-i', '/saints/saint-martin-i.png', 'Saint Martin I Painting', 'Saint Martin I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-martin-i', '/saints/saint-martin-i.png', 'Saint Martin I Mosaic', 'Saint Martin I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Anselm
 ('saint-anselm', '/saints/saint-anselm_glover.jpg', 'Saint Anselm Engraving', 'Saint Anselm, engraving by George Glover, from National Portrait Gallery', 'George Glover', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -381,7 +381,7 @@ JOIN (VALUES
 
 -- Saint John I
 ('saint-john-i', '/saints/saint-john-i_montor.jpg', 'Saint John I Illustration', 'Saint John I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-john-i', '/saints/saint-john-i.jpg', 'Saint John I Painting', 'Saint John I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-i', '/saints/saint-john-i.jpg', 'Saint John I Mosaic', 'Saint John I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Bernardine of Siena
 ('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena_bellini.png', 'Saint Bernardine of Siena Painting', 'Saint Bernardine of Siena, by Jacopo Bellini, from Metropolitan Museum of Art', 'Jacopo Bellini', '1450-1455', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -405,6 +405,27 @@ JOIN (VALUES
 ('saint-bede-the-venerable', '/saints/saint-bede-the-venerable.webp', 'Saint Bede the Venerable Engraving', 'Saint Bede the Venerable, engraving by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-bede-the-venerable', '/saints/saint-bede-the-venerable_penrose.jpg', 'Saint Bede the Venerable translating the Last Chapter of the Gospel of John on his Deathbed Painting', 'Saint Bede the Venerable translating the Last Chapter of the Gospel of John on his Deathbed, by James Doyle Penrose, from the Royal Academy (London)', 'James Doyle Penrose', '1902', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-bede-the-venerable', '/saints/saint-bede-the-venerable_icon.webp', 'Saint Bede the Venerable Icon', 'Saint Bede the Venerable, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Gregory VII
+('saint-gregory-vii', '/saints/saint-gregory-vii_knille.webp', 'Saint Gregory VII Engraving', 'Saint Gregory VII, engraving from a Drawing by Otto Knille', 'Otto Knille', '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-gregory-vii', '/saints/saint-gregory-vii.png', 'Saint Gregory VII Painting', 'Saint Gregory VII, by an unknown artist, from', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-gregory-vii', '/saints/saint-gregory-vii_scarpelli.jpg', 'The Holy Roman Emperor Henry IV begging for the forgiveness of Pope Gregory VII Illustration', 'The Holy Roman Emperor Henry IV begging for the forgiveness of Pope Gregory VII, by Tancredi Scarpelli, from Book : "Storia d''Italia by Paolo Giudici"', 'Tancredi Scarpelli', '1930', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-gregory-vii', '/saints/saint-gregory-vii_2.webp', 'Saint Gregory VII Illustration', 'Saint Gregory VII forgives Quintius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-gregory-vii', '/saints/saint-gregory-vii_3.png', 'Saint Gregory VII Mosaic', 'Saint Gregory VII, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-gregory-vii', '/saints/saint-gregory-vii_4.jpg', 'Saint Gregory VII Illustration', 'Saint Gregory VII, by Giovanni Battista de'' Cavalieri, from Book : "Pontificum Romanorum effigies"', 'Giovanni Battista de'' Cavalieri', '1580', NULL, 'Public Domain', NULL, 6, FALSE),
+
+-- Saint Mary Magdalene de’ Pazzi
+('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_cano.jpg', 'Saint Mary Magdalene de’ Pazzi Painting', 'Saint Mary Magdalene de’ Pazzi, by Alonso Cano, from Museum of Fine Arts of Seville', 'Alonso Cano', '1628', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_rosi.jpg', 'Saint Mary Magdalene de’ Pazzi in Ecstasy Painting', 'Saint Mary Magdalene de’ Pazzi in Ecstasy, by Alessandro Rosi, from a private collection', 'Alessandro Rosi', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_moya.jpg', 'Vision of Saint Mary Magdalene de’ Pazzi Painting', 'Vision of Saint Mary Magdalene de’ Pazzi, by Pedro de Moya, from Museo de Bellas Artes de Granada', 'Pedro de Moya', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+
+
+
+
+
+
 
 
 
