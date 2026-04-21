@@ -419,15 +419,14 @@ JOIN (VALUES
 ('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_rosi.jpg', 'Saint Mary Magdalene de’ Pazzi in Ecstasy Painting', 'Saint Mary Magdalene de’ Pazzi in Ecstasy, by Alessandro Rosi, from a private collection', 'Alessandro Rosi', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_moya.jpg', 'Vision of Saint Mary Magdalene de’ Pazzi Painting', 'Vision of Saint Mary Magdalene de’ Pazzi, by Pedro de Moya, from Museo de Bellas Artes de Granada', 'Pedro de Moya', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Philip Neri
+('saint-philip-neri', '/saints/saint-philip-neri_reni.jpg', 'Saint Philip Neri in Ecstasy Painting', 'Saint Philip Neri in Ecstasy, by Guido Reni, from Santa Maria in Vallicella', 'Guido Reni', '1614', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-philip-neri', '/saints/saint-philip-neri_conca.gif', 'Saint Philip Neri Painting', 'Saint Philip Neri, by Sebastiano Conca', 'Sebastiano Conca', '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-philip-neri', '/saints/saint-philip-neri_dolci.jpg', 'Saint Philip Neri Painting', 'Saint Philip Neri, by Carlo Dolci, from Metropolitan Museum of Art', 'Carlo Dolci', '1645-1646', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-philip-neri', '/saints/saint-philip-neri_tiepolo.jpg', 'Saint Philip Neri Painting', 'Saint Philip Neri, by Giambattista Tiepolo, from Museo Diocesano Camerino', 'Giambattista Tiepolo', '1739-1740', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-philip-neri', '/saints/saint-philip-neri_nogari.jpg', 'Saint Philip Neri Painting', 'Saint Philip Neri, by Carlo Francesco Nogari, from Galleria nazionale di Parma', 'Carlo Francesco Nogari', '18th Century', NULL, 'Public Domain', NULL, 5, FALSE),
 
-
-
-
-
-
-
-
-
+-- Saint Augustine of Canterbury
 
 
 
