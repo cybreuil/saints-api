@@ -39,6 +39,7 @@ JOIN (VALUES
 ('saint-mary', '/saints/saint-mary_guido-reni.jpg', 'The Assumption of the Virgin Painting', 'The Assumption of the Virgin, by Guido Reni, from The Städel Museum', 'Guido Reni', '1637-1638', NULL, 'Public Domain', NULL, 11, FALSE),
 ('saint-mary', '/saints/saint-mary_caravaggio_dormition.jpg', 'The Dormition of the Virgin Painting', 'The Dormition of the Virgin, by Caravaggio, from Musée du Louvre', 'Caravaggio', '1606-1607', NULL, 'Public Domain', NULL, 12, FALSE),
 ('saint-mary', '/saints/saint-mary_velazquez_adoration.jpg', 'The Adoration of the Magi Painting', 'The Adoration of the Magi, by Diego Velázquez, from Museo del Prado', 'Diego Velázquez', '1619', NULL, 'Public Domain', NULL, 13, FALSE),
+('saint-mary', '/saints/saint-mary_champaigne.jpg', 'Madonna and Child Painting', 'Madonna and Child, by Philippe de Champaigne, from Musée des Beaux-Arts d''Agen', 'Philippe de Champaigne', '17th Century', NULL, 'Attribution-ShareAlike 4.0 International', NULL, 14, FALSE),
 
 -- Saint Joseph
 ('saint-joseph', '/saints/saint-joseph_guido-reni.jpg', 'Saint Joseph and the Christ Child Painting', 'Saint Joseph and the Christ Child, by Guido Reni, from Museum of Fine Arts of Houston', 'Guido Reni', '1640', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -46,6 +47,7 @@ JOIN (VALUES
 ('saint-joseph', '/saints/saint-joseph_murillo.jpg', 'Saint Joseph and the Christ Child', 'Saint Joseph and the Christ Child, by Bartolomé Esteban Murillo, from The John and Mable Ringling Museum of Art', 'Bartolomé Esteban Murillo', '1670-1675', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-joseph', '/saints/saint-joseph_murillo_holy-family.jpg', 'The Holy Family Painting', 'The Holy Family, by Bartolomé Esteban Murillo, from National Gallery of Ireland', 'Bartolomé Esteban Murillo', '1640-1649', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-joseph', '/saints/saint-joseph_la-tour.jpg', 'Joseph the Carpenter Painting', 'Joseph the Carpenter, by Georges de La Tour, from Musée du Louvre', 'Georges de La Tour', '1640-1645', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-joseph', '/saints/saint-joseph_champaigne.jpg', 'The Dream of Saint Joseph Painting', 'The Dream of Saint Joseph, by Philippe de Champaigne, from National Gallery', 'Philippe de Champaigne', '1642-1643', NULL, 'Public Domain', NULL, 6, FALSE),
 
 -- Saint John the Baptist
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_caravaggio.jpg', 'Saint John the Baptist in the Wilderness Painting', 'Saint John the Baptist in the Wilderness, by Caravaggio, from the Nelson-Atkins Museum of Art', 'Caravaggio', '1604-1605', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -427,6 +429,18 @@ JOIN (VALUES
 ('saint-philip-neri', '/saints/saint-philip-neri_nogari.jpg', 'Saint Philip Neri Painting', 'Saint Philip Neri, by Carlo Francesco Nogari, from Galleria nazionale di Parma', 'Carlo Francesco Nogari', '18th Century', NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Augustine of Canterbury
+('saint-augustine-of-canterbury', '/saints/saint-augustine-of-canterbury_lommelin.jpg', 'Saint Augustine of Canterbury Engraving', 'Saint Augustine of Canterbury, by Adriaen Lommelin', 'Adriaen Lommelin', '17th Century', NULL, 'Attribution 4.0 International', NULL, 1, TRUE),
+('saint-augustine-of-canterbury', '/saints/saint-augustine-of-canterbury.jpg', 'Saint Augustine of Canterbury and the Saxons Illustration', 'Saint Augustine of Canterbury and the Saxons, by Joseph Martin Kronheim, from Book: "Pictures of English history"', 'Joseph Martin Kronheim', '1868', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-augustine-of-canterbury', '/saints/saint-augustine-of-canterbury_icon.jpg', 'Saint Augustine of Canterbury Icon', 'Saint Augustine of Canterbury, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Paul VI
+('saint-paul-vi', '/saints/saint-paul-vi.jpg', 'Saint Paul VI Painting', 'Saint Paul VI, by an unknown artist', NULL, '20th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-paul-vi', '/saints/saint-paul-vi_picture.jpg', 'Saint Paul VI Picture', 'Saint Paul VI, Photographed by Fotografia Felici', 'Fotografia Felici', '1969', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-paul-vi', '/saints/saint-paul-vi_picture_2.webp', 'Saint Paul VI Picture', 'Saint Paul VI', NULL, '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+
+
 
 
 
