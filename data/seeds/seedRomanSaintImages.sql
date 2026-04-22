@@ -456,11 +456,20 @@ JOIN (VALUES
 ('saint-peter-exorcist', '/saints/saint-marcellinus-&-peter_martyr.jpg', 'The Martyrdom of Saint Marcellinus and Saint Peter (exorcist) Illustration', 'The Martyrdom of Saint Marcellinus and Saint Peter (exorcist), by an unknown artist, from Codex Bodmer', NULL, '1170-1200', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-peter-exorcist', '/saints/saint-marcellinus-&-peter_2.jpg', 'Saint Marcellinus and Saint Peter (exorcist) Illustration', 'Saint Marcellinus and Saint Peter (exorcist)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Double check for t470s downloads
 -- Saint Charles Lwanga and Companions (maybe should optimize by creating a "saint-charles-lwanga" slug only)
 ('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions_icon.jpg', 'Saint Charles Lwanga and Companions Icon', 'Saint Charles Lwanga and Companions, by Teresa Satola', 'Teresa Satola', '2013', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions.avif', 'Saint Charles Lwanga and Companions Painting', 'Saint Charles Lwanga and Companions', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions_2.jpg', 'Saint Charles Lwanga and Companions Painting', 'Saint Charles Lwanga and Companions', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 -- WIP
+
+-- Saint Boniface
+('saint-boniface', '/saints/saint-boniface_bloemaert.jpg', 'Saint Boniface Painting', 'Saint Boniface, by Cornelis Bloemaert', 'Cornelis Bloemaert', '1630', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-boniface', '/saints/saint-boniface_rode.jpg', 'Saint Boniface chops down a cult tree in Hessen Engraving', 'Saint Boniface chops down a cult tree in Hessen, by Bernhard Rode', 'Bernhard Rode', '1781', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-boniface', '/saints/saint-boniface_rethel.jpg', 'Saint Boniface Painting', 'Saint Boniface, by Alfred Rethel, from Berggruen Museum', 'Alfred Rethel', '1832', NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+
 
 
 
