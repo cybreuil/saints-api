@@ -513,6 +513,17 @@ JOIN (VALUES
 ('saint-john-fischer', '/saints/saint-john-fischer_illustration.jpg', 'Saint John Fischer Line Engraving', 'Saint John Fischer, by Jacobus Houbraken', 'Jacobus Houbraken', '1743', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-john-fischer', '/saints/saint-john-fischer_briggs.jpg', 'Saint John Fischer Painting', 'Saint John Fischer, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '2019', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Thomas More
+('saint-thomas-more', '/saints/saint-thomas-more_holbein-younger.jpg', 'Saint Thomas More Painting', 'Saint Thomas More, by Hans Holbein the Younger, from Frick Collection', 'Hans Holbein the Younger', '1527', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-thomas-more', '/saints/saint-thomas-more_holbein.jpg', 'Saint Thomas More Painting', 'Saint Thomas More, by Hans Holbein the Younger, from Frick Collection', 'Hans Holbein the Younger', '1527-1528', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-thomas-more', '/saints/saint-thomas-more_illustration.jpg', 'Saint Thomas More Line Engraving', 'Saint Thomas More, by Jacobus Houbraken', 'Jacobus Houbraken', '1743', NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+
+
+
+
+
 
 
 
