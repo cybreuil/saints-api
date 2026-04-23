@@ -479,8 +479,10 @@ JOIN (VALUES
 ('saint-ephrem', '/saints/saint-ephrem_mosaic.jpg', 'Saint Ephrem Mosaic', 'Saint Ephrem, by an unknown artist, from Nea Moni of Chios', NULL, '11th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-ephrem', '/saints/saint-ephrem_illustration.jpg', 'Saint Ephrem Illustration', 'Saint Ephrem, by an unknown artist, from a Russian Missal', NULL, '16th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
+-- Saint Barnabas, Apostle
+('saint-barnabas-apostle', '/saints/saint-barnabas-apostle.jpg', 'Saint Barnabas Apostle Painting', 'Saint Barnabas the Apostle, by an unknown artist', NULL, '18th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-barnabas-apostle', '/saints/saint-barnabas-apostle_veronese.jpg', 'Saint Barnabas Apostle healing the Sick Painting', 'Saint Barnabas the Apostle healing the Sick, by Paolo Veronese, from San Giorgio in Braida (Verona)', 'Paolo Veronese', '1566', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-barnabas-apostle', '/saints/saint-paul-apostle-&-barnabas.jpg', 'Saint Paul and Saint Barnabas in Lystra Painting', 'Saint Paul and Saint Barnabas in Lystra, by Claude-Guy Hallé, from Musée Carnavalet', 'Claude-Guy Hallé', '1717', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
