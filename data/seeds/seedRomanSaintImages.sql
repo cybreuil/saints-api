@@ -261,7 +261,7 @@ JOIN (VALUES
 ('saint-francis-of-paola', '/saints/saint-francis-of-paola_ribera.jpg', 'Saint Francis of Paola Painting', 'Saint Francis of Paola, by Jusepe de Ribera, from Private Collection, ', 'Jusepe de Ribera', '1652', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-francis-of-paola', '/saints/saint-francis-of-paola_bianchi.jpg', 'Saint Francis of Paola in Ecstasy Painting', 'Saint Francis of Paola in Ecstasy, by Pietro Bianchi, from Musée du Louvre', 'Pietro Bianchi', '1728', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-francis-of-paola', '/saints/saint-francis-of-paola_gandolfi.jpg', 'The Vision of Saint Francis of Paola Painting', 'The Vision of Saint Francis of Paola, by Ubaldo Gandolfi, from Pinacoteca Nazionale di Bologna', 'Ubaldo Gandolfi', '1778', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-francis-of-paola', '/saints/saint-francis-of-paola_giordano.jpg', 'Saint Francis of Paola crosses the straits of Messina Painting', 'Saint Francis of Paola crosses the straits of Messina, by Luca Giordano, from a private collection', NULL, '1692', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-francis-of-paola', '/saints/saint-francis-of-paola_giordano.jpg', 'Saint Francis of Paola crosses the straits of Messina Painting', 'Saint Francis of Paola crosses the straits of Messina, by Luca Giordano, from Private collection', NULL, '1692', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Isidore
 ('saint-isidore', '/saints/saint-isidore_murillo.jpg', 'Saint Isidore Painting', 'Saint Isidore, by Bartolomé Esteban Murillo, from Seville Cathedral', 'Bartolomé Esteban Murillo', '1655', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -274,7 +274,7 @@ JOIN (VALUES
 ('saint-vincent-ferrer', '/saints/saint-vincent-ferrer_juanes.jpg', 'Saint Vincent Ferrer Painting', 'Saint Vincent Ferrer, by Juan de Juanes, from Private Collection', 'Juan de Juanes', '1445-1450', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint John Baptist de La Salle
-('saint-john-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle.jpg', 'Saint John Baptist de la Salle Painting', 'Saint John Baptist de la Salle, by an unknown artist, from a private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle.jpg', 'Saint John Baptist de la Salle Painting', 'Saint John Baptist de la Salle, by an unknown artist, from Private collection', NULL, '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-john-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle_muller.jpg', 'Saint John Baptist de la Salle Engraving', 'Saint John Baptist de la Salle, engraving by Chapon, from a Painting by Charles Muller', 'Chapon', '1887', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-jonh-baptist-de-la-salle', '/saints/saint-john-baptist-de-la-salle_2.jpg', 'Saint John Baptist de la Salle Painting', 'Saint John Baptist de la Salle, by Gagliardi Giovanni', 'Gagliardi Giovanni', '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
@@ -308,7 +308,7 @@ JOIN (VALUES
 
 -- Saint Fidelis of Sigmaringen
 ('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen.jpg', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', 'The Martyrdom of Saint Fidelis of Sigmaringen, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen.webp', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', 'The Martyrdom of Saint Fidelis of Sigmaringen, by an unknown artist, from a private collection', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen.webp', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', 'The Martyrdom of Saint Fidelis of Sigmaringen, by an unknown artist, from Private collection', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-fidelis-of-sigmaringen', '/saints/saint-fidelis-of-sigmaringen-&-joseph-of-leonessa_tiepolo.jpg', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa Painting', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa, by Giambattista Tiepolo, from Galleria nazionale di Parma', 'Giambattista Tiepolo', '1752-1758', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Mark the Evangelist
@@ -418,7 +418,7 @@ JOIN (VALUES
 
 -- Saint Mary Magdalene de’ Pazzi
 ('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_cano.jpg', 'Saint Mary Magdalene de’ Pazzi Painting', 'Saint Mary Magdalene de’ Pazzi, by Alonso Cano, from Museum of Fine Arts of Seville', 'Alonso Cano', '1628', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_rosi.jpg', 'Saint Mary Magdalene de’ Pazzi in Ecstasy Painting', 'Saint Mary Magdalene de’ Pazzi in Ecstasy, by Alessandro Rosi, from a private collection', 'Alessandro Rosi', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_rosi.jpg', 'Saint Mary Magdalene de’ Pazzi in Ecstasy Painting', 'Saint Mary Magdalene de’ Pazzi in Ecstasy, by Alessandro Rosi, from Private collection', 'Alessandro Rosi', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-mary-magdalene-de-pazzi', '/saints/saint-mary-magdalene-de-pazzi_moya.jpg', 'Vision of Saint Mary Magdalene de’ Pazzi Painting', 'Vision of Saint Mary Magdalene de’ Pazzi, by Pedro de Moya, from Museo de Bellas Artes de Granada', 'Pedro de Moya', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Philip Neri
@@ -484,16 +484,12 @@ JOIN (VALUES
 ('saint-barnabas-apostle', '/saints/saint-barnabas-apostle_veronese.jpg', 'Saint Barnabas Apostle healing the Sick Painting', 'Saint Barnabas the Apostle healing the Sick, by Paolo Veronese, from San Giorgio in Braida (Verona)', 'Paolo Veronese', '1566', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-barnabas-apostle', '/saints/saint-paul-apostle-&-barnabas.jpg', 'Saint Paul and Saint Barnabas in Lystra Painting', 'Saint Paul and Saint Barnabas in Lystra, by Claude-Guy Hallé, from Musée Carnavalet', 'Claude-Guy Hallé', '1717', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
-
-
-
-
-
-
-
-
+-- Saint Anthony of Padua
+('saint-anthony-of-padua', '/saints/saint-anthony-of-padua_zurbaran.jpg', 'Saint Anthony of Padua Painting', 'Saint Anthony of Padua, by Francisco de Zurbarán, from São Paulo Museum of Art', 'Francisco de Zurbarán', '1627-1630', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-anthony-of-padua', '/saints/saint-anthony-of-padua_farelli.jpg', 'Saint Anthony of Padua with the Christ Child Painting', 'Saint Anthony of Padua with the Christ Child, by Giacomo Farelli', 'Giacomo Farelli', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-anthony-of-padua', '/saints/saint-anthony-of-padua_sirani.jpg', 'Saint Anthony of Padua with the Christ Child Painting', 'Saint Anthony of Padua with the Christ Child, by Elisabetta Sirani, from Private Collection', 'Elisabetta Sirani', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-anthony-of-padua', '/saints/saint-anthony-of-padua_strozzi.jpg', 'Saint Anthony of Padua holding the Infant Jesus Painting', 'Saint Anthony of Padua holding the Infant Jesus, by Bernardo Strozzi, from Musée des Beaux-Arts de Strasbourg', 'Bernardo Strozzi', '1625', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-anthony-of-padua', '/saints/saint-anthony-of-padua_murillo.jpg', 'Saint Anthony of Padua with the Child Painting', 'Saint Anthony of Padua with the Child, by Bartolomé Esteban Murillo, from Museum of Fine Arts of Seville', 'Bartolomé Esteban Murillo', '1668-1669', NULL, 'Public Domain', NULL, 5, FALSE),
 
 
 
