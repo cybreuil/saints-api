@@ -497,10 +497,11 @@ JOIN (VALUES
 ('saint-romuald', '/saints/saint-romuald_angelico.jpg', 'Saint Romuald Fresco', 'Saint Romuald, by Fra Angelico, from Museo Nazionale di San Marco', 'Fra Angelico', '1441', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-romuald', '/saints/saint-romuald_mussini.jpg', 'Saint Romuald Painting', 'Saint Romuald, by Augusto Mussini, from Monastery of Camaldoli', 'Bernardino Mussini', '1914-1915', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
-
-
-
+-- Saint Aloysius Gonzaga
+('saint-aloysius-gonzaga', '/saints/saint-aloysius-gonzaga_mazzanti.jpg', 'Saint Aloysius Gonzaga adoring the Crucifix Painting', 'Saint Aloysius Gonzaga adoring the Crucifix, by Ludovico Mazzanti, from Fondation Bemberg', 'Ludovico Mazzanti', '1740-1745', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-aloysius-gonzaga', '/saints/saint-aloysius-gonzaga_guercino.jpg', 'The Vocation of Saint Aloysius Gonzaga Painting', 'The Vocation of Saint Aloysius Gonzaga, by Il Guercino, from Metropolitan Museum of Art', 'Il Guercino', '1650', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-aloysius-gonzaga', '/saints/saint-aloysius-gonzaga_goya.jpg', 'Saint Aloysius Gonzaga Painting', 'Saint Aloysius Gonzaga, by Francisco Goya, from Zaragoza Museum', 'Francisco Goya', '1798', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-aloysius-gonzaga', '/saints/saint-aloysius-gonzaga_tiepolo.jpg', 'Saint Aloysius Gonzaga in Glory Painting', 'Saint Aloysius Gonzaga in Glory, by Giambattista Tiepolo, from Courtauld Institute of Art', 'Giambattista Tiepolo', '1726', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
