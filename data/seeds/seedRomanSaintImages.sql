@@ -515,8 +515,37 @@ JOIN (VALUES
 
 -- Saint Thomas More
 ('saint-thomas-more', '/saints/saint-thomas-more_holbein-younger.jpg', 'Saint Thomas More Painting', 'Saint Thomas More, by Hans Holbein the Younger, from Frick Collection', 'Hans Holbein the Younger', '1527', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-thomas-more', '/saints/saint-thomas-more_holbein.jpg', 'Saint Thomas More Painting', 'Saint Thomas More, by Hans Holbein the Younger, from Frick Collection', 'Hans Holbein the Younger', '1527-1528', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-thomas-more', '/saints/saint-thomas-more_illustration.jpg', 'Saint Thomas More Line Engraving', 'Saint Thomas More, by Jacobus Houbraken', 'Jacobus Houbraken', '1743', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-thomas-more', '/saints/saint-thomas-more_ward.jpg', 'Saint Thomas More Farewell to his Daughter Painting', 'Saint Thomas More Farewell to his Daughter, by Edward Matthew Ward', 'Edward Matthew Ward', '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Peter, Apostle check dyck date
+('saint-peter-apostle', '/saints/saint-peter-apostle_rubens.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1610-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_rubens_charge.jpg', 'Christ''s Charge to Peter Painting', 'Christ''s Charge to Peter, by Peter Paul Rubens, from Wallace Collection', 'Peter Paul Rubens', '1616', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_dyck.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Anthony van Dyck, from Private Collection', 'Anthony van Dyck', '1600', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_dyck_penitent.jpg', 'The Penitent Saint Peter Painting', 'The Penitent Saint Peter, by Anthony van Dyck, from Private Collection', 'Anthony van Dyck', '1618-1620', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_guercino.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Il Guercino, from Fondation Bemberg', 'Il Guercino', '17th Century', NULL, 'Attribution-ShareAlike 4.0 International', NULL, 5, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_guercino_weeping.jpg', 'Saint Peter Weeping before the Virgin Painting', 'Saint Peter Weeping before the Virgin, by Il Guercino, from Musée du Louvre', 'Il Guercino', '1647', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_murillo.jpg', 'Saint Peter Apostle in Tears Painting', 'Saint Peter the Apostle in Tears, by Bartolomé Esteban Murillo, from Museo de Bellas Artes de Bilbao', 'Bartolomé Esteban Murillo', '1650-1655', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_ribera.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_ribera_penitent.jpg', 'The Penitent Saint Peter Painting', 'The Penitent Saint Peter, by Jusepe de Ribera, from Art Institute of Chicago', 'Jusepe de Ribera', '1628-1632', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_velazquez.jpg', 'The Tears of Saint Peter Apostle Painting', 'The Tears of Saint Peter the Apostle, by Diego Velázquez, from Private Collection', 'Diego Velázquez', '1617-1619', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_caravaggio_crucifixion.jpg', 'The Crucifixion of Saint Peter Painting', 'The Crucifixion of Saint Peter, by Caravaggio, from Santa Maria del Popolo (Rome)', 'Caravaggio', '1600-1601', NULL, 'Public Domain', NULL, 9, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_rembrandt.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Rembrandt, from Rijksmuseum', 'Rembrandt', '1630', NULL, 'Public Domain', NULL, 10, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_rembrandt_denial.jpg', 'The Denial of Saint Peter Painting', 'The Denial of Saint Peter, by Rembrandt, from Rijksmuseum', 'Rembrandt', '1660', NULL, 'Public Domain', NULL, 11, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
