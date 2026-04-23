@@ -374,7 +374,7 @@ JOIN (VALUES
 
 -- Saint Pancras
 ('saint-pancras', '/saints/saint-pancras_sachs.jpg', 'Saint Pancras Painting', 'Saint Pancras, by Lambert Sachs', 'Lambert Sachs', '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-pancras', '/saints/saint-pancras_guercino.jpg', 'Saint Pancras Painting', 'Saint Pancras, by Il Guercino, from Pinacoteca di Brera', 'Guercino', '1620-1625', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-pancras', '/saints/saint-pancras_guercino.jpg', 'Saint Pancras Painting', 'Saint Pancras, by Il Guercino, from Pinacoteca di Brera', 'Il Guercino', '1620-1625', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Matthias, Apostle
 ('saint-matthias-apostle', '/saints/saint-matthias-apostle_rubens.jpg', 'Saint Matthias Apostle Painting', 'Saint Matthias the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -490,6 +490,30 @@ JOIN (VALUES
 ('saint-anthony-of-padua', '/saints/saint-anthony-of-padua_sirani.jpg', 'Saint Anthony of Padua with the Christ Child Painting', 'Saint Anthony of Padua with the Christ Child, by Elisabetta Sirani, from Private Collection', 'Elisabetta Sirani', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-anthony-of-padua', '/saints/saint-anthony-of-padua_strozzi.jpg', 'Saint Anthony of Padua holding the Infant Jesus Painting', 'Saint Anthony of Padua holding the Infant Jesus, by Bernardo Strozzi, from Musée des Beaux-Arts de Strasbourg', 'Bernardo Strozzi', '1625', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-anthony-of-padua', '/saints/saint-anthony-of-padua_murillo.jpg', 'Saint Anthony of Padua with the Child Painting', 'Saint Anthony of Padua with the Child, by Bartolomé Esteban Murillo, from Museum of Fine Arts of Seville', 'Bartolomé Esteban Murillo', '1668-1669', NULL, 'Public Domain', NULL, 5, FALSE),
+
+-- Saint Romuald
+('saint-romuald', '/saints/saint-romuald_guercino.jpg', 'Saint Romuald Painting', 'Saint Romuald, by Il Guercino, from Ravenna Art Museum', 'Il Guercino', '1640-1641', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-romuald', '/saints/saint-romuald_loth.jpg', 'Saint Romuald Painting', 'Saint Romuald, by Johann Carl Loth, from Gallerie dell''Accademia', 'Johann Carl Loth', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-romuald', '/saints/saint-romuald_angelico.jpg', 'Saint Romuald Fresco', 'Saint Romuald, by Fra Angelico, from Museo Nazionale di San Marco', 'Fra Angelico', '1441', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-romuald', '/saints/saint-romuald_mussini.jpg', 'Saint Romuald Painting', 'Saint Romuald, by Augusto Mussini, from Monastery of Camaldoli', 'Bernardino Mussini', '1914-1915', NULL, 'Public Domain', NULL, 4, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
