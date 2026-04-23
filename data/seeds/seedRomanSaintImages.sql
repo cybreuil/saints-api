@@ -193,7 +193,7 @@ JOIN (VALUES
 
 -- Saint Peter Damian
 ('saint-peter-damian', '/saints/saint-peter-damian.jpg', 'Saint Peter Damian Painting', 'Saint Peter Damian, by Andrea Barbiani, from Biblioteca Classense', 'Andrea Barbiani', '18th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-peter-damian', '/saints/saint-peter-damian_briggs.jpg', 'Saint Peter Damian Painting', 'Saint Peter Damian, by an Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-peter-damian', '/saints/saint-peter-damian_briggs.jpg', 'Saint Peter Damian Painting', 'Saint Peter Damian, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Polycarp
 ('saint-polycarp', '/saints/saint-polycarp.jpg', 'Saint Polycarp Icon', 'Saint Polycarp, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
@@ -503,18 +503,15 @@ JOIN (VALUES
 ('saint-aloysius-gonzaga', '/saints/saint-aloysius-gonzaga_goya.jpg', 'Saint Aloysius Gonzaga Painting', 'Saint Aloysius Gonzaga, by Francisco Goya, from Zaragoza Museum', 'Francisco Goya', '1798', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-aloysius-gonzaga', '/saints/saint-aloysius-gonzaga_tiepolo.jpg', 'Saint Aloysius Gonzaga in Glory Painting', 'Saint Aloysius Gonzaga in Glory, by Giambattista Tiepolo, from Courtauld Institute of Art', 'Giambattista Tiepolo', '1726', NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Paulinus of Nola
+('saint-paulinus-of-nola', '/saints/saint-paulinus-of-nola.jpg', 'Saint Paulinus of Nola Line Engraving', 'Saint Paulinus of Nola, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-paulinus-of-nola', '/saints/saint-paulinus-of-nola_stained-glass.jpg', 'Saint Paulinus of Nola Stained Glass', 'Saint Paulinus of Nola, by an unknown artist, from Linz Cathedral (upper Austria)', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-paulinus-of-nola', '/saints/saint-paulinus-of-nola_azzolino.jpg', 'Saint Paulinus of Nola frees a Slave Painting', 'Saint Paulinus of Nola frees a Slave , by Giovanni Bernardino Azzolini, from Pio Monte della Misericordia', 'Giovanni Bernardino Azzolini', '1626', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
-
-
-
-
-
-
-
-
-
+-- Saint John Fischer
+('saint-john-fischer', '/saints/saint-john-fischer_holbein-younger.jpg', 'Saint John Fischer Painting', 'Saint John Fischer, by Hans Holbein the Younger', 'Hans Holbein the Younger', '1497-1543', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-fischer', '/saints/saint-john-fischer_illustration.jpg', 'Saint John Fischer Line Engraving', 'Saint John Fischer, by Jacobus Houbraken', 'Jacobus Houbraken', '1743', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-fischer', '/saints/saint-john-fischer_briggs.jpg', 'Saint John Fischer Painting', 'Saint John Fischer, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '2019', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
