@@ -475,9 +475,9 @@ JOIN (VALUES
 ('saint-norbert', '/saints/saint-norbert.jpg', 'Saint Norbert Painting', 'Saint Norbert, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Ephrem
-
-
-
+('saint-ephrem', '/saints/saint-ephrem_icon.jpg', 'Saint Ephrem Icon', 'Saint Ephrem', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-ephrem', '/saints/saint-ephrem_mosaic.jpg', 'Saint Ephrem Mosaic', 'Saint Ephrem, by an unknown artist, from Nea Moni of Chios', NULL, '11th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-ephrem', '/saints/saint-ephrem_illustration.jpg', 'Saint Ephrem Illustration', 'Saint Ephrem, by an unknown artist, from a Russian Missal', NULL, '16th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
