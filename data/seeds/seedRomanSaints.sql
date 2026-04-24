@@ -1383,15 +1383,15 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='LYON'),
   (SELECT id FROM places WHERE code='LYON')
 ),
-(
-  'first-martyrs-of-holy-roman-church', 'First Martyrs of the Holy Roman Church',
-  NULL, NULL, NULL, TRUE,
-  NULL, 6, 30, TRUE,
-  1,
-  NULL,
-  (SELECT id FROM places WHERE code='ROME'),
-  (SELECT id FROM places WHERE code='ROME')
-)
+-- (
+--   'first-martyrs-of-holy-roman-church', 'First Martyrs of the Holy Roman Church',
+--   NULL, NULL, NULL, TRUE,
+--   NULL, 6, 30, TRUE,
+--   1,
+--   NULL,
+--   (SELECT id FROM places WHERE code='ROME'),
+--   (SELECT id FROM places WHERE code='ROME')
+-- )
 ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO saint_translations (saint_id, locale_code, name, short_description, full_biography, life_label)
@@ -1415,7 +1415,7 @@ JOIN (VALUES
 ('saint-peter-apostle', 'Saint Peter, Apostle', 'Chief of the Apostles and foundational witness of the Church in Rome.', 'Peter, originally Simon of Galilee, was called by Christ and entrusted with a decisive pastoral mission among the Apostles. The New Testament presents him as a principal witness of Jesus'' ministry, Passion, and Resurrection, and as a leading figure in the apostolic community. Christian tradition holds that he exercised ministry in Rome and died there as a martyr under Nero. He is venerated as Apostle, shepherd, and enduring sign of apostolic continuity in the Church.', '1st century'),
 ('saint-cyril-of-alexandria', 'Saint Cyril of Alexandria', 'Bishop, theologian and defender of Christological orthodoxy.', 'Cyril of Alexandria played a central role in the christological controversies of the fifth century, articulating theological responses to Nestorian thought, guiding his see through intense doctrinal struggle, and leaving a body of letters and sermons influential for the defense of orthodox Christology.', 'c. 376–444'),
 ('saint-irenaeus', 'Saint Irenaeus', 'Bishop, apologist and formative theologian of the second century.', 'Irenaeus of Lyons defended the apostolic faith against emerging heresies by appealing to apostolic tradition, the rule of faith and scriptural interpretation; his work ''Against Heresies'' remains a foundational source for understanding early Christian theology and ecclesiology.', 'c. 130–202'),
-('first-martyrs-of-holy-roman-church', 'First Martyrs of the Holy Roman Church', 'Early Roman martyrs whose witness inaugurated the Church''s martyrial memory.', 'This collective title commemorates the earliest Christians of Rome who suffered for the faith and whose burial places, tombs and liturgical remembrance helped form the Church''s martyrology and devotional memory in the city of Rome.', '1st century')
+-- ('first-martyrs-of-holy-roman-church', 'First Martyrs of the Holy Roman Church', 'Early Roman martyrs whose witness inaugurated the Church''s martyrial memory.', 'This collective title commemorates the earliest Christians of Rome who suffered for the faith and whose burial places, tombs and liturgical remembrance helped form the Church''s martyrology and devotional memory in the city of Rome.', '1st century')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -1446,7 +1446,7 @@ JOIN (VALUES
 ('saint-peter-apostle', 'Saint Pierre, apôtre', 'Chef des Apôtres et témoin fondateur de l''Église à Rome.', 'Pierre, d''abord appelé Simon, fut choisi par le Christ et chargé d''une mission pastorale décisive parmi les Apôtres. Le Nouveau Testament le présente comme témoin privilégié du ministère, de la Passion et de la Résurrection de Jésus, puis comme figure centrale de la communauté apostolique. La tradition chrétienne le situe à Rome pour son ministère final et son martyre sous Néron. Il est vénéré comme apôtre, pasteur et signe durable de la continuité apostolique de l''Église.', 'Ier siècle'),
 ('saint-cyril-of-alexandria', 'Saint Cyrille d''Alexandrie', 'Évêque, théologien et défenseur de l''orthodoxie christologique.', 'Cyrille d''Alexandrie joua un rôle central dans les controverses christologiques du Ve siècle, s''opposant aux thèses nestoriennes et développant une articulation théologique qui aida à défendre la foi sur la nature du Christ; ses lettres et sermons eurent une grande influence pour la formulation de l''orthodoxie.', 'v. 376–444'),
 ('saint-irenaeus', 'Saint Irénée', 'Évêque, apologiste et théologien majeur du IIe siècle.', 'Irénée de Lyon défendit la foi apostolique contre les hérésies naissantes en s''appuyant sur la tradition apostolique, la règle de foi et une lecture ordonnée de l''Écriture; son ouvrage "Contre les hérésies" demeure une source essentielle pour la théologie et l''ecclésiologie anciennes.', 'v. 130–202'),
-('first-martyrs-of-holy-roman-church', 'Premiers martyrs de la Sainte Église romaine', 'Martyrs anciens de Rome dont le témoignage a forgé la mémoire martyrologique de la ville.', 'Ce titre collectif commémore les premiers chrétiens de Rome qui souffrirent pour la foi et dont les tombeaux, lieux de sépulture et la mémoire liturgique contribuèrent à construire le martyrologe et la piété de l''Église romaine.', 'Ier siècle')
+-- ('first-martyrs-of-holy-roman-church', 'Premiers martyrs de la Sainte Église romaine', 'Martyrs anciens de Rome dont le témoignage a forgé la mémoire martyrologique de la ville.', 'Ce titre collectif commémore les premiers chrétiens de Rome qui souffrirent pour la foi et dont les tombeaux, lieux de sépulture et la mémoire liturgique contribuèrent à construire le martyrologe et la piété de l''Église romaine.', 'Ier siècle')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
@@ -1477,7 +1477,7 @@ JOIN (VALUES
 ('saint-peter-apostle', 'Sanctus Petrus, Apostolus', 'Princeps Apostolorum et testis fundamentalis Ecclesiae Romanae.', 'Petrus, antea Simon dictus, a Christo vocatus est et missione pastorali praecipua inter Apostolos insignitus. Novum Testamentum eum exhibet testem praecipuum ministerii, Passionis et Resurrectionis Iesu, atque in communitate apostolica primarium. Traditio christiana docet eum Romae ministerium exercuisse ibique sub Nerone martyrium consummasse. In Ecclesia colitur ut Apostolus, pastor et signum permanens continuitatis apostolicae.', 'saec. I'),
 ('saint-cyril-of-alexandria', 'Sanctus Cyrillus Alexandrinus', 'Episcopus et defensor christologiae orthodoxae.', 'Cyrillus Alexandrinus in controversiis christologicis V saeculi claram doctrinam de unione personarum in Christo proposuit, contra Nestorium pugnavit et per epistulas et sermones doctrinam orthodoxam firmavit.', 'c. 376–444'),
 ('saint-irenaeus', 'Sanctus Irenaeus', 'Episcopus, apologeta et doctor anitquus fidei.', 'Irenaeus Lugdunensis adversus haereses scripsit, apostolicam traditionem et regulam fidei defendit, et opus eius "Adversus Haereses" fundamentum theologiae et ecclesiologiae patristicae praebet.', 'c. 130–202'),
-('first-martyrs-of-holy-roman-church', 'Primi Martyrum Sanctae Ecclesiae Romanae', 'Titulus collectivus primorum martyrum Romae et memoriae martyrologicae.', 'Primi Martyrum Sanctae Ecclesiae Romanae primos Christianos Romae commemorant qui pro fide passi sunt et quorum sepulturae et cultus martyrologium et piatem civitatis aedificarunt.', 'saec. I')
+-- ('first-martyrs-of-holy-roman-church', 'Primi Martyrum Sanctae Ecclesiae Romanae', 'Titulus collectivus primorum martyrum Romae et memoriae martyrologicae.', 'Primi Martyrum Sanctae Ecclesiae Romanae primos Christianos Romae commemorant qui pro fide passi sunt et quorum sepulturae et cultus martyrologium et piatem civitatis aedificarunt.', 'saec. I')
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
 ON CONFLICT (saint_id, locale_code)
