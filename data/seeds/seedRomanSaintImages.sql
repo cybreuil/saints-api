@@ -540,6 +540,40 @@ JOIN (VALUES
 ('saint-cyril-of-alexandria', '/saints/saint-cyril-of-alexandria_stained-glass.jpg', 'Saint Cyril of Alexandria Stained Glass', 'Saint Cyril of Alexandria', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Irenaeus
+('saint-irenaeus', '/saints/saint-irenaeus_icon.jpg', 'Saint Irenaeus Icon', 'Saint Irenaeus, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-irenaeus', '/saints/saint-irenaeus_stained-glass.jpg', 'Saint Irenaeus Stained Glass', 'Saint Irenaeus, by Lucien Bégule, from Saint Irenaeus Church (Lyon)', 'Lucien Bégule', '1901', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- First Martyrs of the Holy Roman Church
+-- (we don't do it as it is a group of martyrs, not a saint
+
+-- =========================
+-- July saints
+-- =========================
+
+-- Saint Thomas, Apostle
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_rubens.jpg', 'Saint Thomas Apostle Painting', 'Saint Thomas the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1610-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_dyck.jpg', 'Saint Thomas Apostle Painting', 'Saint Thomas the Apostle, by Anthony van Dyck, from Private Collection', 'Anthony van Dyck', '1620', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_velazquez.jpg', 'Saint Thomas Apostle Painting', 'Saint Thomas the Apostle, by Diego Velázquez, from Musée des Beaux-Arts d''Orléans', 'Diego Velázquez', '1618-1620', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_ribera.jpg', 'Saint Thomas Apostle Painting', 'Saint Thomas the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630-1635', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_la-tour.jpg', 'Saint Thomas Apostle Painting', 'Saint Thomas the Apostle, by Georges de La Tour, from Musée du Louvre', 'Georges de La Tour', '1625-1630', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_la-tour_2.jpg', 'Saint Thomas Apostle Painting', 'Saint Thomas the Apostle, by Georges de La Tour, from National Museum of Western Art (Tokyo)', 'Georges de La Tour', '17th Century', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_caravaggio.jpg', 'The Incredulity of Saint Thomas Painting', 'The Incredulity of Saint Thomas, by Caravaggio, from Sanssouci', 'Caravaggio', '1601-1602', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_rubens_martyr.jpg', 'The Martyrdom of Saint Thomas Apostle Painting', 'The Martyrdom of Saint Thomas the Apostle, by Peter Paul Rubens, from National Gallery Prague', 'Peter Paul Rubens', '1636-1638', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_rembrandt.jpg', 'The Incredulity of Saint Thomas Painting', 'The Incredulity of Saint Thomas, by Rembrandt, from Pushkin Museum', 'Rembrandt', '1634', NULL, 'Public Domain', NULL, 9, FALSE),
+('saint-thomas-apostle', '/saints/saint-thomas-apostle_zurbaran.jpg', 'Saint Thomas Apostle Painting', 'Saint Thomas the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 10, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
