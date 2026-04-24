@@ -568,10 +568,13 @@ JOIN (VALUES
 ('saint-elizabeth-of-portugal', '/saints/saint-elizabeth-of-portugal_2.jpg', 'Queen Saint Elizabeth and the Miracle of the Roses Painting', 'Queen Saint Elizabeth and the Miracle of the Roses, by an unknown artist, from Machado de Castro National Museum', NULL, '1540', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-elizabeth-of-portugal', '/saints/saint-elizabeth-of-portugal_castro.jpg', 'Saint Elizabeth of Portugal Painting', 'Saint Elizabeth of Portugal, by José Gil de Castro, from Museo Colonial', 'José Gil de Castro', '1820', NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Anthony Zaccaria
+('saint-anthony-zaccaria', '/saints/saint-anthony-zaccaria.jpg', 'Saint Anthony Zaccaria Illustration', 'Saint Anthony Zaccaria', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-anthony-zaccaria', '/saints/saint-anthony-zaccaria_2.jpg', 'Saint Anthony Zaccaria Painting', 'Saint Anthony Zaccaria', NULL, NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 2, FALSE),
+('saint-anthony-zaccaria', '/saints/saint-anthony-zaccaria_3.jpg', 'Saint Anthony Zaccaria Painting', 'Saint Anthony Zaccaria', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 3, FALSE),
+('saint-anthony-zaccaria', '/saints/saint-anthony-zaccaria_4.jpg', 'Saint Anthony Zaccaria Painting', 'Saint Anthony Zaccaria', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
-
-
-
+-- Saint Maria Goretti
 
 
 
