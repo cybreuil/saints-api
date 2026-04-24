@@ -583,9 +583,8 @@ JOIN (VALUES
 ('saint-augustine-zhao-rong', '/saints/saint-augustine-zhao-rong-&-companions_liu.jpg', 'Saint Augustine Zhao Rong and Companions Painting', 'Saint Augustine Zhao Rong and Companions (120 Martyrs of China), by Monica Liu', 'Monica Liu', NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-augustine-zhao-rong', '/saints/saint-augustine-zhao-rong_stained-glass.jpg', 'Saint Augustine Zhao Rong Stained Glass', 'Saint Augustine Zhao Rong, by an unknown artist, from Shrine of Saint Andrew Kim Taegon (Philippines)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
-
+-- Saint Benedict, Abbot
+-- WIP
 
 
 
