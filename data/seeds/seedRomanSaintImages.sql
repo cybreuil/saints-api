@@ -562,10 +562,11 @@ JOIN (VALUES
 ('saint-thomas-apostle', '/saints/saint-thomas-apostle_rembrandt.jpg', 'The Incredulity of Saint Thomas Painting', 'The Incredulity of Saint Thomas, by Rembrandt, from Pushkin Museum', 'Rembrandt', '1634', NULL, 'Public Domain', NULL, 9, FALSE),
 ('saint-thomas-apostle', '/saints/saint-thomas-apostle_zurbaran.jpg', 'Saint Thomas Apostle Painting', 'Saint Thomas the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 10, FALSE),
 
-
-
-
-
+-- Saint Elizabeth of Portugal
+('saint-elizabeth-of-portugal', '/saints/saint-elizabeth-of-portugal_zurbaran.jpg', 'Saint Elizabeth of Portugal Painting', 'Saint Elizabeth of Portugal, by Francisco de Zurbarán, from Museo del Prado', 'Francisco de Zurbarán', '1630-1635', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-elizabeth-of-portugal', '/saints/saint-elizabeth-of-portugal.jpg', 'Saint Elizabeth of Portugal Painting', 'Saint Elizabeth of Portugal, by an unknown artist', NULL, '1852', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-elizabeth-of-portugal', '/saints/saint-elizabeth-of-portugal_2.jpg', 'Queen Saint Elizabeth and the Miracle of the Roses Painting', 'Queen Saint Elizabeth and the Miracle of the Roses, by an unknown artist, from Machado de Castro National Museum', NULL, '1540', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-elizabeth-of-portugal', '/saints/saint-elizabeth-of-portugal_castro.jpg', 'Saint Elizabeth of Portugal Painting', 'Saint Elizabeth of Portugal, by José Gil de Castro, from Museo Colonial', 'José Gil de Castro', '1820', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
