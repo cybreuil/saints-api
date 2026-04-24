@@ -575,12 +575,13 @@ JOIN (VALUES
 ('saint-anthony-zaccaria', '/saints/saint-anthony-zaccaria_4.jpg', 'Saint Anthony Zaccaria Painting', 'Saint Anthony Zaccaria', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Maria Goretti
+('saint-maria-goretti', '/saints/saint-maria-goretti_soffredini.jpg', 'Saint Maria Goretti Painting', 'Saint Maria Goretti, by Giuseppe Brovelli Soffredini', 'Giuseppe Brovelli Soffredini', '20th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-maria-goretti', '/saints/saint-maria-goretti_2.jpg', 'Saint Maria Goretti Painting', 'Saint Maria Illustration', NULL, '20th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
-
-
-
-
-
+-- Saint Augustine Zhao Rong and Companions
+('saint-augustine-zhao-rong', '/saints/saint-augustine-zhao-rong_icon.jpg', 'Saint Augustine Zhao Rong Icon', 'Saint Augustine Zhao Rong, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-augustine-zhao-rong', '/saints/saint-augustine-zhao-rong-&-companions_liu.jpg', 'Saint Augustine Zhao Rong and Companions Painting', 'Saint Augustine Zhao Rong and Companions (120 Martyrs of China), by Monica Liu', 'Monica Liu', NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-augustine-zhao-rong', '/saints/saint-augustine-zhao-rong_stained-glass.jpg', 'Saint Augustine Zhao Rong Stained Glass', 'Saint Augustine Zhao Rong, by an unknown artist, from Shrine of Saint Andrew Kim Taegon (Philippines)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
