@@ -517,7 +517,7 @@ JOIN (VALUES
 ('saint-thomas-more', '/saints/saint-thomas-more_holbein-younger.jpg', 'Saint Thomas More Painting', 'Saint Thomas More, by Hans Holbein the Younger, from Frick Collection', 'Hans Holbein the Younger', '1527', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-thomas-more', '/saints/saint-thomas-more_ward.jpg', 'Saint Thomas More Farewell to his Daughter Painting', 'Saint Thomas More Farewell to his Daughter, by Edward Matthew Ward', 'Edward Matthew Ward', '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
--- Saint Peter, Apostle check dyck date
+-- Saint Peter, Apostle
 ('saint-peter-apostle', '/saints/saint-peter-apostle_rubens.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1610-1612', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-peter-apostle', '/saints/saint-peter-apostle_rubens_charge.jpg', 'Christ''s Charge to Peter Painting', 'Christ''s Charge to Peter, by Peter Paul Rubens, from Wallace Collection', 'Peter Paul Rubens', '1616', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-peter-apostle', '/saints/saint-peter-apostle_dyck.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Anthony van Dyck, from Private Collection', 'Anthony van Dyck', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
@@ -534,9 +534,12 @@ JOIN (VALUES
 ('saint-peter-apostle', '/saints/saint-peter-apostle_velazquez.jpg', 'The Tears of Saint Peter Apostle Painting', 'The Tears of Saint Peter the Apostle, by Diego Velázquez, from Private Collection', 'Diego Velázquez', '1617-1619', NULL, 'Public Domain', NULL, 14, FALSE),
 ('saint-peter-apostle', '/saints/saint-peter-apostle_zurbaran.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 15, FALSE),
 
+-- Saint Cyril of Alexandria
+('saint-cyril-of-alexandria', '/saints/saint-cyril-of-alexandria_fresco.jpg', 'Saint Cyril of Alexandria Fresco', 'Saint Cyril of Alexandria, by an unknown artist, from the Chora', NULL, '14th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-cyril-of-alexandria', '/saints/saint-cyril-of-alexandria_icon.jpg', 'Saint Cyril of Alexandria Icon', 'Saint Cyril of Alexandria, by Emmanuel Tzanes, from Byzantine Museum of Antivouniotissa', 'Emmanuel Tzanes', '1654', NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 2, FALSE),
+('saint-cyril-of-alexandria', '/saints/saint-cyril-of-alexandria_stained-glass.jpg', 'Saint Cyril of Alexandria Stained Glass', 'Saint Cyril of Alexandria', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
+-- Saint Irenaeus
 
 
 
