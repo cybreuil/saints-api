@@ -584,10 +584,12 @@ JOIN (VALUES
 ('saint-augustine-zhao-rong', '/saints/saint-augustine-zhao-rong_stained-glass.jpg', 'Saint Augustine Zhao Rong Stained Glass', 'Saint Augustine Zhao Rong, by an unknown artist, from Shrine of Saint Andrew Kim Taegon (Philippines)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Benedict, Abbot
--- WIP
-
-
-
+('saint-benedict', '/saints/saint-benedict.jpg', 'Saint Benedict Painting', 'Saint Benedict, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-benedict', '/saints/saint-benedict_piazzetta.jpg', 'Saint Benedict Painting', 'Saint Benedict, by Giambattista Piazzetta', 'Giambattista Piazzetta', '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-benedict', '/saints/saint-benedict_briggs.jpg', 'Saint Benedict Painting', 'Saint Benedict, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-benedict', '/saints/saint-benedict_zurbaran.jpg', 'Saint Benedict Painting', 'Saint Benedict, by Francisco de Zurbarán, from Metropolitan Museum of Art', 'Francisco de Zurbarán', '1640-1645', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-benedict', '/saints/saint-benedict_restout.jpg', 'Saint Benedict Painting', 'Saint Benedict, by Jean Restout, from Église Saint-Gilles de Bourg-la-Reine', 'Jean Restout', '1746', NULL, 'Attribution-ShareAlike 4.0 International', NULL, 5, FALSE),
+('saint-benedict', '/saints/saint-benedict-&-scholastica.jpg', 'Saint Benedict and Saint Scholastica Painting', 'Saint Benedict and Saint Scholastica, by Yan'' Dargent', 'Yan'' Dargent', '19th Century', NULL, 'Public Domain', NULL, 6, FALSE),
 
 
 
