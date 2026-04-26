@@ -592,10 +592,11 @@ JOIN (VALUES
 ('saint-benedict', '/saints/saint-benedict_restout.jpg', 'Saint Benedict Painting', 'Saint Benedict, by Jean Restout, from Église Saint-Gilles de Bourg-la-Reine', 'Jean Restout', '1746', NULL, 'Attribution-ShareAlike 4.0 International', NULL, 6, FALSE),
 ('saint-benedict', '/saints/saint-benedict-&-scholastica.jpg', 'Saint Benedict and Saint Scholastica Painting', 'Saint Benedict and Saint Scholastica, by Yan'' Dargent', 'Yan'' Dargent', '19th Century', NULL, 'Public Domain', NULL, 7, FALSE),
 
-
-
-
-
+-- Saint Henry
+('saint-henry', '/saints/saint-henry_baer.jpg', 'Saint Henry Painting', 'Saint Henry, by Hans Baer, from the Archdiocese of Freiburg', 'Hans Baer', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-henry', '/saints/saint-henry.jpg', 'Saint Henry Illustration', 'Saint Henry, by an unknown artist, from the Regensburg Sacramentary (Bavarian State Library)', NULL, '11th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-henry', '/saints/saint-henry_fuhricht.jpg', 'Saint Henry Drawing', 'Saint Henry, by Joseph von Führich', 'Joseph von Führich', '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-henry', '/saints/saint-henry_2.jpg', 'Saint Henry Illustration', 'Saint Henry, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
