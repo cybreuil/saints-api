@@ -1550,8 +1550,8 @@ INSERT INTO saints (
 ),
 (
   'saint-henry', 'Saint Henry',
-  NULL, NULL, NULL, TRUE,
-  NULL, 7, 13, TRUE,
+  973, 5, 6, TRUE,
+  1024, 7, 13, TRUE,
   NULL,
   NULL, NULL, NULL
 ),
