@@ -598,6 +598,7 @@ JOIN (VALUES
 ('saint-henry', '/saints/saint-henry_fuhricht.jpg', 'Saint Henry Drawing', 'Saint Henry, by Joseph von Führich', 'Joseph von Führich', '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-henry', '/saints/saint-henry_2.jpg', 'Saint Henry Illustration', 'Saint Henry, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Camillus de Lellis
 
 
 -- sAINT ROCH TIEPOLO A NE APS OUBLIER
