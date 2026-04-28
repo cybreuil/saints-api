@@ -610,3 +610,12 @@ JOIN (VALUES
 ('saint-bonaventure', '/saints/saint-bonaventure_rubens.jpg', 'Saint Bonaventure Painting', 'Saint Bonaventure, by Peter Paul Rubens, from Palais des Beaux-Arts de Lille', 'Peter Paul Rubens', '1620', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-bonaventure', '/saints/saint-bonaventure_orpen.jpg', 'Saint Bonaventure Inspired to Write Painting', 'Saint Bonaventure Inspired to Write, by Rebecca Dulcibella Orpen, from National Trust', 'Rebecca Dulcibella Orpen', '1890', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-bonaventure', '/saints/saint-bonaventure_zurbaran.jpg', 'Displaying the Body of Saint Bonaventure Painting', 'Displaying the Body of Saint Bonaventure, by Francisco de Zurbarán, from Musée du Louvre', 'Francisco de Zurbarán', '1629', NULL, 'Public Domain', NULL, 5, FALSE),
+
+-- Saint Apollinaris
+('saint-apollinaris', '/saints/saint-apollinaris-&-peter_pasquali.jpg', 'Saint Peter sends Saint Apollinaris to Ravenna Painting', 'Saint Peter sends Saint Apollinaris to Ravenna, by Filippo Pasquali, from Ravenna Cathedral', 'Filippo Pasquali', '1683', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-apollinaris', '/saints/saint-apollinaris_mosaic.jpg', 'Saint Apollinaris Mosaic', 'Saint Apollinaris, by an unknown artist, from Basilica of Sant''Apollinare in Classe', NULL, '6th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Lawrence of Brindisi
+('saint-lawrence-of-brindisi', '/saints/saint-lawrence-of-brindisi.png', 'Saint Lawrence of Brindisi at the Battle of Albareale Painting', 'Saint Lawrence of Brindisi at the Battle of Albareale, by Francesco Grandi, from Pinacoteca (Vatican)', 'Francesco Grandi', '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-lawrence-of-brindisi', '/saints/saint-lawrence-of-brindisi_2.jpg', 'Saint Lawrence of Brindisi Painting', 'Saint Lawrence of Brindisi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-lawrence-of-brindisi', '/saints/saint-lawrence-of-brindisi_3.jpg', 'Communion of Saint Lawrence of Brindisi Painting', 'Communion of Saint Lawrence of Brindisi, by Raffaele da Roma', 'Raffaele da Roma', '1770', NULL, 'Public Domain', NULL, 3, FALSE),
