@@ -599,16 +599,9 @@ JOIN (VALUES
 ('saint-henry', '/saints/saint-henry_2.jpg', 'Saint Henry Illustration', 'Saint Henry, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Camillus de Lellis
+('saint-camillus-de-lellis', '/saints/saint-camillus-de-lellis_gandolfi.jpg', 'Saint Camillus de Lellis Painting', 'Saint Camillus de Lellis, by Gaetano Gandolfi, from Toledo Museum of Art', 'Gaetano Gandolfi', '18th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-camillus-de-lellis', '/saints/saint-camillus-de-lellis_lozano.jpg', 'Saint Camillus de Lellis in Ecstasy Painting', 'Saint Camillus de Lellis in Ecstasy, by Cristóbal Lozano, from Lima Art Museum', 'Cristóbal Lozano', '1762', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-camillus-de-lellis', '/saints/saint-camillus-de-lellis.jpg', 'Saint Camillus de Lellis Painting', 'Saint Camillus de Lellis, by an unknown artist', NULL, '18th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-camillus-de-lellis', '/saints/saint-camillus-de-lellis_subleyras.jpg', 'Saint Camillus de Lellis saves the Sick Painting', 'Saint Camillus de Lellis saves the Sick, by Pierre Subleyras, from Museo di Roma', 'Pierre Subleyras', '1746', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
--- sAINT ROCH TIEPOLO A NE APS OUBLIER
-
-
----
-)
-AS x (slug, image_url, alt_text, caption, credit, license, author, date, source_url, sort_order, is_primary)
-
-ON s.slug = x.slug
-ON CONFLICT DO NOTHING;
-
-COMMIT;
+-- Saint Bonaventure
