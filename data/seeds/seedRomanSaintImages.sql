@@ -605,3 +605,8 @@ JOIN (VALUES
 ('saint-camillus-de-lellis', '/saints/saint-camillus-de-lellis_subleyras.jpg', 'Saint Camillus de Lellis saves the Sick Painting', 'Saint Camillus de Lellis saves the Sick, by Pierre Subleyras, from Museo di Roma', 'Pierre Subleyras', '1746', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Bonaventure
+('saint-bonaventure', '/saints/saint-bonaventure_cavazzola.jpg', 'Saint Bonaventure Painting', 'Saint Bonaventure, by Il Cavazzola', 'Il Cavazzola', '16th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-bonaventure', '/saints/saint-bonaventure_lombard.jpg', 'Saint Bonaventure Painting', 'Saint Bonaventure, by François Lombard, from Basilique Saint-Bonaventure (Lyon)', 'François Lombard', '1639', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-bonaventure', '/saints/saint-bonaventure_rubens.jpg', 'Saint Bonaventure Painting', 'Saint Bonaventure, by Peter Paul Rubens, from Palais des Beaux-Arts de Lille', 'Peter Paul Rubens', '1620', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-bonaventure', '/saints/saint-bonaventure_orpen.jpg', 'Saint Bonaventure Inspired to Write Painting', 'Saint Bonaventure Inspired to Write, by Rebecca Dulcibella Orpen, from National Trust', 'Rebecca Dulcibella Orpen', '1890', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-bonaventure', '/saints/saint-bonaventure_zurbaran.jpg', 'Displaying the Body of Saint Bonaventure Painting', 'Displaying the Body of Saint Bonaventure, by Francisco de Zurbarán, from Musée du Louvre', 'Francisco de Zurbarán', '1629', NULL, 'Public Domain', NULL, 5, FALSE),
