@@ -647,7 +647,7 @@ JOIN (VALUES
 ('saint-james-apostle', '/saints/saint-james-apostle_ribera.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630-1635', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-james-apostle', '/saints/saint-james-apostle_caravaggio.jpg', 'The Martyrdom of Saint James Painting', 'The Martyrdom of Saint James the Apostle, by Caravaggio, from National Gallery (London)', 'Caravaggio', '1607-1608', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-james-apostle', '/saints/saint-james-apostle_rembrandt.jpg', 'The Martyrdom of Saint James Painting', 'The Martyrdom of Saint James the Apostle, by Rembrandt, from Pushkin Museum (Moscow)', 'Rembrandt', '1630-1632', NULL, 'Public Domain', NULL, 6, FALSE),
-('saint-james-apostle', '/saints/saint-james-apostle_zurbaran.jpg', 'Saint James Apostle Painting', 'Saint James
+('saint-james-apostle', '/saints/saint-james-apostle_zurbaran.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 7, FALSE),
 
 -- a dl sur le 470s
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_ivanov.jpg', 'Christ''s Appearance to Mary Magdalene after the Resurrection Painting', 'Christ''s Appearance to Mary Magdalene after the Resurrection, by Alexander Ivanov, from Russian Museum', 'Alexander Ivanov', '1835', NULL, 'Public Domain', NULL, 9, FALSE),
