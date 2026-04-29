@@ -629,3 +629,22 @@ JOIN (VALUES
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_la-tour.jpg', 'Saint Mary Magdalene Painting', 'Saint Mary Magdalene, by Georges de La Tour, from Musée du Louvre', 'Georges de La Tour', '1640-1645', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_veronese.jpg', 'The Conversion of Mary Magdalene Painting', 'The Conversion of Mary Magdalene, by Paolo Veronese, from National Gallery (London)', 'Paolo Veronese', '1548', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_merle.jpg', 'Saint Mary Magdalene in the Cave Painting', 'Saint Mary Magdalene in the Cave, by Hugues Merle, from Private Collection', 'Hugues Merle', '1868', NULL, 'Public Domain', NULL, 8, FALSE),
+
+-- Saint Bridget
+('saint-bridget', '/saints/saint-bridget.jpg', 'Saint Bridget Painting', 'Saint Bridget, by an Hermen Rode, from Salem Church (Södermanland)', 'Hermen Rode', '15th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-bridget', '/saints/saint-bridget_friano.jpg', 'Saint Bridget Painting', 'Saint Bridget, by Maso da San Friano, from the Cook Collection', 'Maso da San Friano', '1540', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-bridget', '/saints/saint-bridget_2.jpg', 'Saint Bridget Painting', 'Saint Bridget, by an unknown artist, from Santa Maria della Catena (Naples)', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 3, FALSE),
+
+-- Saint Sharbel Makhluf
+('saint-sharbel-makhluf', '/saints/saint-sharbel-makhluf.jpg', 'Saint Sharbel Makhluf Painting', 'Saint Sharbel Makhluf, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-sharbel-makhluf', '/saints/saint-sharbel-makhluf_2.jpg', 'Saint Sharbel Makhluf Illustration', 'Saint Sharbel Makhluf, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-sharbel-makhluf', '/saints/saint-sharbel-makhluf_3.jpg', 'Saint Sharbel Makhluf Illustration', 'Saint Sharbel Makhluf, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint James, Apostle
+('saint-james-apostle', '/saints/saint-james-apostle_rubens.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1610-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-james-apostle', '/saints/saint-james-apostle_dyck.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Anthony van Dyck, from Private Collection', 'Anthony van Dyck', '1620-1625', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_velazquez.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Diego Velázquez, from Museo del Prado', 'Diego Velázquez', '1618-1620', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_ribera.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630-1635', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_caravaggio.jpg', 'The Martyrdom of Saint James Painting', 'The Martyrdom of Saint James the Apostle, by Caravaggio, from National Gallery (London)', 'Caravaggio', '1607-1608', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_rembrandt.jpg', 'The Martyrdom of Saint James Painting', 'The Martyrdom of Saint James the Apostle, by Rembrandt, from Pushkin Museum (Moscow)', 'Rembrandt', '1630-1632', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_zurbaran.jpg', 'Saint James Apostle Painting', 'Saint James
