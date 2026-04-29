@@ -648,3 +648,6 @@ JOIN (VALUES
 ('saint-james-apostle', '/saints/saint-james-apostle_caravaggio.jpg', 'The Martyrdom of Saint James Painting', 'The Martyrdom of Saint James the Apostle, by Caravaggio, from National Gallery (London)', 'Caravaggio', '1607-1608', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-james-apostle', '/saints/saint-james-apostle_rembrandt.jpg', 'The Martyrdom of Saint James Painting', 'The Martyrdom of Saint James the Apostle, by Rembrandt, from Pushkin Museum (Moscow)', 'Rembrandt', '1630-1632', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-james-apostle', '/saints/saint-james-apostle_zurbaran.jpg', 'Saint James Apostle Painting', 'Saint James
+
+-- a dl sur le 470s
+('saint-mary-magdalene', '/saints/saint-mary-magdalene_ivanov.jpg', 'Christ''s Appearance to Mary Magdalene after the Resurrection Painting', 'Christ''s Appearance to Mary Magdalene after the Resurrection, by Alexander Ivanov, from Russian Museum', 'Alexander Ivanov', '1835', NULL, 'Public Domain', NULL, 9, FALSE),
