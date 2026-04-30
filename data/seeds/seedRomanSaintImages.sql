@@ -630,6 +630,8 @@ JOIN (VALUES
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_veronese.jpg', 'The Conversion of Mary Magdalene Painting', 'The Conversion of Mary Magdalene, by Paolo Veronese, from National Gallery (London)', 'Paolo Veronese', '1548', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_merle.jpg', 'Saint Mary Magdalene in the Cave Painting', 'Saint Mary Magdalene in the Cave, by Hugues Merle, from Private Collection', 'Hugues Merle', '1868', NULL, 'Public Domain', NULL, 8, FALSE),
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_ivanov.jpg', 'Christ''s Appearance to Mary Magdalene after the Resurrection Painting', 'Christ''s Appearance to Mary Magdalene after the Resurrection, by Alexander Ivanov, from Russian Museum', 'Alexander Ivanov', '1835', NULL, 'Public Domain', NULL, 9, FALSE),
+('saint-mary-magdalene', '/saints/saint-mary-magdalene_titian.jpg', 'Noli Me Tangere Painting', 'Noli Me Tangere, by Titian, from National Gallery (London)', 'Titian', '1514', NULL, 'Public Domain', NULL, 10, FALSE),
+('saint-mary-magdalene', '/saints/saint-mary-magdalene_giotto.jpg', 'Noli Me Tangere Fresco', 'Noli Me Tangere, by Giotto, from Scrovegni Chapel (Padua)', 'Giotto', '1304	-1306', NULL, 'Public Domain', NULL, 11, FALSE),
 
 -- Saint Bridget
 ('saint-bridget', '/saints/saint-bridget.jpg', 'Saint Bridget Painting', 'Saint Bridget, by an Hermen Rode, from Salem Church (Södermanland)', 'Hermen Rode', '15th Century', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -651,4 +653,11 @@ JOIN (VALUES
 ('saint-james-apostle', '/saints/saint-james-apostle_murillo.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Bartolomé Esteban Murillo, from Museo del Prado', 'Bartolomé Esteban Murillo', '1655', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-james-apostle', '/saints/saint-james-apostle_tiepolo.jpg', 'Saint James the Great Conquering the Moors (Santiago Matamoros) Painting', 'Saint James the Great Conquering the Moors (Santiago Matamoros), by Giambattista Tiepolo, from Museum of Fine Arts (Budapest)', 'Giambattista Tiepolo', '1749-1750', NULL, 'Public Domain', NULL, 8, FALSE),
 ('saint-james-apostle', '/saints/saint-james-apostle_dyck_martyr.jpg', 'The Martyrdom of Saint James Apostle Painting', 'The Martyrdom of Saint James the Apostle, by Anthony van Dyck, from Musée des Beaux-Arts de Valenciennes', 'Anthony van Dyck', '1627-1632', NULL, 'Public Domain', NULL, 9, FALSE),
-('saint-james-apostle', '/saints/saint-james-apostle_zurbaran_martyr.jpg', 'The Martyrdom of Saint James Apostle Painting', 'The Martyrdom of Saint James the Apostle, by Francisco de Zurbarán, from Museo del Prado', 'Francisco de Zurbarán', '1640', NULL, 'Public Domain', NULL, 10, FALSE);
+('saint-james-apostle', '/saints/saint-james-apostle_zurbaran_martyr.jpg', 'The Martyrdom of Saint James Apostle Painting', 'The Martyrdom of Saint James the Apostle, by Francisco de Zurbarán, from Museo del Prado', 'Francisco de Zurbarán', '1640', NULL, 'Public Domain', NULL, 10, FALSE),
+
+-- Saint Joachim
+('saint-joachim', '/saints/saint-joachim_wautier.jpg', 'Saint Joachim Painting', 'Saint Joachim, by Michaelina Wautier, from Kunsthistorisches Museum', 'Michaelina Wautier', '1650', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-joachim', '/saints/saint-joachim_gutierrez.jpg', 'Saint Joachim Painting', 'Saint Joachim, by Juan Simón Gutiérrez, from Museo de Bellas Artes de Sevilla', 'Juan Simón Gutiérrez', '1700', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-joachim', '/saints/saint-joachim-&-mary_camilo.jpg', 'Saint Joachim and Saint Mary Painting', 'Saint Joachim and Saint Mary, by Francisco Camilo, from Museo del Prado', 'Francisco Camilo', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-joachim', '/saints/saint-joachim-&-mary.jpg', 'Saint Joachim and Saint Mary Painting', 'Saint Joachim and Saint Mary, by an unknown artist, from Museo Colonial (Bogotá)', NULL, '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-joachim', '/saints/saint-joachim-&-anne_maratta.jpg', 'The Vision of Saint Joachim and Saint Anne Painting', 'The Vision of Saint Joachim and Saint Anne, by Carlo Maratta, from Private Collection', 'Carlo Maratta', '1670-1685', NULL, 'Public Domain', NULL, 5, FALSE),
