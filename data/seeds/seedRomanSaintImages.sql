@@ -629,6 +629,7 @@ JOIN (VALUES
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_la-tour.jpg', 'Saint Mary Magdalene Painting', 'Saint Mary Magdalene, by Georges de La Tour, from Musée du Louvre', 'Georges de La Tour', '1640-1645', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_veronese.jpg', 'The Conversion of Mary Magdalene Painting', 'The Conversion of Mary Magdalene, by Paolo Veronese, from National Gallery (London)', 'Paolo Veronese', '1548', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-mary-magdalene', '/saints/saint-mary-magdalene_merle.jpg', 'Saint Mary Magdalene in the Cave Painting', 'Saint Mary Magdalene in the Cave, by Hugues Merle, from Private Collection', 'Hugues Merle', '1868', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-mary-magdalene', '/saints/saint-mary-magdalene_ivanov.jpg', 'Christ''s Appearance to Mary Magdalene after the Resurrection Painting', 'Christ''s Appearance to Mary Magdalene after the Resurrection, by Alexander Ivanov, from Russian Museum', 'Alexander Ivanov', '1835', NULL, 'Public Domain', NULL, 9, FALSE),
 
 -- Saint Bridget
 ('saint-bridget', '/saints/saint-bridget.jpg', 'Saint Bridget Painting', 'Saint Bridget, by an Hermen Rode, from Salem Church (Södermanland)', 'Hermen Rode', '15th Century', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -641,13 +642,13 @@ JOIN (VALUES
 ('saint-sharbel-makhluf', '/saints/saint-sharbel-makhluf_3.jpg', 'Saint Sharbel Makhluf Illustration', 'Saint Sharbel Makhluf, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint James, Apostle
-('saint-james-apostle', '/saints/saint-james-apostle_rubens.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1610-1612', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-james-apostle', '/saints/saint-james-apostle_dyck.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Anthony van Dyck, from Private Collection', 'Anthony van Dyck', '1620-1625', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-james-apostle', '/saints/saint-james-apostle_velazquez.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Diego Velázquez, from Museo del Prado', 'Diego Velázquez', '1618-1620', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_rubens.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1612-1613', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-james-apostle', '/saints/saint-james-apostle_reni.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Guido Reni, from Museum of Fine Arts (Houston)', 'Guido Reni', '1636-1638', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_dyck.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Anthony van Dyck, from Private Collection', 'Anthony van Dyck', '1620', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-james-apostle', '/saints/saint-james-apostle_ribera.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630-1635', NULL, 'Public Domain', NULL, 4, FALSE),
-('saint-james-apostle', '/saints/saint-james-apostle_caravaggio.jpg', 'The Martyrdom of Saint James Painting', 'The Martyrdom of Saint James the Apostle, by Caravaggio, from National Gallery (London)', 'Caravaggio', '1607-1608', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-james-apostle', '/saints/saint-james-apostle_rembrandt.jpg', 'The Martyrdom of Saint James Painting', 'The Martyrdom of Saint James the Apostle, by Rembrandt, from Pushkin Museum (Moscow)', 'Rembrandt', '1630-1632', NULL, 'Public Domain', NULL, 6, FALSE),
-('saint-james-apostle', '/saints/saint-james-apostle_zurbaran.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 7, FALSE),
-
--- a dl sur le 470s
-('saint-mary-magdalene', '/saints/saint-mary-magdalene_ivanov.jpg', 'Christ''s Appearance to Mary Magdalene after the Resurrection Painting', 'Christ''s Appearance to Mary Magdalene after the Resurrection, by Alexander Ivanov, from Russian Museum', 'Alexander Ivanov', '1835', NULL, 'Public Domain', NULL, 9, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_rembrandt.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Rembrandt, from Private Collection', 'Rembrandt', '1661', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_zurbaran.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_murillo.jpg', 'Saint James Apostle Painting', 'Saint James the Apostle, by Bartolomé Esteban Murillo, from Museo del Prado', 'Bartolomé Esteban Murillo', '1655', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_tiepolo.jpg', 'Saint James the Great Conquering the Moors (Santiago Matamoros) Painting', 'Saint James the Great Conquering the Moors (Santiago Matamoros), by Giambattista Tiepolo, from Museum of Fine Arts (Budapest)', 'Giambattista Tiepolo', '1749-1750', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_dyck_martyr.jpg', 'The Martyrdom of Saint James Apostle Painting', 'The Martyrdom of Saint James the Apostle, by Anthony van Dyck, from Musée des Beaux-Arts de Valenciennes', 'Anthony van Dyck', '1627-1632', NULL, 'Public Domain', NULL, 9, FALSE),
+('saint-james-apostle', '/saints/saint-james-apostle_zurbaran_martyr.jpg', 'The Martyrdom of Saint James Apostle Painting', 'The Martyrdom of Saint James the Apostle, by Francisco de Zurbarán, from Museo del Prado', 'Francisco de Zurbarán', '1640', NULL, 'Public Domain', NULL, 10, FALSE);
