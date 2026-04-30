@@ -699,7 +699,7 @@ JOIN (VALUES
 ('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola_rubens.jpg', 'Saint Ignatius of Loyola Painting', 'Saint Ignatius of Loyola, by Peter Paul Rubens, from Norton Simon Museum', 'Peter Paul Rubens', '1620-1622', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola_rubens_miracle.jpg', 'Miracle of Saint Ignatius of Loyola Painting', 'Miracle of Saint Ignatius of Loyola, by Peter Paul Rubens, from Kunsthistorisches Museum', 'Peter Paul Rubens', '1617-1618', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola_zurbaran.jpg', 'Saint Ignatius of Loyola Painting', 'Saint Ignatius of Loyola, by Francisco de Zurbarán, from the Royal Collection of the British royal family', 'Francisco de Zurbarán', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola.jpg', 'Ignatius convalesces at Loyola Painting', 'Ignatius convalesces at Loyola, by Albert Chevallier-Tayler', 'Albert Chevallier-Tayler', '1904', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola.jpg', 'Ignatius convalesces at Loyola Painting', 'Ignatius convalesces at Loyola, by Albert Chevallier Tayler', 'Albert Chevallier Tayler', '1904', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- =========================
 -- August Saints
