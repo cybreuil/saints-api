@@ -673,3 +673,56 @@ JOIN (VALUES
 ('saint-anne', '/saints/saint-anne-&-joachim-&-mary_tiepolo.jpg', 'Education of the Virgin by Saint Anne & Saint Joachim Painting', 'Education of the Virgin by Saint Anne & Saint Joachim, by Giambattista Tiepolo, from Santa Maria della Fava', 'Giambattista Tiepolo', '1732', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-anne', '/saints/saint-anne-&-mary-&-child.jpg', 'The Virgin and Child with Saint Anne Painting', 'The Virgin and Child with Saint Anne, by Leonardo da Vinci, from Musée du Louvre', 'Leonardo da Vinci', '1503-1519', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-anne', '/saints/saint-anne-&-mary_icon.jpg', 'Saint Anne with the Virgin Icon', 'Saint Anne with the Virgin, by an unknown artist, from Benaki Museum', NULL, '1440', NULL, 'Public Domain', NULL, 8, FALSE),
+
+-- Saint Martha of Bethany
+('saint-martha-of-bethany', '/saints/saint-martha-of-bethany_ring-sakabe.webp', 'Saint Martha of Bethany Painting', 'Saint Martha of Bethany, by Jordan Ring-Sakabe', 'Jordan Ring-Sakabe', '2019', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-martha-of-bethany', '/saints/saint-martha-of-bethany-&-mary-of-bethany-&-christ_vermeer.jpg', 'Christ in the House of Martha and Mary Painting', 'Christ in the House of Martha and Mary, by Johannes Vermeer, from Scottish National Gallery', 'Johannes Vermeer', '1654-1655', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-martha-of-bethany', '/saints/saint-martha-of-bethany-&-mary-of-bethany-&-christ_rubens.jpg', 'Christ in the House of Martha and Mary Painting', 'Christ in the House of Martha and Mary, by Peter Paul Rubens & Jan Brueghel the Younger, from National Gallery of Ireland', 'Peter Paul Rubens & Jan Brueghel the Younger', '1628', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-martha-of-bethany', '/saints/saint-martha-of-bethany.jpg', 'Saint Martha of Bethany & the Tarasque Painting', 'Saint Martha of Bethany & the Tarasque, by an unknown artist', NULL, '18th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint Mary of Bethany
+('saint-mary-of-bethany', '/saints/saint-mary-of-bethany_ring-sakabe.jpg', 'Saint Mary of Bethany Painting', 'Saint Mary of Bethany, by Jordan Ring-Sakabe', 'Jordan Ring-Sakabe', '2024', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-mary-of-bethany', '/saints/saint-mary-of-bethany-&-martha-of-bethany-&-christ_vermeer.jpg', 'Christ in the House of Martha and Mary Painting', 'Christ in the House of Martha and Mary, by Johannes Vermeer, from Scottish National Gallery', 'Johannes Vermeer', '1654-1655', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-mary-of-bethany', '/saints/saint-mary-of-bethany-&-martha-of-bethany-&-christ_rubens.jpg', 'Christ in the House of Martha and Mary Painting', 'Christ in the House of Martha and Mary, by Peter Paul Rubens & Jan Brueghel the Younger, from National Gallery of Ireland', 'Peter Paul Rubens & Jan Brueghel the Younger', '1628', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Lazarus of Bethany
+('saint-lazarus-of-bethany', '/saints/saint-lazarus-of-bethany_caravaggio.jpg', 'The Raising of Lazarus Painting', 'The Raising of Lazarus, by Caravaggio, from Regional Museum of Messina', 'Caravaggio', '1609', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-lazarus-of-bethany', '/saints/saint-lazarus-of-bethany_rubens.jpg', 'The Raising of Lazarus Painting', 'The Raising of Lazarus, by Peter Paul Rubens, from Galleria Sabauda', 'Peter Paul Rubens', '1625', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-lazarus-of-bethany', '/saints/saint-lazarus-of-bethany_gebhardt.jpg', 'The Raising of Lazarus Painting', 'The Raising of Lazarus, by Eduard von Gebhardt, from Museum Kunstpalast', 'Eduard von Gebhardt', '1896', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-lazarus-of-bethany', '/saints/saint-lazarus-of-bethany_flandes.jpg', 'The Raising of Lazarus Painting', 'The Raising of Lazarus, by Juan de Flandes, from Museo del Prado', 'Juan de Flandes', '1514-1519', NULL, 'Public Domain', NULL, 4, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+)
+AS x (slug, image_url, alt_text, caption, credit, license, author, date, source_url, sort_order, is_primary)
+
+ON s.slug = x.slug
+ON CONFLICT DO NOTHING;
+
+COMMIT;
