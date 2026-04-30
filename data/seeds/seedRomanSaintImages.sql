@@ -117,7 +117,7 @@ JOIN (VALUES
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt_prison.jpg', 'The Apostle Paul in Prison Painting', 'The Apostle Paul in Prison, by Rembrandt, from Rijksmuseum', 'Rembrandt', '1627', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Rembrandt, from National Gallery of Art', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 8, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_la-tour.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Georges de La Tour (copy), from Musée Toulouse-Lautrec', 'Georges de La Tour', '1820', NULL, 'Public Domain', NULL, 9, FALSE),
-('saint-paul-apostle', '/saints/saint-paul-apostle_guercino.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Il Guercino, from Royal Collection', 'Il Guercino', '1650', NULL, 'Public Domain', NULL, 10, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_guercino.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Il Guercino, from the Royal Collection of the British royal family', 'Il Guercino', '1650', NULL, 'Public Domain', NULL, 10, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_guercino_2.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Il Guercino (or student), from Slovak National Gallery', 'Il Guercino', '17th Century', NULL, 'Public Domain', NULL, 11, FALSE),
 
 -- Saint Timothy of Ephesus
@@ -691,8 +691,19 @@ JOIN (VALUES
 ('saint-lazarus-of-bethany', '/saints/saint-lazarus-of-bethany_gebhardt.jpg', 'The Raising of Lazarus Painting', 'The Raising of Lazarus, by Eduard von Gebhardt, from Museum Kunstpalast', 'Eduard von Gebhardt', '1896', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-lazarus-of-bethany', '/saints/saint-lazarus-of-bethany_flandes.jpg', 'The Raising of Lazarus Painting', 'The Raising of Lazarus, by Juan de Flandes, from Museo del Prado', 'Juan de Flandes', '1514-1519', NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Peter Chrysologus
+('saint-peter-chrysologus', '/saints/saint-peter-chrysologus.jpg', 'Saint Peter Chrysologus Painting', 'Saint Peter Chrysologus, by School of Guercino', 'School of Guercino', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-peter-chrysologus', '/saints/saint-peter-chrysologus-&-cassian_fontana.jpg', 'Assumption of the Virgin with Saints Peter Chrysologus and Cassian Painting', 'Assumption of the Virgin with Saints Peter Chrysologus and Cassian, by Lavinia Fontana', 'Lavinia Fontana', '1583', NULL, 'Public Domain', NULL, 2, FALSE),
 
+-- Saint Ignatius of Loyola
+('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola_rubens.jpg', 'Saint Ignatius of Loyola Painting', 'Saint Ignatius of Loyola, by Peter Paul Rubens, from Norton Simon Museum', 'Peter Paul Rubens', '1620-1622', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola_rubens_miracle.jpg', 'Miracle of Saint Ignatius of Loyola Painting', 'Miracle of Saint Ignatius of Loyola, by Peter Paul Rubens, from Kunsthistorisches Museum', 'Peter Paul Rubens', '1617-1618', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola_zurbaran.jpg', 'Saint Ignatius of Loyola Painting', 'Saint Ignatius of Loyola, by Francisco de Zurbarán, from the Royal Collection of the British royal family', 'Francisco de Zurbarán', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-ignatius-of-loyola', '/saints/saint-ignatius-of-loyola.jpg', 'Ignatius convalesces at Loyola Painting', 'Ignatius convalesces at Loyola, by Albert Chevallier-Tayler', 'Albert Chevallier-Tayler', '1904', NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- =========================
+-- August Saints
+-- =========================
 
 
 
