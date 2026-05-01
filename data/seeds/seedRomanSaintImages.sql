@@ -724,14 +724,11 @@ JOIN (VALUES
 ('saint-john-vianney', '/saints/saint-john-vianney_desvallieres.png', 'Saint John Vianney Painting', 'Saint John Vianney, by George Desvallières', 'George Desvallières', '1920', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-john-vianney', '/saints/saint-john-vianney.jpg', 'Saint John Vianney Illustration', 'Saint John Vianney, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-john-vianney', '/saints/saint-john-vianney_2.jpg', 'Saint John Vianney Painting', 'Saint John Vianney, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-john-vianney', '/saints/saint-john-vianney_borel.jpg', 'Saint John Vianney Fresco', 'Saint John Vianney, by Paul Borel, from Basilique d''Ars', 'Paul Borel', '1907', NULL, 'Public Domain', NULL, 4, FALSE)
+('saint-john-vianney', '/saints/saint-john-vianney_borel.jpg', 'Saint John Vianney Fresco', 'Saint John Vianney, by Paul Borel, from Basilique d''Ars', 'Paul Borel', '1907', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
-
-
-
-
-
+-- Saint Sixtus II and Companions
+('saint-sixtus-ii-and-companions', '/saints/saint-sixtus-ii_botticelli.jpg', 'Saint Sixtus II Fresco', 'Saint Sixtus II, by Sandro Botticelli, from Sistine Chapel', 'Sandro Botticelli', '1481-1482', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-sixtus-ii-and-companions', '/saints/saint-sixtus-ii.jpg', 'Saint Sixtus II Painting', 'Saint Sixtus II, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 
