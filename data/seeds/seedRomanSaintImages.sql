@@ -720,6 +720,25 @@ JOIN (VALUES
 ('saint-peter-julian-eymard', '/saints/saint-peter-julian-eymard.jpg', 'Saint Peter Julian Eymard Painting', 'Saint Peter Julian Eymard, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 1, TRUE),
 ('saint-peter-julian-eymard', '/saints/saint-peter-julian-eymard_2.jpg', 'Saint Peter Julian Eymard Photograph', 'Saint Peter Julian Eymard, by an unknown photographer', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
+-- Saint John Vianney
+('saint-john-vianney', '/saints/saint-john-vianney_desvallieres.png', 'Saint John Vianney Painting', 'Saint John Vianney, by George Desvallières', 'George Desvallières', '1920', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-vianney', '/saints/saint-john-vianney.jpg', 'Saint John Vianney Illustration', 'Saint John Vianney, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-vianney', '/saints/saint-john-vianney_2.jpg', 'Saint John Vianney Painting', 'Saint John Vianney, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john-vianney', '/saints/saint-john-vianney_borel.jpg', 'Saint John Vianney Fresco', 'Saint John Vianney, by Paul Borel, from Basilique d''Ars', 'Paul Borel', '1907', NULL, 'Public Domain', NULL, 4, FALSE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
