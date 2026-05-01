@@ -716,8 +716,9 @@ JOIN (VALUES
 ('saint-eusebius-of-vercelli', '/saints/saint-eusebius-of-vercelli_2.jpg', 'Saint Eusebius of Vercelli Painting', 'Saint Eusebius of Vercelli, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-eusebius-of-vercelli', '/saints/saint-eusebius-of-vercelli-&-roch-&-sebastian_ricci.jpg', 'Saint Eusebius of Vercelli with Saints Roch and Sebastian Painting', 'Saint Eusebius of Vercelli with Saints Roch and Sebastian, by Sebastiano Ricci, from University of Turin', 'Sebastiano Ricci', '1724-1725', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
+-- Saint Peter Julian Eymard
+('saint-peter-julian-eymard', '/saints/saint-peter-julian-eymard.jpg', 'Saint Peter Julian Eymard Painting', 'Saint Peter Julian Eymard, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 1, TRUE),
+('saint-peter-julian-eymard', '/saints/saint-peter-julian-eymard_2.jpg', 'Saint Peter Julian Eymard Photograph', 'Saint Peter Julian Eymard, by an unknown photographer', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 
