@@ -712,9 +712,9 @@ JOIN (VALUES
 ('saint-alphonsus-liguori', '/saints/saint-alphonsus-liguori_4.jpg', 'Saint Alphonsus Liguori Painting', 'Saint Alphonsus Liguori, by an unknown artist', NULL, '1850', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Eusebius of Vercelli
-
-
-
+('saint-eusebius-of-vercelli', '/saints/saint-eusebius-of-vercelli.jpg', 'Saint Eusebius of Vercelli Painting', 'Saint Eusebius of Vercelli, by an unknown artist, from Vercelli Cathedral', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-eusebius-of-vercelli', '/saints/saint-eusebius-of-vercelli_2.jpg', 'Saint Eusebius of Vercelli Painting', 'Saint Eusebius of Vercelli, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-eusebius-of-vercelli', '/saints/saint-eusebius-of-vercelli-&-roch-&-sebastian_ricci.jpg', 'Saint Eusebius of Vercelli with Saints Roch and Sebastian Painting', 'Saint Eusebius of Vercelli with Saints Roch and Sebastian, by Sebastiano Ricci, from University of Turin', 'Sebastiano Ricci', '1724-1725', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
