@@ -730,9 +730,10 @@ JOIN (VALUES
 ('saint-sixtus-ii-and-companions', '/saints/saint-sixtus-ii_botticelli.jpg', 'Saint Sixtus II Fresco', 'Saint Sixtus II, by Sandro Botticelli, from Sistine Chapel', 'Sandro Botticelli', '1481-1482', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-sixtus-ii-and-companions', '/saints/saint-sixtus-ii.jpg', 'Saint Sixtus II Painting', 'Saint Sixtus II, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
-
-
-
+-- Saint Cajetan
+('saint-cajetan', '/saints/saint-cajetan_tiepolo.jpg', 'Saint Cajetan Painting', 'Saint Cajetan, by Giambattista Tiepolo, from Museu Nacional de Belas Artes', 'Giambattista Tiepolo', '1710-1736', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-cajetan', '/saints/saint-cajetan_ricci.jpg', 'Saint Cajetan Comforting a Dying Man Painting', 'Saint Cajetan Comforting a Dying Man, by Sebastiano Ricci, from Pinacoteca di Brera', 'Sebastiano Ricci', '1704', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-cajetan', '/saints/saint-cajetan_solimena.jpg', 'Saint Cajetan in Glory Painting', 'Saint Cajetan in Glory, by Francesco Solimena, from San Gaetano (Vicenza)', 'Francesco Solimena', '1725', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
