@@ -705,8 +705,13 @@ JOIN (VALUES
 -- August Saints
 -- =========================
 
+-- Saint Alphonsus Liguori
+('saint-alphonsus-liguori', '/saints/saint-alphonsus-liguori.jpg', 'Saint Alphonsus Liguori Painting', 'Saint Alphonsus Liguori, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-alphonsus-liguori', '/saints/saint-alphonsus-liguori_2.jpg', 'Saint Alphonsus Liguori Painting', 'Saint Alphonsus Liguori, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-alphonsus-liguori', '/saints/saint-alphonsus-liguori_3.jpg', 'Saint Alphonsus Liguori Painting', 'Saint Alphonsus Liguori, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 3, FALSE),
+('saint-alphonsus-liguori', '/saints/saint-alphonsus-liguori_4.jpg', 'Saint Alphonsus Liguori Painting', 'Saint Alphonsus Liguori, by an unknown artist', NULL, '1850', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
+-- Saint Eusebius of Vercelli
 
 
 
