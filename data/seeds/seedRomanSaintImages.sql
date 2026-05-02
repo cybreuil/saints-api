@@ -103,9 +103,12 @@ JOIN (VALUES
 ('saint-vincent-of-saragossa', '/saints/saint-vincent-of-saragossa_school-of-francisco-ribalta.jpg', 'Saint Vincent of Saragossa Painting', 'Saint Vincent of Saragossa, by the School of Francisco Ribalta, from Museo del Prado', 'School of Francisco Ribalta', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Francis de Sales
-('saint-francis-de-sales', '/saints/saint-francis-de-sales.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by an unknown artist, from the Château de Bussy-Rabutin', NULL, '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-francis-de-sales', '/saints/saint-francis-de-sales_bayeu.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Francisco Bayeu, from Museo del Prado', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales.webp', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales_2.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by an unknown artist, from the Château de Bussy-Rabutin', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-francis-de-sales', '/saints/saint-francis-de-sales_brenet.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Nicolas Guy Brenet, from Château de Blois', 'Nicolas Guy Brenet', '18th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal_bayeu.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by Francisco Bayeu, from Museo del Prado', 'Francisco Bayeu', '18th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal_halle.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by Noël Hallé, from Saint-Louis-en-l''Île Church', 'Noël Hallé', '18th Century', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by an unknown artist, from Monastery of the Visitation (Paris)', NULL, NULL, NULL, 'Public Domain', NULL, 6, FALSE),
 
 -- Saint Paul, Apostle
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rubens.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611-1612', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -170,7 +173,7 @@ JOIN (VALUES
 
 -- Saint Josephine Bakhita (need small watermark correction)
 ('saint-josephine-bakhita', '/saints/saint-josephine-bakhita_ferreira.jpg', 'Saint Josephine Bakhita Painting', 'Saint Josephine Bakhita, by Ruben Ferreira', NULL, '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-josephine-bakhita', '/saints/saint-josephine-bakhita_warford.jpg', 'Saint Josephine Bakhita Painting', 'Saint Josephine Bakhita, by John Alan Warford', NULL, '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-josephine-bakhita', '/saints/saint-josephine-bakhita_warford_no-watermark.jpg', 'Saint Josephine Bakhita Painting', 'Saint Josephine Bakhita, by John Alan Warford', NULL, '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-josephine-bakhita', '/saints/saint-josephine-bakhita.jpg', 'Saint Josephine Bakhita Portrait', 'Saint Josephine Bakhita Portrait', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Scholastica
@@ -534,6 +537,7 @@ JOIN (VALUES
 ('saint-peter-apostle', '/saints/saint-peter-apostle_rembrandt_prison.jpg', 'Saint Peter in Prison Painting', 'Saint Peter in Prison, by Rembrandt, from Israel Museum', 'Rembrandt', '1631', NULL, 'Public Domain', NULL, 13, FALSE),
 ('saint-peter-apostle', '/saints/saint-peter-apostle_velazquez.jpg', 'The Tears of Saint Peter Apostle Painting', 'The Tears of Saint Peter the Apostle, by Diego Velázquez, from Private Collection', 'Diego Velázquez', '1617-1619', NULL, 'Public Domain', NULL, 14, FALSE),
 ('saint-peter-apostle', '/saints/saint-peter-apostle_zurbaran.jpg', 'Saint Peter Apostle Painting', 'Saint Peter the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 15, FALSE),
+('saint-peter-apostle', '/saints/saint-peter-apostle_brion.jpg', 'Jesus and Peter on the Water Painting', 'Jesus and Peter on the Water, by Gustave Brion, from Private Collection', 'Gustave Brion', '1863', NULL, 'Public Domain', NULL, 16, FALSE),
 
 -- Saint Cyril of Alexandria
 ('saint-cyril-of-alexandria', '/saints/saint-cyril-of-alexandria_fresco.jpg', 'Saint Cyril of Alexandria Fresco', 'Saint Cyril of Alexandria, by an unknown artist, from the Chora', NULL, '14th Century', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -729,7 +733,7 @@ JOIN (VALUES
 
 -- Saint Sixtus II and Companions
 ('saint-sixtus-ii-and-companions', '/saints/saint-sixtus-ii_botticelli.jpg', 'Saint Sixtus II Fresco', 'Saint Sixtus II, by Sandro Botticelli, from Sistine Chapel', 'Sandro Botticelli', '1481-1482', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-sixtus-ii-and-companions', '/saints/saint-sixtus-ii.jpg', 'Saint Sixtus II Painting', 'Saint Sixtus II, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-sixtus-ii-and-companions', '/saints/saint-sixtus-ii.jpg', 'Saint Sixtus II Mosaic', 'Saint Sixtus II, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Cajetan
 ('saint-cajetan', '/saints/saint-cajetan_tiepolo.jpg', 'Saint Cajetan Painting', 'Saint Cajetan, by Giambattista Tiepolo, from Museu Nacional de Belas Artes', 'Giambattista Tiepolo', '1710-1736', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -754,22 +758,23 @@ JOIN (VALUES
 ('saint-lawrence', '/saints/saint-lawrence_titan_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Titian, from El Escorial', 'Titian', '1564-1567', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_strozzi.jpg', 'Saint Lawrence Distributing the Treasures of the Church Painting', 'Saint Lawrence Distributing the Treasures of the Church, by Bernardo Strozzi, from North Carolina Museum of Art', 'Bernardo Strozzi', '1625', NULL, 'Public Domain', NULL, 6, FALSE),
 
+-- Saint Clare
+('saint-clare', '/saints/saint-clare_martini.jpg', 'Saint Clare Fresco', 'Saint Clare, by Simone Martini, from Lower Basilica of San Francesco', 'Simone Martini', '1322-1326', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-clare', '/saints/saint-clare_moroni.jpg', 'Saint Clare Painting', 'Saint Clare, by Giovanni Battista Moroni, from Tridentine Diocesan Museum', 'Giovanni Battista Moroni', '1548', NULL, 'Attribution-ShareAlike 4.0 International', NULL, 2, FALSE),
+('saint-clare', '/saints/saint-clare_arco.jpg', 'Saint Clare Painting', 'Saint Clare, by Alonso del Arco, from The Bowes Museum', 'Alonso del Arco', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Jane Frances de Chantal
+('saint-jane-frances-de-chantal', '/saints/saint-jane-frances-de-chantal.webp', 'Saint Jane Frances de Chantal Painting', 'Saint Jane Frances de Chantal, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-jane-frances-de-chantal', '/saints/saint-jane-frances-de-chantal_2.jpg', 'Saint Jane Frances de Chantal Painting', 'Saint Jane Frances de Chantal, by an unknown artist, from Monastery of the Visitation of Holy Mary in Toledo (Ohio)', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-jane-frances-de-chantal', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by an unknown artist, from Monastery of the Visitation (Paris)', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-jane-frances-de-chantal', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal_bayeu.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by Francisco Bayeu, from Museo del Prado', 'Francisco Bayeu', '18th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-jane-frances-de-chantal', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal_halle.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by Noël Hallé, from Saint-Louis-en-l''Île Church', 'Noël Hallé', '18th Century', NULL, 'Public Domain', NULL, 5, FALSE),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- Saint Pontian
+('saint-pontian', '/saints/saint-pontian_aretino.jpg', 'Saint Pontian Painting', 'Saint Pontian, by Aretino, from Museo del Prado', 'Aretino', '1530-1535', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-pontian', '/saints/saint-pontian_montor.jpg', 'Saint Pontian Illustration', 'Saint Pontian, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-pontian', '/saints/saint-pontian.jpg', 'Saint Pontian Mosaic', 'Saint Pontian, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-pontian', '/saints/saint-pontian_echave_martyr.jpg', 'The Martyrdom of Saint Pontian Painting', 'The Martyrdom of Saint Pontian, by Baltasar de Echave Orio, from Museo Nacional de Arte (Mexico)', 'Baltasar de Echave Orio', '1612', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
