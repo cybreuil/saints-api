@@ -169,8 +169,9 @@ JOIN (VALUES
 ('saint-jerome-emiliani', '/saints/saint-jerome-emiliani_2.jpg', 'Saint Jerome Emiliani Painting', 'Saint Jerome Emiliani, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Josephine Bakhita (need small watermark correction)
-('saint-josephine-bakhita', '/saints/saint-josephine-bakhita_warford.jpg', 'Saint Josephine Bakhita Painting', 'Saint Josephine Bakhita, by John Alan Warford', NULL, '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-josephine-bakhita', '/saints/saint-josephine-bakhita.jpg', 'Saint Josephine Bakhita Portrait', 'Saint Josephine Bakhita Portrait', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-josephine-bakhita', '/saints/saint-josephine-bakhita_ferreira.jpg', 'Saint Josephine Bakhita Painting', 'Saint Josephine Bakhita, by Ruben Ferreira', NULL, '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-josephine-bakhita', '/saints/saint-josephine-bakhita_warford.jpg', 'Saint Josephine Bakhita Painting', 'Saint Josephine Bakhita, by John Alan Warford', NULL, '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-josephine-bakhita', '/saints/saint-josephine-bakhita.jpg', 'Saint Josephine Bakhita Portrait', 'Saint Josephine Bakhita Portrait', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Scholastica
 ('saint-scholastica', '/saints/saint-scholastica_bergl.jpg', 'Saint Scholastica Painting', 'Saint Scholastica, by Johann Baptist Wenzel Bergl, from Basilica of Kleinmariazell', 'Johann Baptist Wenzel Bergl', '1765', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -739,6 +740,34 @@ JOIN (VALUES
 ('saint-dominic', '/saints/saint-dominic_coello.jpg', 'Saint Dominic Painting', 'Saint Dominic, by Claudio Coello, from Museo del Prado', 'Claudio Coello', '1685', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-dominic', '/saints/saint-dominic_cavallino.jpg', 'The Vision of Saint Dominic Painting', 'The Vision of Saint Dominic, by Bernardo Cavallino, from National Gallery of Canada', 'Bernardo Cavallino', '1640-1645', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-dominic', '/saints/saint-dominic_campeche.jpg', 'Saint Dominic Painting', 'Saint Dominic, by José Campeche, from Art Gallery of Ontario', 'José Campeche', '1790', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Teresa Benedicta of the Cross (Edith Stein)
+('saint-teresa-benedicta-of-the-cross', '/saints/saint-teresa-benedicta-of-the-cross_ferreira_no-watermark.jpg', 'Saint Teresa Benedicta of the Cross Painting', 'Saint Teresa Benedicta of the Cross, by Ruben Ferreira', 'Ruben Ferreira', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-teresa-benedicta-of-the-cross', '/saints/saint-teresa-benedicta-of-the-cross_passport.jpg', 'Saint Teresa Benedicta of the Cross Photograph', 'Saint Teresa Benedicta of the Cross, by an unknown photographer, from her Passport', NULL, '1938-1939', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-teresa-benedicta-of-the-cross', '/saints/saint-teresa-benedicta-of-the-cross.jpg', 'Saint Teresa Benedicta of the Cross Painting', 'Saint Teresa Benedicta of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Lawrence
+('saint-lawrence', '/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Girolamo da Santacroce, from Courtauld Gallery', 'Girolamo da Santacroce', '1520-1530', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-lawrence', '/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Jean Baptiste de Champaigne, from National Gallery of Art (Washington DC)', 'Jean Baptiste de Champaigne', '1660', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_limosin.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Jean Limosin, from Museum of Fine Arts of Lyon', 'Jean Limosin', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_calli.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Giuseppe Calì, from Saint Lawrence Church (Gozo)', 'Giuseppe Calì', '1889', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_titan_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Titian, from El Escorial', 'Titian', '1564-1567', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_strozzi.jpg', 'Saint Lawrence Distributing the Treasures of the Church Painting', 'Saint Lawrence Distributing the Treasures of the Church, by Bernardo Strozzi, from North Carolina Museum of Art', 'Bernardo Strozzi', '1625', NULL, 'Public Domain', NULL, 6, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
