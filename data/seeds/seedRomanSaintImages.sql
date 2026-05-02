@@ -796,32 +796,25 @@ JOIN (VALUES
 ('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary.jpg', 'Saint Stephen of Hungary Painting', 'Saint Stephen of Hungary, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary_2.jpg', 'Saint Stephen of Hungary Painting', 'Saint Stephen of Hungary, by an unknown artist, from Hungarian National Museum', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary_verhaghen.jpg', 'Saint Stephen of Hungary Receiving the Legate Painting', 'Saint Stephen of Hungary, by Pieter-Jozef Verhaghen, from Museum of Fine Arts (Budapest)', 'Pieter-Jozef Verhaghen', '1770', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary_3.jpg', 'Saint Stephen of Hungary Painting', 'Saint Stephen of Hungary, by an unknown artist, from Museum of Fine Arts (Budapest)', NULL, '18th Century', NULL, 'Public Domain', NULL, 4, FALSE)
+('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary_3.jpg', 'Saint Stephen of Hungary Painting', 'Saint Stephen of Hungary, by an unknown artist, from Museum of Fine Arts (Budapest)', NULL, '18th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 
---
+-- Saint John Eudes
+('saint-john-eudes', '/saints/saint-john-eudes.jpg', 'Saint John Eudes Painting', 'Saint John Eudes, by an unknown artist', NULL, '1673', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-eudes', '/saints/saint-john-eudes_2.jpg', 'Saint John Eudes Painting', 'Saint John Eudes, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
+-- Saint Bernard (of Clairvaux)
+('saint-bernard', '/saints/saint-bernard_latil.jpg', 'Saint Bernard Painting', 'Saint Bernard, by François Vincent Latil (from Philippe de Champaigne), from Saint-Étienne-du-Mont (Paris)', 'François Vincent Latil', '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-bernard', '/saints/saint-bernard_greco.jpg', 'Saint Bernard Painting', 'Saint Bernard, by El Greco, from Hermitage Museum', 'El Greco', '1577-1579', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-bernard', '/saints/saint-bernard_goya.jpg', 'Saint Bernard of Clairvaux Curing a Cripple Painting', 'Saint Bernard of Clairvaux Curing a Cripple, by Francisco Goya, from Real Monasterio de San Joaquín y Santa Ana', 'Francisco Goya', '1787', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-bernard', '/saints/saint-bernard_ribalta.jpg', 'Christ Embracing Saint Bernard Painting', 'Christ Embracing Saint Bernard, by Francisco Ribalta, from Museo del Prado', 'Francisco Ribalta', '1625-1627', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-bernard', '/saints/saint-bernard_cano.jpg', 'The Vision of Saint Bernard Painting', 'The Vision of Saint Bernard, by Alonso Cano, from Museo del Prado', 'Alonso Cano', '1650', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-bernard', '/saints/saint-bernard_signol.jpg', 'Saint Bernard preaching the second Crusade at Vezelay painting', 'Saint Bernard preaching the second Crusade at Vezelay, by Émile Signol, from Château de Versailles', 'Émile Signol', '1840', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-bernard', '/saints/saint-bernard_vivar.jpg', 'Saint Bernard Painting', 'Saint Bernard, by Juan Correa de Vivar, from Museo del Prado', 'Juan Correa de Vivar', '1540-1545', NULL, 'Public Domain', NULL, 7, FALSE),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- Saint Pius X
+('saint-pius-x', '/saints/saint-pius-x_gerrer.jpg', 'Saint Pius X Painting', 'Saint Pius X, by Gregory Gerrer', 'Gregory Gerrer', '1904', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-pius-x', '/saints/saint-pius-x.jpg', 'Saint Pius X Photograph', 'Saint Pius X, by Ernest Walter Histed, from National Portrait Gallery (London)', 'Ernest Walter Histed', '1914', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-pius-x', '/saints/saint-pius-x_bordignon.jpg', 'Saint Pius X Painting', 'Saint Pius X, by Noè Bordignon, from Diocesan museum of Padua (Italy)', 'Noè Bordignon', '1920', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
