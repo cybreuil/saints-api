@@ -735,8 +735,10 @@ JOIN (VALUES
 ('saint-cajetan', '/saints/saint-cajetan_ricci.jpg', 'Saint Cajetan Comforting a Dying Man Painting', 'Saint Cajetan Comforting a Dying Man, by Sebastiano Ricci, from Pinacoteca di Brera', 'Sebastiano Ricci', '1704', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-cajetan', '/saints/saint-cajetan_solimena.jpg', 'Saint Cajetan in Glory Painting', 'Saint Cajetan in Glory, by Francesco Solimena, from San Gaetano (Vicenza)', 'Francesco Solimena', '1725', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
+-- Saint Dominic
+('saint-dominic', '/saints/saint-dominic_coello.jpg', 'Saint Dominic Painting', 'Saint Dominic, by Claudio Coello, from Museo del Prado', 'Claudio Coello', '1685', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-dominic', '/saints/saint-dominic_cavallino.jpg', 'The Vision of Saint Dominic Painting', 'The Vision of Saint Dominic, by Bernardo Cavallino, from National Gallery of Canada', 'Bernardo Cavallino', '1640-1645', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-dominic', '/saints/saint-dominic_campeche.jpg', 'Saint Dominic Painting', 'Saint Dominic, by José Campeche, from Art Gallery of Ontario', 'José Campeche', '1790', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
