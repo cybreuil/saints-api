@@ -776,9 +776,10 @@ JOIN (VALUES
 ('saint-pontian', '/saints/saint-pontian.jpg', 'Saint Pontian Mosaic', 'Saint Pontian, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-pontian', '/saints/saint-pontian_echave_martyr.jpg', 'The Martyrdom of Saint Pontian Painting', 'The Martyrdom of Saint Pontian, by Baltasar de Echave Orio, from Museo Nacional de Arte (Mexico)', 'Baltasar de Echave Orio', '1612', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
-
-
+-- Saint Hippolytus of Rome
+('saint-hippolytus-of-rome', '/saints/saint-hippolytus-of-rome.jpg', 'Saint Hippolytus of Rome Icon', 'Saint Hippolytus of Rome, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-hippolytus-of-rome', '/saints/saint-hippolytus-of-rome_icon.jpg', 'Saint Hippolytus of Rome Icon', 'Saint Hippolytus of Rome, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-hippolytus-of-rome', '/saints/saint-hippolytus-of-rome_julien_martyr.jpg', 'The Martyrdom of Saint Hippolytus of Rome Painting', 'The Martyrdom of Saint Hippolytus of Rome, by Simon Julien, from Lyon Cathedral', 'Simon Julien', '1762', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
