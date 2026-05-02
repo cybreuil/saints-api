@@ -795,12 +795,10 @@ JOIN (VALUES
 -- Saint Stephen of Hungary
 ('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary.jpg', 'Saint Stephen of Hungary Painting', 'Saint Stephen of Hungary, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary_2.jpg', 'Saint Stephen of Hungary Painting', 'Saint Stephen of Hungary, by an unknown artist, from Hungarian National Museum', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary_verhaghen.jpg', 'Saint Stephen of Hungary Receiving the Legate Painting', 'Saint Stephen of Hungary, by Pieter-Jozef Verhaghen, from Museum of Fine Arts (Budapest)', 'Pieter-Jozef Verhaghen', '1770', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary_3.jpg', 'Saint Stephen of Hungary Painting', 'Saint Stephen of Hungary, by an unknown artist, from Museum of Fine Arts (Budapest)', NULL, '18th Century', NULL, 'Public Domain', NULL, 4, FALSE)
 
-
-
-
-
-
+--
 
 
 
