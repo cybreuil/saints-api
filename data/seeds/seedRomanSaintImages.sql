@@ -781,6 +781,59 @@ JOIN (VALUES
 ('saint-hippolytus-of-rome', '/saints/saint-hippolytus-of-rome_icon.jpg', 'Saint Hippolytus of Rome Icon', 'Saint Hippolytus of Rome, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-hippolytus-of-rome', '/saints/saint-hippolytus-of-rome_julien_martyr.jpg', 'The Martyrdom of Saint Hippolytus of Rome Painting', 'The Martyrdom of Saint Hippolytus of Rome, by Simon Julien, from Lyon Cathedral', 'Simon Julien', '1762', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Maximus the Confessor
+('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor.jpg', 'Saint Maximus the Confessor Fresco', 'Saint Maximus the Confessor, by an unknown artist', NULL, '14th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_icon.jpg', 'Saint Maximus the Confessor Icon', 'Saint Maximus the Confessor, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_icon_2.jpg', 'Saint Maximus the Confessor Icon', 'Saint Maximus the Confessor, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_2.jpg', 'Saint Maximus the Confessor Fresco', 'Saint Maximus the Confessor, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
