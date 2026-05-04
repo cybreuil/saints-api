@@ -816,6 +816,24 @@ JOIN (VALUES
 ('saint-pius-x', '/saints/saint-pius-x.jpg', 'Saint Pius X Photograph', 'Saint Pius X, by Ernest Walter Histed, from National Portrait Gallery (London)', 'Ernest Walter Histed', '1914', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-pius-x', '/saints/saint-pius-x_bordignon.jpg', 'Saint Pius X Painting', 'Saint Pius X, by Noè Bordignon, from Diocesan museum of Padua (Italy)', 'Noè Bordignon', '1920', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Rose of Lima (a copier)
+('saint-rose-of-lima', '/saints/saint-rose-of-lima_coello.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Claudio Coello, from Museo del Prado', 'Claudio Coello', '1683', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-rose-of-lima', '/saints/saint-rose-of-lima.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by an unknown artist, from Lima Art Museum', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-rose-of-lima', '/saints/saint-rose-of-lima_medoro.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Angelino Medoro, from Santuario de Santa Rosa (Lima)', 'Angelino Medoro', '1617', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Bartholomew, Apostle (to finish)
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_rubens.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+
+-- Saint Louis
+('saint-louis', '/saints/saint-louis_greco.jpg', 'Saint Louis Painting', 'Saint Louis, by El Greco, from Musée du Louvre', 'El Greco', '1590-1597', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-louis', '/saints/saint-louis_cabanel.jpg', 'Saint Louis Painting', 'Saint Louis, by Alexandre Cabanel, from Musée d''Orsay', 'Alexandre Cabanel', '1864', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-louis', '/saints/saint-louis_signol.jpg', 'Saint Louis Painting', 'Saint Louis, by Émile Signol, from Château de Versailles', 'Émile Signol', '1840', NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+
+
+
+
 
 
 
