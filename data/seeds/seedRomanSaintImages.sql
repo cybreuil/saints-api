@@ -828,7 +828,7 @@ JOIN (VALUES
 ('saint-louis', '/saints/saint-louis_greco.jpg', 'Saint Louis Painting', 'Saint Louis, by El Greco, from Musée du Louvre', 'El Greco', '1590-1597', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-louis', '/saints/saint-louis_cabanel.jpg', 'Saint Louis Painting', 'Saint Louis, by Alexandre Cabanel, from Musée d''Orsay', 'Alexandre Cabanel', '1864', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-louis', '/saints/saint-louis_signol.jpg', 'Saint Louis Painting', 'Saint Louis, by Émile Signol, from Château de Versailles', 'Émile Signol', '1840', NULL, 'Public Domain', NULL, 3, FALSE),
-
+('saint-louis', '/saints/saint-louis_thevenin.jpg', 'Saint Louis Painting', 'Saint Louis, by Jean Thévenin, from Musée du Louvre', 'Jean Thévenin', '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
