@@ -2203,7 +2203,7 @@ INSERT INTO saints (
 (
   'saint-gregory-the-great', 'Saint Gregory the Great',
   540, NULL, NULL, TRUE,
-  604, 9, 3, FALSE,
+  604, 3, 12, FALSE,
   6,
   NULL,
   (SELECT id FROM places WHERE code='ROME'),
