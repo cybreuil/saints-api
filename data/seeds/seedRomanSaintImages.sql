@@ -869,10 +869,9 @@ JOIN (VALUES
 -- =========================
 
 -- Saint Gregory the Great
-
-
-
-
+('saint-gregory-the-great', '/saints/saint-gregory-the-great_vien.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Joseph-Marie Vien, from Musée Fabre', 'Joseph-Marie Vien', '1766', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-gregory-the-great', '/saints/saint-gregory-the-great_stom.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Matthias Stom, from Kunstmuseum Basel', 'Matthias Stom', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-gregory-the-great', '/saints/saint-gregory-the-great_theodoric.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Master Theodoric, from National Gallery Prague', 'Master Theodoric', '1370', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
