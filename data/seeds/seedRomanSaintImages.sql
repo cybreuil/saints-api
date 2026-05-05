@@ -843,10 +843,7 @@ JOIN (VALUES
 -- thevenin copyright chateau versailles
 ('saint-louis', '/saints/saint-louis_loo.jpg', 'Coronation of Saint Louis Painting', 'Coronation of Saint Louis, by Charles-Amédée-Philippe van Loo, from Musée du Louvre', 'Charles-Amédée-Philippe van Loo', '1773', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-louis', '/saints/saint-louis_decreuse.jpg', 'Saint Louis Painting', 'Saint Louis, by Auguste de Creuse, from Château de Versailles', 'Auguste de Creuse', '1837', NULL, 'Public Domain', NULL, 6, FALSE),
-
-
-
-
+('saint-louis', '/saints/saint-louis_vien.jpg', 'Saint Louis entrusted the Regency of the Kingdom to his mother Queen Blanche of Castile Painting', 'Saint Louis entrusted the Regency of the Kingdom to his mother Queen Blanche of Castile, by Joseph-Marie Vien, from Musée du Louvre', 'Joseph-Marie Vien', '1773', NULL, 'Public Domain', NULL, 7, FALSE),
 
 
 
