@@ -845,6 +845,29 @@ JOIN (VALUES
 ('saint-louis', '/saints/saint-louis_decreuse.jpg', 'Saint Louis Painting', 'Saint Louis, by Auguste de Creuse, from Château de Versailles', 'Auguste de Creuse', '1837', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-louis', '/saints/saint-louis_vien.jpg', 'Saint Louis entrusted the Regency of the Kingdom to his mother Queen Blanche of Castile Painting', 'Saint Louis entrusted the Regency of the Kingdom to his mother Queen Blanche of Castile, by Joseph-Marie Vien, from Musée du Louvre', 'Joseph-Marie Vien', '1773', NULL, 'Public Domain', NULL, 7, FALSE),
 
+-- Saint Joseph Calasanz
+('saint-joseph-calasanz', '/saints/saint-joseph-calasanz_casanova.jpg', 'Saint Joseph Calasanz Painting', 'Saint Joseph Calasanz, by Francisco Jover y Casanova, from Museo del Prado', 'Francisco Jover y Casanova', '1879', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-joseph-calasanz', '/saints/saint-joseph-calasanz_corvi.jpg', 'Saint Joseph Calasanz Ressucitating a Child Painting', 'Saint Joseph Calasanz Ressucitating a Child, by Domenico Corvi, from Wadsworth Atheneum', 'Domenico Corvi', '1767', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-joseph-calasanz', '/saints/saint-joseph-calasanz_goya.jpg', 'Last Communion of Saint Joseph Calasanz Painting', 'Last Communion of Saint Joseph Calasanz, by Francisco Goya', 'Francisco Goya', '1819', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Monica
+('saint-monica', '/saints/saint-monica_cabanel.jpg', 'Saint Monica Painting', 'Saint Monica, by Alexandre Cabanel, from Milwaukee Art Museum', 'Alexandre Cabanel', '1845', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-monica', '/saints/saint-augustine-&-monica_scheffer.jpg', 'Saint Augustine and Saint Monica Painting', 'Saint Augustine and Saint Monica, by Ary Scheffer, from National Gallery', 'Ary Scheffer', '1854', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-monica', '/saints/saint-monica_gozzoli.jpg', 'Saint Monica Fresco', 'Saint Monica, by Benozzo Gozzoli, from Church of Sant''Agostino (San Gimignano)', 'Benozzo Gozzoli', '1464-1465', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Augustine of Hippo
+('saint-augustine-of-hippo', '/saints/saint-augustine-of-hippo_champaigne.jpg', 'Saint Augustine of Hippo Painting', 'Saint Augustine of Hippo, by Philippe de Champaigne, from Los Angeles County Museum of Art', 'Philippe de Champaigne', '1645', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-augustine-of-hippo', '/saints/saint-augustine-of-hippo-&-monica_scheffer.jpg', 'Saint Augustine and Saint Monica Painting', 'Saint Augustine and Saint Monica, by Ary Scheffer, from National Gallery', 'Ary Scheffer', '1854', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-augustine-of-hippo', '/saints/saint-augustine-of-hippo_coello.jpg', 'Saint Augustine of Hippo Painting', 'Saint Augustine of Hippo, by Claudio Coello, from Private Collection', 'Claudio Coello', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-augustine-of-hippo', '/saints/saint-augustine-of-hippo_botticelli.jpg', 'Saint Augustine of Hippo Painting', 'Saint Augustine of Hippo, by Sandro Botticelli, from Ognissanti Church (Florence)', 'Sandro Botticelli', '1480', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-augustine-of-hippo', '/saints/saint-augustine-of-hippo_coello_triumph.jpg', 'The Triumph of Saint Augustine Painting', 'The Triumph of Saint Augustine, by Claudio Coello, from Museo del Prado', 'Claudio Coello', '1664', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-augustine-of-hippo', '/saints/saint-augustine-of-hippo_rubens.jpg', 'Saint Augustine of Hippo Painting', 'Saint Augustine of Hippo, by Peter Paul Rubens, from National Gallery Prague', 'Peter Paul Rubens', '1636-1638', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-augustine-of-hippo', '/saints/saint-augustine-of-hippo_rubens_jesus.jpg', 'Saint Augustine of Hippo with Christ & Virgin Mary Painting', 'Saint Augustine of Hippo with Christ & Virgin Mary, by Peter Paul Rubens, from Royal Academy of Fine Arts of San Fernando', 'Peter Paul Rubens', '1615', NULL, 'Public Domain', NULL, 7, FALSE),
+
+-- =========================
+-- September Saints
+-- =========================
+
 
 
 

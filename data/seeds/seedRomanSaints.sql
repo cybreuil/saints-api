@@ -2052,7 +2052,7 @@ INSERT INTO saints (
 (
   'saint-monica', 'Saint Monica',
   332, NULL, NULL, TRUE,
-  387, 8, 27, TRUE,
+  387, NULL, NULL, TRUE,
   4,
   NULL,
   (SELECT id FROM places WHERE code='ROME'),
