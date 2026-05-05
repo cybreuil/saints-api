@@ -818,28 +818,31 @@ JOIN (VALUES
 
 -- Saint Rose of Lima (a copier)
 ('saint-rose-of-lima', '/saints/saint-rose-of-lima_coello.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Claudio Coello, from Museo del Prado', 'Claudio Coello', '1683', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-rose-of-lima', '/saints/saint-rose-of-lima.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by an unknown artist, from Lima Art Museum', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-rose-of-lima', '/saints/saint-rose-of-lima.jpg', 'Saint Rose of Lima with Child Jesus Painting', 'Saint Rose of Lima with Child Jesus, by an unknown artist, from Lima Art Museum', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-rose-of-lima', '/saints/saint-rose-of-lima_medoro.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Angelino Medoro, from Santuario de Santa Rosa (Lima)', 'Angelino Medoro', '1617', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-rose-of-lima', '/saints/saint-rose-of-lima_laso.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Francisco Laso, from Pinacoteca Municipal Ignacio Merino', 'Francisco Laso', '1859', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-rose-of-lima', '/saints/saint-rose-of-lima_murillo.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Bartolomé Esteban Murillo', 'Bartolomé Esteban Murillo', '1670-1680', NULL, 'Public Domain', NULL, 5, FALSE),
 
--- Saint Bartholomew, Apostle (to finish)
+-- Saint Bartholomew, Apostle
 ('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_rubens.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_dyck.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Anthony van Dyck, from Staatliche Kunstsammlungen Dresden', 'Anthony van Dyck', '1618-1620', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_ribera.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_zurbaran.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_rembrandt.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Rembrandt, from Timken Museum of Art', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_rembrandt_2.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Rembrandt, from Getty Center', 'Rembrandt', '1661', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle-cavallino.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Bernardo Cavallino, from National Gallery', 'Bernardo Cavallino', '17th Century', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_ribera_martyr.jpg', 'The Martyrdom of Saint Bartholomew Painting', 'The Martyrdom of Saint Bartholomew, by Jusepe de Ribera, from Colegiata de Nuestra Señora de la Asunción', 'Jusepe de Ribera', '1616-1617', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_tiepolo_martyr.jpg', 'The Martyrdom of Saint Bartholomew Painting', 'The Martyrdom of Saint Bartholomew, by Giambattista Tiepolo, from San Stae', 'Giambattista Tiepolo', '1722', NULL, 'Public Domain', NULL, 9, FALSE),
 
 -- Saint Louis
-('saint-louis', '/saints/saint-louis_greco.jpg', 'Saint Louis Painting', 'Saint Louis, by El Greco, from Musée du Louvre', 'El Greco', '1590-1597', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-louis', '/saints/saint-louis_cabanel.jpg', 'Saint Louis Painting', 'Saint Louis, by Alexandre Cabanel, from Musée d''Orsay', 'Alexandre Cabanel', '1864', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-louis', '/saints/saint-louis_signol.jpg', 'Saint Louis Painting', 'Saint Louis, by Émile Signol, from Château de Versailles', 'Émile Signol', '1840', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-louis', '/saints/saint-louis_thevenin.jpg', 'Saint Louis Painting', 'Saint Louis, by Jean Thévenin, from Musée du Louvre', 'Jean Thévenin', '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
-
-
-
-
-
-
-
-
-
-
-
+('saint-louis', '/saints/saint-louis_signol.jpg', 'Saint Louis Painting', 'Saint Louis, by Émile Signol, from Château de Versailles', 'Émile Signol', '1844', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-louis', '/saints/saint-louis_lagrenee.jpg', 'Meeting between Innocent IV and Saint Louis Painting', 'Meeting between Innocent IV and Saint Louis, by Louis-Jean-François Lagrenée, from Musée du Louvre', 'Louis-Jean-François Lagrenée', '1773', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-louis', '/saints/saint-louis_cabanel.jpg', 'The Glorification of Saint Louis Painting', 'The Glorification of Saint Louis, by Alexandre Cabanel, from Musée Fabre', 'Alexandre Cabanel', '1853-1855', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-louis', '/saints/saint-louis_greco.jpg', 'Saint Louis Painting', 'Saint Louis, by El Greco, from Musée du Louvre', 'El Greco', '1592', NULL, 'Public Domain', NULL, 4, FALSE),
+-- ('saint-louis', '/saints/saint-louis_thevenin.jpg', 'Saint Louis Painting', 'Saint Louis, by Charles Thévenin, from Château de Versailles', 'Charles Thévenin', '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+-- thevenin copyright chateau versailles
+('saint-louis', '/saints/saint-louis_loo.jpg', 'Coronation of Saint Louis Painting', 'Coronation of Saint Louis, by Charles-Amédée-Philippe van Loo, from Musée du Louvre', 'Charles-Amédée-Philippe van Loo', '1773', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-louis', '/saints/saint-louis_decreuse.jpg', 'Saint Louis Painting', 'Saint Louis, by Auguste de Creuse, from Château de Versailles', 'Auguste de Creuse', '1837', NULL, 'Public Domain', NULL, 6, FALSE),
 
 
 
