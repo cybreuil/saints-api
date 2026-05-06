@@ -82,6 +82,7 @@ JOIN (VALUES
 ('saint-anthony-abbot', '/saints/saint-anthony-abbot_osservanza-master_gold-temptation.jpg', 'The Temptation of Saint Anthony Painting', 'The Gold Temptation of Saint Anthony, by the Osservanza Master, from Metropolitan Museum of Art', 'Osservanza Master', '1435-1440', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-anthony-abbot', '/saints/saint-anthony-abbot_osservanza-master_woman-temptation.jpg', 'The Temptation of Saint Anthony Painting', 'The Woman Temptation of Saint Anthony, by the Osservanza Master, from Yale University Art Gallery', 'Osservanza Master', '1435-1440', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-anthony-abbot', '/saints/saint-anthony-abbot_bosch.jpg', 'The Temptation of Saint Anthony Painting', 'The Temptation of Saint Anthony, by Hieronymus Bosch, from Museo del Prado', 'Hieronymus Bosch', '16th Century', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-anthony-abbot', '/saints/saint-anthony-abbot-&-cornelius-&-cyprian_veronese.jpg', 'Saint Anthony the Great with Saints Cornelius and Cyprian Painting', 'Saint Anthony the Great with Saints Cornelius and Cyprian, by Paolo Veronese, from Pinacoteca di Brera (Milan)', 'Paolo Veronese', '1565-1571', NULL, 'Public Domain', NULL, 6, FALSE),
 
 -- Saint Fabian Pope
 ('saint-fabian-pope', '/saints/saint-fabian-pope.jpg', 'Saint Fabian Pope Painting', 'Saint Fabian, Pope, by Giovanni di Paolo, from National Gallery (London)', 'Giovanni di Paolo', '15th Century', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -870,17 +871,63 @@ JOIN (VALUES
 
 -- Saint Gregory the Great
 ('saint-gregory-the-great', '/saints/saint-gregory-the-great_vien.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Joseph-Marie Vien, from Musée Fabre', 'Joseph-Marie Vien', '1766', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-gregory-the-great', '/saints/saint-gregory-the-great_stom.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Matthias Stom, from Kunstmuseum Basel', 'Matthias Stom', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-gregory-the-great', '/saints/saint-gregory-the-great_theodoric.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Master Theodoric, from National Gallery Prague', 'Master Theodoric', '1370', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-gregory-the-great', '/saints/saint-gregory-the-great_ribera.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Jusepe de Ribera, from Galleria Nazionale d''Arte Antica (Rome)', 'Jusepe de Ribera', '1614', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-gregory-the-great', '/saints/saint-gregory-the-great_stom.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Matthias Stom, from Kunstmuseum Basel', 'Matthias Stom', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-gregory-the-great', '/saints/saint-gregory-the-great_theodoric.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Master Theodoric, from National Gallery Prague', 'Master Theodoric', '1370', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-gregory-the-great', '/saints/saint-gregory-the-great_gasparro.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Giovanni Gasparro, from Museo Diocesano (Lecce)', 'Giovanni Gasparro', '2017', NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Teresa of Calcutta
 ('saint-teresa-of-calcutta', '/saints/saint-teresa-of-calcutta_zumo.jpg', 'Saint Teresa of Calcutta Painting', 'Saint Teresa of Calcutta, by Jacob Zumo', 'Jacob Zumo', '2024', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-teresa-of-calcutta', '/saints/saint-teresa-of-calcutta.jpg', 'Saint Teresa of Calcutta Photograph', 'Saint Teresa of Calcutta, by an unknown photographer', NULL, '1995', NULL, 'Attribution-ShareAlike 2.0 Generic', NULL, 2, FALSE),
+('saint-teresa-of-calcutta', '/saints/saint-teresa-of-calcutta_bettmann.jpg', 'Saint Teresa of Calcutta Photograph', 'Saint Teresa of Calcutta, by an unknown photographer, from Bettmann Archive', NULL, '1988', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-teresa-of-calcutta', '/saints/saint-teresa-of-calcutta.jpg', 'Saint Teresa of Calcutta Photograph', 'Saint Teresa of Calcutta, by an unknown photographer', NULL, '1995', NULL, 'Attribution-ShareAlike 2.0 Generic', NULL, 3, FALSE),
 
+-- Saint Peter Claver
+('saint-peter-claver', '/saints/saint-peter-claver.jpg', 'Saint Peter Claver Painting', 'Saint Peter Claver, by an unknown artist, from Palace of the Inquisition (Cartagena)', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 1, TRUE),
+('saint-peter-claver', '/saints/saint-peter-claver_vitta.jpg', 'Saint Peter Claver Engraving', 'Saint Peter Claver, by Joseph Vitta (after Pietro Gagliardi)', 'Joseph Vitta', NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-peter-claver', '/saints/saint-peter-claver_2.jpg', 'Saint Peter Claver Painting', 'Saint Peter Claver, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint John Chrysostom
+('saint-john-chrysostom', '/saints/saint-john-chrysostom_champaigne.jpg', 'Saint John Chrysostom Illustration', 'Saint John Chrysostom, by Jean-Baptiste de Champaigne, from Rijksmuseum', 'Jean-Baptiste de Champaigne', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-chrysostom', '/saints/saint-john-chrysostom_wencker.jpg', 'Saint John Chrystostomos Preaching Before the Empress Eudoxia Painting', 'Saint John Chrystostomos Preaching Before the Empress Eudoxia, by Joseph Wencker, from Musée Crozatier', 'Joseph Wencker', '1880-1881', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-chrysostom', '/saints/saint-john-chrysostom_mosaic.jpg', 'Saint John Chrysostom Mosaic', 'Saint John Chrysostom, by an unknown artist, from Hagia Sophia (Constantinople)', NULL, '9th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Cornelius
+('saint-cornelius', '/saints/saint-cornelius.jpg', 'Saint Cornelius Painting', 'Saint Cornelius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-cornelius', '/saints/saint-cornelius_2.jpg', 'Saint Cornelius Stained Glass', 'Saint Cornelius, by Master of Saint Severin, from Victoria and Albert Museum (London)', 'Master of Saint Severin', '1520-1521', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-cornelius', '/saints/saint-cornelius_mosaic.jpg', 'Saint Cornelius Mosaic', 'Saint Cornelius, by an unknown artist, from Santa Maria in Trastevere (Rome)', NULL, '13th Century', NULL, 'Attribution-ShareAlike 4.0 International', NULL, 3, FALSE),
+('saint-cornelius', '/saints/saint-cornelius_3.jpg', 'Saint Cornelius Mosaic', 'Saint Cornelius, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-cornelius', '/saints/saint-anthony-abbot-&-cornelius-&-cyprian_veronese.jpg', 'Saint Anthony the Great with Saints Cornelius and Cyprian Painting', 'Saint Anthony the Great with Saints Cornelius and Cyprian, by Paolo Veronese, from Pinacoteca di Brera (Milan)', 'Paolo Veronese', '1565-1571', NULL, 'Public Domain', NULL, 5, FALSE),
 
+-- Saint Cyprian
+('saint-cyprian', '/saints/saint-cyprian.jpg', 'Saint Cyprian Illustration', 'Saint Cyprian, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-cyprian', '/saints/saint-cyprian_2.jpg', 'Saint Cyprian Painting', 'Saint Cyprian, by Master of Messkirch, from Staatsgalerie Stuttgart', 'Master of Messkirch', '1535-1540', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-cyprian', '/saints/saint-anthony-abbot-&-cornelius-&-cyprian_veronese.jpg', 'Saint Anthony the Great with Saints Cornelius and Cyprian Painting', 'Saint Anthony the Great with Saints Cornelius and Cyprian, by Paolo Veronese, from Pinacoteca di Brera (Milan)', 'Paolo Veronese', '1565-1571', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Robert Bellarmine
+('saint-robert-bellarmine', '/saints/saint-robert-bellarmine.jpg', 'Saint Robert Bellarmine Painting', 'Saint Robert Bellarmine, by an unknown artist, from Plantin–Moretus Museum (Antwerp)', NULL, '1622-1623', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-robert-bellarmine', '/saints/saint-robert-bellarmine_2.png', 'Saint Robert Bellarmine Painting', 'Saint Robert Bellarmine, by an unknown artist', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Hildegard of Bingen
+('saint-hildegard-of-bingen', '/saints/saint-hildegard-of-bingen.jpg', 'Saint Hildegard von Bingen receives a divine inspiration and passes it on to her scribe Illumination', 'Saint Hildegard von Bingen receives a divine inspiration and passes it on to her scribe, by an unknown artist, from the Rupertsberg Codex of Liber Scivias', NULL, '1151', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-hildegard-of-bingen', '/saints/saint-hildegard-of-bingen_2.jpg', 'Saint Hildegard of Bingen Fresco', 'Saint Hildegard of Bingen, by an unknown artist, from Eibingen Abbey', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-hildegard-of-bingen', '/saints/saint-hildegard-of-bingen_3.webp', 'Saint Hildegard of Bingen Painting', 'Saint Hildegard of Bingen, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-hildegard-of-bingen', '/saints/saint-hildegard-of-bingen_casparo.jpg', 'The Vision of the Church of Saint Hildegard von Bingen Painting', 'The Vision of the Church of Saint Hildegard von Bingen, by Giovanni Gasparro', 'Giovanni Gasparro', '2014-2018', NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint Januarius
+('saint-januarius', '/saints/saint-januarius_caravaggio.jpg', 'Saint Januarius Painting', 'Saint Januarius, by Louis Finson (from Caravaggio), from Palmer Museum of Art', 'Louis Finson', '1610-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-januarius', '/saints/saint-januarius_vaccaro.jpg', ' The Ascension of Saint Januarius Painting', 'The Ascension of Saint Januarius, by Andrea Vaccaro, from Museo del Prado', 'Andrea Vaccaro', '1635', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-januarius', '/saints/saint-januarius_solimena.jpg', 'Saint Januarius Painting', 'Saint Januarius, by Francesco Solimena', 'Francesco Solimena', '1702', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-januarius', '/saints/saint-januarius_solimena_miracle.jpg', 'The Miracle of Saint Januarius Painting', 'The Miracle of Saint Januarius, by Francesco Solimena', 'Francesco Solimena', NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-januarius', '/saints/saint-januarius_solimena_prison.jpg', 'Saint Januarius visited in prison by Proculus and Sosius Painting', 'Saint Januarius visited in prison by Proculus and Sosius, by Francesco Solimena', 'Francesco Solimena', NULL, NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-januarius', '/saints/saint-januarius_gentileschi_martyr.jpg', 'The Martyrdom of Saint Januarius in the Amphitheatre at Pozzuoli Painting', 'The Martyrdom of Saint Januarius in the Amphitheatre at Pozzuoli, by Artemisia Gentileschi, from Pozzuoli cathedral', 'Artemisia Gentileschi', '1636-1637', NULL, 'Public Domain', NULL, 6, FALSE),
+
+-- Saint Andrew Kim Tae-gon
+('saint-andrew-kim-tae-gon', '/saints/saint-andrew-kim-tae-gon.jpg', 'Saint Andrew Kim Tae-gon Painting', 'Saint Andrew Kim Tae-gon, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-andrew-kim-tae-gon', '/saints/saint-andrew-kim-tae-gon-&-companions.jpg', 'Saint Andrew Kim Tae-gon and Companions Painting', 'Saint Andrew Kim Tae-gon and Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Paul Chong Ha-sang
+('saint-paul-chong-ha-sang', '/saints/saint-paul-chong-ha-sang_warford_no-watermark.jpg', 'Saint Paul Chong Ha-sang Painting', 'Saint Paul Chong Ha-sang, by John Alan Warford', 'John Alan Warford', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-paul-chong-ha-sang', '/saints/saint-paul-chong-ha-sang.jpg', 'Saint Paul Chong Ha-sang Painting', 'Saint Paul Chong Ha-sang, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 
