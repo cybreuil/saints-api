@@ -928,17 +928,18 @@ JOIN (VALUES
 -- Saint Paul Chong Ha-sang
 ('saint-paul-chong-ha-sang', '/saints/saint-paul-chong-ha-sang_warford_no-watermark.jpg', 'Saint Paul Chong Ha-sang Painting', 'Saint Paul Chong Ha-sang, by John Alan Warford', 'John Alan Warford', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-paul-chong-ha-sang', '/saints/saint-paul-chong-ha-sang-&-companions.jpg', 'Saint Paul Chong Ha-sang and Companions Illustration', 'Saint Paul Chong Ha-sang and Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-paul-chong-ha-sang', '/saints/saint-andrew-kim-tae-gon-&-companions.jpg', 'Saint Andrew Kim Tae-gon and Companions Painting', 'Saint Andrew Kim Tae-gon and Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE)
+('saint-paul-chong-ha-sang', '/saints/saint-andrew-kim-tae-gon-&-companions.jpg', 'Saint Andrew Kim Tae-gon and Companions Painting', 'Saint Andrew Kim Tae-gon and Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
-
-
-
-
-
-
-
+-- Saint Matthew, Apostle and Evangelist
+('saint-matthew', '/saints/saint-matthew_rubens.jpg', 'Saint Matthew Painting', 'Saint Matthew the Apostle and Evangelist, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-matthew', '/saints/saint-matthew_dyck.jpg', 'Saint Matthew Painting', 'Saint Matthew the Apostle and Evangelist, by Anthony van Dyck, from King Baudouin Foundation', 'Anthony van Dyck', '1618-1620', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-matthew', '/saints/saint-matthew_rembrandt.jpg', 'The Evangelist Matthew and the Angel Painting', 'The Evangelist Matthew and the Angel, by Rembrandt, from Louvre-Lens', 'Rembrandt', '1661', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-matthew', '/saints/saint-matthew_caravaggio.jpg', 'The Inspiration of Saint Matthew Painting', 'The Inspiration of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1602', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-matthew', '/saints/saint-matthew_caravaggio_calling.jpg', 'The Calling of Saint Matthew Painting', 'The Calling of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1599-1600', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-matthew', '/saints/saint-matthew_caravaggio_martyrdom.jpg', 'The Martyrdom of Saint Matthew Painting', 'The Martyrdom of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1599-1600', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-matthew', '/saints/saint-matthew_hals.jpg', 'Saint Matthew Painting', 'Saint Matthew, by Frans Hals, from Odesa Museum of Western and Eastern Art', 'Frans Hals', '1625', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-matthew', '/saints/saint-matthew_reni.jpg', 'Saint Matthew Painting', 'Saint Matthew, by Guido Reni, from Pinacoteca Vaticana', 'Guido Reni', '1635', NULL, 'Public Domain', NULL, 8, FALSE),
+-- Zurbaran ?
 
 
 
