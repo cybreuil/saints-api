@@ -927,12 +927,8 @@ JOIN (VALUES
 
 -- Saint Paul Chong Ha-sang
 ('saint-paul-chong-ha-sang', '/saints/saint-paul-chong-ha-sang_warford_no-watermark.jpg', 'Saint Paul Chong Ha-sang Painting', 'Saint Paul Chong Ha-sang, by John Alan Warford', 'John Alan Warford', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-paul-chong-ha-sang', '/saints/saint-paul-chong-ha-sang.jpg', 'Saint Paul Chong Ha-sang Painting', 'Saint Paul Chong Ha-sang, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
-
-
-
-
-
+('saint-paul-chong-ha-sang', '/saints/saint-paul-chong-ha-sang-&-companions.jpg', 'Saint Paul Chong Ha-sang and Companions Illustration', 'Saint Paul Chong Ha-sang and Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-paul-chong-ha-sang', '/saints/saint-andrew-kim-tae-gon-&-companions.jpg', 'Saint Andrew Kim Tae-gon and Companions Painting', 'Saint Andrew Kim Tae-gon and Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE)
 
 
 
