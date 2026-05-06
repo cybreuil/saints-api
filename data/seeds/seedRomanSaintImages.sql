@@ -873,6 +873,30 @@ JOIN (VALUES
 ('saint-gregory-the-great', '/saints/saint-gregory-the-great_stom.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Matthias Stom, from Kunstmuseum Basel', 'Matthias Stom', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-gregory-the-great', '/saints/saint-gregory-the-great_theodoric.jpg', 'Saint Gregory the Great Painting', 'Saint Gregory the Great, by Master Theodoric, from National Gallery Prague', 'Master Theodoric', '1370', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Teresa of Calcutta
+('saint-teresa-of-calcutta', '/saints/saint-teresa-of-calcutta_zumo.jpg', 'Saint Teresa of Calcutta Painting', 'Saint Teresa of Calcutta, by Jacob Zumo', 'Jacob Zumo', '2024', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-teresa-of-calcutta', '/saints/saint-teresa-of-calcutta.jpg', 'Saint Teresa of Calcutta Photograph', 'Saint Teresa of Calcutta, by an unknown photographer', NULL, '1995', NULL, 'Attribution-ShareAlike 2.0 Generic', NULL, 2, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
