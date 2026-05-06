@@ -2221,7 +2221,7 @@ INSERT INTO saints (
 (
   'saint-peter-claver', 'Saint Peter Claver',
   1581, NULL, NULL, TRUE,
-  1654, 9, 9, FALSE,
+  1654, 9, 8, FALSE,
   16,
   NULL, NULL, NULL
 ),
@@ -2235,7 +2235,7 @@ INSERT INTO saints (
 (
   'saint-john-chrysostom', 'Saint John Chrysostom',
   347, NULL, NULL, TRUE,
-  407, 9, 13, FALSE,
+  407, 9, 14, FALSE,
   5,
   NULL,
   (SELECT id FROM places WHERE code='CONSTANTINOPLE'),
@@ -2260,7 +2260,7 @@ INSERT INTO saints (
 (
   'saint-cyprian', 'Saint Cyprian',
   200, NULL, NULL, TRUE,
-  258, 9, 16, TRUE,
+  258, 9, 14, TRUE,
   3,
   NULL,
   (SELECT id FROM places WHERE code='CARTHAGE'),
@@ -2287,7 +2287,7 @@ INSERT INTO saints (
 (
   'saint-januarius', 'Saint Januarius',
   NULL, NULL, NULL, TRUE,
-  NULL, 9, 19, TRUE,
+  305, 9, 19, TRUE,
   NULL,
   NULL,
   (SELECT id FROM places WHERE code='NAPLES'),
@@ -2296,7 +2296,16 @@ INSERT INTO saints (
 (
   'saint-andrew-kim-tae-gon', 'Saint Andrew Kim Tae-gon',
   1821, 8, 21, FALSE,
-  1846, 9, 20, FALSE,
+  1846, 9, 16, FALSE,
+  19,
+  (SELECT id FROM places WHERE code='KOREA'),
+  (SELECT id FROM places WHERE code='SEOUL'),
+  (SELECT id FROM places WHERE code='KOREA')
+),
+(
+  'saint-paul-chong-ha-sang', 'Saint Paul Chong Ha-sang',
+  1794, NULL, NULL, TRUE,
+  1839, 9, 22, FALSE,
   19,
   (SELECT id FROM places WHERE code='KOREA'),
   (SELECT id FROM places WHERE code='SEOUL'),
