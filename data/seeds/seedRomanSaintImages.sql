@@ -988,7 +988,10 @@ JOIN (VALUES
 -- October Saints
 -- =========================
 
-
+-- Saint Thérèse of the Child Jesus
+('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus.jpg', 'Saint Thérèse of the Child Jesus Painting', 'Saint Thérèse of the Child Jesus, by an unknown artist, from Santa Teresa del Bambin Gesù (Panfilo)', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+--WIP
+-- The painting of St. Therese of Avila in the church Chiesa di San Franceso d Assisi by A. Nicolas (1931). ???
 
 
 
