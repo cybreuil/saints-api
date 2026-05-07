@@ -2494,7 +2494,7 @@ INSERT INTO saints (
 (
   'saint-therese-of-the-child-jesus', 'Saint Thérèse of the Child Jesus, Virgin and Doctor of the Church',
   1873, 1, 2, FALSE,
-  1897, 10, 1, FALSE,
+  1897, 9, 30, FALSE,
   19,
   (SELECT id FROM places WHERE code='LISIEUX'),
   (SELECT id FROM places WHERE code='LISIEUX'),
