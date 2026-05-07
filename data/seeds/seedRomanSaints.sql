@@ -2360,7 +2360,7 @@ INSERT INTO saints (
 (
   'saint-lawrence-ruiz-and-companions', 'Saint Lawrence Ruiz and Companions',
   1600, NULL, NULL, TRUE,
-  1637, 9, 28, FALSE,
+  1637, 9, 29, FALSE,
   17,
   (SELECT id FROM places WHERE code='MANILA'),
   (SELECT id FROM places WHERE code='JAPAN'),
