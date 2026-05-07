@@ -936,10 +936,19 @@ JOIN (VALUES
 ('saint-matthew', '/saints/saint-matthew_rembrandt.jpg', 'The Evangelist Matthew and the Angel Painting', 'The Evangelist Matthew and the Angel, by Rembrandt, from Louvre-Lens', 'Rembrandt', '1661', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-matthew', '/saints/saint-matthew_caravaggio.jpg', 'The Inspiration of Saint Matthew Painting', 'The Inspiration of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1602', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-matthew', '/saints/saint-matthew_caravaggio_calling.jpg', 'The Calling of Saint Matthew Painting', 'The Calling of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1599-1600', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-matthew', '/saints/saint-matthew_caravaggio_martyrdom.jpg', 'The Martyrdom of Saint Matthew Painting', 'The Martyrdom of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1599-1600', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-matthew', '/saints/saint-matthew_hals.jpg', 'Saint Matthew Painting', 'Saint Matthew, by Frans Hals, from Odesa Museum of Western and Eastern Art', 'Frans Hals', '1625', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-matthew', '/saints/saint-matthew_reni.jpg', 'Saint Matthew Painting', 'Saint Matthew, by Guido Reni, from Pinacoteca Vaticana', 'Guido Reni', '1635', NULL, 'Public Domain', NULL, 8, FALSE),
--- Zurbaran ?
+('saint-matthew', '/saints/saint-matthew_zurbaran.jpg', 'Saint Matthew Painting', 'Saint Matthew, by Francisco de Zurbarán, from National Museum of Ancient Art', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 9, FALSE),
+
+-- Saint Pius of Pietrelcina
+('saint-pius-of-pietrelcina', '/saints/saint-pius-of-pietrelcina_2.jpg', 'Saint Pius of Pietrelcina Painting', 'Saint Pius of Pietrelcina, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-pius-of-pietrelcina', '/saints/saint-pius-of-pietrelcina_dughetti.jpg', 'Saint Pius of Pietrelcina Drawing', 'Saint Pius of Pietrelcina, by Roberto Dughetti', 'Roberto Dughetti', '1966', NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 2, FALSE),
+('saint-pius-of-pietrelcina', '/saints/saint-pius-of-pietrelcina.jpg', 'Saint Pius of Pietrelcina Photograph', 'Saint Pius of Pietrelcina, by Elia Stelluto', 'Elia Stelluto', '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-pius-of-pietrelcina', '/saints/saint-pius-of-pietrelcina_3_no-watermark.jpg', 'Saint Pius of Pietrelcina Photograph', 'Saint Pius of Pietrelcina, by Elia Stelluto', 'Elia Stelluto', '20th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+
+
+
+
 
 
 
