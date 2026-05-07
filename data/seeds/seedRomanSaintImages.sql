@@ -946,6 +946,60 @@ JOIN (VALUES
 ('saint-pius-of-pietrelcina', '/saints/saint-pius-of-pietrelcina.jpg', 'Saint Pius of Pietrelcina Photograph', 'Saint Pius of Pietrelcina, by Elia Stelluto', 'Elia Stelluto', '20th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-pius-of-pietrelcina', '/saints/saint-pius-of-pietrelcina_3_no-watermark.jpg', 'Saint Pius of Pietrelcina Photograph', 'Saint Pius of Pietrelcina, by Elia Stelluto', 'Elia Stelluto', '20th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Cosmas
+('saint-cosmas', '/saints/saint-cosmas-&-damian.jpg', 'Saint Cosmas and Saint Damian Illustration', 'Saint Cosmas and Saint Damian, by Jean Bourdichon, from Bibliothèque Nationale de France', 'Jean Bourdichon', '1503-1508', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-cosmas', '/saints/saint-cosmas-&-damian_2.jpg', 'Saint Cosmas and Saint Damian Painting', 'Saint Cosmas and Saint Damian, by Hans von Kulmbach, from Germanisches Nationalmuseum', 'Hans von Kulmbach', '1507-1508', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-cosmas', '/saints/saint-cosmas-&-damian_3.jpg', 'Saint Cosmas and Saint Damian Icon', 'Saint Cosmas and Saint Damian, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-cosmas', '/saints/saint-cosmas-&-damian_4.jpg', 'Saint Cosmas and Saint Damian Icon', 'Saint Cosmas and Saint Damian, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint Damian
+('saint-damian', '/saints/saint-cosmas-&-damian.jpg', 'Saint Cosmas and Saint Damian Illustration', 'Saint Cosmas and Saint Damian, by Jean Bourdichon, from Bibliothèque Nationale de France', 'Jean Bourdichon', '1503-1508', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-damian', '/saints/saint-cosmas-&-damian_2.jpg', 'Saint Cosmas and Saint Damian Painting', 'Saint Cosmas and Saint Damian, by Hans von Kulmbach, from Germanisches Nationalmuseum', 'Hans von Kulmbach', '1507-1508', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-damian', '/saints/saint-cosmas-&-damian_3.jpg', 'Saint Cosmas and Saint Damian Icon', 'Saint Cosmas and Saint Damian, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-damian', '/saints/saint-cosmas-&-damian_4.jpg', 'Saint Cosmas and Saint Damian Icon', 'Saint Cosmas and Saint Damian, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint Vincent de Paul
+('saint-vincent-de-paul', '/saints/saint-vincent-de-paul_gerome.webp', 'Saint Vincent de Paul Painting', 'Saint Vincent de Paul, by Jean-Léon Gérôme, from Musée Jean-Léon Gérôme', 'Jean-Léon Gérôme', '1847', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-vincent-de-paul', '/saints/saint-vincent-de-paul_delaroche.jpg', 'Saint Vincent de Paul Preaching to the Court of Louis XIII on Behalf of the Abandoned Children Painting', 'Saint Vincent de Paul Preaching to the Court of Louis XIII on Behalf of the Abandoned Children, by Paul Delaroche, from Yale University Art Gallery', 'Paul Delaroche', '1823', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-vincent-de-paul', '/saints/saint-vincent-de-paul_tours.png', 'Saint Vincent de Paul Painting', 'Saint Vincent de Paul, by Simon François de Tours', 'Simon François de Tours', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Wenceslaus
+('saint-wenceslaus', '/saints/saint-wenceslaus_caroselli.jpg', 'Saint Wenceslaus Painting', 'Saint Wenceslaus, by Angelo Caroselli, from Kunsthistorisches Museum', 'Angelo Caroselli', '1627-1630', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-wenceslaus', '/saints/saint-wenceslaus_skreta.jpg', 'Saint Wenceslaus Painting', 'Saint Wenceslaus, by Karel Škréta, from National Museum in Warsaw', 'Karel Škréta', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-wenceslaus', '/saints/saint-wenceslaus_tkadlik.jpg', 'Saint Wenceslaus & Saint Ludmila during the Mass Painting', 'Saint Wenceslaus & Saint Ludmila during the Mass, by František Tkadlík, from National Gallery Prague', 'František Tkadlík', '1837', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Lawrence Ruiz
+('saint-lawrence-ruiz', '/saints/saint-lawrence-ruiz_warford_no-watermark.jpg', 'Saint Lawrence Ruiz Painting', 'Saint Lawrence Ruiz, by John Alan Warford', 'John Alan Warford', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-lawrence-ruiz', '/saints/saint-lawrence-ruiz_stained-glass.jpg', 'Saint Lawrence Ruiz Stained Glass', 'Saint Lawrence Ruiz, by an unknown artist, from Cubao Cathedral (Philippines)', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-lawrence-ruiz', '/saints/saint-lawrence-ruiz-&-companions.jpg', 'Saint Lawrence Ruiz and Companions Illustration', 'Saint Lawrence Ruiz and Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Jerome
+('saint-jerome', '/saints/saint-jerome_ribera.jpg', 'Saint Jerome Painting', 'Saint Jerome, by Jusepe de Ribera, from Museum of Fine Arts (Budapest)', 'Jusepe de Ribera', '1620', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-jerome', '/saints/saint-jerome_vanni.jpg', 'Saint Jerome Painting', 'Saint Jerome, by Francesco Vanni', 'Francesco Vanni', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-jerome', '/saints/saint-jerome_dyck.jpg', 'Saint Jerome Meditating in the Desert Painting', 'Saint Jerome Meditating in the Desert, by Anthony van Dyck, from Museum Boijmans Van Beuningen', 'Anthony van Dyck', '1619', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-jerome', '/saints/saint-jerome_caravaggio.jpg', 'Saint Jerome Writing Painting', 'Saint Jerome Writing, by Caravaggio, from Galleria Borghese (Rome)', 'Caravaggio', '1605-1606', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-jerome', '/saints/saint-jerome_brugghen.jpg', 'Saint Jerome Painting', 'Saint Jerome, by Hendrick ter Brugghen, from The Cleveland Museum of Art', 'Hendrick ter Brugghen', '1621', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-jerome', '/saints/saint-jerome_durer.jpg', 'Saint Jerome in the Wilderness Painting', 'Saint Jerome in the Wilderness, by Albrecht Dürer, from National Gallery (London)', 'Albrecht Dürer', '1496', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-jerome', '/saints/saint-jerome_vouet.jpg', 'Saint Jerome and the Angel Painting', 'Saint Jerome and the Angel, by Simon Vouet, from National Gallery of Art (Washington, D.C.)', 'Simon Vouet', '1622-1625', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-jerome', '/saints/saint-jerome_barocci.jpg', 'Saint Jerome Painting', 'Saint Jerome, by Federico Barocci, from Galleria Borghese', 'Federico Barocci', '1600', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-jerome', '/saints/saint-jerome_goya.jpg', ' Saint Jerome in Penitence Painting', 'Saint Jerome in Penitence, by Francisco Goya', 'Francisco Goya', '1798', NULL, 'Public Domain', NULL, 9, FALSE),
+
+-- =========================
+-- October Saints
+-- =========================
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
