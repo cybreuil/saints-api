@@ -1005,8 +1005,9 @@ JOIN (VALUES
 ('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_ribera.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Jusepe de Ribera, from Escurial', 'Jusepe de Ribera', '1642', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_tiepolo.jpg', 'Saint Francis of Assisi receiving the Stigmata Painting', 'Saint Francis of Assisi receiving the Stigmata, by Giambattista Tiepolo, from Museo del Prado', 'Giambattista Tiepolo', '1767-1769', NULL, 'Public Domain', NULL, 5, FALSE),
 
-
-
+-- Saint Faustina Kowalska
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_', '', '', '', '', NULL, 'Public Domain', NULL, 1, FALSE),
+-- wip
 
 
 
