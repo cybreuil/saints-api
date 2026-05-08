@@ -999,14 +999,11 @@ JOIN (VALUES
 -- The painting of St. Therese of Avila in the church Chiesa di San Franceso d Assisi by A. Nicolas (1931). ???
 
 -- Saint Francis of Assisi
-
-
-
-
-
-
-
-
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_zurbaran.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Francisco de Zurbarán, from National Gallery (London)', 'Francisco de Zurbarán', '1635-1639', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_fruytiers.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Philip Fruytiers, from Royal Museum of Fine Arts Antwerp', 'Philip Fruytiers', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_murillo.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Bartolomé Esteban Murillo, from Cathedral of Our Lady (Antwerp)', 'Bartolomé Esteban Murillo', '1645-1650', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_ribera.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Jusepe de Ribera, from Escurial', 'Jusepe de Ribera', '1642', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_tiepolo.jpg', 'Saint Francis of Assisi receiving the Stigmata Painting', 'Saint Francis of Assisi receiving the Stigmata, by Giambattista Tiepolo, from Museo del Prado', 'Giambattista Tiepolo', '1767-1769', NULL, 'Public Domain', NULL, 5, FALSE),
 
 
 
