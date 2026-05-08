@@ -989,7 +989,7 @@ JOIN (VALUES
 -- =========================
 
 -- Saint Thérèse of the Child Jesus
-('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine.jpg', 'Saint Thérèse of the Child Jesus Painting', 'Saint Thérèse of the Child Jesus, by Céline Martin, from Carmel of Lisieux', 'Céline Martin', 'Céline Martin', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine.jpg', 'Saint Thérèse of the Child Jesus Painting', 'Saint Thérèse of the Child Jesus, by Céline Martin, from Carmel of Lisieux', 'Céline Martin', '1925', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo.jpg', 'Saint Thérèse of the Child Jesus Photograph', 'Saint Thérèse of the Child Jesus, Photographed by Céline Martin, from Carmel of Lisieux', 'Céline Martin', '1896', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo_2.jpg', 'Saint Thérèse of the Child Jesus with Rosary Photograph', 'Saint Thérèse of the Child Jesus with Rosary, Photographed by Céline Martin, from Carmel of Lisieux', 'Céline Martin', '1896', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus.jpg', 'Saint Thérèse of the Child Jesus Painting', 'Saint Thérèse of the Child Jesus, by an unknown artist, from Santa Teresa del Bambin Gesù (Panfilo)', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
