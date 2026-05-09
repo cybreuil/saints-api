@@ -1023,23 +1023,11 @@ JOIN (VALUES
 ('saint-denis', '/saints/saint-denis-&-companions_bourdichon.jpg', 'Saint Denis & Companions Illumination', 'Saint Denis & Companions, by Jean Bourdichon, from Book : "Horae ad usum Parisiensem" (Bibliothèque nationale de France)', 'Jean Bourdichon', '1475-1500', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-denis', '/saints/saint-denis-&-companions_bonnat_martyr.jpg', 'The Martyrdom of Saint Denis & Companions Painting', 'The Martyrdom of Saint Denis & Companions, by Léon Bonnat, from Panthéon (Paris)', 'Léon Bonnat', '1880', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- Saint John Leonardi
+('saint-john-leonardi', '/saints/saint-john-leonardi.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-leonardi', '/saints/saint-john-leonardi_2.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-leonardi', '/saints/saint-john-leonardi_3.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john-leonardi', '/saints/saint-john-leonardi_4.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
