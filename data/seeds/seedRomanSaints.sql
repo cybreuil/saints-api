@@ -2607,12 +2607,14 @@ INSERT INTO saints (
   1647, 7, 22, FALSE,
   1690, 10, 17, FALSE,
   17,
-  NULL, NULL, NULL
+  NULL,
+  (SELECT id FROM places WHERE code='PARAY-LE-MONIAL'),
+  (SELECT id FROM places WHERE code='PARAY-LE-MONIAL')
 ),
 (
   'saint-ignatius-of-antioch', 'Saint Ignatius of Antioch, Bishop and Martyr',
-  NULL, NULL, NULL, TRUE,
-  NULL, 10, 17, TRUE,
+  33, NULL, NULL, TRUE,
+  110, NULL, NULL, TRUE,
   2,
   NULL,
   (SELECT id FROM places WHERE code='ANTIOCH'),

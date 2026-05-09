@@ -1068,9 +1068,22 @@ JOIN (VALUES
 
 -- Saint Margaret Mary Alacoque
 ('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque.jpg', 'Saint Margaret Mary Alacoque Painting', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_2.jpg', 'Saint Margaret Mary Alacoque Painting', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_2.jpg', 'Saint Margaret Mary Alacoque Painting', 'Saint Margaret Mary Alacoque, by an unknown artist, from Monastery of Paray-le-Monial', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_3.jpg', 'Saint Margaret Mary Alacoque Vision of sacred Heart Painting', 'Saint Margaret Mary Alacoque Vision of Sacred Heart, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Ignatius of Antioch, Bishop and Martyr
+('saint-ignatius-antioch', '/saints/saint-ignatius-antioch.jpg', 'The Martyrdom of Saint Ignatius of Antioch Painting', 'The Martyrdom of Saint Ignatius of Antioch, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-ignatius-antioch', '/saints/saint-ignatius-antioch_2.jpg', 'The Martyrdom of Saint Ignatius of Antioch Painting', 'The Martyrdom of Saint Ignatius of Antioch, by an unknown artist', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-ignatius-antioch', '/saints/saint-ignatius-antioch_3.jpg', 'Saint Ignatius of Antioch Vision of sacred Heart Painting', 'Saint Ignatius of Antioch Vision of Sacred Heart, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 --wip
+
+
+
+
+
+
+
+
 
 
 ---
