@@ -2598,7 +2598,7 @@ INSERT INTO saints (
 (
   'saint-hedwig', 'Saint Hedwig',
   1174, NULL, NULL, TRUE,
-  1243, 10, 16, FALSE,
+  1243, 10, 15, FALSE,
   12,
   NULL, NULL, NULL
 ),

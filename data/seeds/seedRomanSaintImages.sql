@@ -1062,9 +1062,9 @@ JOIN (VALUES
 ('saint-hedwig', '/saints/saint-hedwig.jpg', 'Saint Hedwig Illustration', 'Saint Hedwig, by an unknown artist, from Schlackenwerther Codex', NULL, '1353', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-hedwig', '/saints/saint-hedwig_2.jpg', 'Saint Hedwig Illustration', 'Saint Hedwig, by an unknown artist', NULL, '20th century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-hedwig', '/saints/saint-hedwig_3.jpg', 'Saint Hedwig Illustration', 'Saint Hedwig, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-hedwig', '/saints/saint-hedwig_4.jpg', 'Saint Hedwig Painting', 'Saint Hedwig, by an unknown artist', NULL, '1861', NULL, 'Public Domain', NULL, 4, FALSE),
-
-
+('saint-hedwig', '/saints/saint-hedwig_4.jpg', 'Saint Hedwig Painting', 'Saint Hedwig, by Wojciech Gerson', 'Wojciech Gerson', '1861', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-hedwig', '/saints/saint-hedwig_5.jpg', 'Saint Hedwig Painting', 'Saint Hedwig by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-hedwig', '/saints/saint-hedwig_6.jpg', 'Saint Hedwig Illustration', 'Saint Hedwig, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 6, FALSE),
 
 
 
