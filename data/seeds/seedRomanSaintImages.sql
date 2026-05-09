@@ -1006,8 +1006,36 @@ JOIN (VALUES
 ('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_tiepolo.jpg', 'Saint Francis of Assisi receiving the Stigmata Painting', 'Saint Francis of Assisi receiving the Stigmata, by Giambattista Tiepolo, from Museo del Prado', 'Giambattista Tiepolo', '1767-1769', NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Faustina Kowalska
-('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_', '', '', '', '', NULL, 'Public Domain', NULL, 1, FALSE),
--- wip
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska', 'Saint Faustina Kowalska Painting', 'Saint Faustina Kowalska, by Stanisław Sztama', 'Stanisław Sztama', '20th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_2', 'Saint Faustina Kowalska & Divine Mercy Painting', 'Saint Faustina Kowalska & Divine Mercy, by Helena Tchórzewska', 'Helena Tchórzewska', '20th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_photo', 'Saint Faustina Kowalska Photograph', 'Saint Faustina Kowalska, by an unknown photographer', NULL, '1931', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_3', 'Saint Faustina Kowalska & Divine Mercy Painting', 'Saint Faustina Kowalska & Divine Mercy', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
