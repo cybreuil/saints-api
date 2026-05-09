@@ -1058,6 +1058,16 @@ JOIN (VALUES
 ('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_vien.jpg', 'Saint Teresa of Jesus Painting', 'Saint Teresa of Jesus, by Joseph-Marie Vien', 'Joseph-Marie Vien', '18th century', NULL, 'Public Domain', NULL, 8, FALSE),
 ('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_gerard.jpg', 'Saint Teresa of Jesus Painting', 'Saint Teresa of Jesus, by François Gérard, from Infirmerie Marie-Thérèse (Paris)', 'François Gérard', '1827', NULL, 'Public Domain', NULL, 9, FALSE),
 
+-- Saint Hedwig
+('saint-hedwig', '/saints/saint-hedwig.jpg', 'Saint Hedwig Illustration', 'Saint Hedwig, by an unknown artist, from Schlackenwerther Codex', NULL, '1353', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-hedwig', '/saints/saint-hedwig_2.jpg', 'Saint Hedwig Illustration', 'Saint Hedwig, by an unknown artist', NULL, '20th century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-hedwig', '/saints/saint-hedwig_3.jpg', 'Saint Hedwig Illustration', 'Saint Hedwig, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-hedwig', '/saints/saint-hedwig_4.jpg', 'Saint Hedwig Painting', 'Saint Hedwig, by an unknown artist', NULL, '1861', NULL, 'Public Domain', NULL, 4, FALSE),
+
+
+
+
+
 ---
 )
 AS x (slug, image_url, alt_text, caption, credit, license, author, date, source_url, sort_order, is_primary)
