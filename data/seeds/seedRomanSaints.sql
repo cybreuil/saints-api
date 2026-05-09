@@ -2544,7 +2544,7 @@ INSERT INTO saints (
 (
   'saint-denis-and-companions', 'Saint Denis, Bishop, and Companions, Martyrs',
   NULL, NULL, NULL, TRUE,
-  NULL, 10, 9, TRUE,
+  NULL, NULL, NULL, TRUE,
   3,
   NULL,
   (SELECT id FROM places WHERE code='PARIS'),

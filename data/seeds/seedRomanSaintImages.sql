@@ -448,7 +448,7 @@ JOIN (VALUES
 -- =========================
 
 -- Saint Justin Martyr
-('saint-justin-martyr', '/saints/saint-justin-martyr_thevet.jpg', 'Saint Justin Martyr Illustration', 'Saint Justin Martyr, by André Thevet, from Book: "Les Vrais Pourtraits et Vies des Hommes Illustres"', 'André Thévet', '1584', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-justin-martyr', '/saints/saint-justin-martyr_thevet.jpg', 'Saint Justin Martyr Illustration', 'Saint Justin Martyr, by André Thevet, from Book : "Les Vrais Pourtraits et Vies des Hommes Illustres"', 'André Thévet', '1584', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-justin-martyr', '/saints/saint-justin-martyr_icon.jpg', 'Saint Justin Martyr Icon', 'Saint Justin Martyr, by Theophanes the Cretan, from Stavronikita Monastery', 'Theophanes the Cretan', '1545-1546', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Marcellinus
@@ -1006,20 +1006,22 @@ JOIN (VALUES
 ('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_tiepolo.jpg', 'Saint Francis of Assisi receiving the Stigmata Painting', 'Saint Francis of Assisi receiving the Stigmata, by Giambattista Tiepolo, from Museo del Prado', 'Giambattista Tiepolo', '1767-1769', NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Faustina Kowalska
-('saint-faustina-kowalska', '/saints/saint-faustina-kowalska', 'Saint Faustina Kowalska Painting', 'Saint Faustina Kowalska, by Stanisław Sztama', 'Stanisław Sztama', '20th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_2', 'Saint Faustina Kowalska & Divine Mercy Painting', 'Saint Faustina Kowalska & Divine Mercy, by Helena Tchórzewska', 'Helena Tchórzewska', '20th Century', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_photo', 'Saint Faustina Kowalska Photograph', 'Saint Faustina Kowalska, by an unknown photographer', NULL, '1931', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_3', 'Saint Faustina Kowalska & Divine Mercy Painting', 'Saint Faustina Kowalska & Divine Mercy', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska.jpg', 'Saint Faustina Kowalska Painting', 'Saint Faustina Kowalska, by Stanisław Sztama', 'Stanisław Sztama', '20th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_2.jpg', 'Saint Faustina Kowalska & Divine Mercy Painting', 'Saint Faustina Kowalska & Divine Mercy, by Helena Tchórzewska', 'Helena Tchórzewska', '20th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_photo.jpg', 'Saint Faustina Kowalska Photograph', 'Saint Faustina Kowalska, by an unknown photographer', NULL, '1931', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-faustina-kowalska', '/saints/saint-faustina-kowalska_3.jpg', 'Saint Faustina Kowalska & Divine Mercy Painting', 'Saint Faustina Kowalska & Divine Mercy', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Bruno
+('saint-bruno', '/saints/saint-bruno_rosa.jpg', 'Saint Bruno Painting', 'Saint Bruno, by Salvator Rosa, from Complesso di santa Caterina', 'Salvator Rosa', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-bruno', '/saints/saint-bruno_marchesi.jpg', 'Saint Bruno Painting', 'Saint Bruno, by Girolamo Marchesi, from Walters Art Museum', 'Girolamo Marchesi', '1525', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-bruno', '/saints/saint-bruno_mignard.jpg', 'Saint Bruno Painting', 'Saint Bruno, by Nicolas Mignard, from Calvet Museum', 'Nicolas Mignard', '1638', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-bruno', '/saints/saint-bruno_lesueur.jpg', 'The Death of Saint Bruno Painting', 'The Death of Saint Bruno, by Eustache Le Sueur, from Musée du Louvre', 'Eustache Le Sueur', '1645-1648', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
-
-
-
-
-
-
-
+-- Saint Denis
+('saint-denis', '/saints/saint-denis.jpg', 'Saint Denis Painting', 'Saint Denis, by an unknown artist', NULL, '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-denis', '/saints/saint-denis_vien.jpg', 'Saint Denis Preaching in Gaul Painting', 'Saint Denis Preaching in Gaul, by Joseph-Marie Vien, from Church of Saint-Roch (Paris)', 'Joseph-Marie Vien', '1767', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-denis', '/saints/saint-denis-&-companions_bourdichon.jpg', 'Saint Denis & Companions Illumination', 'Saint Denis & Companions, by Jean Bourdichon, from Book : "Horae ad usum Parisiensem" (Bibliothèque nationale de France)', 'Jean Bourdichon', '1475-1500', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-denis', '/saints/saint-denis-&-companions_bonnat_martyr.jpg', 'The Martyrdom of Saint Denis & Companions Painting', 'The Martyrdom of Saint Denis & Companions, by Léon Bonnat, from Panthéon (Paris)', 'Léon Bonnat', '1880', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
