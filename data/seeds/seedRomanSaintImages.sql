@@ -1067,12 +1067,9 @@ JOIN (VALUES
 ('saint-hedwig', '/saints/saint-hedwig_6.jpg', 'Saint Hedwig Illustration', 'Saint Hedwig, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 6, FALSE),
 
 -- Saint Margaret Mary Alacoque
-('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque.jpg', 'Saint Margaret Mary Alacoque', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_2.jpg', 'Saint Margaret Mary Alacoque', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_3.jpg', 'Saint Margaret Mary Alacoque', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_4.jpg', 'Saint Margaret Mary Alacoque', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
-('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_5.jpg', 'Saint Margaret Mary Alacoque', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_6.jpg', 'Saint Margaret Mary Alacoque', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque.jpg', 'Saint Margaret Mary Alacoque Painting', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_2.jpg', 'Saint Margaret Mary Alacoque Painting', 'Saint Margaret Mary Alacoque, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_3.jpg', 'Saint Margaret Mary Alacoque Vision of sacred Heart Painting', 'Saint Margaret Mary Alacoque Vision of Sacred Heart, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 --wip
 
 
