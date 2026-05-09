@@ -1030,19 +1030,9 @@ JOIN (VALUES
 ('saint-john-leonardi', '/saints/saint-john-leonardi_4.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint John Henry Newman
-
-
-
-
-
-
-
-
-
-
-
-
-
+('saint-john-henry-newman', '/saints/saint-john-henry-newman_millais.jpg', 'Saint John Henry Newman Painting', 'Saint John Henry Newman, by John Everett Millais, from National Portrait Gallery (London)', 'John Everett Millais', '1881', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-henry-newman', '/saints/saint-john-henry-newman_photo.gif', 'Saint John Henry Newman Photograph', 'Saint John Henry Newman, by an unknown photographer', NULL, '1887', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-henry-newman', '/saints/saint-john-henry-newman.jpg', 'Saint John Henry Newman Painting', 'Saint John Henry Newman, by an unknown artist, from a Church in Rome', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
