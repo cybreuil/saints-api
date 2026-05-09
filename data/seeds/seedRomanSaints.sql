@@ -2579,8 +2579,8 @@ INSERT INTO saints (
 ),
 (
   'saint-callistus-i', 'Saint Callistus I, Pope and Martyr',
-  NULL, NULL, NULL, TRUE,
-  NULL, 10, 14, TRUE,
+  155, NULL, NULL, TRUE,
+  222, 10, 14, TRUE,
   3,
   NULL,
   (SELECT id FROM places WHERE code='ROME'),
