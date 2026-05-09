@@ -2588,8 +2588,8 @@ INSERT INTO saints (
 ),
 (
   'saint-teresa-of-jesus', 'Saint Teresa of Jesus (Teresa of Ávila), Virgin and Doctor of the Church',
-  1515, NULL, NULL, FALSE,
-  1582, 10, 15, FALSE,
+  1515, 3, 28, FALSE,
+  1582, 10, 4, FALSE,
   16,
   (SELECT id FROM places WHERE code='AVILA'),
   NULL,
