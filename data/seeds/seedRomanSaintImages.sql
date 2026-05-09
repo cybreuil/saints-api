@@ -1026,7 +1026,7 @@ JOIN (VALUES
 -- Saint John Leonardi
 ('saint-john-leonardi', '/saints/saint-john-leonardi.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-john-leonardi', '/saints/saint-john-leonardi_2.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-john-leonardi', '/saints/saint-john-leonardi_3.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john-leonardi', '/saints/saint-john-leonardi_3.webp', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-john-leonardi', '/saints/saint-john-leonardi_4.jpg', 'Saint John Leonardi Painting', 'Saint John Leonardi, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 
