@@ -2604,8 +2604,8 @@ INSERT INTO saints (
 ),
 (
   'saint-margaret-mary-alacoque', 'Saint Margaret Mary Alacoque',
-  1647, NULL, NULL, FALSE,
-  1690, 10, 16, FALSE,
+  1647, 7, 22, FALSE,
+  1690, 10, 17, FALSE,
   17,
   NULL, NULL, NULL
 ),
