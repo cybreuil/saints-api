@@ -2562,7 +2562,7 @@ INSERT INTO saints (
 (
   'saint-john-henry-newman', 'Saint John Henry Newman',
   1801, NULL, NULL, FALSE,
-  1890, 10, 9, FALSE,
+  1890, 8, 11, FALSE,
   19,
   (SELECT id FROM places WHERE code='LONDON'),
   NULL,
