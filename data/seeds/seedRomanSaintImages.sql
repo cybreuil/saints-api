@@ -936,6 +936,7 @@ JOIN (VALUES
 ('saint-matthew', '/saints/saint-matthew_rembrandt.jpg', 'The Evangelist Matthew and the Angel Painting', 'The Evangelist Matthew and the Angel, by Rembrandt, from Louvre-Lens', 'Rembrandt', '1661', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-matthew', '/saints/saint-matthew_caravaggio.jpg', 'The Inspiration of Saint Matthew Painting', 'The Inspiration of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1602', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-matthew', '/saints/saint-matthew_caravaggio_calling.jpg', 'The Calling of Saint Matthew Painting', 'The Calling of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1599-1600', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-matthew', '/saints/saint-matthew_caravaggio_martyr.jpg', 'The Martyrdom of Saint Matthew Painting', 'The Martyrdom of Saint Matthew, by Caravaggio, from San Luigi dei Francesi (Rome)', 'Caravaggio', '1599-1600', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-matthew', '/saints/saint-matthew_hals.jpg', 'Saint Matthew Painting', 'Saint Matthew, by Frans Hals, from Odesa Museum of Western and Eastern Art', 'Frans Hals', '1625', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-matthew', '/saints/saint-matthew_reni.jpg', 'Saint Matthew Painting', 'Saint Matthew, by Guido Reni, from Pinacoteca Vaticana', 'Guido Reni', '1635', NULL, 'Public Domain', NULL, 8, FALSE),
 ('saint-matthew', '/saints/saint-matthew_zurbaran.jpg', 'Saint Matthew Painting', 'Saint Matthew, by Francisco de Zurbarán, from National Museum of Ancient Art', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 9, FALSE),
@@ -999,11 +1000,13 @@ JOIN (VALUES
 -- The painting of St. Therese of Avila in the church Chiesa di San Franceso d Assisi by A. Nicolas (1931). ???
 
 -- Saint Francis of Assisi
-('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_zurbaran.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Francisco de Zurbarán, from National Gallery (London)', 'Francisco de Zurbarán', '1635-1639', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_fruytiers.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Philip Fruytiers, from Royal Museum of Fine Arts Antwerp', 'Philip Fruytiers', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_murillo.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Bartolomé Esteban Murillo, from Cathedral of Our Lady (Antwerp)', 'Bartolomé Esteban Murillo', '1645-1650', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_ribera.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Jusepe de Ribera, from Escurial', 'Jusepe de Ribera', '1642', NULL, 'Public Domain', NULL, 4, FALSE),
-('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_tiepolo.jpg', 'Saint Francis of Assisi receiving the Stigmata Painting', 'Saint Francis of Assisi receiving the Stigmata, by Giambattista Tiepolo, from Museo del Prado', 'Giambattista Tiepolo', '1767-1769', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_caravaggio.jpg', 'Saint Francis in Prayer Painting', 'Saint Francis in Prayer, by Caravaggio, from Galleria Nazionale d''Arte Antica (Rome)', 'Caravaggio', '1595-1606', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_zurbaran.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Francisco de Zurbarán, from National Gallery (London)', 'Francisco de Zurbarán', '1635-1639', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_fruytiers.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Philip Fruytiers, from Royal Museum of Fine Arts Antwerp', 'Philip Fruytiers', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_murillo.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Bartolomé Esteban Murillo, from Cathedral of Our Lady (Antwerp)', 'Bartolomé Esteban Murillo', '1645-1650', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_ribera.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Jusepe de Ribera, from Escurial', 'Jusepe de Ribera', '1642', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_tiepolo.jpg', 'Saint Francis of Assisi receiving the Stigmata Painting', 'Saint Francis of Assisi receiving the Stigmata, by Giambattista Tiepolo, from Museo del Prado', 'Giambattista Tiepolo', '1767-1769', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_murillo_2.jpg', 'Saint Francis embracing Christ on the Cross Painting', 'Saint Francis of Assisi embracing Christ on the Cross, by Bartolomé Esteban Murillo, from Museum of Fine Arts of Seville', 'Bartolomé Esteban Murillo', '1668-1669', NULL, 'Public Domain', NULL, 7, FALSE),
 
 -- Saint Faustina Kowalska
 ('saint-faustina-kowalska', '/saints/saint-faustina-kowalska.jpg', 'Saint Faustina Kowalska Painting', 'Saint Faustina Kowalska, by Stanisław Sztama', 'Stanisław Sztama', '20th Century', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -1034,16 +1037,26 @@ JOIN (VALUES
 ('saint-john-henry-newman', '/saints/saint-john-henry-newman_photo.gif', 'Saint John Henry Newman Photograph', 'Saint John Henry Newman, by an unknown photographer', NULL, '1887', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-john-henry-newman', '/saints/saint-john-henry-newman.jpg', 'Saint John Henry Newman Painting', 'Saint John Henry Newman, by an unknown artist, from a Church in Rome', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint John XXIII
+('saint-john-xxiii', '/saints/saint-john-xxiii.jpg', 'Saint John XXIII Painting', 'Saint John XXIII, by Kurt Wenner', 'Kurt Wenner', '2022', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-xxiii', '/saints/saint-john-xxiii_photo.jpg', 'Saint John XXIII Photograph', 'Saint John XXIII, Photographed by Fotografia Felici, from Catholic News Service', 'Fotografia Felici', '1959-1962', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-xxiii', '/saints/saint-john-xxiii_photo_2.jpg', 'Saint John XXIII Photograph', 'Saint John XXIII, by an unknown photographer', NULL, '1958-1963', NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Callistus I
+('saint-callistus-i', '/saints/saint-callistus-i.jpg', 'Saint Callistus I Engraving', 'Saint Callistus I', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-callistus-i', '/saints/saint-callistus-i_2.jpg', 'Saint Callistus I Fresco', 'Saint Callistus I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-callistus-i', '/saints/saint-callistus-i_3.jpg', 'Saint Callistus I Illustration', 'Saint Callistus I, by Giovanni Battista de'' Cavalieri, from Book : "Pontificum Romanorum effigies"', 'Giovanni Battista de'' Cavalieri', '1580', NULL, 'CC0 1.0 Universal', NULL, 3, FALSE),
 
-
-
-
-
-
-
-
-
+-- Saint Teresa of Jesus (Teresa of Ávila)
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_cagnacci.jpg', 'Saint Teresa of Jesus Painting', 'Saint Teresa of Jesus, by Guido Cagnacci, from Private Collection', 'Guido Cagnacci', '1645', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_murillo.jpg', 'Saint Teresa of Jesus Painting', 'Saint Teresa of Jesus, by Bartolomé Esteban Murillo, from Museo de Bellas Artes de Gran Canaria', 'Bartolomé Esteban Murillo', '1650', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_bazzani.jpg', 'The Ecstasy of Saint Teresa of Jesus', 'The Ecstasy of Saint Teresa of Jesus, by Giuseppe Bazzani, from Museum of Fine Arts (Budapest)', 'Giuseppe Bazzani', '1745-1750', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_balaca.jpg', 'Saint Teresa of Jesus Painting', 'Saint Teresa of Jesus, by Eduardo Balaca, from Museo del Prado', 'Eduardo Balaca', '1877', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_rubens.jpg', 'Saint Teresa of Avila''s Vision of the Dove Painting', 'Saint Teresa of Avila''s Vision of the Dove, by Peter Paul Rubens, from Fitzwilliam Museum', 'Peter Paul Rubens', '1614-1635', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_rubens_2.jpg', 'Saint Teresa of jesus Painting', 'Saint Teresa of Jesus, by Peter Paul Rubens, from Kunsthistorisches Museum', 'Peter Paul Rubens', '1615', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_batoni.jpg', 'Transverberation of Saint Teresa of Jesus Painting', 'Transverberation of Saint Teresa of Jesus, by Pompeo Batoni, from Museo nazionale di Villa Guinigi', 'Pompeo Batoni', '1743', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_vien.jpg', 'Saint Teresa of Jesus Painting', 'Saint Teresa of Jesus, by Joseph-Marie Vien', 'Joseph-Marie Vien', '18th century', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-teresa-of-jesus', '/saints/saint-teresa-of-jesus_gerard.jpg', 'Saint Teresa of Jesus Painting', 'Saint Teresa of Jesus, by François Gérard, from Infirmerie Marie-Thérèse (Paris)', 'François Gérard', '1827', NULL, 'Public Domain', NULL, 9, FALSE),
 
 ---
 )
