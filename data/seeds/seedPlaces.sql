@@ -115,7 +115,8 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('SIRACUSA', 'IT', 37.0755, 14.2018),
 ('POISSY', 'FR', 48.9333, 2.0333), -- St Louis context (birthplace region alternative not ideal)
 ('TUNIS', 'TN', 36.8065, 10.1815), -- St Louis context (death place region alternative not ideal)
-('CLUNY', 'FR', 46.4333, 4.6500) -- St Hugh of Cluny context
+('CLUNY', 'FR', 46.4333, 4.6500), -- St Hugh of Cluny context
+('PARAY_LE_MONIAL', 'FR', 46.450559, 4.117796) -- Saint Margaret Mary context
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -235,7 +236,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SIRACUSA'), 'en', 'Siracusa'),
 ((SELECT id FROM places WHERE code='POISSY'), 'en', 'Poissy'),
 ((SELECT id FROM places WHERE code='TUNIS'), 'en', 'Tunis'),
-((SELECT id FROM places WHERE code='CLUNY'), 'en', 'Cluny')
+((SELECT id FROM places WHERE code='CLUNY'), 'en', 'Cluny'),
+((SELECT id FROM places WHERE code='PARAY_LE_MONIAL'), 'en', 'Paray-le-Monial'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -355,7 +357,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SIRACUSA'), 'fr', 'Syracuse'),
 ((SELECT id FROM places WHERE code='POISSY'), 'fr', 'Poissy'),
 ((SELECT id FROM places WHERE code='TUNIS'), 'fr', 'Tunis'),
-((SELECT id FROM places WHERE code='CLUNY'), 'fr', 'Cluny')
+((SELECT id FROM places WHERE code='CLUNY'), 'fr', 'Cluny'),
+((SELECT id FROM places WHERE code='PARAY_LE_MONIAL'), 'fr', 'Paray-le-Monial'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -475,7 +478,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SIRACUSA'), 'la', 'Syracusae'),
 ((SELECT id FROM places WHERE code='POISSY'), 'la', 'Poissy'),
 ((SELECT id FROM places WHERE code='TUNIS'), 'la', 'Tunis'),
-((SELECT id FROM places WHERE code='CLUNY'), 'la', 'Cluny')
+((SELECT id FROM places WHERE code='CLUNY'), 'la', 'Cluny'),
+((SELECT id FROM places WHERE code='PARAY_LE_MONIAL'), 'la', 'Paray-le-Monial'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
