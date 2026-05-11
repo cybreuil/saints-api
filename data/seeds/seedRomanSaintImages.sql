@@ -1129,7 +1129,9 @@ JOIN (VALUES
 ('saint-jude-apostle', '/saints/saint-jude-apostle_zurbaran.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-jude-apostle', '/saints/saint-simon-apostle-&-jude-apostle_schmidt_martyr.jpg', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus Painting', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus, by Martin Johann Schmidt, from Spencer Museum of Art (USA)', 'Martin Johann Schmidt', '1796', NULL, 'Public Domain', NULL, 7, FALSE),
 
-
+-- =========================
+-- November Saints
+-- =========================
 
 
 
