@@ -2663,7 +2663,7 @@ INSERT INTO saints (
 ),
 (
   'saint-anthony-mary-claret', 'Saint Anthony Mary Claret, Bishop',
-  1807, NULL, NULL, FALSE,
+  1807, 9, 23, FALSE,
   1870, 10, 24, FALSE,
   19,
   NULL, NULL, NULL
