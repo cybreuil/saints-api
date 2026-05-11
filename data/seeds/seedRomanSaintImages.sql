@@ -1092,6 +1092,13 @@ JOIN (VALUES
 ('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross.jpg', 'Saint Paul of the Cross Painting', 'Saint Paul of the Cross, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 1, TRUE),
 ('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross_2.jpg', 'Saint Paul of the Cross Painting', 'Saint Paul of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross_3.jpg', 'Saint Paul of the Cross Painting', 'Saint Paul of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross_4.jpg', 'Saint Paul of the Cross Painting', 'Saint Paul of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint John Paul II
+('saint-john-paul-ii', '/saints/saint-john-paul-ii.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-paul-ii', '/saints/saint-john-paul-ii_2.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-paul-ii', '/saints/saint-john-paul-ii_3.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
 
 ---
 )
