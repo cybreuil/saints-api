@@ -1083,6 +1083,16 @@ JOIN (VALUES
 ('saint-luke', '/saints/saint-luke_weyden.jpg', 'Saint Luke Drawing the Virgin Painting', 'Saint Luke Drawing the Virgin, by Rogier van der Weyden, from Museum of Fine Arts (Boston)', 'Rogier van der Weyden', '1435-1440', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-luke', '/saints/saint-luke_guercino.jpg', 'Saint Luke Displaying a Painting of the Virgin Painting', 'Saint Luke Displaying a Painting of the Virgin, by Il Guercino, from Nelson-Atkins Museum of Art', 'Il Guercino', '1652-1653', NULL, 'Public Domain', NULL, 5, FALSE),
 
+-- Saint John de Brébeuf
+('saint-john-de-brebeuf', '/saints/saint-john-de-brebeuf.jpg', 'Saint John de Brébeuf Painting', 'Saint John de Brébeuf, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-de-brebeuf', '/saints/saint-john-de-brebeuf_thwaites.jpg', 'Saint John de Brébeuf Drawing', 'Saint John de Brébeuf, by Reuben Gold Thwaites', 'Reuben Gold Thwaites', '1897', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-de-brebeuf', '/saints/saint-john-de-brebeuf-&-companions.png', 'Saint John de Brébeuf & Companions Illustration', 'Saint John de Brébeuf & Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Paul of the Cross
+('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross.jpg', 'Saint Paul of the Cross Painting', 'Saint Paul of the Cross, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 1, TRUE),
+('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross_2.jpg', 'Saint Paul of the Cross Painting', 'Saint Paul of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross_3.jpg', 'Saint Paul of the Cross Painting', 'Saint Paul of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
 ---
 )
 AS x (slug, image_url, alt_text, caption, credit, license, author, date, source_url, sort_order, is_primary)
