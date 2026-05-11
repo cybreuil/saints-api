@@ -2623,7 +2623,7 @@ INSERT INTO saints (
 (
   'saint-luke', 'Saint Luke, Evangelist',
   NULL, NULL, NULL, TRUE,
-  NULL, 10, 18, TRUE,
+  NULL, NULL, NULL, TRUE,
   1,
   NULL, NULL, NULL
 ),
