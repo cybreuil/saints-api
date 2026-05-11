@@ -2656,7 +2656,7 @@ INSERT INTO saints (
 ),
 (
   'saint-john-of-capistrano', 'Saint John of Capistrano',
-  1386, NULL, NULL, TRUE,
+  1386, 6, 24, TRUE,
   1456, 10, 23, FALSE,
   15,
   NULL, NULL, NULL

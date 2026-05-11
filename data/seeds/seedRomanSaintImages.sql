@@ -1107,7 +1107,7 @@ JOIN (VALUES
 ('saint-john-of-capistrano', '/saints/saint-john-of-capistrano_grassi.jpg', 'Saint John of Capistrano Painting', 'Saint John of Capistrano, by Nicolò Grassi, from San Francesco della Vigna (Venice)', 'Nicolò Grassi', NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 2, FALSE),
 ('saint-john-of-capistrano', '/saints/saint-john-of-capistrano.jpg', 'Saint John of Capistrano Illumination', 'Saint John of Capistrano, by an unknown artist', NULL, '1470-1480', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
+-- Saint Anthony Mary Claret, Bishop
 
 
 
