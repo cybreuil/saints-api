@@ -1095,10 +1095,12 @@ JOIN (VALUES
 ('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross_4.jpg', 'Saint Paul of the Cross Painting', 'Saint Paul of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint John Paul II
-('saint-john-paul-ii', '/saints/saint-john-paul-ii.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-john-paul-ii', '/saints/saint-john-paul-ii_2.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-john-paul-ii', '/saints/saint-john-paul-ii_3.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
-
+('saint-john-paul-ii', '/saints/saint-john-paul-ii_bobnick_no-watermark.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by Dick Bobnick', 'Dick Bobnick', '2015', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-paul-ii', '/saints/saint-john-paul-ii_babailov.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by Igor Babailov, from Palace of Castel Gandolfo', 'Igor Babailov', '21th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-paul-ii', '/saints/saint-john-paul-ii.jpg', 'Saint John Paul II Photograph', 'Saint John Paul II, by Grzegorz Gałązka', 'Grzegorz Gałązka', NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john-paul-ii', '/saints/saint-john-paul-ii_2.jpg', 'Saint John Paul II Photograph', 'Saint John Paul II, by an unknown photographer', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-john-paul-ii', '/saints/saint-john-paul-ii_tsarkova.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by Natalia Tsarkova', 'Natalia Tsarkova', '2006', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-john-paul-ii', '/saints/saint-john-paul-ii_tsarkova_2.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by Natalia Tsarkova', 'Natalia Tsarkova', '2000', NULL, 'Public Domain', NULL, 6, FALSE),
 
 ---
 )
