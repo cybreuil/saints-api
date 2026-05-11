@@ -2629,22 +2629,26 @@ INSERT INTO saints (
 ),
 (
   'saints-john-de-brebeuf-and-companions', 'Saints John de Brébeuf, Isaac Jogues, and Companions, Martyrs',
-  NULL, NULL, NULL, TRUE,
-  NULL, 10, 19, TRUE,
+  1593, 3, 25, FALSE,
+  1649, 3, 16, TRUE,
+  17,
   NULL,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='MIDLAND'),
+  (SELECT id FROM places WHERE code='MIDLAND'),
 ),
 (
   'saint-paul-of-the-cross', 'Saint Paul of the Cross',
-  1694, NULL, NULL, FALSE,
-  1775, 10, 19, FALSE,
+  1694, 1, 3, FALSE,
+  1775, 10, 18, FALSE,
   18,
-  NULL, NULL, NULL
+  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
+  NULL
 ),
 (
   'saint-john-paul-ii', 'Saint John Paul II',
   1920, 5, 18, FALSE,
-  2005, 10, 22, FALSE,
+  2005, 4, 2, FALSE,
   20,
   (SELECT id FROM places WHERE code='WADOWICE'),
   (SELECT id FROM places WHERE code='ROME'),
