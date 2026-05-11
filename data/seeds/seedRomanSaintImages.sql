@@ -1102,6 +1102,25 @@ JOIN (VALUES
 ('saint-john-paul-ii', '/saints/saint-john-paul-ii_tsarkova.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by Natalia Tsarkova', 'Natalia Tsarkova', '2006', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-john-paul-ii', '/saints/saint-john-paul-ii_tsarkova_2.jpg', 'Saint John Paul II Painting', 'Saint John Paul II, by Natalia Tsarkova', 'Natalia Tsarkova', '2000', NULL, 'Public Domain', NULL, 6, FALSE),
 
+-- Saint John of Capistrano
+('saint-john-of-capistrano', '/saints/saint-john-of-capistrano_del-arco.jpg', 'Saint John of Capistrano Painting', 'Saint John of Capistrano, by Alonso del Arco, from Museo del Prado', 'Alonso del Arco', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-of-capistrano', '/saints/saint-john-of-capistrano_grassi.jpg', 'Saint John of Capistrano Painting', 'Saint John of Capistrano, by Nicolò Grassi, from San Francesco della Vigna (Venice)', 'Nicolò Grassi', NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 2, FALSE),
+('saint-john-of-capistrano', '/saints/saint-john-of-capistrano.jpg', 'Saint John of Capistrano Illumination', 'Saint John of Capistrano, by an unknown artist', NULL, '1470-1480', NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ---
 )
 AS x (slug, image_url, alt_text, caption, credit, license, author, date, source_url, sort_order, is_primary)
