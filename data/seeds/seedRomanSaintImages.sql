@@ -1108,6 +1108,31 @@ JOIN (VALUES
 ('saint-john-of-capistrano', '/saints/saint-john-of-capistrano.jpg', 'Saint John of Capistrano Illumination', 'Saint John of Capistrano, by an unknown artist', NULL, '1470-1480', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Anthony Mary Claret, Bishop
+('saint-anthony-mary-claret', '/saints/saint-anthony-mary-claret.jpg', 'Saint Anthony Mary Claret Painting', 'Saint Anthony Mary Claret, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-anthony-mary-claret', '/saints/saint-anthony-mary-claret_madrazo.jpg', 'Saint Anthony Mary Claret Painting', 'Saint Anthony Mary Claret, by Luis de Madrazo, from Museum of Romanticism (Madrid)', 'Luis de Madrazo', '19th century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-anthony-mary-claret', '/saints/saint-anthony-mary-claret_pujadas.jpg', 'Saint Anthony Mary Claret Photograph', 'Saint Anthony Mary Claret, photographed by Bernardo Pujadas', 'Bernardo Pujadas', '1860', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Simon, Apostle
+('saint-simon-apostle', '/saints/saint-simon-apostle_rubens.jpg', 'Saint Simon Apostle Painting', 'Saint Simon the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-simon-apostle', '/saints/saint-simon-apostle_dyck.jpg', 'Saint Simon Apostle Painting', 'Saint Simon the Apostle, by Anthony van Dyck, from Kunsthistorisches Museum', 'Anthony van Dyck', '1619-1621', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-simon-apostle', '/saints/saint-simon-apostle_dyck_2.jpg', 'Saint Simon Apostle Painting', 'Saint Simon the Apostle, by Anthony van Dyck, from Staatliche Kunstsammlungen Dresden', 'Anthony van Dyck', '1618-1620', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-simon-apostle', '/saints/saint-simon-apostle_rembrandt.jpg', 'Saint Simon Apostle Painting', 'Saint Simon the Apostle, by Rembrandt, from Kunsthaus Zürich', 'Rembrandt', '1661', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-simon-apostle', '/saints/saint-simon-apostle_ribera.jpg', 'Saint Simon Apostle Painting', 'Saint Simon the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630-1635', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-simon-apostle', '/saints/saint-simon-apostle_zurbaran.jpg', 'Saint Simon Apostle Painting', 'Saint Simon the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-simon-apostle', '/saints/saint-simon-apostle-&-jude-apostle_schmidt_martyr.jpg', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus Painting', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus, by Martin Johann Schmidt, from Spencer Museum of Art (USA)', 'Martin Johann Schmidt', '1796', NULL, 'Public Domain', NULL, 7, FALSE),
+
+-- Saint Jude, Apostle
+('saint-jude-apostle', '/saints/saint-jude-apostle_dyck.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Anthony van Dyck, from Kunsthistorisches Museum', 'Anthony van Dyck', '1619-1621', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-jude-apostle', '/saints/saint-jude-apostle_dyck_2.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Anthony van Dyck, from Museums of Metz (from Musée du Louvre)', 'Anthony van Dyck', '1618-1620', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-jude-apostle', '/saints/saint-jude-apostle_ribera.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630-1635', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-jude-apostle', '/saints/saint-jude-apostle_la-tour.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Georges de La Tour, from Musée Toulouse-Lautrec', 'Georges de La Tour', '1620', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-jude-apostle', '/saints/saint-jude-apostle_zurbaran.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-jude-apostle', '/saints/saint-simon-apostle-&-jude-apostle_schmidt_martyr.jpg', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus Painting', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus, by Martin Johann Schmidt, from Spencer Museum of Art (USA)', 'Martin Johann Schmidt', '1796', NULL, 'Public Domain', NULL, 7, FALSE),
+
+
+
+
+
 
 
 
