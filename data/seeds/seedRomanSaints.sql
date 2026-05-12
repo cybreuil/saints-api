@@ -2861,14 +2861,14 @@ INSERT INTO saints (
 ),
 (
   'saint-gertrude', 'Saint Gertrude',
-  NULL, NULL, NULL, TRUE,
-  NULL, 11, 16, TRUE,
-  NULL,
+  1256, 1, 6, TRUE,
+  1301, 11, 17, TRUE,
+  14,
   NULL, NULL, NULL
 ),
 (
   'saint-elizabeth-of-hungary', 'Saint Elizabeth of Hungary',
-  1207, NULL, NULL, TRUE,
+  1207, 7, 7, TRUE,
   1231, 11, 17, FALSE,
   13,
   NULL, NULL, NULL
