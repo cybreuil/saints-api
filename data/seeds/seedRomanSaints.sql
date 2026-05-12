@@ -2838,14 +2838,14 @@ INSERT INTO saints (
 ),
 (
   'saint-josaphat', 'Saint Josaphat, Bishop and Martyr',
-  NULL, NULL, NULL, TRUE,
+  1580, NULL, NULL, TRUE,
   1623, 11, 12, TRUE,
   17,
   NULL, NULL, NULL
 ),
 (
   'saint-albert-the-great', 'Saint Albert the Great',
-  NULL, NULL, NULL, TRUE,
+  1200, NULL, NULL, TRUE,
   1280, 11, 15, TRUE,
   13,
   NULL,
@@ -2854,7 +2854,7 @@ INSERT INTO saints (
 ),
 (
   'saint-margaret-of-scotland', 'Saint Margaret of Scotland',
-  NULL, NULL, NULL, TRUE,
+  1045, NULL, NULL, TRUE,
   1093, 11, 16, TRUE,
   11,
   NULL, NULL, NULL

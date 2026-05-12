@@ -1172,6 +1172,20 @@ JOIN (VALUES
 ('saint-josaphat', '/saints/saint-josaphat_simmler_martyr.jpg', 'The Martyrdom of Saint Josaphat Painting', 'The Martyrdom of Saint Josaphat, by Józef Simmler, from National Museum in Warsaw', 'Józef Simmler', '1861', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-josaphat', '/saints/saint-josaphat_icon.jpg', 'Saint Josaphat Icon', 'Saint Josaphat, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 3, FALSE),
 
+-- Saint Albert the Great
+('saint-albert-the-great', '/saints/saint-albert-the-great_gomez.jpg', 'Saint Albert the Great Painting', 'Saint Albert the Great, by Vicente Salvador Gómez, from Museu de Belles Arts de València', 'Vicente Salvador Gómez', '1660', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-albert-the-great', '/saints/saint-albert-the-great.jpg', 'Saint Albert the Great Painting', 'Saint Albert the Great, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-albert-the-great', '/saint-albert-the-great-&-thomas-aquinas.jpg', 'Saint Albert the Great & Thomas Aquinas Painting', 'Saint Albert the Great & Thomas Aquinas, by Alonso Antonio Villamor', 'Alonso Antonio Villamor', NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Margaret of Scotland
+('saint-margaret-of-scotland', '/saints/saint-margaret-of-scotland_largillierre.jpg', 'Saint Margaret of Scotland Painting', 'Saint Margaret of Scotland, by Nicolas de Largillierre', 'Nicolas de Largillierre', '1692', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-margaret-of-scotland', '/saints/saint-margaret-of-scotland_hole.jpg', 'The Landing Of Saint Margaret at Queensferry Painting', 'The Landing Of Saint Margaret at Queensferry, by William Hole, from Scottish National Portrait Gallery', 'William Hole', '1899', NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 2, FALSE),
+('saint-margaret-of-scotland', '/saints/saint-margaret-of-scotland.jpg', 'Saint Margaret of Scotland Illustration', 'Saint Margaret of Scotland, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+
+
+
+
 
 
 
