@@ -1150,13 +1150,11 @@ JOIN (VALUES
 ('saint-martin-de-porres', '/saints/saint-martin-de-porres_2.jpg', 'Saint Martin de Porres Painting', 'Saint Martin de Porres, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Charles Borromeo
-('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 1, FALSE),
-('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 2, FALSE),
-('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 3, FALSE),
-('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 4, FALSE),
-('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 5, FALSE),
-('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 6, FALSE),
-('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 7, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_borgianni.jpg', 'Saint Charles Borromeo Painting', 'Saint Charles Borromeo, by Orazio Borgianni, from Hermitage Museum', 'Orazio Borgianni', '1610', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_figino.jpg', 'Saint Charles Borromeo Painting', 'Saint Charles Borromeo, by Giovanni Ambrogio Figino, from Pinacoteca Ambrosiana', 'Giovanni Ambrogio Figino', '1575-1599', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_tiepolo.jpg', 'Saint Charles Borromeo Painting', 'Saint Charles Borromeo, by Giambattista Tiepolo, from Cincinnati Art Museum', 'Giambattista Tiepolo', '1767-1769', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_gherardi.jpg', 'Saint Charles Borromeo giving Communion to Plague Victims Painting', 'Saint Charles Borromeo giving Communion to Plague Victims, by Antonio Gherardi, from Moretti Fine Art (Paris)', 'Antonio Gherardi', '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_borgianni_2.jpg', 'Saint Charles Borromeo Painting', 'Saint Charles Borromeo, by Orazio Borgianni, from San Carlo alle Quattro Fontane Chruch (Rome)', 'Orazio Borgianni', '1611-1612', NULL, 'Public Domain', NULL, 5, FALSE),
 
 
 
