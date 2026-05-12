@@ -48,6 +48,7 @@ JOIN (VALUES
 ('saint-joseph', '/saints/saint-joseph_murillo_holy-family.jpg', 'The Holy Family Painting', 'The Holy Family, by Bartolomé Esteban Murillo, from National Gallery of Ireland', 'Bartolomé Esteban Murillo', '1640-1649', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-joseph', '/saints/saint-joseph_la-tour.jpg', 'Joseph the Carpenter Painting', 'Joseph the Carpenter, by Georges de La Tour, from Musée du Louvre', 'Georges de La Tour', '1640-1645', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-joseph', '/saints/saint-joseph_champaigne.jpg', 'The Dream of Saint Joseph Painting', 'The Dream of Saint Joseph, by Philippe de Champaigne, from National Gallery', 'Philippe de Champaigne', '1642-1643', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-joseph', '/saints/saint-joseph_briggs.jpg', 'The Lily and the Carpenter Painting', 'The Lily and the Carpenter, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 7, FALSE),
 
 -- Saint John the Baptist
 ('saint-john-the-baptist', '/saints/saint-john-the-baptist_caravaggio.jpg', 'Saint John the Baptist in the Wilderness Painting', 'Saint John the Baptist in the Wilderness, by Caravaggio, from the Nelson-Atkins Museum of Art', 'Caravaggio', '1604-1605', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -106,10 +107,11 @@ JOIN (VALUES
 -- Saint Francis de Sales
 ('saint-francis-de-sales', '/saints/saint-francis-de-sales.webp', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-francis-de-sales', '/saints/saint-francis-de-sales_2.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by an unknown artist, from the Château de Bussy-Rabutin', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-francis-de-sales', '/saints/saint-francis-de-sales_brenet.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Nicolas Guy Brenet, from Château de Blois', 'Nicolas Guy Brenet', '18th Century', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal_bayeu.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by Francisco Bayeu, from Museo del Prado', 'Francisco Bayeu', '18th Century', NULL, 'Public Domain', NULL, 4, FALSE),
-('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal_halle.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by Noël Hallé, from Saint-Louis-en-l''Île Church', 'Noël Hallé', '18th Century', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by an unknown artist, from Monastery of the Visitation (Paris)', NULL, NULL, NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales_briggs.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales_brenet.jpg', 'Saint Francis de Sales Painting', 'Saint Francis de Sales, by Nicolas Guy Brenet, from Château de Blois', 'Nicolas Guy Brenet', '18th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal_bayeu.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by Francisco Bayeu, from Museo del Prado', 'Francisco Bayeu', '18th Century', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal_halle.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by Noël Hallé, from Saint-Louis-en-l''Île Church', 'Noël Hallé', '18th Century', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-francis-de-sales', '/saints/saint-francis-de-sales-&-jane-frances-de-chantal.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal, by an unknown artist, from Monastery of the Visitation (Paris)', NULL, NULL, NULL, 'Public Domain', NULL, 7, FALSE),
 
 -- Saint Paul, Apostle
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rubens.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611-1612', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -513,10 +515,11 @@ JOIN (VALUES
 ('saint-paulinus-of-nola', '/saints/saint-paulinus-of-nola_stained-glass.jpg', 'Saint Paulinus of Nola Stained Glass', 'Saint Paulinus of Nola, by an unknown artist, from Linz Cathedral (upper Austria)', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-paulinus-of-nola', '/saints/saint-paulinus-of-nola_azzolino.jpg', 'Saint Paulinus of Nola frees a Slave Painting', 'Saint Paulinus of Nola frees a Slave , by Giovanni Bernardino Azzolini, from Pio Monte della Misericordia', 'Giovanni Bernardino Azzolini', '1626', NULL, 'Public Domain', NULL, 3, FALSE),
 
--- Saint John Fischer
-('saint-john-fischer', '/saints/saint-john-fischer_holbein-younger.jpg', 'Saint John Fischer Painting', 'Saint John Fischer, by Hans Holbein the Younger', 'Hans Holbein the Younger', '1497-1543', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-john-fischer', '/saints/saint-john-fischer_illustration.jpg', 'Saint John Fischer Line Engraving', 'Saint John Fischer, by Jacobus Houbraken', 'Jacobus Houbraken', '1743', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-john-fischer', '/saints/saint-john-fischer_briggs.jpg', 'Saint John Fischer Painting', 'Saint John Fischer, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '2019', NULL, 'Public Domain', NULL, 3, FALSE),
+-- Saint John Fisher
+('saint-john-fisher', '/saints/saint-john-fisher_holbein-younger.jpg', 'Saint John Fisher Painting', 'Saint John Fisher, by Hans Holbein the Younger', 'Hans Holbein the Younger', '1497-1543', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-fisher', '/saints/saint-john-fisher_illustration.jpg', 'Saint John Fisher Line Engraving', 'Saint John Fisher, by Jacobus Houbraken', 'Jacobus Houbraken', '1743', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-fisher', '/saints/saint-john-fisher_briggs.jpg', 'Saint John Fisher Painting', 'Saint John Fisher, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '2019', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john-fisher', '/saints/saint-john-fisher_briggs_2.jpg', 'Saint John Fisher Painting', 'Saint John Fisher, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Thomas More
 ('saint-thomas-more', '/saints/saint-thomas-more_holbein-younger.jpg', 'Saint Thomas More Painting', 'Saint Thomas More, by Hans Holbein the Younger, from Frick Collection', 'Hans Holbein the Younger', '1527', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -643,6 +646,7 @@ JOIN (VALUES
 ('saint-bridget', '/saints/saint-bridget.jpg', 'Saint Bridget Painting', 'Saint Bridget, by an Hermen Rode, from Salem Church (Södermanland)', 'Hermen Rode', '15th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-bridget', '/saints/saint-bridget_friano.jpg', 'Saint Bridget Painting', 'Saint Bridget, by Maso da San Friano, from the Cook Collection', 'Maso da San Friano', '1540', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-bridget', '/saints/saint-bridget_2.jpg', 'Saint Bridget Painting', 'Saint Bridget, by an unknown artist, from Santa Maria della Catena (Naples)', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 3, FALSE),
+('saint-bridget', '/saints/saint-bridget_briggs.jpg', 'Saint Bridget Painting', 'Saint Bridget, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint Sharbel Makhluf
 ('saint-sharbel-makhluf', '/saints/saint-sharbel-makhluf.jpg', 'Saint Sharbel Makhluf Painting', 'Saint Sharbel Makhluf, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
@@ -727,10 +731,11 @@ JOIN (VALUES
 ('saint-peter-julian-eymard', '/saints/saint-peter-julian-eymard_2.jpg', 'Saint Peter Julian Eymard Photograph', 'Saint Peter Julian Eymard, by an unknown photographer', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint John Vianney
-('saint-john-vianney', '/saints/saint-john-vianney_desvallieres.png', 'Saint John Vianney Painting', 'Saint John Vianney, by George Desvallières', 'George Desvallières', '1920', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-john-vianney', '/saints/saint-john-vianney.jpg', 'Saint John Vianney Illustration', 'Saint John Vianney, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-john-vianney', '/saints/saint-john-vianney_2.jpg', 'Saint John Vianney Painting', 'Saint John Vianney, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-john-vianney', '/saints/saint-john-vianney_borel.jpg', 'Saint John Vianney Fresco', 'Saint John Vianney, by Paul Borel, from Basilique d''Ars', 'Paul Borel', '1907', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-john-vianney', '/saints/saint-john-vianney_briggs.jpg', 'Saint John Vianney Painting', 'Saint John Vianney, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '2022', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-vianney', '/saints/saint-john-vianney_desvallieres.png', 'Saint John Vianney Painting', 'Saint John Vianney, by George Desvallières', 'George Desvallières', '1920', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-vianney', '/saints/saint-john-vianney.jpg', 'Saint John Vianney Illustration', 'Saint John Vianney, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john-vianney', '/saints/saint-john-vianney_2.jpg', 'Saint John Vianney Painting', 'Saint John Vianney, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-john-vianney', '/saints/saint-john-vianney_borel.jpg', 'Saint John Vianney Fresco', 'Saint John Vianney, by Paul Borel, from Basilique d''Ars', 'Paul Borel', '1907', NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Sixtus II and Companions
 ('saint-sixtus-ii-and-companions', '/saints/saint-sixtus-ii_botticelli.jpg', 'Saint Sixtus II Fresco', 'Saint Sixtus II, by Sandro Botticelli, from Sistine Chapel', 'Sandro Botticelli', '1481-1482', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -752,12 +757,13 @@ JOIN (VALUES
 ('saint-teresa-benedicta-of-the-cross', '/saints/saint-teresa-benedicta-of-the-cross.jpg', 'Saint Teresa Benedicta of the Cross Painting', 'Saint Teresa Benedicta of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Lawrence
-('saint-lawrence', '/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Girolamo da Santacroce, from Courtauld Gallery', 'Girolamo da Santacroce', '1520-1530', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-lawrence', '/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Jean Baptiste de Champaigne, from National Gallery of Art (Washington DC)', 'Jean Baptiste de Champaigne', '1660', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-lawrence', '/saints/saint-lawrence_limosin.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Jean Limosin, from Museum of Fine Arts of Lyon', 'Jean Limosin', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-lawrence', '/saints/saint-lawrence_calli.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Giuseppe Calì, from Saint Lawrence Church (Gozo)', 'Giuseppe Calì', '1889', NULL, 'Public Domain', NULL, 4, FALSE),
-('saint-lawrence', '/saints/saint-lawrence_titan_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Titian, from El Escorial', 'Titian', '1564-1567', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-lawrence', '/saints/saint-lawrence_strozzi.jpg', 'Saint Lawrence Distributing the Treasures of the Church Painting', 'Saint Lawrence Distributing the Treasures of the Church, by Bernardo Strozzi, from North Carolina Museum of Art', 'Bernardo Strozzi', '1625', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_briggs.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-lawrence', '/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Girolamo da Santacroce, from Courtauld Gallery', 'Girolamo da Santacroce', '1520-1530', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Jean Baptiste de Champaigne, from National Gallery of Art (Washington DC)', 'Jean Baptiste de Champaigne', '1660', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_limosin.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Jean Limosin, from Museum of Fine Arts of Lyon', 'Jean Limosin', '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_calli.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Giuseppe Calì, from Saint Lawrence Church (Gozo)', 'Giuseppe Calì', '1889', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_titan_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Titian, from El Escorial', 'Titian', '1564-1567', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_strozzi.jpg', 'Saint Lawrence Distributing the Treasures of the Church Painting', 'Saint Lawrence Distributing the Treasures of the Church, by Bernardo Strozzi, from North Carolina Museum of Art', 'Bernardo Strozzi', '1625', NULL, 'Public Domain', NULL, 7, FALSE),
 
 -- Saint Clare
 ('saint-clare', '/saints/saint-clare_martini.jpg', 'Saint Clare Fresco', 'Saint Clare, by Simone Martini, from Lower Basilica of San Francesco', 'Simone Martini', '1322-1326', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -817,12 +823,13 @@ JOIN (VALUES
 ('saint-pius-x', '/saints/saint-pius-x.jpg', 'Saint Pius X Photograph', 'Saint Pius X, by Ernest Walter Histed, from National Portrait Gallery (London)', 'Ernest Walter Histed', '1914', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-pius-x', '/saints/saint-pius-x_bordignon.jpg', 'Saint Pius X Painting', 'Saint Pius X, by Noè Bordignon, from Diocesan museum of Padua (Italy)', 'Noè Bordignon', '1920', NULL, 'Public Domain', NULL, 3, FALSE),
 
--- Saint Rose of Lima (a copier)
+-- Saint Rose of Lima
 ('saint-rose-of-lima', '/saints/saint-rose-of-lima_coello.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Claudio Coello, from Museo del Prado', 'Claudio Coello', '1683', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-rose-of-lima', '/saints/saint-rose-of-lima.jpg', 'Saint Rose of Lima with Child Jesus Painting', 'Saint Rose of Lima with Child Jesus, by an unknown artist, from Lima Art Museum', NULL, '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-rose-of-lima', '/saints/saint-rose-of-lima_medoro.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Angelino Medoro, from Santuario de Santa Rosa (Lima)', 'Angelino Medoro', '1617', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-rose-of-lima', '/saints/saint-rose-of-lima_laso.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Francisco Laso, from Pinacoteca Municipal Ignacio Merino', 'Francisco Laso', '1859', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-rose-of-lima', '/saints/saint-rose-of-lima_murillo.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Bartolomé Esteban Murillo', 'Bartolomé Esteban Murillo', '1670-1680', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-rose-of-lima', '/saints/saint-rose-of-lima_briggs.jpg', 'Saint Rose of Lima Painting', 'Saint Rose of Lima, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 6, FALSE),
 
 -- Saint Bartholomew, Apostle
 ('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_rubens.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -1134,6 +1141,24 @@ JOIN (VALUES
 -- =========================
 -- November Saints
 -- =========================
+
+-- Saint Martin de Porres
+('saint-martin-de-porres', '/saints/saint-martin-de-porres_briggs.jpg', 'Saint Martin de Porres Painting', 'Saint Martin de Porres, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-martin-de-porres', '/saints/saint-martin-de-porres.jpg', 'Saint Martin de Porres Illustration', 'Saint Martin de Porres, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 2, FALSE),
+('saint-martin-de-porres', '/saints/saint-martin-de-porres_warford.jpg', 'Saint Martin de Porres Painting', 'Saint Martin de Porres, by John Alan Warford', 'John Alan Warford', NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+-- Need remove of watermark !
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -2802,7 +2802,7 @@ INSERT INTO saints (
 ) VALUES
 (
   'saint-martin-de-porres', 'Saint Martin de Porres',
-  1579, NULL, NULL, FALSE,
+  1579, 12, 9, FALSE,
   1639, 11, 3, FALSE,
   17,
   (SELECT id FROM places WHERE code='LIMA'),
