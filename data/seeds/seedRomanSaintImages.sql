@@ -1147,23 +1147,16 @@ JOIN (VALUES
 ('saint-martin-de-porres', '/saints/saint-martin-de-porres.jpg', 'Saint Martin de Porres Illustration', 'Saint Martin de Porres, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 2, FALSE),
 ('saint-martin-de-porres', '/saints/saint-martin-de-porres_warford.jpg', 'Saint Martin de Porres Painting', 'Saint Martin de Porres, by John Alan Warford', 'John Alan Warford', NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 -- Need remove of watermark !
+('saint-martin-de-porres', '/saints/saint-martin-de-porres_2.jpg', 'Saint Martin de Porres Painting', 'Saint Martin de Porres, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- Saint Charles Borromeo
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 1, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 2, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 3, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 4, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 5, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 6, FALSE),
+('saint-charles-borromeo', '/saints/saint-charles-borromeo_', '', '', NULL, NULL, NULL, NULL, NULL, 7, FALSE),
 
 
 
