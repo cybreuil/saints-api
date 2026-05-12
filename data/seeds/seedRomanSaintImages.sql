@@ -1182,6 +1182,55 @@ JOIN (VALUES
 ('saint-margaret-of-scotland', '/saints/saint-margaret-of-scotland_hole.jpg', 'The Landing Of Saint Margaret at Queensferry Painting', 'The Landing Of Saint Margaret at Queensferry, by William Hole, from Scottish National Portrait Gallery', 'William Hole', '1899', NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 2, FALSE),
 ('saint-margaret-of-scotland', '/saints/saint-margaret-of-scotland.jpg', 'Saint Margaret of Scotland Illustration', 'Saint Margaret of Scotland, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
+-- Saint Gertrude
+('saint-gertrude', '/saints/saint-gertrude_cabrera.jpg', 'Saint Gertrude Painting', 'Saint Gertrude, by Miguel Cabrera, from Dallas Museum of Art', 'Miguel Cabrera', '1763', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-gertrude', '/saints/saint-gertrude.jpg', 'Saint Gertrude Painting', 'Saint Gertrude, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-gertrude', '/saints/saint-gertrude_2.jpg', 'Saint Gertrude Painting', 'Saint Gertrude, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Elizabeth of Hungary
+('saint-elizabeth-of-hungary', '/saints/saint-elizabeth-of-hungary_martini.jpg', 'Saint Elizabeth of Hungary Fresco', 'Saint Elizabeth of Hungary, by Simone Martini, from Lower Basilica of San Francesco', 'Simone Martini', '1322-1326', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-elizabeth-of-hungary', '/saints/saint-elizabeth-of-hungary_leighton.jpg', 'The Charity of Saint Elizabeth of Hungary Painting', 'The Charity of Saint Elizabeth of Hungary, by Edmund Blair Leighton', 'Edmund Blair Leighton', '1895', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-elizabeth-of-hungary', '/saints/saint-elizabeth-of-hungary_collins.webp', 'The Devout Childhood of Saint Elizabeth of Hungary Painting', 'The Devout Childhood of Saint Elizabeth of Hungary, by Charles Alston Collins, from Detroit Institute of Arts', 'Charles Alston Collins', '1852', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-elizabeth-of-hungary', '/saints/saint-elizabeth-of-hungary_stokes.jpg', 'Saint Elizabeth of Hungary Painting', 'Saint Elizabeth of Hungary, by Marianne Stokes, from Art Gallery of New South Wales (Sydney)', 'Marianne Stokes', '1920', NULL, 'CC0 1.0 Universal', NULL, 4, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
