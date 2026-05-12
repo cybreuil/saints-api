@@ -1167,6 +1167,20 @@ JOIN (VALUES
 ('saint-martin-of-tours', '/saints/saint-martin-of-tours_maes.jpg', 'Saint Martin Raising a Man from the Dead Painting', 'Saint Martin Raising a Man from the Dead, by Godfried Maes', 'Godfried Maes', '1687', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-martin-of-tours', '/saints/saint-martin-of-tours.jpg', 'Saint Martin of Tours Painting', 'Saint Martin of Tours, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Josaphat, Bishop and Martyr
+('saint-josaphat', '/saints/saint-josaphat_azovskyj.jpg', 'Saint Josaphat Painting', 'Saint Josaphat, by Mykola Azovskyj', 'Mykola Azovskyj', '1946', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-josaphat', '/saints/saint-josaphat_simmler_martyr.jpg', 'The Martyrdom of Saint Josaphat Painting', 'The Martyrdom of Saint Josaphat, by Józef Simmler, from National Museum in Warsaw', 'Józef Simmler', '1861', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-josaphat', '/saints/saint-josaphat_icon.jpg', 'Saint Josaphat Icon', 'Saint Josaphat, by an unknown artist', NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL, 3, FALSE),
+
+
+
+
+
+
+
+
+
+
 
 ---
 )
