@@ -2811,8 +2811,8 @@ INSERT INTO saints (
 ),
 (
   'saint-charles-borromeo', 'Saint Charles Borromeo',
-  1538, NULL, NULL, FALSE,
-  1584, 11, 4, FALSE,
+  1538, 10, 2, FALSE,
+  1584, 11, 3, FALSE,
   16,
   NULL,
   (SELECT id FROM places WHERE code='MILAN'),
@@ -2820,7 +2820,7 @@ INSERT INTO saints (
 ),
 (
   'saint-leo-the-great', 'Saint Leo the Great',
-  NULL, NULL, NULL, TRUE,
+  391, NULL, NULL, TRUE,
   461, 11, 10, TRUE,
   5,
   NULL,

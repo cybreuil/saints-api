@@ -1156,15 +1156,8 @@ JOIN (VALUES
 ('saint-charles-borromeo', '/saints/saint-charles-borromeo_gherardi.jpg', 'Saint Charles Borromeo giving Communion to Plague Victims Painting', 'Saint Charles Borromeo giving Communion to Plague Victims, by Antonio Gherardi, from Moretti Fine Art (Paris)', 'Antonio Gherardi', '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-charles-borromeo', '/saints/saint-charles-borromeo_borgianni_2.jpg', 'Saint Charles Borromeo Painting', 'Saint Charles Borromeo, by Orazio Borgianni, from San Carlo alle Quattro Fontane Chruch (Rome)', 'Orazio Borgianni', '1611-1612', NULL, 'Public Domain', NULL, 5, FALSE),
 
-
-
-
-
-
-
-
-
-
+-- Saint Leo the Great
+('saint-leo-the-great', '/saints/saint-leo-the-great_el-mozo.jpg', 'Saint Leo the Great Painting', 'Saint Leo the Great, by Francisco Herrera the Younger (el Mozo)', 'Francisco Herrera the Younger (el Mozo)', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 
 ---
 )
