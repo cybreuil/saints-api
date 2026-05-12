@@ -2829,8 +2829,8 @@ INSERT INTO saints (
 ),
 (
   'saint-martin-of-tours', 'Saint Martin of Tours',
-  NULL, NULL, NULL, TRUE,
-  397, 11, 11, TRUE,
+  316, NULL, NULL, TRUE,
+  397, 11, 8, TRUE,
   4,
   NULL,
   (SELECT id FROM places WHERE code='TOURS'),

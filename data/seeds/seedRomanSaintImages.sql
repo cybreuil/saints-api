@@ -1157,7 +1157,16 @@ JOIN (VALUES
 ('saint-charles-borromeo', '/saints/saint-charles-borromeo_borgianni_2.jpg', 'Saint Charles Borromeo Painting', 'Saint Charles Borromeo, by Orazio Borgianni, from San Carlo alle Quattro Fontane Chruch (Rome)', 'Orazio Borgianni', '1611-1612', NULL, 'Public Domain', NULL, 5, FALSE),
 
 -- Saint Leo the Great
-('saint-leo-the-great', '/saints/saint-leo-the-great_el-mozo.jpg', 'Saint Leo the Great Painting', 'Saint Leo the Great, by Francisco Herrera the Younger (el Mozo)', 'Francisco Herrera the Younger (el Mozo)', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-leo-the-great', '/saints/saint-leo-the-great_el-mozo.jpg', 'Saint Leo the Great Painting', 'Saint Leo the Great, by Francisco Herrera the Younger (el Mozo), from Museo del Prado', 'Francisco Herrera the Younger (el Mozo)', '17th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-leo-the-great', '/saints/saint-leo-the-great.webp', 'Saint Leo the Great Painting', 'Saint Leo the Great, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-leo-the-great', '/saints/saint-leo-the-great_2.jpg', 'Saint Leo the Great Mosaic', 'Saint Leo the Great, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+
+-- Saint Martin of Tours
+('saint-martin-of-tours', '/saints/saint-martin-of-tours_martini.jpg', 'Saint Martin of Tours Fresco', 'Saint Martin of Tours, by Simone Martini, from Lower Basilica of San Francesco', 'Simone Martini', '1322-1326', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-martin-of-tours', '/saints/saint-martin-of-tours_dyck.jpg', 'Saint Martin Sharing his Cloak with a Beggar Painting', 'Saint Martin Sharing his Cloak with a Beggar, by Anthony van Dyck, from Church of Saint Martin (Zaventem)', 'Anthony van Dyck', '1621', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-martin-of-tours', '/saints/saint-martin-of-tours_maes.jpg', 'Saint Martin Raising a Man from the Dead Painting', 'Saint Martin Raising a Man from the Dead, by Godfried Maes', 'Godfried Maes', '1687', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-martin-of-tours', '/saints/saint-martin-of-tours.jpg', 'Saint Martin of Tours Painting', 'Saint Martin of Tours, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
 
 ---
 )
