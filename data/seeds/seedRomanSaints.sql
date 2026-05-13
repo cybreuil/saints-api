@@ -3029,7 +3029,7 @@ INSERT INTO saints (
 ),
 (
   'saint-john-damascene', 'Saint John Damascene',
-  NULL, NULL, NULL, TRUE,
+  675, NULL, NULL, TRUE,
   749, 12, 4, TRUE,
   8,
   (SELECT id FROM places WHERE code='DAMASCUS'),
