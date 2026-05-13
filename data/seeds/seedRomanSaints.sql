@@ -2885,7 +2885,7 @@ INSERT INTO saints (
 (
   'saint-clement-i', 'Saint Clement I, Pope and Martyr',
   NULL, NULL, NULL, TRUE,
-  NULL, 11, 23, TRUE,
+  NULL, NULL, NULL, TRUE,
   1,
   NULL,
   (SELECT id FROM places WHERE code='ROME'),
