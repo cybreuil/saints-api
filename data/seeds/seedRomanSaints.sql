@@ -2908,8 +2908,8 @@ INSERT INTO saints (
 (
   'saint-catherine-of-alexandria', 'Saint Catherine of Alexandria',
   NULL, NULL, NULL, TRUE,
-  NULL, 11, 25, TRUE,
-  NULL,
+  NULL, NULL, NULL, TRUE,
+  4,
   NULL,
   (SELECT id FROM places WHERE code='ALEXANDRIA'),
   (SELECT id FROM places WHERE code='ALEXANDRIA')
@@ -2917,7 +2917,7 @@ INSERT INTO saints (
 (
   'saint-andrew-apostle', 'Saint Andrew, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, 11, 30, TRUE,
+  NULL, NULL, NULL, TRUE,
   1,
   NULL, NULL, NULL
 )

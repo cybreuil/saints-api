@@ -1229,18 +1229,14 @@ JOIN (VALUES
 ('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_guinet.jpg', 'Saint Catherine of Alexandria Painting', 'Saint Catherine of Alexandria, by Claude Guinet, from Museum of Fine Arts of Lyon', 'Claude Guinet', '1507', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_gentileschi.jpg', 'Saint Catherine of Alexandria Painting', 'Saint Catherine of Alexandria, by Artemisia Gentileschi, from Museo del Prado', 'Artemisia Gentileschi', '1620', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_gentileschi_2.jpg', 'Self Portrait of Artemisia Gentileschi as Saint Catherine Painting', 'Self Portrait of Artemisia Gentileschi as Saint Catherine, by Artemisia Gentileschi, from National Gallery (London)', 'Artemisia Gentileschi', '1616', NULL, 'Public Domain', NULL, 7, FALSE),
-('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_lehmann.jpg', 'The Translation of the Body of Saint Catherine of Alexandria Painting', 'The Translation of the Body of Saint Catherine of Alexandria, by Henri Lehmann, from Musée Fabre', 'Henri Lehmann', '1839', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_farinati_martyr.jpg', 'The Martyrdom of Saint Catherine of Alexandria Painting', 'The Martyrdom of Saint Catherine of Alexandria, by Paolo Farinati, from Museum of Fine Arts (Budapest)', 'Paolo Farinati', '1579', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_lehmann.jpg', 'The Translation of the Body of Saint Catherine of Alexandria Painting', 'The Translation of the Body of Saint Catherine of Alexandria, by Henri Lehmann, from Musée Fabre', 'Henri Lehmann', '1839', NULL, 'Public Domain', NULL, 9, FALSE),
 
-
-
-
-
-
-
-
-
-
-
+-- Saint Andrew, Apostle
+('saint-andrew-apostle', '/saints/saint-andrew-apostle_rubens.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-andrew-apostle', '/saints/saint-andrew-apostle_dyck.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Anthony van Dyck, from Museo de Arte de Ponce', 'Anthony van Dyck', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-andrew-apostle', '/saints/saint-andrew-apostle_ribera.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Jusepe de Ribera, from Museo de Arte de Ponce', 'Jusepe de Ribera', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-andrew-apostle', '/saints/saint-andrew-apostle_murillo_martyr.jpg', 'The Martyrdom of Saint Andrew Apostle Painting', 'The Martyrdom of Saint Andrew the Apostle, by Bartolomé Esteban Murillo, from Museo del Prado', 'Bartolomé Esteban Murillo', '1675-1682', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
