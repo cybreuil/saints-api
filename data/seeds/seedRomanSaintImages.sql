@@ -1203,7 +1203,12 @@ JOIN (VALUES
 ('saint-cecilia', '/saints/saint-cecilia_raphael.jpg', 'The Ecstasy of Saint Cecilia Painting', 'The Ecstasy of Saint Cecilia, by Raphael, from Pinacoteca Nazionale di Bologna', 'Raphael', '1514', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-cecilia', '/saints/saint-cecilia_saraceni_martyr.jpg', 'The Martyrdom of Saint Cecilia Painting', 'The Martyrdom of Saint Cecilia, by Carlo Saraceni', 'Carlo Saraceni', '1610', NULL, '', NULL, 6, FALSE),
 
--- Saint
+-- Saint Clement I
+('saint-clement-i', '/saints/saint-clement-i_fresco.jpg', 'Saint Clement I Fresco', 'Saint Clement I, by an unknown artist, from Santa Maria Antiqua Church', NULL, '5th Century', NULL, 'CC0 1.0 Universal', NULL, 1, TRUE),
+('saint-clement-i', '/saints/saint-clement-i.jpg', 'Saint Clement I Painting', 'Saint Clement I, by an unknown artist, from Papal Basilica of Saint Paul Outside the Walls', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-clement-i', '/saints/saint-clement-i_mosaic.jpg', 'Saint Clement I Mosaic', 'Saint Clement I, by an unknown artist, from Saint Sophia Cathedral (Kyiv)', NULL, '11th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-clement-i', '/saints/saint-clement-i_tiepolo.jpg', 'Saint Clement I Vision of the Trinity Painting', 'Saint Clement I Vision of the Trinity, by Giambattista Tiepolo, from National Gallery (London)', 'Giambattista Tiepolo', '1730-1735', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-clement-i', '/saints/saint-clement-i_montor.jpg', 'Saint Clement I Illustration', 'Saint Clement I Illustration, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 5, FALSE),
 
 
 
