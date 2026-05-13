@@ -1201,7 +1201,8 @@ JOIN (VALUES
 ('saint-cecilia', '/saints/saint-cecilia_gentileschi-&-lanfranco.jpg', 'Saint Cecilia Painting', 'Saint Cecilia, by Orazio Gentileschi & Giovanni Lanfranco, from National Gallery of Art (Washington, D.C.)', 'Orazio Gentileschi & Giovanni Lanfranco', '1617-1627', NULL, 'Public Domain', NULL, 4, FALSE),
 -- raphael paints cecilia with saint paul john augustine & mary magdalene, maybe i should add
 ('saint-cecilia', '/saints/saint-cecilia_raphael.jpg', 'The Ecstasy of Saint Cecilia Painting', 'The Ecstasy of Saint Cecilia, by Raphael, from Pinacoteca Nazionale di Bologna', 'Raphael', '1514', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-cecilia', '/saints/saint-cecilia_saraceni_martyr.jpg', 'The Martyrdom of Saint Cecilia Painting', 'The Martyrdom of Saint Cecilia, by Carlo Saraceni', 'Carlo Saraceni', '1610', NULL, '', NULL, 6, FALSE),
+('saint-cecilia', '/saints/saint-cecilia_saraceni_martyr.jpg', 'The Martyrdom of Saint Cecilia Painting', 'The Martyrdom of Saint Cecilia, by Carlo Saraceni', 'Carlo Saraceni', '1610', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-cecilia', '/saints/saint-cecilia_madrazo.jpg', 'The Burial of Saint Cecilia Painting', 'The Burial of Saint Cecilia, by Luis de Madrazo, from Museo del Prado', 'Luis de Madrazo', '1852', NULL, 'Public Domain', NULL, 7, FALSE),
 
 -- Saint Clement I
 ('saint-clement-i', '/saints/saint-clement-i_fresco.jpg', 'Saint Clement I Fresco', 'Saint Clement I, by an unknown artist, from Santa Maria Antiqua Church', NULL, '5th Century', NULL, 'CC0 1.0 Universal', NULL, 1, TRUE),
@@ -1213,6 +1214,34 @@ JOIN (VALUES
 -- Saint Columban, Abbot
 ('saint-columban', '/saints/saint-columban.jpg', 'Saint Columban Illustration', 'Saint Columban, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-columban', '/saints/saint-columban_stained-glass.jpg', 'Saint Columban Stained Glass', 'Saint Columban, by an unknown artist, from Bobbio Abbey', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+
+-- Saint Andrew Dung-Lac
+('saint-andrew-dung-lac', '/saints/saint-andrew-dung-lac_stained-glass.jpg', 'Saint Andrew Dung-Lac Stained Glass', 'Saint Andrew Dung-Lac, by an unknown artist, from Saint Paul Catholic Church (Westerville, Ohio)', NULL, NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL, 1, TRUE),
+('saint-andrew-dung-lac', '/saints/saint-andrew-dung-lac-&-companions.jpg', 'Saint Andrew Dung-Lac & Companions Mosaic', 'Saint Andrew Dung-Lac & Companions, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-andrew-dung-lac', '/saints/saint-andrew-dung-lac_warford.jpg', 'Saint Andrew Dung-Lac Painting', 'Saint Andrew Dung-Lac, by John Alan Warford', 'John Alan Warford', '21th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+-- Need remove watermark !
+
+-- Saint Catherine of Alexandria
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_caravaggio.jpg', 'Saint Catherine of Alexandria Painting', 'Saint Catherine of Alexandria, by Caravaggio, from Thyssen-Bornemisza Museum', 'Caravaggio', '1598', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_raphael.jpg', 'Saint Catherine of Alexandria Painting', 'Saint Catherine of Alexandria, by Raphael, from National Gallery (London)', 'Raphael', '1507-1509', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_crivelli.jpg', 'Saint Catherine of Alexandria Painting', 'Saint Catherine of Alexandria, by Carlo Crivelli, from Polo museale di San Francesco', 'Carlo Crivelli', '1470', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_murillo.jpg', 'Saint Catherine of Alexandria Painting', 'Saint Catherine of Alexandria, by Bartolomé Esteban Murillo, from Museum of Fine Arts of Seville', 'Bartolomé Esteban Murillo', '1650', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_guinet.jpg', 'Saint Catherine of Alexandria Painting', 'Saint Catherine of Alexandria, by Claude Guinet, from Museum of Fine Arts of Lyon', 'Claude Guinet', '1507', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_gentileschi.jpg', 'Saint Catherine of Alexandria Painting', 'Saint Catherine of Alexandria, by Artemisia Gentileschi, from Museo del Prado', 'Artemisia Gentileschi', '1620', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_gentileschi_2.jpg', 'Self Portrait of Artemisia Gentileschi as Saint Catherine Painting', 'Self Portrait of Artemisia Gentileschi as Saint Catherine, by Artemisia Gentileschi, from National Gallery (London)', 'Artemisia Gentileschi', '1616', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-catherine-of-alexandria', '/saints/saint-catherine-of-alexandria_lehmann.jpg', 'The Translation of the Body of Saint Catherine of Alexandria Painting', 'The Translation of the Body of Saint Catherine of Alexandria, by Henri Lehmann, from Musée Fabre', 'Henri Lehmann', '1839', NULL, 'Public Domain', NULL, 8, FALSE),
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ---
