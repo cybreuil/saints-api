@@ -1236,8 +1236,10 @@ JOIN (VALUES
 ('saint-andrew-apostle', '/saints/saint-andrew-apostle_rubens.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-andrew-apostle', '/saints/saint-andrew-apostle_dyck.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Anthony van Dyck, from Museo de Arte de Ponce', 'Anthony van Dyck', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-andrew-apostle', '/saints/saint-andrew-apostle_ribera.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Jusepe de Ribera, from Museo de Arte de Ponce', 'Jusepe de Ribera', '17th Century', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-andrew-apostle', '/saints/saint-andrew-apostle_murillo_martyr.jpg', 'The Martyrdom of Saint Andrew Apostle Painting', 'The Martyrdom of Saint Andrew the Apostle, by Bartolomé Esteban Murillo, from Museo del Prado', 'Bartolomé Esteban Murillo', '1675-1682', NULL, 'Public Domain', NULL, 4, FALSE),
-
+('saint-andrew-apostle', '/saints/saint-andrew-apostle_tournier.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Nicolas Tournier', 'Nicolas Tournier', '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-andrew-apostle', '/saints/saint-andrew-apostle_zurbaran.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-andrew-apostle', '/saints/saint-andrew-apostle_loo.jpg', 'Saint Andrew Apostle Painting', 'Saint Andrew the Apostle, by Charles André van Loo, from Musée des Beaux-Arts d''Angers', 'Charles André van Loo', '18th Century', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-andrew-apostle', '/saints/saint-andrew-apostle_murillo_martyr.jpg', 'The Martyrdom of Saint Andrew Apostle Painting', 'The Martyrdom of Saint Andrew the Apostle, by Bartolomé Esteban Murillo, from Museo del Prado', 'Bartolomé Esteban Murillo', '1675-1682', NULL, 'Public Domain', NULL, 7, FALSE),
 
 
 ---
