@@ -2900,9 +2900,9 @@ INSERT INTO saints (
 ),
 (
   'saint-andrew-dung-lac-and-companions', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs',
-  NULL, NULL, NULL, TRUE,
-  NULL, 11, 24, TRUE,
-  NULL,
+  1795, NULL, NULL, TRUE,
+  1839, 12, 21, TRUE,
+  19,
   NULL, NULL, NULL
 ),
 (
