@@ -1252,7 +1252,7 @@ JOIN (VALUES
 ('saint-francis-xavier', '/saints/saint-francis-xavier_rubens.jpg', 'The Miracles of Saint Francis Xavier Painting', 'The Miracles of Saint Francis Xavier, by Peter Paul Rubens, from Kunsthistorisches Museum', 'Peter Paul Rubens', '1617-1618', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-francis-xavier', '/saints/saint-francis-xavier_poussin.jpg', 'The Miracle of Saint Francis Xavier Painting', 'The Miracle of Saint Francis Xavier, by Nicolas Poussin, from Musée du Louvre', 'Nicolas Poussin', '1641-1642', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
+-- Saint John Damascene
 
 
 
