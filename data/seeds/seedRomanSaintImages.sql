@@ -121,7 +121,7 @@ JOIN (VALUES
 ('saint-paul-apostle', '/saints/saint-paul-apostle_dyck.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Anthony van Dyck, from Landesmuseum Hannover', 'Anthony van Dyck', '1618-1620', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_caravaggio_conversion.jpg', 'The Conversion of Saint Paul Painting', 'The Conversion of Saint Paul, by Caravaggio, from Odescalchi Balbi Collection', 'Caravaggio', '1601', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt_prison.jpg', 'The Apostle Paul in Prison Painting', 'The Apostle Paul in Prison, by Rembrandt, from Rijksmuseum', 'Rembrandt', '1627', NULL, 'Public Domain', NULL, 7, FALSE),
-('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Rembrandt, from National Gallery of Art', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 8, FALSE),
+('saint-paul-apostle', '/saints/saint-paul-apostle_rembrandt.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Rembrandt, from National Gallery of Art (Washington, D.C.)', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 8, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_la-tour.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Georges de La Tour (copy), from Musée Toulouse-Lautrec', 'Georges de La Tour', '1820', NULL, 'Public Domain', NULL, 9, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_guercino.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Il Guercino, from the Royal Collection of the British royal family', 'Il Guercino', '1650', NULL, 'Public Domain', NULL, 10, FALSE),
 ('saint-paul-apostle', '/saints/saint-paul-apostle_guercino_2.jpg', 'Saint Paul Apostle Painting', 'Saint Paul the Apostle, by Il Guercino (or student), from Slovak National Gallery', 'Il Guercino', '17th Century', NULL, 'Public Domain', NULL, 11, FALSE),
@@ -299,7 +299,7 @@ JOIN (VALUES
 ('saint-anselm', '/saints/saint-anselm.jpg', 'Saint Anselm Painting', 'Saint Anselm, by an unknown artist, from Chiesa di S. Anselmo (Bomarzo)', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint George
-('saint-george', '/saints/saint-george_raphael.jpg', 'Saint George and the Dragon Painting', 'Saint George and the Dragon, by Raphael, from National Gallery of Art', 'Raphael', '1505-1506', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-george', '/saints/saint-george_raphael.jpg', 'Saint George and the Dragon Painting', 'Saint George and the Dragon, by Raphael, from National Gallery of Art (Washington, D.C.)', 'Raphael', '1505-1506', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-george', '/saints/saint-george_martorell.jpg', 'Saint George and the Dragon Painting', 'Saint George and the Dragon, by Bernat Martorell, from Art Institute of Chicago', 'Bernat Martorell', '1434-1435', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-george', '/saints/saint-george_rubens.jpg', 'Saint George Battles the Dragon Painting', 'Saint George Battles the Dragon, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1606-1608', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-george', '/saints/saint-george_moreau.jpg', 'Saint George Slaying the Dragon Painting', 'Saint George and the Dragon, by Gustave Moreau, from National Gallery', 'Gustave Moreau', '1889-1890', NULL, 'Public Domain', NULL, 4, FALSE),
@@ -759,7 +759,7 @@ JOIN (VALUES
 -- Saint Lawrence
 ('saint-lawrence', '/saints/saint-lawrence_briggs.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-lawrence', '/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Girolamo da Santacroce, from Courtauld Gallery', 'Girolamo da Santacroce', '1520-1530', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-lawrence', '/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Jean Baptiste de Champaigne, from National Gallery of Art (Washington DC)', 'Jean Baptiste de Champaigne', '1660', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Jean Baptiste de Champaigne, from National Gallery of Art (Washington D.C.)', 'Jean Baptiste de Champaigne', '1660', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_limosin.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Jean Limosin, from Museum of Fine Arts of Lyon', 'Jean Limosin', '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_calli.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Giuseppe Calì, from Saint Lawrence Church (Gozo)', 'Giuseppe Calì', '1889', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_titan_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Titian, from El Escorial', 'Titian', '1564-1567', NULL, 'Public Domain', NULL, 6, FALSE),
@@ -1193,52 +1193,14 @@ JOIN (VALUES
 ('saint-elizabeth-of-hungary', '/saints/saint-elizabeth-of-hungary_collins.webp', 'The Devout Childhood of Saint Elizabeth of Hungary Painting', 'The Devout Childhood of Saint Elizabeth of Hungary, by Charles Alston Collins, from Detroit Institute of Arts', 'Charles Alston Collins', '1852', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-elizabeth-of-hungary', '/saints/saint-elizabeth-of-hungary_stokes.jpg', 'Saint Elizabeth of Hungary Painting', 'Saint Elizabeth of Hungary, by Marianne Stokes, from Art Gallery of New South Wales (Sydney)', 'Marianne Stokes', '1920', NULL, 'CC0 1.0 Universal', NULL, 4, FALSE),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-- Saint Cecilia
+('saint-cecilia', '/saints/saint-cecilia_reni.jpg', 'Saint Cecilia Painting', 'Saint Cecilia, by Guido Reni, from Norton Simon Museum (Los Angeles)', 'Guido Reni', '1606', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-cecilia', '/saints/saint-cecilia_guercino.jpg', 'Saint Cecilia Painting', 'Saint Cecilia, by Il Guercino, from Dulwich Picture Gallery', 'Il Guercino', '1649', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-cecilia', '/saints/saint-cecilia_paelinck-horgnies.jpg', 'Saint Cecilia Painting', 'Saint Cecilia, by Fanny Paelinck-Horgnies, from Museum of Fine Arts (Ghent)', 'Fanny Paelinck-Horgnies', '1829', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-cecilia', '/saints/saint-cecilia_gentileschi-&-lanfranco.jpg', 'Saint Cecilia Painting', 'Saint Cecilia, by Orazio Gentileschi & Giovanni Lanfranco, from National Gallery of Art (Washington, D.C.)', 'Orazio Gentileschi & Giovanni Lanfranco', '1617-1627', NULL, 'Public Domain', NULL, 4, FALSE),
+-- raphael paints cecilia with saint paul john augustine & mary magdalene, maybe i should add
+('saint-cecilia', '/saints/saint-cecilia_raphael.jpg', 'The Ecstasy of Saint Cecilia Painting', 'The Ecstasy of Saint Cecilia, by Raphael, from Pinacoteca Nazionale di Bologna', 'Raphael', '1514', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-cecilia', '/saints/saint-cecilia_saraceni_martyr.jpg', 'The Martyrdom of Saint Cecilia Painting', 'The Martyrdom of Saint Cecilia, by Carlo Saraceni', 'Carlo Saraceni', '1610', NULL, '', NULL, 6, FALSE),
 
 
 

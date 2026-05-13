@@ -2876,7 +2876,7 @@ INSERT INTO saints (
 (
   'saint-cecilia', 'Saint Cecilia, Virgin and Martyr',
   NULL, NULL, NULL, TRUE,
-  NULL, 11, 22, TRUE,
+  230, NULL, NULL, TRUE,
   NULL,
   NULL,
   (SELECT id FROM places WHERE code='ROME'),
