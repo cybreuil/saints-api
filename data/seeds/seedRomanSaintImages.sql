@@ -1253,6 +1253,11 @@ JOIN (VALUES
 ('saint-francis-xavier', '/saints/saint-francis-xavier_poussin.jpg', 'The Miracle of Saint Francis Xavier Painting', 'The Miracle of Saint Francis Xavier, by Nicolas Poussin, from Musée du Louvre', 'Nicolas Poussin', '1641-1642', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint John Damascene
+('saint-john-damascene', '/saints/saint-john-damascene.jpg', 'Saint John Damascene Icon', 'Saint John Damascene, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-damascene', '/saints/saint-john-damascene_homsi.gif', 'Saint John Damascene Icon', 'Saint John Damascene, by Ne''meh Naser Homsi', 'Ne''meh Naser Homsi', '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-damascene', '/saints/saint-john-damascene_2.jpg', 'Saint John Damascene Icon', 'Saint John Damascene, by an unknown artist, from Mount Athos', NULL, '14th Century', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john-damascene', '/saints/saint-john-damascene_3.jpg', 'Saint John Damascene Illustration', 'Saint John Damascene, by Francesco Bartolozzi (after Domenichino)', 'Francesco Bartolozzi', '1762', NULL, 'Public Domain', NULL, 4, FALSE),
+
 
 
 
