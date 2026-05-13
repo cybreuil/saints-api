@@ -1015,6 +1015,7 @@ JOIN (VALUES
 ('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_ribera.jpg', 'Saint Francis of Assisi Painting', 'Saint Francis of Assisi, by Jusepe de Ribera, from Escurial', 'Jusepe de Ribera', '1642', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_tiepolo.jpg', 'Saint Francis of Assisi receiving the Stigmata Painting', 'Saint Francis of Assisi receiving the Stigmata, by Giambattista Tiepolo, from Museo del Prado', 'Giambattista Tiepolo', '1767-1769', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_murillo_2.jpg', 'Saint Francis embracing Christ on the Cross Painting', 'Saint Francis of Assisi embracing Christ on the Cross, by Bartolomé Esteban Murillo, from Museum of Fine Arts of Seville', 'Bartolomé Esteban Murillo', '1668-1669', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-francis-of-assisi', '/saints/saint-francis-of-assisi_schut.jpg', 'Miracle of the Portiuncula Painting', 'Miracle of the Portiuncula, by Cornelis Schut, from Royal Museum of Fine Arts Antwerp', 'Cornelis Schut', '1649', NULL, 'Public Domain', NULL, 8, FALSE),
 
 -- Saint Faustina Kowalska
 ('saint-faustina-kowalska', '/saints/saint-faustina-kowalska.jpg', 'Saint Faustina Kowalska Painting', 'Saint Faustina Kowalska, by Stanisław Sztama', 'Stanisław Sztama', '20th Century', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -1246,7 +1247,10 @@ JOIN (VALUES
 -- =========================
 
 -- Saint Francis Xavier
---wip
+('saint-francis-xavier', '/saints/saint-francis-xavier_murillo.jpg', 'Saint Francis Xavier Painting', 'Saint Francis Xavier, by Bartolomé Esteban Murillo, from Wadsworth Atheneum', 'Bartolomé Esteban Murillo', '1670', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-francis-xavier', '/saints/saint-francis-xavier_dyck.jpg', 'Saint Francis Xavier Painting', 'Saint Francis Xavier, by Anthony van Dyck, from Pinacoteca Vaticana', 'Anthony van Dyck', '1630', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-francis-xavier', '/saints/saint-francis-xavier_rubens.jpg', 'The Miracles of Saint Francis Xavier Painting', 'The Miracles of Saint Francis Xavier, by Peter Paul Rubens, from Kunsthistorisches Museum', 'Peter Paul Rubens', '1617-1618', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-francis-xavier', '/saints/saint-francis-xavier_poussin.jpg', 'The Miracle of Saint Francis Xavier Painting', 'The Miracle of Saint Francis Xavier, by Nicolas Poussin, from Musée du Louvre', 'Nicolas Poussin', '1641-1642', NULL, 'Public Domain', NULL, 4, FALSE),
 
 
 
