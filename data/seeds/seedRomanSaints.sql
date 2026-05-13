@@ -2893,8 +2893,8 @@ INSERT INTO saints (
 ),
 (
   'saint-columban', 'Saint Columban, Abbot',
-  NULL, NULL, NULL, TRUE,
-  615, 11, 23, TRUE,
+  543, NULL, NULL, TRUE,
+  615, 11, 21, TRUE,
   7,
   NULL, NULL, NULL
 ),

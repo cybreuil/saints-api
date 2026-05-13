@@ -1210,7 +1210,9 @@ JOIN (VALUES
 ('saint-clement-i', '/saints/saint-clement-i_tiepolo.jpg', 'Saint Clement I Vision of the Trinity Painting', 'Saint Clement I Vision of the Trinity, by Giambattista Tiepolo, from National Gallery (London)', 'Giambattista Tiepolo', '1730-1735', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-clement-i', '/saints/saint-clement-i_montor.jpg', 'Saint Clement I Illustration', 'Saint Clement I Illustration, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 5, FALSE),
 
-
+-- Saint Columban, Abbot
+('saint-columban', '/saints/saint-columban.jpg', 'Saint Columban Illustration', 'Saint Columban, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-columban', '/saints/saint-columban_stained-glass.jpg', 'Saint Columban Stained Glass', 'Saint Columban, by an unknown artist, from Bobbio Abbey', NULL, '19th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 ---
