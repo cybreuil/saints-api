@@ -1087,7 +1087,7 @@ JOIN (VALUES
 
 -- Saint Luke, Evangelist
 ('saint-luke', '/saints/saint-luke_reni.jpg', 'Saint Luke Painting', 'Saint Luke the Evangelist, by Guido Reni, from Bob Jones University(USA)', 'Guido Reni', '1621', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-luke', '/saints/saint-luke_borovikovsky.jpg', 'Saint Luke Painting', 'Saint Luke the Evangelist, by Vladimir Borovikovsky, from the State Russian Museum', 'Vladimir Borovikov', '1804-1809', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-luke', '/saints/saint-luke_borovikovsky.jpg', 'Saint Luke Painting', 'Saint Luke the Evangelist, by Vladimir Borovikovsky, from State Russian Museum', 'Vladimir Borovikov', '1804-1809', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-luke', '/saints/saint-luke_hals.jpg', 'Saint Luke Painting', 'Saint Luke the Evangelist, by Frans Hals, from Odesa Museum of Western and Eastern Art', 'Frans Hals', '1625', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-luke', '/saints/saint-luke_weyden.jpg', 'Saint Luke Drawing the Virgin Painting', 'Saint Luke Drawing the Virgin, by Rogier van der Weyden, from Museum of Fine Arts (Boston)', 'Rogier van der Weyden', '1435-1440', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-luke', '/saints/saint-luke_guercino.jpg', 'Saint Luke Displaying a Painting of the Virgin Painting', 'Saint Luke Displaying a Painting of the Virgin, by Il Guercino, from Nelson-Atkins Museum of Art', 'Il Guercino', '1652-1653', NULL, 'Public Domain', NULL, 5, FALSE),
@@ -1258,7 +1258,9 @@ JOIN (VALUES
 ('saint-john-damascene', '/saints/saint-john-damascene_2.jpg', 'Saint John Damascene Icon', 'Saint John Damascene, by an unknown artist, from Mount Athos', NULL, '14th Century', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-john-damascene', '/saints/saint-john-damascene_3.jpg', 'Saint John Damascene Illustration', 'Saint John Damascene, by Francesco Bartolozzi (after Domenichino)', 'Francesco Bartolozzi', '1762', NULL, 'Public Domain', NULL, 4, FALSE),
 
-
+-- Saint Nicholas
+('saint-nicholas', '/saints/saint-nicholas_cermak.jpg', 'Saint Nicholas Painting', 'Saint Nicholas, by Jaroslav Čermák', 'Jaroslav Čermák', '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-nicholas', '/saints/saint-nicholas_repin.jpg', 'Saint Nicholas of Myra saves Three Innocents from Death Painting', 'Saint Nicholas of Myra saves Three Innocents from Death, by Ilya Repin, from State Russian Museum', 'Ilya Repin', '1888', NULL, 'Public Domain', NULL, 2, FALSE),
 
 
 ---
