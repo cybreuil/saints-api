@@ -1260,7 +1260,17 @@ JOIN (VALUES
 
 -- Saint Nicholas
 ('saint-nicholas', '/saints/saint-nicholas_cermak.jpg', 'Saint Nicholas Painting', 'Saint Nicholas, by Jaroslav Čermák', 'Jaroslav Čermák', '19th Century', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-nicholas', '/saints/saint-nicholas_repin.jpg', 'Saint Nicholas of Myra saves Three Innocents from Death Painting', 'Saint Nicholas of Myra saves Three Innocents from Death, by Ilya Repin, from State Russian Museum', 'Ilya Repin', '1888', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-nicholas', '/saints/saint-nicholas_moretto.jpg', 'Saint Nicholas of Bari presents the Rovelli students to Madonna and Child Painting', 'Saint Nicholas of Bari presents the Rovelli students to Madonna and Child, by Moretto da Brescia, from Pinacoteca Tosio Martinengo', 'Moretto da Brescia', '1539', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-nicholas', '/saints/saint-nicholas_bourdichon.jpg', 'Saint Nicholas Resurrecting the three Butchered Children Illustration', 'Saint Nicholas Resurrecting the three Butchered Children, by Jean Bourdichon, from Book : "Les Grandes Heures d''Anne de Bretagne"', 'Jean Bourdichon', '1503-1508', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-nicholas', '/saints/saint-nicholas_icon.jpg', 'Saint Nicholas Icon', 'Saint Nicholas, by Aleksa Petrov, from Lipno Church', 'Aleksa Petrov', '1294', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-nicholas', '/saints/saint-nicholas_titian.jpg', 'Saint Nicholas Painting', 'Saint Nicholas, by Titian, from Chiesa di San Sebastiano (Venice)', 'Titian', '1563', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-nicholas', '/saints/saint-nicholas_repin.jpg', 'Saint Nicholas of Myra saves Three Innocents from Death Painting', 'Saint Nicholas of Myra saves Three Innocents from Death, by Ilya Repin, from State Russian Museum', 'Ilya Repin', '1888', NULL, 'Public Domain', NULL, 6, FALSE),
+
+
+
+
+
+
 
 
 ---
