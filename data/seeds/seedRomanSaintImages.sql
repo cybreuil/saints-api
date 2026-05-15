@@ -1272,7 +1272,7 @@ JOIN (VALUES
 ('saint-ambrose', '/saints/saint-ambrose_dyck.jpg', 'Saint Ambrose barring Theodosius from Milan Cathedral Painting', 'Saint Ambrose barring Theodosius from Milan Cathedral, by Anthony van Dyck, from National Gallery (London)', 'Anthony van Dyck', '1619-1620', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-ambrose', '/saints/saint-ambrose_subleyras.jpg', 'Saint Ambrose Absolving Theodosius Painting', 'Saint Ambrose Absolving Theodosius, by Pierre Subleyras, from Galleria Nazionale dell''Umbria', 'Pierre Subleyras', '1745', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-ambrose', '/saints/saint-ambrose_mosaic.jpg', 'Saint Ambrose Mosaic', 'Saint Ambrose, by an unknown artist, from Palazzo dei Normanni', NULL, '1140', NULL, 'Public Domain', NULL, 5, FALSE),
-
+('saint-ambrose', '/saints/saint-ambrose_mosaic_2.jpg', 'Saint Ambrose Mosaic', 'Saint Ambrose, by an unknown artist, from Basilica of Sant''Ambrogio', NULL, '4th Century', NULL, 'Public Domain', NULL, 6, FALSE)
 
 
 
