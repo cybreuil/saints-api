@@ -3038,7 +3038,7 @@ INSERT INTO saints (
 ),
 (
   'saint-nicholas', 'Saint Nicholas, Bishop',
-  NULL, NULL, NULL, TRUE,
+  270, NULL, NULL, TRUE,
   343, 12, 6, TRUE,
   4,
   NULL,

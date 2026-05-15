@@ -1266,6 +1266,17 @@ JOIN (VALUES
 ('saint-nicholas', '/saints/saint-nicholas_titian.jpg', 'Saint Nicholas Painting', 'Saint Nicholas, by Titian, from Chiesa di San Sebastiano (Venice)', 'Titian', '1563', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-nicholas', '/saints/saint-nicholas_repin.jpg', 'Saint Nicholas of Myra saves Three Innocents from Death Painting', 'Saint Nicholas of Myra saves Three Innocents from Death, by Ilya Repin, from State Russian Museum', 'Ilya Repin', '1888', NULL, 'Public Domain', NULL, 6, FALSE),
 
+-- Saint Ambrose
+('saint-ambrose', '/saints/saint-ambrose_goya.jpg', 'Saint Ambrose Painting', 'Saint Ambrose, by Francisco Goya, from Cleveland Museum of Art', 'Francisco Goya', '1796-1799', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-ambrose', '/saints/saint-ambrose_vignon.jpg', 'Saint Ambrose Painting', 'Saint Ambrose, by Claude Vignon, from Minneapolis Institute of Art', 'Claude Vignon', '1623-1625', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-ambrose', '/saints/saint-ambrose_dyck.jpg', 'Saint Ambrose barring Theodosius from Milan Cathedral Painting', 'Saint Ambrose barring Theodosius from Milan Cathedral, by Anthony van Dyck, from National Gallery (London)', 'Anthony van Dyck', '1619-1620', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-ambrose', '/saints/saint-ambrose_subleyras.jpg', 'Saint Ambrose Absolving Theodosius Painting', 'Saint Ambrose Absolving Theodosius, by Pierre Subleyras, from Galleria Nazionale dell''Umbria', 'Pierre Subleyras', '1745', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-ambrose', '/saints/saint-ambrose_mosaic.jpg', 'Saint Ambrose Mosaic', 'Saint Ambrose, by an unknown artist, from Palazzo dei Normanni', NULL, '1140', NULL, 'Public Domain', NULL, 5, FALSE),
+
+
+
+
+
 
 
 
