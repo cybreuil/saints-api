@@ -3047,8 +3047,8 @@ INSERT INTO saints (
 ),
 (
   'saint-ambrose', 'Saint Ambrose',
-  NULL, NULL, NULL, TRUE,
-  397, 12, 7, FALSE,
+  339, NULL, NULL, TRUE,
+  397, 4, 4, FALSE,
   4,
   NULL,
   (SELECT id FROM places WHERE code='MILAN'),
