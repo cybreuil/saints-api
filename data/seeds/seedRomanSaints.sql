@@ -3058,7 +3058,7 @@ INSERT INTO saints (
   'saint-juan-diego', 'Saint Juan Diego Cuauhtlatoatzin',
   1474, NULL, NULL, TRUE,
   1548, 5, 30, FALSE,
-  15,
+  16,
   NULL, NULL, NULL
 ),
 (

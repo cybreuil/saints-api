@@ -1272,12 +1272,12 @@ JOIN (VALUES
 ('saint-ambrose', '/saints/saint-ambrose_dyck.jpg', 'Saint Ambrose barring Theodosius from Milan Cathedral Painting', 'Saint Ambrose barring Theodosius from Milan Cathedral, by Anthony van Dyck, from National Gallery (London)', 'Anthony van Dyck', '1619-1620', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-ambrose', '/saints/saint-ambrose_subleyras.jpg', 'Saint Ambrose Absolving Theodosius Painting', 'Saint Ambrose Absolving Theodosius, by Pierre Subleyras, from Galleria Nazionale dell''Umbria', 'Pierre Subleyras', '1745', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-ambrose', '/saints/saint-ambrose_mosaic.jpg', 'Saint Ambrose Mosaic', 'Saint Ambrose, by an unknown artist, from Palazzo dei Normanni', NULL, '1140', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-ambrose', '/saints/saint-ambrose_mosaic_2.jpg', 'Saint Ambrose Mosaic', 'Saint Ambrose, by an unknown artist, from Basilica of Sant''Ambrogio', NULL, '4th Century', NULL, 'Public Domain', NULL, 6, FALSE)
+('saint-ambrose', '/saints/saint-ambrose_mosaic_2.jpg', 'Saint Ambrose Mosaic', 'Saint Ambrose, by an unknown artist, from Basilica of Sant''Ambrogio', NULL, '4th Century', NULL, 'Public Domain', NULL, 6, FALSE),
 
 -- Saint Juan Diego Cuauhtlatoatzin
--- wip
-
-
+('saint-juan-diego-cuauhtlatoatzin', '/saints/saint-juan-diego-cuauhtlatoatzin_berzosa.jpg', 'Saint Juan Diego Cuauhtlatoatzin Painting', 'Saint Juan Diego Cuauhtlatoatzin, by Raúl Berzosa', 'Raúl Berzosa', '2016', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-juan-diego-cuauhtlatoatzin', '/saints/saint-juan-diego-cuauhtlatoatzin_cabrera.jpg', 'Saint Juan Diego Cuauhtlatoatzin Painting', 'Saint Juan Diego Cuauhtlatoatzin, by Miguel Cabrera', 'Miguel Cabrera', '1752', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-juan-diego-cuauhtlatoatzin', '/saints/saint-juan-diego-cuauhtlatoatzin_cabrera_2.jpg', 'Saint Juan Diego Cuauhtlatoatzin Painting', 'Saint Juan Diego Cuauhtlatoatzin, by Miguel Cabrera', 'Miguel Cabrera', '18th century', NULL, 'Public Domain', NULL, 3, FALSE)
 
 
 
