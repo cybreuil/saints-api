@@ -1310,15 +1310,12 @@ JOIN (VALUES
 ('saint-john-of-kanty', '/saints/saint-john-of-kanty.jpg', 'Saint John of Kanty Painting', 'Saint John of Kanty, by an unknown artist', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-john-of-kanty', '/saints/saint-john-of-kanty_kotsis.jpg', 'Saint John of Kanty before Our Lady Painting', 'Saint John of Kanty before Our Lady, by Aleksander Kotsis', 'Aleksander Kotsis', '1865', NULL, 'Public Domain', NULL, 3, FALSE),
 
-
-
-
-
-
-
-
-
-
+-- Saint Stephen
+('saint-stephen', '/saints/saint-stephen_crivelli.jpg', 'Saint Stephen Painting', 'Saint Stephen, by Carlo Crivelli, from National Gallery (London)', 'Carlo Crivelli', '1476', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-stephen', '/saints/saint-stephen_champaigne_martyr.jpg', 'The Martyrdom of Saint Stephen Painting', 'The Martyrdom of Saint Stephen, by Philippe de Champaigne, from Private Collection', 'Philippe de Champaigne', '17th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-stephen', '/saints/saint-stephen_rubens.jpg', 'The Stoning of Saint Stephen Painting', 'The Stoning of Saint Stephen, by Peter Paul Rubens, from Musée des Beaux-Arts de Valenciennes', 'Peter Paul Rubens', '1616-1617', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-stephen', '/saints/saint-stephen_damaskinos.png', 'The Stoning of Saint Stephen Painting', 'The Stoning of Saint Stephen, by Michael Damaskinos, from Municipal Gallery of Corfu', 'Michael Damaskinos', '1591', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-stephen', '/saints/saint-stephen_millais.jpg', 'Saint Stephen Painting', 'Saint Stephen, by John Everett Millais, from Tate Britain', 'John Everett Millais', '1895', NULL, 'Public Domain', NULL, 5, FALSE),
 
 
 
