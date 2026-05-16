@@ -3097,8 +3097,8 @@ INSERT INTO saints (
 ),
 (
   'saint-john-of-kanty', 'Saint John of Kanty',
-  1390, NULL, NULL, TRUE,
-  1473, 12, 23, FALSE,
+  1390, 6, 23, TRUE,
+  1473, 12, 24, FALSE,
   15,
   NULL, NULL, NULL
 ),
