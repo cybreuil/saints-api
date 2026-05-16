@@ -1317,18 +1317,15 @@ JOIN (VALUES
 ('saint-stephen-martyr', '/saints/saint-stephen-martyr_damaskinos.png', 'The Stoning of Saint Stephen-martyr Painting', 'The Stoning of Saint Stephen-martyr, by Michael Damaskinos, from Municipal Gallery of Corfu', 'Michael Damaskinos', '1591', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-stephen-martyr', '/saints/saint-stephen-martyr_millais.jpg', 'Saint Stephen Painting', 'Saint Stephen, by John Everett Millais, from Tate Britain', 'John Everett Millais', '1895', NULL, 'Public Domain', NULL, 5, FALSE),
 
-
-
-
-
-
-
-
-
-
-
-
-
+-- Saint John, Apostle and Evangelist
+('saint-john', '/saints/saint-john_rubens.jpg', 'Saint John Apostle & Evangelist Painting', 'Saint John the Apostle & Evangelist, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1610-1612', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john', '/saints/saint-john_dyck.jpg', 'Saint John Apostle & Evangelist Painting', 'Saint John the Apostle & Evangelist, by Anthony van Dyck, from Museum of Fine Arts (Budapest)', 'Anthony van Dyck', '1618-1620', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john', '/saints/saint-john_domenichino.jpg', 'Saint John Apostle & Evangelist Painting', 'Saint John the Apostle & Evangelist, by Domenichino, from National Gallery (London)', 'Domenichino', '1621-1629', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-john', '/saints/saint-john_zurbaran.jpg', 'Saint John Apostle & Evangelist Painting', 'Saint John the Apostle & Evangelist, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-john', '/saints/saint-john_dolci.jpg', 'Saint John Apostle & Evangelist Painting', 'Saint John the Apostle & Evangelist, by Carlo Dolci, from Pushkin State Museum of Fine Arts (Moscow)', 'Carlo Dolci', '1647', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-john', '/saints/saint-john_grunewald.jpg', 'Saint John Supporting Saint Mary Painting', 'Saint John Supporting Saint Mary, by Matthias Grünewald, from Unterlinden Museum', 'Matthias Grünewald', '1512-1516', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-john', '/saints/saint-john_hals.jpg', 'Saint John Apostle & Evangelist Painting', 'Saint John the Apostle & Evangelist, by Frans Hals, from Getty Center (Los Angeles)', 'Frans Hals', '1625-1628', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-john', '/saints/saint-john_bosch.jpg', 'Saint John on Patmos Painting', 'Saint John on Patmos, by Hieronymus Bosch, from Gemäldegalerie (Berlin)', 'Hieronymus Bosch', '1489', NULL, 'Public Domain', NULL, 8, FALSE),
 
 
 

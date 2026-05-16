@@ -3105,14 +3105,14 @@ INSERT INTO saints (
 (
   'saint-stephen-martyr', 'Saint Stephen, the First Martyr',
   NULL, NULL, NULL, TRUE,
-  NULL, 12, 26, TRUE,
+  NULL, NULL, NULL, TRUE,
   1,
   NULL, NULL, NULL
 ),
 (
-  'saint-john-apostle', 'Saint John, Apostle and Evangelist',
+  'saint-john', 'Saint John, Apostle and Evangelist',
   NULL, NULL, NULL, TRUE,
-  NULL, 12, 27, TRUE,
+  NULL, NULL, NULL, TRUE,
   1,
   NULL, NULL, NULL
 ),
@@ -3158,7 +3158,7 @@ JOIN (VALUES
 ('saint-peter-canisius', 'Saint Peter Canisius', 'Jesuit priest and Doctor of the Church, leading catechist of the Counter‑Reformation.', 'Peter Canisius worked across German-speaking lands to renew Catholic life through preaching, education and influential catechisms; his pastoral clarity and intellectual rigor strengthened the Church in confessional conflict.', '1521–1597'),
 ('saint-john-of-kanty', 'Saint John of Kanty', 'Priest and professor known for learning, humility and charity.', 'John Cantius taught theology at Kraków and became renowned for his personal austerity, care for students and poor, and fidelity to pastoral and academic vocation.', 'c. 1390–1473'),
 ('saint-stephen-martyr', 'Saint Stephen, the First Martyr', 'Protomartyr of the Church and witness to Christ in the apostolic age.', 'Stephen, one of the first deacons, proclaimed Christ with courage and became the first to shed his blood for the Gospel; his martyrdom in Acts remains a foundational witness to forgiveness and fidelity.', '1st century'),
-('saint-john-apostle', 'Saint John, Apostle and Evangelist', 'Apostle and evangelist, theologian of divine love and incarnation.', 'John, traditionally identified as the beloved disciple, is associated with the Fourth Gospel, Johannine letters and Revelation; his witness shaped Christological reflection and contemplative theology in the Church.', '1st century'),
+('saint-john', 'Saint John, Apostle and Evangelist', 'Apostle and evangelist, theologian of divine love and incarnation.', 'John, traditionally identified as the beloved disciple, is associated with the Fourth Gospel, Johannine letters and Revelation; his witness shaped Christological reflection and contemplative theology in the Church.', '1st century'),
 ('holy-innocents', 'The Holy Innocents, Martyrs', 'Children of Bethlehem commemorated as martyrs in the infancy narrative.', 'The Holy Innocents are remembered as children killed in Herod''s persecution after Christ''s birth; their commemoration expresses the Church''s memory of innocent suffering and witness linked to the coming of the Messiah.', ''),
 ('saint-thomas-becket', 'Saint Thomas Becket', 'Archbishop of Canterbury and martyr for ecclesial freedom.', 'Thomas Becket defended the rights and autonomy of the Church in conflict with royal authority; his martyrdom in Canterbury became a symbol of conscience, episcopal responsibility and fidelity to ecclesial justice.', 'c. 1118–1170'),
 ('saint-sylvester-i', 'Saint Sylvester I', 'Pope of the Constantinian era associated with early public peace of the Church.', 'Sylvester governed the Church during a period of transition after imperial toleration, remembered in tradition for the consolidation of ecclesial life and worship in fourth-century Rome.', 'd. 335')
@@ -3186,7 +3186,7 @@ JOIN (VALUES
 ('saint-peter-canisius', 'Saint Pierre Canisius', 'Prêtre jésuite et docteur de l''Église, grand catéchiste de la Contre-Réforme.', 'Pierre Canisius œuvra dans les régions germaniques pour le renouveau catholique par la prédication, l''éducation et ses catéchismes influents; sa clarté pastorale et sa rigueur intellectuelle renforcèrent l''Église en temps de conflits confessionnels.', '1521–1597'),
 ('saint-john-of-kanty', 'Saint Jean de Kenty', 'Prêtre et professeur connu pour son savoir, son humilité et sa charité.', 'Jean de Kenty enseigna la théologie à Cracovie et se distingua par son austérité, son attention aux étudiants et aux pauvres, et sa fidélité à sa vocation académique et pastorale.', 'v. 1390–1473'),
 ('saint-stephen-martyr', 'Saint Étienne, premier martyr', 'Protomartyr de l''Église et témoin du Christ à l''âge apostolique.', 'Étienne, l''un des premiers diacres, annonça le Christ avec courage et fut le premier à verser son sang pour l''Évangile; son martyre, rapporté dans les Actes, demeure un témoignage fondateur de fidélité et de pardon.', 'Ier siècle'),
-('saint-john-apostle', 'Saint Jean, apôtre et évangéliste', 'Apôtre et évangéliste, théologien de l''amour divin et de l''Incarnation.', 'Jean, traditionnellement identifié comme le disciple bien-aimé, est associé au quatrième évangile, aux lettres johanniques et à l''Apocalypse; son témoignage a marqué la christologie et la théologie contemplative.', 'Ier siècle'),
+('saint-john', 'Saint Jean, apôtre et évangéliste', 'Apôtre et évangéliste, théologien de l''amour divin et de l''Incarnation.', 'Jean, traditionnellement identifié comme le disciple bien-aimé, est associé au quatrième évangile, aux lettres johanniques et à l''Apocalypse; son témoignage a marqué la christologie et la théologie contemplative.', 'Ier siècle'),
 ('holy-innocents', 'Les Saints Innocents, martyrs', 'Enfants de Bethléem commémorés comme martyrs dans le récit de l''enfance du Christ.', 'Les Saints Innocents rappellent les enfants mis à mort sous Hérode après la naissance de Jésus; leur mémoire exprime la souffrance innocente et le témoignage lié à la venue du Messie.', ''),
 ('saint-thomas-becket', 'Saint Thomas Becket', 'Archevêque de Cantorbéry et martyr pour la liberté de l''Église.', 'Thomas Becket défendit les droits et l''autonomie de l''Église face au pouvoir royal; son martyre à Cantorbéry devint un symbole de conscience, de responsabilité épiscopale et de fidélité ecclésiale.', 'v. 1118–1170'),
 ('saint-sylvester-i', 'Saint Sylvestre I', 'Pape de l''époque constantinienne associé à la paix publique de l''Église.', 'Sylvestre gouverna l''Église durant la période de transition après la tolérance impériale, et demeure lié à la consolidation de la vie ecclésiale et liturgique dans la Rome du IVe siècle.', 'm. 335')
@@ -3214,7 +3214,7 @@ JOIN (VALUES
 ('saint-peter-canisius', 'Sanctus Petrus Canisius', 'Presbyter Societatis Iesu et Doctor Ecclesiae, magnus catechista Contrareformationis.', 'Petrus Canisius in regionibus Germanicis ad renovationem catholicam per praedicationem, institutionem et catechismos contulit; claritas pastoralis et rigor intellectualis eius Ecclesiam in contentionibus confessionum firmaverunt.', '1521–1597'),
 ('saint-john-of-kanty', 'Sanctus Ioannes de Cantiis', 'Presbyter et professor, notus doctrina, humilitate et caritate.', 'Ioannes de Cantiis Cracoviae theologiam docuit et austeritate vitae, cura discipulorum pauperumque atque fidelitate vocationis academicae pastoralisque eminuit.', 'c. 1390–1473'),
 ('saint-stephen-martyr', 'Sanctus Stephanus, Protomartyr', 'Protomartyr Ecclesiae et testis Christi in aetate apostolica.', 'Stephanus, unus e primis diaconis, Christum fortiter praedicavit et primus sanguinem pro Evangelio fudit; eius martyrium in Actibus Apostolorum testimonium fundamentale mansit.', 'saec. I'),
-('saint-john-apostle', 'Sanctus Ioannes, Apostolus et Evangelista', 'Apostolus et evangelista, theologus amoris divini et Incarnationis.', 'Ioannes, discipulus dilectus traditus, cum quarto Evangelio, epistulis Ioanneis et Apocalypsi coniungitur; testimonium eius christologiam et theologiam contemplativam valde formavit.', 'saec. I'),
+('saint-john', 'Sanctus Ioannes, Apostolus et Evangelista', 'Apostolus et evangelista, theologus amoris divini et Incarnationis.', 'Ioannes, discipulus dilectus traditus, cum quarto Evangelio, epistulis Ioanneis et Apocalypsi coniungitur; testimonium eius christologiam et theologiam contemplativam valde formavit.', 'saec. I'),
 ('holy-innocents', 'Sancti Innocentes, Martyres', 'Pueri Bethlehemitici ut martyres in narratione infantiae commemorati.', 'Sancti Innocentes memorant pueros a Herode occisos post nativitatem Christi; eorum commemoratio innocentis doloris et testimonii in adventu Messiae signum est.', ''),
 ('saint-thomas-becket', 'Sanctus Thomas Becket', 'Archiepiscopus Cantuariensis et martyr pro libertate Ecclesiae.', 'Thomas Becket iura et libertatem Ecclesiae contra potestatem regiam defendit; martyrium eius Cantuariae symbolum conscientiae, officii episcopalis et fidelitatis ecclesialis factum est.', 'c. 1118–1170'),
 ('saint-sylvester-i', 'Sanctus Silvester I', 'Papa aetatis Constantini, cum pace publica Ecclesiae coniunctus.', 'Silvester Ecclesiam rexit tempore transitionis post tolerantiam imperialem, et in traditione cum consolidatione vitae ecclesialis et cultus in Roma saeculi quarti coniungitur.', 'ob. 335')
