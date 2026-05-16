@@ -1306,10 +1306,9 @@ JOIN (VALUES
 ('saint-peter-canisius', '/saints/saint-peter-canisius_3.jpg', 'Saint Peter Canisius Painting', 'Saint Peter Canisius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint John of Kanty
-('saint-john-of-kanty', '/saints/saint-john-of-kanty.jpg', 'Miracle of Saint John of Kanty Painting', 'Miracle of Saint John of Kanty, by Tadeusz Kuntze, from National Museum in Kraków', 'Tadeusz Kuntze', '1767', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-john-of-kanty', '/saints/saint-john-of-kanty_2.jpg', 'Saint John of Kanty Painting', 'Saint John of Kanty, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-john-of-kanty', '/saints/saint-john-of-kanty_3.jpg', 'Saint John of Kanty Painting', 'Saint John of Kanty, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
-
+('saint-john-of-kanty', '/saints/saint-john-of-kanty_kuntze.jpg', 'Miracle of Saint John of Kanty Painting', 'Miracle of Saint John of Kanty, by Tadeusz Kuntze, from National Museum in Kraków', 'Tadeusz Kuntze', '1767', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-of-kanty', '/saints/saint-john-of-kanty.jpg', 'Saint John of Kanty Painting', 'Saint John of Kanty, by an unknown artist', NULL, '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-of-kanty', '/saints/saint-john-of-kanty_kotsis.jpg', 'Saint John of Kanty before Our Lady Painting', 'Saint John of Kanty before Our Lady, by Aleksander Kotsis', 'Aleksander Kotsis', '1865', NULL, 'Public Domain', NULL, 3, FALSE),
 
 
 
