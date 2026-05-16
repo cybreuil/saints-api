@@ -3063,7 +3063,7 @@ INSERT INTO saints (
 ),
 (
   'saint-damasus-i', 'Saint Damasus I, Pope',
-  NULL, NULL, NULL, TRUE,
+  305, NULL, NULL, TRUE,
   384, 12, 11, TRUE,
   4,
   NULL,
@@ -3072,8 +3072,8 @@ INSERT INTO saints (
 ),
 (
   'saint-lucy', 'Saint Lucy, Virgin and Martyr',
-  NULL, NULL, NULL, TRUE,
-  304, 12, 13, TRUE,
+  283, NULL, NULL, TRUE,
+  304, NULL, NULL, TRUE,
   4,
   NULL,
   (SELECT id FROM places WHERE code='SIRACUSA'),
@@ -3081,7 +3081,7 @@ INSERT INTO saints (
 ),
 (
   'saint-john-of-the-cross', 'Saint John of the Cross',
-  1542, NULL, NULL, FALSE,
+  1542, 6, 24, FALSE,
   1591, 12, 14, FALSE,
   16,
   (SELECT id FROM places WHERE code='AVILA'),
@@ -3090,7 +3090,7 @@ INSERT INTO saints (
 ),
 (
   'saint-peter-canisius', 'Saint Peter Canisius',
-  1521, NULL, NULL, FALSE,
+  1521, 5, 8, FALSE,
   1597, 12, 21, FALSE,
   16,
   NULL, NULL, NULL
