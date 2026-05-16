@@ -1281,12 +1281,10 @@ JOIN (VALUES
 
 -- Saint Damasus I, pope
 ('saint-damasus-i', '/saints/saint-damasus-i_lithography.jpg', 'Saint Damasus I Lithography', 'Saint Damasus I, by Pedro Augusto Guglielmi, from Biblioteca Nacional de Portugal', 'Pedro Augusto Guglielmi', '1840', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-damasus-i', '/saints/saint-damasus-i_montor.jpg', 'Saint Damasus I Illustration', 'Saint Damasus I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-damasus-i', '/saints/saint-damasus-i_engraving.webp', 'Saint Damasus I Engraving', 'Saint Damasus I, by Tomás Carlos Capuz', 'Tomás Carlos Capuz', '19th Century', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-damasus-i', '/saints/saint-damasus-i.jpg', 'Saint Damasus I Painting', 'Saint Damasus I, by Juan Carreño de Miranda, from Casa de la Villa (Madrid)', 'Juan Carreño de Miranda', '1685', NULL, 'Public Domain', NULL, 4, FALSE),
-
-
-
+('saint-damasus-i', '/saints/saint-damasus-i_cavalieri.jpg', 'Saint Damasus I Illustration', 'Saint Damasus I, by Giovanni Battista de'' Cavalieri, from Book : "Pontificum Romanorum effigies"', 'Giovanni Battista de'' Cavalieri', '1580', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-damasus-i', '/saints/saint-damasus-i.jpg', 'Saint Damasus I Painting', 'Saint Damasus I, by Juan Carreño de Miranda, from Casa de la Villa (Madrid)', 'Juan Carreño de Miranda', '1685', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-damasus-i', '/saints/saint-damasus-i_engraving.webp', 'Saint Damasus I Engraving', 'Saint Damasus I, by Tomás Carlos Capuz', 'Tomás Carlos Capuz', '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-damasus-i', '/saints/saint-damasus-i_montor.jpg', 'Saint Damasus I Illustration', 'Saint Damasus I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 5, FALSE),
 
 
 
