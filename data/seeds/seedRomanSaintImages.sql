@@ -760,7 +760,7 @@ JOIN (VALUES
 -- Saint Lawrence
 ('saint-lawrence', '/saints/saint-lawrence_briggs.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '21th Century', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-lawrence', '/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Girolamo da Santacroce, from Courtauld Gallery', 'Girolamo da Santacroce', '1520-1530', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-lawrence', '/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Jean Baptiste de Champaigne, from National Gallery of Art (Washington D.C.)', 'Jean Baptiste de Champaigne', '1660', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Jean Baptiste de Champaigne, from National Gallery of Art (Washington, D.C.)', 'Jean Baptiste de Champaigne', '1660', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_limosin.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Jean Limosin, from Museum of Fine Arts of Lyon', 'Jean Limosin', '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_calli.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Giuseppe Calì, from Saint Lawrence Church (Gozo)', 'Giuseppe Calì', '1889', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_titan_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Titian, from El Escorial', 'Titian', '1564-1567', NULL, 'Public Domain', NULL, 6, FALSE),
@@ -1285,6 +1285,52 @@ JOIN (VALUES
 ('saint-damasus-i', '/saints/saint-damasus-i.jpg', 'Saint Damasus I Painting', 'Saint Damasus I, by Juan Carreño de Miranda, from Casa de la Villa (Madrid)', 'Juan Carreño de Miranda', '1685', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-damasus-i', '/saints/saint-damasus-i_engraving.webp', 'Saint Damasus I Engraving', 'Saint Damasus I, by Tomás Carlos Capuz', 'Tomás Carlos Capuz', '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-damasus-i', '/saints/saint-damasus-i_montor.jpg', 'Saint Damasus I Illustration', 'Saint Damasus I, by Alexis-François Artaud de Montor, from The Lives and Times of the Popes', 'Alexis-François Artaud de Montor', '1842', NULL, 'Public Domain', NULL, 5, FALSE),
+
+-- Saint Lucy
+('saint-lucy', '/saints/saint-lucy_zurbaran.jpg', 'Saint Lucy Painting', 'Saint Lucy, by Francisco de Zurbarán, from National Gallery of Art (Washington, D.C.)', 'Francisco de Zurbarán', '1635-1640', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-lucy', '/saints/saint-lucy_pirez.jpg', 'Saint Lucy Painting', 'Saint Lucy, by Álvaro Pires de Évora, from Capuchin Convent of Nola', 'Álvaro Pires de Évora', '1420', NULL, 'Attribution-ShareAlike 4.0 International', NULL, 2, FALSE),
+('saint-lucy', '/saints/saint-lucy_garofalo.jpg', 'Saint Lucy Painting', 'Saint Lucy, by Il Garofalo, from Capitoline Museums (Rome)', 'Il Garofalo', '1535-1540', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-lucy', '/saints/saint-lucy_ricci.jpg', 'Last Communion and Martyrdom of Saint Lucy Painting', 'Last Communion and Martyrdom of Saint Lucy, by Sebastiano Ricci, Santa Lucia Church (Parma)', 'Sebastiano Ricci', '1730', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-lucy', '/saints/saint-lucy_caravaggio.jpg', 'The Burial of Saint Lucy Painting', 'The Burial of Saint Lucy, by Caravaggio, from Santa Lucia al Sepolcro Church (Syracuse)', 'Caravaggio', '1608', NULL, 'Public Domain', NULL, 5, FALSE),
+
+-- Saint John of the Cross
+('saint-john-of-the-cross', '/saints/saint-john-of-the-cross_zurbaran.jpg', 'Saint John of the Cross Painting', 'Saint John of the Cross, by Francisco de Zurbarán, from Archdiocesan Museum in Katowice', 'Francisco de Zurbarán', '1656', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-john-of-the-cross', '/saints/saint-john-of-the-cross_bunel.jpg', 'Saint John of the Cross Illustration', 'Saint John of the Cross, by Michel Bunel, from Rijksmuseum', 'Michel Bunel', '18th Century', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-john-of-the-cross', '/saints/saint-john-of-the-cross.jpg', 'Saint John of the Cross Painting', 'Saint John of the Cross, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+-- need hanchett painting without watermark
+
+-- Saint Peter Canisius
+('saint-peter-canisius', '/saints/saint-peter-canisius.jpg', 'Saint Peter Canisius Painting', 'Saint Peter Canisius, by an unknown artist', NULL, '1699', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-peter-canisius', '/saints/saint-peter-canisius_custos.jpg', 'Saint Peter Canisius Painting', 'Saint Peter Canisius, by Dominicus Custos', 'Dominicus Custos', '1600', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-peter-canisius', '/saints/saint-peter-canisius_2.jpg', 'Saint Peter Canisius Painting', 'Saint Peter Canisius, by an unknown artist', NULL, '1546', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-peter-canisius', '/saints/saint-peter-canisius_3.jpg', 'Saint Peter Canisius Painting', 'Saint Peter Canisius, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 4, FALSE),
+
+-- Saint John of Kanty
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
