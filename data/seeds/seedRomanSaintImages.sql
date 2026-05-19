@@ -1265,6 +1265,8 @@ JOIN (VALUES
 ('saint-nicholas', '/saints/saint-nicholas_icon.jpg', 'Saint Nicholas Icon', 'Saint Nicholas, by Aleksa Petrov, from Lipno Church', 'Aleksa Petrov', '1294', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-nicholas', '/saints/saint-nicholas_titian.jpg', 'Saint Nicholas Painting', 'Saint Nicholas, by Titian, from Chiesa di San Sebastiano (Venice)', 'Titian', '1563', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-nicholas', '/saints/saint-nicholas_repin.jpg', 'Saint Nicholas of Myra saves Three Innocents from Death Painting', 'Saint Nicholas of Myra saves Three Innocents from Death, by Ilya Repin, from State Russian Museum', 'Ilya Repin', '1888', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-nicholas', '/saints/saint-nicholas_domenichino_grottaferrata.jpg', 'Saint Nicholas Fresco', 'Saint Nicholas, by Domenichino, from Grottaferata Abbey', 'Domenichino', '1609-1612', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-nicholas', '/saints/saint-nicholas_giordano.jpg', 'Saint Nicholas of Bari Saves the Young Cupbearer Painting', 'Saint Nicholas of Bari Saves the Young Cupbearer, by Luca Giordano, from Santa Brigida (Naples)', 'Luca Giordano', '1655', NULL, 'Public Domain', NULL, 8, FALSE),
 
 -- Saint Ambrose
 ('saint-ambrose', '/saints/saint-ambrose_goya.jpg', 'Saint Ambrose Painting', 'Saint Ambrose, by Francisco Goya, from Cleveland Museum of Art', 'Francisco Goya', '1796-1799', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -1328,8 +1330,11 @@ JOIN (VALUES
 ('saint-john', '/saints/saint-john_bosch.jpg', 'Saint John on Patmos Painting', 'Saint John on Patmos, by Hieronymus Bosch, from Gemäldegalerie (Berlin)', 'Hieronymus Bosch', '1489', NULL, 'Public Domain', NULL, 8, FALSE),
 
 -- The Holy Innocents, Martyrs
--- wip !
-
+('holy-innocents', '/saints/holy-innocents_rubens.jpg', 'The Virgin and Child Surrounded by the Holy Innocents Painting', 'The Virgin and Child Surrounded by the Holy Innocents, by Peter Paul Rubens, from Musée du Louvre', 'Peter Paul Rubens', '1616', NULL, 'Public Domain', NULL, 1, TRUE),
+('holy-innocents', '/saints/holy-innocents_reni.jpg', 'The Massacre of the Innocents Painting', 'The Massacre of the Innocents, by Guido Reni, from Pinacoteca Nazionale di Bologna', 'Guido Reni', '1611', NULL, 'Public Domain', NULL, 2, FALSE),
+('holy-innocents', '/saints/holy-innocents_cogniet.jpg', 'The Massacre of the Innocents Painting', 'The Massacre of the Innocents, by Léon Cogniet, from Musée des Beaux-Arts de Rennes', 'Léon Cogniet', '1824', NULL, 'Public Domain', NULL, 3, FALSE),
+('holy-innocents', '/saints/holy-innocents_rubens_2.jpg', 'The Massacre of the Innocents Painting', 'The Massacre of the Innocents, by Peter Paul Rubens, from Art Gallery of Ontario', 'Peter Paul Rubens', '1609-1611', NULL, 'Public Domain', NULL, 4, FALSE),
+('holy-innocents', '/saints/holy-innocents_briggs.jpg', 'The Massacre of the Innocents Painting', 'The Massacre of the Innocents, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '2019', NULL, 'Public Domain', NULL, 5, FALSE),
 
 
 
