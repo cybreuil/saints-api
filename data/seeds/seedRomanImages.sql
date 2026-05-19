@@ -720,3 +720,9 @@ INSERT INTO images (
 ('/saints/saint-ignatius-of-loyola_rubens_miracle.jpg', 'Miracle of Saint Ignatius of Loyola', 'painting', 'Miracle of Saint Ignatius of Loyola Painting', 'Peter Paul Rubens', '1617-1618', 'Kunsthistorisches Museum', NULL, 'Public Domain', NULL),
 ('/saints/saint-ignatius-of-loyola_zurbaran.jpg', 'Saint Ignatius of Loyola', 'painting', 'Saint Ignatius of Loyola Painting', 'Francisco de Zurbarán', '17th Century', 'Royal Collection of the British royal family', NULL, 'Public Domain', NULL),
 ('/saints/saint-ignatius-of-loyola.jpg', 'Ignatius convalesces at Loyola', 'painting', 'Ignatius convalesces at Loyola Painting', 'Albert Chevallier Tayler', '1904', NULL, NULL, 'Public Domain', NULL),
+
+-- =========================
+-- August Saints
+-- =========================
+
+-- Saint Alphonsus Liguori
