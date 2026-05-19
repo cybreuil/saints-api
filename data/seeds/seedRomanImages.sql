@@ -722,7 +722,99 @@ INSERT INTO images (
 ('/saints/saint-ignatius-of-loyola.jpg', 'Ignatius convalesces at Loyola', 'painting', 'Ignatius convalesces at Loyola Painting', 'Albert Chevallier Tayler', '1904', NULL, NULL, 'Public Domain', NULL),
 
 -- =========================
--- August Saints
+-- August Saints a double check !
 -- =========================
 
 -- Saint Alphonsus Liguori
+('/saints/saint-alphonsus-liguori.jpg', 'Saint Alphonsus Liguori', 'painting', 'Saint Alphonsus Liguori Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-alphonsus-liguori_2.jpg', 'Saint Alphonsus Liguori', 'painting', 'Saint Alphonsus Liguori Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-alphonsus-liguori_3.jpg', 'Saint Alphonsus Liguori', 'painting', 'Saint Alphonsus Liguori Painting', NULL, NULL, NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL),
+('/saints/saint-alphonsus-liguori_4.jpg', 'Saint Alphonsus Liguori', 'painting', 'Saint Alphonsus Liguori Painting', NULL, '1850', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Eusebius of Vercelli
+('/saints/saint-eusebius-of-vercelli.jpg', 'Saint Eusebius of Vercelli', 'painting', 'Saint Eusebius of Vercelli Painting', NULL, NULL, 'Vercelli Cathedral', NULL, 'Public Domain', NULL),
+('/saints/saint-eusebius-of-vercelli_2.jpg', 'Saint Eusebius of Vercelli', 'painting', 'Saint Eusebius of Vercelli Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-eusebius-of-vercelli-&-roch-&-sebastian_ricci.jpg', 'Saint Eusebius of Vercelli with Saints Roch and Sebastian', 'painting', 'Saint Eusebius of Vercelli with Saints Roch and Sebastian Painting', 'Sebastiano Ricci', '1724-1725', 'University of Turin', NULL, 'Public Domain', NULL),
+
+-- Saint Peter Julian Eymard
+('/saints/saint-peter-julian-eymard.jpg', 'Saint Peter Julian Eymard', 'painting', 'Saint Peter Julian Eymard Painting', NULL, NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL),
+('/saints/saint-peter-julian-eymard_2.jpg', 'Saint Peter Julian Eymard', 'photograph', 'Saint Peter Julian Eymard Photograph', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint John Vianney
+('/saints/saint-john-vianney_briggs.jpg', 'Saint John Vianney', 'painting', 'Saint John Vianney Painting', 'Gwyneth Thompson Briggs', '2022', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-vianney_desvallieres.png', 'Saint John Vianney', 'painting', 'Saint John Vianney Painting', 'George Desvallières', '1920', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-vianney.jpg', 'Saint John Vianney', 'illustration', 'Saint John Vianney Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-vianney_2.jpg', 'Saint John Vianney', 'painting', 'Saint John Vianney Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-vianney_borel.jpg', 'Saint John Vianney', 'fresco', 'Saint John Vianney Fresco', 'Paul Borel', '1907', 'Basilique d''Ars', NULL, 'Public Domain', NULL),
+
+-- Saint Sixtus II and Companions
+('/saints/saint-sixtus-ii_botticelli.jpg', 'Saint Sixtus II', 'fresco', 'Saint Sixtus II Fresco', 'Sandro Botticelli', '1481-1482', 'Sistine Chapel', NULL, 'Public Domain', NULL),
+('/saints/saint-sixtus-ii.jpg', 'Saint Sixtus II', 'mosaic', 'Saint Sixtus II Mosaic', NULL, '19th Century', 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
+
+-- Saint Cajetan
+('/saints/saint-cajetan_tiepolo.jpg', 'Saint Cajetan', 'painting', 'Saint Cajetan Painting', 'Giambattista Tiepolo', '1710-1736', 'Museu Nacional de Belas Artes', NULL, 'Public Domain', NULL),
+('/saints/saint-cajetan_ricci.jpg', 'Saint Cajetan Comforting a Dying Man', 'painting', 'Saint Cajetan Comforting a Dying Man Painting', 'Sebastiano Ricci', '1704', 'Pinacoteca di Brera', NULL, 'Public Domain', NULL),
+('/saints/saint-cajetan_solimena.jpg', 'Saint Cajetan in Glory', 'painting', 'Saint Cajetan in Glory Painting', 'Francesco Solimena', '1725', 'San Gaetano (Vicenza)', NULL, 'Public Domain', NULL),
+
+-- Saint Dominic
+('/saints/saint-dominic_coello.jpg', 'Saint Dominic', 'painting', 'Saint Dominic Painting', 'Claudio Coello', '1685', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-dominic_cavallino.jpg', 'The Vision of Saint Dominic', 'painting', 'The Vision of Saint Dominic Painting', 'Bernardo Cavallino', '1640-1645', 'National Gallery of Canada', NULL, 'Public Domain', NULL),
+('/saints/saint-dominic_campeche.jpg', 'Saint Dominic', 'painting', 'Saint Dominic Painting', 'José Campeche', '1790', 'Art Gallery of Ontario', NULL, 'Public Domain', NULL),
+
+-- Saint Teresa Benedicta of the Cross
+('/saints/saint-teresa-benedicta-of-the-cross_ferreira_no-watermark.jpg', 'Saint Teresa Benedicta of the Cross', 'painting', 'Saint Teresa Benedicta of the Cross Painting', 'Ruben Ferreira', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-benedicta-of-the-cross_passport.jpg', 'Saint Teresa Benedicta of the Cross', 'photograph', 'Saint Teresa Benedicta of the Cross Photograph', NULL, '1938-1939', 'Passport', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-benedicta-of-the-cross.jpg', 'Saint Teresa Benedicta of the Cross', 'painting', 'Saint Teresa Benedicta of the Cross Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Lawrence
+('/saints/saint-lawrence_briggs.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Girolamo da Santacroce', '1520-1530', 'Courtauld Gallery', NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence', 'painting', 'The Martyrdom of Saint Lawrence Painting', 'Jean Baptiste de Champaigne', '1660', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL);
+
+-- Saint Clare
+('/saints/saint-clare_martini.jpg', 'Saint Clare', 'fresco', 'Saint Clare Fresco', 'Simone Martini', '1322-1326', 'Lower Basilica of San Francesco', NULL, 'Public Domain', NULL),
+('/saints/saint-clare_moroni.jpg', 'Saint Clare', 'painting', 'Saint Clare Painting', 'Giovanni Battista Moroni', '1548', 'Tridentine Diocesan Museum', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
+('/saints/saint-clare_arco.jpg', 'Saint Clare', 'painting', 'Saint Clare Painting', 'Alonso del Arco', '17th Century', 'The Bowes Museum', NULL, 'Public Domain', NULL),
+
+-- Saint Jane Frances de Chantal
+('/saints/saint-jane-frances-de-chantal.webp', 'Saint Jane Frances de Chantal', 'painting', 'Saint Jane Frances de Chantal Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-jane-frances-de-chantal_2.jpg', 'Saint Jane Frances de Chantal', 'painting', 'Saint Jane Frances de Chantal Painting', NULL, '19th Century', 'Monastery of the Visitation of Holy Mary in Toledo (Ohio)', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-de-sales-&-jane-frances-de-chantal.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal', 'painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', NULL, NULL, 'Monastery of the Visitation (Paris)', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-de-sales-&-jane-frances-de-chantal_bayeu.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal', 'painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Francisco Bayeu', '18th Century', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-de-sales-&-jane-frances-de-chantal_halle.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal', 'painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Noël Hallé', '18th Century', 'Saint-Louis-en-l''Île Church', NULL, 'Public Domain', NULL),
+
+-- Saint Pontian
+('/saints/saint-pontian_aretino.jpg', 'Saint Pontian', 'painting', 'Saint Pontian Painting', 'Aretino', '1530-1535', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-pontian_montor.jpg', 'Saint Pontian', 'illustration', 'Saint Pontian Illustration', 'Alexis-François Artaud de Montor', '1842', 'The Lives and Times of the Popes', NULL, 'Public Domain', NULL),
+('/saints/saint-pontian.jpg', 'Saint Pontian', 'mosaic', 'Saint Pontian Mosaic', NULL, '19th Century', 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
+('/saints/saint-pontian_echave_martyr.jpg', 'The Martyrdom of Saint Pontian', 'painting', 'The Martyrdom of Saint Pontian Painting', 'Baltasar de Echave Orio', '1612', 'Museo Nacional de Arte (Mexico)', NULL, 'Public Domain', NULL),
+
+-- Saint Hippolytus of Rome
+('/saints/saint-hippolytus-of-rome.jpg', 'Saint Hippolytus of Rome', 'icon', 'Saint Hippolytus of Rome Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-hippolytus-of-rome_icon.jpg', 'Saint Hippolytus of Rome', 'icon', 'Saint Hippolytus of Rome Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-hippolytus-of-rome_julien_martyr.jpg', 'The Martyrdom of Saint Hippolytus of Rome', 'painting', 'The Martyrdom of Saint Hippolytus of Rome Painting', 'Simon Julien', '1762', 'Lyon Cathedral', NULL, 'Public Domain', NULL),
+
+-- Saint Maximus the Confessor
+('/saints/saint-maximus-the-confessor.jpg', 'Saint Maximus the Confessor', 'fresco', 'Saint Maximus the Confessor Fresco', NULL, '14th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-maximus-the-confessor_icon.jpg', 'Saint Maximus the Confessor', 'icon', 'Saint Maximus the Confessor Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-maximus-the-confessor_icon_2.jpg', 'Saint Maximus the Confessor', 'icon', 'Saint Maximus the Confessor Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-maximus-the-confessor_2.png', 'Saint Maximus the Confessor', 'fresco', 'Saint Maximus the Confessor Fresco', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Stephen of Hungary
+('/saints/saint-stephen-of-hungary.jpg', 'Saint Stephen of Hungary', 'painting', 'Saint Stephen of Hungary Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-stephen-of-hungary_2.jpg', 'Saint Stephen of Hungary', 'painting', 'Saint Stephen of Hungary Painting', NULL, '17th Century', 'Hungarian National Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-stephen-of-hungary_verhaghen.jpg', 'Saint Stephen of Hungary Receiving the Legate', 'painting', 'Saint Stephen of Hungary Receiving the Legate Painting', 'Pieter-Jozef Verhaghen', '1770', 'Museum of Fine Arts (Budapest)', NULL, 'Public Domain', NULL),
+('/saints/saint-stephen-of-hungary_3.jpg', 'Saint Stephen of Hungary', 'painting', 'Saint Stephen of Hungary Painting', NULL, '18th Century', 'Museum of Fine Arts (Budapest)', NULL, 'Public Domain', NULL),
+
+-- Saint John Eudes
+('/saints/saint-john-eudes.jpg', 'Saint John Eudes', 'painting', 'Saint John Eudes Painting', NULL, '1673', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-eudes_2.jpg', 'Saint John Eudes', 'painting', 'Saint John Eudes Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Bernard
+('/saints/saint-bernard_latil.jpg', 'Saint Bernard', 'painting', 'Saint Bernard Painting', 'François Vincent Latil', '19th Century', 'Saint-Étienne-du-Mont (Paris)', NULL, 'Public Domain', NULL),
+('/saints/saint-bernard_greco.jpg', 'Saint Bernard', 'painting', 'Saint Bernard Painting', 'El Greco', '1577-1579', 'Hermitage Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-bernard_goya.jpg', 'Saint Bernard of Clairvaux Curing a Cripple', 'painting', 'Saint Bernard of Clairvaux Curing a Cripple Painting', 'Francisco Goya', '1787', 'Real Monasterio de San Joaquín y Santa Ana', NULL, 'Public Domain', NULL),
+('/saints/saint-bernard_ribalta.jpg', 'Christ Embracing Saint Bernard', 'painting', 'Christ Embracing Saint Bernard Painting', 'Francisco Ribalta', '1625-1627', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-bernard_cano.jpg', 'The Vision of Saint Bernard', 'painting', 'The Vision of Saint Bernard Painting', 'Alonso Cano', '1650', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-bernard_signol.jpg', 'Saint Bernard preaching the second Crusade at Vezelay', 'painting', 'Saint Bernard preaching the second Crusade at Vezelay Painting', 'Émile Signol', '1840', 'Château de Versailles', NULL, 'Public Domain', NULL),
+('/saints/saint-bernard_vivar.jpg', 'Saint Bernard', 'painting', 'Saint Bernard Painting', 'Juan Correa de Vivar', '1540-1545', 'Museo del Prado', NULL, 'Public Domain', NULL),
