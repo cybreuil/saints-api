@@ -1336,13 +1336,19 @@ JOIN (VALUES
 ('holy-innocents', '/saints/holy-innocents_rubens_2.jpg', 'The Massacre of the Innocents Painting', 'The Massacre of the Innocents, by Peter Paul Rubens, from Art Gallery of Ontario', 'Peter Paul Rubens', '1609-1611', NULL, 'Public Domain', NULL, 4, FALSE),
 ('holy-innocents', '/saints/holy-innocents_briggs.jpg', 'The Massacre of the Innocents Painting', 'The Massacre of the Innocents, by Gwyneth Thompson Briggs', 'Gwyneth Thompson Briggs', '2019', NULL, 'Public Domain', NULL, 5, FALSE),
 
+-- Saint Thomas Becket
+('saint-thomas-becket', '/saints/saint-thomas-becket.jpg', 'Saint Thomas Becket Painting', 'Saint Thomas Becket, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-thomas-becket', '/saints/saint-thomas-becket_francke.jpg', 'The Martyrdom of Saint Thomas Becket Painting', 'The Martyrdom of Saint Thomas Becket, by Master Francke, from Hamburger Kunsthalle', 'Master Francke', '1426', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-thomas-becket', '/saints/saint-thomas-becket_2.jpg', 'The Martyrdom of Saint Thomas Becket Painting', 'The Martyrdom of Saint Thomas Becket, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-thomas-becket', '/saints/saint-thomas-becket_stained-glass.jpg', 'Saint Thomas Becket Stained Glass', 'Saint Thomas Becket, by an unknown artist, from Church of Saint Peter (Great Berkhamsted)', NULL, '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 
+-- Saint Sylvester I
+('saint-sylvester-i', '/saints/saint-sylvester-i.jpg', 'Saint Sylvester I Painting', 'Saint Sylvester I, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-sylvester-i', '/saints/saint-sylvester-i_2.jpg', 'Saint Sylvester I Painting', 'Saint Sylvester I, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-sylvester-i', '/saints/saint-sylvester-i_icon.jpg', 'Saint Sylvester I Icon', 'Saint Sylvester I, by an unknown artist', NULL, NULL, NULL, 'Public Domain', NULL, 3, FALSE),
 
+--- DONE
 
-
-
-
----
 )
 AS x (slug, image_url, alt_text, caption, credit, license, author, date, source_url, sort_order, is_primary)
 
