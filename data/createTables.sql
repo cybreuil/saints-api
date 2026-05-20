@@ -259,6 +259,7 @@ CREATE TABLE saint_images (
 
     PRIMARY KEY (saint_id, image_id)
 );
+
 -- =========================================================
 -- 4) Attributs (normalisés + traduits)
 -- =========================================================
