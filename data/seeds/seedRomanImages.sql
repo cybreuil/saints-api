@@ -62,7 +62,7 @@ INSERT INTO images (
 -- Saint Joseph
 ('/saints/saint-joseph_guido-reni.jpg', 'Saint Joseph and the Christ Child', 'painting', 'Saint Joseph and the Christ Child Painting', 'Guido Reni', '1640', 'Museum of Fine Arts of Houston', NULL, 'Public Domain', NULL),
 ('/saints/saint-joseph_carracci.jpg', 'The Holy Family', 'painting', 'The Holy Family Painting', 'Annibale Carracci', '1596-1597', 'Borghese Gallery', NULL, 'Public Domain', NULL),
-('/saints/saint-joseph_murillo.jpg', 'Saint Joseph and the Christ Child', NULL, 'Saint Joseph and the Christ Child', 'Bartolomé Esteban Murillo', '1670-1675', 'The John and Mable Ringling Museum of Art', NULL, 'Public Domain', NULL),
+('/saints/saint-joseph_murillo.jpg', 'Saint Joseph and the Christ Child', 'painting', 'Saint Joseph and the Christ Child', 'Bartolomé Esteban Murillo', '1670-1675', 'The John and Mable Ringling Museum of Art', NULL, 'Public Domain', NULL),
 ('/saints/saint-joseph_murillo_holy-family.jpg', 'The Holy Family', 'painting', 'The Holy Family Painting', 'Bartolomé Esteban Murillo', '1640-1649', 'National Gallery of Ireland', NULL, 'Public Domain', NULL),
 ('/saints/saint-joseph_la-tour.jpg', 'Joseph the Carpenter', 'painting', 'Joseph the Carpenter Painting', 'Georges de La Tour', '1640-1645', 'Musée du Louvre', NULL, 'Public Domain', NULL),
 ('/saints/saint-joseph_champaigne.jpg', 'The Dream of Saint Joseph', 'painting', 'The Dream of Saint Joseph Painting', 'Philippe de Champaigne', '1642-1643', 'National Gallery (London)', NULL, 'Public Domain', NULL),
@@ -181,10 +181,10 @@ INSERT INTO images (
 ('/saints/saint-blaise_tiepolo.jpg', 'Saint Blaise', 'painting', 'Saint Blaise Painting', 'Giambattista Tiepolo', '1734', 'Ca'' Rezzonico', NULL, 'Public Domain', NULL),
 
 -- Saint Ansgar
-('/saints/saint-ansgar.jpg', 'Saint Ansgar', 'painting', 'Saint Ansgar Painting', NULL, '1457', 'Church Trinitatis (Hamburg)', NULL, 'Public Domain', NULL),
+('/saints/saint-ansgar.jpg', 'Saint Ansgar', 'painting', 'Saint Ansgar Painting', 'Hans Bornemann', '1457', 'Church Trinitatis (Hamburg)', NULL, 'Public Domain', NULL),
 
 -- Saint Agatha
-('/saints/saint-agatha.jpg', 'The Martyrdom of Saint Agatha', 'painting', 'The Martyrdom of Saint Agatha Painting', NULL, '1619', 'Museo Nazionale di Capodimonte', NULL, 'Public Domain', NULL),
+('/saints/saint-agatha.jpg', 'The Martyrdom of Saint Agatha', 'painting', 'The Martyrdom of Saint Agatha Painting', 'Massimo Stanzione', '1619', 'Museo Nazionale di Capodimonte', NULL, 'Public Domain', NULL),
 ('/saints/saint-agatha_tiepolo.jpg', 'The Martyrdom of Saint Agatha', 'painting', 'The Martyrdom of Saint Agatha Painting', 'Giambattista Tiepolo', '1756', 'Gemäldegalerie', NULL, 'Public Domain', NULL),
 
 -- Saint Paul Miki
@@ -277,7 +277,7 @@ INSERT INTO images (
 
 -- Saint Turibius of Mogrovejo
 ('/saints/saint-turibius-of-mogrovejo.jpg', 'Saint Turibius of Mogrovejo', 'painting', 'Saint Turibius of Mogrovejo Painting', NULL, '17th Century', 'Museo Nacional de Bellas Artes (Buenos Aires)', NULL, 'Public Domain', NULL),
-('/saints/saint-turibius-of-mogrovejo_conca.jpg', 'The Miracle of Saint Turibius of Mogrovejo', 'painting', 'The Miracle of Saint Turibius of Mogrovejo Painting', 'Giovanni Conca', '1723', 'Musei Vaticani', NULL, 'Public Domain', NULL),
+('/saints/saint-turibius-of-mogrovejo_conca.jpg', 'The Miracle of Saint Turibius of Mogrovejo', 'painting', 'The Miracle of Saint Turibius of Mogrovejo Painting', 'Sebastiano Conca', '1723', 'Musei Vaticani', NULL, 'Public Domain', NULL),
 
 -- =========================
 -- April saints
@@ -353,7 +353,6 @@ INSERT INTO images (
 ('/saints/saint-louis-grignion-de-montfort_3.jpg', 'Saint Louis Grignion de Montfort', 'illustration', 'Saint Louis Grignion de Montfort Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Catherine of Siena
--- NOTE: fixed broken slugs (saint-catherine-of-siena_dolci.jpg etc.) to saint-catherine-of-siena
 ('/saints/saint-catherine-of-siena_dolci.jpg', 'Saint Catherine of Siena', 'painting', 'Saint Catherine of Siena Painting', 'Carlo Dolci', '1665', 'Dulwich Picture Gallery', NULL, 'Public Domain', NULL),
 ('/saints/saint-catherine-of-siena_tiepolo.jpg', 'Saint Catherine of Siena', 'painting', 'Saint Catherine of Siena Painting', 'Giambattista Tiepolo', '1746', 'Gemäldegalerie (Berlin)', NULL, 'Public Domain', NULL),
 ('/saints/saint-catherine-of-siena.jpg', 'Saint Catherine of Siena', 'painting', 'Saint Catherine of Siena Painting', NULL, '19th Century', 'Santa Maria del Rosario in Prati', NULL, 'Public Domain', NULL),
@@ -466,7 +465,7 @@ INSERT INTO images (
 -- =========================
 
 -- Saint Justin Martyr
-('/saints/saint-justin-martyr_thevet.jpg', 'Saint Justin Martyr', 'illustration', 'Saint Justin Martyr Illustration', 'André Thévet', '1584', 'Book : "Les Vrais Pourtraits et Vies des Hommes Illustres"', NULL, 'Public Domain', NULL),
+('/saints/saint-justin-martyr_thevet.jpg', 'Saint Justin Martyr', 'illustration', 'Saint Justin Martyr Illustration', 'André Thevet', '1584', 'Book : "Les Vrais Pourtraits et Vies des Hommes Illustres"', NULL, 'Public Domain', NULL),
 ('/saints/saint-justin-martyr_icon.jpg', 'Saint Justin Martyr', 'icon', 'Saint Justin Martyr Icon', 'Theophanes the Cretan', '1545-1546', 'Stavronikita Monastery', NULL, 'Public Domain', NULL),
 
 -- Saint Marcellinus
@@ -514,7 +513,7 @@ INSERT INTO images (
 ('/saints/saint-romuald_guercino.jpg', 'Saint Romuald', 'painting', 'Saint Romuald Painting', 'Il Guercino', '1640-1641', 'Ravenna Art Museum', NULL, 'Public Domain', NULL),
 ('/saints/saint-romuald_loth.jpg', 'Saint Romuald', 'painting', 'Saint Romuald Painting', 'Johann Carl Loth', '17th Century', 'Gallerie dell''Accademia', NULL, 'Public Domain', NULL),
 ('/saints/saint-romuald_angelico.jpg', 'Saint Romuald', 'fresco', 'Saint Romuald Fresco', 'Fra Angelico', '1441', 'Museo Nazionale di San Marco', NULL, 'Public Domain', NULL),
-('/saints/saint-romuald_mussini.jpg', 'Saint Romuald', 'painting', 'Saint Romuald Painting', 'Bernardino Mussini', '1914-1915', 'Monastery of Camaldoli', NULL, 'Public Domain', NULL),
+('/saints/saint-romuald_mussini.jpg', 'Saint Romuald', 'painting', 'Saint Romuald Painting', 'Augusto Mussini', '1914-1915', 'Monastery of Camaldoli', NULL, 'Public Domain', NULL),
 
 -- Saint Aloysius Gonzaga
 ('/saints/saint-aloysius-gonzaga_mazzanti.jpg', 'Saint Aloysius Gonzaga adoring the Crucifix', 'painting', 'Saint Aloysius Gonzaga adoring the Crucifix Painting', 'Ludovico Mazzanti', '1740-1745', 'Fondation Bemberg', NULL, 'Public Domain', NULL),
@@ -773,6 +772,10 @@ INSERT INTO images (
 ('/saints/saint-lawrence_briggs.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Girolamo da Santacroce', '1520-1530', 'Courtauld Gallery', NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence', 'painting', 'The Martyrdom of Saint Lawrence Painting', 'Jean Baptiste de Champaigne', '1660', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence_limosin.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Jean Limosin', '17th Century', 'Museum of Fine Arts of Lyon', NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence_calli.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Giuseppe Calì', '1889', 'Saint Lawrence Church (Gozo)', NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence_titian_martyr.jpg', 'The Martyrdom of Saint Lawrence', 'painting', 'The Martyrdom of Saint Lawrence Painting', 'Titian', '1564-1567', 'El Escorial', NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence_strozzi.jpg', 'Saint Lawrence Distributing the Treasures of the Church', 'painting', 'Saint Lawrence Distributing the Treasures of the Church Painting', 'Bernardo Strozzi', '1625', 'North Carolina Museum of Art', NULL, 'Public Domain', NULL),
 
 -- Saint Clare
 ('/saints/saint-clare_martini.jpg', 'Saint Clare', 'fresco', 'Saint Clare Fresco', 'Simone Martini', '1322-1326', 'Lower Basilica of San Francesco', NULL, 'Public Domain', NULL),
@@ -847,7 +850,7 @@ INSERT INTO images (
 ('/saints/saint-bartholomew-apostle_zurbaran.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Francisco de Zurbarán', '1633', 'National Museum of Ancient Art (Lisbon)', NULL, 'Public Domain', NULL),
 ('/saints/saint-bartholomew-apostle_rembrandt.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Rembrandt', '1657', 'Timken Museum of Art', NULL, 'Public Domain', NULL),
 ('/saints/saint-bartholomew-apostle_rembrandt_2.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Rembrandt', '1661', 'Getty Center', NULL, 'Public Domain', NULL),
-('/saints/saint-bartholomew-apostle-cavallino.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Bernardo Cavallino', '17th Century', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle_cavallino.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Bernardo Cavallino', '17th Century', 'National Gallery (London)', NULL, 'Public Domain', NULL),
 ('/saints/saint-bartholomew-apostle_ribera_martyr.jpg', 'The Martyrdom of Saint Bartholomew', 'painting', 'The Martyrdom of Saint Bartholomew Painting', 'Jusepe de Ribera', '1616-1617', 'Colegiata de Nuestra Señora de la Asunción', NULL, 'Public Domain', NULL),
 ('/saints/saint-bartholomew-apostle_tiepolo_martyr.jpg', 'The Martyrdom of Saint Bartholomew', 'painting', 'The Martyrdom of Saint Bartholomew Painting', 'Giambattista Tiepolo', '1722', 'San Stae', NULL, 'Public Domain', NULL),
 
@@ -859,10 +862,12 @@ INSERT INTO images (
 ('/saints/saint-louis_loo.jpg', 'Coronation of Saint Louis', 'painting', 'Coronation of Saint Louis Painting', 'Charles-Amédée-Philippe van Loo', '1773', 'Musée du Louvre', NULL, 'Public Domain', NULL),
 ('/saints/saint-louis_decreuse.jpg', 'Saint Louis', 'painting', 'Saint Louis Painting', 'Auguste de Creuse', '1837', 'Château de Versailles', NULL, 'Public Domain', NULL),
 ('/saints/saint-louis_vien.jpg', 'Saint Louis entrusted the Regency of the Kingdom to his mother Queen Blanche of Castile', 'painting', 'Saint Louis entrusted the Regency of the Kingdom to his mother Queen Blanche of Castile Painting', 'Joseph-Marie Vien', '1773', 'Musée du Louvre', NULL, 'Public Domain', NULL),
+('/saints/saint-louis_thevenin.jpg', 'Saint Louis', 'painting', 'Saint Louis Painting', 'Charles Thévenin', '19th Century', 'Château de Versailles', NULL, 'Public Domain', NULL),
+--Care copyright versailles ...
 
 -- Saint Joseph Calasanz
 ('/saints/saint-joseph-calasanz_casanova.jpg', 'Saint Joseph Calasanz', 'painting', 'Saint Joseph Calasanz Painting', 'Francisco Jover y Casanova', '1879', 'Museo del Prado', NULL, 'Public Domain', NULL),
-('/saints/saint-joseph-calasanz_corvi.jpg', 'Saint Joseph Calasanz Ressucitating a Child', 'painting', 'Saint Joseph Calasanz Ressucitating a Child Painting', 'Domenico Corvi', '1767', 'Wadsworth Atheneum', NULL, 'Public Domain', NULL),
+('/saints/saint-joseph-calasanz_corvi.jpg', 'Saint Joseph Calasanz Resuscitating a Child', 'painting', 'Saint Joseph Calasanz Resuscitating a Child Painting', 'Domenico Corvi', '1767', 'Wadsworth Atheneum', NULL, 'Public Domain', NULL),
 ('/saints/saint-joseph-calasanz_goya.jpg', 'Last Communion of Saint Joseph Calasanz', 'painting', 'Last Communion of Saint Joseph Calasanz Painting', 'Francisco Goya', '1819', NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Monica
@@ -1003,6 +1008,7 @@ INSERT INTO images (
 ('/saints/saint-therese-of-the-child-jesus_celine.jpg', 'Saint Thérèse of the Child Jesus', 'painting', 'Saint Thérèse of the Child Jesus Painting', 'Céline Martin', '1925', 'Carmel of Lisieux', NULL, 'Public Domain', NULL),
 ('/saints/saint-therese-of-the-child-jesus_celine_photo.jpg', 'Saint Thérèse of the Child Jesus', 'photograph', 'Saint Thérèse of the Child Jesus Photograph', 'Céline Martin', '1896', 'Carmel of Lisieux', NULL, 'Public Domain', NULL),
 ('/saints/saint-therese-of-the-child-jesus_celine_photo_2.jpg', 'Saint Thérèse of the Child Jesus with Rosary', 'photograph', 'Saint Thérèse of the Child Jesus with Rosary Photograph', 'Céline Martin', '1896', 'Carmel of Lisieux', NULL, 'Public Domain', NULL),
+('/saints/saint-therese-of-the-child-jesus_celine_photo_3.jpg', 'Saint Thérèse of the Child Jesus dressed as Joan of Arc', 'photograph', 'Saint Thérèse of the Child Jesus dressed as Joan of Arc Photograph', 'Céline Martin', '1895', 'Carmel of Lisieux', NULL, 'Public Domain', NULL),
 ('/saints/saint-therese-of-the-child-jesus.jpg', 'Saint Thérèse of the Child Jesus', 'painting', 'Saint Thérèse of the Child Jesus Painting', NULL, NULL, 'Santa Teresa del Bambin Gesù in Panfilo (Rome)', NULL, 'Public Domain', NULL),
 
 -- Saint Francis of Assisi

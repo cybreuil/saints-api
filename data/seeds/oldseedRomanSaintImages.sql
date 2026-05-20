@@ -357,10 +357,10 @@ JOIN (VALUES
 
 
 -- Saint Philip, Apostle
-('saint-phillip-apostle', '/saints/saint-phillip-apostle_rubens.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-phillip-apostle', '/saints/saint-phillip-apostle_la-tour.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Georges de La Tour, from Chrysler Museum of Art', 'Georges de La Tour', '1625', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-phillip-apostle', '/saints/saint-phillip-apostle_ribera.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Jusepe de Ribera, from Fondazione Roberto Longhi', 'Jusepe de Ribera', '1610', NULL, 'Public Domain', NULL, 3, FALSE),
-('saint-phillip-apostle', '/saints/saint-phillip-apostle_dyck.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Anthony van Dyck, from Kunsthistorisches Museum', 'Anthony van Dyck', '1619-1621', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-philip-apostle', '/saints/saint-philip-apostle_rubens.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1611', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-philip-apostle', '/saints/saint-philip-apostle_la-tour.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Georges de La Tour, from Chrysler Museum of Art', 'Georges de La Tour', '1625', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-philip-apostle', '/saints/saint-philip-apostle_ribera.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Jusepe de Ribera, from Fondazione Roberto Longhi', 'Jusepe de Ribera', '1610', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-philip-apostle', '/saints/saint-philip-apostle_dyck.jpg', 'Saint Philip Apostle Painting', 'Saint Philip the Apostle, by Anthony van Dyck, from Kunsthistorisches Museum', 'Anthony van Dyck', '1619-1621', NULL, 'Public Domain', NULL, 4, FALSE),
 
 -- Saint James the Less, Apostle
 ('saint-james-the-less-apostle', '/saints/saint-james-the-less-apostle_rubens.jpg', 'Saint James the Less Apostle Painting', 'Saint James the Less the Apostle, by Peter Paul Rubens, from Museo del Prado', 'Peter Paul Rubens', '1610-1611', NULL, 'Public Domain', NULL, 1, TRUE),
@@ -451,7 +451,7 @@ JOIN (VALUES
 -- =========================
 
 -- Saint Justin Martyr
-('saint-justin-martyr', '/saints/saint-justin-martyr_thevet.jpg', 'Saint Justin Martyr Illustration', 'Saint Justin Martyr, by André Thevet, from Book : "Les Vrais Pourtraits et Vies des Hommes Illustres"', 'André Thévet', '1584', NULL, 'Public Domain', NULL, 1, TRUE),
+('saint-justin-martyr', '/saints/saint-justin-martyr_thevet.jpg', 'Saint Justin Martyr Illustration', 'Saint Justin Martyr, by André Thevet, from Book : "Les Vrais Pourtraits et Vies des Hommes Illustres"', 'André Thevet', '1584', NULL, 'Public Domain', NULL, 1, TRUE),
 ('saint-justin-martyr', '/saints/saint-justin-martyr_icon.jpg', 'Saint Justin Martyr Icon', 'Saint Justin Martyr, by Theophanes the Cretan, from Stavronikita Monastery', 'Theophanes the Cretan', '1545-1546', NULL, 'Public Domain', NULL, 2, FALSE),
 
 -- Saint Marcellinus
@@ -763,7 +763,7 @@ JOIN (VALUES
 ('saint-lawrence', '/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Jean Baptiste de Champaigne, from National Gallery of Art (Washington, D.C.)', 'Jean Baptiste de Champaigne', '1660', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_limosin.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Jean Limosin, from Museum of Fine Arts of Lyon', 'Jean Limosin', '17th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_calli.jpg', 'Saint Lawrence Painting', 'Saint Lawrence, by Giuseppe Calì, from Saint Lawrence Church (Gozo)', 'Giuseppe Calì', '1889', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-lawrence', '/saints/saint-lawrence_titan_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Titian, from El Escorial', 'Titian', '1564-1567', NULL, 'Public Domain', NULL, 6, FALSE),
+('saint-lawrence', '/saints/saint-lawrence_titian_martyr.jpg', 'The Martyrdom of Saint Lawrence Painting', 'The Martyrdom of Saint Lawrence, by Titian, from El Escorial', 'Titian', '1564-1567', NULL, 'Public Domain', NULL, 6, FALSE),
 ('saint-lawrence', '/saints/saint-lawrence_strozzi.jpg', 'Saint Lawrence Distributing the Treasures of the Church Painting', 'Saint Lawrence Distributing the Treasures of the Church, by Bernardo Strozzi, from North Carolina Museum of Art', 'Bernardo Strozzi', '1625', NULL, 'Public Domain', NULL, 7, FALSE),
 
 -- Saint Clare
@@ -839,7 +839,7 @@ JOIN (VALUES
 ('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_zurbaran.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_rembrandt.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Rembrandt, from Timken Museum of Art', 'Rembrandt', '1657', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_rembrandt_2.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Rembrandt, from Getty Center', 'Rembrandt', '1661', NULL, 'Public Domain', NULL, 6, FALSE),
-('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle-cavallino.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Bernardo Cavallino, from National Gallery', 'Bernardo Cavallino', '17th Century', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_cavallino.jpg', 'Saint Bartholomew Apostle Painting', 'Saint Bartholomew the Apostle, by Bernardo Cavallino, from National Gallery', 'Bernardo Cavallino', '17th Century', NULL, 'Public Domain', NULL, 7, FALSE),
 ('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_ribera_martyr.jpg', 'The Martyrdom of Saint Bartholomew Painting', 'The Martyrdom of Saint Bartholomew, by Jusepe de Ribera, from Colegiata de Nuestra Señora de la Asunción', 'Jusepe de Ribera', '1616-1617', NULL, 'Public Domain', NULL, 8, FALSE),
 ('saint-bartholomew-apostle', '/saints/saint-bartholomew-apostle_tiepolo_martyr.jpg', 'The Martyrdom of Saint Bartholomew Painting', 'The Martyrdom of Saint Bartholomew, by Giambattista Tiepolo, from San Stae', 'Giambattista Tiepolo', '1722', NULL, 'Public Domain', NULL, 9, FALSE),
 
@@ -848,7 +848,7 @@ JOIN (VALUES
 ('saint-louis', '/saints/saint-louis_lagrenee.jpg', 'Meeting between Innocent IV and Saint Louis Painting', 'Meeting between Innocent IV and Saint Louis, by Louis-Jean-François Lagrenée, from Musée du Louvre', 'Louis-Jean-François Lagrenée', '1773', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-louis', '/saints/saint-louis_cabanel.jpg', 'The Glorification of Saint Louis Painting', 'The Glorification of Saint Louis, by Alexandre Cabanel, from Musée Fabre', 'Alexandre Cabanel', '1853-1855', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-louis', '/saints/saint-louis_greco.jpg', 'Saint Louis Painting', 'Saint Louis, by El Greco, from Musée du Louvre', 'El Greco', '1592', NULL, 'Public Domain', NULL, 4, FALSE),
--- ('saint-louis', '/saints/saint-louis_thevenin.jpg', 'Saint Louis Painting', 'Saint Louis, by Charles Thévenin, from Château de Versailles', 'Charles Thévenin', '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
+('saint-louis', '/saints/saint-louis_thevenin.jpg', 'Saint Louis Painting', 'Saint Louis, by Charles Thévenin, from Château de Versailles', 'Charles Thévenin', '19th Century', NULL, 'Public Domain', NULL, 4, FALSE),
 -- thevenin copyright chateau versailles
 ('saint-louis', '/saints/saint-louis_loo.jpg', 'Coronation of Saint Louis Painting', 'Coronation of Saint Louis, by Charles-Amédée-Philippe van Loo, from Musée du Louvre', 'Charles-Amédée-Philippe van Loo', '1773', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-louis', '/saints/saint-louis_decreuse.jpg', 'Saint Louis Painting', 'Saint Louis, by Auguste de Creuse, from Château de Versailles', 'Auguste de Creuse', '1837', NULL, 'Public Domain', NULL, 6, FALSE),
@@ -861,7 +861,7 @@ JOIN (VALUES
 
 -- Saint Monica
 ('saint-monica', '/saints/saint-monica_cabanel.jpg', 'Saint Monica Painting', 'Saint Monica, by Alexandre Cabanel, from Milwaukee Art Museum', 'Alexandre Cabanel', '1845', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-monica', '/saints/saint-augustine-&-monica_scheffer.jpg', 'Saint Augustine and Saint Monica Painting', 'Saint Augustine and Saint Monica, by Ary Scheffer, from National Gallery', 'Ary Scheffer', '1854', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-monica', '/saints/saint-augustine-of-hippo-&-monica_scheffer.jpg', 'Saint Augustine and Saint Monica Painting', 'Saint Augustine and Saint Monica, by Ary Scheffer, from National Gallery', 'Ary Scheffer', '1854', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-monica', '/saints/saint-monica_gozzoli.jpg', 'Saint Monica Fresco', 'Saint Monica, by Benozzo Gozzoli, from Church of Sant''Agostino (San Gimignano)', 'Benozzo Gozzoli', '1464-1465', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Augustine of Hippo
@@ -1002,7 +1002,7 @@ JOIN (VALUES
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine.jpg', 'Saint Thérèse of the Child Jesus Painting', 'Saint Thérèse of the Child Jesus, by Céline Martin, from Carmel of Lisieux', 'Céline Martin', '1925', NULL, 'Public Domain', NULL, 2, FALSE),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo.jpg', 'Saint Thérèse of the Child Jesus Photograph', 'Saint Thérèse of the Child Jesus, Photographed by Céline Martin, from Carmel of Lisieux', 'Céline Martin', '1896', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo_2.jpg', 'Saint Thérèse of the Child Jesus with Rosary Photograph', 'Saint Thérèse of the Child Jesus with Rosary, Photographed by Céline Martin, from Carmel of Lisieux', 'Céline Martin', '1896', NULL, 'Public Domain', NULL, 4, FALSE),
-('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo_2.jpg', 'Saint Thérèse of the Child Jesus dressed as Joan of Arc Photograph', 'Saint Thérèse of the Child Jesus dressed as Joan of Arc, Photographed by Céline Martin, from Carmel of Lisieux', 'Céline Martin', '1895', NULL, 'Public Domain', NULL, 5, FALSE),
+('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo_3.jpg', 'Saint Thérèse of the Child Jesus dressed as Joan of Arc Photograph', 'Saint Thérèse of the Child Jesus dressed as Joan of Arc, Photographed by Céline Martin, from Carmel of Lisieux', 'Céline Martin', '1895', NULL, 'Public Domain', NULL, 5, FALSE),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus.jpg', 'Saint Thérèse of the Child Jesus Painting', 'Saint Thérèse of the Child Jesus, by an unknown artist, from Santa Teresa del Bambin Gesù in Panfilo (Rome)', NULL, NULL, NULL, 'Public Domain', NULL, 6, FALSE),
 
 -- The painting of St. Therese of Avila in the church Chiesa di San Franceso d Assisi by A. Nicolas (1931). ???
@@ -1136,7 +1136,7 @@ JOIN (VALUES
 ('saint-jude-apostle', '/saints/saint-jude-apostle_ribera.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Jusepe de Ribera, from Museo del Prado', 'Jusepe de Ribera', '1630-1635', NULL, 'Public Domain', NULL, 3, FALSE),
 ('saint-jude-apostle', '/saints/saint-jude-apostle_la-tour.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Georges de La Tour, from Musée Toulouse-Lautrec', 'Georges de La Tour', '1620', NULL, 'Public Domain', NULL, 4, FALSE),
 ('saint-jude-apostle', '/saints/saint-jude-apostle_zurbaran.jpg', 'Saint Jude Apostle Painting', 'Saint Jude the Apostle, by Francisco de Zurbarán, from National Museum of Ancient Art (Lisbon)', 'Francisco de Zurbarán', '1633', NULL, 'Public Domain', NULL, 5, FALSE),
-('saint-jude-apostle', '/saints/saint-simon-apostle-&-jude-apostle_schmidt_martyr.jpg', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus Painting', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus, by Martin Johann Schmidt, from Spencer Museum of Art (USA)', 'Martin Johann Schmidt', '1796', NULL, 'Public Domain', NULL, 7, FALSE),
+('saint-jude-apostle', '/saints/saint-simon-apostle-&-jude-apostle_schmidt_martyr.jpg', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus Painting', 'The Martyrdom of Saint Simon Zelotes and Saint Judas Thaddeus, by Martin Johann Schmidt, from Spencer Museum of Art (USA)', 'Martin Johann Schmidt', '1796', NULL, 'Public Domain', NULL, 6, FALSE),
 
 -- REMOVE WATERMARK AND ADD SEDMAK FOR SAINT JUDE!
 
