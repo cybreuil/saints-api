@@ -66,7 +66,7 @@ INSERT INTO images (
 ('/saints/saint-joseph_murillo_holy-family.jpg', 'The Holy Family', 'painting', 'The Holy Family Painting', 'Bartolomé Esteban Murillo', '1640-1649', 'National Gallery of Ireland', NULL, 'Public Domain', NULL),
 ('/saints/saint-joseph_la-tour.jpg', 'Joseph the Carpenter', 'painting', 'Joseph the Carpenter Painting', 'Georges de La Tour', '1640-1645', 'Musée du Louvre', NULL, 'Public Domain', NULL),
 ('/saints/saint-joseph_champaigne.jpg', 'The Dream of Saint Joseph', 'painting', 'The Dream of Saint Joseph Painting', 'Philippe de Champaigne', '1642-1643', 'National Gallery (London)', NULL, 'Public Domain', NULL),
-('/saints/saint-joseph_briggs.jpg', 'The Lily and the Carpenter', 'painting', 'The Lily and the Carpenter Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-joseph_briggs.jpg', 'The Lily and the Carpenter', 'painting', 'The Lily and the Carpenter Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 
 -- Saint John the Baptist
 ('/saints/saint-john-the-baptist_caravaggio.jpg', 'Saint John the Baptist in the Wilderness', 'painting', 'Saint John the Baptist in the Wilderness Painting', 'Caravaggio', '1604-1605', 'Nelson-Atkins Museum of Art', NULL, 'Public Domain', NULL),
@@ -126,7 +126,7 @@ INSERT INTO images (
 -- Saint Francis de Sales
 ('/saints/saint-francis-de-sales.webp', 'Saint Francis de Sales', 'painting', 'Saint Francis de Sales Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-francis-de-sales_2.jpg', 'Saint Francis de Sales', 'painting', 'Saint Francis de Sales Painting', NULL, '17th Century', 'Château de Bussy-Rabutin', NULL, 'Public Domain', NULL),
-('/saints/saint-francis-de-sales_briggs.jpg', 'Saint Francis de Sales by Gwyneth Thompson Briggs', 'painting', 'Saint Francis de Sales Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-francis-de-sales_briggs.jpg', 'Saint Francis de Sales by Gwyneth Thompson Briggs', 'painting', 'Saint Francis de Sales Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-francis-de-sales_brenet.jpg', 'Saint Francis de Sales', 'painting', 'Saint Francis de Sales Painting', 'Nicolas Guy Brenet', '18th Century', 'Château de Blois', NULL, 'Public Domain', NULL),
 -- also linked to saint-jane-frances-de-chantal below
 ('/saints/saint-francis-de-sales-&-jane-frances-de-chantal_bayeu.jpg', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal', 'painting', 'Saint Francis de Sales gives the Rule of the Order of the Visitation to Saint Jane Frances de Chantal Painting', 'Francisco Bayeu', '18th Century', 'Museo del Prado', NULL, 'Public Domain', NULL),
@@ -150,7 +150,7 @@ INSERT INTO images (
 
 -- Saint Timothy of Ephesus
 ('/saints/saint-timothy-of-ephesus_icon.jpg', 'Saint Timothy of Ephesus', 'icon', 'Saint Timothy of Ephesus Icon', NULL, NULL, 'an Orthodox Parish (USA)', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
-('/saints/saint-timothy-of-ephesus_drost_timothy-with-grandmother-lois.jpg', 'Saint Timothy of Ephesus', 'painting', 'Saint Timothy of Ephesus with his Grandmother Lois Painting', 'Rembrandt', '1650', 'Hermitage Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-timothy-of-ephesus_drost_timothy-with-grandmother-lois.jpg', 'Saint Timothy of Ephesus', 'painting', 'Saint Timothy of Ephesus with his Grandmother Lois Painting', 'Willem Drost', '1650', 'Hermitage Museum', NULL, 'Public Domain', NULL),
 -- NOTE: data correction applied — original had creator=''1803'' (clearly a date), fixed to date_label=''1803'' and license=''Public Domain''
 ('/saints/saint-timothy-of-ephesus.jpg', 'Saint Timothy of Ephesus', 'painting', 'Saint Timothy of Ephesus Painting', NULL, '1803', 'Basilica of Santa Pudentiana (Rome)', NULL, 'Public Domain', NULL),
 
@@ -198,15 +198,15 @@ INSERT INTO images (
 ('/saints/saint-jerome-emiliani_2.jpg', 'Saint Jerome Emiliani', 'painting', 'Saint Jerome Emiliani Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Josephine Bakhita (need small watermark correction)
-('/saints/saint-josephine-bakhita_ferreira.jpg', 'Saint Josephine Bakhita', 'painting', 'Saint Josephine Bakhita Painting', NULL, '21th Century', NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-josephine-bakhita_warford_no-watermark.jpg', 'Saint Josephine Bakhita', 'painting', 'Saint Josephine Bakhita Painting', NULL, '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-josephine-bakhita_ferreira.jpg', 'Saint Josephine Bakhita', 'painting', 'Saint Josephine Bakhita Painting', NULL, '21st Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-josephine-bakhita_warford_no-watermark.jpg', 'Saint Josephine Bakhita', 'painting', 'Saint Josephine Bakhita Painting', NULL, '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-josephine-bakhita.jpg', 'Saint Josephine Bakhita Portrait', NULL, 'Saint Josephine Bakhita Portrait', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Scholastica
 ('/saints/saint-scholastica_bergl.jpg', 'Saint Scholastica', 'painting', 'Saint Scholastica Painting', 'Johann Baptist Wenzel Bergl', '1765', 'Basilica of Kleinmariazell', NULL, 'Public Domain', NULL),
 ('/saints/saint-scholastica.jpg', 'Saint Scholastica', 'painting', 'Saint Scholastica Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-scholastica_sassoferrato.jpg', 'Saint Scholastica', 'painting', 'Saint Scholastica Painting', 'Sassoferrato', '17th Century', 'Museum of Fine Arts of Lyon', NULL, 'Public Domain', NULL),
-('/saints/saint-scholastica_briggs.jpg', 'Saint Scholastica', 'painting', 'Saint Scholastica Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-scholastica_briggs.jpg', 'Saint Scholastica', 'painting', 'Saint Scholastica Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 -- also linked to saint-benedict below
 ('/saints/saint-benedict-&-scholastica.jpg', 'Saint Benedict and Saint Scholastica', 'painting', 'Saint Benedict and Saint Scholastica Painting', 'Yan'' Dargent', '19th Century', NULL, NULL, 'Public Domain', NULL),
 
@@ -222,7 +222,7 @@ INSERT INTO images (
 
 -- Saint Peter Damian
 ('/saints/saint-peter-damian.jpg', 'Saint Peter Damian', 'painting', 'Saint Peter Damian Painting', 'Andrea Barbiani', '18th Century', 'Biblioteca Classense', NULL, 'Public Domain', NULL),
-('/saints/saint-peter-damian_briggs.jpg', 'Saint Peter Damian', 'painting', 'Saint Peter Damian Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-peter-damian_briggs.jpg', 'Saint Peter Damian', 'painting', 'Saint Peter Damian Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Polycarp
 ('/saints/saint-polycarp.jpg', 'Saint Polycarp', 'icon', 'Saint Polycarp Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
@@ -249,7 +249,7 @@ INSERT INTO images (
 ('/saints/saint-perpetua_mosaic.jpg', 'Saint Perpetua', 'mosaic', 'Saint Perpetua Mosaic', NULL, NULL, 'Euphrasian Basilica (Croatia)', NULL, 'Public Domain', NULL),
 -- also linked to saint-felicity below
 ('/saints/saint-perpetua-&-felicity.jpg', 'Saint Perpetua and Saint Felicity', 'painting', 'Saint Perpetua and Saint Felicity Painting', NULL, '1520', 'National Museum in Warsaw', NULL, 'Public Domain', NULL),
-('/saints/saint-perpetua_martyr.webp', 'The Martyrdom of Saint Perpetua', 'painting', 'The Martyrdom of Saint Perpetua Painting', NULL, '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-perpetua_martyr.webp', 'The Martyrdom of Saint Perpetua', 'painting', 'The Martyrdom of Saint Perpetua Painting', NULL, '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-perpetua-&-felicity_2.jpg', 'Saint Perpetua and Saint Felicity', 'mosaic', 'Saint Perpetua and Saint Felicity Mosaic', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-perpetua-&-felicity_3.jpg', 'Saint Perpetua and Saint Felicity', 'mosaic', 'Saint Perpetua and Saint Felicity Mosaic', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
@@ -287,14 +287,14 @@ INSERT INTO images (
 ('/saints/saint-francis-of-paola_ribera.jpg', 'Saint Francis of Paola', 'painting', 'Saint Francis of Paola Painting', 'Jusepe de Ribera', '1652', 'Private Collection', NULL, 'Public Domain', NULL),
 ('/saints/saint-francis-of-paola_bianchi.jpg', 'Saint Francis of Paola in Ecstasy', 'painting', 'Saint Francis of Paola in Ecstasy Painting', 'Pietro Bianchi', '1728', 'Musée du Louvre', NULL, 'Public Domain', NULL),
 ('/saints/saint-francis-of-paola_gandolfi.jpg', 'The Vision of Saint Francis of Paola', 'painting', 'The Vision of Saint Francis of Paola Painting', 'Ubaldo Gandolfi', '1778', 'Pinacoteca Nazionale di Bologna', NULL, 'Public Domain', NULL),
-('/saints/saint-francis-of-paola_giordano.jpg', 'Saint Francis of Paola crosses the straits of Messina', 'painting', 'Saint Francis of Paola crosses the straits of Messina Painting', NULL, '1692', 'Private collection', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-of-paola_giordano.jpg', 'Saint Francis of Paola crosses the straits of Messina', 'painting', 'Saint Francis of Paola crosses the straits of Messina Painting', NULL, '1692', 'Private Collection', NULL, 'Public Domain', NULL),
 
 -- Saint Isidore
 ('/saints/saint-isidore_murillo.jpg', 'Saint Isidore', 'painting', 'Saint Isidore Painting', 'Bartolomé Esteban Murillo', '1655', 'Seville Cathedral', NULL, 'Public Domain', NULL),
 ('/saints/saint-isidore_pacully.jpg', 'Saint Isidore', 'painting', 'Saint Isidore Painting', 'Master of the Pacully collection', '1480-1490', 'National Museum of Sculpture (Valladolid)', NULL, 'Public Domain', NULL),
 
 -- Saint Vincent Ferrer
-('/saints/saint-vincent-ferrer_miranda.jpg', 'Saint Vincent Ferrer', 'painting', 'Saint Vincent Ferrer Painting', 'Francisco de Miranda', '1661', 'Museum of Fine Arts (Budapest)', NULL, 'Public Domain', NULL),
+('/saints/saint-vincent-ferrer_miranda.jpg', 'Saint Vincent Ferrer', 'painting', 'Saint Vincent Ferrer Painting', 'Juan Carreño de Miranda', '1661', 'Museum of Fine Arts (Budapest)', NULL, 'Public Domain', NULL),
 ('/saints/saint-vincent-ferrer_pace.jpg', 'Saint Vincent Ferrer', 'painting', 'Saint Vincent Ferrer Painting', 'Ranieri Del Pace', '1709', 'Private Collection', NULL, 'Public Domain', NULL),
 ('/saints/saint-vincent-ferrer_cano.jpg', 'Saint Vincent Ferrer Preaching', 'painting', 'Saint Vincent Ferrer Preaching Painting', 'Alonso Cano', '1644-1645', 'Fundación Banco Santander', NULL, 'Public Domain', NULL),
 ('/saints/saint-vincent-ferrer_juanes.jpg', 'Saint Vincent Ferrer', 'painting', 'Saint Vincent Ferrer Painting', 'Juan de Juanes', '1445-1450', 'Private Collection', NULL, 'Public Domain', NULL),
@@ -375,10 +375,10 @@ INSERT INTO images (
 ('/saints/saint-athanasius_icon.jpg', 'Saint Athanasius', 'icon', 'Saint Athanasius Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Philip, Apostle
-('/saints/saint-phillip-apostle_rubens.jpg', 'Saint Philip the Apostle', 'painting', 'Saint Philip Apostle Painting', 'Peter Paul Rubens', '1611', 'Museo del Prado', NULL, 'Public Domain', NULL),
-('/saints/saint-phillip-apostle_la-tour.jpg', 'Saint Philip the Apostle', 'painting', 'Saint Philip Apostle Painting', 'Georges de La Tour', '1625', 'Chrysler Museum of Art', NULL, 'Public Domain', NULL),
-('/saints/saint-phillip-apostle_ribera.jpg', 'Saint Philip the Apostle', 'painting', 'Saint Philip Apostle Painting', 'Jusepe de Ribera', '1610', 'Fondazione Roberto Longhi', NULL, 'Public Domain', NULL),
-('/saints/saint-phillip-apostle_dyck.jpg', 'Saint Philip the Apostle', 'painting', 'Saint Philip Apostle Painting', 'Anthony van Dyck', '1619-1621', 'Kunsthistorisches Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-philip-apostle_rubens.jpg', 'Saint Philip the Apostle', 'painting', 'Saint Philip Apostle Painting', 'Peter Paul Rubens', '1611', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-philip-apostle_la-tour.jpg', 'Saint Philip the Apostle', 'painting', 'Saint Philip Apostle Painting', 'Georges de La Tour', '1625', 'Chrysler Museum of Art', NULL, 'Public Domain', NULL),
+('/saints/saint-philip-apostle_ribera.jpg', 'Saint Philip the Apostle', 'painting', 'Saint Philip Apostle Painting', 'Jusepe de Ribera', '1610', 'Fondazione Roberto Longhi', NULL, 'Public Domain', NULL),
+('/saints/saint-philip-apostle_dyck.jpg', 'Saint Philip the Apostle', 'painting', 'Saint Philip Apostle Painting', 'Anthony van Dyck', '1619-1621', 'Kunsthistorisches Museum', NULL, 'Public Domain', NULL),
 
 -- Saint James the Less, Apostle
 ('/saints/saint-james-the-less-apostle_rubens.jpg', 'Saint James the Less the Apostle', 'painting', 'Saint James the Less Apostle Painting', 'Peter Paul Rubens', '1610-1611', 'Museo del Prado', NULL, 'Public Domain', NULL),
@@ -531,7 +531,7 @@ INSERT INTO images (
 ('/saints/saint-john-fisher_holbein-younger.jpg', 'Saint John Fisher', 'painting', 'Saint John Fisher Painting', 'Hans Holbein the Younger', '1497-1543', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-john-fisher_illustration.jpg', 'Saint John Fisher', 'engraving', 'Saint John Fisher Line Engraving', 'Jacobus Houbraken', '1743', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-john-fisher_briggs.jpg', 'Saint John Fisher', 'painting', 'Saint John Fisher Painting', 'Gwyneth Thompson Briggs', '2019', NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-john-fisher_briggs_2.jpg', 'Saint John Fisher', 'painting', 'Saint John Fisher Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-fisher_briggs_2.jpg', 'Saint John Fisher', 'painting', 'Saint John Fisher Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Thomas More
 ('/saints/saint-thomas-more_holbein-younger.jpg', 'Saint Thomas More', 'painting', 'Saint Thomas More Painting', 'Hans Holbein the Younger', '1527', 'Frick Collection', NULL, 'Public Domain', NULL),
@@ -607,7 +607,7 @@ INSERT INTO images (
 -- Saint Benedict, Abbot
 ('/saints/saint-benedict.jpg', 'Saint Benedict', 'painting', 'Saint Benedict Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-benedict_piazzetta.jpg', 'Saint Benedict', 'painting', 'Saint Benedict Painting', 'Giambattista Piazzetta', '18th Century', NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-benedict_briggs.jpg', 'Saint Benedict', 'painting', 'Saint Benedict Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-benedict_briggs.jpg', 'Saint Benedict', 'painting', 'Saint Benedict Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-benedict_zurbaran.jpg', 'Saint Benedict', 'painting', 'Saint Benedict Painting', 'Francisco de Zurbarán', '1640-1645', 'Metropolitan Museum of Art', NULL, 'Public Domain', NULL),
 ('/saints/saint-benedict_2.jpg', 'Saint Benedict', 'painting', 'Saint Benedict Painting', NULL, '17th Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-benedict_restout.jpg', 'Saint Benedict', 'painting', 'Saint Benedict Painting', 'Jean Restout', '1746', 'Église Saint-Gilles de Bourg-la-Reine', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
@@ -659,7 +659,7 @@ INSERT INTO images (
 ('/saints/saint-bridget.jpg', 'Saint Bridget', 'painting', 'Saint Bridget Painting', 'Hermen Rode', '15th Century', 'Salem Church (Södermanland)', NULL, 'Public Domain', NULL),
 ('/saints/saint-bridget_friano.jpg', 'Saint Bridget', 'painting', 'Saint Bridget Painting', 'Maso da San Friano', '1540', 'Cook Collection', NULL, 'Public Domain', NULL),
 ('/saints/saint-bridget_2.jpg', 'Saint Bridget', 'painting', 'Saint Bridget Painting', NULL, NULL, 'Santa Maria della Catena (Naples)', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
-('/saints/saint-bridget_briggs.jpg', 'Saint Bridget', 'painting', 'Saint Bridget Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-bridget_briggs.jpg', 'Saint Bridget', 'painting', 'Saint Bridget Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Sharbel Makhluf
 ('/saints/saint-sharbel-makhluf.jpg', 'Saint Sharbel Makhluf', 'painting', 'Saint Sharbel Makhluf Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
@@ -765,12 +765,12 @@ INSERT INTO images (
 ('/saints/saint-dominic_campeche.jpg', 'Saint Dominic', 'painting', 'Saint Dominic Painting', 'José Campeche', '1790', 'Art Gallery of Ontario', NULL, 'Public Domain', NULL),
 
 -- Saint Teresa Benedicta of the Cross
-('/saints/saint-teresa-benedicta-of-the-cross_ferreira_no-watermark.jpg', 'Saint Teresa Benedicta of the Cross', 'painting', 'Saint Teresa Benedicta of the Cross Painting', 'Ruben Ferreira', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-benedicta-of-the-cross_ferreira_no-watermark.jpg', 'Saint Teresa Benedicta of the Cross', 'painting', 'Saint Teresa Benedicta of the Cross Painting', 'Ruben Ferreira', '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-teresa-benedicta-of-the-cross_passport.jpg', 'Saint Teresa Benedicta of the Cross', 'photograph', 'Saint Teresa Benedicta of the Cross Photograph', NULL, '1938-1939', 'Passport', NULL, 'Public Domain', NULL),
 ('/saints/saint-teresa-benedicta-of-the-cross.jpg', 'Saint Teresa Benedicta of the Cross', 'painting', 'Saint Teresa Benedicta of the Cross Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Lawrence
-('/saints/saint-lawrence_briggs.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence_briggs.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Girolamo da Santacroce', '1520-1530', 'Courtauld Gallery', NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence', 'painting', 'The Martyrdom of Saint Lawrence Painting', 'Jean Baptiste de Champaigne', '1660', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL),
 
@@ -838,7 +838,7 @@ INSERT INTO images (
 ('/saints/saint-rose-of-lima_medoro.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Angelino Medoro', '1617', 'Santuario de Santa Rosa (Lima)', NULL, 'Public Domain', NULL),
 ('/saints/saint-rose-of-lima_laso.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Francisco Laso', '1859', 'Pinacoteca Municipal Ignacio Merino', NULL, 'Public Domain', NULL),
 ('/saints/saint-rose-of-lima_murillo.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Bartolomé Esteban Murillo', '1670-1680', NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-rose-of-lima_briggs.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-rose-of-lima_briggs.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Bartholomew, Apostle
 ('/saints/saint-bartholomew-apostle_rubens.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Peter Paul Rubens', '1611', 'Museo del Prado', NULL, 'Public Domain', NULL),
@@ -941,7 +941,7 @@ INSERT INTO images (
 ('/saints/saint-andrew-kim-tae-gon-&-companions.jpg', 'Saint Andrew Kim Tae-gon and Companions', 'painting', 'Saint Andrew Kim Tae-gon and Companions Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Paul Chong Ha-sang
-('/saints/saint-paul-chong-ha-sang_warford_no-watermark.jpg', 'Saint Paul Chong Ha-sang', 'painting', 'Saint Paul Chong Ha-sang Painting', 'John Alan Warford', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-paul-chong-ha-sang_warford_no-watermark.jpg', 'Saint Paul Chong Ha-sang', 'painting', 'Saint Paul Chong Ha-sang Painting', 'John Alan Warford', '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-paul-chong-ha-sang-&-companions.jpg', 'Saint Paul Chong Ha-sang and Companions', 'illustration', 'Saint Paul Chong Ha-sang and Companions Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 -- NOTE: saint-andrew-kim-tae-gon-&-companions.jpg already inserted above
 
@@ -979,7 +979,7 @@ INSERT INTO images (
 ('/saints/saint-wenceslaus_tkadlik.jpg', 'Saint Wenceslaus & Saint Ludmila during the Mass', 'painting', 'Saint Wenceslaus & Saint Ludmila during the Mass Painting', 'František Tkadlík', '1837', 'National Gallery Prague', NULL, 'Public Domain', NULL),
 
 -- Saint Lawrence Ruiz
-('/saints/saint-lawrence-ruiz_warford_no-watermark.jpg', 'Saint Lawrence Ruiz', 'painting', 'Saint Lawrence Ruiz Painting', 'John Alan Warford', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence-ruiz_warford_no-watermark.jpg', 'Saint Lawrence Ruiz', 'painting', 'Saint Lawrence Ruiz Painting', 'John Alan Warford', '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence-ruiz_stained-glass.jpg', 'Saint Lawrence Ruiz', 'stained_glass', 'Saint Lawrence Ruiz Stained Glass', NULL, NULL, 'Cubao Cathedral (Philippines)', NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence-ruiz-&-companions.jpg', 'Saint Lawrence Ruiz and Companions', 'illustration', 'Saint Lawrence Ruiz and Companions Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
@@ -1103,7 +1103,7 @@ INSERT INTO images (
 
 -- Saint John Paul II
 ('/saints/saint-john-paul-ii_bobnick_no-watermark.jpg', 'Saint John Paul II', 'painting', 'Saint John Paul II Painting', 'Dick Bobnick', '2015', NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-john-paul-ii_babailov.jpg', 'Saint John Paul II', 'painting', 'Saint John Paul II Painting', 'Igor Babailov', '21th Century', 'Palace of Castel Gandolfo', NULL, 'Public Domain', NULL),
+('/saints/saint-john-paul-ii_babailov.jpg', 'Saint John Paul II', 'painting', 'Saint John Paul II Painting', 'Igor Babailov', '21st Century', 'Palace of Castel Gandolfo', NULL, 'Public Domain', NULL),
 ('/saints/saint-john-paul-ii.jpg', 'Saint John Paul II', 'photograph', 'Saint John Paul II Photograph', 'Grzegorz Gałązka', NULL, NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-john-paul-ii_2.jpg', 'Saint John Paul II', 'photograph', 'Saint John Paul II Photograph', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-john-paul-ii_tsarkova.jpg', 'Saint John Paul II', 'painting', 'Saint John Paul II Painting', 'Natalia Tsarkova', '2006', NULL, NULL, 'Public Domain', NULL),
@@ -1141,7 +1141,7 @@ INSERT INTO images (
 -- =========================
 
 -- Saint Martin de Porres
-('/saints/saint-martin-de-porres_briggs.jpg', 'Saint Martin de Porres', 'painting', 'Saint Martin de Porres Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-martin-de-porres_briggs.jpg', 'Saint Martin de Porres', 'painting', 'Saint Martin de Porres Painting', 'Gwyneth Thompson Briggs', '21st Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-martin-de-porres.jpg', 'Saint Martin de Porres', 'illustration', 'Saint Martin de Porres Illustration', NULL, NULL, NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL),
 ('/saints/saint-martin-de-porres_warford.jpg', 'Saint Martin de Porres', 'painting', 'Saint Martin de Porres Painting', 'John Alan Warford', NULL, NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-martin-de-porres_2.jpg', 'Saint Martin de Porres', 'painting', 'Saint Martin de Porres Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
@@ -1213,7 +1213,7 @@ INSERT INTO images (
 -- Saint Andrew Dung-Lac
 ('/saints/saint-andrew-dung-lac_stained-glass.jpg', 'Saint Andrew Dung-Lac', 'stained_glass', 'Saint Andrew Dung-Lac Stained Glass', NULL, NULL, 'Saint Paul Catholic Church (Westerville, Ohio)', NULL, 'Attribution-ShareAlike 3.0 Unported', NULL),
 ('/saints/saint-andrew-dung-lac-&-companions.jpg', 'Saint Andrew Dung-Lac & Companions', 'mosaic', 'Saint Andrew Dung-Lac & Companions Mosaic', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-andrew-dung-lac_warford.jpg', 'Saint Andrew Dung-Lac', 'painting', 'Saint Andrew Dung-Lac Painting', 'John Alan Warford', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-dung-lac_warford.jpg', 'Saint Andrew Dung-Lac', 'painting', 'Saint Andrew Dung-Lac Painting', 'John Alan Warford', '21st Century', NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Catherine of Alexandria
 ('/saints/saint-catherine-of-alexandria_caravaggio.jpg', 'Saint Catherine of Alexandria', 'painting', 'Saint Catherine of Alexandria Painting', 'Caravaggio', '1598', 'Thyssen-Bornemisza Museum', NULL, 'Public Domain', NULL),
