@@ -693,8 +693,8 @@ JOIN (VALUES
 
 -- Saint Mary of Bethany
 ('saint-mary-of-bethany', '/saints/saint-mary-of-bethany_ring-sakabe.jpg', 'Saint Mary of Bethany Painting', 'Saint Mary of Bethany, by Jordan Ring-Sakabe', 'Jordan Ring-Sakabe', '2024', NULL, 'Public Domain', NULL, 1, TRUE),
-('saint-mary-of-bethany', '/saints/saint-mary-of-bethany-&-martha-of-bethany-&-christ_vermeer.jpg', 'Christ in the House of Martha and Mary Painting', 'Christ in the House of Martha and Mary, by Johannes Vermeer, from Scottish National Gallery', 'Johannes Vermeer', '1654-1655', NULL, 'Public Domain', NULL, 2, FALSE),
-('saint-mary-of-bethany', '/saints/saint-mary-of-bethany-&-martha-of-bethany-&-christ_rubens.jpg', 'Christ in the House of Martha and Mary Painting', 'Christ in the House of Martha and Mary, by Peter Paul Rubens & Jan Brueghel the Younger, from National Gallery of Ireland', 'Peter Paul Rubens & Jan Brueghel the Younger', '1628', NULL, 'Public Domain', NULL, 3, FALSE),
+('saint-mary-of-bethany', '/saints/saint-martha-of-bethany-&-mary-of-bethany-&-christ_vermeer.jpg', 'Christ in the House of Martha and Mary Painting', 'Christ in the House of Martha and Mary, by Johannes Vermeer, from Scottish National Gallery', 'Johannes Vermeer', '1654-1655', NULL, 'Public Domain', NULL, 2, FALSE),
+('saint-mary-of-bethany', '/saints/saint-martha-of-bethany-&-mary-of-bethany-&-christ_rubens.jpg', 'Christ in the House of Martha and Mary Painting', 'Christ in the House of Martha and Mary, by Peter Paul Rubens & Jan Brueghel the Younger, from National Gallery of Ireland', 'Peter Paul Rubens & Jan Brueghel the Younger', '1628', NULL, 'Public Domain', NULL, 3, FALSE),
 
 -- Saint Lazarus of Bethany
 ('saint-lazarus-of-bethany', '/saints/saint-lazarus-of-bethany_caravaggio.jpg', 'The Raising of Lazarus Painting', 'The Raising of Lazarus, by Caravaggio, from Regional Museum of Messina', 'Caravaggio', '1609', NULL, 'Public Domain', NULL, 1, TRUE),
