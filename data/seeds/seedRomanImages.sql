@@ -34,6 +34,11 @@ INSERT INTO images (
 ) VALUES
 
 -- =========================
+-- Christ
+-- =========================
+
+
+-- =========================
 -- Principal Roman saints (Mary, Joseph, John the Baptist)
 -- =========================
 
@@ -158,7 +163,7 @@ INSERT INTO images (
 ('/saints/saint-angela-merici_crucifix.jpg', 'Saint Angela Merici', 'painting', 'Saint Angela Merici Painting', NULL, '17th Century', NULL, NULL, 'Creative Commons Attribution', NULL),
 
 -- Saint Thomas Aquinas
-('/saints/saint-thomas-aquinas.jpg', 'Saint Thomas Aquinas', 'painting', 'Saint Thomas Aquinas Painting', 'Carlo Crivelli', '1476', 'National Gallery', NULL, 'Public Domain', NULL),
+('/saints/saint-thomas-aquinas.jpg', 'Saint Thomas Aquinas', 'painting', 'Saint Thomas Aquinas Painting', 'Carlo Crivelli', '1476', 'National Gallery (London)', NULL, 'Public Domain', NULL),
 ('/saints/saint-thomas-aquinas_velasquez_temptation.jpg', 'The temptation of Saint Thomas Aquinas', 'painting', 'The Temptation of Saint Thomas Aquinas Painting', 'Diego Velázquez', '1632', 'Orihuela Cathedral Museum', NULL, 'Public Domain', NULL),
 ('/saints/saint-thomas-aquinas_tito.jpg', 'The Vision of Saint Thomas Aquinas', 'painting', 'The Vision of Saint Thomas Aquinas Painting', 'Santi di Tito', '1593', 'Basilica of Saint Mark (Florence)', NULL, 'Public Domain', NULL),
 ('/saints/saint-thomas-aquinas_zurbaran.jpg', 'The Apotheosis of Saint Thomas Aquinas', 'painting', 'The Apotheosis of Saint Thomas Aquinas Painting', 'Francisco de Zurbarán', '1631', 'Museum of Fine Arts of Seville', NULL, 'Public Domain', NULL),
@@ -304,12 +309,12 @@ INSERT INTO images (
 ('/saints/saint-stanislaus.jpg', 'Saint Stanislaus', 'painting', 'Saint Stanislaus Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Martin I
-('/saints/saint-martin-i_montor.jpg', 'Saint Martin I', 'illustration', 'Saint Martin I Illustration', 'Alexis-François Artaud de Montor', '1842', 'The Lives and Times of the Popes', NULL, 'Public Domain', NULL),
+('/saints/saint-martin-i_montor.jpg', 'Saint Martin I', 'illustration', 'Saint Martin I Illustration', 'Alexis-François Artaud de Montor', '1842', 'Book : "The Lives and Times of the Popes"', NULL, 'Public Domain', NULL),
 ('/saints/saint-martin-i_stained-glass.jpg', 'Saint Martin I', 'stained_glass', 'Saint Martin I Stained Glass', NULL, '1888', 'Saint Martin Church (Arc-en-Barrois)', NULL, 'Public Domain', NULL),
 ('/saints/saint-martin-i.png', 'Saint Martin I', 'mosaic', 'Saint Martin I Mosaic', NULL, '19th Century', 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
 
 -- Saint Anselm
-('/saints/saint-anselm_glover.jpg', 'Saint Anselm', 'engraving', 'Saint Anselm Engraving', 'George Glover', '17th Century', 'National Portrait Gallery', NULL, 'Public Domain', NULL),
+('/saints/saint-anselm_glover.jpg', 'Saint Anselm', 'engraving', 'Saint Anselm Engraving', 'George Glover', '17th Century', 'National Portrait Gallery (London)', NULL, 'Public Domain', NULL),
 ('/saints/saint-anselm.jpg', 'Saint Anselm', 'painting', 'Saint Anselm Painting', NULL, NULL, 'Chiesa di S. Anselmo (Bomarzo)', NULL, 'Public Domain', NULL),
 
 -- Saint George
@@ -400,14 +405,14 @@ INSERT INTO images (
 ('/saints/saint-matthias-apostle_tristan.jpg', 'Saint Matthias the Apostle', 'painting', 'Saint Matthias Apostle Painting', 'Luis Tristán', '1620', 'El Greco Museum', NULL, 'Public Domain', NULL),
 
 -- Saint John I
-('/saints/saint-john-i_montor.jpg', 'Saint John I', 'illustration', 'Saint John I Illustration', 'Alexis-François Artaud de Montor', '1842', 'The Lives and Times of the Popes', NULL, 'Public Domain', NULL),
+('/saints/saint-john-i_montor.jpg', 'Saint John I', 'illustration', 'Saint John I Illustration', 'Alexis-François Artaud de Montor', '1842', 'Book: "The Lives and Times of the Popes"', NULL, 'Public Domain', NULL),
 ('/saints/saint-john-i.jpg', 'Saint John I', 'mosaic', 'Saint John I Mosaic', NULL, '19th Century', 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
 
 -- Saint Bernardine of Siena
 ('/saints/saint-bernardine-of-siena_bellini.png', 'Saint Bernardine of Siena', 'painting', 'Saint Bernardine of Siena Painting', 'Jacopo Bellini', '1450-1455', 'Metropolitan Museum of Art', NULL, 'Public Domain', NULL),
 ('/saints/saint-bernardine-of-siena.jpg', 'Saint Bernardine of Siena', 'painting', 'Saint Bernardine of Siena Painting', NULL, '16th Century', 'Langeais Castle (France)', NULL, 'Public Domain', NULL),
 ('/saints/saint-bernardine-of-siena_greco.jpg', 'Saint Bernardine of Siena', 'painting', 'Saint Bernardine of Siena Painting', 'El Greco', '1603', 'El Greco Museum', NULL, 'Public Domain', NULL),
-('/saints/saint-bernardine-of-siena_brescia.jpg', 'The Virgin and Child with Saint Bernardino and Other Saints', 'painting', 'The Virgin and Child with Saint Bernardino and Other Saints', 'Moretto da Brescia', '1540', 'National Gallery', NULL, 'Public Domain', NULL),
+('/saints/saint-bernardine-of-siena_brescia.jpg', 'The Virgin and Child with Saint Bernardino and Other Saints', 'painting', 'The Virgin and Child with Saint Bernardino and Other Saints', 'Moretto da Brescia', '1540', 'National Gallery (London)', NULL, 'Public Domain', NULL),
 
 -- Saint Christopher Magallanes
 ('/saints/saint-christopher-magallanes.jpg', 'Saint Christopher Magallanes', 'painting', 'Saint Christopher Magallanes Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
@@ -701,9 +706,7 @@ INSERT INTO images (
 
 -- Saint Mary of Bethany
 ('/saints/saint-mary-of-bethany_ring-sakabe.jpg', 'Saint Mary of Bethany', 'painting', 'Saint Mary of Bethany Painting', 'Jordan Ring-Sakabe', '2024', NULL, NULL, 'Public Domain', NULL),
--- NOTE: same shared artworks as above but with different filename; keep as separate images (different image_url)
-('/saints/saint-mary-of-bethany-&-martha-of-bethany-&-christ_vermeer.jpg', 'Christ in the House of Martha and Mary', 'painting', 'Christ in the House of Martha and Mary Painting', 'Johannes Vermeer', '1654-1655', 'Scottish National Gallery', NULL, 'Public Domain', NULL),
-('/saints/saint-mary-of-bethany-&-martha-of-bethany-&-christ_rubens.jpg', 'Christ in the House of Martha and Mary', 'painting', 'Christ in the House of Martha and Mary Painting', 'Peter Paul Rubens & Jan Brueghel the Younger', '1628', 'National Gallery of Ireland', NULL, 'Public Domain', NULL),
+-- NOTE: same shared artworks as above
 
 -- Saint Lazarus of Bethany
 ('/saints/saint-lazarus-of-bethany_caravaggio.jpg', 'The Raising of Lazarus', 'painting', 'The Raising of Lazarus Painting', 'Caravaggio', '1609', 'Regional Museum of Messina', NULL, 'Public Domain', NULL),
@@ -722,7 +725,7 @@ INSERT INTO images (
 ('/saints/saint-ignatius-of-loyola.jpg', 'Ignatius convalesces at Loyola', 'painting', 'Ignatius convalesces at Loyola Painting', 'Albert Chevallier Tayler', '1904', NULL, NULL, 'Public Domain', NULL),
 
 -- =========================
--- August Saints a double check !
+-- August Saints
 -- =========================
 
 -- Saint Alphonsus Liguori
@@ -769,7 +772,7 @@ INSERT INTO images (
 -- Saint Lawrence
 ('/saints/saint-lawrence_briggs.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_santacroce.jpg', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Girolamo da Santacroce', '1520-1530', 'Courtauld Gallery', NULL, 'Public Domain', NULL),
-('/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence', 'painting', 'The Martyrdom of Saint Lawrence Painting', 'Jean Baptiste de Champaigne', '1660', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL);
+('/saints/saint-lawrence_champaigne_martyr.jpg', 'The Martyrdom of Saint Lawrence', 'painting', 'The Martyrdom of Saint Lawrence Painting', 'Jean Baptiste de Champaigne', '1660', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL),
 
 -- Saint Clare
 ('/saints/saint-clare_martini.jpg', 'Saint Clare', 'fresco', 'Saint Clare Fresco', 'Simone Martini', '1322-1326', 'Lower Basilica of San Francesco', NULL, 'Public Domain', NULL),
@@ -785,7 +788,7 @@ INSERT INTO images (
 
 -- Saint Pontian
 ('/saints/saint-pontian_aretino.jpg', 'Saint Pontian', 'painting', 'Saint Pontian Painting', 'Aretino', '1530-1535', 'Museo del Prado', NULL, 'Public Domain', NULL),
-('/saints/saint-pontian_montor.jpg', 'Saint Pontian', 'illustration', 'Saint Pontian Illustration', 'Alexis-François Artaud de Montor', '1842', 'The Lives and Times of the Popes', NULL, 'Public Domain', NULL),
+('/saints/saint-pontian_montor.jpg', 'Saint Pontian', 'illustration', 'Saint Pontian Illustration', 'Alexis-François Artaud de Montor', '1842', 'Book : "The Lives and Times of the Popes"', NULL, 'Public Domain', NULL),
 ('/saints/saint-pontian.jpg', 'Saint Pontian', 'mosaic', 'Saint Pontian Mosaic', NULL, '19th Century', 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
 ('/saints/saint-pontian_echave_martyr.jpg', 'The Martyrdom of Saint Pontian', 'painting', 'The Martyrdom of Saint Pontian Painting', 'Baltasar de Echave Orio', '1612', 'Museo Nacional de Arte (Mexico)', NULL, 'Public Domain', NULL),
 
@@ -818,3 +821,522 @@ INSERT INTO images (
 ('/saints/saint-bernard_cano.jpg', 'The Vision of Saint Bernard', 'painting', 'The Vision of Saint Bernard Painting', 'Alonso Cano', '1650', 'Museo del Prado', NULL, 'Public Domain', NULL),
 ('/saints/saint-bernard_signol.jpg', 'Saint Bernard preaching the second Crusade at Vezelay', 'painting', 'Saint Bernard preaching the second Crusade at Vezelay Painting', 'Émile Signol', '1840', 'Château de Versailles', NULL, 'Public Domain', NULL),
 ('/saints/saint-bernard_vivar.jpg', 'Saint Bernard', 'painting', 'Saint Bernard Painting', 'Juan Correa de Vivar', '1540-1545', 'Museo del Prado', NULL, 'Public Domain', NULL),
+
+-- Saint Maximilien Kolbe
+('/saints/saint-maximilien-kolbe_pawlowski.jpg', 'Saint Maximilien Kolbe', 'painting', 'Saint Maximilien Kolbe Painting', 'Kevin Pawlowski', '2023', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-maximilien-kolbe.jpg', 'Saint Maximilien Kolbe', 'photograph', 'Saint Maximilien Kolbe Photograph', NULL, '1936', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-maximilien-kolbe_2.jpg', 'Saint Maximilien Kolbe', 'painting', 'Saint Maximilien Kolbe Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Pius X
+('/saints/saint-pius-x_gerrer.jpg', 'Saint Pius X', 'painting', 'Saint Pius X Painting', 'Gregory Gerrer', '1904', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-pius-x.jpg', 'Saint Pius X', 'photograph', 'Saint Pius X Photograph', 'Ernest Walter Histed', '1914', 'National Portrait Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-pius-x_bordignon.jpg', 'Saint Pius X', 'painting', 'Saint Pius X Painting', 'Noè Bordignon', '1920', 'Diocesan museum of Padua (Italy)', NULL, 'Public Domain', NULL),
+
+-- Saint Rose of Lima
+('/saints/saint-rose-of-lima_coello.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Claudio Coello', '1683', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-rose-of-lima.jpg', 'Saint Rose of Lima with Child Jesus', 'painting', 'Saint Rose of Lima with Child Jesus Painting', NULL, '17th Century', 'Lima Art Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-rose-of-lima_medoro.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Angelino Medoro', '1617', 'Santuario de Santa Rosa (Lima)', NULL, 'Public Domain', NULL),
+('/saints/saint-rose-of-lima_laso.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Francisco Laso', '1859', 'Pinacoteca Municipal Ignacio Merino', NULL, 'Public Domain', NULL),
+('/saints/saint-rose-of-lima_murillo.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Bartolomé Esteban Murillo', '1670-1680', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-rose-of-lima_briggs.jpg', 'Saint Rose of Lima', 'painting', 'Saint Rose of Lima Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Bartholomew, Apostle
+('/saints/saint-bartholomew-apostle_rubens.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Peter Paul Rubens', '1611', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle_dyck.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Anthony van Dyck', '1618-1620', 'Staatliche Kunstsammlungen Dresden', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle_ribera.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Jusepe de Ribera', '1630', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle_zurbaran.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Francisco de Zurbarán', '1633', 'National Museum of Ancient Art (Lisbon)', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle_rembrandt.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Rembrandt', '1657', 'Timken Museum of Art', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle_rembrandt_2.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Rembrandt', '1661', 'Getty Center', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle-cavallino.jpg', 'Saint Bartholomew the Apostle', 'painting', 'Saint Bartholomew the Apostle Painting', 'Bernardo Cavallino', '17th Century', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle_ribera_martyr.jpg', 'The Martyrdom of Saint Bartholomew', 'painting', 'The Martyrdom of Saint Bartholomew Painting', 'Jusepe de Ribera', '1616-1617', 'Colegiata de Nuestra Señora de la Asunción', NULL, 'Public Domain', NULL),
+('/saints/saint-bartholomew-apostle_tiepolo_martyr.jpg', 'The Martyrdom of Saint Bartholomew', 'painting', 'The Martyrdom of Saint Bartholomew Painting', 'Giambattista Tiepolo', '1722', 'San Stae', NULL, 'Public Domain', NULL),
+
+-- Saint Louis (of France)
+('/saints/saint-louis_signol.jpg', 'Saint Louis', 'painting', 'Saint Louis Painting', 'Émile Signol', '1844', 'Château de Versailles', NULL, 'Public Domain', NULL),
+('/saints/saint-louis_lagrenee.jpg', 'Meeting between Innocent IV and Saint Louis', 'painting', 'Meeting between Innocent IV and Saint Louis Painting', 'Louis-Jean-François Lagrenée', '1773', 'Musée du Louvre', NULL, 'Public Domain', NULL),
+('/saints/saint-louis_cabanel.jpg', 'The Glorification of Saint Louis', 'painting', 'The Glorification of Saint Louis Painting', 'Alexandre Cabanel', '1853-1855', 'Musée Fabre', NULL, 'Public Domain', NULL),
+('/saints/saint-louis_greco.jpg', 'Saint Louis', 'painting', 'Saint Louis Painting', 'El Greco', '1592', 'Musée du Louvre', NULL, 'Public Domain', NULL),
+('/saints/saint-louis_loo.jpg', 'Coronation of Saint Louis', 'painting', 'Coronation of Saint Louis Painting', 'Charles-Amédée-Philippe van Loo', '1773', 'Musée du Louvre', NULL, 'Public Domain', NULL),
+('/saints/saint-louis_decreuse.jpg', 'Saint Louis', 'painting', 'Saint Louis Painting', 'Auguste de Creuse', '1837', 'Château de Versailles', NULL, 'Public Domain', NULL),
+('/saints/saint-louis_vien.jpg', 'Saint Louis entrusted the Regency of the Kingdom to his mother Queen Blanche of Castile', 'painting', 'Saint Louis entrusted the Regency of the Kingdom to his mother Queen Blanche of Castile Painting', 'Joseph-Marie Vien', '1773', 'Musée du Louvre', NULL, 'Public Domain', NULL),
+
+-- Saint Joseph Calasanz
+('/saints/saint-joseph-calasanz_casanova.jpg', 'Saint Joseph Calasanz', 'painting', 'Saint Joseph Calasanz Painting', 'Francisco Jover y Casanova', '1879', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-joseph-calasanz_corvi.jpg', 'Saint Joseph Calasanz Ressucitating a Child', 'painting', 'Saint Joseph Calasanz Ressucitating a Child Painting', 'Domenico Corvi', '1767', 'Wadsworth Atheneum', NULL, 'Public Domain', NULL),
+('/saints/saint-joseph-calasanz_goya.jpg', 'Last Communion of Saint Joseph Calasanz', 'painting', 'Last Communion of Saint Joseph Calasanz Painting', 'Francisco Goya', '1819', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Monica
+('/saints/saint-monica_cabanel.jpg', 'Saint Monica', 'painting', 'Saint Monica Painting', 'Alexandre Cabanel', '1845', 'Milwaukee Art Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-augustine-of-hippo-&-monica_scheffer.jpg', 'Saint Augustine and Saint Monica', 'painting', 'Saint Augustine and Saint Monica Painting', 'Ary Scheffer', '1854', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-monica_gozzoli.jpg', 'Saint Monica', 'fresco', 'Saint Monica Fresco', 'Benozzo Gozzoli', '1464-1465', 'Church of Sant''Agostino (San Gimignano)', NULL, 'Public Domain', NULL),
+
+-- Saint Augustine of Hippo
+('/saints/saint-augustine-of-hippo_champaigne.jpg', 'Saint Augustine of Hippo', 'painting', 'Saint Augustine of Hippo Painting', 'Philippe de Champaigne', '1645', 'Los Angeles County Museum of Art', NULL, 'Public Domain', NULL),
+--already seeded
+-- ('/saints/saint-augustine-of-hippo-&-monica_scheffer.jpg', 'Saint Augustine and Saint Monica', 'painting', 'Saint Augustine and Saint Monica Painting', 'Ary Scheffer', '1854', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-augustine-of-hippo_coello.jpg', 'Saint Augustine of Hippo', 'painting', 'Saint Augustine of Hippo Painting', 'Claudio Coello', '17th Century', 'Private Collection', NULL, 'Public Domain', NULL),
+('/saints/saint-augustine-of-hippo_botticelli.jpg', 'Saint Augustine of Hippo', 'painting', 'Saint Augustine of Hippo Painting', 'Sandro Botticelli', '1480', 'Ognissanti Church (Florence)', NULL, 'Public Domain', NULL),
+('/saints/saint-augustine-of-hippo_coello_triumph.jpg', 'The Triumph of Saint Augustine', 'painting', 'The Triumph of Saint Augustine Painting', 'Claudio Coello', '1664', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-augustine-of-hippo_rubens.jpg', 'Saint Augustine of Hippo', 'painting', 'Saint Augustine of Hippo Painting', 'Peter Paul Rubens', '1636-1638', 'National Gallery Prague', NULL, 'Public Domain', NULL),
+('/saints/saint-augustine-of-hippo_rubens_jesus.jpg', 'Saint Augustine of Hippo with Christ & Virgin Mary', 'painting', 'Saint Augustine of Hippo with Christ & Virgin Mary Painting', 'Peter Paul Rubens', '1615', 'Royal Academy of Fine Arts of San Fernando', NULL, 'Public Domain', NULL),
+
+-- =========================
+-- September saints
+-- =========================
+
+-- Saint Gregory the Great
+('/saints/saint-gregory-the-great_vien.jpg', 'Saint Gregory the Great', 'painting', 'Saint Gregory the Great Painting', 'Joseph-Marie Vien', '1766', 'Musée Fabre', NULL, 'Public Domain', NULL),
+('/saints/saint-gregory-the-great_ribera.jpg', 'Saint Gregory the Great', 'painting', 'Saint Gregory the Great Painting', 'Jusepe de Ribera', '1614', 'Galleria Nazionale d''Arte Antica (Rome)', NULL, 'Public Domain', NULL),
+('/saints/saint-gregory-the-great_stom.jpg', 'Saint Gregory the Great', 'painting', 'Saint Gregory the Great Painting', 'Matthias Stom', '17th Century', 'Kunstmuseum Basel', NULL, 'Public Domain', NULL),
+('/saints/saint-gregory-the-great_theodoric.jpg', 'Saint Gregory the Great', 'painting', 'Saint Gregory the Great Painting', 'Master Theodoric', '1370', 'National Gallery Prague', NULL, 'Public Domain', NULL),
+('/saints/saint-gregory-the-great_gasparro.jpg', 'Saint Gregory the Great', 'painting', 'Saint Gregory the Great Painting', 'Giovanni Gasparro', '2017', 'Museo Diocesano (Lecce)', NULL, 'Public Domain', NULL),
+
+-- Saint Teresa of Calcutta
+('/saints/saint-teresa-of-calcutta_zumo.jpg', 'Saint Teresa of Calcutta', 'painting', 'Saint Teresa of Calcutta Painting', 'Jacob Zumo', '2024', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-calcutta_bettmann.jpg', 'Saint Teresa of Calcutta', 'photograph', 'Saint Teresa of Calcutta Photograph', NULL, '1988', 'Bettmann Archive', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-calcutta.jpg', 'Saint Teresa of Calcutta', 'photograph', 'Saint Teresa of Calcutta Photograph', NULL, '1995', NULL, NULL, 'Attribution-ShareAlike 2.0 Generic', NULL),
+
+-- Saint Peter Claver
+('/saints/saint-peter-claver.jpg', 'Saint Peter Claver', 'painting', 'Saint Peter Claver Painting', NULL, NULL, 'Palace of the Inquisition (Cartagena)', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
+('/saints/saint-peter-claver_vitta.jpg', 'Saint Peter Claver', 'engraving', 'Saint Peter Claver Engraving', 'Joseph Vitta', NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-peter-claver_2.jpg', 'Saint Peter Claver', 'painting', 'Saint Peter Claver Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint John Chrysostom
+('/saints/saint-john-chrysostom_champaigne.jpg', 'Saint John Chrysostom', 'engraving', 'Saint John Chrysostom Engraving', 'Jean-Baptiste de Champaigne', '17th Century', 'Rijksmuseum', NULL, 'Public Domain', NULL),
+('/saints/saint-john-chrysostom_wencker.jpg', 'Saint John Chrysostom Preaching Before the Empress Eudoxia', 'painting', 'Saint John Chrysostom Preaching Before the Empress Eudoxia Painting', 'Joseph Wencker', '1880-1881', 'Musée Crozatier', NULL, 'Public Domain', NULL),
+('/saints/saint-john-chrysostom_mosaic.jpg', 'Saint John Chrysostom', 'mosaic', 'Saint John Chrysostom Mosaic', NULL, '9th Century', 'Hagia Sophia (Constantinople)', NULL, 'Public Domain', NULL),
+
+-- Saint Cornelius
+('/saints/saint-cornelius.jpg', 'Saint Cornelius', 'painting', 'Saint Cornelius Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-cornelius_2.jpg', 'Saint Cornelius', 'stained_glass', 'Saint Cornelius Stained Glass', 'Master of Saint Severin', '1520-1521', 'Victoria and Albert Museum (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-cornelius_mosaic.jpg', 'Saint Cornelius', 'mosaic', 'Saint Cornelius Mosaic', NULL, '13th Century', 'Santa Maria in Trastevere (Rome)', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
+('/saints/saint-cornelius_3.jpg', 'Saint Cornelius', 'mosaic', 'Saint Cornelius Mosaic', NULL, '19th Century', 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
+-- NOTE: saint-anthony-abbot-&-cornelius-&-cyprian_veronese.jpg already inserted above (January, saint-anthony-abbot)
+
+-- Saint Cyprian
+('/saints/saint-cyprian.jpg', 'Saint Cyprian', 'illustration', 'Saint Cyprian Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-cyprian_2.jpg', 'Saint Cyprian', 'painting', 'Saint Cyprian Painting', 'Master of Messkirch', '1535-1540', 'Staatsgalerie Stuttgart', NULL, 'Public Domain', NULL),
+-- NOTE: saint-anthony-abbot-&-cornelius-&-cyprian_veronese.jpg already inserted above (January, saint-anthony-abbot)
+
+-- Saint Robert Bellarmine
+('/saints/saint-robert-bellarmine.jpg', 'Saint Robert Bellarmine', 'painting', 'Saint Robert Bellarmine Painting', NULL, '1622-1623', 'Plantin–Moretus Museum (Antwerp)', NULL, 'Public Domain', NULL),
+('/saints/saint-robert-bellarmine_2.png', 'Saint Robert Bellarmine', 'painting', 'Saint Robert Bellarmine Painting', NULL, '17th Century', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Hildegard of Bingen
+('/saints/saint-hildegard-of-bingen.jpg', 'Saint Hildegard von Bingen receives a divine inspiration and passes it on to her scribe', 'illumination', 'Saint Hildegard von Bingen receives a divine inspiration and passes it on to her scribe Illumination', NULL, '1151', 'Rupertsberg Codex of Liber Scivias', NULL, 'Public Domain', NULL),
+('/saints/saint-hildegard-of-bingen_2.jpg', 'Saint Hildegard of Bingen', 'fresco', 'Saint Hildegard of Bingen Fresco', NULL, NULL, 'Eibingen Abbey', NULL, 'Public Domain', NULL),
+('/saints/saint-hildegard-of-bingen_3.webp', 'Saint Hildegard of Bingen', 'painting', 'Saint Hildegard of Bingen Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-hildegard-of-bingen_casparo.jpg', 'The Vision of the Church of Saint Hildegard von Bingen', 'painting', 'The Vision of the Church of Saint Hildegard von Bingen Painting', 'Giovanni Gasparro', '2014-2018', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Januarius
+('/saints/saint-januarius_caravaggio.jpg', 'Saint Januarius', 'painting', 'Saint Januarius Painting', 'Louis Finson', '1610-1612', 'Palmer Museum of Art', NULL, 'Public Domain', NULL),
+('/saints/saint-januarius_vaccaro.jpg', 'The Ascension of Saint Januarius', 'painting', 'The Ascension of Saint Januarius Painting', 'Andrea Vaccaro', '1635', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-januarius_solimena.jpg', 'Saint Januarius', 'painting', 'Saint Januarius Painting', 'Francesco Solimena', '1702', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-januarius_solimena_miracle.jpg', 'The Miracle of Saint Januarius', 'painting', 'The Miracle of Saint Januarius Painting', 'Francesco Solimena', NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-januarius_solimena_prison.jpg', 'Saint Januarius visited in prison by Proculus and Sosius', 'painting', 'Saint Januarius visited in prison by Proculus and Sosius Painting', 'Francesco Solimena', NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-januarius_gentileschi_martyr.jpg', 'The Martyrdom of Saint Januarius in the Amphitheatre at Pozzuoli', 'painting', 'The Martyrdom of Saint Januarius in the Amphitheatre at Pozzuoli Painting', 'Artemisia Gentileschi', '1636-1637', 'Pozzuoli cathedral', NULL, 'Public Domain', NULL),
+
+-- Saint Andrew Kim Tae-gon
+('/saints/saint-andrew-kim-tae-gon.jpg', 'Saint Andrew Kim Tae-gon', 'painting', 'Saint Andrew Kim Tae-gon Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-kim-tae-gon-&-companions.jpg', 'Saint Andrew Kim Tae-gon and Companions', 'painting', 'Saint Andrew Kim Tae-gon and Companions Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Paul Chong Ha-sang
+('/saints/saint-paul-chong-ha-sang_warford_no-watermark.jpg', 'Saint Paul Chong Ha-sang', 'painting', 'Saint Paul Chong Ha-sang Painting', 'John Alan Warford', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-paul-chong-ha-sang-&-companions.jpg', 'Saint Paul Chong Ha-sang and Companions', 'illustration', 'Saint Paul Chong Ha-sang and Companions Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+-- NOTE: saint-andrew-kim-tae-gon-&-companions.jpg already inserted above
+
+-- Saint Matthew, Apostle and Evangelist
+('/saints/saint-matthew_rubens.jpg', 'Saint Matthew the Apostle and Evangelist', 'painting', 'Saint Matthew Apostle and Evangelist Painting', 'Peter Paul Rubens', '1611', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-matthew_dyck.jpg', 'Saint Matthew the Apostle and Evangelist', 'painting', 'Saint Matthew Apostle and Evangelist Painting', 'Anthony van Dyck', '1618-1620', 'King Baudouin Foundation', NULL, 'Public Domain', NULL),
+('/saints/saint-matthew_rembrandt.jpg', 'The Evangelist Matthew and the Angel', 'painting', 'The Evangelist Matthew and the Angel Painting', 'Rembrandt', '1661', 'Louvre-Lens', NULL, 'Public Domain', NULL),
+('/saints/saint-matthew_caravaggio.jpg', 'The Inspiration of Saint Matthew', 'painting', 'The Inspiration of Saint Matthew Painting', 'Caravaggio', '1602', 'San Luigi dei Francesi (Rome)', NULL, 'Public Domain', NULL),
+('/saints/saint-matthew_caravaggio_calling.jpg', 'The Calling of Saint Matthew', 'painting', 'The Calling of Saint Matthew Painting', 'Caravaggio', '1599-1600', 'San Luigi dei Francesi (Rome)', NULL, 'Public Domain', NULL),
+('/saints/saint-matthew_caravaggio_martyr.jpg', 'The Martyrdom of Saint Matthew', 'painting', 'The Martyrdom of Saint Matthew Painting', 'Caravaggio', '1599-1600', 'San Luigi dei Francesi (Rome)', NULL, 'Public Domain', NULL),
+('/saints/saint-matthew_hals.jpg', 'Saint Matthew', 'painting', 'Saint Matthew Painting', 'Frans Hals', '1625', 'Odesa Museum of Western and Eastern Art', NULL, 'Public Domain', NULL),
+('/saints/saint-matthew_reni.jpg', 'Saint Matthew', 'painting', 'Saint Matthew Painting', 'Guido Reni', '1635', 'Pinacoteca Vaticana', NULL, 'Public Domain', NULL),
+('/saints/saint-matthew_zurbaran.jpg', 'Saint Matthew', 'painting', 'Saint Matthew Painting', 'Francisco de Zurbarán', '1633', 'National Museum of Ancient Art', NULL, 'Public Domain', NULL),
+
+-- Saint Pius of Pietrelcina
+('/saints/saint-pius-of-pietrelcina_2.jpg', 'Saint Pius of Pietrelcina', 'painting', 'Saint Pius of Pietrelcina Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-pius-of-pietrelcina_dughetti.jpg', 'Saint Pius of Pietrelcina', 'illustration', 'Saint Pius of Pietrelcina Illustration', 'Roberto Dughetti', '1966', NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL),
+('/saints/saint-pius-of-pietrelcina.jpg', 'Saint Pius of Pietrelcina', 'photograph', 'Saint Pius of Pietrelcina Photograph', 'Elia Stelluto', '20th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-pius-of-pietrelcina_3_no-watermark.jpg', 'Saint Pius of Pietrelcina', 'photograph', 'Saint Pius of Pietrelcina Photograph', 'Elia Stelluto', '20th Century', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Cosmas & Saint Damian (shared images — inserted once)
+('/saints/saint-cosmas-&-damian.jpg', 'Saint Cosmas and Saint Damian', 'illustration', 'Saint Cosmas and Saint Damian Illustration', 'Jean Bourdichon', '1503-1508', 'Bibliothèque Nationale de France', NULL, 'Public Domain', NULL),
+('/saints/saint-cosmas-&-damian_2.jpg', 'Saint Cosmas and Saint Damian', 'painting', 'Saint Cosmas and Saint Damian Painting', 'Hans von Kulmbach', '1507-1508', 'Germanisches Nationalmuseum', NULL, 'Public Domain', NULL),
+('/saints/saint-cosmas-&-damian_3.jpg', 'Saint Cosmas and Saint Damian', 'icon', 'Saint Cosmas and Saint Damian Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-cosmas-&-damian_4.jpg', 'Saint Cosmas and Saint Damian', 'icon', 'Saint Cosmas and Saint Damian Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Vincent de Paul
+('/saints/saint-vincent-de-paul_gerome.webp', 'Saint Vincent de Paul', 'painting', 'Saint Vincent de Paul Painting', 'Jean-Léon Gérôme', '1847', 'Musée Jean-Léon Gérôme', NULL, 'Public Domain', NULL),
+('/saints/saint-vincent-de-paul_delaroche.jpg', 'Saint Vincent de Paul Preaching to the Court of Louis XIII on Behalf of the Abandoned Children', 'painting', 'Saint Vincent de Paul Preaching to the Court of Louis XIII on Behalf of the Abandoned Children Painting', 'Paul Delaroche', '1823', 'Yale University Art Gallery', NULL, 'Public Domain', NULL),
+('/saints/saint-vincent-de-paul_tours.png', 'Saint Vincent de Paul', 'painting', 'Saint Vincent de Paul Painting', 'Simon François de Tours', '17th Century', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Wenceslaus
+('/saints/saint-wenceslaus_caroselli.jpg', 'Saint Wenceslaus', 'painting', 'Saint Wenceslaus Painting', 'Angelo Caroselli', '1627-1630', 'Kunsthistorisches Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-wenceslaus_skreta.jpg', 'Saint Wenceslaus', 'painting', 'Saint Wenceslaus Painting', 'Karel Škréta', '17th Century', 'National Museum in Warsaw', NULL, 'Public Domain', NULL),
+('/saints/saint-wenceslaus_tkadlik.jpg', 'Saint Wenceslaus & Saint Ludmila during the Mass', 'painting', 'Saint Wenceslaus & Saint Ludmila during the Mass Painting', 'František Tkadlík', '1837', 'National Gallery Prague', NULL, 'Public Domain', NULL),
+
+-- Saint Lawrence Ruiz
+('/saints/saint-lawrence-ruiz_warford_no-watermark.jpg', 'Saint Lawrence Ruiz', 'painting', 'Saint Lawrence Ruiz Painting', 'John Alan Warford', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence-ruiz_stained-glass.jpg', 'Saint Lawrence Ruiz', 'stained_glass', 'Saint Lawrence Ruiz Stained Glass', NULL, NULL, 'Cubao Cathedral (Philippines)', NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence-ruiz-&-companions.jpg', 'Saint Lawrence Ruiz and Companions', 'illustration', 'Saint Lawrence Ruiz and Companions Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Jerome
+('/saints/saint-jerome_ribera.jpg', 'Saint Jerome', 'painting', 'Saint Jerome Painting', 'Jusepe de Ribera', '1620', 'Museum of Fine Arts (Budapest)', NULL, 'Public Domain', NULL),
+('/saints/saint-jerome_vanni.jpg', 'Saint Jerome', 'painting', 'Saint Jerome Painting', 'Francesco Vanni', '17th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-jerome_dyck.jpg', 'Saint Jerome Meditating in the Desert', 'painting', 'Saint Jerome Meditating in the Desert Painting', 'Anthony van Dyck', '1619', 'Museum Boijmans Van Beuningen', NULL, 'Public Domain', NULL),
+('/saints/saint-jerome_caravaggio.jpg', 'Saint Jerome Writing', 'painting', 'Saint Jerome Writing Painting', 'Caravaggio', '1605-1606', 'Galleria Borghese (Rome)', NULL, 'Public Domain', NULL),
+('/saints/saint-jerome_brugghen.jpg', 'Saint Jerome', 'painting', 'Saint Jerome Painting', 'Hendrick ter Brugghen', '1621', 'The Cleveland Museum of Art', NULL, 'Public Domain', NULL),
+('/saints/saint-jerome_durer.jpg', 'Saint Jerome in the Wilderness', 'painting', 'Saint Jerome in the Wilderness Painting', 'Albrecht Dürer', '1496', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-jerome_vouet.jpg', 'Saint Jerome and the Angel', 'painting', 'Saint Jerome and the Angel Painting', 'Simon Vouet', '1622-1625', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL),
+('/saints/saint-jerome_barocci.jpg', 'Saint Jerome', 'painting', 'Saint Jerome Painting', 'Federico Barocci', '1600', 'Galleria Borghese', NULL, 'Public Domain', NULL),
+('/saints/saint-jerome_goya.jpg', 'Saint Jerome in Penitence', 'painting', 'Saint Jerome in Penitence Painting', 'Francisco Goya', '1798', NULL, NULL, 'Public Domain', NULL),
+
+-- =========================
+-- October saints
+-- =========================
+
+-- Saint Thérèse of the Child Jesus
+('/saints/saint-therese-of-the-child-jesus_wingate.jpg', 'Saint Thérèse of the Child Jesus', 'painting', 'Saint Thérèse of the Child Jesus Painting', 'Henry Wingate', '2016', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-therese-of-the-child-jesus_celine.jpg', 'Saint Thérèse of the Child Jesus', 'painting', 'Saint Thérèse of the Child Jesus Painting', 'Céline Martin', '1925', 'Carmel of Lisieux', NULL, 'Public Domain', NULL),
+('/saints/saint-therese-of-the-child-jesus_celine_photo.jpg', 'Saint Thérèse of the Child Jesus', 'photograph', 'Saint Thérèse of the Child Jesus Photograph', 'Céline Martin', '1896', 'Carmel of Lisieux', NULL, 'Public Domain', NULL),
+('/saints/saint-therese-of-the-child-jesus_celine_photo_2.jpg', 'Saint Thérèse of the Child Jesus with Rosary', 'photograph', 'Saint Thérèse of the Child Jesus with Rosary Photograph', 'Céline Martin', '1896', 'Carmel of Lisieux', NULL, 'Public Domain', NULL),
+('/saints/saint-therese-of-the-child-jesus.jpg', 'Saint Thérèse of the Child Jesus', 'painting', 'Saint Thérèse of the Child Jesus Painting', NULL, NULL, 'Santa Teresa del Bambin Gesù in Panfilo (Rome)', NULL, 'Public Domain', NULL),
+
+-- Saint Francis of Assisi
+('/saints/saint-francis-of-assisi_caravaggio.jpg', 'Saint Francis in Prayer', 'painting', 'Saint Francis in Prayer Painting', 'Caravaggio', '1595-1606', 'Galleria Nazionale d''Arte Antica (Rome)', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-of-assisi_zurbaran.jpg', 'Saint Francis of Assisi', 'painting', 'Saint Francis of Assisi Painting', 'Francisco de Zurbarán', '1635-1639', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-of-assisi_fruytiers.jpg', 'Saint Francis of Assisi', 'painting', 'Saint Francis of Assisi Painting', 'Philip Fruytiers', '17th Century', 'Royal Museum of Fine Arts Antwerp', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-of-assisi_murillo.jpg', 'Saint Francis of Assisi', 'painting', 'Saint Francis of Assisi Painting', 'Bartolomé Esteban Murillo', '1645-1650', 'Cathedral of Our Lady (Antwerp)', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-of-assisi_ribera.jpg', 'Saint Francis of Assisi', 'painting', 'Saint Francis of Assisi Painting', 'Jusepe de Ribera', '1642', 'Escurial', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-of-assisi_tiepolo.jpg', 'Saint Francis of Assisi receiving the Stigmata', 'painting', 'Saint Francis of Assisi receiving the Stigmata Painting', 'Giambattista Tiepolo', '1767-1769', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-of-assisi_murillo_2.jpg', 'Saint Francis embracing Christ on the Cross', 'painting', 'Saint Francis embracing Christ on the Cross Painting', 'Bartolomé Esteban Murillo', '1668-1669', 'Museum of Fine Arts of Seville', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-of-assisi_schut.jpg', 'Miracle of the Portiuncula', 'painting', 'Miracle of the Portiuncula Painting', 'Cornelis Schut', '1649', 'Royal Museum of Fine Arts Antwerp', NULL, 'Public Domain', NULL),
+
+-- Saint Faustina Kowalska
+('/saints/saint-faustina-kowalska.jpg', 'Saint Faustina Kowalska', 'painting', 'Saint Faustina Kowalska Painting', 'Stanisław Sztama', '20th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-faustina-kowalska_2.jpg', 'Saint Faustina Kowalska & Divine Mercy', 'painting', 'Saint Faustina Kowalska & Divine Mercy Painting', 'Helena Tchórzewska', '20th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-faustina-kowalska_photo.jpg', 'Saint Faustina Kowalska', 'photograph', 'Saint Faustina Kowalska Photograph', NULL, '1931', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-faustina-kowalska_3.jpg', 'Saint Faustina Kowalska & Divine Mercy', 'painting', 'Saint Faustina Kowalska & Divine Mercy Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Bruno
+('/saints/saint-bruno_rosa.jpg', 'Saint Bruno', 'painting', 'Saint Bruno Painting', 'Salvator Rosa', '17th Century', 'Complesso di santa Caterina', NULL, 'Public Domain', NULL),
+('/saints/saint-bruno_marchesi.jpg', 'Saint Bruno', 'painting', 'Saint Bruno Painting', 'Girolamo Marchesi', '1525', 'Walters Art Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-bruno_mignard.jpg', 'Saint Bruno', 'painting', 'Saint Bruno Painting', 'Nicolas Mignard', '1638', 'Calvet Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-bruno_lesueur.jpg', 'The Death of Saint Bruno', 'painting', 'The Death of Saint Bruno Painting', 'Eustache Le Sueur', '1645-1648', 'Musée du Louvre', NULL, 'Public Domain', NULL),
+
+-- Saint Denis
+('/saints/saint-denis.jpg', 'Saint Denis', 'painting', 'Saint Denis Painting', NULL, '17th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-denis_vien.jpg', 'Saint Denis Preaching in Gaul', 'painting', 'Saint Denis Preaching in Gaul Painting', 'Joseph-Marie Vien', '1767', 'Church of Saint-Roch (Paris)', NULL, 'Public Domain', NULL),
+('/saints/saint-denis-&-companions_bourdichon.jpg', 'Saint Denis & Companions', 'illumination', 'Saint Denis & Companions Illumination', 'Jean Bourdichon', '1475-1500', 'Bibliothèque nationale de France', NULL, 'Public Domain', NULL),
+('/saints/saint-denis-&-companions_bonnat_martyr.jpg', 'The Martyrdom of Saint Denis & Companions', 'painting', 'The Martyrdom of Saint Denis & Companions Painting', 'Léon Bonnat', '1880', 'Panthéon (Paris)', NULL, 'Public Domain', NULL),
+
+-- Saint John Leonardi
+('/saints/saint-john-leonardi.jpg', 'Saint John Leonardi', 'painting', 'Saint John Leonardi Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-leonardi_2.jpg', 'Saint John Leonardi', 'painting', 'Saint John Leonardi Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-leonardi_3.webp', 'Saint John Leonardi', 'painting', 'Saint John Leonardi Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-leonardi_4.jpg', 'Saint John Leonardi', 'painting', 'Saint John Leonardi Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint John Henry Newman
+('/saints/saint-john-henry-newman_millais.jpg', 'Saint John Henry Newman', 'painting', 'Saint John Henry Newman Painting', 'John Everett Millais', '1881', 'National Portrait Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-john-henry-newman_photo.gif', 'Saint John Henry Newman', 'photograph', 'Saint John Henry Newman Photograph', NULL, '1887', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-henry-newman.jpg', 'Saint John Henry Newman', 'painting', 'Saint John Henry Newman Painting', NULL, NULL, 'a Church in Rome', NULL, 'Public Domain', NULL),
+
+-- Saint John XXIII
+('/saints/saint-john-xxiii.jpg', 'Saint John XXIII', 'painting', 'Saint John XXIII Painting', 'Kurt Wenner', '2022', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-xxiii_photo.jpg', 'Saint John XXIII', 'photograph', 'Saint John XXIII Photograph', 'Fotografia Felici', '1959-1962', 'Catholic News Service', NULL, 'Public Domain', NULL),
+('/saints/saint-john-xxiii_photo_2.jpg', 'Saint John XXIII', 'photograph', 'Saint John XXIII Photograph', NULL, '1958-1963', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Callistus I
+('/saints/saint-callistus-i.jpg', 'Saint Callistus I', 'engraving', 'Saint Callistus I Engraving', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-callistus-i_2.jpg', 'Saint Callistus I', 'fresco', 'Saint Callistus I Fresco', NULL, NULL, 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
+('/saints/saint-callistus-i_3.jpg', 'Saint Callistus I', 'illustration', 'Saint Callistus I Illustration', 'Giovanni Battista de'' Cavalieri', '1580', 'Book : "Pontificum Romanorum effigies"', NULL, 'CC0 1.0 Universal', NULL),
+
+-- Saint Teresa of Jesus (Teresa of Ávila)
+('/saints/saint-teresa-of-jesus_cagnacci.jpg', 'Saint Teresa of Jesus', 'painting', 'Saint Teresa of Jesus Painting', 'Guido Cagnacci', '1645', 'Private Collection', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-jesus_murillo.jpg', 'Saint Teresa of Jesus', 'painting', 'Saint Teresa of Jesus Painting', 'Bartolomé Esteban Murillo', '1650', 'Museo de Bellas Artes de Gran Canaria', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-jesus_bazzani.jpg', 'The Ecstasy of Saint Teresa of Jesus', 'painting', 'The Ecstasy of Saint Teresa of Jesus Painting', 'Giuseppe Bazzani', '1745-1750', 'Museum of Fine Arts (Budapest)', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-jesus_balaca.jpg', 'Saint Teresa of Jesus', 'painting', 'Saint Teresa of Jesus Painting', 'Eduardo Balaca', '1877', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-jesus_rubens.jpg', 'Saint Teresa of Avila''s Vision of the Dove', 'painting', 'Saint Teresa of Avila''s Vision of the Dove Painting', 'Peter Paul Rubens', '1614-1635', 'Fitzwilliam Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-jesus_rubens_2.jpg', 'Saint Teresa of Jesus', 'painting', 'Saint Teresa of Jesus Painting', 'Peter Paul Rubens', '1615', 'Kunsthistorisches Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-jesus_batoni.jpg', 'Transverberation of Saint Teresa of Jesus', 'painting', 'Transverberation of Saint Teresa of Jesus Painting', 'Pompeo Batoni', '1743', 'Museo nazionale di Villa Guinigi', NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-jesus_vien.jpg', 'Saint Teresa of Jesus', 'painting', 'Saint Teresa of Jesus Painting', 'Joseph-Marie Vien', '18th century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-teresa-of-jesus_gerard.jpg', 'Saint Teresa of Jesus', 'painting', 'Saint Teresa of Jesus Painting', 'François Gérard', '1827', 'Infirmerie Marie-Thérèse (Paris)', NULL, 'Public Domain', NULL),
+
+-- Saint Hedwig
+('/saints/saint-hedwig.jpg', 'Saint Hedwig', 'illustration', 'Saint Hedwig Illustration', NULL, '1353', 'Schlackenwerther Codex', NULL, 'Public Domain', NULL),
+('/saints/saint-hedwig_2.jpg', 'Saint Hedwig', 'illustration', 'Saint Hedwig Illustration', NULL, '20th century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-hedwig_3.jpg', 'Saint Hedwig', 'illustration', 'Saint Hedwig Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-hedwig_4.jpg', 'Saint Hedwig', 'painting', 'Saint Hedwig Painting', 'Wojciech Gerson', '1861', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-hedwig_5.jpg', 'Saint Hedwig', 'painting', 'Saint Hedwig Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-hedwig_6.jpg', 'Saint Hedwig', 'illustration', 'Saint Hedwig Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Margaret Mary Alacoque
+('/saints/saint-margaret-mary-alacoque.jpg', 'Saint Margaret Mary Alacoque', 'painting', 'Saint Margaret Mary Alacoque Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-margaret-mary-alacoque_2.jpg', 'Saint Margaret Mary Alacoque', 'painting', 'Saint Margaret Mary Alacoque Painting', NULL, '19th Century', 'Monastery of Paray-le-Monial', NULL, 'Public Domain', NULL),
+('/saints/saint-margaret-mary-alacoque_3.jpg', 'Saint Margaret Mary Alacoque Vision of Sacred Heart', 'painting', 'Saint Margaret Mary Alacoque Vision of Sacred Heart Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Ignatius of Antioch
+('/saints/saint-ignatius-antioch.jpg', 'The Martyrdom of Saint Ignatius of Antioch', 'painting', 'The Martyrdom of Saint Ignatius of Antioch Painting', NULL, '17th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-ignatius-antioch_2.jpg', 'The Martyrdom of Saint Ignatius of Antioch', 'painting', 'The Martyrdom of Saint Ignatius of Antioch Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-ignatius-antioch_3.jpg', 'Saint Ignatius of Antioch', 'icon', 'Saint Ignatius of Antioch Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Luke, Evangelist
+('/saints/saint-luke_reni.jpg', 'Saint Luke the Evangelist', 'painting', 'Saint Luke the Evangelist Painting', 'Guido Reni', '1621', 'Bob Jones University (USA)', NULL, 'Public Domain', NULL),
+('/saints/saint-luke_borovikovsky.jpg', 'Saint Luke the Evangelist', 'painting', 'Saint Luke the Evangelist Painting', 'Vladimir Borovikovsky', '1804-1809', 'State Russian Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-luke_hals.jpg', 'Saint Luke the Evangelist', 'painting', 'Saint Luke the Evangelist Painting', 'Frans Hals', '1625', 'Odesa Museum of Western and Eastern Art', NULL, 'Public Domain', NULL),
+('/saints/saint-luke_weyden.jpg', 'Saint Luke Drawing the Virgin', 'painting', 'Saint Luke Drawing the Virgin Painting', 'Rogier van der Weyden', '1435-1440', 'Museum of Fine Arts (Boston)', NULL, 'Public Domain', NULL),
+('/saints/saint-luke_guercino.jpg', 'Saint Luke Displaying a Painting of the Virgin', 'painting', 'Saint Luke Displaying a Painting of the Virgin Painting', 'Il Guercino', '1652-1653', 'Nelson-Atkins Museum of Art', NULL, 'Public Domain', NULL),
+
+-- Saint John de Brébeuf
+('/saints/saint-john-de-brebeuf.jpg', 'Saint John de Brébeuf', 'painting', 'Saint John de Brébeuf Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-de-brebeuf_thwaites.jpg', 'Saint John de Brébeuf', 'illustration', 'Saint John de Brébeuf Illustration', 'Reuben Gold Thwaites', '1897', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-de-brebeuf-&-companions.png', 'Saint John de Brébeuf & Companions', 'illustration', 'Saint John de Brébeuf & Companions Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Paul of the Cross
+('/saints/saint-paul-of-the-cross.jpg', 'Saint Paul of the Cross', 'painting', 'Saint Paul of the Cross Painting', NULL, NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL),
+('/saints/saint-paul-of-the-cross_2.jpg', 'Saint Paul of the Cross', 'painting', 'Saint Paul of the Cross Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-paul-of-the-cross_3.jpg', 'Saint Paul of the Cross', 'painting', 'Saint Paul of the Cross Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-paul-of-the-cross_4.jpg', 'Saint Paul of the Cross', 'painting', 'Saint Paul of the Cross Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint John Paul II
+('/saints/saint-john-paul-ii_bobnick_no-watermark.jpg', 'Saint John Paul II', 'painting', 'Saint John Paul II Painting', 'Dick Bobnick', '2015', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-paul-ii_babailov.jpg', 'Saint John Paul II', 'painting', 'Saint John Paul II Painting', 'Igor Babailov', '21th Century', 'Palace of Castel Gandolfo', NULL, 'Public Domain', NULL),
+('/saints/saint-john-paul-ii.jpg', 'Saint John Paul II', 'photograph', 'Saint John Paul II Photograph', 'Grzegorz Gałązka', NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-paul-ii_2.jpg', 'Saint John Paul II', 'photograph', 'Saint John Paul II Photograph', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-paul-ii_tsarkova.jpg', 'Saint John Paul II', 'painting', 'Saint John Paul II Painting', 'Natalia Tsarkova', '2006', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-paul-ii_tsarkova_2.jpg', 'Saint John Paul II', 'painting', 'Saint John Paul II Painting', 'Natalia Tsarkova', '2000', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint John of Capistrano
+('/saints/saint-john-of-capistrano_del-arco.jpg', 'Saint John of Capistrano', 'painting', 'Saint John of Capistrano Painting', 'Alonso del Arco', '17th Century', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-john-of-capistrano_grassi.jpg', 'Saint John of Capistrano', 'painting', 'Saint John of Capistrano Painting', 'Nicolò Grassi', NULL, 'San Francesco della Vigna (Venice)', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
+('/saints/saint-john-of-capistrano.jpg', 'Saint John of Capistrano', 'illumination', 'Saint John of Capistrano Illumination', NULL, '1470-1480', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Anthony Mary Claret
+('/saints/saint-anthony-mary-claret.jpg', 'Saint Anthony Mary Claret', 'painting', 'Saint Anthony Mary Claret Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-anthony-mary-claret_madrazo.jpg', 'Saint Anthony Mary Claret', 'painting', 'Saint Anthony Mary Claret Painting', 'Luis de Madrazo', '19th century', 'Museum of Romanticism (Madrid)', NULL, 'Public Domain', NULL),
+('/saints/saint-anthony-mary-claret_pujadas.jpg', 'Saint Anthony Mary Claret', 'photograph', 'Saint Anthony Mary Claret Photograph', 'Bernardo Pujadas', '1860', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Simon, Apostle
+('/saints/saint-simon-apostle_rubens.jpg', 'Saint Simon the Apostle', 'painting', 'Saint Simon Apostle Painting', 'Peter Paul Rubens', '1611', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-simon-apostle_dyck.jpg', 'Saint Simon the Apostle', 'painting', 'Saint Simon Apostle Painting', 'Anthony van Dyck', '1619-1621', 'Kunsthistorisches Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-simon-apostle_dyck_2.jpg', 'Saint Simon the Apostle', 'painting', 'Saint Simon Apostle Painting', 'Anthony van Dyck', '1618-1620', 'Staatliche Kunstsammlungen Dresden', NULL, 'Public Domain', NULL),
+('/saints/saint-simon-apostle_rembrandt.jpg', 'Saint Simon the Apostle', 'painting', 'Saint Simon Apostle Painting', 'Rembrandt', '1661', 'Kunsthaus Zürich', NULL, 'Public Domain', NULL),
+('/saints/saint-simon-apostle_ribera.jpg', 'Saint Simon the Apostle', 'painting', 'Saint Simon Apostle Painting', 'Jusepe de Ribera', '1630-1635', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-simon-apostle_zurbaran.jpg', 'Saint Simon the Apostle', 'painting', 'Saint Simon Apostle Painting', 'Francisco de Zurbarán', '1633', 'National Museum of Ancient Art (Lisbon)', NULL, 'Public Domain', NULL),
+('/saints/saint-simon-apostle-&-jude-apostle_schmidt_martyr.jpg', 'The Martyrdom of Saint Simon and Saint Jude', 'painting', 'The Martyrdom of Saint Simon and Saint Jude Painting', 'Martin Johann Schmidt', '1796', 'Spencer Museum of Art (USA)', NULL, 'Public Domain', NULL),
+
+-- Saint Jude, Apostle
+('/saints/saint-jude-apostle_dyck.jpg', 'Saint Jude the Apostle', 'painting', 'Saint Jude Apostle Painting', 'Anthony van Dyck', '1619-1621', 'Kunsthistorisches Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-jude-apostle_dyck_2.jpg', 'Saint Jude the Apostle', 'painting', 'Saint Jude Apostle Painting', 'Anthony van Dyck', '1618-1620', 'Museums of Metz (from Musée du Louvre)', NULL, 'Public Domain', NULL),
+('/saints/saint-jude-apostle_ribera.jpg', 'Saint Jude the Apostle', 'painting', 'Saint Jude Apostle Painting', 'Jusepe de Ribera', '1630-1635', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-jude-apostle_la-tour.jpg', 'Saint Jude the Apostle', 'painting', 'Saint Jude Apostle Painting', 'Georges de La Tour', '1620', 'Musée Toulouse-Lautrec', NULL, 'Public Domain', NULL),
+('/saints/saint-jude-apostle_zurbaran.jpg', 'Saint Jude the Apostle', 'painting', 'Saint Jude Apostle Painting', 'Francisco de Zurbarán', '1633', 'National Museum of Ancient Art (Lisbon)', NULL, 'Public Domain', NULL),
+-- NOTE: saint-simon-apostle-&-jude-apostle_schmidt_martyr.jpg already inserted above (Saint Simon)
+
+-- =========================
+-- November saints
+-- =========================
+
+-- Saint Martin de Porres
+('/saints/saint-martin-de-porres_briggs.jpg', 'Saint Martin de Porres', 'painting', 'Saint Martin de Porres Painting', 'Gwyneth Thompson Briggs', '21th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-martin-de-porres.jpg', 'Saint Martin de Porres', 'illustration', 'Saint Martin de Porres Illustration', NULL, NULL, NULL, NULL, 'Attribution-ShareAlike 3.0 Unported', NULL),
+('/saints/saint-martin-de-porres_warford.jpg', 'Saint Martin de Porres', 'painting', 'Saint Martin de Porres Painting', 'John Alan Warford', NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-martin-de-porres_2.jpg', 'Saint Martin de Porres', 'painting', 'Saint Martin de Porres Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Charles Borromeo
+('/saints/saint-charles-borromeo_borgianni.jpg', 'Saint Charles Borromeo', 'painting', 'Saint Charles Borromeo Painting', 'Orazio Borgianni', '1610', 'Hermitage Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-charles-borromeo_figino.jpg', 'Saint Charles Borromeo', 'painting', 'Saint Charles Borromeo Painting', 'Giovanni Ambrogio Figino', '1575-1599', 'Pinacoteca Ambrosiana', NULL, 'Public Domain', NULL),
+('/saints/saint-charles-borromeo_tiepolo.jpg', 'Saint Charles Borromeo', 'painting', 'Saint Charles Borromeo Painting', 'Giambattista Tiepolo', '1767-1769', 'Cincinnati Art Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-charles-borromeo_gherardi.jpg', 'Saint Charles Borromeo giving Communion to Plague Victims', 'painting', 'Saint Charles Borromeo giving Communion to Plague Victims Painting', 'Antonio Gherardi', '17th Century', 'Moretti Fine Art (Paris)', NULL, 'Public Domain', NULL),
+('/saints/saint-charles-borromeo_borgianni_2.jpg', 'Saint Charles Borromeo', 'painting', 'Saint Charles Borromeo Painting', 'Orazio Borgianni', '1611-1612', 'San Carlo alle Quattro Fontane (Rome)', NULL, 'Public Domain', NULL),
+
+-- Saint Leo the Great
+('/saints/saint-leo-the-great_el-mozo.jpg', 'Saint Leo the Great', 'painting', 'Saint Leo the Great Painting', 'Francisco Herrera the Younger', '17th Century', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-leo-the-great.webp', 'Saint Leo the Great', 'painting', 'Saint Leo the Great Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-leo-the-great_2.jpg', 'Saint Leo the Great', 'mosaic', 'Saint Leo the Great Mosaic', NULL, '19th Century', 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
+
+-- Saint Martin of Tours
+('/saints/saint-martin-of-tours_martini.jpg', 'Saint Martin of Tours', 'fresco', 'Saint Martin of Tours Fresco', 'Simone Martini', '1322-1326', 'Lower Basilica of San Francesco', NULL, 'Public Domain', NULL),
+('/saints/saint-martin-of-tours_dyck.jpg', 'Saint Martin Sharing his Cloak with a Beggar', 'painting', 'Saint Martin Sharing his Cloak with a Beggar Painting', 'Anthony van Dyck', '1621', 'Church of Saint Martin (Zaventem)', NULL, 'Public Domain', NULL),
+('/saints/saint-martin-of-tours_maes.jpg', 'Saint Martin Raising a Man from the Dead', 'painting', 'Saint Martin Raising a Man from the Dead Painting', 'Godfried Maes', '1687', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-martin-of-tours.jpg', 'Saint Martin of Tours', 'painting', 'Saint Martin of Tours Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Josaphat
+('/saints/saint-josaphat_azovskyj.jpg', 'Saint Josaphat', 'painting', 'Saint Josaphat Painting', 'Mykola Azovskyj', '1946', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-josaphat_simmler_martyr.jpg', 'The Martyrdom of Saint Josaphat', 'painting', 'The Martyrdom of Saint Josaphat Painting', 'Józef Simmler', '1861', 'National Museum in Warsaw', NULL, 'Public Domain', NULL),
+('/saints/saint-josaphat_icon.jpg', 'Saint Josaphat', 'icon', 'Saint Josaphat Icon', NULL, NULL, NULL, NULL, 'Attribution-ShareAlike 4.0 International', NULL),
+
+-- Saint Albert the Great
+('/saints/saint-albert-the-great_gomez.jpg', 'Saint Albert the Great', 'painting', 'Saint Albert the Great Painting', 'Vicente Salvador Gómez', '1660', 'Museu de Belles Arts de València', NULL, 'Public Domain', NULL),
+('/saints/saint-albert-the-great.jpg', 'Saint Albert the Great', 'painting', 'Saint Albert the Great Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-albert-the-great-&-thomas-aquinas.jpg', 'Saint Albert the Great & Saint Thomas Aquinas', 'painting', 'Saint Albert the Great & Saint Thomas Aquinas Painting', 'Alonso Antonio Villamor', NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Margaret of Scotland
+('/saints/saint-margaret-of-scotland_largillierre.jpg', 'Saint Margaret of Scotland', 'painting', 'Saint Margaret of Scotland Painting', 'Nicolas de Largillierre', '1692', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-margaret-of-scotland_hole.jpg', 'The Landing of Saint Margaret at Queensferry', 'painting', 'The Landing of Saint Margaret at Queensferry Painting', 'William Hole', '1899', 'Scottish National Portrait Gallery', NULL, 'Attribution-ShareAlike 3.0 Unported', NULL),
+('/saints/saint-margaret-of-scotland.jpg', 'Saint Margaret of Scotland', 'illustration', 'Saint Margaret of Scotland Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Gertrude
+('/saints/saint-gertrude_cabrera.jpg', 'Saint Gertrude', 'painting', 'Saint Gertrude Painting', 'Miguel Cabrera', '1763', 'Dallas Museum of Art', NULL, 'Public Domain', NULL),
+('/saints/saint-gertrude.jpg', 'Saint Gertrude', 'painting', 'Saint Gertrude Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-gertrude_2.jpg', 'Saint Gertrude', 'painting', 'Saint Gertrude Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Elizabeth of Hungary
+('/saints/saint-elizabeth-of-hungary_martini.jpg', 'Saint Elizabeth of Hungary', 'fresco', 'Saint Elizabeth of Hungary Fresco', 'Simone Martini', '1322-1326', 'Lower Basilica of San Francesco', NULL, 'Public Domain', NULL),
+('/saints/saint-elizabeth-of-hungary_leighton.jpg', 'The Charity of Saint Elizabeth of Hungary', 'painting', 'The Charity of Saint Elizabeth of Hungary Painting', 'Edmund Blair Leighton', '1895', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-elizabeth-of-hungary_collins.webp', 'The Devout Childhood of Saint Elizabeth of Hungary', 'painting', 'The Devout Childhood of Saint Elizabeth of Hungary Painting', 'Charles Alston Collins', '1852', 'Detroit Institute of Arts', NULL, 'Public Domain', NULL),
+('/saints/saint-elizabeth-of-hungary_stokes.jpg', 'Saint Elizabeth of Hungary', 'painting', 'Saint Elizabeth of Hungary Painting', 'Marianne Stokes', '1920', 'Art Gallery of New South Wales (Sydney)', NULL, 'CC0 1.0 Universal', NULL),
+
+-- Saint Cecilia
+('/saints/saint-cecilia_reni.jpg', 'Saint Cecilia', 'painting', 'Saint Cecilia Painting', 'Guido Reni', '1606', 'Norton Simon Museum (Los Angeles)', NULL, 'Public Domain', NULL),
+('/saints/saint-cecilia_guercino.jpg', 'Saint Cecilia', 'painting', 'Saint Cecilia Painting', 'Il Guercino', '1649', 'Dulwich Picture Gallery', NULL, 'Public Domain', NULL),
+('/saints/saint-cecilia_paelinck-horgnies.jpg', 'Saint Cecilia', 'painting', 'Saint Cecilia Painting', 'Fanny Paelinck-Horgnies', '1829', 'Museum of Fine Arts (Ghent)', NULL, 'Public Domain', NULL),
+('/saints/saint-cecilia_gentileschi-&-lanfranco.jpg', 'Saint Cecilia', 'painting', 'Saint Cecilia Painting', 'Orazio Gentileschi & Giovanni Lanfranco', '1617-1627', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL),
+('/saints/saint-cecilia_raphael.jpg', 'The Ecstasy of Saint Cecilia', 'painting', 'The Ecstasy of Saint Cecilia Painting', 'Raphael', '1514', 'Pinacoteca Nazionale di Bologna', NULL, 'Public Domain', NULL),
+('/saints/saint-cecilia_saraceni_martyr.jpg', 'The Martyrdom of Saint Cecilia', 'painting', 'The Martyrdom of Saint Cecilia Painting', 'Carlo Saraceni', '1610', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-cecilia_madrazo.jpg', 'The Burial of Saint Cecilia', 'painting', 'The Burial of Saint Cecilia Painting', 'Luis de Madrazo', '1852', 'Museo del Prado', NULL, 'Public Domain', NULL),
+
+-- Saint Clement I
+('/saints/saint-clement-i_fresco.jpg', 'Saint Clement I', 'fresco', 'Saint Clement I Fresco', NULL, '5th Century', 'Santa Maria Antiqua Church', NULL, 'CC0 1.0 Universal', NULL),
+('/saints/saint-clement-i.jpg', 'Saint Clement I', 'painting', 'Saint Clement I Painting', NULL, '19th Century', 'Papal Basilica of Saint Paul Outside the Walls', NULL, 'Public Domain', NULL),
+('/saints/saint-clement-i_mosaic.jpg', 'Saint Clement I', 'mosaic', 'Saint Clement I Mosaic', NULL, '11th Century', 'Saint Sophia Cathedral (Kyiv)', NULL, 'Public Domain', NULL),
+('/saints/saint-clement-i_tiepolo.jpg', 'Saint Clement I Vision of the Trinity', 'painting', 'Saint Clement I Vision of the Trinity Painting', 'Giambattista Tiepolo', '1730-1735', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-clement-i_montor.jpg', 'Saint Clement I', 'illustration', 'Saint Clement I Illustration', 'Alexis-François Artaud de Montor', '1842', 'Book : "The Lives and Times of the Popes"', NULL, 'Public Domain', NULL),
+
+-- Saint Columban
+('/saints/saint-columban.jpg', 'Saint Columban', 'illustration', 'Saint Columban Illustration', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-columban_stained-glass.jpg', 'Saint Columban', 'stained_glass', 'Saint Columban Stained Glass', NULL, '19th Century', 'Bobbio Abbey', NULL, 'Public Domain', NULL),
+
+-- Saint Andrew Dung-Lac
+('/saints/saint-andrew-dung-lac_stained-glass.jpg', 'Saint Andrew Dung-Lac', 'stained_glass', 'Saint Andrew Dung-Lac Stained Glass', NULL, NULL, 'Saint Paul Catholic Church (Westerville, Ohio)', NULL, 'Attribution-ShareAlike 3.0 Unported', NULL),
+('/saints/saint-andrew-dung-lac-&-companions.jpg', 'Saint Andrew Dung-Lac & Companions', 'mosaic', 'Saint Andrew Dung-Lac & Companions Mosaic', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-dung-lac_warford.jpg', 'Saint Andrew Dung-Lac', 'painting', 'Saint Andrew Dung-Lac Painting', 'John Alan Warford', '21th Century', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Catherine of Alexandria
+('/saints/saint-catherine-of-alexandria_caravaggio.jpg', 'Saint Catherine of Alexandria', 'painting', 'Saint Catherine of Alexandria Painting', 'Caravaggio', '1598', 'Thyssen-Bornemisza Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-catherine-of-alexandria_raphael.jpg', 'Saint Catherine of Alexandria', 'painting', 'Saint Catherine of Alexandria Painting', 'Raphael', '1507-1509', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-catherine-of-alexandria_crivelli.jpg', 'Saint Catherine of Alexandria', 'painting', 'Saint Catherine of Alexandria Painting', 'Carlo Crivelli', '1470', 'Polo museale di San Francesco', NULL, 'Public Domain', NULL),
+('/saints/saint-catherine-of-alexandria_murillo.jpg', 'Saint Catherine of Alexandria', 'painting', 'Saint Catherine of Alexandria Painting', 'Bartolomé Esteban Murillo', '1650', 'Museum of Fine Arts of Seville', NULL, 'Public Domain', NULL),
+('/saints/saint-catherine-of-alexandria_guinet.jpg', 'Saint Catherine of Alexandria', 'painting', 'Saint Catherine of Alexandria Painting', 'Claude Guinet', '1507', 'Museum of Fine Arts of Lyon', NULL, 'Public Domain', NULL),
+('/saints/saint-catherine-of-alexandria_gentileschi.jpg', 'Saint Catherine of Alexandria', 'painting', 'Saint Catherine of Alexandria Painting', 'Artemisia Gentileschi', '1620', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-catherine-of-alexandria_gentileschi_2.jpg', 'Self Portrait of Artemisia Gentileschi as Saint Catherine', 'painting', 'Self Portrait of Artemisia Gentileschi as Saint Catherine Painting', 'Artemisia Gentileschi', '1616', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-catherine-of-alexandria_farinati_martyr.jpg', 'The Martyrdom of Saint Catherine of Alexandria', 'painting', 'The Martyrdom of Saint Catherine of Alexandria Painting', 'Paolo Farinati', '1579', 'Museum of Fine Arts (Budapest)', NULL, 'Public Domain', NULL),
+('/saints/saint-catherine-of-alexandria_lehmann.jpg', 'The Translation of the Body of Saint Catherine of Alexandria', 'painting', 'The Translation of the Body of Saint Catherine of Alexandria Painting', 'Henri Lehmann', '1839', 'Musée Fabre', NULL, 'Public Domain', NULL),
+
+-- Saint Andrew, Apostle
+('/saints/saint-andrew-apostle_rubens.jpg', 'Saint Andrew the Apostle', 'painting', 'Saint Andrew Apostle Painting', 'Peter Paul Rubens', '1611', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-apostle_dyck.jpg', 'Saint Andrew the Apostle', 'painting', 'Saint Andrew Apostle Painting', 'Anthony van Dyck', '17th Century', 'Museo de Arte de Ponce', NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-apostle_ribera.jpg', 'Saint Andrew the Apostle', 'painting', 'Saint Andrew Apostle Painting', 'Jusepe de Ribera', '17th Century', 'Museo de Arte de Ponce', NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-apostle_tournier.jpg', 'Saint Andrew the Apostle', 'painting', 'Saint Andrew Apostle Painting', 'Nicolas Tournier', '17th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-apostle_zurbaran.jpg', 'Saint Andrew the Apostle', 'painting', 'Saint Andrew Apostle Painting', 'Francisco de Zurbarán', '1633', 'National Museum of Ancient Art (Lisbon)', NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-apostle_loo.jpg', 'Saint Andrew the Apostle', 'painting', 'Saint Andrew Apostle Painting', 'Charles André van Loo', '18th Century', 'Musée des Beaux-Arts d''Angers', NULL, 'Public Domain', NULL),
+('/saints/saint-andrew-apostle_murillo_martyr.jpg', 'The Martyrdom of Saint Andrew the Apostle', 'painting', 'The Martyrdom of Saint Andrew Apostle Painting', 'Bartolomé Esteban Murillo', '1675-1682', 'Museo del Prado', NULL, 'Public Domain', NULL),
+
+-- =========================
+-- December saints
+-- =========================
+
+-- Saint Francis Xavier
+('/saints/saint-francis-xavier_murillo.jpg', 'Saint Francis Xavier', 'painting', 'Saint Francis Xavier Painting', 'Bartolomé Esteban Murillo', '1670', 'Wadsworth Atheneum', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-xavier_dyck.jpg', 'Saint Francis Xavier', 'painting', 'Saint Francis Xavier Painting', 'Anthony van Dyck', '1630', 'Pinacoteca Vaticana', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-xavier_rubens.jpg', 'The Miracles of Saint Francis Xavier', 'painting', 'The Miracles of Saint Francis Xavier Painting', 'Peter Paul Rubens', '1617-1618', 'Kunsthistorisches Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-francis-xavier_poussin.jpg', 'The Miracle of Saint Francis Xavier', 'painting', 'The Miracle of Saint Francis Xavier Painting', 'Nicolas Poussin', '1641-1642', 'Musée du Louvre', NULL, 'Public Domain', NULL),
+
+-- Saint John Damascene
+('/saints/saint-john-damascene.jpg', 'Saint John Damascene', 'icon', 'Saint John Damascene Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-damascene_homsi.gif', 'Saint John Damascene', 'icon', 'Saint John Damascene Icon', 'Ne''meh Naser Homsi', '19th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-damascene_2.jpg', 'Saint John Damascene', 'icon', 'Saint John Damascene Icon', NULL, '14th Century', 'Mount Athos', NULL, 'Public Domain', NULL),
+('/saints/saint-john-damascene_3.jpg', 'Saint John Damascene', 'illustration', 'Saint John Damascene Illustration', 'Francesco Bartolozzi', '1762', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Nicholas
+('/saints/saint-nicholas_cermak.jpg', 'Saint Nicholas', 'painting', 'Saint Nicholas Painting', 'Jaroslav Čermák', '19th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-nicholas_moretto.jpg', 'Saint Nicholas of Bari presents the Rovelli students to Madonna and Child', 'painting', 'Saint Nicholas of Bari presents the Rovelli students to Madonna and Child Painting', 'Moretto da Brescia', '1539', 'Pinacoteca Tosio Martinengo', NULL, 'Public Domain', NULL),
+('/saints/saint-nicholas_bourdichon.jpg', 'Saint Nicholas Resurrecting the three Butchered Children', 'illustration', 'Saint Nicholas Resurrecting the three Butchered Children Illustration', 'Jean Bourdichon', '1503-1508', 'Les Grandes Heures d''Anne de Bretagne', NULL, 'Public Domain', NULL),
+('/saints/saint-nicholas_icon.jpg', 'Saint Nicholas', 'icon', 'Saint Nicholas Icon', 'Aleksa Petrov', '1294', 'Lipno Church', NULL, 'Public Domain', NULL),
+('/saints/saint-nicholas_titian.jpg', 'Saint Nicholas', 'painting', 'Saint Nicholas Painting', 'Titian', '1563', 'Chiesa di San Sebastiano (Venice)', NULL, 'Public Domain', NULL),
+('/saints/saint-nicholas_repin.jpg', 'Saint Nicholas of Myra saves Three Innocents from Death', 'painting', 'Saint Nicholas of Myra saves Three Innocents from Death Painting', 'Ilya Repin', '1888', 'State Russian Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-nicholas_domenichino_grottaferrata.jpg', 'Saint Nicholas', 'fresco', 'Saint Nicholas Fresco', 'Domenichino', '1609-1612', 'Grottaferata Abbey', NULL, 'Public Domain', NULL),
+('/saints/saint-nicholas_giordano.jpg', 'Saint Nicholas of Bari Saves the Young Cupbearer', 'painting', 'Saint Nicholas of Bari Saves the Young Cupbearer Painting', 'Luca Giordano', '1655', 'Santa Brigida (Naples)', NULL, 'Public Domain', NULL),
+
+-- Saint Ambrose
+('/saints/saint-ambrose_goya.jpg', 'Saint Ambrose', 'painting', 'Saint Ambrose Painting', 'Francisco Goya', '1796-1799', 'Cleveland Museum of Art', NULL, 'Public Domain', NULL),
+('/saints/saint-ambrose_vignon.jpg', 'Saint Ambrose', 'painting', 'Saint Ambrose Painting', 'Claude Vignon', '1623-1625', 'Minneapolis Institute of Art', NULL, 'Public Domain', NULL),
+('/saints/saint-ambrose_dyck.jpg', 'Saint Ambrose barring Theodosius from Milan Cathedral', 'painting', 'Saint Ambrose barring Theodosius from Milan Cathedral Painting', 'Anthony van Dyck', '1619-1620', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-ambrose_subleyras.jpg', 'Saint Ambrose Absolving Theodosius', 'painting', 'Saint Ambrose Absolving Theodosius Painting', 'Pierre Subleyras', '1745', 'Galleria Nazionale dell''Umbria', NULL, 'Public Domain', NULL),
+('/saints/saint-ambrose_mosaic.jpg', 'Saint Ambrose', 'mosaic', 'Saint Ambrose Mosaic', NULL, '1140', 'Palazzo dei Normanni', NULL, 'Public Domain', NULL),
+('/saints/saint-ambrose_mosaic_2.jpg', 'Saint Ambrose', 'mosaic', 'Saint Ambrose Mosaic', NULL, '4th Century', 'Basilica of Sant''Ambrogio', NULL, 'Public Domain', NULL),
+
+-- Saint Juan Diego Cuauhtlatoatzin
+('/saints/saint-juan-diego-cuauhtlatoatzin_berzosa.jpg', 'Saint Juan Diego Cuauhtlatoatzin', 'painting', 'Saint Juan Diego Cuauhtlatoatzin Painting', 'Raúl Berzosa', '2016', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-juan-diego-cuauhtlatoatzin_cabrera.jpg', 'Saint Juan Diego Cuauhtlatoatzin', 'painting', 'Saint Juan Diego Cuauhtlatoatzin Painting', 'Miguel Cabrera', '1752', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-juan-diego-cuauhtlatoatzin_cabrera_2.jpg', 'Saint Juan Diego Cuauhtlatoatzin', 'painting', 'Saint Juan Diego Cuauhtlatoatzin Painting', 'Miguel Cabrera', '18th century', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Damasus I
+('/saints/saint-damasus-i_lithography.jpg', 'Saint Damasus I', 'illustration', 'Saint Damasus I Illustration', 'Pedro Augusto Guglielmi', '1840', 'Biblioteca Nacional de Portugal', NULL, 'Public Domain', NULL),
+('/saints/saint-damasus-i_cavalieri.jpg', 'Saint Damasus I', 'illustration', 'Saint Damasus I Illustration', 'Giovanni Battista de'' Cavalieri', '1580', 'Book : "Pontificum Romanorum effigies"', NULL, 'Public Domain', NULL),
+('/saints/saint-damasus-i.jpg', 'Saint Damasus I', 'painting', 'Saint Damasus I Painting', 'Juan Carreño de Miranda', '1685', 'Casa de la Villa (Madrid)', NULL, 'Public Domain', NULL),
+('/saints/saint-damasus-i_engraving.webp', 'Saint Damasus I', 'engraving', 'Saint Damasus I Engraving', 'Tomás Carlos Capuz', '19th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-damasus-i_montor.jpg', 'Saint Damasus I', 'illustration', 'Saint Damasus I Illustration', 'Alexis-François Artaud de Montor', '1842', 'Book : "The Lives and Times of the Popes"', NULL, 'Public Domain', NULL),
+
+-- Saint Lucy
+('/saints/saint-lucy_zurbaran.jpg', 'Saint Lucy', 'painting', 'Saint Lucy Painting', 'Francisco de Zurbarán', '1635-1640', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL),
+('/saints/saint-lucy_pirez.jpg', 'Saint Lucy', 'painting', 'Saint Lucy Painting', 'Álvaro Pires de Évora', '1420', 'Capuchin Convent of Nola', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
+('/saints/saint-lucy_garofalo.jpg', 'Saint Lucy', 'painting', 'Saint Lucy Painting', 'Il Garofalo', '1535-1540', 'Capitoline Museums (Rome)', NULL, 'Public Domain', NULL),
+('/saints/saint-lucy_ricci.jpg', 'Last Communion and Martyrdom of Saint Lucy', 'painting', 'Last Communion and Martyrdom of Saint Lucy Painting', 'Sebastiano Ricci', '1730', 'Santa Lucia Church (Parma)', NULL, 'Public Domain', NULL),
+('/saints/saint-lucy_caravaggio.jpg', 'The Burial of Saint Lucy', 'painting', 'The Burial of Saint Lucy Painting', 'Caravaggio', '1608', 'Santa Lucia al Sepolcro Church (Syracuse)', NULL, 'Public Domain', NULL),
+
+-- Saint John of the Cross
+('/saints/saint-john-of-the-cross_zurbaran.jpg', 'Saint John of the Cross', 'painting', 'Saint John of the Cross Painting', 'Francisco de Zurbarán', '1656', 'Archdiocesan Museum in Katowice', NULL, 'Public Domain', NULL),
+('/saints/saint-john-of-the-cross_bunel.jpg', 'Saint John of the Cross', 'illustration', 'Saint John of the Cross Illustration', 'Michel Bunel', '18th Century', 'Rijksmuseum', NULL, 'Public Domain', NULL),
+('/saints/saint-john-of-the-cross.jpg', 'Saint John of the Cross', 'painting', 'Saint John of the Cross Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Peter Canisius
+('/saints/saint-peter-canisius.jpg', 'Saint Peter Canisius', 'painting', 'Saint Peter Canisius Painting', NULL, '1699', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-peter-canisius_custos.jpg', 'Saint Peter Canisius', 'painting', 'Saint Peter Canisius Painting', 'Dominicus Custos', '1600', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-peter-canisius_2.jpg', 'Saint Peter Canisius', 'painting', 'Saint Peter Canisius Painting', NULL, '1546', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-peter-canisius_3.jpg', 'Saint Peter Canisius', 'painting', 'Saint Peter Canisius Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint John of Kanty
+('/saints/saint-john-of-kanty_kuntze.jpg', 'Miracle of Saint John of Kanty', 'painting', 'Miracle of Saint John of Kanty Painting', 'Tadeusz Kuntze', '1767', 'National Museum in Kraków', NULL, 'Public Domain', NULL),
+('/saints/saint-john-of-kanty.jpg', 'Saint John of Kanty', 'painting', 'Saint John of Kanty Painting', NULL, '18th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-of-kanty_kotsis.jpg', 'Saint John of Kanty before Our Lady', 'painting', 'Saint John of Kanty before Our Lady Painting', 'Aleksander Kotsis', '1865', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Stephen, the First Martyr
+('/saints/saint-stephen-martyr_crivelli.jpg', 'Saint Stephen the First Martyr', 'painting', 'Saint Stephen the First Martyr Painting', 'Carlo Crivelli', '1476', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-stephen-martyr_champaigne_martyr.jpg', 'The Martyrdom of Saint Stephen', 'painting', 'The Martyrdom of Saint Stephen Painting', 'Philippe de Champaigne', '17th Century', 'Private Collection', NULL, 'Public Domain', NULL),
+('/saints/saint-stephen-martyr_rubens.jpg', 'The Stoning of Saint Stephen', 'painting', 'The Stoning of Saint Stephen Painting', 'Peter Paul Rubens', '1616-1617', 'Musée des Beaux-Arts de Valenciennes', NULL, 'Public Domain', NULL),
+('/saints/saint-stephen-martyr_damaskinos.png', 'The Stoning of Saint Stephen', 'painting', 'The Stoning of Saint Stephen Painting', 'Michael Damaskinos', '1591', 'Municipal Gallery of Corfu', NULL, 'Public Domain', NULL),
+('/saints/saint-stephen-martyr_millais.jpg', 'Saint Stephen', 'painting', 'Saint Stephen Painting', 'John Everett Millais', '1895', 'Tate Britain', NULL, 'Public Domain', NULL),
+
+-- Saint John, Apostle and Evangelist
+('/saints/saint-john_rubens.jpg', 'Saint John the Apostle and Evangelist', 'painting', 'Saint John Apostle and Evangelist Painting', 'Peter Paul Rubens', '1610-1612', 'Museo del Prado', NULL, 'Public Domain', NULL),
+('/saints/saint-john_dyck.jpg', 'Saint John the Apostle and Evangelist', 'painting', 'Saint John Apostle and Evangelist Painting', 'Anthony van Dyck', '1618-1620', 'Museum of Fine Arts (Budapest)', NULL, 'Public Domain', NULL),
+('/saints/saint-john_domenichino.jpg', 'Saint John the Apostle and Evangelist', 'painting', 'Saint John Apostle and Evangelist Painting', 'Domenichino', '1621-1629', 'National Gallery (London)', NULL, 'Public Domain', NULL),
+('/saints/saint-john_zurbaran.jpg', 'Saint John the Apostle and Evangelist', 'painting', 'Saint John Apostle and Evangelist Painting', 'Francisco de Zurbarán', '1633', 'National Museum of Ancient Art (Lisbon)', NULL, 'Public Domain', NULL),
+('/saints/saint-john_dolci.jpg', 'Saint John the Apostle and Evangelist', 'painting', 'Saint John Apostle and Evangelist Painting', 'Carlo Dolci', '1647', 'Pushkin State Museum of Fine Arts (Moscow)', NULL, 'Public Domain', NULL),
+('/saints/saint-john_grunewald.jpg', 'Saint John Supporting Saint Mary', 'painting', 'Saint John Supporting Saint Mary Painting', 'Matthias Grünewald', '1512-1516', 'Unterlinden Museum', NULL, 'Public Domain', NULL),
+('/saints/saint-john_hals.jpg', 'Saint John the Apostle and Evangelist', 'painting', 'Saint John Apostle and Evangelist Painting', 'Frans Hals', '1625-1628', 'Getty Center (Los Angeles)', NULL, 'Public Domain', NULL),
+('/saints/saint-john_bosch.jpg', 'Saint John on Patmos', 'painting', 'Saint John on Patmos Painting', 'Hieronymus Bosch', '1489', 'Gemäldegalerie (Berlin)', NULL, 'Public Domain', NULL),
+
+-- The Holy Innocents, Martyrs
+('/saints/holy-innocents_rubens.jpg', 'The Virgin and Child Surrounded by the Holy Innocents', 'painting', 'The Virgin and Child Surrounded by the Holy Innocents Painting', 'Peter Paul Rubens', '1616', 'Musée du Louvre', NULL, 'Public Domain', NULL),
+('/saints/holy-innocents_reni.jpg', 'The Massacre of the Innocents', 'painting', 'The Massacre of the Innocents Painting', 'Guido Reni', '1611', 'Pinacoteca Nazionale di Bologna', NULL, 'Public Domain', NULL),
+('/saints/holy-innocents_cogniet.jpg', 'The Massacre of the Innocents', 'painting', 'The Massacre of the Innocents Painting', 'Léon Cogniet', '1824', 'Musée des Beaux-Arts de Rennes', NULL, 'Public Domain', NULL),
+('/saints/holy-innocents_rubens_2.jpg', 'The Massacre of the Innocents', 'painting', 'The Massacre of the Innocents Painting', 'Peter Paul Rubens', '1609-1611', 'Art Gallery of Ontario', NULL, 'Public Domain', NULL),
+('/saints/holy-innocents_briggs.jpg', 'The Massacre of the Innocents', 'painting', 'The Massacre of the Innocents Painting', 'Gwyneth Thompson Briggs', '2019', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Thomas Becket
+('/saints/saint-thomas-becket.jpg', 'Saint Thomas Becket', 'painting', 'Saint Thomas Becket Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-thomas-becket_francke.jpg', 'The Martyrdom of Saint Thomas Becket', 'painting', 'The Martyrdom of Saint Thomas Becket Painting', 'Master Francke', '1426', 'Hamburger Kunsthalle', NULL, 'Public Domain', NULL),
+('/saints/saint-thomas-becket_2.jpg', 'The Martyrdom of Saint Thomas Becket', 'painting', 'The Martyrdom of Saint Thomas Becket Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-thomas-becket_stained-glass.jpg', 'Saint Thomas Becket', 'stained_glass', 'Saint Thomas Becket Stained Glass', NULL, '19th Century', 'Church of Saint Peter (Great Berkhamsted)', NULL, 'Public Domain', NULL),
+
+-- Saint Sylvester I
+('/saints/saint-sylvester-i.jpg', 'Saint Sylvester I', 'painting', 'Saint Sylvester I Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-sylvester-i_2.jpg', 'Saint Sylvester I', 'painting', 'Saint Sylvester I Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-sylvester-i_icon.jpg', 'Saint Sylvester I', 'icon', 'Saint Sylvester I Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL);
+
+COMMIT;
