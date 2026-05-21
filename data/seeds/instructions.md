@@ -4,3 +4,5 @@ Ordre d’exécution
 2. `seedRomanSaints.sql`
 3. `seedROMAN.sql`
 4. `seedROMAN_links.sql`
+
+Bash script in /scripts:

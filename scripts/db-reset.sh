@@ -34,15 +34,28 @@ run_sql() {
 
 # 1) Create tables
 run_sql "$ROOT_DIR/data/createTables.sql"
-echo "✅ Tables created."
+echo "✅ Tables dropped and created."
 
 # 2) Seeds (order matters)
 run_sql "$ROOT_DIR/data/seeds/seedPlaces.sql"
+echo "✅ Places seeded."
+
 run_sql "$ROOT_DIR/data/seeds/seedRomanSaints.sql"
+echo "✅ Roman saints seeded."
+
 run_sql "$ROOT_DIR/data/seeds/seedRomanImages.sql"
+echo "✅ Roman images seeded."
+
 run_sql "$ROOT_DIR/data/seeds/seedRomanSaintImages.sql"
-run_sql "$ROOT_DIR/data/seeds/seedRomanSeasons.sql"
-run_sql "$ROOT_DIR/data/seeds/seedROMAN.sql"
-run_sql "$ROOT_DIR/data/seeds/seedROMAN_links.sql"
+echo "✅ Roman saint images seeded."
+
+# run_sql "$ROOT_DIR/data/seeds/seedRomanSeasons.sql"
+# echo "✅ Roman seasons seeded."
+
+# run_sql "$ROOT_DIR/data/seeds/seedROMAN.sql"
+# echo "✅ ROMAN seeded."
+
+# run_sql "$ROOT_DIR/data/seeds/seedROMAN_links.sql"
+# echo "✅ ROMAN links seeded."
 
 echo "✅ DB seeded."
