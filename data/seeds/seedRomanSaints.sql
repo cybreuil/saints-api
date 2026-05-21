@@ -195,7 +195,7 @@ INSERT INTO saints (
 ),
 (
   'saint-anthony-abbot', 'Saint Anthony, Abbot',
-  251, NULL, NULL, TRUE,
+  251, 1, 12, TRUE,
   356, 1, 17, TRUE,
   4,
   (SELECT id FROM places WHERE code='HERAKLEOPOLIS_MAGNA'),
@@ -222,7 +222,7 @@ INSERT INTO saints (
 ),
 (
   'saint-agnes-of-rome', 'Saint Agnes of Rome',
-  NULL, NULL, NULL, TRUE,
+  291, NULL, NULL, TRUE,
   304, 1, 21, TRUE,
   4,
   (SELECT id FROM places WHERE code='ROME'),
@@ -232,7 +232,7 @@ INSERT INTO saints (
 (
   'saint-vincent-of-saragossa', 'Saint Vincent of Saragossa',
   NULL, NULL, NULL, TRUE,
-  304, 1, 22, TRUE,
+  304, NULL, NULL, TRUE,
   4,
   (SELECT id FROM places WHERE code='SARAGOSSA'),
   (SELECT id FROM places WHERE code='VALENCIA'),

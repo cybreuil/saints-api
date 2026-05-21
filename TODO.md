@@ -24,3 +24,5 @@ https://en.wikipedia.org/wiki/List_of_Catholic_saints
 + ajouter une table liaison peinture, pour avoir plusieurs saints par peinture ?
 
 + need double check dates birth death...
+
++ need couble check on companions saints, need normalization
