@@ -988,7 +988,7 @@ JOIN (
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine.jpg', 2, FALSE, 'subject'),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo.jpg', 3, FALSE, 'subject'),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo_2.jpg', 4, FALSE, 'subject'),
-('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo_2.jpg', 5, FALSE, 'subject'),
+('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus_celine_photo_3.jpg', 5, FALSE, 'subject'),
 ('saint-therese-of-the-child-jesus', '/saints/saint-therese-of-the-child-jesus.jpg', 6, FALSE, 'subject'),
 
 -- Saint Francis of Assisi
@@ -1323,7 +1323,7 @@ JOIN (
 -- Saint Sylvester I
 ('saint-sylvester-i', '/saints/saint-sylvester-i.jpg', 1, TRUE, 'subject'),
 ('saint-sylvester-i', '/saints/saint-sylvester-i_2.jpg', 2, FALSE, 'subject'),
-('saint-sylvester-i', '/saints/saint-sylvester-i_icon.jpg', 3, FALSE, 'subject'),
+('saint-sylvester-i', '/saints/saint-sylvester-i_icon.jpg', 3, FALSE, 'subject')
 
 
 	) AS x(
@@ -1335,5 +1335,5 @@ JOIN (
 )
 ON s.slug = x.saint_slug
 JOIN images i
-    ON i.image_url = x.image_url;
--- Manque laurent et therese
+    ON i.image_url = x.image_url
+ON CONFLICT (saint_id, image_id) DO NOTHING;
