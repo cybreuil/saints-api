@@ -1,3 +1,5 @@
+BEGIN;
+
 INSERT INTO saint_images (
     saint_id,
     image_id,
@@ -1337,3 +1339,5 @@ ON s.slug = x.saint_slug
 JOIN images i
     ON i.image_url = x.image_url
 ON CONFLICT (saint_id, image_id) DO NOTHING;
+
+COMMIT;
