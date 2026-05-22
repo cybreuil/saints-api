@@ -34,3 +34,37 @@ Noli me tangere painting, maybe should add locution to mary magdalene paintings 
 Pour build cargo build;
 Mais pour build en prod: on utilisera
 cargo build --release: le build sera plus rapide et opti !
+
+-- archi rework 
+src/
+  main.rs
+
+  core/
+    config.rs
+    db.rs
+    error.rs
+
+  middleware/
+    auth.rs
+    logger.rs
+
+  modules/
+    saints/
+      mod.rs
+      model.rs
+      dto.rs
+      repo.rs
+      service.rs
+      handlers.rs
+      routes.rs
+
+    images/
+      mod.rs
+      model.rs
+      dto.rs
+      repo.rs
+      service.rs
+      handlers.rs
+      routes.rs
+
+    places/

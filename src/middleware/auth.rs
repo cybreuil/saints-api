@@ -1,6 +1,6 @@
-use crate::errors::ApiError;
+use crate::core::error::ApiError;
 use actix_web::HttpRequest;
-use jsonwebtoken::{DecodingKey, Validation, decode};
+use jsonwebtoken::{decode, DecodingKey, Validation};
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
