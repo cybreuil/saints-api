@@ -1,4 +1,4 @@
-use actix_web::{HttpResponse, ResponseError, http::StatusCode};
+use actix_web::{http::StatusCode, HttpResponse, ResponseError};
 use thiserror::Error;
 
 #[allow(dead_code)]
@@ -50,4 +50,3 @@ impl ResponseError for ApiError {
         HttpResponse::build(status).json(body)
     }
 }
-

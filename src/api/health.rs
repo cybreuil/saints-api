@@ -1,4 +1,4 @@
-use actix_web::{HttpResponse, Responder, Scope, web};
+use actix_web::{web, HttpResponse, Responder, Scope};
 use sqlx::PgPool;
 
 async fn health(pool: web::Data<PgPool>) -> impl Responder {

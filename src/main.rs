@@ -1,10 +1,6 @@
-mod api;
-mod config;
-mod db;
-mod errors;
+mod core;
 mod middleware;
-mod models;
-mod pagination;
+mod modules;
 
 use actix_cors::Cors;
 use actix_web::{middleware::Logger, web, App, HttpServer};
@@ -17,8 +13,8 @@ async fn main() -> std::io::Result<()> {
 
     fmt().with_env_filter(EnvFilter::from_default_env()).init();
 
-    let cfg = config::Config::from_env();
-    let pool = db::create_pool(&cfg.database_url).await;
+    let cfg = core::config::Config::from_env();
+    let pool = core::db::create_pool(&cfg.database_url).await;
     let cfg_data = web::Data::new(cfg.clone());
     let pool_data = web::Data::new(pool);
 
@@ -45,11 +41,11 @@ async fn main() -> std::io::Result<()> {
                     .json(serde_json::json!({ "error": err.to_string() }));
                 actix_web::error::InternalError::from_response(err, response).into()
             }))
-            .service(api::health::routes())
-            .service(api::saints::routes())
-            .service(api::feasts::routes())
-            .service(api::calendars::routes())
-            .service(api::celebrations::routes())
+            // .service(api::health::routes())
+            .service(modules::saints::router::router())
+        // .service(api::feasts::routes())
+        // .service(api::calendars::routes())
+        // .service(api::celebrations::routes())
     })
     .bind((cfg.bind_address, cfg.port))?
     .run()
