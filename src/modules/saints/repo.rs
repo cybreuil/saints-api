@@ -1,6 +1,6 @@
 use sqlx::PgPool;
 
-use super::dto::SaintListItem;
+use super::dto::{SaintListItem, SaintRow};
 use crate::core::error::ApiError;
 // use crate::pagination::Pagination;
 
@@ -29,12 +29,14 @@ use crate::core::error::ApiError;
 // }
 
 pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiError> {
-    let saints = sqlx::query_as::<_, SaintListItem>(
+    let saints = sqlx::query_as::<_, SaintRow>(
         "SELECT id, slug, default_name, birth_year, death_year
 		 FROM saints ORDER BY default_name ASC",
     )
     .fetch_all(pool)
     .await?;
 
-    Ok(saints)
+    let data: Vec<SaintListItem> = saints.into_iter().map(Into::into).collect();
+
+    Ok(data)
 }

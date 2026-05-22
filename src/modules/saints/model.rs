@@ -1,7 +1,6 @@
 use chrono::{DateTime, Utc};
-use serde::{Deserialize, Serialize};
 
-#[derive(Debug, Serialize, Deserialize, sqlx::FromRow)]
+#[derive(Debug, sqlx::FromRow)]
 struct Saint {
     id: i32,
     slug: String,

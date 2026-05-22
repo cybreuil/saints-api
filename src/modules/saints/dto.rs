@@ -1,6 +1,6 @@
 // use chrono::NaiveDate;
-use serde::Serialize;
-use sqlx::FromRow;
+use serde::{Deserialize, Serialize};
+// use sqlx::FromRow;
 
 #[derive(Serialize)]
 struct SaintListResponse {
@@ -9,13 +9,13 @@ struct SaintListResponse {
     data: Vec<SaintListItem>,
 }
 
-#[derive(Serialize, FromRow)]
+#[derive(Serialize)]
 pub struct SaintListItem {
-    id: i32,
-    slug: String,
-    default_name: String,
-    birth_year: Option<i16>,
-    death_year: Option<i16>,
+    pub id: i32,
+    pub slug: String,
+    pub default_name: String,
+    pub birth_year: Option<i16>,
+    pub death_year: Option<i16>,
 }
 
 // #[derive(Debug, Deserialize)]
@@ -37,9 +37,18 @@ pub struct SaintListItem {
 //     pub image_url: Option<String>,
 // }
 
-// #[derive(Debug, Deserialize)]
-// pub struct SaintQuery {
-//     pub locale: Option<String>,
-//     pub page: Option<i64>,
-//     pub per_page: Option<i64>,
-// }
+#[derive(Debug, Deserialize)]
+pub struct SaintQuery {
+    pub locale: Option<String>,
+    pub page: Option<i32>,
+    pub per_page: Option<i32>,
+}
+
+#[derive(sqlx::FromRow)]
+pub struct SaintRow {
+    pub id: i32,
+    pub slug: String,
+    pub default_name: String,
+    pub birth_year: Option<i16>,
+    pub death_year: Option<i16>,
+}
