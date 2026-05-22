@@ -18,12 +18,6 @@ async fn main() -> std::io::Result<()> {
     let cfg_data = web::Data::new(cfg.clone());
     let pool_data = web::Data::new(pool);
 
-    tracing::info!(
-        "🚀 Saints API listening on {}:{}",
-        cfg.bind_address,
-        cfg.port
-    );
-
     HttpServer::new(move || {
         let cors = Cors::default()
             .allow_any_origin()
