@@ -29,3 +29,8 @@ Pour les photos:
 
 ---
 Noli me tangere painting, maybe should add locution to mary magdalene paintings that
+
+---
+Pour build cargo build;
+Mais pour build en prod: on utilisera
+cargo build --release: le build sera plus rapide et opti !
