@@ -11,6 +11,18 @@ use crate::core::error::ApiError;
 //     repo::list_saints(pool, query).await
 // }
 
+impl From<repo::SaintRow> for dto::SaintListItem {
+    fn from(row: repo::SaintRow) -> Self {
+        Self {
+            id: row.id,
+            slug: row.slug,
+            default_name: row.default_name,
+            birth_year: row.birth_year,
+            death_year: row.death_year,
+        }
+    }
+}
+
 pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<dto::SaintListItem>, ApiError> {
     repo::list_all_saints(pool).await
 }
