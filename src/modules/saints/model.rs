@@ -1,21 +1,21 @@
 use chrono::{DateTime, Utc};
 
 #[derive(Debug, sqlx::FromRow)]
-struct Saint {
-    id: i32,
-    slug: String,
-    default_name: String,
-    birth_year: Option<i16>,
-    birth_month: Option<i16>,
-    birth_day: Option<i16>,
-    birth_is_approximate: bool,
-    death_year: Option<i16>,
-    death_month: Option<i16>,
-    death_day: Option<i16>,
-    death_is_approximate: bool,
-    century: Option<i16>,
-    place_of_birth_id: Option<i32>,
-    place_of_death_id: Option<i32>,
-    place_of_activity_id: Option<i32>,
-    created_at: DateTime<Utc>,
+pub struct SaintRow {
+    pub id: i32,
+    pub slug: String,
+    pub default_name: String,
+    pub birth_year: Option<i16>,
+    pub birth_month: Option<i16>,
+    pub birth_day: Option<i16>,
+    pub birth_is_approximate: bool,
+    pub death_year: Option<i16>,
+    pub death_month: Option<i16>,
+    pub death_day: Option<i16>,
+    pub death_is_approximate: bool,
+    pub century: Option<i16>,
+    pub place_of_birth_id: Option<i32>,
+    pub place_of_death_id: Option<i32>,
+    pub place_of_activity_id: Option<i32>,
+    pub created_at: DateTime<Utc>,
 }

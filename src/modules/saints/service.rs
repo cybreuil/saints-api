@@ -1,30 +1,36 @@
 use sqlx::PgPool;
 
-use super::dto;
-use super::repo;
-use crate::core::error::ApiError;
+use super::{
+    dto::{SaintListItem, SaintListResponse},
+    model::SaintRow,
+    repo,
+};
+use crate::core::{error::ApiError, pagination::Pagination};
 
-// pub async fn list_saints(
-//     pool: PgPool,
-//     query: crate::models::saint::SaintQuery,
-// ) -> Result<dto::SaintListResponse, ApiError> {
-//     repo::list_saints(pool, query).await
-// }
+pub async fn list_saints(
+    pool: &PgPool,
+    page: i32,
+    per_page: i32,
+) -> Result<SaintListResponse, ApiError> {
+    let p = Pagination::new(Some(page), Some(per_page));
 
-impl From<repo::SaintRow> for dto::SaintListItem {
-    fn from(row: repo::SaintRow) -> Self {
-        Self {
-            id: row.id,
-            slug: row.slug,
-            default_name: row.default_name,
-            birth_year: row.birth_year,
-            death_year: row.death_year,
-        }
-    }
+    let rows: Vec<SaintRow> = repo::list_saints(pool, p.per_page, p.offset).await?;
+
+    let data: Vec<SaintListItem> = rows.into_iter().map(SaintListItem::from).collect();
+
+    Ok(SaintListResponse {
+        page: p.page,
+        per_page: p.per_page,
+        data,
+    })
 }
 
-pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<dto::SaintListItem>, ApiError> {
-    repo::list_all_saints(pool).await
+pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiError> {
+    let rows: Vec<SaintRow> = repo::list_all_saints(pool).await?;
+
+    let data: Vec<SaintListItem> = rows.into_iter().map(SaintListItem::from).collect();
+
+    Ok(data)
 }
 
 // pub async fn get_saint(

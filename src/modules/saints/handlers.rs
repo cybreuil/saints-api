@@ -5,18 +5,26 @@ use sqlx::PgPool;
 use crate::core::error::ApiError;
 // use crate::middleware::auth::require_auth;
 
+use super::dto;
 use super::service;
 
 pub async fn list_saints(
     pool: web::Data<PgPool>,
-    query: web::Query<super::dto::SaintQuery>,
+    query: web::Query<dto::SaintQuery>,
 ) -> Result<HttpResponse, ApiError> {
-    let result = service::list_saints(pool.into_inner(), query.into_inner()).await?;
+    let result = service::list_saints(
+        pool.get_ref(),
+        query.page.unwrap_or(1),
+        query.per_page.unwrap_or(20),
+    )
+    .await?;
+
     Ok(HttpResponse::Ok().json(result))
 }
 
 pub async fn list_all_saints(pool: web::Data<PgPool>) -> Result<HttpResponse, ApiError> {
     let result = service::list_all_saints(pool.get_ref()).await?;
+
     Ok(HttpResponse::Ok().json(result))
 }
 
