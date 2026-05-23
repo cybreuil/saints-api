@@ -1,15 +1,15 @@
 use sqlx::PgPool;
 
-use super::model::SaintRow;
+use super::dto;
 
-use crate::core::error::ApiError;
+use crate::{core::error::ApiError, modules::saints::dto::SaintListItem};
 
 pub async fn list_saints(
     pool: &PgPool,
     limit: i32,
     offset: i32,
-) -> Result<Vec<SaintRow>, ApiError> {
-    let rows = sqlx::query_as::<_, SaintRow>(
+) -> Result<Vec<dto::SaintListItem>, ApiError> {
+    let rows = sqlx::query_as::<_, SaintListItem>(
         "SELECT id, slug, default_name, birth_year, death_year
          FROM saints
          ORDER BY default_name ASC
@@ -23,12 +23,13 @@ pub async fn list_saints(
     Ok(rows)
 }
 
-pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintRow>, ApiError> {
-    sqlx::query_as::<_, SaintRow>(
+pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiError> {
+    let rows = sqlx::query_as::<_, SaintListItem>(
         "SELECT id, slug, default_name, birth_year, death_year
          FROM saints ORDER BY default_name ASC",
     )
     .fetch_all(pool)
-    .await
-    .map_err(ApiError::from)
+    .await?;
+
+    Ok(rows)
 }

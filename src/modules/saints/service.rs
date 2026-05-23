@@ -2,7 +2,6 @@ use sqlx::PgPool;
 
 use super::{
     dto::{SaintListItem, SaintListResponse},
-    model::SaintRow,
     repo,
 };
 use crate::core::{error::ApiError, pagination::Pagination};
@@ -13,10 +12,7 @@ pub async fn list_saints(
     per_page: i32,
 ) -> Result<SaintListResponse, ApiError> {
     let p = Pagination::new(Some(page), Some(per_page));
-
-    let rows: Vec<SaintRow> = repo::list_saints(pool, p.per_page, p.offset).await?;
-
-    let data: Vec<SaintListItem> = rows.into_iter().map(SaintListItem::from).collect();
+    let data = repo::list_saints(pool, p.per_page, p.offset).await?;
 
     Ok(SaintListResponse {
         page: p.page,
@@ -26,11 +22,7 @@ pub async fn list_saints(
 }
 
 pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiError> {
-    let rows: Vec<SaintRow> = repo::list_all_saints(pool).await?;
-
-    let data: Vec<SaintListItem> = rows.into_iter().map(SaintListItem::from).collect();
-
-    Ok(data)
+    repo::list_all_saints(pool).await
 }
 
 // pub async fn get_saint(
