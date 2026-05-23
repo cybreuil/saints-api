@@ -33,3 +33,19 @@ pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiErr
 
     Ok(rows)
 }
+
+pub async fn get_saint_by_slug(
+    pool: &PgPool,
+    slug: String,
+) -> Result<dto::SaintListItem, ApiError> {
+    println!("slug = {}", slug);
+    let row = sqlx::query_as::<_, SaintListItem>(
+        "SELECT id, slug, default_name, birth_year, death_year
+		 FROM saints WHERE slug = $1",
+    )
+    .bind(slug)
+    .fetch_one(pool)
+    .await?;
+
+    Ok(row)
+}

@@ -25,19 +25,16 @@ pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiErr
     repo::list_all_saints(pool).await
 }
 
+pub async fn get_saint_by_slug(pool: &PgPool, slug: String) -> Result<SaintListItem, ApiError> {
+    repo::get_saint_by_slug(pool, slug).await
+}
+
 // pub async fn get_saint(
 //     pool: PgPool,
 //     id: i32,
 //     query: crate::models::saint::SaintQuery,
 // ) -> Result<dto::SaintDetailResponse, ApiError> {
 //     repo::get_saint(pool, id, query).await
-// }
-
-// pub async fn get_saint_by_slug(
-//     pool: PgPool,
-//     slug: String,
-// ) -> Result<dto::SaintDetailResponse, ApiError> {
-//     repo::get_saint_by_slug(pool, slug).await
 // }
 
 // pub async fn create_saint(

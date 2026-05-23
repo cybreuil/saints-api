@@ -28,6 +28,13 @@ pub async fn list_all_saints(pool: web::Data<PgPool>) -> Result<HttpResponse, Ap
     Ok(HttpResponse::Ok().json(result))
 }
 
+pub async fn get_saint_by_slug(
+    pool: web::Data<PgPool>,
+    path: web::Path<String>,
+) -> Result<HttpResponse, ApiError> {
+    let result = service::get_saint_by_slug(pool.get_ref(), path.into_inner()).await?;
+    Ok(HttpResponse::Ok().json(result))
+}
 // pub async fn get_saint(
 //     pool: web::Data<PgPool>,
 //     path: web::Path<i32>,
@@ -35,14 +42,6 @@ pub async fn list_all_saints(pool: web::Data<PgPool>) -> Result<HttpResponse, Ap
 // ) -> Result<HttpResponse, ApiError> {
 //     let result =
 //         service::get_saint(pool.into_inner(), path.into_inner(), query.into_inner()).await?;
-//     Ok(HttpResponse::Ok().json(result))
-// }
-
-// pub async fn get_saint_by_slug(
-//     pool: web::Data<PgPool>,
-//     path: web::Path<String>,
-// ) -> Result<HttpResponse, ApiError> {
-//     let result = service::get_saint_by_slug(pool.into_inner(), path.into_inner()).await?;
 //     Ok(HttpResponse::Ok().json(result))
 // }
 
