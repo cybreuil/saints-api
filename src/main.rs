@@ -4,6 +4,7 @@ mod modules;
 
 use actix_cors::Cors;
 use actix_web::{middleware::Logger, web, App, HttpServer};
+use core::router::router;
 use dotenv::dotenv;
 use tracing_subscriber::{fmt, EnvFilter};
 
@@ -41,11 +42,7 @@ async fn main() -> std::io::Result<()> {
                     .json(serde_json::json!({ "error": err.to_string() }));
                 actix_web::error::InternalError::from_response(err, response).into()
             }))
-            // .service(api::health::routes())
-            .service(modules::saints::router::router())
-        // .service(api::feasts::routes())
-        // .service(api::calendars::routes())
-        // .service(api::celebrations::routes())
+            .service(router())
     })
     .bind((cfg.bind_address, cfg.port))?
     .run()
