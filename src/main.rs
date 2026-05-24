@@ -3,8 +3,8 @@ mod middleware;
 mod modules;
 
 use actix_cors::Cors;
-use actix_web::{middleware::Logger, web, App, HttpServer};
-use core::router::router;
+use actix_web::{middleware::Logger, web, App, HttpServer, ResponseError};
+use core::{error::ApiError, router::router};
 use dotenv::dotenv;
 use tracing_subscriber::{fmt, EnvFilter};
 
@@ -43,6 +43,7 @@ async fn main() -> std::io::Result<()> {
                 actix_web::error::InternalError::from_response(err, response).into()
             }))
             .service(router())
+            .default_service(web::route().to(|| async { ApiError::NotFound.error_response() }))
     })
     .bind((cfg.bind_address, cfg.port))?
     .run()
