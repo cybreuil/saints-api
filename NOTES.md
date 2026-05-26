@@ -68,3 +68,18 @@ src/
       routes.rs
 
     places/
+
++
+Middlewares ideas:
+Checklist
+- [x] Request ID (X-Request-Id)
+- [x] Tracing + Logger
+- [x] CORS (configurable via env)
+- [x] Security headers (DefaultHeaders)
+- [x] Body limit (JsonConfig)
+- [x] Compression
+- [x] ErrorHandlers / central ApiError -> JSON
+- [x] Timeout (per-request)
+- [x] Rate limiter
+- [x] Auth middleware
+- [x] Health & /metrics

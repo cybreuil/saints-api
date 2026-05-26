@@ -6,6 +6,7 @@ use actix_web::{middleware::Logger, web, App, HttpServer, ResponseError};
 use core::{error::ApiError, router::router};
 use dotenv::dotenv;
 use middleware::cors::cors;
+// use middleware::rate_limiter::RateLimiter;
 use tracing_subscriber::{fmt, EnvFilter};
 
 #[actix_web::main]
@@ -20,7 +21,7 @@ async fn main() -> std::io::Result<()> {
     let pool_data = web::Data::new(pool);
 
     tracing::info!(
-        "🚀 Saints API launching on {}:{}",
+        "🚀 Saints API launching on http://{}:{}",
         cfg.bind_address,
         cfg.port
     );
@@ -29,6 +30,8 @@ async fn main() -> std::io::Result<()> {
         App::new()
             .wrap(cors())
             .wrap(Logger::default())
+            // TODO gerer rate par route avec differentes instances
+            // .wrap(RateLimiter::new(60, Duration::from_secs(60)))
             .app_data(pool_data.clone())
             .app_data(cfg_data.clone())
             .app_data(web::JsonConfig::default().error_handler(|err, _req| {

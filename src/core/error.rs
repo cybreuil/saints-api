@@ -1,6 +1,7 @@
 use actix_web::{http::StatusCode, HttpResponse, ResponseError};
 use thiserror::Error;
 
+// Custom API error for handlers
 #[allow(dead_code)]
 #[derive(Debug, Error)]
 pub enum ApiError {
