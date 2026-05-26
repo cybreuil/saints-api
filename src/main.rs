@@ -2,15 +2,15 @@ mod core;
 mod middleware;
 mod modules;
 
-use actix_cors::Cors;
 use actix_web::{middleware::Logger, web, App, HttpServer, ResponseError};
 use core::{error::ApiError, router::router};
 use dotenv::dotenv;
+use middleware::cors::cors;
 use tracing_subscriber::{fmt, EnvFilter};
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    dotenv().ok();
+    dotenv().expect(".env file missing");
 
     fmt().with_env_filter(EnvFilter::from_default_env()).init();
 
@@ -20,20 +20,14 @@ async fn main() -> std::io::Result<()> {
     let pool_data = web::Data::new(pool);
 
     tracing::info!(
-        "🚀 Saints API listening on {}:{}",
+        "🚀 Saints API launching on {}:{}",
         cfg.bind_address,
         cfg.port
     );
 
     HttpServer::new(move || {
-        let cors = Cors::default()
-            .allow_any_origin()
-            .allow_any_method()
-            .allow_any_header()
-            .max_age(3600);
-
         App::new()
-            .wrap(cors)
+            .wrap(cors())
             .wrap(Logger::default())
             .app_data(pool_data.clone())
             .app_data(cfg_data.clone())
