@@ -24,4 +24,8 @@ impl Pagination {
             offset,
         }
     }
+
+    pub fn beyond_total(&self, total: i32) -> bool {
+        self.offset >= total
+    }
 }

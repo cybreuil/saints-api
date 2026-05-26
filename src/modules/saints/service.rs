@@ -12,11 +12,22 @@ pub async fn list_saints(
     per_page: i32,
 ) -> Result<SaintListResponse, ApiError> {
     let p = Pagination::new(Some(page), Some(per_page));
+
+    let total = repo::count_saints(pool).await?;
+
+    if p.beyond_total(total) {
+        return Err(ApiError::BadRequest(format!(
+            "Page {} is out of range. Total items: {}",
+            p.page, total
+        )));
+    }
+
     let data = repo::list_saints(pool, p.per_page, p.offset).await?;
 
     Ok(SaintListResponse {
         page: p.page,
         per_page: p.per_page,
+        total: total,
         data,
     })
 }

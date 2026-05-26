@@ -8,6 +8,7 @@ use serde::{Deserialize, Serialize};
 pub struct SaintListResponse {
     pub page: i32,
     pub per_page: i32,
+    pub total: i32,
     pub data: Vec<SaintListItem>,
 }
 
