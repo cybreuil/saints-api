@@ -1,6 +1,7 @@
 use sqlx::postgres::PgPoolOptions;
 use sqlx::PgPool;
 use std::time::Duration;
+use tracing::error;
 
 pub async fn create_pool(database_url: &str) -> PgPool {
     PgPoolOptions::new()
@@ -8,5 +9,8 @@ pub async fn create_pool(database_url: &str) -> PgPool {
         .acquire_timeout(Duration::from_secs(5))
         .connect(database_url)
         .await
-        .expect("Failed to connect to PostgreSQL database")
+        .unwrap_or_else(|e| {
+            error!("Failed to connect to Postgres: {}", e);
+            std::process::exit(1);
+        })
 }
