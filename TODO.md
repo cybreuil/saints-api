@@ -26,3 +26,7 @@ https://en.wikipedia.org/wiki/List_of_Catholic_saints
 + need double check dates birth death...
 
 + need couble check on companions saints, need normalization
+
++ need double check on indexs : 
+ORDER BY default_name ASC 
+/for exemple
