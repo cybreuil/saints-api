@@ -22,6 +22,7 @@ pub async fn list_saints(
             page: p.page,
             per_page: p.per_page,
             total,
+            total_pages: 0,
             data: Vec::new(),
         });
     }
@@ -41,6 +42,7 @@ pub async fn list_saints(
         page: p.page,
         per_page: p.per_page,
         total: total,
+        total_pages: total_pages,
         data,
     })
 }

@@ -1,5 +1,12 @@
 use actix_web::{http::StatusCode, HttpResponse, ResponseError};
+use serde::Serialize;
 use thiserror::Error;
+
+#[derive(Serialize)]
+struct ErrorBody {
+    status: u16,
+    error: String,
+}
 
 // Custom API error for handlers
 #[allow(dead_code)]
@@ -55,18 +62,19 @@ impl ResponseError for ApiError {
             // Log the error details for internal server errors
             tracing::error!("Internal server error: {}", self);
 
-            let body = serde_json::json!({
-                "status": status.as_u16(),
-                "error": "An unexpected Internal Server Error occurred. Please try again later."
-            });
+            let body = ErrorBody {
+                status: status.as_u16(),
+                error: "An unexpected Internal Server Error occurred. Please try again later."
+                    .to_string(),
+            };
 
             return HttpResponse::build(status).json(body);
         }
 
-        let body = serde_json::json!({
-            "status": status.as_u16(),
-            "error": self.to_string()
-        });
+        let body = ErrorBody {
+            status: status.as_u16(),
+            error: self.to_string(),
+        };
         HttpResponse::build(status).json(body)
     }
 }
