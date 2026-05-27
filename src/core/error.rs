@@ -33,23 +33,38 @@ pub enum ApiError {
 impl ResponseError for ApiError {
     fn status_code(&self) -> StatusCode {
         match self {
-            ApiError::NotFound => StatusCode::NOT_FOUND,
-            ApiError::BadRequest(_) => StatusCode::BAD_REQUEST,
-            ApiError::UnprocessableEntity(_) => StatusCode::UNPROCESSABLE_ENTITY,
-            ApiError::Unauthorized => StatusCode::UNAUTHORIZED,
-            ApiError::Forbidden => StatusCode::FORBIDDEN,
-            ApiError::Conflict(_) => StatusCode::CONFLICT,
+            ApiError::NotFound => StatusCode::NOT_FOUND, // 404
+            ApiError::BadRequest(_) => StatusCode::BAD_REQUEST, // 400
+            ApiError::UnprocessableEntity(_) => StatusCode::UNPROCESSABLE_ENTITY, // 422
+            ApiError::Unauthorized => StatusCode::UNAUTHORIZED, // 401
+            ApiError::Forbidden => StatusCode::FORBIDDEN, // 403
+            ApiError::Conflict(_) => StatusCode::CONFLICT, // 409
             ApiError::Database(e) => match e {
                 sqlx::Error::RowNotFound => StatusCode::NOT_FOUND,
                 _ => StatusCode::INTERNAL_SERVER_ERROR,
             },
-            ApiError::InternalError => StatusCode::INTERNAL_SERVER_ERROR,
+            ApiError::InternalError => StatusCode::INTERNAL_SERVER_ERROR, // 500
         }
     }
 
     fn error_response(&self) -> HttpResponse {
         let status = self.status_code();
+
+        // If it's an internal server error, we want to log the error details and return a generic message to the client to avoid exposing sensitive information
+        if status == StatusCode::INTERNAL_SERVER_ERROR {
+            // Log the error details for internal server errors
+            tracing::error!("Internal server error: {}", self);
+
+            let body = serde_json::json!({
+                "status": status.as_u16(),
+                "error": "An unexpected Internal Server Error occurred. Please try again later."
+            });
+
+            return HttpResponse::build(status).json(body);
+        }
+
         let body = serde_json::json!({
+            "status": status.as_u16(),
             "error": self.to_string()
         });
         HttpResponse::build(status).json(body)
