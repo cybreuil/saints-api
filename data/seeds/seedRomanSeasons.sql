@@ -148,7 +148,6 @@ ON c.code = 'ROMAN_GENERAL';
 INSERT INTO liturgical_season_colors (season_code, calendar_id, color_id)
 SELECT x.season_code, c.id, lc.id
 FROM calendars c
-JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
   ('ADVENT', 'PURPLE'),
   ('CHRISTMASTIDE', 'WHITE'),
@@ -158,6 +157,7 @@ JOIN (VALUES
   ('EASTERTIDE', 'WHITE')
 ) AS x(season_code, color_code)
 ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (season_code, calendar_id) DO UPDATE
 SET color_id = EXCLUDED.color_id;
 
