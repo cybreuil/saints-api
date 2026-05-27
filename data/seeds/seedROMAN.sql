@@ -302,9 +302,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('the-presentation-of-the-lord', 'FEAST', NULL, FALSE),
 ('saint-blaise-bishop-and-martyr', 'MEM_OPT', 'RED', TRUE),
@@ -323,6 +320,9 @@ JOIN (VALUES
 ('saint-gregory-of-narek-abbot-and-doctor-of-the-church', 'MEM_OPT', NULL, TRUE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -437,9 +437,6 @@ WHERE f.slug = 'the-annunciation-of-the-lord';
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('saint-casimir', 'MEM_OPT', NULL, TRUE),
 ('saints-perpetua-and-felicity-martyrs', 'MEM_OBL', 'RED', FALSE),
@@ -452,6 +449,9 @@ JOIN (VALUES
 ('the-annunciation-of-the-lord', 'SOLEMNITY', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -578,9 +578,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('saint-francis-of-paola-hermit', 'MEM_OPT', NULL, TRUE),
 ('saint-isidore-bishop-and-doctor-of-the-church', 'MEM_OPT', NULL, TRUE),
@@ -599,6 +596,9 @@ JOIN (VALUES
 ('saint-pius-v-pope', 'MEM_OPT', NULL, TRUE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -630,7 +630,7 @@ INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ('saint-philip-neri-priest', 'Saint Philip Neri, Priest', 'saint'),
 ('saint-augustine-of-canterbury-bishop', 'Saint Augustine of Canterbury, Bishop', 'saint'),
 ('saint-paul-vi-pope', 'Saint Paul VI, Pope', 'saint'),
-('the-visitation-of-the-blessed-virgin-mary', 'The Visitation of the Blessed Virgin Mary', 'marian'),
+('the-visitation-of-the-blessed-virgin-mary', 'The Visitation of the Blessed Virgin Mary', 'marian')
 ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
@@ -656,7 +656,7 @@ JOIN (VALUES
 ('saint-philip-neri-priest', 'Saint Philip Neri, Priest'),
 ('saint-augustine-of-canterbury-bishop', 'Saint Augustine of Canterbury, Bishop'),
 ('saint-paul-vi-pope', 'Saint Paul VI, Pope'),
-('the-visitation-of-the-blessed-virgin-mary', 'The Visitation of the Blessed Virgin Mary'),
+('the-visitation-of-the-blessed-virgin-mary', 'The Visitation of the Blessed Virgin Mary')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -684,7 +684,7 @@ JOIN (VALUES
 ('saint-philip-neri-priest', 'Saint Philippe Néri, prêtre'),
 ('saint-augustine-of-canterbury-bishop', 'Saint Augustin de Cantorbéry, évêque'),
 ('saint-paul-vi-pope', 'Saint Paul VI, pape'),
-('the-visitation-of-the-blessed-virgin-mary', 'Visitation de la Bienheureuse Vierge Marie'),
+('the-visitation-of-the-blessed-virgin-mary', 'Visitation de la Bienheureuse Vierge Marie')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -712,7 +712,7 @@ JOIN (VALUES
 ('saint-philip-neri-priest', 'Sanctus Philippus Neri, presbyter'),
 ('saint-augustine-of-canterbury-bishop', 'Sanctus Augustinus Cantuariensis, episcopus'),
 ('saint-paul-vi-pope', 'Sanctus Paulus VI, papa'),
-('the-visitation-of-the-blessed-virgin-mary', 'Visitatio Beatae Mariae Virginis'),
+('the-visitation-of-the-blessed-virgin-mary', 'Visitatio Beatae Mariae Virginis')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -752,9 +752,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('saint-joseph-the-worker', 'MEM_OPT', NULL, TRUE),
 ('saint-athanasius-bishop-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE),
@@ -774,9 +771,12 @@ JOIN (VALUES
 ('saint-philip-neri-priest', 'MEM_OBL', NULL, FALSE),
 ('saint-augustine-of-canterbury-bishop', 'MEM_OPT', NULL, TRUE),
 ('saint-paul-vi-pope', 'MEM_OPT', NULL, TRUE),
-('the-visitation-of-the-blessed-virgin-mary', 'FEAST', NULL, FALSE),
+('the-visitation-of-the-blessed-virgin-mary', 'FEAST', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -805,7 +805,7 @@ INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'Saint Cyril of Alexandria, Bishop and Doctor of the Church', 'saint'),
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Saint Irenaeus, Bishop, Martyr and Doctor of the Church', 'saint'),
 ('saints-peter-and-paul-apostles', 'Saints Peter and Paul, Apostles', 'saint'),
-('the-first-martyrs-of-holy-roman-church', 'The First Martyrs of Holy Roman Church', 'saint'),
+('the-first-martyrs-of-holy-roman-church', 'The First Martyrs of Holy Roman Church', 'saint')
 ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
@@ -829,7 +829,7 @@ JOIN (VALUES
 ('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'Saint Cyril of Alexandria, Bishop and Doctor of the Church'),
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Saint Irenaeus, Bishop, Martyr and Doctor of the Church'),
 ('saints-peter-and-paul-apostles', 'Saints Peter and Paul, Apostles'),
-('the-first-martyrs-of-holy-roman-church', 'The First Martyrs of Holy Roman Church'),
+('the-first-martyrs-of-holy-roman-church', 'The First Martyrs of Holy Roman Church')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -855,7 +855,7 @@ JOIN (VALUES
 ('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'Saint Cyrille d’Alexandrie, évêque et docteur de l’Église'),
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Saint Irénée, évêque, martyr et docteur de l’Église'),
 ('saints-peter-and-paul-apostles', 'Saints Pierre et Paul, apôtres'),
-('the-first-martyrs-of-holy-roman-church', 'Les premiers martyrs de la sainte Église de Rome'),
+('the-first-martyrs-of-holy-roman-church', 'Les premiers martyrs de la sainte Église de Rome')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -881,7 +881,7 @@ JOIN (VALUES
 ('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'Sanctus Cyrillus Alexandrinus, episcopus et Ecclesiae doctor'),
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Sanctus Irenaeus, episcopus, martyr et Ecclesiae doctor'),
 ('saints-peter-and-paul-apostles', 'Sancti Petrus et Paulus, Apostoli'),
-('the-first-martyrs-of-holy-roman-church', 'Sancti Primi Martyres Sanctae Romanae Ecclesiae'),
+('the-first-martyrs-of-holy-roman-church', 'Sancti Primi Martyres Sanctae Romanae Ecclesiae')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -917,9 +917,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('saint-justin-martyr', 'MEM_OBL', 'RED', FALSE),
 ('saints-marcellinus-and-peter-martyrs', 'MEM_OPT', 'RED', TRUE),
@@ -937,9 +934,12 @@ JOIN (VALUES
 ('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'MEM_OPT', NULL, TRUE),
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'MEM_OBL', 'RED', FALSE),
 ('saints-peter-and-paul-apostles', 'SOLEMNITY', NULL, FALSE),
-('the-first-martyrs-of-holy-roman-church', 'MEM_OPT', 'RED', TRUE),
+('the-first-martyrs-of-holy-roman-church', 'MEM_OPT', 'RED', TRUE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -1091,9 +1091,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('saint-thomas-apostle', 'FEAST', NULL, FALSE),
 ('saint-elizabeth-of-portugal', 'MEM_OPT', NULL, TRUE),
@@ -1117,6 +1114,9 @@ JOIN (VALUES
 ('saint-ignatius-of-loyola-priest', 'MEM_OBL', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -1313,9 +1313,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('saint-alphonsus-liguori-bishop-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE),
 ('saint-eusebius-of-vercelli-bishop', 'MEM_OPT', NULL, TRUE),
@@ -1348,6 +1345,9 @@ JOIN (VALUES
 ('the-passion-of-saint-john-the-baptist-martyr', 'MEM_OBL', 'RED', FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -1504,9 +1504,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('saint-gregory-the-great-pope-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE),
 ('saint-teresa-of-calcutta-virgin', 'MEM_OPT', NULL, TRUE),
@@ -1531,6 +1528,9 @@ JOIN (VALUES
 ('saint-jerome-priest-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -1692,9 +1692,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('saint-therese-of-the-child-jesus-virgin-and-doctor-of-the-church', 'MEM_OBL', NULL, FALSE),
 ('the-holy-guardian-angels', 'MEM_OBL', NULL, FALSE),
@@ -1720,6 +1717,9 @@ JOIN (VALUES
 ('saints-simon-and-jude-apostles', 'FEAST', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -1750,7 +1750,7 @@ INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ('saint-columban-abbot', 'Saint Columban, Abbot', 'saint'),
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs', 'saint'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'Saint Catherine of Alexandria, Virgin and Martyr', 'saint'),
-('saint-andrew-apostle', 'Saint Andrew, Apostle', 'saint'),
+('saint-andrew-apostle', 'Saint Andrew, Apostle', 'saint')
 ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
@@ -1777,7 +1777,7 @@ JOIN (VALUES
 ('saint-columban-abbot', 'Saint Columban, Abbot'),
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'Saint Catherine of Alexandria, Virgin and Martyr'),
-('saint-andrew-apostle', 'Saint Andrew, Apostle'),
+('saint-andrew-apostle', 'Saint Andrew, Apostle')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -1806,7 +1806,7 @@ JOIN (VALUES
 ('saint-columban-abbot', 'Saint Colomban, abbé'),
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints André Dung-Lac, prêtre, et ses compagnons, martyrs'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'Sainte Catherine d’Alexandrie, vierge et martyre'),
-('saint-andrew-apostle', 'Saint André, apôtre'),
+('saint-andrew-apostle', 'Saint André, apôtre')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -1835,7 +1835,7 @@ JOIN (VALUES
 ('saint-columban-abbot', 'Sanctus Columbanus, abbas'),
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Sancti Andreas Dung-Lac et Socii, martyres'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'Sancta Catharina Alexandrina, virgo et martyr'),
-('saint-andrew-apostle', 'Sanctus Andreas, Apostolus'),
+('saint-andrew-apostle', 'Sanctus Andreas, Apostolus')
 ) AS x(slug, name)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
@@ -1874,9 +1874,6 @@ ON f.slug = x.slug;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, x.is_optional, 'Wikipedia'
 FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
-LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 JOIN (VALUES
 ('all-saints', 'SOLEMNITY', NULL, FALSE),
 ('the-commemoration-of-all-the-faithful-departed', 'SOLEMNITY', NULL, FALSE),
@@ -1897,9 +1894,12 @@ JOIN (VALUES
 ('saint-columban-abbot', 'MEM_OPT', NULL, TRUE),
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 'MEM_OBL', 'RED', FALSE),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 'MEM_OPT', 'RED', TRUE),
-('saint-andrew-apostle', 'FEAST', NULL, FALSE),
+('saint-andrew-apostle', 'FEAST', NULL, FALSE)
 ) AS x(slug, rank_code, color_code, is_optional)
 ON f.slug = x.slug
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
