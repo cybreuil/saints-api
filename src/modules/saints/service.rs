@@ -14,8 +14,19 @@ pub async fn list_saints(
     let p = Pagination::new(Some(page), Some(per_page));
 
     let total = repo::count_saints(pool).await?;
-    let total_pages = (total / p.per_page) + if total % p.per_page > 0 { 1 } else { 0 };
+    let total_pages = (total + p.per_page - 1) / p.per_page;
 
+    // Total is zero, return empty data with pagination info
+    if total == 0 {
+        return Ok(SaintListResponse {
+            page: p.page,
+            per_page: p.per_page,
+            total,
+            data: Vec::new(),
+        });
+    }
+
+    // Check if requested page is beyond total pages - 422
     if p.beyond_total(total) {
         return Err(ApiError::UnprocessableEntity(format!(
             "Page {} is out of range. Total pages: {}",
@@ -23,6 +34,7 @@ pub async fn list_saints(
         )));
     }
 
+    // Fetch
     let data = repo::list_saints(pool, p.per_page, p.offset).await?;
 
     Ok(SaintListResponse {
