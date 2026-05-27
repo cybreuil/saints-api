@@ -21,8 +21,12 @@ use super::service;
 // }
 
 // admin route, no pagination
-pub async fn list_all_feasts(pool: web::Data<PgPool>) -> Result<HttpResponse, ApiError> {
-    let result = service::list_all_feasts(pool.get_ref()).await?;
+pub async fn list_feasts_for_calendar_with_dates(
+    pool: web::Data<PgPool>,
+    query: web::Query<dto::FeastQuery>,
+) -> Result<HttpResponse, ApiError> {
+    let result =
+        service::list_feasts_for_calendar_with_dates(pool.get_ref(), query.calendar_id).await?;
 
     Ok(HttpResponse::Ok().json(result))
 }
