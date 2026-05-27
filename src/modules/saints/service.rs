@@ -14,11 +14,12 @@ pub async fn list_saints(
     let p = Pagination::new(Some(page), Some(per_page));
 
     let total = repo::count_saints(pool).await?;
+    let total_pages = (total / p.per_page) + if total % p.per_page > 0 { 1 } else { 0 };
 
     if p.beyond_total(total) {
-        return Err(ApiError::BadRequest(format!(
-            "Page {} is out of range. Total items: {}",
-            p.page, total
+        return Err(ApiError::UnprocessableEntity(format!(
+            "Page {} is out of range. Total pages: {}",
+            p.page, total_pages
         )));
     }
 

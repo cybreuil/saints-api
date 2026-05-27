@@ -11,6 +11,9 @@ pub enum ApiError {
     #[error("Bad request: {0}")]
     BadRequest(String),
 
+    #[error("Unprocessable entity: {0}")]
+    UnprocessableEntity(String),
+
     #[error("Unauthorized")]
     Unauthorized,
 
@@ -32,6 +35,7 @@ impl ResponseError for ApiError {
         match self {
             ApiError::NotFound => StatusCode::NOT_FOUND,
             ApiError::BadRequest(_) => StatusCode::BAD_REQUEST,
+            ApiError::UnprocessableEntity(_) => StatusCode::UNPROCESSABLE_ENTITY,
             ApiError::Unauthorized => StatusCode::UNAUTHORIZED,
             ApiError::Forbidden => StatusCode::FORBIDDEN,
             ApiError::Conflict(_) => StatusCode::CONFLICT,
