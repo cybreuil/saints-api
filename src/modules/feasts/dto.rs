@@ -13,7 +13,7 @@ pub struct FeastListItem {
 
 #[derive(Debug, Deserialize)]
 pub struct FeastQuery {
-    pub calendar_id: i32,
+    pub calendar_id: Option<i32>,
 }
 
 #[derive(Debug, Deserialize)]
