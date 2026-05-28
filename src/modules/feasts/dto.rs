@@ -19,4 +19,5 @@ pub struct FeastQuery {
 #[derive(Debug, Deserialize)]
 pub struct FeastOfTheDayQuery {
     pub date: Option<String>,
+    pub offset: Option<i32>,
 }

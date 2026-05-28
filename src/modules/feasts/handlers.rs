@@ -36,7 +36,13 @@ pub async fn feast_the_day(
     pool: web::Data<PgPool>,
     query: web::Query<dto::FeastOfTheDayQuery>,
 ) -> Result<HttpResponse, ApiError> {
-    let result = service::feast_the_day(pool.get_ref(), query.date.as_deref()).await?;
+    let result =
+        service::feast_the_day(pool.get_ref(), query.date.as_deref(), query.offset).await?;
 
+    if result.is_none() {
+        return Ok(HttpResponse::Ok().json(serde_json::json!({
+            "error": "No feast found for the given date."
+        })));
+    }
     Ok(HttpResponse::Ok().json(result))
 }
