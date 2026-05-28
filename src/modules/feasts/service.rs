@@ -1,4 +1,4 @@
-use chrono::{Datelike, Utc};
+use chrono::{Datelike, FixedOffset, TimeZone, Utc};
 use sqlx::PgPool;
 
 use super::{dto::FeastListItem, repo};
@@ -14,11 +14,16 @@ pub async fn list_feasts_for_calendar_with_dates(
 pub async fn feast_the_day(
     pool: &PgPool,
     date: Option<&str>,
+    offset: Option<i32>,
 ) -> Result<Option<FeastListItem>, ApiError> {
     let (month, day) = match date {
         Some(date_str) => parse_mm_dd(date_str)?,
         None => {
-            let now = Utc::now();
+            let offset = offset.unwrap_or(0);
+
+            let tz = FixedOffset::east_opt(offset * 60)
+                .ok_or_else(|| ApiError::BadRequest("Invalid offset".into()))?;
+            let now = Utc::now().with_timezone(&tz);
             (now.month() as u8, now.day() as u8)
         }
     };
