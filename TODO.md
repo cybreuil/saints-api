@@ -32,3 +32,5 @@ ORDER BY default_name ASC
 /for exemple
 
 + maybe should split logic for saint of today & saint of the day / actually are on same route with query param, but maybe should be split into two routes for clarity ?
+
+Need mapping query errors on apierrors
