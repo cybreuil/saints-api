@@ -41,7 +41,10 @@ pub async fn feast_the_day(
         SELECT
             f.slug,
             f.default_name,
-            f.feast_type
+            f.feast_type,
+            fd.date_kind,
+            fd.month,
+            fd.day
         FROM feasts f
         INNER JOIN feast_dates fd
             ON fd.feast_id = f.id
