@@ -30,3 +30,13 @@ pub async fn list_feasts_for_calendar_with_dates(
 
     Ok(HttpResponse::Ok().json(result))
 }
+
+// Feast of the day
+pub async fn feast_the_day(
+    pool: web::Data<PgPool>,
+    query: web::Query<dto::FeastOfTheDayQuery>,
+) -> Result<HttpResponse, ApiError> {
+    let result = service::feast_the_day(pool.get_ref(), query.date.as_deref()).await?;
+
+    Ok(HttpResponse::Ok().json(result))
+}

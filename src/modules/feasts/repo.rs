@@ -30,3 +30,30 @@ pub async fn list_feasts_for_calendar_with_dates(
 
     Ok(rows)
 }
+
+pub async fn feast_the_day(
+    pool: &PgPool,
+    date: Option<&str>,
+) -> Result<Option<dto::FeastListItem>, ApiError> {
+    let row = sqlx::query_as::<_, dto::FeastListItem>(
+        r#"
+		SELECT
+			f.slug,
+			f.default_name,
+			f.feast_type,
+			fd.date_kind,
+			fd.month,
+			fd.day
+		FROM feasts AS f
+		JOIN feast_dates AS fd
+			ON fd.feast_id = f.id
+		WHERE (fd.month || '-' || fd.day) = $1
+		LIMIT 1
+		"#,
+    )
+    .bind(date.unwrap_or(""))
+    .fetch_optional(pool)
+    .await?;
+
+    Ok(row)
+}
