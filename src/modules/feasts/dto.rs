@@ -15,3 +15,8 @@ pub struct FeastListItem {
 pub struct FeastQuery {
     pub calendar_id: i32,
 }
+
+#[derive(Debug, Deserialize)]
+pub struct FeastOfTheDayQuery {
+    pub date: Option<String>,
+}
