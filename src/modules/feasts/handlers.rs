@@ -1,5 +1,6 @@
 use actix_web::{web, HttpResponse};
 use sqlx::PgPool;
+use std::collections::HashMap;
 
 use crate::core::error::ApiError;
 
@@ -34,10 +35,24 @@ pub async fn list_feasts_for_calendar_with_dates(
 // Feast of the day
 pub async fn feast_the_day(
     pool: web::Data<PgPool>,
-    query: web::Query<dto::FeastOfTheDayQuery>,
+    query: web::Query<HashMap<String, String>>,
 ) -> Result<HttpResponse, ApiError> {
-    let result =
-        service::feast_the_day(pool.get_ref(), query.date.as_deref(), query.offset).await?;
+    let params = query.into_inner();
+
+    // date is optional string "MM-DD"
+    let date_opt = params.get("date").map(|s| s.to_owned());
+
+    // offset is optional int (minutes). return clear 422 if parse fails
+    let offset = match params.get("offset") {
+        Some(s) if !s.is_empty() => Some(s.parse::<i32>().map_err(|_| {
+            ApiError::BadRequest(
+                "Invalid 'offset' query parameter: expecting integer minutes".into(),
+            )
+        })?),
+        _ => None,
+    };
+
+    let result = service::feast_the_day(pool.get_ref(), date_opt.as_deref(), offset).await?;
 
     if result.is_none() {
         return Ok(HttpResponse::Ok().json(serde_json::json!({
