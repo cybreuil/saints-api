@@ -7,22 +7,20 @@ struct IndexResponse {
     name: &'static str,
     version: &'static str,
     description: &'static str,
-    docs: &'static str,
-    repo: &'static str,
+    github: &'static str,
     notes: &'static str,
-    health: &'static str,
+    health: Option<&'static str>,
+    docs: Option<&'static str>,
 }
 
 /// Simple API homepage — returns JSON with basic info and useful links.
 pub async fn index() -> HttpResponse {
     let response = IndexResponse {
-		name: "Genuflexio - A catholic API serving saints & celebrations data.",
-		version: "0.1.0",
-		description: "Lightweight API serving saints data and images with feasts & celebrations of the catholic church.",
-		docs: "/docs or README",
-		repo: "https://github.com/cybreuil",
-		notes: "This API is served by an Actix web server. See README for usage and seeds.",
-		health: "/health",
-	};
+        name: "Genuflexio - A catholic API.",
+        version: "0.1.0",
+        description: "Lightweight RESTful API for Catholic saints and celebrations.",
+        github: "https://github.com/cybreuil",
+        notes: "API written in Rust using Actix-web, serving PostgreSQL data with SQLx.",
+    };
     HttpResponse::Ok().json(response)
 }
