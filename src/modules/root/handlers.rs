@@ -9,8 +9,8 @@ struct IndexResponse {
     description: &'static str,
     github: &'static str,
     notes: &'static str,
-    health: Option<&'static str>,
-    docs: Option<&'static str>,
+    // health: Option<&'static str>,
+    // docs: Option<&'static str>,
 }
 
 /// Simple API homepage — returns JSON with basic info and useful links.
