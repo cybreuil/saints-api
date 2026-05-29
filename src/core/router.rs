@@ -7,4 +7,5 @@ pub fn router() -> Scope {
         .service(modules::feasts::router::router())
         .service(modules::health::router::router())
         .service(modules::root::router::router())
+        .service(modules::celebrations::router::router())
 }
