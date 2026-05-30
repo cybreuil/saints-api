@@ -51,9 +51,9 @@ pub async fn get_saint_by_slug(
 }
 
 pub async fn count_saints(pool: &PgPool) -> Result<i32, ApiError> {
-    let row = sqlx::query!("SELECT COUNT(*) as count FROM saints")
+    let row = sqlx::query_as::<_, (i64,)>("SELECT COUNT(*) FROM saints")
         .fetch_one(pool)
         .await?;
 
-    Ok(row.count.unwrap_or(0) as i32)
+    Ok(row.0 as i32)
 }
