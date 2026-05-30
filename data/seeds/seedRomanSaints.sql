@@ -32,10 +32,10 @@ INSERT INTO saints (
 (
   'saint-john-the-baptist', 'Saint John the Baptist',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  30, NULL, NULL, TRUE,
   1,
   NULL,
-  NULL,
+  (SELECT id FROM places WHERE code='MACHAERUS'),
   NULL
 )
 ON CONFLICT (slug) DO NOTHING;
@@ -199,8 +199,8 @@ INSERT INTO saints (
   356, 1, 17, TRUE,
   4,
   (SELECT id FROM places WHERE code='HERAKLEOPOLIS_MAGNA'),
-  (SELECT id FROM places WHERE code='HERAKLEOPOLIS_MAGNA'),
-  (SELECT id FROM places WHERE code='HERAKLEOPOLIS_MAGNA')
+  (SELECT id FROM places WHERE code='MOUNT_COLZIM'),
+  (SELECT id FROM places WHERE code='MOUNT_COLZIM')
 ),
 (
   'saint-fabian-pope', 'Saint Fabian, Pope',
