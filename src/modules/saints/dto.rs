@@ -43,7 +43,7 @@ pub struct SaintDetail {
 
 #[derive(Debug, Deserialize)]
 pub struct LangQuery {
-    pub language_code: String,
+    pub language_code: Option<String>,
 }
 // #[derive(Debug, Deserialize)]
 // pub struct CreateSaint {
