@@ -31,10 +31,13 @@ pub async fn list_all_saints(pool: web::Data<PgPool>) -> Result<HttpResponse, Ap
 pub async fn get_saint_by_slug(
     pool: web::Data<PgPool>,
     path: web::Path<String>,
-    query: web::Query<dto::LangQuery>,
+    query: Option<web::Query<dto::LangQuery>>,
 ) -> Result<HttpResponse, ApiError> {
     let slug = path.into_inner();
-    let language_code = query.language_code.clone();
+    let language_code: &str = query
+        .as_ref() // Option<&web::Query<..>>
+        .and_then(|q| q.language_code.as_deref()) // Option<&str>
+        .unwrap_or("en");
 
     let result = service::get_saint_by_slug(pool.get_ref(), &slug, &language_code).await?;
 
