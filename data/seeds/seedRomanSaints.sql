@@ -16,7 +16,7 @@ INSERT INTO saints (
   NULL, NULL, NULL, TRUE,
   NULL, NULL, NULL, TRUE,
   1,
-  (SELECT id FROM places WHERE code='NAZARETH'),
+  NULL,
   NULL,
   (SELECT id FROM places WHERE code='NAZARETH')
   ),

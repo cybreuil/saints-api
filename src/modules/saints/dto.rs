@@ -29,6 +29,22 @@ pub struct SaintQuery {
     pub page: Option<i32>,
     pub per_page: Option<i32>,
 }
+
+#[derive(Debug, Serialize, FromRow)]
+pub struct SaintDetail {
+    pub id: i32,
+    pub slug: String,
+    pub default_name: String,
+    pub birth_year: Option<i16>,
+    pub death_year: Option<i16>,
+    pub short_description: Option<String>,
+    pub full_biography: Option<String>,
+}
+
+#[derive(Debug, Deserialize)]
+pub struct LangQuery {
+    pub language_code: String,
+}
 // #[derive(Debug, Deserialize)]
 // pub struct CreateSaint {
 //     pub slug: String,

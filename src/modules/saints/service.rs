@@ -4,7 +4,10 @@ use super::{
     dto::{SaintListItem, SaintListResponse},
     repo,
 };
-use crate::core::{error::ApiError, pagination::Pagination};
+use crate::{
+    core::{error::ApiError, pagination::Pagination},
+    modules::saints::dto::SaintDetail,
+};
 
 pub async fn list_saints(
     pool: &PgPool,
@@ -51,8 +54,25 @@ pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiErr
     repo::list_all_saints(pool).await
 }
 
-pub async fn get_saint_by_slug(pool: &PgPool, slug: String) -> Result<SaintListItem, ApiError> {
-    repo::get_saint_by_slug(pool, slug).await
+pub async fn get_saint_by_slug(
+    pool: &PgPool,
+    slug: &str,
+    language_code: &str,
+) -> Result<SaintDetail, ApiError> {
+    fn valid_lang_code(s: &str) -> bool {
+        let primary = s.split('-').next().unwrap_or("");
+        primary.len() == 2 && primary.chars().all(|c| c.is_ascii_alphabetic())
+    }
+
+    let lang = if language_code.is_empty() {
+        "en" // fallback
+    } else if valid_lang_code(language_code) {
+        language_code
+    } else {
+        return Err(ApiError::BadRequest("Invalid language code".to_string()));
+    };
+
+    repo::get_saint_by_slug(pool, slug, lang).await
 }
 
 // pub async fn get_saint(
