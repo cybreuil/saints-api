@@ -407,8 +407,8 @@ INSERT INTO saints (
   316, NULL, NULL, TRUE,
   4,
   NULL,
-  (SELECT id FROM places WHERE code='SMYRNA'),
-  (SELECT id FROM places WHERE code='SMYRNA')
+  (SELECT id FROM places WHERE code='SIVAS'),
+  (SELECT id FROM places WHERE code='SIVAS')
 ),
 (
   'saint-ansgar', 'Saint Ansgar',
@@ -416,7 +416,7 @@ INSERT INTO saints (
   865, 2, 3, FALSE,
   9,
   NULL,
-  NULL,
+  (SELECT id FROM places WHERE code='BREMEN'),
   NULL
 ),
 (
@@ -424,17 +424,17 @@ INSERT INTO saints (
   NULL, NULL, NULL, TRUE,
   251, NULL, NULL, TRUE,
   3,
-  NULL,
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='CATANIA'),
+  (SELECT id FROM places WHERE code='CATANIA'),
+  (SELECT id FROM places WHERE code='CATANIA')
 ),
 (
   'saint-paul-miki', 'Saint Paul Miki',
   1564, NULL, NULL, TRUE,
   1597, 2, 5, FALSE,
   16,
-  (SELECT id FROM places WHERE code='JAPAN'),
-  (SELECT id FROM places WHERE code='JAPAN'),
+  (SELECT id FROM places WHERE code='OSAKA'),
+  (SELECT id FROM places WHERE code='NAGASAKI'),
   (SELECT id FROM places WHERE code='JAPAN')
 ),
 (
@@ -442,7 +442,9 @@ INSERT INTO saints (
   1486, NULL, NULL, TRUE,
   1537, 2, 8, FALSE,
   16,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='VENICE'),
+  (SELECT id FROM places WHERE code='SOMASCA'),
+  (SELECT id FROM places WHERE code='SOMASCA')
 ),
 (
   'saint-josephine-bakhita', 'Saint Josephine Bakhita',

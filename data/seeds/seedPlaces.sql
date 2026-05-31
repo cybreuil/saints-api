@@ -121,7 +121,14 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('MACHAERUS', 'JO', 31.567222, 35.624167), -- St John the Baptist context (death place region alternative not ideal)
 ('MOUNT_COLZIM', 'EG', 28.924712, 32.348392), -- optional alias if you want clearer slug naming for Mount Carmel context
 ('HUESCA', 'ES', 42.133333, -0.416667),
-('THORENS_GLIERES', 'FR', 45.9978, 6.2478) -- St Francis de Sales context
+('THORENS_GLIERES', 'FR', 45.9978, 6.2478), -- St Francis de Sales context
+('SIVAS', 'TR', 39.7477, 37.0179), -- St Blaise context
+('BREMEN', 'DE', 53.0793, 8.8017),
+('CATANIA', 'IT', 37.5079, 15.090278), -- St Agatha context
+('OSAKA', 'JP', 34.6937, 135.5023),
+('NAGASAKI', 'JP', 32.7503, 129.8777), -- St Paul Miki context
+('VENICE', 'IT', 45.4408, 12.3155),
+('SOMASCA', 'IT', 45.5833, 9.3167)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -247,7 +254,14 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='MACHAERUS'), 'en', 'Machaerus'),
 ((SELECT id FROM places WHERE code='MOUNT_COLZIM'), 'en', 'Mount Colzim'),
 ((SELECT id FROM places WHERE code='HUESCA'), 'en', 'Huesca'),
-((SELECT id FROM places WHERE code='THORENS_GLIERES'), 'en', 'Thorens-Glières')
+((SELECT id FROM places WHERE code='THORENS_GLIERES'), 'en', 'Thorens-Glières'),
+((SELECT id FROM places WHERE code='SIVAS'), 'en', 'Sivas'),
+((SELECT id FROM places WHERE code='BREMEN'), 'en', 'Bremen'),
+((SELECT id FROM places WHERE code='CATANIA'), 'en', 'Catania'),
+((SELECT id FROM places WHERE code='OSAKA'), 'en', 'Osaka'),
+((SELECT id FROM places WHERE code='NAGASAKI'), 'en', 'Nagasaki'),
+((SELECT id FROM places WHERE code='VENICE'), 'en', 'Venice'),
+((SELECT id FROM places WHERE code='SOMASCA'), 'en', 'Somasca')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -373,7 +387,14 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='MACHAERUS'), 'fr', 'Machaerus'),
 ((SELECT id FROM places WHERE code='MOUNT_COLZIM'), 'fr', 'Mont Colzim'),
 ((SELECT id FROM places WHERE code='HUESCA'), 'fr', 'Huesca'),
-((SELECT id FROM places WHERE code='THORENS_GLIERES'), 'fr', 'Thorens-Glières')
+((SELECT id FROM places WHERE code='THORENS_GLIERES'), 'fr', 'Thorens-Glières'),
+((SELECT id FROM places WHERE code='SIVAS'), 'fr', 'Sivas'),
+((SELECT id FROM places WHERE code='BREMEN'), 'fr', 'Brême'),
+((SELECT id FROM places WHERE code='CATANIA'), 'fr', 'Catane'),
+((SELECT id FROM places WHERE code='OSAKA'), 'fr', 'Osaka'),
+((SELECT id FROM places WHERE code='NAGASAKI'), 'fr', 'Nagasaki'),
+((SELECT id FROM places WHERE code='VENICE'), 'fr', 'Venise'),
+((SELECT id FROM places WHERE code='SOMASCA'), 'fr', 'Somasque')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -499,7 +520,14 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='MACHAERUS'), 'la', 'Machaerus'),
 ((SELECT id FROM places WHERE code='MOUNT_COLZIM'), 'la', 'Mons Colzim'),
 ((SELECT id FROM places WHERE code='HUESCA'), 'la', 'Huesca'),
-((SELECT id FROM places WHERE code='THORENS_GLIERES'), 'la', 'Thorentium Salesiorum')
+((SELECT id FROM places WHERE code='THORENS_GLIERES'), 'la', 'Thorentium Salesiorum'),
+((SELECT id FROM places WHERE code='SIVAS'), 'la', 'Sebastea'),
+((SELECT id FROM places WHERE code='BREMEN'), 'la', 'Brema'),
+((SELECT id FROM places WHERE code='CATANIA'), 'la', 'Catana'),
+((SELECT id FROM places WHERE code='OSAKA'), 'la', 'Ozaca'),
+((SELECT id FROM places WHERE code='NAGASAKI'), 'la', 'Nagasacum'),
+((SELECT id FROM places WHERE code='VENICE'), 'la', 'Venetiae'),
+((SELECT id FROM places WHERE code='SOMASCA'), 'la', 'Somasca')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
