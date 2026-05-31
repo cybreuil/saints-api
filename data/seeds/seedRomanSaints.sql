@@ -204,7 +204,7 @@ INSERT INTO saints (
 ),
 (
   'saint-fabian-pope', 'Saint Fabian, Pope',
-  NULL, NULL, NULL, TRUE,
+  178, NULL, NULL, TRUE,
   250, 1, 20, TRUE,
   3,
   NULL,
@@ -213,7 +213,7 @@ INSERT INTO saints (
 ),
 (
   'saint-sebastian', 'Saint Sebastian',
-  NULL, NULL, NULL, TRUE,
+  256, NULL, NULL, TRUE,
   288, NULL, NULL, TRUE,
   3,
   NULL,
@@ -234,23 +234,23 @@ INSERT INTO saints (
   NULL, NULL, NULL, TRUE,
   304, NULL, NULL, TRUE,
   4,
-  (SELECT id FROM places WHERE code='SARAGOSSA'),
+  (SELECT id FROM places WHERE code='HUESCA'),
   (SELECT id FROM places WHERE code='VALENCIA'),
   (SELECT id FROM places WHERE code='SARAGOSSA')
 ),
 (
   'saint-francis-de-sales', 'Saint Francis de Sales',
-  1567, 8, 21, FALSE,
+  1567, 8, 22, FALSE,
   1622, 12, 28, FALSE,
   17,
-  (SELECT id FROM places WHERE code='ANNECY'),
+  (SELECT id FROM places WHERE code='THORENS_GLIERES'),
   (SELECT id FROM places WHERE code='LYON'),
   (SELECT id FROM places WHERE code='ANNECY')
 ),
 (
   'saint-paul-apostle', 'Saint Paul, Apostle',
   5, NULL, NULL, TRUE,
-  67, NULL, NULL, TRUE,
+  65, NULL, NULL, TRUE,
   1,
   (SELECT id FROM places WHERE code='TARSUS'),
   (SELECT id FROM places WHERE code='ROME'),
