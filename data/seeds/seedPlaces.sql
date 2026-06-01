@@ -129,7 +129,8 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('NAGASAKI', 'JP', 32.7503, 129.8777), -- St Paul Miki context
 ('VENICE', 'IT', 45.4408, 12.3155),
 ('SOMASCA', 'IT', 45.5833, 9.3167),
-('SCHIO', 'IT', 45.5833, 11.3167) -- St Josephine Bakhita
+('SCHIO', 'IT', 45.5833, 11.3167), -- St Josephine Bakhita
+('NYALA', 'SD', 12.0542, 24.8808) -- St Josephine Bakhita
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -263,7 +264,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='NAGASAKI'), 'en', 'Nagasaki'),
 ((SELECT id FROM places WHERE code='VENICE'), 'en', 'Venice'),
 ((SELECT id FROM places WHERE code='SOMASCA'), 'en', 'Somasca'),
-((SELECT id FROM places WHERE code='SCHIO'), 'en', 'Schio')
+((SELECT id FROM places WHERE code='SCHIO'), 'en', 'Schio'),
+((SELECT id FROM places WHERE code='NYALA'), 'en', 'Nyala')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -397,7 +399,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='NAGASAKI'), 'fr', 'Nagasaki'),
 ((SELECT id FROM places WHERE code='VENICE'), 'fr', 'Venise'),
 ((SELECT id FROM places WHERE code='SOMASCA'), 'fr', 'Somasque'),
-((SELECT id FROM places WHERE code='SCHIO'), 'fr', 'Schio')
+((SELECT id FROM places WHERE code='SCHIO'), 'fr', 'Schio'),
+((SELECT id FROM places WHERE code='NYALA'), 'fr', 'Nyala')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -531,7 +534,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='NAGASAKI'), 'la', 'Nagasacum'),
 ((SELECT id FROM places WHERE code='VENICE'), 'la', 'Venetiae'),
 ((SELECT id FROM places WHERE code='SOMASCA'), 'la', 'Somasca'),
-((SELECT id FROM places WHERE code='SCHIO'), 'la', 'Esculetum')
+((SELECT id FROM places WHERE code='SCHIO'), 'la', 'Esculetum'),
+((SELECT id FROM places WHERE code='NYALA'), 'la', 'Nyala')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
