@@ -458,39 +458,45 @@ INSERT INTO saints (
 (
   'saint-scholastica', 'Saint Scholastica',
   480, NULL, NULL, TRUE,
-  543, 2, 10, TRUE,
+  547, 2, 10, TRUE,
   6,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='NURSIA'),
+  (SELECT id FROM places WHERE code='MONTECASSINO'),
+  (SELECT id FROM places WHERE code='MONTECASSINO')
 ),
 (
   'saint-cyril', 'Saint Cyril',
   826, NULL, NULL, TRUE,
   869, 2, 14, FALSE,
   9,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='THESSALONICA'),
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='NITRA')
 ),
 (
   'saint-methodius', 'Saint Methodius',
   815, NULL, NULL, TRUE,
   885, 4, 6, FALSE,
   9,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='THESSALONICA'),
+  (SELECT id FROM places WHERE code='STARE_MESTO'),
+  (SELECT id FROM places WHERE code='NITRA')
 ),
 (
   'saint-peter-damian', 'Saint Peter Damian',
   1007, NULL, NULL, TRUE,
   1072, 2, 22, TRUE,
   11,
-  NULL,
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='RAVENNA'),
+  (SELECT id FROM places WHERE code='FAENZA'),
+  (SELECT id FROM places WHERE code='FONTE_AVELLANA')
 ),
 (
   'saint-polycarp', 'Saint Polycarp',
   69, NULL, NULL, TRUE,
-  155, 2, 23, TRUE,
+  155, NULL, NULL, TRUE,
   2,
-  (SELECT id FROM places WHERE code='SMYRNA'),
+  NULL,
   (SELECT id FROM places WHERE code='SMYRNA'),
   (SELECT id FROM places WHERE code='SMYRNA')
 ),
@@ -499,7 +505,9 @@ INSERT INTO saints (
   951, NULL, NULL, TRUE,
   1003, NULL, NULL, TRUE,
   10,
-  NULL, NULL, NULL
+  NULL,
+  (SELECT id FROM places WHERE code='NAREK'),
+  (SELECT id FROM places WHERE code='NAREK')
 )
 ON CONFLICT (slug) DO NOTHING;
 
@@ -594,12 +602,14 @@ INSERT INTO saints (
   1458, 10, 3, FALSE,
   1484, 3, 4, FALSE,
   15,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='KRAKOW'),
+  (SELECT id FROM places WHERE code='GRODNO'),
+  (SELECT id FROM places WHERE code='VILNIUS')
 ),
 (
   'saint-perpetua', 'Saint Perpetua',
   182, NULL, NULL, TRUE,
-  203, 3, 7, FALSE,
+  203, NULL, NULL, TRUE,
   3,
   (SELECT id FROM places WHERE code='CARTHAGE'),
   (SELECT id FROM places WHERE code='CARTHAGE'),
@@ -607,8 +617,8 @@ INSERT INTO saints (
 ),
 (
   'saint-felicity', 'Saint Felicity',
-  NULL, NULL, NULL, TRUE,
-  203, 3, 7, FALSE,
+  182, NULL, NULL, TRUE,
+  203, NULL, NULL, TRUE,
   3,
   (SELECT id FROM places WHERE code='CARTHAGE'),
   (SELECT id FROM places WHERE code='CARTHAGE'),
@@ -616,10 +626,12 @@ INSERT INTO saints (
 ),
 (
   'saint-john-of-god', 'Saint John of God',
-  1495, NULL, NULL, TRUE,
+  1495, 3, 8, TRUE,
   1550, 3, 8, FALSE,
   16,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='MONTEMOR_O_NOVO'),
+  (SELECT id FROM places WHERE code='GRANADA'),
+  (SELECT id FROM places WHERE code='GRANADA')
 ),
 (
   'saint-frances-of-rome', 'Saint Frances of Rome',
@@ -633,16 +645,16 @@ INSERT INTO saints (
 (
   'saint-patrick', 'Saint Patrick',
   385, NULL, NULL, TRUE,
-  461, 3, 17, TRUE,
+  460, NULL, NULL, TRUE,
   5,
   NULL,
-  (SELECT id FROM places WHERE code='DUBLIN'),
-  (SELECT id FROM places WHERE code='DUBLIN')
+  (SELECT id FROM places WHERE code='DOWNPATRICK'),
+  (SELECT id FROM places WHERE code='IRELAND')
 ),
 (
   'saint-cyril-of-jerusalem', 'Saint Cyril of Jerusalem',
-  315, NULL, NULL, TRUE,
-  386, 3, 18, TRUE,
+  313, NULL, NULL, TRUE,
+  386, NULL, NULL, TRUE,
   4,
   (SELECT id FROM places WHERE code='JERUSALEM'),
   (SELECT id FROM places WHERE code='JERUSALEM'),
@@ -658,12 +670,12 @@ INSERT INTO saints (
 -- ),
 (
   'saint-turibius-of-mogrovejo', 'Saint Turibius of Mogrovejo',
-  1538, NULL, NULL, TRUE,
+  1538, 11, 16, FALSE,
   1606, 3, 23, FALSE,
   17,
-  (SELECT id FROM places WHERE code='MOGROVEJO'),
+  (SELECT id FROM places WHERE code='MAYORGA'),
   (SELECT id FROM places WHERE code='LIMA'),
-  (SELECT id FROM places WHERE code='LIMA')
+  (SELECT id FROM places WHERE code='ZANA')
 )
 ON CONFLICT (slug) DO NOTHING;
 
@@ -749,14 +761,18 @@ INSERT INTO saints (
   1416, 3, 27, FALSE,
   1507, 4, 2, FALSE,
   16,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='PAOLA'),
+  (SELECT id FROM places WHERE code='PLESSIS_LEZ_TOURS'),
+  (SELECT id FROM places WHERE code='PAOLA')
 ),
 (
   'saint-isidore', 'Saint Isidore',
   560, NULL, NULL, TRUE,
   636, 4, 4, FALSE,
   7,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='CARTAGENA'),
+  (SELECT id FROM places WHERE code='SEVILLE'),
+  (SELECT id FROM places WHERE code='SEVILLE')
 ),
 (
   'saint-vincent-ferrer', 'Saint Vincent Ferrer',
@@ -764,7 +780,7 @@ INSERT INTO saints (
   1419, 4, 5, FALSE,
   15,
   (SELECT id FROM places WHERE code='VALENCIA'),
-  NULL,
+  (SELECT id FROM places WHERE code='VANNES'),
   NULL
 ),
 (
@@ -773,22 +789,22 @@ INSERT INTO saints (
   1719, 4, 7, FALSE,
   18,
   (SELECT id FROM places WHERE code='REIMS'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='ROUEN'),
+  (SELECT id FROM places WHERE code='REIMS')
 ),
 (
   'saint-stanislaus', 'Saint Stanislaus',
-  1030, NULL, NULL, TRUE,
+  1030, 7, 26, TRUE,
   1079, 4, 11, FALSE,
   11,
-  NULL,
+  (SELECT id FROM places WHERE code='SZCZEPANOW'),
   (SELECT id FROM places WHERE code='KRAKOW'),
   (SELECT id FROM places WHERE code='KRAKOW')
 ),
 (
   'saint-martin-i', 'Saint Martin I',
-  NULL, NULL, NULL, TRUE,
-  655, 4, 13, FALSE,
+  600, NULL, NULL, TRUE,
+  655, 9, 16, FALSE,
   7,
   NULL, NULL,
   (SELECT id FROM places WHERE code='ROME')
