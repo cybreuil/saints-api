@@ -130,7 +130,30 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('VENICE', 'IT', 45.4408, 12.3155),
 ('SOMASCA', 'IT', 45.5833, 9.3167),
 ('SCHIO', 'IT', 45.5833, 11.3167), -- St Josephine Bakhita
-('NYALA', 'SD', 12.0542, 24.8808) -- St Josephine Bakhita
+('NYALA', 'SD', 12.0542, 24.8808), -- St Josephine Bakhita
+('VILLA_SANTA_LUCIA', 'IT', 41.516667, 13.783333), -- optional alias if you want clearer slug naming for Loreto context
+('THESSALONIKI', 'GR', 40.6401, 22.9444),
+('NITRA', 'SK', 48.3064, 18.0764),
+('STARE_MESTO', 'CZ', 49.077222, 17.441667),
+('RAVENNA', 'IT', 44.4167, 12.2000),
+('FAENZA', 'IT', 44.2833, 11.8833),
+('FONTE_AVELLANA', 'IT', 43.3667, 12.8167),
+('NAREK', 'AM', 40.5000, 44.5000), -- St Gregory of Narek context
+('VILNIUS', 'LT', 54.6872, 25.2797), -- St Casimir context
+('GRODNO', 'BY', 53.6694, 23.8131), -- St Euphrosyne of Polotsk context
+('MONTEMOR_O_NOVO', 'PT', 39.3167, -7.5167),
+('GRANADA', 'ES', 37.1773, -3.5986),
+('IRELAND', 'IE', 53.1424, -7.6921),
+('DOWNPATRICK', 'GB', 54.3390, -5.7167), -- St Patrick context
+('MAYORGA', 'ES', 40.7833, -4.8167),
+('ZANA', 'PE', -6.4078, -79.6150),
+('PAOLA', 'IT', 39.3619, 16.0403), -- St Francis of Paola context (approx)
+('PLESSIS_LES_TOURS', 'FR', 47.3941, 0.6848),
+('CARTAGENA', 'ES', 37.6257, -0.9962),
+('SEVILLE', 'ES', 37.3891, -5.9845),
+('VANNES', 'FR', 47.6581, -2.7608),
+('ROUEN', 'FR', 49.4431, 1.0993),
+('SZCZEPANOW', 'PL', 50.0647, 19.9450) -- St Stanislaus context (Krakow region alternative not ideal)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -265,7 +288,30 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='VENICE'), 'en', 'Venice'),
 ((SELECT id FROM places WHERE code='SOMASCA'), 'en', 'Somasca'),
 ((SELECT id FROM places WHERE code='SCHIO'), 'en', 'Schio'),
-((SELECT id FROM places WHERE code='NYALA'), 'en', 'Nyala')
+((SELECT id FROM places WHERE code='NYALA'), 'en', 'Nyala'),
+((SELECT id FROM places WHERE code='VILLA_SANTA_LUCIA'), 'en', 'Villa Santa Lucia'),
+((SELECT id FROM places WHERE code='THESSALONIKI'), 'en', 'Thessaloniki'),
+((SELECT id FROM places WHERE code='NITRA'), 'en', 'Nitra'),
+((SELECT id FROM places WHERE code='STARE_MESTO'), 'en', 'Staré Město'),
+((SELECT id FROM places WHERE code='RAVENNA'), 'en', 'Ravenna'),
+((SELECT id FROM places WHERE code='FAENZA'), 'en', 'Faenza'),
+((SELECT id FROM places WHERE code='FONTE_AVELLANA'), 'en', 'Fonte Avellana'),
+((SELECT id FROM places WHERE code='NAREK'), 'en', 'Narek'),
+((SELECT id FROM places WHERE code='VILNIUS'), 'en', 'Vilnius'),
+((SELECT id FROM places WHERE code='GRODNO'), 'en', 'Grodno'),
+((SELECT id FROM places WHERE code='MONTEMOR_O_NOVO'), 'en', 'Montemor-o-Novo'),
+((SELECT id FROM places WHERE code='GRANADA'), 'en', 'Granada'),
+((SELECT id FROM places WHERE code='IRELAND'), 'en', 'Ireland'),
+((SELECT id FROM places WHERE code='DOWNPATRICK'), 'en', 'Downpatrick'),
+((SELECT id FROM places WHERE code='MAYORGA'), 'en', 'Mayorga'),
+((SELECT id FROM places WHERE code='ZANA'), 'en', 'Zaña'),
+((SELECT id FROM places WHERE code='PAOLA'), 'en', 'Paola'),
+((SELECT id FROM places WHERE code='PLESSIS_LES_TOURS'), 'en', 'Plessis-les-Tours'),
+((SELECT id FROM places WHERE code='CARTAGENA'), 'en', 'Cartagena'),
+((SELECT id FROM places WHERE code='SEVILLE'), 'en', 'Seville'),
+((SELECT id FROM places WHERE code='VANNES'), 'en', 'Vannes'),
+((SELECT id FROM places WHERE code='ROUEN'), 'en', 'Rouen'),
+((SELECT id FROM places WHERE code='SZCZEPANOW'), 'en', 'Szczepanów')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -348,7 +394,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='CREMONA'), 'fr', 'Cremone'),
 ((SELECT id FROM places WHERE code='CORINALDO'), 'fr', 'Corinaldo'),
 ((SELECT id FROM places WHERE code='NETTUNO'), 'fr', 'Nettuno'),
-((SELECT id FROM places WHERE code='NORCIA'), 'fr', 'Norcia'),
+((SELECT id FROM places WHERE code='NORCIA'), 'fr', 'Nursie'),
 ((SELECT id FROM places WHERE code='MAGDALA'), 'fr', 'Magdala'),
 ((SELECT id FROM places WHERE code='LOYOLA'), 'fr', 'Loyola'),
 ((SELECT id FROM places WHERE code='BETHANY'), 'fr', 'Bethany'),
@@ -400,7 +446,30 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='VENICE'), 'fr', 'Venise'),
 ((SELECT id FROM places WHERE code='SOMASCA'), 'fr', 'Somasque'),
 ((SELECT id FROM places WHERE code='SCHIO'), 'fr', 'Schio'),
-((SELECT id FROM places WHERE code='NYALA'), 'fr', 'Nyala')
+((SELECT id FROM places WHERE code='NYALA'), 'fr', 'Nyala'),
+((SELECT id FROM places WHERE code='VILLA_SANTA_LUCIA'), 'fr', 'Villa Santa Lucia'),
+((SELECT id FROM places WHERE code='THESSALONIKI'), 'fr', 'Thessalonique'),
+((SELECT id FROM places WHERE code='NITRA'), 'fr', 'Nitra'),
+((SELECT id FROM places WHERE code='STARE_MESTO'), 'fr', 'Staré Město'),
+((SELECT id FROM places WHERE code='RAVENNA'), 'fr', 'Ravenne'),
+((SELECT id FROM places WHERE code='FAENZA'), 'fr', 'Faenza'),
+((SELECT id FROM places WHERE code='FONTE_AVELLANA'), 'fr', 'Fonte Avellana'),
+((SELECT id FROM places WHERE code='NAREK'), 'fr', 'Narek'),
+((SELECT id FROM places WHERE code='VILNIUS'), 'fr', 'Vilnius'),
+((SELECT id FROM places WHERE code='GRODNO'), 'fr', 'Grodno'),
+((SELECT id FROM places WHERE code='MONTEMOR_O_NOVO'), 'fr', 'Montemor-o-Novo'),
+((SELECT id FROM places WHERE code='GRANADA'), 'fr', 'Grenade'),
+((SELECT id FROM places WHERE code='IRELAND'), 'fr', 'Irlande'),
+((SELECT id FROM places WHERE code='DOWNPATRICK'), 'fr', 'Downpatrick'),
+((SELECT id FROM places WHERE code='MAYORGA'), 'fr', 'Mayorga'),
+((SELECT id FROM places WHERE code='ZANA'), 'fr', 'Zaña'),
+((SELECT id FROM places WHERE code='PAOLA'), 'fr', 'Paola'),
+((SELECT id FROM places WHERE code='PLESSIS_LES_TOURS'), 'fr', 'Plessis-les-Tours'),
+((SELECT id FROM places WHERE code='CARTAGENA'), 'fr', 'Carthagène'),
+((SELECT id FROM places WHERE code='SEVILLE'), 'fr', 'Séville'),
+((SELECT id FROM places WHERE code='VANNES'), 'fr', 'Vannes'),
+((SELECT id FROM places WHERE code='ROUEN'), 'fr', 'Rouen'),
+((SELECT id FROM places WHERE code='SZCZEPANOW'), 'fr', 'Szczepanów')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -483,7 +552,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='CREMONA'), 'la', 'Cremona'),
 ((SELECT id FROM places WHERE code='CORINALDO'), 'la', 'Corinaldo'),
 ((SELECT id FROM places WHERE code='NETTUNO'), 'la', 'Nettuno'),
-((SELECT id FROM places WHERE code='NORCIA'), 'la', 'Norcia'),
+((SELECT id FROM places WHERE code='NORCIA'), 'la', 'Nursia'),
 ((SELECT id FROM places WHERE code='MAGDALA'), 'la', 'Magdala'),
 ((SELECT id FROM places WHERE code='LOYOLA'), 'la', 'Loyola'),
 ((SELECT id FROM places WHERE code='BETHANY'), 'la', 'Bethania'),
@@ -535,7 +604,30 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='VENICE'), 'la', 'Venetiae'),
 ((SELECT id FROM places WHERE code='SOMASCA'), 'la', 'Somasca'),
 ((SELECT id FROM places WHERE code='SCHIO'), 'la', 'Esculetum'),
-((SELECT id FROM places WHERE code='NYALA'), 'la', 'Nyala')
+((SELECT id FROM places WHERE code='NYALA'), 'la', 'Nyala'),
+((SELECT id FROM places WHERE code='VILLA_SANTA_LUCIA'), 'la', 'Villa Sanctae Luciae'),
+((SELECT id FROM places WHERE code='THESSALONIKI'), 'la', 'Thessalonica'),
+((SELECT id FROM places WHERE code='NITRA'), 'la', 'Nitria'),
+((SELECT id FROM places WHERE code='STARE_MESTO'), 'la', 'Staré Město'),
+((SELECT id FROM places WHERE code='RAVENNA'), 'la', 'Ravenna'),
+((SELECT id FROM places WHERE code='FAENZA'), 'la', 'Faventia'),
+((SELECT id FROM places WHERE code='FONTE_AVELLANA'), 'la', 'Fonte Avellana'),
+((SELECT id FROM places WHERE code='NAREK'), 'la', 'Narek'),
+((SELECT id FROM places WHERE code='VILNIUS'), 'la', 'Vilna'),
+((SELECT id FROM places WHERE code='GRODNO'), 'la', 'Grodna'),
+((SELECT id FROM places WHERE code='MONTEMOR_O_NOVO'), 'la', 'Mons Maior Novus'),
+((SELECT id FROM places WHERE code='GRANADA'), 'la', 'Granata'),
+((SELECT id FROM places WHERE code='IRELAND'), 'la', 'Hibernia'),
+((SELECT id FROM places WHERE code='DOWNPATRICK'), 'la', 'Dunum (Hiberniae Septentrionalis)'),
+((SELECT id FROM places WHERE code='MAYORGA'), 'la', 'Mayorga'),
+((SELECT id FROM places WHERE code='ZANA'), 'la', 'Zana'),
+((SELECT id FROM places WHERE code='PAOLA'), 'la', 'Paula'),
+((SELECT id FROM places WHERE code='PLESSIS_LES_TOURS'), 'la', 'Plessis-les-Tours'),
+((SELECT id FROM places WHERE code='CARTAGENA'), 'la', 'Carthago Nova'),
+((SELECT id FROM places WHERE code='SEVILLE'), 'la', 'Hispalis'),
+((SELECT id FROM places WHERE code='VANNES'), 'la', 'Dariorigum'),
+((SELECT id FROM places WHERE code='ROUEN'), 'la', 'Rothomagus'),
+((SELECT id FROM places WHERE code='SZCZEPANOW'), 'la', 'Szczepanów')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
