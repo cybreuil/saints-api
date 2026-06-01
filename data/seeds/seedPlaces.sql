@@ -128,7 +128,8 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('OSAKA', 'JP', 34.6937, 135.5023),
 ('NAGASAKI', 'JP', 32.7503, 129.8777), -- St Paul Miki context
 ('VENICE', 'IT', 45.4408, 12.3155),
-('SOMASCA', 'IT', 45.5833, 9.3167)
+('SOMASCA', 'IT', 45.5833, 9.3167),
+('SCHIO', 'IT', 45.5833, 11.3167) -- St Josephine Bakhita
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -261,7 +262,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='OSAKA'), 'en', 'Osaka'),
 ((SELECT id FROM places WHERE code='NAGASAKI'), 'en', 'Nagasaki'),
 ((SELECT id FROM places WHERE code='VENICE'), 'en', 'Venice'),
-((SELECT id FROM places WHERE code='SOMASCA'), 'en', 'Somasca')
+((SELECT id FROM places WHERE code='SOMASCA'), 'en', 'Somasca'),
+((SELECT id FROM places WHERE code='SCHIO'), 'en', 'Schio')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -394,7 +396,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='OSAKA'), 'fr', 'Osaka'),
 ((SELECT id FROM places WHERE code='NAGASAKI'), 'fr', 'Nagasaki'),
 ((SELECT id FROM places WHERE code='VENICE'), 'fr', 'Venise'),
-((SELECT id FROM places WHERE code='SOMASCA'), 'fr', 'Somasque')
+((SELECT id FROM places WHERE code='SOMASCA'), 'fr', 'Somasque'),
+((SELECT id FROM places WHERE code='SCHIO'), 'fr', 'Schio')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -527,7 +530,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='OSAKA'), 'la', 'Ozaca'),
 ((SELECT id FROM places WHERE code='NAGASAKI'), 'la', 'Nagasacum'),
 ((SELECT id FROM places WHERE code='VENICE'), 'la', 'Venetiae'),
-((SELECT id FROM places WHERE code='SOMASCA'), 'la', 'Somasca')
+((SELECT id FROM places WHERE code='SOMASCA'), 'la', 'Somasca'),
+((SELECT id FROM places WHERE code='SCHIO'), 'la', 'Esculetum')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;

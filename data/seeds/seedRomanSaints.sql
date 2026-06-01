@@ -452,8 +452,8 @@ INSERT INTO saints (
   1947, 2, 8, FALSE,
   20,
   (SELECT id FROM places WHERE code='UGANDA'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='SCHIO'),
+  (SELECT id FROM places WHERE code='SCHIO')
 ),
 (
   'saint-scholastica', 'Saint Scholastica',
