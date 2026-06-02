@@ -804,9 +804,10 @@ INSERT INTO saints (
 (
   'saint-martin-i', 'Saint Martin I',
   600, NULL, NULL, TRUE,
-  655, 9, 16, FALSE,
+  655, 9, 16, TRUE,
   7,
-  NULL, NULL,
+  (SELECT id FROM places WHERE code='TODI'),
+  (SELECT id FROM places WHERE code='CHERSON'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
@@ -814,34 +815,40 @@ INSERT INTO saints (
   1033, NULL, NULL, TRUE,
   1109, 4, 21, FALSE,
   12,
-  NULL,
+  (SELECT id FROM places WHERE code='AOSTA'),
   (SELECT id FROM places WHERE code='CANTERBURY'),
   (SELECT id FROM places WHERE code='CANTERBURY')
 ),
 (
   'saint-george', 'Saint George',
-  NULL, NULL, NULL, TRUE,
+  275, NULL, NULL, TRUE,
   303, 4, 23, FALSE,
   4,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='KAYSERI'),
+  (SELECT id FROM places WHERE code='IZMIT'),
+  (SELECT id FROM places WHERE code='IZMIT')
 ),
 (
   'saint-adalbert', 'Saint Adalbert',
   956, NULL, NULL, TRUE,
   997, 4, 23, FALSE,
   10,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='LIBICE_NAD_CIDLINOU'),
+  (SELECT id FROM places WHERE code='ELBLAG'),
+  (SELECT id FROM places WHERE code='PRAGUE')
 ),
 (
   'saint-fidelis-of-sigmaringen', 'Saint Fidelis of Sigmaringen',
-  1578, 10, 1, FALSE,
+  1578, 10, 1, TRUE,
   1622, 4, 24, FALSE,
   17,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='SIGMARINGEN'),
+  (SELECT id FROM places WHERE code='SEEWIS_IM_PRATTIGAU'),
+  (SELECT id FROM places WHERE code='CHUR')
 ),
 (
   'saint-mark-evangelist', 'Saint Mark the Evangelist',
-  NULL, NULL, NULL, TRUE,
+  12, NULL, NULL, TRUE,
   68, NULL, NULL, TRUE,
   1,
   NULL,
@@ -853,14 +860,18 @@ INSERT INTO saints (
   1803, 7, 12, FALSE,
   1841, 4, 28, FALSE,
   19,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='CUET'),
+  (SELECT id FROM places WHERE code='FUTUNA'),
+  (SELECT id FROM places WHERE code='FUTUNA')
 ),
 (
   'saint-louis-grignon-de-montfort', 'Saint Louis Grignion de Montfort',
   1673, 1, 31, FALSE,
   1716, 4, 28, FALSE,
   18,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='MONTFORT_SUR_MEU'),
+  (SELECT id FROM places WHERE code='SAINT_LAURENT_SUR_SEVRE'),
+  (SELECT id FROM places WHERE code='BRITTANY')
 ),
 (
   'saint-catherine-of-siena', 'Saint Catherine of Siena',
@@ -876,7 +887,7 @@ INSERT INTO saints (
   1504, 1, 17, FALSE,
   1572, 5, 1, FALSE,
   16,
-  NULL,
+  (SELECT id FROM places WHERE code='BOSCO_MARENGO'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 )

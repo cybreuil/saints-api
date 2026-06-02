@@ -153,7 +153,23 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('SEVILLE', 'ES', 37.3891, -5.9845),
 ('VANNES', 'FR', 47.6581, -2.7608),
 ('ROUEN', 'FR', 49.4431, 1.0993),
-('SZCZEPANOW', 'PL', 50.0647, 19.9450) -- St Stanislaus context (Krakow region alternative not ideal)
+('SZCZEPANOW', 'PL', 50.0647, 19.9450), -- St Stanislaus context (Krakow region alternative not ideal)*$
+('TODI', 'IT', 42.8356, 12.3899),
+('CHERSON', 'RU', 44.611667, 33.493333),
+('AOSTA', 'IT', 45.7372, 7.3201), -- St Anselm of Aosta context
+('KAYSERI', 'TR', 38.7225, 35.4875),
+('IZMIT', 'TR', 40.7667, 29.9167),
+('LIBICE_NAD_CIDLINOU', 'CZ', 50.126944, 15.178333),
+('ELBLAG', 'PL', 54.1522, 19.4088),
+('SIGMARINGEN', 'DE', 48.0792, 9.2208),
+('SEEWIS_IM_PRATTIGAU', 'CH', 46.9833, 9.6833),
+('CHUR', 'CH', 46.8508, 9.5320),
+('CUET', 'FR', 46.32314, 5.11252),
+('FUTUNA', 'FR', -14.272, -178.138),
+('MONTFORT_SUR_MEU', 'FR', 48.1500, -2.1000), -- St Louis-Marie Grignion de Montfort context
+('SAINT_LAURENT_SUR_SEVRE', 'FR', 46.7833, -0.9500), -- St Louis-Marie Grignion de Montfort context
+('BRITTANY', 'FR', 48.2020, -2.9326), -- St Louis-Marie Grignion de Montfort context
+('BOSCO_MARENGO', 'IT', 44.9000, 8.6167)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -311,7 +327,23 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SEVILLE'), 'en', 'Seville'),
 ((SELECT id FROM places WHERE code='VANNES'), 'en', 'Vannes'),
 ((SELECT id FROM places WHERE code='ROUEN'), 'en', 'Rouen'),
-((SELECT id FROM places WHERE code='SZCZEPANOW'), 'en', 'Szczepanów')
+((SELECT id FROM places WHERE code='SZCZEPANOW'), 'en', 'Szczepanów'),
+((SELECT id FROM places WHERE code='TODI'), 'en', 'Todi'),
+((SELECT id FROM places WHERE code='CHERSON'), 'en', 'Cherson'),
+((SELECT id FROM places WHERE code='AOSTA'), 'en', 'Aosta'),
+((SELECT id FROM places WHERE code='KAYSERI'), 'en', 'Kayseri'),
+((SELECT id FROM places WHERE code='IZMIT'), 'en', 'İzmit'),
+((SELECT id FROM places WHERE code='LIBICE_NAD_CIDLINOU'), 'en', 'Libice nad Cidlinou'),
+((SELECT id FROM places WHERE code='ELBLAG'), 'en', 'Elbląg'),
+((SELECT id FROM places WHERE code='SIGMARINGEN'), 'en', 'Sigmaringen'),
+((SELECT id FROM places WHERE code='SEEWIS_IM_PRATTIGAU'), 'en', 'Seewis im Prättigau'),
+((SELECT id FROM places WHERE code='CHUR'), 'en', 'Chur'),
+((SELECT id FROM places WHERE code='CUET'), 'en', 'Cuet'),
+((SELECT id FROM places WHERE code='FUTUNA'), 'en', 'Futuna'),
+((SELECT id FROM places WHERE code='MONTFORT_SUR_MEU'), 'en', 'Montfort-sur-Meu'),
+((SELECT id FROM places WHERE code='SAINT_LAURENT_SUR_SEVRE'), 'en', 'Saint-Laurent-sur-Sèvre'),
+((SELECT id FROM places WHERE code='BRITTANY'), 'en', 'Brittany'),
+((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'en', 'Bosco Marengo')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -469,7 +501,23 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SEVILLE'), 'fr', 'Séville'),
 ((SELECT id FROM places WHERE code='VANNES'), 'fr', 'Vannes'),
 ((SELECT id FROM places WHERE code='ROUEN'), 'fr', 'Rouen'),
-((SELECT id FROM places WHERE code='SZCZEPANOW'), 'fr', 'Szczepanów')
+((SELECT id FROM places WHERE code='SZCZEPANOW'), 'fr', 'Szczepanów'),
+((SELECT id FROM places WHERE code='TODI'), 'fr', 'Todi'),
+((SELECT id FROM places WHERE code='CHERSON'), 'fr', 'Chersonèse'),
+((SELECT id FROM places WHERE code='AOSTA'), 'fr', 'Aoste'),
+((SELECT id FROM places WHERE code='KAYSERI'), 'fr', 'Kayseri'),
+((SELECT id FROM places WHERE code='IZMIT'), 'fr', 'İzmit'),
+((SELECT id FROM places WHERE code='LIBICE_NAD_CIDLINOU'), 'fr', 'Libice nad Cidlinou'),
+((SELECT id FROM places WHERE code='ELBLAG'), 'fr', 'Elbląg'),
+((SELECT id FROM places WHERE code='SIGMARINGEN'), 'fr', 'Sigmaringen'),
+((SELECT id FROM places WHERE code='SEEWIS_IM_PRATTIGAU'), 'fr', 'Seewis im Prättigau'),
+((SELECT id FROM places WHERE code='CHUR'), 'fr', 'Coire'),
+((SELECT id FROM places WHERE code='CUET'), 'fr', 'Cuet'),
+((SELECT id FROM places WHERE code='FUTUNA'), 'fr', 'Futuna'),
+((SELECT id FROM places WHERE code='MONTFORT_SUR_MEU'), 'fr', 'Montfort-sur-Meu'),
+((SELECT id FROM places WHERE code='SAINT_LAURENT_SUR_SEVRE'), 'fr', 'Saint-Laurent-sur-Sèvre'),
+((SELECT id FROM places WHERE code='BRITTANY'), 'fr', 'Bretagne'),
+((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'fr', 'Bosco Marengo')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -627,7 +675,23 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SEVILLE'), 'la', 'Hispalis'),
 ((SELECT id FROM places WHERE code='VANNES'), 'la', 'Dariorigum'),
 ((SELECT id FROM places WHERE code='ROUEN'), 'la', 'Rothomagus'),
-((SELECT id FROM places WHERE code='SZCZEPANOW'), 'la', 'Szczepanów')
+((SELECT id FROM places WHERE code='SZCZEPANOW'), 'la', 'Szczepanów'),
+((SELECT id FROM places WHERE code='TODI'), 'la', 'Tuder'),
+((SELECT id FROM places WHERE code='CHERSON'), 'la', 'Chersonesus'),
+((SELECT id FROM places WHERE code='AOSTA'), 'la', 'Augusta Praetoria Salassorum'),
+((SELECT id FROM places WHERE code='KAYSERI'), 'la', 'Caesarea in Cappadociae'),
+((SELECT id FROM places WHERE code='IZMIT'), 'la', 'Nicomedia'),
+((SELECT id FROM places WHERE code='LIBICE_NAD_CIDLINOU'), 'la', 'Libice nad Cidlinou'),
+((SELECT id FROM places WHERE code='ELBLAG'), 'la', 'Elbląg'),
+((SELECT id FROM places WHERE code='SIGMARINGEN'), 'la', 'Sigmaringa'),
+((SELECT id FROM places WHERE code='SEEWIS_IM_PRATTIGAU'), 'la', 'Seewis im Prättigau'),
+((SELECT id FROM places WHERE code='CHUR'), 'la', 'Curia Raetorum'),
+((SELECT id FROM places WHERE code='CUET'), 'la', 'Cuet'),
+((SELECT id FROM places WHERE code='FUTUNA'), 'la', 'Futuna'),
+((SELECT id FROM places WHERE code='MONTFORT_SUR_MEU'), 'la', 'Monsfortis'),
+((SELECT id FROM places WHERE code='SAINT_LAURENT_SUR_SEVRE'), 'la', 'Saint-Laurent-sur-Sèvre'),
+((SELECT id FROM places WHERE code='BRITTANY'), 'la', 'Britannia Minor'),
+((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'la', 'Boscum (Pedemontium)')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
