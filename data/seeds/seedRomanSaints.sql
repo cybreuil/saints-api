@@ -1018,18 +1018,20 @@ INSERT INTO saints (
 (
   'saint-james-the-less-apostle', 'Saint James the Less, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  62, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  NULL,
+  (SELECT id FROM places WHERE code='JERUSALEM'),
+  (SELECT id FROM places WHERE code='JERUSALEM')
 ),
 (
   'saint-john-of-avila', 'Saint John of Ávila',
-  1500, NULL, NULL, TRUE,
+  1499, 1, 6, FALSE,
   1569, 5, 10, FALSE,
   16,
-  NULL,
-  NULL,
-  (SELECT id FROM places WHERE code='AVILA')
+  (SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'),
+  (SELECT id FROM places WHERE code='MONTILLA'),
+  (SELECT id FROM places WHERE code='CORDOUE')
 ),
 (
   'saint-nereus', 'Saint Nereus',
@@ -1051,19 +1053,21 @@ INSERT INTO saints (
 ),
 (
   'saint-pancras', 'Saint Pancras',
-  NULL, NULL, NULL, TRUE,
-  NULL, 5, 12, TRUE,
+  289, NULL, NULL, TRUE,
+  304, NULL, NULL, TRUE,
   1,
-  NULL,
+  (SELECT id FROM places WHERE code='SYNNADA'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-matthias-apostle', 'Saint Matthias, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, 5, 14, TRUE,
+  64, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  NULL,
+  (SELECT id FROM places WHERE code='JERUSALEM'),
+  (SELECT id FROM places WHERE code='JERUSALEM')
 ),
 (
   'saint-john-i', 'Saint John I',
