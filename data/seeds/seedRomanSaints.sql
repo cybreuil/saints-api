@@ -1002,16 +1002,18 @@ INSERT INTO saints (
   296, NULL, NULL, TRUE,
   373, 5, 2, TRUE,
   4,
-  NULL,
+  (SELECT id FROM places WHERE code='ALEXANDRIA'),
   (SELECT id FROM places WHERE code='ALEXANDRIA'),
   (SELECT id FROM places WHERE code='ALEXANDRIA')
 ),
 (
   'saint-philip-apostle', 'Saint Philip, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  63, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='BETHSAIDA'),
+  (SELECT id FROM places WHERE code='HIERAPOLIS'),
+  (SELECT id FROM places WHERE code='HIERAPOLIS')
 ),
 (
   'saint-james-the-less-apostle', 'Saint James the Less, Apostle',

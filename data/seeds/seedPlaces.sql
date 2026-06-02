@@ -169,7 +169,9 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('MONTFORT_SUR_MEU', 'FR', 48.1500, -2.1000), -- St Louis-Marie Grignion de Montfort context
 ('SAINT_LAURENT_SUR_SEVRE', 'FR', 46.7833, -0.9500), -- St Louis-Marie Grignion de Montfort context
 ('BRITTANY', 'FR', 48.2020, -2.9326), -- St Louis-Marie Grignion de Montfort context
-('BOSCO_MARENGO', 'IT', 44.9000, 8.6167)
+('BOSCO_MARENGO', 'IT', 44.9000, 8.6167),
+('BETHSAIDA', 'IL', 32.7081, 34.9790),
+('HIERAPOLIS', 'TR', 37.9269, 29.1228) -- St Philip context
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -343,7 +345,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='MONTFORT_SUR_MEU'), 'en', 'Montfort-sur-Meu'),
 ((SELECT id FROM places WHERE code='SAINT_LAURENT_SUR_SEVRE'), 'en', 'Saint-Laurent-sur-Sèvre'),
 ((SELECT id FROM places WHERE code='BRITTANY'), 'en', 'Brittany'),
-((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'en', 'Bosco Marengo')
+((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'en', 'Bosco Marengo'),
+((SELECT id FROM places WHERE code='BETHSAIDA'), 'en', 'Bethsaida'),
+((SELECT id FROM places WHERE code='HIERAPOLIS'), 'en', 'Hierapolis')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -517,7 +521,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='MONTFORT_SUR_MEU'), 'fr', 'Montfort-sur-Meu'),
 ((SELECT id FROM places WHERE code='SAINT_LAURENT_SUR_SEVRE'), 'fr', 'Saint-Laurent-sur-Sèvre'),
 ((SELECT id FROM places WHERE code='BRITTANY'), 'fr', 'Bretagne'),
-((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'fr', 'Bosco Marengo')
+((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'fr', 'Bosco Marengo'),
+((SELECT id FROM places WHERE code='BETHSAIDA'), 'fr', 'Bethsaïda'),
+((SELECT id FROM places WHERE code='HIERAPOLIS'), 'fr', 'Hiérapolis')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -691,7 +697,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='MONTFORT_SUR_MEU'), 'la', 'Monsfortis'),
 ((SELECT id FROM places WHERE code='SAINT_LAURENT_SUR_SEVRE'), 'la', 'Saint-Laurent-sur-Sèvre'),
 ((SELECT id FROM places WHERE code='BRITTANY'), 'la', 'Britannia Minor'),
-((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'la', 'Boscum (Pedemontium)')
+((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'la', 'Boscum (Pedemontium)'),
+((SELECT id FROM places WHERE code='BETHSAIDA'), 'la', 'Bethsaida'),
+((SELECT id FROM places WHERE code='HIERAPOLIS'), 'la', 'Hierapolis')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
