@@ -1071,11 +1071,11 @@ INSERT INTO saints (
 ),
 (
   'saint-john-i', 'Saint John I',
-  NULL, NULL, NULL, TRUE,
+  470, NULL, NULL, TRUE,
   526, 5, 18, TRUE,
   6,
-  NULL,
-  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='TUSCANY'),
+  (SELECT id FROM places WHERE code='RAVENNA'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
@@ -1083,35 +1083,35 @@ INSERT INTO saints (
   1380, 9, 8, FALSE,
   1444, 5, 20, FALSE,
   14,
-  (SELECT id FROM places WHERE code='SIENA'),
-  NULL,
+  (SELECT id FROM places WHERE code='MASSA_MARITTIMA'),
+  (SELECT id FROM places WHERE code='AQUILA'),
   (SELECT id FROM places WHERE code='SIENA')
 ),
 (
   'saint-christopher-magallanes', 'Saint Christopher Magallanes',
-  1869, NULL, NULL, TRUE,
-  1927, 5, 21, FALSE,
+  1869, 7, 30, FALSE,
+  1927, 5, 25, FALSE,
   19,
   (SELECT id FROM places WHERE code='TOTATICHE'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='COLOTLAN'),
+  (SELECT id FROM places WHERE code='JALISCO')
 ),
 (
   'saint-rita-of-cascia', 'Saint Rita of Cascia',
   1381, NULL, NULL, TRUE,
   1457, 5, 22, FALSE,
   15,
+  (SELECT id FROM places WHERE code='ROCCAPORENA'),
   (SELECT id FROM places WHERE code='CASCIA'),
-  NULL,
   (SELECT id FROM places WHERE code='CASCIA')
 ),
 (
   'saint-bede-the-venerable', 'Saint Bede the Venerable',
   672, NULL, NULL, TRUE,
-  735, 5, 25, TRUE,
+  735, 5, 26, TRUE,
   8,
-  NULL,
-  NULL,
+  (SELECT id FROM places WHERE code='NORTHUMBRIA'),
+  (SELECT id FROM places WHERE code='JARROW'),
   (SELECT id FROM places WHERE code='JARROW')
 ),
 (
@@ -1119,7 +1119,9 @@ INSERT INTO saints (
   1015, NULL, NULL, TRUE,
   1085, 5, 25, FALSE,
   11,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='SOVANA'),
+  (SELECT id FROM places WHERE code='SALERNO'),
+  (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-mary-magdalene-de-pazzi', 'Saint Mary Magdalene de’ Pazzi',
@@ -1127,7 +1129,7 @@ INSERT INTO saints (
   1607, 5, 25, FALSE,
   16,
   (SELECT id FROM places WHERE code='FLORENCE'),
-  NULL,
+  (SELECT id FROM places WHERE code='FLORENCE'),
   (SELECT id FROM places WHERE code='FLORENCE')
 ),
 (
@@ -1136,7 +1138,7 @@ INSERT INTO saints (
   1595, 5, 26, FALSE,
   16,
   (SELECT id FROM places WHERE code='FLORENCE'),
-  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
@@ -1144,7 +1146,8 @@ INSERT INTO saints (
   NULL, NULL, NULL, TRUE,
   604, NULL, NULL, TRUE,
   7,
-  NULL, NULL,
+  NULL,
+  (SELECT id FROM places WHERE code='CANTERBURY'),
   (SELECT id FROM places WHERE code='CANTERBURY')
 ),
 (
@@ -1153,7 +1156,7 @@ INSERT INTO saints (
   1978, 8, 6, FALSE,
   20,
   (SELECT id FROM places WHERE code='CONCESIO'),
-  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='CASTEL_GANDOLFO'),
   (SELECT id FROM places WHERE code='ROME')
 )
 ON CONFLICT (slug) DO NOTHING;
