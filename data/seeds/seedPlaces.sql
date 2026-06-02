@@ -175,7 +175,17 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('ALMODOVAR_DEL_CAMPO', 'ES', 38.7083, -4.1700),
 ('MONTILLA', 'ES', 37.5863, -4.6386),
 ('CORDOBA', 'ES', 37.8882, -4.7794),
-('SYNNADA', 'TR', 38.533333, 30.55) -- St Blaise context (alternative to Sivas not ideal)
+('SYNNADA', 'TR', 38.533333, 30.55),
+('TUSCANY', 'IT', 43.7711, 11.2486),
+('MASSA_MARITTIMA', 'IT', 42.9481, 10.8592),
+('AQUILA', 'IT', 42.3499, 13.3995),
+('COLOTLAN', 'MX', 20.5833, -100.3833),
+('JALISCO', 'MX', 20.6667, -103.3333),
+('ROCCAPORENA', 'IT', 42.716667, 12.966667), -- Cascia context (alternative to Cascia)
+('NORTHUMBRIA', 'GB', 54.0000, -2.0000),
+('SOVANA', 'IT', 42.6667, 11.6667),
+('SALERNO', 'IT', 40.6800, 14.7600),
+('CASTEL_GANDOLFO', 'IT', 41.7498, 12.6508)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -355,7 +365,17 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'en', 'Almodóvar del Campo'),
 ((SELECT id FROM places WHERE code='MONTILLA'), 'en', 'Montilla'),
 ((SELECT id FROM places WHERE code='CORDOUE'), 'en', 'Córdoba'),
-((SELECT id FROM places WHERE code='SYNNADA'), 'en', 'Synnada')
+((SELECT id FROM places WHERE code='SYNNADA'), 'en', 'Synnada'),
+((SELECT id FROM places WHERE code='TUSCANY'), 'en', 'Tuscany'),
+((SELECT id FROM places WHERE code='MASSA_MARITTIMA'), 'en', 'Massa Marittima'),
+((SELECT id FROM places WHERE code='AQUILA'), 'en', 'L’Aquila'),
+((SELECT id FROM places WHERE code='COLOTLAN'), 'en', 'Colotlán'),
+((SELECT id FROM places WHERE code='JALISCO'), 'en', 'Jalisco'),
+((SELECT id FROM places WHERE code='ROCCAPORENA'), 'en', 'Roccaporena'),
+((SELECT id FROM places WHERE code='NORTHUMBRIA'), 'en', 'Northumbria'),
+((SELECT id FROM places WHERE code='SOVANA'), 'en', 'Sovana'),
+((SELECT id FROM places WHERE code='SALERNO'), 'en', 'Salerno'),
+((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'en', 'Castel Gandolfo')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -535,7 +555,17 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'fr', 'Almodóvar del Campo'),
 ((SELECT id FROM places WHERE code='MONTILLA'), 'fr', 'Montilla'),
 ((SELECT id FROM places WHERE code='CORDOUE'), 'fr', 'Cordoue'),
-((SELECT id FROM places WHERE code='SYNNADA'), 'fr', 'Synnada')
+((SELECT id FROM places WHERE code='SYNNADA'), 'fr', 'Synnada'),
+((SELECT id FROM places WHERE code='TUSCANY'), 'fr', 'Toscane'),
+((SELECT id FROM places WHERE code='MASSA_MARITTIMA'), 'fr', 'Massa Marittima'),
+((SELECT id FROM places WHERE code='AQUILA'), 'fr', 'L’Aquila'),
+((SELECT id FROM places WHERE code='COLOTLAN'), 'fr', 'Colotlán'),
+((SELECT id FROM places WHERE code='JALISCO'), 'fr', 'Jalisco'),
+((SELECT id FROM places WHERE code='ROCCAPORENA'), 'fr', 'Roccaporena'),
+((SELECT id FROM places WHERE code='NORTHUMBRIA'), 'fr', 'Northumbrie'),
+((SELECT id FROM places WHERE code='SOVANA'), 'fr', 'Sovana'),
+((SELECT id FROM places WHERE code='SALERNO'), 'fr', 'Salerne'),
+((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'fr', 'Castel Gandolfo')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -715,7 +745,17 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'la', 'Almodóvar del Campo'),
 ((SELECT id FROM places WHERE code='MONTILLA'), 'la', 'Montilla'),
 ((SELECT id FROM places WHERE code='CORDOUE'), 'la', 'Corduba'),
-((SELECT id FROM places WHERE code='SYNNADA'), 'la', 'Synnada')
+((SELECT id FROM places WHERE code='SYNNADA'), 'la', 'Synnada'),
+((SELECT id FROM places WHERE code='TUSCANY'), 'la', 'Tuscia'),
+((SELECT id FROM places WHERE code='MASSA_MARITTIMA'), 'la', 'Massa Veternensis'),
+((SELECT id FROM places WHERE code='AQUILA'), 'la', 'Aquila'),
+((SELECT id FROM places WHERE code='COLOTLAN'), 'la', 'Colotlán'),
+((SELECT id FROM places WHERE code='JALISCO'), 'la', 'Xalisca'),
+((SELECT id FROM places WHERE code='ROCCAPORENA'), 'la', 'Roccaporena'),
+((SELECT id FROM places WHERE code='NORTHUMBRIA'), 'la', 'Regnum Northanhymbrorum'),
+((SELECT id FROM places WHERE code='SOVANA'), 'la', 'Suana'),
+((SELECT id FROM places WHERE code='SALERNO'), 'la', 'Salernum'),
+((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'la', 'Castrum Gandulphi')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
