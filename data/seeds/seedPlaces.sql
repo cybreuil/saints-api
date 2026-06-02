@@ -171,7 +171,11 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('BRITTANY', 'FR', 48.2020, -2.9326), -- St Louis-Marie Grignion de Montfort context
 ('BOSCO_MARENGO', 'IT', 44.9000, 8.6167),
 ('BETHSAIDA', 'IL', 32.7081, 34.9790),
-('HIERAPOLIS', 'TR', 37.9269, 29.1228) -- St Philip context
+('HIERAPOLIS', 'TR', 37.9269, 29.1228), -- St Philip context
+('ALMODOVAR_DEL_CAMPO', 'ES', 38.7083, -4.1700),
+('MONTILLA', 'ES', 37.5863, -4.6386),
+('CORDOBA', 'ES', 37.8882, -4.7794),
+('SYNNADA', 'TR', 38.533333, 30.55) -- St Blaise context (alternative to Sivas not ideal)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -347,7 +351,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BRITTANY'), 'en', 'Brittany'),
 ((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'en', 'Bosco Marengo'),
 ((SELECT id FROM places WHERE code='BETHSAIDA'), 'en', 'Bethsaida'),
-((SELECT id FROM places WHERE code='HIERAPOLIS'), 'en', 'Hierapolis')
+((SELECT id FROM places WHERE code='HIERAPOLIS'), 'en', 'Hierapolis'),
+((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'en', 'Almodóvar del Campo'),
+((SELECT id FROM places WHERE code='MONTILLA'), 'en', 'Montilla'),
+((SELECT id FROM places WHERE code='CORDOUE'), 'en', 'Córdoba'),
+((SELECT id FROM places WHERE code='SYNNADA'), 'en', 'Synnada')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -523,7 +531,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BRITTANY'), 'fr', 'Bretagne'),
 ((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'fr', 'Bosco Marengo'),
 ((SELECT id FROM places WHERE code='BETHSAIDA'), 'fr', 'Bethsaïda'),
-((SELECT id FROM places WHERE code='HIERAPOLIS'), 'fr', 'Hiérapolis')
+((SELECT id FROM places WHERE code='HIERAPOLIS'), 'fr', 'Hiérapolis'),
+((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'fr', 'Almodóvar del Campo'),
+((SELECT id FROM places WHERE code='MONTILLA'), 'fr', 'Montilla'),
+((SELECT id FROM places WHERE code='CORDOUE'), 'fr', 'Cordoue'),
+((SELECT id FROM places WHERE code='SYNNADA'), 'fr', 'Synnada')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -699,7 +711,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BRITTANY'), 'la', 'Britannia Minor'),
 ((SELECT id FROM places WHERE code='BOSCO_MARENGO'), 'la', 'Boscum (Pedemontium)'),
 ((SELECT id FROM places WHERE code='BETHSAIDA'), 'la', 'Bethsaida'),
-((SELECT id FROM places WHERE code='HIERAPOLIS'), 'la', 'Hierapolis')
+((SELECT id FROM places WHERE code='HIERAPOLIS'), 'la', 'Hierapolis'),
+((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'la', 'Almodóvar del Campo'),
+((SELECT id FROM places WHERE code='MONTILLA'), 'la', 'Montilla'),
+((SELECT id FROM places WHERE code='CORDOUE'), 'la', 'Corduba'),
+((SELECT id FROM places WHERE code='SYNNADA'), 'la', 'Synnada')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
