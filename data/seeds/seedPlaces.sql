@@ -190,7 +190,11 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('BUGANDA', 'UG', 0.331944, 32.418056),
 ('CREDITON', 'GB', 50.7167, -3.5333),
 ('MAGDEBURG', 'DE', 52.1200, 11.6276), -- St Norbert context
-('PREMONTRE', 'FR', 49.9333, 3.3167) -- St Norbert context
+('PREMONTRE', 'FR', 49.9333, 3.3167), -- St Norbert context
+('EDESSA', 'TR', 37.9667, 39.1000), -- St Ephrem context
+('SALAMIS_CYPRUS', 'CY', 35.183333, 33.9),
+('VAL_DI_CASTRO', 'IT', 42.6667, 11.6667,
+('CAMALDOLI', 'IT', 43.7167, 11.9000)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -385,7 +389,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BUGANDA'), 'en', 'Buganda'),
 ((SELECT id FROM places WHERE code='CREDITON'), 'en', 'Crediton'),
 ((SELECT id FROM places WHERE code='MAGDEBURG'), 'en', 'Magdeburg'),
-((SELECT id FROM places WHERE code='PREMONTRE'), 'en', 'Prémontré')
+((SELECT id FROM places WHERE code='PREMONTRE'), 'en', 'Prémontré'),
+((SELECT id FROM places WHERE code='EDESSA'), 'en', 'Edessa'),
+((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'en', 'Salamis (Cyprus)'),
+((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'en', 'Val di Castro'),
+((SELECT id FROM places WHERE code='CAMALDOLI'), 'en', 'Camaldoli')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -580,7 +588,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BUGANDA'), 'fr', 'Buganda'),
 ((SELECT id FROM places WHERE code='CREDITON'), 'fr', 'Crediton'),
 ((SELECT id FROM places WHERE code='MAGDEBURG'), 'fr', 'Magdebourg'),
-((SELECT id FROM places WHERE code='PREMONTRE'), 'fr', 'Prémontré')
+((SELECT id FROM places WHERE code='PREMONTRE'), 'fr', 'Prémontré'),
+((SELECT id FROM places WHERE code='EDESSA'), 'fr', 'Édesse'),
+((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'fr', 'Salamine de Chypre'),
+((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'fr', 'Val di Castro'),
+((SELECT id FROM places WHERE code='CAMALDOLI'), 'fr', 'Camaldoli')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -775,7 +787,11 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BUGANDA'), 'la', 'Buganda'),
 ((SELECT id FROM places WHERE code='CREDITON'), 'la', 'Cridia'),
 ((SELECT id FROM places WHERE code='MAGDEBURG'), 'la', 'Magdeburgum'),
-((SELECT id FROM places WHERE code='PREMONTRE'), 'la', 'Prémontré')
+((SELECT id FROM places WHERE code='PREMONTRE'), 'la', 'Prémontré'),
+((SELECT id FROM places WHERE code='EDESSA'), 'la', 'Edessa'),
+((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'la', 'Salamis (Cyprus)'),
+((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'la', 'Val di Castro'),
+((SELECT id FROM places WHERE code='CAMALDOLI'), 'la', 'Camaldoli')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
