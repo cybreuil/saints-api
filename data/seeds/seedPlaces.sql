@@ -195,7 +195,16 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('SALAMIS_CYPRUS', 'CY', 35.183333, 33.9),
 ('VAL_DI_CASTRO', 'IT', 42.6667, 11.6667,
 ('CAMALDOLI', 'IT', 43.7167, 11.9000),
-('ROCHESTER', 'GB', 51.25, 0.5)
+('ROCHESTER', 'GB', 51.25, 0.5),
+('JUDAEA', 'IL', 31.702, 35.305),
+('GALILEE', 'IL', 32.5, 35.5),
+('MYLAPORE', 'IN', 13.0500, 80.2833),
+('ESTREMOZ', 'PT', 41.3333, -8.6667),
+('LE_FERRIERE', 'IT', 41.516089, 12.7579),
+('CHINA', 'CN', 35.8617, 104.1954),
+('BAD_ABBACH', 'DE', 48.9333, 11.9833),
+('GOTTINGEN', 'DE', 51.5328, 9.9350),
+('HOLY_ROMAN_EMPIRE', 'DE', 51.1657, 10.4515)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -395,7 +404,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'en', 'Salamis (Cyprus)'),
 ((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'en', 'Val di Castro'),
 ((SELECT id FROM places WHERE code='CAMALDOLI'), 'en', 'Camaldoli'),
-((SELECT id FROM places WHERE code='ROCHESTER'), 'en', 'Rochester')
+((SELECT id FROM places WHERE code='ROCHESTER'), 'en', 'Rochester'),
+((SELECT id FROM places WHERE code='JUDAEA'), 'en', 'Judaea'),
+((SELECT id FROM places WHERE code='GALILEE'), 'en', 'Galilee'),
+((SELECT id FROM places WHERE code='MYLAPORE'), 'en', 'Mylapore'),
+((SELECT id FROM places WHERE code='ESTREMOZ'), 'en', 'Estremoz'),
+((SELECT id FROM places WHERE code='LE_FERRIERE'), 'en', 'Le Ferriere'),
+((SELECT id FROM places WHERE code='CHINA'), 'en', 'China'),
+((SELECT id FROM places WHERE code='BAD_ABBACH'), 'en', 'Bad Abbach'),
+((SELECT id FROM places WHERE code='GOTTINGEN'), 'en', 'Göttingen'),
+((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'en', 'Holy Roman Empire')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -595,7 +613,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'fr', 'Salamine de Chypre'),
 ((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'fr', 'Val di Castro'),
 ((SELECT id FROM places WHERE code='CAMALDOLI'), 'fr', 'Camaldoli'),
-((SELECT id FROM places WHERE code='ROCHESTER'), 'fr', 'Rochester')
+((SELECT id FROM places WHERE code='ROCHESTER'), 'fr', 'Rochester'),
+((SELECT id FROM places WHERE code='JUDAEA'), 'fr', 'Judée'),
+((SELECT id FROM places WHERE code='GALILEE'), 'fr', 'Galilée'),
+((SELECT id FROM places WHERE code='MYLAPORE'), 'fr', 'Mylapore'),
+((SELECT id FROM places WHERE code='ESTREMOZ'), 'fr', 'Estremoz'),
+((SELECT id FROM places WHERE code='LE_FERRIERE'), 'fr', 'Le Ferriere'),
+((SELECT id FROM places WHERE code='CHINA'), 'fr', 'Chine'),
+((SELECT id FROM places WHERE code='BAD_ABBACH'), 'fr', 'Bad Abbach'),
+((SELECT id FROM places WHERE code='GOTTINGEN'), 'fr', 'Göttingen'),
+((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'fr', 'Saint-Empire Romain Germanique')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -795,7 +822,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'la', 'Salamis (Cyprus)'),
 ((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'la', 'Val di Castro'),
 ((SELECT id FROM places WHERE code='CAMALDOLI'), 'la', 'Camaldoli'),
-((SELECT id FROM places WHERE code='ROCHESTER'), 'la', 'Rochester')
+((SELECT id FROM places WHERE code='ROCHESTER'), 'la', 'Rochester'),
+((SELECT id FROM places WHERE code='JUDAEA'), 'la', 'Iudaea'),
+((SELECT id FROM places WHERE code='GALILEE'), 'la', 'Galilaea'),
+((SELECT id FROM places WHERE code='MYLAPORE'), 'la', 'Mylapore'),
+((SELECT id FROM places WHERE code='ESTREMOZ'), 'la', 'Estremoz'),
+((SELECT id FROM places WHERE code='LE_FERRIERE'), 'la', 'Le Ferriere'),
+((SELECT id FROM places WHERE code='CHINA'), 'la', 'Sinae'),
+((SELECT id FROM places WHERE code='BAD_ABBACH'), 'la', 'Abacum (Germania)'),
+((SELECT id FROM places WHERE code='GOTTINGEN'), 'la', 'Gottinga'),
+((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'la', 'Sacrum Romanum Imperium')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
