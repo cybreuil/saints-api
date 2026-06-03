@@ -204,7 +204,9 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('CHINA', 'CN', 35.8617, 104.1954),
 ('BAD_ABBACH', 'DE', 48.9333, 11.9833),
 ('GOTTINGEN', 'DE', 51.5328, 9.9350),
-('HOLY_ROMAN_EMPIRE', 'DE', 51.1657, 10.4515)
+('HOLY_ROMAN_EMPIRE', 'DE', 51.1657, 10.4515),
+('BUCCHIANICO', 'IT', 42.3667, 14.2167),
+('BAGNOREGIO', 'IT', 42.6667, 12.0000)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -413,7 +415,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='CHINA'), 'en', 'China'),
 ((SELECT id FROM places WHERE code='BAD_ABBACH'), 'en', 'Bad Abbach'),
 ((SELECT id FROM places WHERE code='GOTTINGEN'), 'en', 'Göttingen'),
-((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'en', 'Holy Roman Empire')
+((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'en', 'Holy Roman Empire'),
+((SELECT id FROM places WHERE code='BUCCHIANICO'), 'en', 'Bucchianico'),
+((SELECT id FROM places WHERE code='BAGNOREGIO'), 'en', 'Bagnoregio')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -622,7 +626,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='CHINA'), 'fr', 'Chine'),
 ((SELECT id FROM places WHERE code='BAD_ABBACH'), 'fr', 'Bad Abbach'),
 ((SELECT id FROM places WHERE code='GOTTINGEN'), 'fr', 'Göttingen'),
-((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'fr', 'Saint-Empire Romain Germanique')
+((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'fr', 'Saint-Empire Romain Germanique'),
+((SELECT id FROM places WHERE code='BUCCHIANICO'), 'fr', 'Bucchianico'),
+((SELECT id FROM places WHERE code='BAGNOREGIO'), 'fr', 'Bagnoregio')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -831,7 +837,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='CHINA'), 'la', 'Sinae'),
 ((SELECT id FROM places WHERE code='BAD_ABBACH'), 'la', 'Abacum (Germania)'),
 ((SELECT id FROM places WHERE code='GOTTINGEN'), 'la', 'Gottinga'),
-((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'la', 'Sacrum Romanum Imperium')
+((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'la', 'Sacrum Romanum Imperium'),
+((SELECT id FROM places WHERE code='BUCCHIANICO'), 'la', 'Bucchianico'),
+((SELECT id FROM places WHERE code='BAGNOREGIO'), 'la', 'Balneoregium')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;

@@ -1601,17 +1601,21 @@ INSERT INTO saints (
 ),
 (
   'saint-camillus-de-lellis', 'Saint Camillus de Lellis',
-  1550, NULL, NULL, TRUE,
+  1550, 5, 25, TRUE,
   1614, 7, 14, FALSE,
-  16,
-  NULL, NULL, NULL
+  17,
+  (SELECT id FROM places WHERE code='BUCCHIANICO'),
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-bonaventure', 'Saint Bonaventure',
   1217, NULL, NULL, TRUE,
   1274, 7, 15, FALSE,
   13,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='BAGNOREGIO'),
+  (SELECT id FROM places WHERE code='LYON'),
+  (SELECT id FROM places WHERE code='PARIS')
 ),
 -- (
 --   'our-lady-of-mount-carmel', 'Our Lady of Mount Carmel',
