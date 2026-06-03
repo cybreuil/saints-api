@@ -194,7 +194,8 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('EDESSA', 'TR', 37.9667, 39.1000), -- St Ephrem context
 ('SALAMIS_CYPRUS', 'CY', 35.183333, 33.9),
 ('VAL_DI_CASTRO', 'IT', 42.6667, 11.6667,
-('CAMALDOLI', 'IT', 43.7167, 11.9000)
+('CAMALDOLI', 'IT', 43.7167, 11.9000),
+('ROCHESTER', 'GB', 51.25, 0.5)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -393,7 +394,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='EDESSA'), 'en', 'Edessa'),
 ((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'en', 'Salamis (Cyprus)'),
 ((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'en', 'Val di Castro'),
-((SELECT id FROM places WHERE code='CAMALDOLI'), 'en', 'Camaldoli')
+((SELECT id FROM places WHERE code='CAMALDOLI'), 'en', 'Camaldoli'),
+((SELECT id FROM places WHERE code='ROCHESTER'), 'en', 'Rochester')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -592,7 +594,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='EDESSA'), 'fr', 'Édesse'),
 ((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'fr', 'Salamine de Chypre'),
 ((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'fr', 'Val di Castro'),
-((SELECT id FROM places WHERE code='CAMALDOLI'), 'fr', 'Camaldoli')
+((SELECT id FROM places WHERE code='CAMALDOLI'), 'fr', 'Camaldoli'),
+((SELECT id FROM places WHERE code='ROCHESTER'), 'fr', 'Rochester')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -791,7 +794,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='EDESSA'), 'la', 'Edessa'),
 ((SELECT id FROM places WHERE code='SALAMIS_CYPRUS'), 'la', 'Salamis (Cyprus)'),
 ((SELECT id FROM places WHERE code='VAL_DI_CASTRO'), 'la', 'Val di Castro'),
-((SELECT id FROM places WHERE code='CAMALDOLI'), 'la', 'Camaldoli')
+((SELECT id FROM places WHERE code='CAMALDOLI'), 'la', 'Camaldoli'),
+((SELECT id FROM places WHERE code='ROCHESTER'), 'la', 'Rochester')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;

@@ -1364,8 +1364,8 @@ INSERT INTO saints (
   1591, 6, 21, FALSE,
   16,
   (SELECT id FROM places WHERE code='CASTIGLIONE_DELLA_STIVIERE'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-paulinus-of-nola', 'Saint Paulinus of Nola',
@@ -1378,28 +1378,28 @@ INSERT INTO saints (
 ),
 (
   'saint-john-fisher', 'Saint John Fisher',
-  1469, NULL, NULL, TRUE,
+  1469, 10, 19, TRUE,
   1535, 6, 22, FALSE,
   16,
   (SELECT id FROM places WHERE code='BEVERLEY'),
   (SELECT id FROM places WHERE code='LONDON'),
-  (SELECT id FROM places WHERE code='LONDON')
+  (SELECT id FROM places WHERE code='ROCHESTER')
 ),
 (
   'saint-thomas-more', 'Saint Thomas More',
-  1478, NULL, NULL, TRUE,
-  1535, 6, 22, FALSE,
+  1478, 2, 7, FALSE,
+  1535, 7, 6, FALSE,
   16,
   (SELECT id FROM places WHERE code='LONDON'),
   (SELECT id FROM places WHERE code='LONDON'),
-  NULL
+  (SELECT id FROM places WHERE code='LONDON')
 ),
 (
   'saint-peter-apostle', 'Saint Peter, Apostle',
   NULL, NULL, NULL, TRUE,
   64, NULL, NULL, TRUE,
   1,
-  NULL,
+  (SELECT id FROM places WHERE code='BETHSAIDA'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
@@ -1414,8 +1414,8 @@ INSERT INTO saints (
 ),
 (
   'saint-irenaeus', 'Saint Irenaeus',
-  130, NULL, NULL, TRUE,
-  202, 6, 28, TRUE,
+  122, NULL, NULL, TRUE,
+  200, NULL, NULL, TRUE,
   2,
   (SELECT id FROM places WHERE code='SMYRNA'),
   (SELECT id FROM places WHERE code='LYON'),
