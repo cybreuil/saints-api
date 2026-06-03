@@ -1628,54 +1628,56 @@ INSERT INTO saints (
 (
   'saint-apollinaris', 'Saint Apollinaris',
   NULL, NULL, NULL, TRUE,
-  NULL, 7, 20, TRUE,
-  NULL,
+  NULL, NULL, NULL, TRUE,
+  2,
   NULL,
   (SELECT id FROM places WHERE code='RAVENNA'),
   (SELECT id FROM places WHERE code='RAVENNA')
 ),
 (
   'saint-lawrence-of-brindisi', 'Saint Lawrence of Brindisi',
-  1559, NULL, NULL, TRUE,
-  1619, 7, 21, FALSE,
+  1559, 7, 22, TRUE,
+  1619, 7, 22, FALSE,
   16,
-  NULL,
-  NULL,
-  (SELECT id FROM places WHERE code='BRINDISI')
+  (SELECT id FROM places WHERE code='BRINDISI'),
+  (SELECT id FROM places WHERE code='LISBON'),
+  (SELECT id FROM places WHERE code='ITALY')
 ),
 (
   'saint-mary-magdalene', 'Saint Mary Magdalene',
   NULL, NULL, NULL, TRUE,
-  NULL, 7, 22, TRUE,
+  NULL, NULL, NULL, TRUE,
   1,
-  NULL,
-  NULL,
-  (SELECT id FROM places WHERE code='MAGDALA')
+  (SELECT id FROM places WHERE code='MAGDALA'),
+  (SELECT id FROM places WHERE code='SAINTE_BEAUME'),
+  (SELECT id FROM places WHERE code='GALILEE')
 ),
 (
   'saint-bridget', 'Saint Bridget',
   1303, NULL, NULL, TRUE,
   1373, 7, 23, FALSE,
   14,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='UPPLAND'),
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-sharbel-makhluf', 'Saint Sharbel Makhluf',
-  1828, NULL, NULL, TRUE,
-  1898, 7, 24, FALSE,
+  1828, 5, 8, FALSE,
+  1898, 12, 24, FALSE,
   19,
-  NULL,
-  NULL,
-  (SELECT id FROM places WHERE code='BEIRUT')
+  (SELECT id FROM places WHERE code='BEKAAKAFRA'),
+  (SELECT id FROM places WHERE code='ANNAYA_MONASTERY'),
+  (SELECT id FROM places WHERE code='ANNAYA_MONASTERY')
 ),
 (
   'saint-james-apostle', 'Saint James, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, 7, 25, TRUE,
+  44, NULL, NULL, TRUE,
   1,
-  NULL,
-  (SELECT id FROM places WHERE code='SANTIAGO_DE_COMPOSTELA'),
-  (SELECT id FROM places WHERE code='SANTIAGO_DE_COMPOSTELA')
+  (SELECT id FROM places WHERE code='GALILEE'),
+  (SELECT id FROM places WHERE code='JERUSALEM'),
+  (SELECT id FROM places WHERE code='GALILEE')
 ),
 (
   'saint-joachim', 'Saint Joachim',
@@ -1718,20 +1720,20 @@ INSERT INTO saints (
 (
   'saint-peter-chrysologus', 'Saint Peter Chrysologus',
   406, NULL, NULL, TRUE,
-  450, 7, 30, TRUE,
+  450, 7, 31, TRUE,
   5,
-  NULL,
-  (SELECT id FROM places WHERE code='RAVENNA'),
+  (SELECT id FROM places WHERE code='IMOLA'),
+  (SELECT id FROM places WHERE code='IMOLA'),
   (SELECT id FROM places WHERE code='RAVENNA')
 ),
 (
   'saint-ignatius-of-loyola', 'Saint Ignatius of Loyola',
-  1491, NULL, NULL, TRUE,
+  1491, 10, 23, TRUE,
   1556, 7, 31, FALSE,
-  15,
+  16,
   (SELECT id FROM places WHERE code='LOYOLA'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
 )
 ON CONFLICT (slug) DO NOTHING;
 
