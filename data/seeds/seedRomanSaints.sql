@@ -16,7 +16,7 @@ INSERT INTO saints (
   NULL, NULL, NULL, TRUE,
   NULL, NULL, NULL, TRUE,
   1,
-  NULL,
+  (SELECT id FROM places WHERE code='NAZARETH'),
   NULL,
   (SELECT id FROM places WHERE code='NAZARETH')
   ),
@@ -34,9 +34,9 @@ INSERT INTO saints (
   NULL, NULL, NULL, TRUE,
   30, NULL, NULL, TRUE,
   1,
-  NULL,
+  (SELECT id FROM places WHERE code='JUDAEA'),
   (SELECT id FROM places WHERE code='MACHAERUS'),
-  NULL
+  (SELECT id FROM places WHERE code='JUDAEA')
 )
 ON CONFLICT (slug) DO NOTHING;
 
@@ -1539,16 +1539,20 @@ INSERT INTO saints (
 (
   'saint-thomas-apostle', 'Saint Thomas, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  72, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='GALILEE'),
+  (SELECT id FROM places WHERE code='MYLAPORE'),
+  (SELECT id FROM places WHERE code='MYLAPORE')
 ),
 (
   'saint-elizabeth-of-portugal', 'Saint Elizabeth of Portugal',
-  NULL, NULL, NULL, TRUE,
+  1271, 1, 4, FALSE,
   1336, 7, 4, FALSE,
   14,
-  NULL, NULL, (SELECT id FROM places WHERE code='LISBON')
+  (SELECT id FROM places WHERE code='SARAGOSSA'),
+  (SELECT id FROM places WHERE code='ESTREMOZ'),
+  (SELECT id FROM places WHERE code='LISBON')
 ),
 (
   'saint-anthony-zaccaria', 'Saint Anthony Zaccaria',
@@ -1556,31 +1560,31 @@ INSERT INTO saints (
   1539, 7, 5, FALSE,
   16,
   (SELECT id FROM places WHERE code='CREMONA'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='CREMONA'),
+  (SELECT id FROM places WHERE code='MILAN')
 ),
 (
   'saint-maria-goretti', 'Saint Maria Goretti',
-  1890, NULL, NULL, TRUE,
+  1890, 10, 16, FALSE,
   1902, 7, 6, FALSE,
-  19,
+  20,
   (SELECT id FROM places WHERE code='CORINALDO'),
   (SELECT id FROM places WHERE code='NETTUNO'),
-  NULL
+  (SELECT id FROM places WHERE code='LE_FERRIERE')
 ),
 (
   'saint-augustine-zhao-rong', 'Saint Augustine Zhao Rong and Companions',
   1746, NULL, NULL, TRUE,
-  1815, NULL, NULL, TRUE,
+  1815, 1, 27, TRUE,
   19,
   (SELECT id FROM places WHERE code='WUCHUAN_GZ'),
   (SELECT id FROM places WHERE code='CHENGDU'),
-  (SELECT id FROM places WHERE code='CHENGDU')
+  (SELECT id FROM places WHERE code='CHINA')
 ),
 (
   'saint-benedict', 'Saint Benedict, Abbot',
-  480, NULL, NULL, TRUE,
-  547, 7, 11, TRUE,
+  480, 3, 2, TRUE,
+  547, 3, 21, FALSE,
   6,
   (SELECT id FROM places WHERE code='NORCIA'),
   (SELECT id FROM places WHERE code='MONTECASSINO'),
@@ -1589,9 +1593,11 @@ INSERT INTO saints (
 (
   'saint-henry', 'Saint Henry',
   973, 5, 6, TRUE,
-  1024, 7, 13, TRUE,
-  NULL,
-  NULL, NULL, NULL
+  1024, 7, 13, FALSE,
+  11,
+  (SELECT id FROM places WHERE code='BAD_ABBACH'),
+  (SELECT id FROM places WHERE code='GOTTINGEN'),
+  (SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE')
 ),
 (
   'saint-camillus-de-lellis', 'Saint Camillus de Lellis',
