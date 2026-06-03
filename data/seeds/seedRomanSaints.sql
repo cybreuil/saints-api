@@ -1297,19 +1297,19 @@ INSERT INTO saints (
 ),
 (
   'saints-charles-lwanga-and-companions', 'Saints Charles Lwanga and Companions',
-  1860, NULL, NULL, TRUE,
+  1860, 1, 1, FALSE,
   1886, 6, 3, FALSE,
   19,
-  (SELECT id FROM places WHERE code='UGANDA'),
-  NULL,
-  (SELECT id FROM places WHERE code='UGANDA')
+  (SELECT id FROM places WHERE code='BUGANDA'),
+  (SELECT id FROM places WHERE code='NAMUGONGO'),
+  (SELECT id FROM places WHERE code='BUGANDA')
 ),
 (
   'saint-boniface', 'Saint Boniface',
   675, NULL, NULL, TRUE,
   754, 6, 5, FALSE,
   8,
-  NULL,
+  (SELECT id FROM places WHERE code='CREDITON'),
   (SELECT id FROM places WHERE code='DOKKUM'),
   (SELECT id FROM places WHERE code='MAINZ')
 ),
@@ -1319,8 +1319,8 @@ INSERT INTO saints (
   1134, 6, 6, FALSE,
   12,
   (SELECT id FROM places WHERE code='XANTEN'),
-  NULL,
-  (SELECT id FROM places WHERE code='XANTEN')
+  (SELECT id FROM places WHERE code='MAGDEBURG'),
+  (SELECT id FROM places WHERE code='PREMONTRE')
 ),
 (
   'saint-ephrem', 'Saint Ephrem the Syrian',

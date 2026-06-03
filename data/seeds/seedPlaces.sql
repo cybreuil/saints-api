@@ -185,7 +185,12 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('NORTHUMBRIA', 'GB', 54.0000, -2.0000),
 ('SOVANA', 'IT', 42.6667, 11.6667),
 ('SALERNO', 'IT', 40.6800, 14.7600),
-('CASTEL_GANDOLFO', 'IT', 41.7498, 12.6508)
+('CASTEL_GANDOLFO', 'IT', 41.7498, 12.6508),
+('NAMUGONGO', 'UG', 0.395278, 32.665833),
+('BUGANDA', 'UG', 0.331944, 32.418056),
+('CREDITON', 'GB', 50.7167, -3.5333),
+('MAGDEBURG', 'DE', 52.1200, 11.6276), -- St Norbert context
+('PREMONTRE', 'FR', 49.9333, 3.3167) -- St Norbert context
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -375,7 +380,12 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='NORTHUMBRIA'), 'en', 'Northumbria'),
 ((SELECT id FROM places WHERE code='SOVANA'), 'en', 'Sovana'),
 ((SELECT id FROM places WHERE code='SALERNO'), 'en', 'Salerno'),
-((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'en', 'Castel Gandolfo')
+((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'en', 'Castel Gandolfo'),
+((SELECT id FROM places WHERE code='NAMUGONGO'), 'en', 'Namugongo'),
+((SELECT id FROM places WHERE code='BUGANDA'), 'en', 'Buganda'),
+((SELECT id FROM places WHERE code='CREDITON'), 'en', 'Crediton'),
+((SELECT id FROM places WHERE code='MAGDEBURG'), 'en', 'Magdeburg'),
+((SELECT id FROM places WHERE code='PREMONTRE'), 'en', 'Prémontré')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -565,7 +575,12 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='NORTHUMBRIA'), 'fr', 'Northumbrie'),
 ((SELECT id FROM places WHERE code='SOVANA'), 'fr', 'Sovana'),
 ((SELECT id FROM places WHERE code='SALERNO'), 'fr', 'Salerne'),
-((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'fr', 'Castel Gandolfo')
+((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'fr', 'Castel Gandolfo'),
+((SELECT id FROM places WHERE code='NAMUGONGO'), 'fr', 'Namugongo'),
+((SELECT id FROM places WHERE code='BUGANDA'), 'fr', 'Buganda'),
+((SELECT id FROM places WHERE code='CREDITON'), 'fr', 'Crediton'),
+((SELECT id FROM places WHERE code='MAGDEBURG'), 'fr', 'Magdebourg'),
+((SELECT id FROM places WHERE code='PREMONTRE'), 'fr', 'Prémontré')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -755,7 +770,12 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='NORTHUMBRIA'), 'la', 'Regnum Northanhymbrorum'),
 ((SELECT id FROM places WHERE code='SOVANA'), 'la', 'Suana'),
 ((SELECT id FROM places WHERE code='SALERNO'), 'la', 'Salernum'),
-((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'la', 'Castrum Gandulphi')
+((SELECT id FROM places WHERE code='CASTEL_GANDOLFO'), 'la', 'Castrum Gandulphi'),
+((SELECT id FROM places WHERE code='NAMUGONGO'), 'la', 'Namugongo'),
+((SELECT id FROM places WHERE code='BUGANDA'), 'la', 'Buganda'),
+((SELECT id FROM places WHERE code='CREDITON'), 'la', 'Cridia'),
+((SELECT id FROM places WHERE code='MAGDEBURG'), 'la', 'Magdeburgum'),
+((SELECT id FROM places WHERE code='PREMONTRE'), 'la', 'Prémontré')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
