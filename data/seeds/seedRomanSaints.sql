@@ -1270,7 +1270,7 @@ INSERT INTO saints (
 ) VALUES
 (
   'saint-justin-martyr', 'Saint Justin Martyr',
-  NULL, NULL, NULL, TRUE,
+  90, NULL, NULL, TRUE,
   165, NULL, NULL, TRUE,
   2,
   (SELECT id FROM places WHERE code='NABLUS'),
