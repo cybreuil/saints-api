@@ -1328,16 +1328,16 @@ INSERT INTO saints (
   373, 6, 9, TRUE,
   4,
   (SELECT id FROM places WHERE code='NISIBIS'),
-  NULL,
-  (SELECT id FROM places WHERE code='NISIBIS')
+  (SELECT id FROM places WHERE code='EDESSA'),
+  (SELECT id FROM places WHERE code='EDESSA')
 ),
 (
   'saint-barnabas-apostle', 'Saint Barnabas, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, 6, 11, TRUE,
+  61, NULL, NULL, TRUE,
   1,
-  (SELECT id FROM places WHERE code='CYPRUS'),
-  NULL,
+  (SELECT id FROM places WHERE code='SALAMIS_CYPRUS'),
+  (SELECT id FROM places WHERE code='SALAMIS_CYPRUS'),
   (SELECT id FROM places WHERE code='CYPRUS')
 ),
 (
@@ -1355,8 +1355,8 @@ INSERT INTO saints (
   1027, 6, 19, FALSE,
   10,
   (SELECT id FROM places WHERE code='RAVENNA'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='VAL_DI_CASTRO'),
+  (SELECT id FROM places WHERE code='CAMALDOLI'),
 ),
 (
   'saint-aloysius-gonzaga', 'Saint Aloysius Gonzaga',
