@@ -206,7 +206,13 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('GOTTINGEN', 'DE', 51.5328, 9.9350),
 ('HOLY_ROMAN_EMPIRE', 'DE', 51.1657, 10.4515),
 ('BUCCHIANICO', 'IT', 42.3667, 14.2167),
-('BAGNOREGIO', 'IT', 42.6667, 12.0000)
+('BAGNOREGIO', 'IT', 42.6667, 12.0000),
+('ITALY', 'IT', 41.8719, 12.5674),
+('SAINTE_BEAUME', 'FR', 43.3272, 5.7647),
+('UPPLAND', 'SE', 60.0000, 16.0000),
+('BEKAAKAFRA', 'LB', 34.35, 36.366667),
+('ANNAYA_MONASTERY', 'LB', 34.35, 36.366667),
+('IMOLA', 'IT', 44.3333, 11.7500)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -417,7 +423,13 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='GOTTINGEN'), 'en', 'Göttingen'),
 ((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'en', 'Holy Roman Empire'),
 ((SELECT id FROM places WHERE code='BUCCHIANICO'), 'en', 'Bucchianico'),
-((SELECT id FROM places WHERE code='BAGNOREGIO'), 'en', 'Bagnoregio')
+((SELECT id FROM places WHERE code='BAGNOREGIO'), 'en', 'Bagnoregio'),
+((SELECT id FROM places WHERE code='ITALY'), 'en', 'Italy'),
+((SELECT id FROM places WHERE code='SAINTE_BEAUME'), 'en', 'Sainte-Baume'),
+((SELECT id FROM places WHERE code='UPPLAND'), 'en', 'Uppland'),
+((SELECT id FROM places WHERE code='ANNAYA_MONASTERY'), 'en', 'Annaya Monastery'),
+((SELECT id FROM places WHERE code='BEKAAKAFRA'), 'en', 'Bekaa Kafra'),
+((SELECT id FROM places WHERE code='IMOLA'), 'en', 'Imola')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -628,7 +640,13 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='GOTTINGEN'), 'fr', 'Göttingen'),
 ((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'fr', 'Saint-Empire Romain Germanique'),
 ((SELECT id FROM places WHERE code='BUCCHIANICO'), 'fr', 'Bucchianico'),
-((SELECT id FROM places WHERE code='BAGNOREGIO'), 'fr', 'Bagnoregio')
+((SELECT id FROM places WHERE code='BAGNOREGIO'), 'fr', 'Bagnoregio'),
+((SELECT id FROM places WHERE code='ITALY'), 'fr', 'Italie'),
+((SELECT id FROM places WHERE code='SAINTE_BEAUME'), 'fr', 'Sainte-Baume'),
+((SELECT id FROM places WHERE code='UPPLAND'), 'fr', 'Uppland'),
+((SELECT id FROM places WHERE code='ANNAYA_MONASTERY'), 'fr', 'Monastère d’Annaya'),
+((SELECT id FROM places WHERE code='BEKAAKAFRA'), 'fr', 'Bekaa Kafra'),
+((SELECT id FROM places WHERE code='IMOLA'), 'fr', 'Imola')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -839,7 +857,13 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='GOTTINGEN'), 'la', 'Gottinga'),
 ((SELECT id FROM places WHERE code='HOLY_ROMAN_EMPIRE'), 'la', 'Sacrum Romanum Imperium'),
 ((SELECT id FROM places WHERE code='BUCCHIANICO'), 'la', 'Bucchianico'),
-((SELECT id FROM places WHERE code='BAGNOREGIO'), 'la', 'Balneoregium')
+((SELECT id FROM places WHERE code='BAGNOREGIO'), 'la', 'Balneoregium'),
+((SELECT id FROM places WHERE code='ITALY'), 'la', 'Italia'),
+((SELECT id FROM places WHERE code='SAINTE_BEAUME'), 'la', 'Sainte-Baume'),
+((SELECT id FROM places WHERE code='UPPLAND'), 'la', 'Uplandia'),
+((SELECT id FROM places WHERE code='ANNAYA_MONASTERY'), 'la', 'Monasterium Annaya'),
+((SELECT id FROM places WHERE code='BEKAAKAFRA'), 'la', 'Bekaa Kafra'),
+((SELECT id FROM places WHERE code='IMOLA'), 'la', 'Forum Cornelii')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
