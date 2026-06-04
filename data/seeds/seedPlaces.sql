@@ -221,7 +221,20 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('AUSCHWITZ', 'PL', 50.0359, 19.1783),
 ('SAN_DAMIANO_ASSISI', 'IT', 43.0613, 12.6097),
 ('DIJON', 'FR', 47.3220, 5.0415),
-('MOULINS', 'FR', 46.5653, 3.3333)
+('MOULINS', 'FR', 46.5653, 3.3333),
+('KHIRSA_MONASTERY', 'GE', 41.9920, 45.4700),
+('NIEPOKALANOW', 'PL', 52.2706, 20.7181),
+('ESZTERGOM', 'HU', 47.7928, 18.7402),
+('SZEKESFEHERVAR', 'HU', 47.1860, 18.4221),
+('RI_ORNE', 'FR', 48.7375, 0.5567),
+('CAEN', 'FR', 49.1829, -0.3707),
+('FONTAINE_LES_DIJON', 'FR', 47.3295, 5.0270),
+('CLAIRVAUX', 'FR', 48.1153, 4.8358),
+('RIESE_PIO_X', 'IT', 45.7269, 11.9286),
+('ARMENIA', 'AM', 40.0691, 45.0382),
+('PERALTA_DE_LA_SAL', 'ES', 42.3347, -1.7986),
+('TAGASTE', 'DZ', 36.4128, 6.1890),
+('OSTIA', 'IT', 41.7530, 12.2976),
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -448,6 +461,19 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SAN_DAMIANO_ASSISI'), 'en', 'San Damiano Monastery, Assisi'),
 ((SELECT id FROM places WHERE code='DIJON'), 'en', 'Dijon'),
 ((SELECT id FROM places WHERE code='MOULINS'), 'en', 'Moulins'),
+((SELECT id FROM places WHERE code='KHIRSA_MONASTERY'), 'en', 'Khirsa Monastery'),
+((SELECT id FROM places WHERE code='NIEPOKALANOW'), 'en', 'Niepokalanów'),
+((SELECT id FROM places WHERE code='ESZTERGOM'), 'en', 'Esztergom'),
+((SELECT id FROM places WHERE code='SZEKESFEHERVAR'), 'en', 'Székesfehérvár'),
+((SELECT id FROM places WHERE code='RI_ORNE'), 'en', 'Ri'),
+((SELECT id FROM places WHERE code='CAEN'), 'en', 'Caen'),
+((SELECT id FROM places WHERE code='FONTAINE_LES_DIJON'), 'en', 'Fontaine-lès-Dijon'),
+((SELECT id FROM places WHERE code='CLAIRVAUX'), 'en', 'Clairvaux'),
+((SELECT id FROM places WHERE code='RIESE_PIO_X'), 'en', 'Riese Pio X'),
+((SELECT id FROM places WHERE code='ARMENIA'), 'en', 'Armenia'),
+((SELECT id FROM places WHERE code='PERALTA_DE_LA_SAL'), 'en', 'Peralta de la Sal'),
+((SELECT id FROM places WHERE code='TAGASTE'), 'en', 'Tagaste'),
+((SELECT id FROM places WHERE code='OSTIA'), 'en', 'Ostia'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -674,6 +700,19 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SAN_DAMIANO_ASSISI'), 'fr', 'Monastère de San Damiano, Assise'),
 ((SELECT id FROM places WHERE code='DIJON'), 'fr', 'Dijon'),
 ((SELECT id FROM places WHERE code='MOULINS'), 'fr', 'Moulins'),
+((SELECT id FROM places WHERE code='KHIRSA_MONASTERY'), 'fr', 'Monastère de Khirsa'),
+((SELECT id FROM places WHERE code='NIEPOKALANOW'), 'fr', 'Niepokalanów'),
+((SELECT id FROM places WHERE code='ESZTERGOM'), 'fr', 'Esztergom'),
+((SELECT id FROM places WHERE code='SZEKESFEHERVAR'), 'fr', 'Székesfehérvár'),
+((SELECT id FROM places WHERE code='RI_ORNE'), 'fr', 'Ri'),
+((SELECT id FROM places WHERE code='CAEN'), 'fr', 'Caen'),
+((SELECT id FROM places WHERE code='FONTAINE_LES_DIJON'), 'fr', 'Fontaine-lès-Dijon'),
+((SELECT id FROM places WHERE code='CLAIRVAUX'), 'fr', 'Clairvaux'),
+((SELECT id FROM places WHERE code='RIESE_PIO_X'), 'fr', 'Riese Pio X'),
+((SELECT id FROM places WHERE code='ARMENIA'), 'fr', 'Arménie'),
+((SELECT id FROM places WHERE code='PERALTA_DE_LA_SAL'), 'fr', 'Peralta de la Sal'),
+((SELECT id FROM places WHERE code='TAGASTE'), 'fr', 'Thagaste'),
+((SELECT id FROM places WHERE code='OSTIA'), 'fr', 'Ostie'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -900,6 +939,19 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='SAN_DAMIANO_ASSISI'), 'la', 'Monasterium Sancti Damiani, Asisium'),
 ((SELECT id FROM places WHERE code='DIJON'), 'la', 'Divio'),
 ((SELECT id FROM places WHERE code='MOULINS'), 'la', 'Molinae'),
+((SELECT id FROM places WHERE code='KHIRSA_MONASTERY'), 'la', 'Khirsa Monasterium'),
+((SELECT id FROM places WHERE code='NIEPOKALANOW'), 'la', 'Niepokalanów'),
+((SELECT id FROM places WHERE code='ESZTERGOM'), 'la', 'Strigonium'),
+((SELECT id FROM places WHERE code='SZEKESFEHERVAR'), 'la', 'Alba Regalis'),
+((SELECT id FROM places WHERE code='RI_ORNE'), 'la', 'Ri'),
+((SELECT id FROM places WHERE code='CAEN'), 'la', 'Cadomum'),
+((SELECT id FROM places WHERE code='FONTAINE_LES_DIJON'), 'la', 'Fontanae Subteriores'),
+((SELECT id FROM places WHERE code='CLAIRVAUX'), 'la', 'Claravallis'),
+((SELECT id FROM places WHERE code='RIESE_PIO_X'), 'la', 'Resium'),
+((SELECT id FROM places WHERE code='ARMENIA'), 'la', 'Armenia'),
+((SELECT id FROM places WHERE code='PERALTA_DE_LA_SAL'), 'la', 'Peralta de la Sal'),
+((SELECT id FROM places WHERE code='TAGASTE'), 'la', 'Tagaste'),
+((SELECT id FROM places WHERE code='OSTIA'), 'la', 'Ostia'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
