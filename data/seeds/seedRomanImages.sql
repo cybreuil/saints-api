@@ -778,6 +778,7 @@ INSERT INTO images (
 ('/saints/saint-lawrence_strozzi.jpg', 'Saint Lawrence Distributing the Treasures of the Church', 'painting', 'Saint Lawrence Distributing the Treasures of the Church Painting', 'Bernardo Strozzi', '1625', 'North Carolina Museum of Art', NULL, 'Public Domain', NULL),
 
 -- Saint Clare
+('/saints/saint-clare_crivelli.jpg', 'Saint Clare', 'painting', 'Saint Clare Painting', 'Carlo Crivelli', '1470', 'Polo Museale di San Francesco in Montefiore dell''Aso', NULL, 'Public Domain', NULL),
 ('/saints/saint-clare_martini.jpg', 'Saint Clare', 'fresco', 'Saint Clare Fresco', 'Simone Martini', '1322-1326', 'Lower Basilica of San Francesco', NULL, 'Public Domain', NULL),
 ('/saints/saint-clare_moroni.jpg', 'Saint Clare', 'painting', 'Saint Clare Painting', 'Giovanni Battista Moroni', '1548', 'Tridentine Diocesan Museum', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
 ('/saints/saint-clare_arco.jpg', 'Saint Clare', 'painting', 'Saint Clare Painting', 'Alonso del Arco', '17th Century', 'The Bowes Museum', NULL, 'Public Domain', NULL),

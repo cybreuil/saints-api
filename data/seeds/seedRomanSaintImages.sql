@@ -756,9 +756,10 @@ JOIN (
 ('saint-lawrence', '/saints/saint-lawrence_strozzi.jpg', 7, FALSE, 'subject'),
 
 -- Saint Clare
-('saint-clare', '/saints/saint-clare_martini.jpg', 1, TRUE, 'subject'),
-('saint-clare', '/saints/saint-clare_moroni.jpg', 2, FALSE, 'subject'),
-('saint-clare', '/saints/saint-clare_arco.jpg', 3, FALSE, 'subject'),
+('saint-clare', '/saints/saint-clare_crivelli.jpg', 1, TRUE, 'subject'),
+('saint-clare', '/saints/saint-clare_martini.jpg', 2, TRUE, 'subject'),
+('saint-clare', '/saints/saint-clare_moroni.jpg', 3, FALSE, 'subject'),
+('saint-clare', '/saints/saint-clare_arco.jpg', 4, FALSE, 'subject'),
 
 -- Saint Jane Frances de Chantal
 ('saint-jane-frances-de-chantal', '/saints/saint-jane-frances-de-chantal.webp', 1, TRUE, 'subject'),

@@ -212,7 +212,16 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('UPPLAND', 'SE', 60.0000, 16.0000),
 ('BEKAAKAFRA', 'LB', 34.35, 36.366667),
 ('ANNAYA_MONASTERY', 'LB', 34.35, 36.366667),
-('IMOLA', 'IT', 44.3333, 11.7500)
+('IMOLA', 'IT', 44.3333, 11.7500),
+('PAGANI', 'IT', 40.733333, 14.616667),
+('SARDINIA', 'IT', 40.1209, 9.0129),
+('DARDILLY', 'FR', 45.7833, 4.7167),
+('BOLOGNA', 'IT', 44.4949, 11.3426),
+('TOULOUSE', 'FR', 43.6047, 1.4444),
+('AUSCHWITZ', 'PL', 50.0359, 19.1783),
+('SAN_DAMIANO_ASSISI', 'IT', 43.0613, 12.6097),
+('DIJON', 'FR', 47.3220, 5.0415),
+('MOULINS', 'FR', 46.5653, 3.3333)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -429,7 +438,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='UPPLAND'), 'en', 'Uppland'),
 ((SELECT id FROM places WHERE code='ANNAYA_MONASTERY'), 'en', 'Annaya Monastery'),
 ((SELECT id FROM places WHERE code='BEKAAKAFRA'), 'en', 'Bekaa Kafra'),
-((SELECT id FROM places WHERE code='IMOLA'), 'en', 'Imola')
+((SELECT id FROM places WHERE code='IMOLA'), 'en', 'Imola'),
+((SELECT id FROM places WHERE code='PAGANI'), 'en', 'Pagani'),
+((SELECT id FROM places WHERE code='SARDINIA'), 'en', 'Sardinia'),
+((SELECT id FROM places WHERE code='DARDILLY'), 'en', 'Dardilly'),
+((SELECT id FROM places WHERE code='BOLOGNA'), 'en', 'Bologna'),
+((SELECT id FROM places WHERE code='TOULOUSE'), 'en', 'Toulouse'),
+((SELECT id FROM places WHERE code='AUSCHWITZ'), 'en', 'Auschwitz'),
+((SELECT id FROM places WHERE code='SAN_DAMIANO_ASSISI'), 'en', 'San Damiano Monastery, Assisi'),
+((SELECT id FROM places WHERE code='DIJON'), 'en', 'Dijon'),
+((SELECT id FROM places WHERE code='MOULINS'), 'en', 'Moulins'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -646,7 +664,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='UPPLAND'), 'fr', 'Uppland'),
 ((SELECT id FROM places WHERE code='ANNAYA_MONASTERY'), 'fr', 'Monastère d’Annaya'),
 ((SELECT id FROM places WHERE code='BEKAAKAFRA'), 'fr', 'Bekaa Kafra'),
-((SELECT id FROM places WHERE code='IMOLA'), 'fr', 'Imola')
+((SELECT id FROM places WHERE code='IMOLA'), 'fr', 'Imola'),
+((SELECT id FROM places WHERE code='PAGANI'), 'fr', 'Pagani'),
+((SELECT id FROM places WHERE code='SARDINIA'), 'fr', 'Sardaigne'),
+((SELECT id FROM places WHERE code='DARDILLY'), 'fr', 'Dardilly'),
+((SELECT id FROM places WHERE code='BOLOGNA'), 'fr', 'Bologne'),
+((SELECT id FROM places WHERE code='TOULOUSE'), 'fr', 'Toulouse'),
+((SELECT id FROM places WHERE code='AUSCHWITZ'), 'fr', 'Auschwitz'),
+((SELECT id FROM places WHERE code='SAN_DAMIANO_ASSISI'), 'fr', 'Monastère de San Damiano, Assise'),
+((SELECT id FROM places WHERE code='DIJON'), 'fr', 'Dijon'),
+((SELECT id FROM places WHERE code='MOULINS'), 'fr', 'Moulins'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -863,7 +890,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='UPPLAND'), 'la', 'Uplandia'),
 ((SELECT id FROM places WHERE code='ANNAYA_MONASTERY'), 'la', 'Monasterium Annaya'),
 ((SELECT id FROM places WHERE code='BEKAAKAFRA'), 'la', 'Bekaa Kafra'),
-((SELECT id FROM places WHERE code='IMOLA'), 'la', 'Forum Cornelii')
+((SELECT id FROM places WHERE code='IMOLA'), 'la', 'Forum Cornelii'),
+((SELECT id FROM places WHERE code='PAGANI'), 'la', 'Pagani'),
+((SELECT id FROM places WHERE code='SARDINIA'), 'la', 'Sardinia'),
+((SELECT id FROM places WHERE code='DARDILLY'), 'la', 'Dardilly'),
+((SELECT id FROM places WHERE code='BOLOGNA'), 'la', 'Bononia'),
+((SELECT id FROM places WHERE code='TOULOUSE'), 'la', 'Tolosa'),
+((SELECT id FROM places WHERE code='AUSCHWITZ'), 'la', 'Auschwitz'),
+((SELECT id FROM places WHERE code='SAN_DAMIANO_ASSISI'), 'la', 'Monasterium Sancti Damiani, Asisium'),
+((SELECT id FROM places WHERE code='DIJON'), 'la', 'Divio'),
+((SELECT id FROM places WHERE code='MOULINS'), 'la', 'Molinae'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;

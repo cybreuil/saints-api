@@ -1894,37 +1894,37 @@ INSERT INTO saints (
 ) VALUES
 (
   'saint-alphonsus-liguori', 'Saint Alphonsus Liguori',
-  1696, NULL, NULL, FALSE,
+  1696, 9, 27, FALSE,
   1787, 8, 1, FALSE,
   18,
   (SELECT id FROM places WHERE code='NAPLES'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='PAGANI'),
+  (SELECT id FROM places WHERE code='NAPLES')
 ),
 (
   'saint-eusebius-of-vercelli', 'Saint Eusebius of Vercelli',
-  NULL, NULL, NULL, TRUE,
-  371, 8, 2, TRUE,
+  283, 3, 2, TRUE,
+  371, 8, 1, TRUE,
   4,
-  NULL,
+  (SELECT id FROM places WHERE code='SARDINIA'),
   (SELECT id FROM places WHERE code='VERCELLI'),
   (SELECT id FROM places WHERE code='VERCELLI')
 ),
 (
   'saint-peter-julian-eymard', 'Saint Peter Julian Eymard',
-  1811, NULL, NULL, FALSE,
-  1868, 8, 2, FALSE,
+  1811, 2, 4, FALSE,
+  1868, 8, 1, FALSE,
   19,
   (SELECT id FROM places WHERE code='LA_MURE'),
-  (SELECT id FROM places WHERE code='PARIS'),
+  (SELECT id FROM places WHERE code='LA_MURE'),
   (SELECT id FROM places WHERE code='PARIS')
 ),
 (
   'saint-john-vianney', 'Saint John Vianney',
-  1786, NULL, NULL, FALSE,
+  1786, 5, 8, FALSE,
   1859, 8, 4, FALSE,
   19,
-  NULL,
+  (SELECT id FROM places WHERE code='DARDILLY'),
   (SELECT id FROM places WHERE code='ARS'),
   (SELECT id FROM places WHERE code='ARS')
 ),
@@ -1944,7 +1944,7 @@ INSERT INTO saints (
 -- ),
 (
   'saint-sixtus-ii-and-companions', 'Saint Sixtus II and Companions',
-  NULL, NULL, NULL, TRUE,
+  195, NULL, NULL, TRUE,
   258, 8, 6, TRUE,
   3,
   NULL,
@@ -1953,55 +1953,57 @@ INSERT INTO saints (
 ),
 (
   'saint-cajetan', 'Saint Cajetan',
-  1480, NULL, NULL, TRUE,
+  1480, 10, NULL, TRUE,
   1547, 8, 7, FALSE,
   16,
   (SELECT id FROM places WHERE code='VICENZA'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='NAPLES'),
+  (SELECT id FROM places WHERE code='NAPLES')
 ),
 (
   'saint-dominic', 'Saint Dominic',
   1170, NULL, NULL, TRUE,
-  1221, 8, 8, FALSE,
+  1221, 8, 6, FALSE,
   13,
   (SELECT id FROM places WHERE code='CALERUEGA'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='BOLOGNA'),
+  (SELECT id FROM places WHERE code='TOULOUSE')
 ),
 (
   'saint-teresa-benedicta-of-the-cross', 'Saint Teresa Benedicta of the Cross (Edith Stein)',
-  1891, NULL, NULL, FALSE,
+  1891, 10, 12, FALSE,
   1942, 8, 9, FALSE,
   20,
   (SELECT id FROM places WHERE code='WROCLAW'),
-  (SELECT id FROM places WHERE code='OSWIECIM'),
-  NULL
+  (SELECT id FROM places WHERE code='AUSCHWITZ'),
+  (SELECT id FROM places WHERE code='COLOGNE'),
 ),
 (
   'saint-lawrence', 'Saint Lawrence, Deacon and Martyr',
-  NULL, NULL, NULL, TRUE,
+  225, NULL, NULL, TRUE,
   258, 8, 10, TRUE,
   3,
-  NULL,
+  (SELECT id FROM places WHERE code='HUESCA'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-clare', 'Saint Clare',
-  1194, NULL, NULL, TRUE,
+  1194, 7, 16, TRUE,
   1253, 8, 11, FALSE,
   13,
   (SELECT id FROM places WHERE code='ASSISI'),
-  NULL,
-  (SELECT id FROM places WHERE code='ASSISI')
+  (SELECT id FROM places WHERE code='SAN_DAMIANO_ASSISI'),
+  (SELECT id FROM places WHERE code='SAN_DAMIANO_ASSISI')
 ),
 (
   'saint-jane-frances-de-chantal', 'Saint Jane Frances de Chantal',
   1572, NULL, NULL, FALSE,
   1641, 8, 12, FALSE,
   16,
-  NULL, NULL, NULL
+  ('DIJON', 'FR', 47.3220, 5.0415),
+  ('MOLANOS', 'FR', 46.1990, 5.2860),
+  ('ANNECY', 'FR', 45.8992, 6.1294)
 ),
 (
   'saint-pontian', 'Saint Pontian',
