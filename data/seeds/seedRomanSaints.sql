@@ -2001,9 +2001,9 @@ INSERT INTO saints (
   1572, NULL, NULL, FALSE,
   1641, 8, 12, FALSE,
   16,
-  ('DIJON', 'FR', 47.3220, 5.0415),
-  ('MOLANOS', 'FR', 46.1990, 5.2860),
-  ('ANNECY', 'FR', 45.8992, 6.1294)
+  (SELECT id FROM places WHERE code='DIJON'),
+  (SELECT id FROM places WHERE code='MOULINS'),
+  (SELECT id FROM places WHERE code='ANNECY')
 ),
 (
   'saint-pontian', 'Saint Pontian',
