@@ -1998,8 +1998,8 @@ INSERT INTO saints (
 ),
 (
   'saint-jane-frances-de-chantal', 'Saint Jane Frances de Chantal',
-  1572, NULL, NULL, FALSE,
-  1641, 8, 12, FALSE,
+  1572, 1, 23, FALSE,
+  1641, 12, 13, FALSE,
   16,
   (SELECT id FROM places WHERE code='DIJON'),
   (SELECT id FROM places WHERE code='MOULINS'),
@@ -2011,16 +2011,16 @@ INSERT INTO saints (
   235, NULL, NULL, TRUE,
   3,
   NULL,
-  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='SARDINIA'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-hippolytus-of-rome', 'Saint Hippolytus of Rome',
-  NULL, NULL, NULL, TRUE,
+  170, NULL, NULL, TRUE,
   235, NULL, NULL, TRUE,
   3,
   NULL,
-  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='SARDINIA'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
@@ -2028,66 +2028,76 @@ INSERT INTO saints (
   580, NULL, NULL, TRUE,
   662, 8, 13, TRUE,
   7,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='CONSTANTINOPLE'),
+  (SELECT id FROM places WHERE code='KHIRSA_MONASTERY'),
+  (SELECT id FROM places WHERE code='CONSTANTINOPLE')
 ),
 (
   'saint-maximilian-kolbe', 'Saint Maximilian Kolbe',
-  1894, NULL, NULL, FALSE,
+  1894, 1, 8, FALSE,
   1941, 8, 14, FALSE,
   20,
   (SELECT id FROM places WHERE code='ZDUNSKA_WOLA'),
-  (SELECT id FROM places WHERE code='OSWIECIM'),
-  NULL
+  (SELECT id FROM places WHERE code='AUSCHWITZ'),
+  (SELECT id FROM places WHERE code='NIEPOKALANOW')
 ),
 (
   'saint-stephen-of-hungary', 'Saint Stephen of Hungary',
   975, NULL, NULL, TRUE,
-  1038, 8, 16, FALSE,
+  1038, 8, 15, FALSE,
   11,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='ESZTERGOM'),
+  (SELECT id FROM places WHERE code='SZEKESFEHERVAR'),
+  (SELECT id FROM places WHERE code='ESZTERGOM')
 ),
 (
   'saint-john-eudes', 'Saint John Eudes',
-  1601, NULL, NULL, FALSE,
+  1601, 11, 14, FALSE,
   1680, 8, 19, FALSE,
   17,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='RI_ORNE'),
+  (SELECT id FROM places WHERE code='CAEN'),
+  (SELECT id FROM places WHERE code='CAEN')
 ),
 (
   'saint-bernard', 'Saint Bernard (of Clairvaux)',
   1090, NULL, NULL, TRUE,
   1153, 8, 20, FALSE,
   12,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='FONTAINE_LES_DIJON'),
+  (SELECT id FROM places WHERE code='CLAIRVAUX'),
+  (SELECT id FROM places WHERE code='CLAIRVAUX')
 ),
 (
   'saint-pius-x', 'Saint Pius X',
-  1835, NULL, NULL, FALSE,
+  1835, 6, 2, FALSE,
   1914, 8, 20, FALSE,
-  19,
-  NULL,
+  20,
+  (SELECT id FROM places WHERE code='RIESE_PIO_X'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-rose-of-lima', 'Saint Rose of Lima',
-  1586, NULL, NULL, FALSE,
-  1617, 8, 23, FALSE,
-  16,
+  1586, 4, 30, FALSE,
+  1617, 8, 24, FALSE,
+  17,
   (SELECT id FROM places WHERE code='LIMA'),
-  NULL,
+  (SELECT id FROM places WHERE code='LIMA'),
   (SELECT id FROM places WHERE code='LIMA')
 ),
 (
   'saint-bartholomew-apostle', 'Saint Bartholomew, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, 8, 24, TRUE,
+  70, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='GALILEE'),
+  (SELECT id FROM places WHERE code='ARMENIA'),
+  (SELECT id FROM places WHERE code='ARMENIA')
 ),
 (
   'saint-louis', 'Saint Louis (King of France)',
-  1214, NULL, NULL, FALSE,
+  1214, 4, 25, FALSE,
   1270, 8, 25, FALSE,
   13,
   (SELECT id FROM places WHERE code='POISSY'),
@@ -2096,26 +2106,28 @@ INSERT INTO saints (
 ),
 (
   'saint-joseph-calasanz', 'Saint Joseph Calasanz',
-  1557, NULL, NULL, FALSE,
+  1557, 9, 11, FALSE,
   1648, 8, 25, FALSE,
   16,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='PERALTA_DE_LA_SAL'),
+  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-monica', 'Saint Monica',
   332, NULL, NULL, TRUE,
   387, NULL, NULL, TRUE,
   4,
-  NULL,
-  (SELECT id FROM places WHERE code='ROME'),
-  (SELECT id FROM places WHERE code='ROME')
+  (SELECT id FROM places WHERE code='TAGASTE'),
+  (SELECT id FROM places WHERE code='OSTIA'),
+  (SELECT id FROM places WHERE code='OSTIA')
 ),
 (
   'saint-augustine-of-hippo', 'Saint Augustine of Hippo',
-  354, NULL, NULL, TRUE,
-  430, 8, 28, TRUE,
+  354, 11, 13, FALSE,
+  430, 8, 28, FALSE,
   5,
-  NULL,
+  (SELECT id FROM places WHERE code='TAGASTE'),
   (SELECT id FROM places WHERE code='HIPPO_REGIUS'),
   (SELECT id FROM places WHERE code='HIPPO_REGIUS')
 )
