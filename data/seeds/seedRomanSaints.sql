@@ -2623,36 +2623,36 @@ INSERT INTO saints (
 (
   'saint-denis-and-companions', 'Saint Denis, Bishop, and Companions, Martyrs',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  250, NULL, NULL, TRUE,
   3,
   NULL,
-  (SELECT id FROM places WHERE code='PARIS'),
+  (SELECT id FROM places WHERE code='MONTMARTRE'),
   (SELECT id FROM places WHERE code='PARIS')
 ),
 (
   'saint-john-leonardi', 'Saint John Leonardi',
   1541, NULL, NULL, FALSE,
   1609, 10, 9, FALSE,
-  16,
-  NULL,
+  17,
+  (SELECT id FROM places WHERE code='DIECIMO')
   (SELECT id FROM places WHERE code='ROME'),
-  (SELECT id FROM places WHERE code='ROME')
+  (SELECT id FROM places WHERE code='LUCCA')
 ),
 (
   'saint-john-henry-newman', 'Saint John Henry Newman',
-  1801, NULL, NULL, FALSE,
+  1801, 2, 21, FALSE,
   1890, 8, 11, FALSE,
   19,
   (SELECT id FROM places WHERE code='LONDON'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='BIRMINGHAM'),
+  (SELECT id FROM places WHERE code='OXFORD')
 ),
 (
   'saint-john-xxiii', 'Saint John XXIII',
-  1881, NULL, NULL, FALSE,
-  1963, 10, 11, FALSE,
+  1881, 11, 25, FALSE,
+  1963, 6, 3, FALSE,
   20,
-  NULL,
+  (SELECT id FROM places WHERE code='SOTTO_IL_MONTE_GIOVANNI_XXIII'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
