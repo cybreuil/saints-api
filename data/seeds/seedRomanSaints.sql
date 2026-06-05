@@ -2678,15 +2678,18 @@ INSERT INTO saints (
   'saint-hedwig', 'Saint Hedwig',
   1174, NULL, NULL, TRUE,
   1243, 10, 15, FALSE,
-  12,
-  NULL, NULL, NULL
+  13,
+  (SELECT id FROM places WHERE code='ANDECHS'),
+  (SELECT id FROM places WHERE code='TRZEBNICA'),
+  (SELECT id FROM places WHERE code='WROCLAW')
+
 ),
 (
   'saint-margaret-mary-alacoque', 'Saint Margaret Mary Alacoque',
   1647, 7, 22, FALSE,
   1690, 10, 17, FALSE,
   17,
-  NULL,
+  (SELECT id FROM places WHERE code='VEROSVRES'),
   (SELECT id FROM places WHERE code='PARAY-LE-MONIAL'),
   (SELECT id FROM places WHERE code='PARAY-LE-MONIAL')
 ),
@@ -2695,8 +2698,8 @@ INSERT INTO saints (
   33, NULL, NULL, TRUE,
   110, NULL, NULL, TRUE,
   2,
-  NULL,
   (SELECT id FROM places WHERE code='ANTIOCH'),
+  (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ANTIOCH')
 ),
 (
@@ -2704,7 +2707,9 @@ INSERT INTO saints (
   NULL, NULL, NULL, TRUE,
   NULL, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='ANTIOCH'),
+  NULL,
+  (SELECT id FROM places WHERE code='ANTIOCH')
 ),
 (
   'saints-john-de-brebeuf-and-companions', 'Saints John de Brébeuf, Isaac Jogues, and Companions, Martyrs',

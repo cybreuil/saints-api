@@ -264,6 +264,9 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('BIRMINGHAM', 'GB', 52.4862, -1.8904),
 ('SOTTO_IL_MONTE_GIOVANNI_XXIII', 'IT', 45.705556, 9.498333),
 ('ALBA_DE_TORMES', 'ES', 40.8169, -5.5179),
+('ANDECHS', 'DE', 47.9835, 11.1841),       -- Andechs (Bavaria) : lieu traditionnel de naissance
+('TRZEBNICA', 'PL', 51.3001, 17.0673),
+('VEROSVRES', 'FR', 46.4028, 4.444),
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -532,6 +535,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BIRMINGHAM'), 'en', 'Birmingham'),
 ((SELECT id FROM places WHERE code='SOTTO_IL_MONTE_GIOVANNI_XXIII'), 'en', 'Sotto il Monte Giovanni XXIII'),
 ((SELECT id FROM places WHERE code='ALBA_DE_TORMES'), 'en', 'Alba de Tormes'),
+((SELECT id FROM places WHERE code='ANDECHS'), 'en', 'Andechs'),
+((SELECT id FROM places WHERE code='TRZEBNICA'), 'en', 'Trzebnica'),
+((SELECT id FROM places WHERE code='VEROSVRES'), 'en', 'Verosvres'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -800,6 +806,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BIRMINGHAM'), 'fr', 'Birmingham'),
 ((SELECT id FROM places WHERE code='SOTTO_IL_MONTE_GIOVANNI_XXIII'), 'fr', 'Sotto il Monte Giovanni XXIII'),
 ((SELECT id FROM places WHERE code='ALBA_DE_TORMES'), 'fr', 'Alba de Tormes'),
+((SELECT id FROM places WHERE code='ANDECHS'), 'fr', 'Andechs'),
+((SELECT id FROM places WHERE code='TRZEBNICA'), 'fr', 'Trzebnica'),
+((SELECT id FROM places WHERE code='VEROSVRES'), 'fr', 'Verosvres'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1068,6 +1077,9 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BIRMINGHAM'), 'la', 'Birminghamia'),
 ((SELECT id FROM places WHERE code='SOTTO_IL_MONTE_GIOVANNI_XXIII'), 'la', 'Submons (Langobardia)'),
 ((SELECT id FROM places WHERE code='ALBA_DE_TORMES'), 'la', 'Alba de Tormes'),
+((SELECT id FROM places WHERE code='ANDECHS'), 'la', 'Andessa'),
+((SELECT id FROM places WHERE code='TRZEBNICA'), 'la', 'Trzebnica'),
+((SELECT id FROM places WHERE code='VEROSVRES'), 'la', 'Verosvres'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
