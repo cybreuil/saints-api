@@ -267,6 +267,7 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('ANDECHS', 'DE', 47.9835, 11.1841),       -- Andechs (Bavaria) : lieu traditionnel de naissance
 ('TRZEBNICA', 'PL', 51.3001, 17.0673),
 ('VEROSVRES', 'FR', 46.4028, 4.444),
+('CONDE_SUR_VIRE', 'FR', 49.0532, -1.0382)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -538,6 +539,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='ANDECHS'), 'en', 'Andechs'),
 ((SELECT id FROM places WHERE code='TRZEBNICA'), 'en', 'Trzebnica'),
 ((SELECT id FROM places WHERE code='VEROSVRES'), 'en', 'Verosvres'),
+((SELECT id FROM places WHERE code='CONDE_SUR_VIRE'), 'en', 'Condé-sur-Vire'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -809,6 +811,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='ANDECHS'), 'fr', 'Andechs'),
 ((SELECT id FROM places WHERE code='TRZEBNICA'), 'fr', 'Trzebnica'),
 ((SELECT id FROM places WHERE code='VEROSVRES'), 'fr', 'Verosvres'),
+((SELECT id FROM places WHERE code='CONDE_SUR_VIRE'), 'fr', 'Condé-sur-Vire'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1080,6 +1083,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='ANDECHS'), 'la', 'Andessa'),
 ((SELECT id FROM places WHERE code='TRZEBNICA'), 'la', 'Trzebnica'),
 ((SELECT id FROM places WHERE code='VEROSVRES'), 'la', 'Verosvres'),
+((SELECT id FROM places WHERE code='CONDE_SUR_VIRE'), 'la', 'Condate ad Viram'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
