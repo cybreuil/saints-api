@@ -253,7 +253,8 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('STOCHOV', 'CZ', 50.146389, 13.963611),
 ('STARA_BOLESLAV', 'CZ', 50.18709, 14.66326),
 ('BINONDO', 'PH', 14.5933, 120.9710),
-('BETHLEHEM', 'PS', 31.7054, 35.2024)
+('BETHLEHEM', 'PS', 31.7054, 35.2024),
+('ALENCON', 'FR', 48.4301, 0.0906),
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -512,6 +513,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='STARA_BOLESLAV'), 'en', 'Stará Boleslav'),
 ((SELECT id FROM places WHERE code='BINONDO'), 'en', 'Binondo'),
 ((SELECT id FROM places WHERE code='BETHLEHEM'), 'en', 'Bethlehem'),
+((SELECT id FROM places WHERE code='ALENCON'), 'en', 'Alençon'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -770,6 +772,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='STARA_BOLESLAV'), 'fr', 'Stará Boleslav'),
 ((SELECT id FROM places WHERE code='BINONDO'), 'fr', 'Binondo'),
 ((SELECT id FROM places WHERE code='BETHLEHEM'), 'fr', 'Bethléem'),
+((SELECT id FROM places WHERE code='ALENCON'), 'fr', 'Alençon'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1028,6 +1031,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='STARA_BOLESLAV'), 'la', 'Stará Boleslav'),
 ((SELECT id FROM places WHERE code='BINONDO'), 'la', 'Binondo'),
 ((SELECT id FROM places WHERE code='BETHLEHEM'), 'la', 'Bethleem'),
+((SELECT id FROM places WHERE code='ALENCON'), 'la', 'Alenconium'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
