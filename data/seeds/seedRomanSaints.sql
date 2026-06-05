@@ -2574,7 +2574,7 @@ INSERT INTO saints (
   1873, 1, 2, FALSE,
   1897, 9, 30, FALSE,
   19,
-  (SELECT id FROM places WHERE code='LISIEUX'),
+  (SELECT id FROM places WHERE code='ALENCON'),
   (SELECT id FROM places WHERE code='LISIEUX'),
   (SELECT id FROM places WHERE code='LISIEUX')
 ),
