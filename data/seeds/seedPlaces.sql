@@ -255,6 +255,8 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('BINONDO', 'PH', 14.5933, 120.9710),
 ('BETHLEHEM', 'PS', 31.7054, 35.2024),
 ('ALENCON', 'FR', 48.4301, 0.0906),
+('SERRA_SAN_BRUNO', 'IT', 38.583333, 16.333333),
+('GRANDE_CHARTREUSE', 'FR', 45.363333, 5.793611)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -514,6 +516,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BINONDO'), 'en', 'Binondo'),
 ((SELECT id FROM places WHERE code='BETHLEHEM'), 'en', 'Bethlehem'),
 ((SELECT id FROM places WHERE code='ALENCON'), 'en', 'Alençon'),
+((SELECT id FROM places WHERE code='SERRA_SAN_BRUNO'), 'en', 'Serra San Bruno'),
+((SELECT id FROM places WHERE code='GRANDE_CHARTREUSE'), 'en', 'Grande Chartreuse'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -773,6 +777,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BINONDO'), 'fr', 'Binondo'),
 ((SELECT id FROM places WHERE code='BETHLEHEM'), 'fr', 'Bethléem'),
 ((SELECT id FROM places WHERE code='ALENCON'), 'fr', 'Alençon'),
+((SELECT id FROM places WHERE code='SERRA_SAN_BRUNO'), 'fr', 'Serra San Bruno'),
+((SELECT id FROM places WHERE code='GRANDE_CHARTREUSE'), 'fr', 'Grande Chartreuse'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1032,6 +1038,8 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='BINONDO'), 'la', 'Binondo'),
 ((SELECT id FROM places WHERE code='BETHLEHEM'), 'la', 'Bethleem'),
 ((SELECT id FROM places WHERE code='ALENCON'), 'la', 'Alenconium'),
+((SELECT id FROM places WHERE code='SERRA_SAN_BRUNO'), 'la', 'Serra Sancti Brunonis'),
+((SELECT id FROM places WHERE code='GRANDE_CHARTREUSE'), 'la', 'Magna Cartusia'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;

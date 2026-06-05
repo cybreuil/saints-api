@@ -2589,7 +2589,7 @@ INSERT INTO saints (
   'saint-francis-of-assisi', 'Saint Francis of Assisi',
   1182, NULL, NULL, TRUE,
   1226, 10, 3, FALSE,
-  12,
+  13,
   (SELECT id FROM places WHERE code='ASSISI'),
   (SELECT id FROM places WHERE code='ASSISI'),
   (SELECT id FROM places WHERE code='ASSISI')
@@ -2601,16 +2601,17 @@ INSERT INTO saints (
   20,
   (SELECT id FROM places WHERE code='GLOGOWIEC'),
   (SELECT id FROM places WHERE code='KRAKOW'),
-  NULL
+  (SELECT id FROM places WHERE code='KRAKOW')
 ),
 (
   'saint-bruno', 'Saint Bruno',
   1030, NULL, NULL, TRUE,
   1101, 10, 6, FALSE,
-  11,
-  (SELECT id FROM places WHERE code='COLOGNE'),
-  NULL,
-  NULL
+  12,
+  (SELECT id FROM places WHERE code='COLOGNE'),           -- place_of_birth
+  (SELECT id FROM places WHERE code='SERRA_SAN_BRUNO'),   -- place_of_death
+  (SELECT id FROM places WHERE code='GRANDE_CHARTREUSE')  -- place_of_activity (founder of the Carthusian order)
+
 ),
 -- (
 --   'our-lady-of-the-rosary', 'Our Lady of the Rosary',
