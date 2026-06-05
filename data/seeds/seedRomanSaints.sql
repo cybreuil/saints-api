@@ -2725,46 +2725,55 @@ INSERT INTO saints (
   1694, 1, 3, FALSE,
   1775, 10, 18, FALSE,
   18,
-  NULL,
+  (SELECT id FROM places WHERE code='OVADA'),
   (SELECT id FROM places WHERE code='ROME'),
-  NULL
+  (SELECT id FROM places WHERE code='MONTE_ARGENTARIO')
 ),
 (
   'saint-john-paul-ii', 'Saint John Paul II',
   1920, 5, 18, FALSE,
   2005, 4, 2, FALSE,
-  20,
+  21,
   (SELECT id FROM places WHERE code='WADOWICE'),
   (SELECT id FROM places WHERE code='ROME'),
-  NULL
+  (SELECT id FROM places WHERE code='ROME')
+  -- krakovie ?
 ),
 (
   'saint-john-of-capistrano', 'Saint John of Capistrano',
   1386, 6, 24, TRUE,
   1456, 10, 23, FALSE,
   15,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='CAPESTRANO'),
+  (SELECT id FROM places WHERE code='ILOK'),
+  (SELECT id FROM places WHERE code='BELGRADE'),
 ),
 (
   'saint-anthony-mary-claret', 'Saint Anthony Mary Claret, Bishop',
-  1807, 9, 23, FALSE,
+  1807, 12, 23, FALSE,
   1870, 10, 24, FALSE,
   19,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='SALLENT'),
+  (SELECT id FROM places WHERE code='FONTFROIDE'),
+  (SELECT id FROM places WHERE code='VIC')
 ),
 (
   'saint-simon-apostle', 'Saint Simon, Apostle',
-  NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  5, NULL, NULL, TRUE,
+  65, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='CANA'),
+  (SELECT id FROM places WHERE code='PERSIA'),
+  (SELECT id FROM places WHERE code='JERUSALEM')
 ),
 (
   'saint-jude-apostle', 'Saint Jude, Apostle',
-  NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  10, NULL, NULL, TRUE,
+  65, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='GALILEE'),
+  (SELECT id FROM places WHERE code='PERSIA'),
+  (SELECT id FROM places WHERE code='JERUSALEM')
 )
 ON CONFLICT (slug) DO NOTHING;
 
@@ -2891,14 +2900,14 @@ INSERT INTO saints (
   17,
   (SELECT id FROM places WHERE code='LIMA'),
   (SELECT id FROM places WHERE code='LIMA'),
-  NULL
+  (SELECT id FROM places WHERE code='LIMA')
 ),
 (
   'saint-charles-borromeo', 'Saint Charles Borromeo',
   1538, 10, 2, FALSE,
   1584, 11, 3, FALSE,
   16,
-  NULL,
+  (SELECT id FROM places WHERE code='ARONA'),
   (SELECT id FROM places WHERE code='MILAN'),
   (SELECT id FROM places WHERE code='MILAN')
 ),
@@ -2916,8 +2925,8 @@ INSERT INTO saints (
   316, NULL, NULL, TRUE,
   397, 11, 8, TRUE,
   4,
-  NULL,
-  (SELECT id FROM places WHERE code='TOURS'),
+  (SELECT id FROM places WHERE code='SZOMBATHELY'),
+  (SELECT id FROM places WHERE code='CANDES_SAINT_MARTIN'),
   (SELECT id FROM places WHERE code='TOURS')
 ),
 (
@@ -2925,14 +2934,16 @@ INSERT INTO saints (
   1580, NULL, NULL, TRUE,
   1623, 11, 12, TRUE,
   17,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='VOLODYMYR'),
+  (SELECT id FROM places WHERE code='VITEBSK'),
+  (SELECT id FROM places WHERE code='SZOMBATHELY')
 ),
 (
   'saint-albert-the-great', 'Saint Albert the Great',
   1200, NULL, NULL, TRUE,
   1280, 11, 15, TRUE,
   13,
-  NULL,
+  (SELECT id FROM places WHERE code='LAUINGEN'),
   (SELECT id FROM places WHERE code='COLOGNE'),
   (SELECT id FROM places WHERE code='COLOGNE')
 ),
@@ -2941,69 +2952,81 @@ INSERT INTO saints (
   1045, NULL, NULL, TRUE,
   1093, 11, 16, TRUE,
   11,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='MECSEKNADASD'),
+  (SELECT id FROM places WHERE code='EDINBURGH_CASTLE'),
+  (SELECT id FROM places WHERE code='DUNFERMLINE')
 ),
 (
   'saint-gertrude', 'Saint Gertrude',
   1256, 1, 6, TRUE,
   1301, 11, 17, TRUE,
   14,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='THURINGIA'),
+  (SELECT id FROM places WHERE code='HELFTA'),
+  (SELECT id FROM places WHERE code='HELFTA'),
 ),
 (
   'saint-elizabeth-of-hungary', 'Saint Elizabeth of Hungary',
   1207, 7, 7, TRUE,
   1231, 11, 17, FALSE,
   13,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='SAROSPATAK'),
+  (SELECT id FROM places WHERE code='MARBURG'),
+  (SELECT id FROM places WHERE code='MARBURG'),
 ),
 (
   'saint-cecilia', 'Saint Cecilia, Virgin and Martyr',
   NULL, NULL, NULL, TRUE,
   230, NULL, NULL, TRUE,
-  NULL,
-  NULL,
+  3,
+  (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-clement-i', 'Saint Clement I, Pope and Martyr',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  98, NULL, NULL, TRUE,
   1,
-  NULL,
   (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='CHERSON'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
   'saint-columban', 'Saint Columban, Abbot',
   543, NULL, NULL, TRUE,
-  615, 11, 21, TRUE,
+  615, 11, 23, TRUE,
   7,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='MYSHALL'),
+  (SELECT id FROM places WHERE code='BOBBIO'),
+  (SELECT id FROM places WHERE code='LUXEUIL'),
 ),
 (
   'saint-andrew-dung-lac-and-companions', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs',
   1795, NULL, NULL, TRUE,
   1839, 12, 21, TRUE,
   19,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='BAC_NINH'),
+  (SELECT id FROM places WHERE code='HANOI'),
+  (SELECT id FROM places WHERE code='HANOI')
 ),
 (
   'saint-catherine-of-alexandria', 'Saint Catherine of Alexandria',
-  NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  287, NULL, NULL, TRUE,
+  305, NULL, NULL, TRUE,
   4,
-  NULL,
+  (SELECT id FROM places WHERE code='ALEXANDRIA'),
   (SELECT id FROM places WHERE code='ALEXANDRIA'),
   (SELECT id FROM places WHERE code='ALEXANDRIA')
 ),
 (
   'saint-andrew-apostle', 'Saint Andrew, Apostle',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  60, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='BETHSAIDA'),
+  (SELECT id FROM places WHERE code='PATRAS'),
+  (SELECT id FROM places WHERE code='CAPERNAUM')
 )
 ON CONFLICT (slug) DO NOTHING;
 
