@@ -2716,7 +2716,7 @@ INSERT INTO saints (
   1593, 3, 25, FALSE,
   1649, 3, 16, TRUE,
   17,
-  NULL,
+  (SELECT id FROM places WHERE code='CONDE_SUR_VIRE'),
   (SELECT id FROM places WHERE code='MIDLAND'),
   (SELECT id FROM places WHERE code='MIDLAND')
 ),
