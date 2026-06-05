@@ -2268,8 +2268,8 @@ INSERT INTO saints (
   'saint-gregory-the-great', 'Saint Gregory the Great',
   540, NULL, NULL, TRUE,
   604, 3, 12, FALSE,
-  6,
-  NULL,
+  7,
+  (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
@@ -2278,16 +2278,18 @@ INSERT INTO saints (
   1910, 8, 26, FALSE,
   1997, 9, 5, FALSE,
   20,
-  NULL,
+  (SELECT id FROM places WHERE code='SKOPJE'),
   (SELECT id FROM places WHERE code='CALCUTTA'),
   (SELECT id FROM places WHERE code='CALCUTTA')
 ),
 (
   'saint-peter-claver', 'Saint Peter Claver',
-  1581, NULL, NULL, TRUE,
+  1580, 6, 26, TRUE,
   1654, 9, 8, FALSE,
-  16,
-  NULL, NULL, NULL
+  17,
+  (SELECT id FROM places WHERE code='VERDU'),
+  (SELECT id FROM places WHERE code='CARTAGENA_COLOMBIA'),
+  (SELECT id FROM places WHERE code='CARTAGENA_COLOMBIA')
 ),
 -- (
 --   'most-holy-name-of-mary', 'The Most Holy Name of Mary',
@@ -2301,8 +2303,8 @@ INSERT INTO saints (
   347, NULL, NULL, TRUE,
   407, 9, 14, FALSE,
   5,
-  NULL,
-  (SELECT id FROM places WHERE code='CONSTANTINOPLE'),
+  (SELECT id FROM places WHERE code='ANTIOCH'),
+  (SELECT id FROM places WHERE code='COMANA_PONTICA'),
   (SELECT id FROM places WHERE code='CONSTANTINOPLE')
 ),
 -- (
@@ -2314,11 +2316,11 @@ INSERT INTO saints (
 -- ),
 (
   'saint-cornelius', 'Saint Cornelius',
-  NULL, NULL, NULL, TRUE,
-  253, NULL, NULL, TRUE,
+  180, NULL, NULL, TRUE,
+  253, 6, NULL, TRUE,
   3,
   NULL,
-  (SELECT id FROM places WHERE code='ROME'),
+  (SELECT id FROM places WHERE code='CIVITAVECCHIA'),
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
@@ -2326,15 +2328,15 @@ INSERT INTO saints (
   200, NULL, NULL, TRUE,
   258, 9, 14, TRUE,
   3,
-  NULL,
+  (SELECT id FROM places WHERE code='CARTHAGE'),
   (SELECT id FROM places WHERE code='CARTHAGE'),
   (SELECT id FROM places WHERE code='CARTHAGE')
 ),
 (
   'saint-robert-bellarmine', 'Saint Robert Bellarmine',
-  1542, NULL, NULL, FALSE,
+  1542, 10, 4, FALSE,
   1621, 9, 17, FALSE,
-  16,
+  17,
   (SELECT id FROM places WHERE code='MONTEPULCIANO'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
@@ -2344,43 +2346,47 @@ INSERT INTO saints (
   1098, NULL, NULL, TRUE,
   1179, 9, 17, FALSE,
   12,
-  (SELECT id FROM places WHERE code='BINGEN'),
+  (SELECT id FROM places WHERE code='BERMERSHEIM_VOR_DER_HOEHE'),
   (SELECT id FROM places WHERE code='BINGEN'),
   (SELECT id FROM places WHERE code='BINGEN')
 ),
 (
   'saint-januarius', 'Saint Januarius',
-  NULL, NULL, NULL, TRUE,
+  232, 4, 21, TRUE,
   305, 9, 19, TRUE,
-  NULL,
-  NULL,
-  (SELECT id FROM places WHERE code='NAPLES'),
-  (SELECT id FROM places WHERE code='NAPLES')
+  4,
+  (SELECT id FROM places WHERE code='BENEVENTO'),  -- birthplace (traditional)
+  (SELECT id FROM places WHERE code='POZZUOLI'),   -- place_of_death (martyred at/near Pozzuoli)
+  (SELECT id FROM places WHERE code='NAPLES')     -- place_of_activity (bishop / patron of Naples)
+
 ),
 (
   'saint-andrew-kim-tae-gon', 'Saint Andrew Kim Tae-gon',
   1821, 8, 21, FALSE,
   1846, 9, 16, FALSE,
   19,
-  (SELECT id FROM places WHERE code='KOREA'),
+  (SELECT id FROM places WHERE code='SOLMOE'),
   (SELECT id FROM places WHERE code='SEOUL'),
   (SELECT id FROM places WHERE code='KOREA')
 ),
 (
   'saint-paul-chong-ha-sang', 'Saint Paul Chong Ha-sang',
-  1794, NULL, NULL, TRUE,
+  1795, NULL, NULL, TRUE,
   1839, 9, 22, FALSE,
   19,
-  (SELECT id FROM places WHERE code='KOREA'),
+  (SELECT id FROM places WHERE code='MAJAE_KOREA'),
   (SELECT id FROM places WHERE code='SEOUL'),
   (SELECT id FROM places WHERE code='KOREA')
 ),
 (
   'saint-matthew', 'Saint Matthew, Apostle and Evangelist',
   NULL, NULL, NULL, TRUE,
-  NULL, 9, 21, TRUE,
+  71, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='GALILEE'),   -- birthplace (regional)
+  (SELECT id FROM places WHERE code='HIERAPOLIS'),-- place_of_death (tradition)
+  (SELECT id FROM places WHERE code='BETHSAIDA') -- place_of_activity (Capernaum area)
+
 ),
 (
   'saint-pius-of-pietrelcina', 'Saint Pius of Pietrelcina',
@@ -2388,46 +2394,51 @@ INSERT INTO saints (
   1968, 9, 23, FALSE,
   20,
   (SELECT id FROM places WHERE code='PIETRELCINA'),
-  (SELECT id FROM places WHERE code='PIETRELCINA'),
-  (SELECT id FROM places WHERE code='PIETRELCINA')
+  (SELECT id FROM places WHERE code='SAN_GIOVANNI_ROTOND'),
+  (SELECT id FROM places WHERE code='SAN_GIOVANNI_ROTOND')
 ),
 (
   'saint-cosmas', 'Saint Cosmas',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  300, NULL, NULL, TRUE,
   3,
-  NULL, NULL, (SELECT id FROM places WHERE code='ANTIOCH')
-),
+  (SELECT id FROM places WHERE code='ARABIA'),
+  (SELECT id FROM places WHERE code='AEGAE_CILICI'),
+  (SELECT id FROM places WHERE code='AEGAE_CILICI')
 (
   'saint-damian', 'Saint Damian',
   NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  300, NULL, NULL, TRUE,
   3,
-  NULL, NULL, (SELECT id FROM places WHERE code='ANTIOCH')
+  (SELECT id FROM places WHERE code='ARABIA'),
+  (SELECT id FROM places WHERE code='AEGAE_CILICI'),
+  (SELECT id FROM places WHERE code='AEGAE_CILICI')
 ),
 (
   'saint-vincent-de-paul', 'Saint Vincent de Paul',
   1581, 4, 24, FALSE,
   1660, 9, 27, FALSE,
   17,
-  NULL, NULL, (SELECT id FROM places WHERE code='PARIS')
+  (SELECT id FROM places WHERE code='SAINT_VINCENT_DE_PAUL'),
+  (SELECT id FROM places WHERE code='PARIS'),
+  (SELECT id FROM places WHERE code='PARIS')
 ),
 (
   'saint-wenceslaus', 'Saint Wenceslaus',
   907, NULL, NULL, TRUE,
-  935, 9, 28, FALSE,
+  935, 9, 28, TRUE,
   10,
-  NULL,
-  (SELECT id FROM places WHERE code='PRAGUE'),
+  (SELECT id FROM places WHERE code='STOCHOV')
+  (SELECT id FROM places WHERE code='STARA_BOLESLAV'),
   (SELECT id FROM places WHERE code='PRAGUE')
 ),
 (
   'saint-lawrence-ruiz-and-companions', 'Saint Lawrence Ruiz and Companions',
-  1600, NULL, NULL, TRUE,
+  1594, 11, 28, TRUE,
   1637, 9, 29, FALSE,
   17,
-  (SELECT id FROM places WHERE code='MANILA'),
-  (SELECT id FROM places WHERE code='JAPAN'),
+  (SELECT id FROM places WHERE code='BINONDO'),
+  (SELECT id FROM places WHERE code='NAGASAKI'),
   (SELECT id FROM places WHERE code='MANILA')
 ),
 -- (
@@ -2443,8 +2454,8 @@ INSERT INTO saints (
   420, 9, 30, TRUE,
   5,
   (SELECT id FROM places WHERE code='STRIDON'),
-  (SELECT id FROM places WHERE code='JERUSALEM'),
-  (SELECT id FROM places WHERE code='JERUSALEM')
+  (SELECT id FROM places WHERE code='BETHLEHEM'),
+  (SELECT id FROM places WHERE code='BETHLEHEM')
 )
 ON CONFLICT (slug) DO NOTHING;
 
