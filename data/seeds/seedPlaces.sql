@@ -769,7 +769,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='STOCHOV'), 'fr', 'Stochov'),
 ((SELECT id FROM places WHERE code='STARA_BOLESLAV'), 'fr', 'Stará Boleslav'),
 ((SELECT id FROM places WHERE code='BINONDO'), 'fr', 'Binondo'),
-((SELECT id FROM places WHERE code='BETHLEHEM'), 'fr', 'Bethlehem'),
+((SELECT id FROM places WHERE code='BETHLEHEM'), 'fr', 'Bethléem'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1027,7 +1027,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='STOCHOV'), 'la', 'Stochov'),
 ((SELECT id FROM places WHERE code='STARA_BOLESLAV'), 'la', 'Stará Boleslav'),
 ((SELECT id FROM places WHERE code='BINONDO'), 'la', 'Binondo'),
-((SELECT id FROM places WHERE code='BETHLEHEM'), 'la', 'Bethlehem'),
+((SELECT id FROM places WHERE code='BETHLEHEM'), 'la', 'Bethleem'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
