@@ -262,7 +262,8 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('DIECIMO', 'IT', 43.9646625, 10.5051602),
 ('OXFORD', 'GB', 51.7520, -1.2577),
 ('BIRMINGHAM', 'GB', 52.4862, -1.8904),
-('SOTTO_IL_MONTE_GIOVANNI_XXIII', 'IT', 45.705556, 9.498333)
+('SOTTO_IL_MONTE_GIOVANNI_XXIII', 'IT', 45.705556, 9.498333),
+('ALBA_DE_TORMES', 'ES', 40.8169, -5.5179),
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -530,6 +531,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='OXFORD'), 'en', 'Oxford'),
 ((SELECT id FROM places WHERE code='BIRMINGHAM'), 'en', 'Birmingham'),
 ((SELECT id FROM places WHERE code='SOTTO_IL_MONTE_GIOVANNI_XXIII'), 'en', 'Sotto il Monte Giovanni XXIII'),
+((SELECT id FROM places WHERE code='ALBA_DE_TORMES'), 'en', 'Alba de Tormes'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -797,6 +799,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='OXFORD'), 'fr', 'Oxford'),
 ((SELECT id FROM places WHERE code='BIRMINGHAM'), 'fr', 'Birmingham'),
 ((SELECT id FROM places WHERE code='SOTTO_IL_MONTE_GIOVANNI_XXIII'), 'fr', 'Sotto il Monte Giovanni XXIII'),
+((SELECT id FROM places WHERE code='ALBA_DE_TORMES'), 'fr', 'Alba de Tormes'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1064,6 +1067,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='OXFORD'), 'la', 'Oxonia'),
 ((SELECT id FROM places WHERE code='BIRMINGHAM'), 'la', 'Birminghamia'),
 ((SELECT id FROM places WHERE code='SOTTO_IL_MONTE_GIOVANNI_XXIII'), 'la', 'Submons (Langobardia)'),
+((SELECT id FROM places WHERE code='ALBA_DE_TORMES'), 'la', 'Alba de Tormes'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;

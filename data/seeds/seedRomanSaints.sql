@@ -2671,7 +2671,7 @@ INSERT INTO saints (
   1582, 10, 4, FALSE,
   16,
   (SELECT id FROM places WHERE code='AVILA'),
-  NULL,
+  (SELECT id FROM places WHERE code='ALBA_DE_TORMES'),
   (SELECT id FROM places WHERE code='AVILA')
 ),
 (
