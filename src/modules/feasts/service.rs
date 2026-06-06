@@ -1,7 +1,10 @@
 use chrono::{Datelike, FixedOffset, Utc};
 use sqlx::PgPool;
 
-use super::{dto::FeastListItem, repo};
+use super::{
+    dto::{FeastListItem, FeastListItemDetailled},
+    repo,
+};
 use crate::{core::error::ApiError, modules::feasts::dto::FeastDetail};
 
 pub async fn list_feasts_for_calendar_with_dates(
@@ -15,7 +18,7 @@ pub async fn feast_the_day(
     pool: &PgPool,
     date: Option<&str>,
     offset: Option<i32>,
-) -> Result<Option<FeastDetail>, ApiError> {
+) -> Result<Option<FeastListItemDetailled>, ApiError> {
     let (month, day) = match date {
         Some(date_str) => parse_mm_dd(date_str)?,
         None => {

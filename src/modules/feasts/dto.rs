@@ -11,6 +11,18 @@ pub struct FeastListItem {
     pub day: Option<i16>,
 }
 
+// Test
+#[derive(FromRow, Debug, Serialize)]
+pub struct FeastListItemDetailled {
+    pub slug: String,
+    pub default_name: String,
+    pub feast_type: String,
+    pub date_kind: Option<String>,
+    pub month: Option<i16>,
+    pub day: Option<i16>,
+    pub saint_default_name: Option<String>,
+}
+
 #[derive(Debug, Serialize, Deserialize)]
 pub struct FeastSaint {
     pub slug: String,

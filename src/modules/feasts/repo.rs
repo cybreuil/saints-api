@@ -35,8 +35,8 @@ pub async fn feast_the_day(
     pool: &PgPool,
     month: u8,
     day: u8,
-) -> Result<Option<dto::FeastListItem>, ApiError> {
-    let row = sqlx::query_as::<_, dto::FeastListItem>(
+) -> Result<Option<dto::FeastListItemDetailled>, ApiError> {
+    let row = sqlx::query_as::<_, dto::FeastListItemDetailled>(
         r#"
         SELECT
             f.slug,
@@ -44,10 +44,15 @@ pub async fn feast_the_day(
             f.feast_type,
             fd.date_kind,
             fd.month,
-            fd.day
+            fd.day,
+            s.default_name AS saint_default_name
         FROM feasts f
         INNER JOIN feast_dates fd
             ON fd.feast_id = f.id
+        LEFT JOIN feast_saints fs
+            ON fs.feast_id = f.id
+        LEFT JOIN saints s
+            ON s.id = fs.saint_id
         WHERE fd.month = $1
           AND fd.day = $2
         LIMIT 1
