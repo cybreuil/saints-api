@@ -10,3 +10,9 @@ pub async fn get_celebrations(pool: web::Data<PgPool>) -> Result<HttpResponse, A
 
     Ok(HttpResponse::Ok().json(result))
 }
+
+pub async fn celebration_of_today(pool: web::Data<PgPool>) -> Result<HttpResponse, ApiError> {
+    let result = service::celebration_of_today(pool.get_ref()).await?;
+
+    Ok(HttpResponse::Ok().json(result))
+}
