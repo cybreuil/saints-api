@@ -299,7 +299,20 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('LUXEUIL', 'FR', 47.8164, 6.3813),
 ('HANOI', 'VN', 21.0345, 105.8505),
 ('BAC_NINH', 'VN', 21.0858, 106.1664),
-('PATRAS', 'GR', 38.25, 21.733333)
+('PATRAS', 'GR', 38.25, 21.733333),
+('SHANGCHUAN_ISLAND', 'CN', 21.665278, 112.795556),
+('GOA', 'IN', 15.5, 73.83),
+('MAR_SABA', 'PS', 31.705, 35.331111),
+('PATARA', 'TR', 36.2607, 29.3143),
+('AUGUSTA_TREVERORUM', 'DE', 49.7597, 6.644),
+('CUAUTITLAN', 'MX', 19.683333, -99.183333),
+('MEXICO_CITY', 'MX', 19.433333, -99.133333),
+('FONTIVEROS', 'ES', 40.9295, -4.9646),
+('UBEDA', 'ES', 38.014122, -3.372447),
+('FREIBURG_IM_BREISGAU', 'DE', 47.995, 7.85),
+('NIJMEGEN', 'NL', 51.8475, 5.8625),
+('VIENNA', 'AT', 48.2083, 16.3725),
+('KETY', 'PL', 49.9, 19.216667)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -603,6 +616,19 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='HANOI'), 'en', 'Hanoi'),
 ((SELECT id FROM places WHERE code='BAC_NINH'), 'en', 'Bắc Ninh Province'),
 ((SELECT id FROM places WHERE code='PATRAS'), 'en', 'Patras'),
+((SELECT id FROM places WHERE code='SHANGCHUAN_ISLAND'), 'en', 'Shangchuan Island'),
+((SELECT id FROM places WHERE code='GOA'), 'en', 'Goa'),
+((SELECT id FROM places WHERE code='MAR_SABA'), 'en', 'Mar Saba'),
+((SELECT id FROM places WHERE code='PATARA'), 'en', 'Patara'),
+((SELECT id FROM places WHERE code='AUGUSTA_TREVERORUM'), 'en', 'Augusta Treverorum'),
+((SELECT id FROM places WHERE code='CUAUTITLAN'), 'en', 'Cuautitlán'),
+((SELECT id FROM places WHERE code='MEXICO_CITY'), 'en', 'Mexico City'),
+((SELECT id FROM places WHERE code='FONTIVEROS'), 'en', 'Fontiveros'),
+((SELECT id FROM places WHERE code='UBEDA'), 'en', 'Úbeda'),
+((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'en', 'Freiburg im Breisgau'),
+((SELECT id FROM places WHERE code='NIJMEGEN'), 'en', 'Nijmegen'),
+((SELECT id FROM places WHERE code='VIENNA'), 'en', 'Vienna'),
+((SELECT id FROM places WHERE code='KETY'), 'en', 'Kęty'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -906,6 +932,19 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='HANOI'), 'fr', 'Hanoï'),
 ((SELECT id FROM places WHERE code='BAC_NINH'), 'fr', 'Province de Bắc Ninh'),
 ((SELECT id FROM places WHERE code='PATRAS'), 'fr', 'Patras'),
+((SELECT id FROM places WHERE code='SHANGCHUAN_ISLAND'), 'fr', 'Île de Shangchuan'),
+((SELECT id FROM places WHERE code='GOA'), 'fr', 'Goa'),
+((SELECT id FROM places WHERE code='MAR_SABA'), 'fr', 'Monastère de Mar Saba'),
+((SELECT id FROM places WHERE code='PATARA'), 'fr', 'Patara'),
+((SELECT id FROM places WHERE code='AUGUSTA_TREVERORUM'), 'fr', 'Augusta Treverorum'),
+((SELECT id FROM places WHERE code='CUAUTITLAN'), 'fr', 'Cuautitlán'),
+((SELECT id FROM places WHERE code='MEXICO_CITY'), 'fr', 'Mexico'),
+((SELECT id FROM places WHERE code='FONTIVEROS'), 'fr', 'Fontiveros'),
+((SELECT id FROM places WHERE code='UBEDA'), 'fr', 'Úbeda'),
+((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'fr', 'Fribourg-en-Brisgau'),
+((SELECT id FROM places WHERE code='NIJMEGEN'), 'fr', 'Nimègue'),
+((SELECT id FROM places WHERE code='VIENNA'), 'fr', 'Vienne'),
+((SELECT id FROM places WHERE code='KETY'), 'fr', 'Kenty'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1209,6 +1248,19 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='HANOI'), 'la', 'Hanoi'),
 ((SELECT id FROM places WHERE code='BAC_NINH'), 'la', 'Bắc Ninh'),
 ((SELECT id FROM places WHERE code='PATRAS'), 'la', 'Patrae'),
+((SELECT id FROM places WHERE code='SHANGCHUAN_ISLAND'), 'la', 'Shangchuan Island'),
+((SELECT id FROM places WHERE code='GOA'), 'la', 'Goa'),
+((SELECT id FROM places WHERE code='MAR_SABA'), 'la', 'Mar Saba'),
+((SELECT id FROM places WHERE code='PATARA'), 'la', 'Patara'),
+((SELECT id FROM places WHERE code='AUGUSTA_TREVERORUM'), 'la', 'Augusta Treverorum'),
+((SELECT id FROM places WHERE code='CUAUTITLAN'), 'la', 'Cuautitlán'),
+((SELECT id FROM places WHERE code='MEXICO_CITY'), 'la', 'Mexicopolis'),
+((SELECT id FROM places WHERE code='FONTIVEROS'), 'la', 'Fontiveros'),
+((SELECT id FROM places WHERE code='UBEDA'), 'la', 'Úbeda'),
+((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'la', 'Friburgum Brisgoviae'),
+((SELECT id FROM places WHERE code='NIJMEGEN'), 'la', 'Noviomagus Batavorum'),
+((SELECT id FROM places WHERE code='VIENNA'), 'la', 'Vindobona'),
+((SELECT id FROM places WHERE code='KETY'), 'la', 'Kęty'),
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;

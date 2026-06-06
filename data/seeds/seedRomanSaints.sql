@@ -3131,8 +3131,8 @@ INSERT INTO saints (
   1552, 12, 3, FALSE,
   16,
   (SELECT id FROM places WHERE code='XAVIER'),
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='SHANGCHUAN_ISLAND'),
+  (SELECT id FROM places WHERE code='GOA')
 ),
 (
   'saint-john-damascene', 'Saint John Damascene',
@@ -3140,15 +3140,15 @@ INSERT INTO saints (
   749, 12, 4, TRUE,
   8,
   (SELECT id FROM places WHERE code='DAMASCUS'),
-  (SELECT id FROM places WHERE code='JERUSALEM'),
-  NULL
+  (SELECT id FROM places WHERE code='MAR_SABA'),
+  (SELECT id FROM places WHERE code='MAR_SABA')
 ),
 (
   'saint-nicholas', 'Saint Nicholas, Bishop',
-  270, NULL, NULL, TRUE,
+  270, 3, 15, TRUE,
   343, 12, 6, TRUE,
   4,
-  NULL,
+  (SELECT id FROM places WHERE code='PATARA'),
   (SELECT id FROM places WHERE code='MYRA'),
   (SELECT id FROM places WHERE code='MYRA')
 ),
@@ -3157,7 +3157,7 @@ INSERT INTO saints (
   339, NULL, NULL, TRUE,
   397, 4, 4, FALSE,
   4,
-  NULL,
+  (SELECT id FROM places WHERE code='AUGUSTA_TREVERORUM'),
   (SELECT id FROM places WHERE code='MILAN'),
   (SELECT id FROM places WHERE code='MILAN')
 ),
@@ -3166,14 +3166,17 @@ INSERT INTO saints (
   1474, NULL, NULL, TRUE,
   1548, 5, 30, FALSE,
   16,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='CUAUHTITLAN'),
+  (SELECT id FROM places WHERE code='MEXICO_CITY'),
+  (SELECT id FROM places WHERE code='GUADALUPE_MX')
+
 ),
 (
   'saint-damasus-i', 'Saint Damasus I, Pope',
   305, NULL, NULL, TRUE,
   384, 12, 11, TRUE,
   4,
-  NULL,
+  (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='ROME')
 ),
@@ -3182,7 +3185,7 @@ INSERT INTO saints (
   283, NULL, NULL, TRUE,
   304, NULL, NULL, TRUE,
   4,
-  NULL,
+  (SELECT id FROM places WHERE code='SIRACUSA'),
   (SELECT id FROM places WHERE code='SIRACUSA'),
   (SELECT id FROM places WHERE code='SIRACUSA')
 ),
@@ -3191,8 +3194,8 @@ INSERT INTO saints (
   1542, 6, 24, FALSE,
   1591, 12, 14, FALSE,
   16,
-  (SELECT id FROM places WHERE code='AVILA'),
-  NULL,
+  (SELECT id FROM places WHERE code='FONTIVEROS'),
+  (SELECT id FROM places WHERE code='UBEDA'),
   (SELECT id FROM places WHERE code='AVILA')
 ),
 (
@@ -3200,42 +3203,52 @@ INSERT INTO saints (
   1521, 5, 8, FALSE,
   1597, 12, 21, FALSE,
   16,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='NIJMEGEN'),
+  (SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'),
+  (SELECT id FROM places WHERE code='VIENNA')
 ),
 (
   'saint-john-of-kanty', 'Saint John of Kanty',
   1390, 6, 23, TRUE,
   1473, 12, 24, FALSE,
   15,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='KETY'),
+  (SELECT id FROM places WHERE code='KRAKOW'),
+  (SELECT id FROM places WHERE code='KRAKOW')
 ),
 (
   'saint-stephen-martyr', 'Saint Stephen, the First Martyr',
-  NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  5, NULL, NULL, TRUE,
+  34, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  NULL,
+  (SELECT id FROM places WHERE code='JERUSALEM'),
+  (SELECT id FROM places WHERE code='JERUSALEM')
 ),
 (
   'saint-john', 'Saint John, Apostle and Evangelist',
-  NULL, NULL, NULL, TRUE,
-  NULL, NULL, NULL, TRUE,
+  6, NULL, NULL, TRUE,
+  100, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='BETHSAIDA'),
+  (SELECT id FROM places WHERE code='EPHESUS'),
+  (SELECT id FROM places WHERE code='EPHESUS')
 ),
 (
   'holy-innocents', 'The Holy Innocents, Martyrs',
   NULL, NULL, NULL, TRUE,
-  NULL, 12, 28, TRUE,
+  NULL, NULL, NULL, TRUE,
   1,
-  NULL, NULL, NULL
+  (SELECT id FROM places WHERE code='BETHLEHEM'),
+  (SELECT id FROM places WHERE code='BETHLEHEM'),
+  (SELECT id FROM places WHERE code='BETHLEHEM')
 ),
 (
   'saint-thomas-becket', 'Saint Thomas Becket',
-  1118, NULL, NULL, TRUE,
+  1118, 12, 21, TRUE,
   1170, 12, 29, FALSE,
   12,
-  NULL,
+  (SELECT id FROM places WHERE code='LONDON'),
   (SELECT id FROM places WHERE code='CANTERBURY'),
   (SELECT id FROM places WHERE code='CANTERBURY')
 ),
