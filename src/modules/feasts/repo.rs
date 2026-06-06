@@ -45,7 +45,16 @@ pub async fn feast_the_day(
             fd.date_kind,
             fd.month,
             fd.day,
-            s.default_name AS saint_default_name
+            s.default_name AS saint_default_name,
+            s.birth_year AS saint_birth_year,
+            s.birth_month AS saint_birth_month,
+            s.birth_day AS saint_birth_day,
+            s.death_year AS saint_death_year,
+            s.death_month AS saint_death_month,
+            s.death_day AS saint_death_day,
+            s.place_of_birth_id AS saint_place_of_birth,
+            s.place_of_death_id AS saint_place_of_death,
+            s.place_of_activity_id AS saint_place_of_activity
         FROM feasts f
         INNER JOIN feast_dates fd
             ON fd.feast_id = f.id

@@ -21,6 +21,15 @@ pub struct FeastListItemDetailled {
     pub month: Option<i16>,
     pub day: Option<i16>,
     pub saint_default_name: Option<String>,
+    pub saint_birth_year: Option<i16>,
+    pub saint_birth_month: Option<i16>,
+    pub saint_birth_day: Option<i16>,
+    pub saint_death_year: Option<i16>,
+    pub saint_death_month: Option<i16>,
+    pub saint_death_day: Option<i16>,
+    pub saint_place_of_birth_id: Option<i16>,
+    pub saint_place_of_death_id: Option<i16>,
+    pub saint_place_of_activity_id: Option<i16>,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
