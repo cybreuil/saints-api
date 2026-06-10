@@ -31,7 +31,7 @@ done
 : "${SRC:?--src is required}"
 : "${OUT:?--out is required}"
 SIZES="${SIZES:-1600,1024,640,320}"
-QUALITY="${QUALITY:-80}"
+QUALITY="${QUALITY:-95}"
 MINKB="${MINKB:-0}"
 DRY="${DRY:-true}"
 FORCE="${FORCE:-false}"
