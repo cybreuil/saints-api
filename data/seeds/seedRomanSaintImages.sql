@@ -72,7 +72,7 @@ JOIN (
 
 -- Saint Hilary of Poitiers
 ('saint-hilary-of-poitiers', '/saints/saint-hilary-of-poitiers_cremiere.webp', 1, TRUE, 'subject'),
-('saint-hilary-of-poitiers', '/saints/saint-hilary-of-poitiers.png', 2, FALSE, 'subject'),
+('saint-hilary-of-poitiers', '/saints/saint-hilary-of-poitiers.webp', 2, FALSE, 'subject'),
 
 -- Saint Anthony, Abbot
 ('saint-anthony-abbot', '/saints/saint-anthony-abbot_zurbaran.webp', 1, TRUE, 'subject'),
@@ -143,7 +143,7 @@ JOIN (
 ('saint-thomas-aquinas', '/saints/saint-thomas-aquinas_zurbaran.webp', 4, FALSE, 'subject'),
 
 -- Saint John Bosco
-('saint-john-bosco', '/saints/saint-john-bosco_painting-from-picture.png', 1, TRUE, 'subject'),
+('saint-john-bosco', '/saints/saint-john-bosco_painting-from-picture.webp', 1, TRUE, 'subject'),
 ('saint-john-bosco', '/saints/saint-john-bosco_picture.webp', 2, FALSE, 'subject'),
 
 -- =========================
@@ -162,7 +162,7 @@ JOIN (
 ('saint-agatha', '/saints/saint-agatha_tiepolo.webp', 2, FALSE, 'subject'),
 
 -- Saint Paul Miki
-('saint-paul-miki', '/saints/saint-paul-miki_tanzio.png', 1, TRUE, 'subject'),
+('saint-paul-miki', '/saints/saint-paul-miki_tanzio.webp', 1, TRUE, 'subject'),
 ('saint-paul-miki', '/saints/saint-paul-miki.webp', 2, FALSE, 'subject'),
 
 -- Saint Jerome Emiliani
@@ -202,7 +202,7 @@ JOIN (
 -- Saint Polycarp
 ('saint-polycarp', '/saints/saint-polycarp.webp', 1, TRUE, 'subject'),
 ('saint-polycarp', '/saints/saint-polycarp_2.webp', 2, FALSE, 'subject'),
-('saint-polycarp', '/saints/saint-polycarp_3.png', 3, FALSE, 'subject'),
+('saint-polycarp', '/saints/saint-polycarp_3.webp', 3, FALSE, 'subject'),
 
 -- Saint Gregory of Narek
 ('saint-gregory-of-narek', '/saints/saint-gregory-of-narek_minin.webp', 1, TRUE, 'subject'),
@@ -251,7 +251,7 @@ JOIN (
 -- Saint Cyril of Jerusalem
 ('saint-cyril-of-jerusalem', '/saints/saint-cyril-of-jerusalem_bartolozzi.webp', 1, TRUE, 'subject'),
 ('saint-cyril-of-jerusalem', '/saints/saint-cyril-of-jerusalem.webp', 2, FALSE, 'subject'),
-('saint-cyril-of-jerusalem', '/saints/saint-cyril-of-jerusalem_2.png', 3, FALSE, 'subject'),
+('saint-cyril-of-jerusalem', '/saints/saint-cyril-of-jerusalem_2.webp', 3, FALSE, 'subject'),
 
 -- Saint Turibius of Mogrovejo
 ('saint-turibius-of-mogrovejo', '/saints/saint-turibius-of-mogrovejo.webp', 1, TRUE, 'subject'),
@@ -289,7 +289,7 @@ JOIN (
 -- Saint Martin I
 ('saint-martin-i', '/saints/saint-martin-i_montor.webp', 1, TRUE, 'subject'),
 ('saint-martin-i', '/saints/saint-martin-i_stained-glass.webp', 2, FALSE, 'subject'),
-('saint-martin-i', '/saints/saint-martin-i.png', 3, FALSE, 'subject'),
+('saint-martin-i', '/saints/saint-martin-i.webp', 3, FALSE, 'subject'),
 
 -- Saint Anselm
 ('saint-anselm', '/saints/saint-anselm_glover.webp', 1, TRUE, 'subject'),
@@ -387,7 +387,7 @@ JOIN (
 ('saint-john-i', '/saints/saint-john-i.webp', 2, FALSE, 'subject'),
 
 -- Saint Bernardine of Siena
-('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena_bellini.png', 1, TRUE, 'subject'),
+('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena_bellini.webp', 1, TRUE, 'subject'),
 ('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena.webp', 2, FALSE, 'subject'),
 ('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena_greco.webp', 3, FALSE, 'subject'),
 ('saint-bernardine-of-siena', '/saints/saint-bernardine-of-siena_brescia.webp', 4, FALSE, 'subject'),
@@ -398,7 +398,7 @@ JOIN (
 ('saint-christopher-magallanes', '/saints/saint-christopher-magallanes_picture.webp', 3, FALSE, 'subject'),
 
 -- Saint Rita of Cascia
-('saint-rita-of-cascia', '/saints/saint-rita-of-cascia.png', 1, TRUE, 'subject'),
+('saint-rita-of-cascia', '/saints/saint-rita-of-cascia.webp', 1, TRUE, 'subject'),
 ('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_2.webp', 2, FALSE, 'subject'),
 ('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_brandi.webp', 3, FALSE, 'subject'),
 ('saint-rita-of-cascia', '/saints/saint-rita-of-cascia_poussin.webp', 4, FALSE, 'subject'),
@@ -411,10 +411,10 @@ JOIN (
 
 -- Saint Gregory VII
 ('saint-gregory-vii', '/saints/saint-gregory-vii_knille.webp', 1, TRUE, 'subject'),
-('saint-gregory-vii', '/saints/saint-gregory-vii.png', 2, FALSE, 'subject'),
+('saint-gregory-vii', '/saints/saint-gregory-vii.webp', 2, FALSE, 'subject'),
 ('saint-gregory-vii', '/saints/saint-gregory-vii_scarpelli.webp', 3, FALSE, 'subject'),
 ('saint-gregory-vii', '/saints/saint-gregory-vii_2.webp', 4, FALSE, 'subject'),
-('saint-gregory-vii', '/saints/saint-gregory-vii_3.png', 5, FALSE, 'subject'),
+('saint-gregory-vii', '/saints/saint-gregory-vii_3.webp', 5, FALSE, 'subject'),
 ('saint-gregory-vii', '/saints/saint-gregory-vii_4.webp', 6, FALSE, 'subject'),
 
 -- Saint Mary Magdalene de’ Pazzi
@@ -615,7 +615,7 @@ JOIN (
 ('saint-apollinaris', '/saints/saint-apollinaris_mosaic.webp', 2, FALSE, 'subject'),
 
 -- Saint Lawrence of Brindisi
-('saint-lawrence-of-brindisi', '/saints/saint-lawrence-of-brindisi.png', 1, TRUE, 'subject'),
+('saint-lawrence-of-brindisi', '/saints/saint-lawrence-of-brindisi.webp', 1, TRUE, 'subject'),
 ('saint-lawrence-of-brindisi', '/saints/saint-lawrence-of-brindisi_2.webp', 2, FALSE, 'subject'),
 ('saint-lawrence-of-brindisi', '/saints/saint-lawrence-of-brindisi_3.webp', 3, FALSE, 'subject'),
 
@@ -722,7 +722,7 @@ JOIN (
 
 -- Saint John Vianney
 ('saint-john-vianney', '/saints/saint-john-vianney_briggs.webp', 1, TRUE, 'subject'),
-('saint-john-vianney', '/saints/saint-john-vianney_desvallieres.png', 2, FALSE, 'subject'),
+('saint-john-vianney', '/saints/saint-john-vianney_desvallieres.webp', 2, FALSE, 'subject'),
 ('saint-john-vianney', '/saints/saint-john-vianney.webp', 3, FALSE, 'subject'),
 ('saint-john-vianney', '/saints/saint-john-vianney_2.webp', 4, FALSE, 'subject'),
 ('saint-john-vianney', '/saints/saint-john-vianney_borel.webp', 5, FALSE, 'subject'),
@@ -783,7 +783,7 @@ JOIN (
 ('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor.webp', 1, TRUE, 'subject'),
 ('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_icon.webp', 2, FALSE, 'subject'),
 ('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_icon_2.webp', 3, FALSE, 'subject'),
-('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_2.png', 4, FALSE, 'subject'),
+('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_2.webp', 4, FALSE, 'subject'),
 
 -- Saint Maximilien Kolbe
 ('saint-maximilien-kolbe', '/saints/saint-maximilien-kolbe_pawlowski.webp', 1, TRUE, 'subject'),
@@ -902,7 +902,7 @@ JOIN (
 
 -- Saint Robert Bellarmine
 ('saint-robert-bellarmine', '/saints/saint-robert-bellarmine.webp', 1, TRUE, 'subject'),
-('saint-robert-bellarmine', '/saints/saint-robert-bellarmine_2.png', 2, FALSE, 'subject'),
+('saint-robert-bellarmine', '/saints/saint-robert-bellarmine_2.webp', 2, FALSE, 'subject'),
 
 -- Saint Hildegard of Bingen
 ('saint-hildegard-of-bingen', '/saints/saint-hildegard-of-bingen.webp', 1, TRUE, 'subject'),
@@ -959,7 +959,7 @@ JOIN (
 -- Saint Vincent de Paul
 ('saint-vincent-de-paul', '/saints/saint-vincent-de-paul_gerome.webp', 1, TRUE, 'subject'),
 ('saint-vincent-de-paul', '/saints/saint-vincent-de-paul_delaroche.webp', 2, FALSE, 'subject'),
-('saint-vincent-de-paul', '/saints/saint-vincent-de-paul_tours.png', 3, FALSE, 'subject'),
+('saint-vincent-de-paul', '/saints/saint-vincent-de-paul_tours.webp', 3, FALSE, 'subject'),
 
 -- Saint Wenceslaus
 ('saint-wenceslaus', '/saints/saint-wenceslaus_caroselli.webp', 1, TRUE, 'subject'),
@@ -1082,7 +1082,7 @@ JOIN (
 -- Saint John de Brébeuf
 ('saint-john-de-brebeuf', '/saints/saint-john-de-brebeuf.webp', 1, TRUE, 'subject'),
 ('saint-john-de-brebeuf', '/saints/saint-john-de-brebeuf_thwaites.webp', 2, FALSE, 'subject'),
-('saint-john-de-brebeuf', '/saints/saint-john-de-brebeuf-&-companions.png', 3, FALSE, 'subject'),
+('saint-john-de-brebeuf', '/saints/saint-john-de-brebeuf-&-companions.webp', 3, FALSE, 'subject'),
 
 -- Saint Paul of the Cross
 ('saint-paul-of-the-cross', '/saints/saint-paul-of-the-cross.webp', 1, TRUE, 'subject'),
@@ -1297,7 +1297,7 @@ JOIN (
 ('saint-stephen-martyr', '/saints/saint-stephen-martyr_crivelli.webp', 1, TRUE, 'subject'),
 ('saint-stephen-martyr', '/saints/saint-stephen-martyr_champaigne_martyr.webp', 2, FALSE, 'subject'),
 ('saint-stephen-martyr', '/saints/saint-stephen-martyr_rubens.webp', 3, FALSE, 'subject'),
-('saint-stephen-martyr', '/saints/saint-stephen-martyr_damaskinos.png', 4, FALSE, 'subject'),
+('saint-stephen-martyr', '/saints/saint-stephen-martyr_damaskinos.webp', 4, FALSE, 'subject'),
 ('saint-stephen-martyr', '/saints/saint-stephen-martyr_millais.webp', 5, FALSE, 'subject'),
 
 -- Saint John, Apostle and Evangelist
