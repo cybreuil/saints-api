@@ -39,7 +39,7 @@ pub async fn list_saints_complete(
         s.death_year,
         s.century,
         st.name,
-        img.image_url AS image_url_principal
+        img.image_url
     FROM saints s
     LEFT JOIN saint_translations st
         ON st.saint_id = s.id
@@ -48,8 +48,8 @@ pub async fn list_saints_complete(
         SELECT i.image_url
         FROM saint_images si
         JOIN images i ON i.id = si.image_id
-        WHERE si.saint_id = s.id AND si.is_primary = true
-        ORDER BY si.sort_order ASC
+        WHERE si.saint_id = s.id
+        ORDER BY si.is_primary DESC, si.sort_order ASC
         LIMIT 1
     ) img ON TRUE
     ORDER BY s.default_name ASC

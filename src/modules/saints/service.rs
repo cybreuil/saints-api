@@ -1,13 +1,41 @@
 use sqlx::PgPool;
 
 use super::{
-    dto::{SaintListCompleteResponse, SaintListItem, SaintListResponse},
+    dto::{SaintListItem, SaintListItemComplete, SaintListResponse},
     repo,
 };
 use crate::{
-    core::{error::ApiError, pagination::Pagination},
+    core::{
+        error::ApiError,
+        pagination::{Paginated, Pagination},
+    },
     modules::saints::dto::SaintDetail,
 };
+
+const DEFAULT_LOCALE: &str = "en";
+
+// Utility fonctions
+// Resolve the locale from the language code, validating it as a primary language code
+fn resolve_locale(language_code: &str) -> Result<&str, ApiError> {
+    if language_code.is_empty() {
+        return Ok(DEFAULT_LOCALE);
+    }
+    let primary = language_code.split('-').next().unwrap_or("");
+    if primary.len() == 2 && primary.chars().all(|c| c.is_ascii_alphabetic()) {
+        Ok(language_code)
+    } else {
+        Err(ApiError::BadRequest("Invalid language code".to_string()))
+    }
+}
+
+// Calculate total pages based on total items and per-page limit
+fn total_pages(total: i32, per_page: i32) -> i32 {
+    if total == 0 {
+        0
+    } else {
+        (total + per_page - 1) / per_page
+    }
+}
 
 pub async fn list_saints(
     pool: &PgPool,
@@ -55,43 +83,26 @@ pub async fn list_saints_complete(
     page: i32,
     per_page: i32,
     language_code: &str,
-) -> Result<SaintListCompleteResponse, ApiError> {
+) -> Result<Paginated<SaintListItemComplete>, ApiError> {
+    // If lang is invalid, we don't go for db
+    let lang = resolve_locale(language_code)?;
+
     let p = Pagination::new(Some(page), Some(per_page));
-
     let total = repo::count_saints(pool).await?;
-    let total_pages = (total as f32 / p.per_page as f32).ceil() as i32;
 
-    // Check if requested page is beyond total pages - 422
+    if total == 0 {
+        return Ok(Paginated::empty(&p));
+    }
     if p.beyond_total(total) {
         return Err(ApiError::UnprocessableEntity(format!(
             "Page {} is out of range. Total pages: {}",
-            page, total_pages
+            p.page,
+            p.total_pages(total)
         )));
     }
 
-    fn valid_lang_code(s: &str) -> bool {
-        let primary = s.split('-').next().unwrap_or("");
-        primary.len() == 2 && primary.chars().all(|c| c.is_ascii_alphabetic())
-    }
-
-    let lang = if language_code.is_empty() {
-        "en" // fallback
-    } else if valid_lang_code(language_code) {
-        language_code
-    } else {
-        return Err(ApiError::BadRequest("Invalid language code".to_string()));
-    };
-
-    // Fetch
     let data = repo::list_saints_complete(pool, p.per_page, p.offset, lang).await?;
-
-    Ok(SaintListCompleteResponse {
-        page: p.page,
-        per_page: p.per_page,
-        total,
-        total_pages,
-        data,
-    })
+    Ok(Paginated::new(&p, total, data))
 }
 
 pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiError> {
