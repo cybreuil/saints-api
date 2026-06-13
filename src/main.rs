@@ -3,7 +3,7 @@ mod middleware;
 mod modules;
 
 use actix_web::{middleware::Logger, web, App, HttpServer, ResponseError};
-use core::{error::ApiError, router::router};
+use core::{error, router::router};
 use dotenv::dotenv;
 use middleware::cors::cors;
 // use middleware::rate_limiter::RateLimiter;
@@ -34,13 +34,13 @@ async fn main() -> std::io::Result<()> {
             // .wrap(RateLimiter::new(60, Duration::from_secs(60)))
             .app_data(pool_data.clone())
             .app_data(cfg_data.clone())
-            .app_data(web::JsonConfig::default().error_handler(|err, _req| {
-                let response = actix_web::HttpResponse::BadRequest()
-                    .json(serde_json::json!({ "error": err.to_string() }));
-                actix_web::error::InternalError::from_response(err, response).into()
-            }))
+            .app_data(error::json_config())
+            .app_data(error::query_config())
+            .app_data(error::path_config())
             .service(router())
-            .default_service(web::route().to(|| async { ApiError::NotFound.error_response() }))
+            .default_service(
+                web::route().to(|| async { error::ApiError::NotFound.error_response() }),
+            )
     })
     .bind((cfg.bind_address, cfg.port))?
     .run()
