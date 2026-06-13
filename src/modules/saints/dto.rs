@@ -48,9 +48,44 @@ pub struct SaintDetail {
     pub slug: String,
     pub default_name: String,
     pub birth_year: Option<i16>,
+    pub birth_month: Option<i16>,
+    pub birth_day: Option<i16>,
+    pub birth_is_approximate: Option<bool>,
     pub death_year: Option<i16>,
+    pub death_month: Option<i16>,
+    pub death_day: Option<i16>,
+    pub death_is_approximate: Option<bool>,
+    pub century: Option<i16>,
     pub short_description: Option<String>,
     pub full_biography: Option<String>,
+}
+
+// One image as exposed in the saint detail response.
+// Override columns from saint_images take precedence over the image defaults.
+#[derive(Debug, Serialize, FromRow)]
+pub struct SaintImage {
+    pub id: i32,
+    pub image_url: String,
+    pub title: String,
+    pub image_type: Option<String>,
+    pub alt_text: Option<String>, // COALESCE(si.alt_text_override, i.alt_text)
+    pub caption: Option<String>,  // COALESCE(si.caption_override, i.caption)
+    pub creator: Option<String>,
+    pub date_label: Option<String>,
+    pub repository: Option<String>,
+    pub credit: Option<String>,
+    pub license: Option<String>,
+    pub source_url: Option<String>,
+    pub sort_order: i16,
+    pub is_primary: bool,
+}
+
+// Final response: scalar saint fields (flattened) + the images array.
+#[derive(Debug, Serialize)]
+pub struct SaintDetailResponse {
+    #[serde(flatten)]
+    pub saint: SaintDetail,
+    pub images: Vec<SaintImage>,
 }
 
 #[derive(Debug, Deserialize)]

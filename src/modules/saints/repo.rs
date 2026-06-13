@@ -1,6 +1,6 @@
 use sqlx::PgPool;
 
-use super::dto::{SaintDetail, SaintListItem, SaintListItemComplete};
+use super::dto::{SaintDetail, SaintImage, SaintListItem, SaintListItemComplete};
 
 use crate::core::error::ApiError;
 
@@ -92,10 +92,13 @@ pub async fn get_saint_by_slug(
         st.name,
         st.short_description,
         st.full_biography
+        si.image_url
     FROM saints as s
     LEFT JOIN saint_translations st
     	ON st.saint_id = s.id
      	AND st.locale_code = $1
+    LEFT JOIN saint_images si
+    	ON si.saint_id = s.id
     WHERE s.slug = $2
 	"#,
     )
@@ -105,6 +108,38 @@ pub async fn get_saint_by_slug(
     .await?;
 
     Ok(row)
+}
+
+pub async fn get_saint_images(pool: &PgPool, slug: &str) -> Result<Vec<SaintImage>, ApiError> {
+    let rows = sqlx::query_as::<_, SaintImage>(
+        r#"
+    SELECT
+        i.id,
+        i.image_url,
+        i.title,
+        i.image_type,
+        COALESCE(si.alt_text_override, i.alt_text) AS alt_text,
+        COALESCE(si.caption_override, i.caption)   AS caption,
+        i.creator,
+        i.date_label,
+        i.repository,
+        i.credit,
+        i.license,
+        i.source_url,
+        si.sort_order,
+        si.is_primary
+    FROM saint_images si
+    JOIN images i ON i.id = si.image_id
+    JOIN saints s ON s.id = si.saint_id
+    WHERE s.slug = $1
+    ORDER BY si.is_primary DESC, si.sort_order ASC
+    "#,
+    )
+    .bind(slug)
+    .fetch_all(pool)
+    .await?;
+
+    Ok(rows)
 }
 
 pub async fn count_saints(pool: &PgPool) -> Result<i32, ApiError> {

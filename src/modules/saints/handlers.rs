@@ -30,7 +30,7 @@ pub async fn list_saints_complete(
         pool.get_ref(),
         query.page.unwrap_or(1),
         query.per_page.unwrap_or(20),
-        query.language_code.as_deref().unwrap_or("en"),
+        query.language_code.as_deref(),
     )
     .await?;
 
@@ -46,15 +46,15 @@ pub async fn list_all_saints(pool: web::Data<PgPool>) -> Result<HttpResponse, Ap
 pub async fn get_saint_by_slug(
     pool: web::Data<PgPool>,
     path: web::Path<String>,
-    query: Option<web::Query<dto::LangQuery>>,
+    query: web::Query<dto::LangQuery>,
 ) -> Result<HttpResponse, ApiError> {
     let slug = path.into_inner();
-    let language_code: &str = query
-        .as_ref() // Option<&web::Query<..>>
-        .and_then(|q| q.language_code.as_deref()) // Option<&str>
-        .unwrap_or("en");
-
-    let result = service::get_saint_by_slug(pool.get_ref(), &slug, &language_code).await?;
+    let result = service::get_saint_by_slug(
+        pool.get_ref(),
+        &slug,
+        query.language_code.as_deref(), // Option<&str>
+    )
+    .await?;
 
     Ok(HttpResponse::Ok().json(result))
 }
