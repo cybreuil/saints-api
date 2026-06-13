@@ -1,32 +1,16 @@
 use sqlx::PgPool;
 
 use super::{
-    dto::{SaintListItem, SaintListItemComplete, SaintListResponse},
+    dto::{
+        SaintDetail, SaintDetailResponse, SaintListItem, SaintListItemComplete, SaintListResponse,
+    },
     repo,
 };
-use crate::{
-    core::{
-        error::ApiError,
-        pagination::{Paginated, Pagination},
-    },
-    modules::saints::dto::SaintDetail,
+use crate::core::{
+    error::ApiError,
+    pagination::{Paginated, Pagination},
+    validation,
 };
-
-const DEFAULT_LOCALE: &str = "en";
-
-// Utility fonctions
-// Resolve the locale from the language code, validating it as a primary language code
-fn resolve_locale(language_code: &str) -> Result<&str, ApiError> {
-    if language_code.is_empty() {
-        return Ok(DEFAULT_LOCALE);
-    }
-    let primary = language_code.split('-').next().unwrap_or("");
-    if primary.len() == 2 && primary.chars().all(|c| c.is_ascii_alphabetic()) {
-        Ok(language_code)
-    } else {
-        Err(ApiError::BadRequest("Invalid language code".to_string()))
-    }
-}
 
 // Calculate total pages based on total items and per-page limit
 fn total_pages(total: i32, per_page: i32) -> i32 {
@@ -82,10 +66,10 @@ pub async fn list_saints_complete(
     pool: &PgPool,
     page: i32,
     per_page: i32,
-    language_code: &str,
+    language_code: Option<&str>,
 ) -> Result<Paginated<SaintListItemComplete>, ApiError> {
     // If lang is invalid, we don't go for db
-    let lang = resolve_locale(language_code)?;
+    let lang = validation::resolve_locale(language_code)?;
 
     let p = Pagination::new(Some(page), Some(per_page));
     let total = repo::count_saints(pool).await?;
@@ -112,22 +96,18 @@ pub async fn list_all_saints(pool: &PgPool) -> Result<Vec<SaintListItem>, ApiErr
 pub async fn get_saint_by_slug(
     pool: &PgPool,
     slug: &str,
-    language_code: &str,
-) -> Result<SaintDetail, ApiError> {
-    fn valid_lang_code(s: &str) -> bool {
-        let primary = s.split('-').next().unwrap_or("");
-        primary.len() == 2 && primary.chars().all(|c| c.is_ascii_alphabetic())
-    }
+    language_code: Option<&str>,
+) -> Result<SaintDetailResponse, ApiError> {
+    let slug = validation::resolve_slug(slug)?;
+    let lang = validation::resolve_locale(language_code)?;
 
-    let lang = if language_code.is_empty() {
-        "en" // fallback
-    } else if valid_lang_code(language_code) {
-        language_code
-    } else {
-        return Err(ApiError::BadRequest("Invalid language code".to_string()));
-    };
+    // Double fetch: get saint and images concurrently
+    let (saint, images) = tokio::try_join!(
+        repo::get_saint_by_slug(pool, slug, lang),
+        repo::get_saint_images(pool, slug),
+    )?;
 
-    repo::get_saint_by_slug(pool, slug, lang).await
+    Ok(SaintDetailResponse { saint, images })
 }
 
 // pub async fn get_saint(
