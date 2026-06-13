@@ -92,7 +92,6 @@ pub async fn get_saint_by_slug(
         st.name,
         st.short_description,
         st.full_biography
-        si.image_url
     FROM saints as s
     LEFT JOIN saint_translations st
     	ON st.saint_id = s.id
