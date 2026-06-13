@@ -12,7 +12,6 @@ pub struct SaintListResponse {
     pub total_pages: i32,
     pub data: Vec<SaintListItem>,
 }
-
 // Saint small struct for listing
 #[derive(Debug, Serialize, FromRow)]
 pub struct SaintListItem {
@@ -23,11 +22,32 @@ pub struct SaintListItem {
     pub death_year: Option<i16>,
 }
 
+#[derive(Debug, Serialize)]
+pub struct SaintListCompleteResponse {
+    pub page: i32,
+    pub per_page: i32,
+    pub total: i32,
+    pub total_pages: i32,
+    pub data: Vec<SaintListItemComplete>,
+}
+#[derive(Debug, Serialize, FromRow)]
+pub struct SaintListItemComplete {
+    pub id: i32,
+    pub slug: String,
+    pub default_name: String,
+    pub birth_year: Option<i16>,
+    pub death_year: Option<i16>,
+    pub century: Option<i16>,
+    pub name: Option<String>,
+    pub image_url_principal: Option<String>,
+}
+
 #[derive(Debug, Deserialize)]
 pub struct SaintQuery {
     // pub locale: Option<String>,
     pub page: Option<i32>,
     pub per_page: Option<i32>,
+    pub language_code: Option<String>,
 }
 
 #[derive(Debug, Serialize, FromRow)]

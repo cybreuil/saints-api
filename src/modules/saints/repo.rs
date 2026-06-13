@@ -1,6 +1,6 @@
 use sqlx::PgPool;
 
-use super::dto::{SaintDetail, SaintListItem};
+use super::dto::{SaintDetail, SaintListItem, SaintListItemComplete};
 
 use crate::core::error::ApiError;
 
@@ -15,6 +15,48 @@ pub async fn list_saints(
          ORDER BY default_name ASC
          LIMIT $1 OFFSET $2",
     )
+    .bind(limit)
+    .bind(offset)
+    .fetch_all(pool)
+    .await?;
+
+    Ok(rows)
+}
+
+pub async fn list_saints_complete(
+    pool: &PgPool,
+    limit: i32,
+    offset: i32,
+    language_code: &str,
+) -> Result<Vec<SaintListItemComplete>, ApiError> {
+    let rows = sqlx::query_as::<_, SaintListItemComplete>(
+        r#"
+    SELECT
+        s.id,
+        s.slug,
+        s.default_name,
+        s.birth_year,
+        s.death_year,
+        s.century,
+        st.name,
+        img.image_url AS image_url_principal
+    FROM saints s
+    LEFT JOIN saint_translations st
+        ON st.saint_id = s.id
+        AND st.locale_code = $1
+    LEFT JOIN LATERAL (
+        SELECT i.image_url
+        FROM saint_images si
+        JOIN images i ON i.id = si.image_id
+        WHERE si.saint_id = s.id AND si.is_primary = true
+        ORDER BY si.sort_order ASC
+        LIMIT 1
+    ) img ON TRUE
+    ORDER BY s.default_name ASC
+    LIMIT $2 OFFSET $3
+    "#,
+    )
+    .bind(language_code)
     .bind(limit)
     .bind(offset)
     .fetch_all(pool)

@@ -1,7 +1,7 @@
 use sqlx::PgPool;
 
 use super::{
-    dto::{SaintListItem, SaintListResponse},
+    dto::{SaintListCompleteResponse, SaintListItem, SaintListResponse},
     repo,
 };
 use crate::{
@@ -46,6 +46,50 @@ pub async fn list_saints(
         per_page: p.per_page,
         total: total,
         total_pages: total_pages,
+        data,
+    })
+}
+
+pub async fn list_saints_complete(
+    pool: &PgPool,
+    page: i32,
+    per_page: i32,
+    language_code: &str,
+) -> Result<SaintListCompleteResponse, ApiError> {
+    let p = Pagination::new(Some(page), Some(per_page));
+
+    let total = repo::count_saints(pool).await?;
+    let total_pages = (total as f32 / p.per_page as f32).ceil() as i32;
+
+    // Check if requested page is beyond total pages - 422
+    if p.beyond_total(total) {
+        return Err(ApiError::UnprocessableEntity(format!(
+            "Page {} is out of range. Total pages: {}",
+            page, total_pages
+        )));
+    }
+
+    fn valid_lang_code(s: &str) -> bool {
+        let primary = s.split('-').next().unwrap_or("");
+        primary.len() == 2 && primary.chars().all(|c| c.is_ascii_alphabetic())
+    }
+
+    let lang = if language_code.is_empty() {
+        "en" // fallback
+    } else if valid_lang_code(language_code) {
+        language_code
+    } else {
+        return Err(ApiError::BadRequest("Invalid language code".to_string()));
+    };
+
+    // Fetch
+    let data = repo::list_saints_complete(pool, p.per_page, p.offset, lang).await?;
+
+    Ok(SaintListCompleteResponse {
+        page: p.page,
+        per_page: p.per_page,
+        total,
+        total_pages,
         data,
     })
 }
