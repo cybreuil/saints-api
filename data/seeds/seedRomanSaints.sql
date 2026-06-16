@@ -865,7 +865,7 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='FUTUNA')
 ),
 (
-  'saint-louis-grignon-de-montfort', 'Saint Louis Grignion de Montfort',
+  'saint-louis-grignion-de-montfort', 'Saint Louis Grignion de Montfort',
   1673, 1, 31, FALSE,
   1716, 4, 28, FALSE,
   18,
@@ -1296,7 +1296,7 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='ROME')
 ),
 (
-  'saints-charles-lwanga-and-companions', 'Saints Charles Lwanga and Companions',
+  'saint-charles-lwanga', 'Saints Charles Lwanga and Companions',
   1860, 1, 1, FALSE,
   1886, 6, 3, FALSE,
   19,
@@ -1439,7 +1439,7 @@ JOIN (VALUES
 ('saint-justin-martyr', 'Saint Justin Martyr', 'Early Christian apologist and martyr.', 'Justin Martyr was an important early Christian apologist who wrote defenses of the Christian faith addressed to Greco-Roman audiences, produced theological reflections on the Logos and baptism, and gave witness by suffering martyrdom amid the second-century persecutions; his works anchored nascent Christian theology in dialogue with classical philosophy.', '† 165'),
 ('saint-marcellinus', 'Saint Marcellinus', 'Roman martyr of early Christianity, commemorated with Saint Peter the Exorcist.', 'Marcellinus is venerated as an early Roman martyr, traditionally associated with Peter the Exorcist in the memory of the Church. Historical details are limited, but their joint cult became firmly rooted in Roman Christian tradition and in the liturgical remembrance of those who bore witness to Christ under persecution. His name endures as part of the ancient martyrological heritage of Rome.', '† 304'),
 ('saint-peter-exorcist', 'Saint Peter (Exorcist)', 'Roman martyr of early Christianity, commemorated with Saint Marcellinus.', 'Peter, known in tradition as an exorcist, is honored as an early Roman martyr and is remembered together with Marcellinus. Though biographical precision is scarce, the Church preserved their witness through longstanding liturgical commemoration, highlighting fidelity to Christ in times of trial and violence. His memory belongs to the foundational martyrological tradition of Rome.', '† 304'),
-('saints-charles-lwanga-and-companions', 'Saints Charles Lwanga and Companions', 'Martyrs of Uganda and witnesses to the faith under persecution.', 'Charles Lwanga and his companions were catechists, lay leaders and youthful catechumens executed for their refusal to renounce the Christian faith during the late nineteenth-century persecutions in Uganda; their courage inspired the Church in Africa and their memory continues to be a source of missionary zeal and witness.', '1860–1886'),
+('saints-charles-lwanga', 'Saint Charles Lwanga', 'Martyrs of Uganda and witnesses to the faith under persecution.', 'Charles Lwanga and his companions were catechists, lay leaders and youthful catechumens executed for their refusal to renounce the Christian faith during the late nineteenth-century persecutions in Uganda; their courage inspired the Church in Africa and their memory continues to be a source of missionary zeal and witness.', '1860–1886'),
 ('saint-boniface', 'Saint Boniface', 'Missionary bishop to the Germanic peoples and martyr.', 'Boniface, born Winfrid in Anglo-Saxon England, became the leading missionary bishop in the Germanic lands, reorganizing the church, founding bishoprics and monasteries, promoting clerical reform and Christian education, and leaving a durable institutional and pastoral legacy across central Europe; tradition reports his martyrdom while on mission, sealing his reputation as apostle of the Germans.', 'c. 675–754'),
 ('saint-norbert', 'Saint Norbert', 'Founder and reformer; Archbishop and promoter of clerical renewal.', 'Norbert of Xanten founded the Premonstratensian Order, worked for clerical reform and reconciliation, and served as a prominent ecclesial leader who combined pastoral zeal with institutional renewal; his charismatic leadership and monastic reforms shaped twelfth-century reform movements.', '1080–1134'),
 ('saint-ephrem', 'Saint Ephrem the Syrian', 'Deacon, hymnographer and theologian of the Syriac tradition.', 'Ephrem the Syrian was a prolific Syriac theologian and poet whose hymns, sermons and catechetical works defended orthodox teaching and nurtured devotional life among Syriac Christians; his poetic theology and pastoral writings continue to influence Eastern Christian spirituality and hymnody.', 'c. 306–373'),
@@ -1470,7 +1470,7 @@ JOIN (VALUES
 ('saint-justin-martyr', 'Saint Justin Martyr', 'Apologiste chrétien et martyr des premiers siècles.', 'Justin fut un des premiers apologistes chrétiens à dialoguer avec la culture gréco‑romaine; ses écrits exposent la foi chrétienne en termes philosophiques, traitent du Logos et de la signification du baptême, et témoignent d''une pensée théologique qui chercha à rendre compte de l''Évangile dans le monde classique; il donna également sa vie en martyre.', '† 165'),
 ('saint-marcellinus', 'Saint Marcellin', 'Martyr romain de l''antiquité chrétienne, commémoré avec saint Pierre exorciste.', 'Marcellin est vénéré comme martyr de la Rome chrétienne ancienne, traditionnellement associé à Pierre exorciste dans la mémoire de l''Église. Les données biographiques sont limitées, mais leur culte commun s''est enraciné durablement dans la tradition romaine et la mémoire liturgique de ceux qui ont témoigné du Christ dans la persécution. Son nom demeure dans le patrimoine martyrologique antique de Rome.', '† 304'),
 ('saint-peter-exorcist', 'Saint Pierre (exorciste)', 'Martyr romain de l''antiquité chrétienne, commémoré avec saint Marcellin.', 'Pierre, connu dans la tradition comme exorciste, est honoré comme martyr de la Rome antique et commémoré avec Marcellin. Bien que les détails biographiques soient rares, l''Église a conservé leur témoignage par une commémoration liturgique stable, soulignant la fidélité au Christ dans l''épreuve et la violence. Sa mémoire appartient au noyau ancien de la tradition martyrologique romaine.', '† 304'),
-('saints-charles-lwanga-and-companions', 'Saints Charles Lwanga et compagnons', 'Martyrs d''Ouganda et témoins de la foi face à la persécution.', 'Charles Lwanga et ses compagnons, catechistes, laïcs et catéchumènes, furent exécutés pour avoir refusé d''abandonner la foi chrétienne à la fin du XIXe siècle; leur courage inspira l''Église d''Afrique et leur mémoire demeure un appel missionnaire et un exemple de fidélité dans l''adversité.', '1860–1886'),
+('saints-charles-lwanga', 'Saint Charles Lwanga', 'Martyrs d''Ouganda et témoins de la foi face à la persécution.', 'Charles Lwanga et ses compagnons, catechistes, laïcs et catéchumènes, furent exécutés pour avoir refusé d''abandonner la foi chrétienne à la fin du XIXe siècle; leur courage inspira l''Église d''Afrique et leur mémoire demeure un appel missionnaire et un exemple de fidélité dans l''adversité.', '1860–1886'),
 ('saint-boniface', 'Saint Boniface', 'Évêque missionnaire des Germains et martyr.', 'Boniface (Winfrid), originaire d''Angleterre, devint le principal évangélisateur des peuples germaniques en organisant des diocèses, fondant des monastères, promouvant la réforme du clergé et l''éducation chrétienne; son action institutionnelle et pastorale a durablement structuré l''Église en Europe centrale et sa mort en mission scella son renom d''apôtre des Germains.', 'v. 675–754'),
 ('saint-norbert', 'Saint Norbert', 'Fondateur et réformateur; promoteur du renouveau clérical.', 'Norbert de Xanten fonda l''ordre des Prémontrés, œuvra pour la réforme du clergé et favorisa la réconciliation ecclésiale; son leadership charismatique et ses réformes monastiques marquèrent profondément les mouvements réformateurs du XIIe siècle.', '1080–1134'),
 ('saint-ephrem', 'Saint Éphrem le Syrien', 'Diacre, poète et théologien de la tradition syriaque.', 'Éphrem le Syrien fut un théologien et hymnodiste prolifique dont les hymnes, sermons et catéchèses défendirent la foi orthodoxe et nourrirent la vie dévotionnelle des chrétiens syriaques; sa théologie poétique et pastorale influence encore la spiritualité orientale.', 'v. 306–373'),
@@ -1501,7 +1501,7 @@ JOIN (VALUES
 ('saint-justin-martyr', 'Sanctus Justinus Martyr', 'Apologeta christianus et martyr.', 'Justinus Martyr, philosophus convertitus, apologeta est clarus qui doctrinam christianam in dialogo cum philosophia Graeco-Romana defendit et qui sub persecutionibus saeculi II martirio coronatus est.', '† 165'),
 ('saint-marcellinus', 'Sanctus Marcellinus', 'Martyr Romanus antiquae christianitatis, cum Sancto Petro Exorcista commemoratus.', 'Marcellinus colitur ut martyr antiquae Ecclesiae Romanae, in traditione cum Petro Exorcista coniunctus. Quamvis notitiae historicae exiguae sint, cultus eorum communis in memoria liturgica Romana firmiter radicatus est, ut testimonium fidelitatis Christi sub persecutione. Nomen eius in patrimonium martyrologicum antiquum Romae permanet.', '† 304'),
 ('saint-peter-exorcist', 'Sanctus Petrus Exorcista', 'Martyr Romanus antiquae christianitatis, cum Sancto Marcellino commemoratus.', 'Petrus, in traditione Exorcista dictus, honoratur ut martyr antiquae Romae et una cum Marcellino recolitur. Etsi vitae singularis notitiae paucae sunt, Ecclesia eorum testimonium per stabilem commemorationem liturgicam servavit, fidelitatem erga Christum in tempore persecutionis illustrans. Memoria eius ad fundamenta traditionis martyrologicae Romanae pertinet.', '† 304'),
-('saints-charles-lwanga-and-companions', 'Sancti Carolus Lwanga et Socii', 'Martyres Ugandenses et testimonium fidei sub persecutione.', 'Carolus Lwanga et socii eius catechistae et iuvenes pro fide Christi persecuti et ejecuti sunt; memoria eorum in Ecclesia Africana missionaria est et exemplar fortitudinis praebet.', '1860–1886'),
+('saints-charles-lwanga', 'Sanctus Carolus Lwanga', 'Martyres Ugandenses et testimonium fidei sub persecutione.', 'Carolus Lwanga et socii eius catechistae et iuvenes pro fide Christi persecuti et ejecuti sunt; memoria eorum in Ecclesia Africana missionaria est et exemplar fortitudinis praebet.', '1860–1886'),
 ('saint-boniface', 'Sanctus Bonifatius', 'Apostolus Germaniae, episcopus et martyr.', 'Bonifatius, natus Winfrid in Anglia, per Germaniam missiones duxit, dioceses et monasteria instituit, clerum reformavit et educationem christianam promovit; traditione narratur in missione occisus esse, et ideo appellatur apostolus Germanorum.', 'c. 675–754'),
 ('saint-norbert', 'Sanctus Norbertus', 'Fundator et reformator, archiepiscopus et promotus reformationis clericalis.', 'Norbertus Xantensis Ordinem Praemonstratensem condidit, regulam canonicam restauravit et episcopatum cum vocatione reformandi clerum exercuit; eius institutio et zealum reformationis monasticae et clericalis memorantur.', '1080–1134'),
 ('saint-ephrem', 'Sanctus Ephraem Syrius', 'Diaconus, hymnographus et theologus Syriacus.', 'Ephraem Syrius hymnos, sermones et cathecheses composuit quae doctrinam orthodoxam defenderunt et vitam devotionis inter Christianos Syriacos firmaverunt; eius carmina theologicam et pietatem coniungunt.', 'c. 306–373'),
@@ -2434,7 +2434,7 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='PRAGUE')
 ),
 (
-  'saint-lawrence-ruiz-and-companions', 'Saint Lawrence Ruiz and Companions',
+  'saint-lawrence-ruiz', 'Saint Lawrence Ruiz', --and Companions
   1594, 11, 28, TRUE,
   1637, 9, 29, FALSE,
   17,
@@ -2622,7 +2622,7 @@ INSERT INTO saints (
 --   NULL, NULL, NULL
 -- ),
 (
-  'saint-denis-and-companions', 'Saint Denis, Bishop, and Companions, Martyrs',
+  'saint-denis', 'Saint Denis, Bishop', -- and Companions, Martyrs
   NULL, NULL, NULL, TRUE,
   250, NULL, NULL, TRUE,
   3,
@@ -3003,7 +3003,7 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='LUXEUIL')
 ),
 (
-  'saint-andrew-dung-lac-and-companions', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs',
+  'saint-andrew-dung-lac', 'Saints Andrew Dung-Lac, Priest', --and Companions, Martyrs
   1795, NULL, NULL, TRUE,
   1839, 12, 21, TRUE,
   19,
@@ -3047,7 +3047,7 @@ JOIN (VALUES
 ('saint-cecilia', 'Saint Cecilia, Virgin and Martyr', 'Patroness of musicians, venerated for faith and martyrdom.', 'Cecilia is celebrated as a virgin‑martyr whose cult inspired musical and liturgical devotion; traditions associate her with the protection of sacred song and steadfast witness in persecution.', ''),
 ('saint-clement-i', 'Saint Clement I, Pope and Martyr', 'Early pope remembered for pastoral leadership in the apostolic age.', 'Clement of Rome is linked to early efforts to preserve apostolic order and charity in the Church; his letter to the Corinthians and his martyrdom mark him as a formative figure in Roman ecclesial memory.', '1st century'),
 ('saint-columban', 'Saint Columban, Abbot', 'Missionary‑founder whose monastic foundations influenced Europe.', 'Columban (Columbanus) led Irish missionary activity on the Continent, founding monasteries that became centers of learning and reform and shaping early medieval monasticism through discipline and evangelization.', 'd. 615'),
-('saint-andrew-dung-lac-and-companions', 'Saints Andrew Dũng‑Lạc and Companions', 'Vietnamese martyrs who witnessed to the faith under persecution.', 'Andrew Dũng‑Lạc and many companions suffered martyrdom in Vietnam across different eras; their witness strengthened local Christian communities and remains a formative testimony of Asian Catholic witness.', ''),
+('saint-andrew-dung-lac', 'Saint Andrew Dũng‑Lạc', 'Vietnamese martyrs who witnessed to the faith under persecution.', 'Andrew Dũng‑Lạc and many companions suffered martyrdom in Vietnam across different eras; their witness strengthened local Christian communities and remains a formative testimony of Asian Catholic witness.', ''),
 ('saint-catherine-of-alexandria', 'Saint Catherine of Alexandria', 'Virgin and martyr traditionally venerated for learning and courage.', 'Catherine is celebrated as a learned maiden who defended the faith before pagan magistrates and bore martyrdom; her cult inspired monastic and intellectual devotion in the medieval Church.', ''),
 ('saint-andrew-apostle', 'Saint Andrew, Apostle', 'Apostle, missionary and brother of Saint Peter; early witness to the Gospel.', 'Andrew is venerated as one of the Twelve who preached to various regions and whose memory became important in apostolic tradition, marked by missionary zeal and martyrdom in several local traditions.', '1st century')
 ) AS x(slug, name, short_description, full_biography, life_label)
@@ -3075,7 +3075,7 @@ JOIN (VALUES
 ('saint-cecilia', 'Sainte Cécile, vierge et martyre', 'Patronne des musiciens, vénérée pour sa foi et son martyre.', 'Cécile est célébrée comme une vierge‑martyre dont le culte inspira la dévotion musicale et liturgique; les traditions la relient à la protection du chant sacré et au témoignage inébranlable dans la persécution.', ''),
 ('saint-clement-i', 'Saint Clément I', 'Pape ancien, rappelé pour son ministère pastoral à l''âge apostolique.', 'Clément de Rome est associé aux premiers efforts pour préserver l''ordre apostolique et la charité dans l''Église; sa lettre aux Corinthiens et son martyre le désignent comme une figure formative de la mémoire romaine.', 'Ier siècle'),
 ('saint-columban', 'Saint Colomban', 'Fondateur missionnaire dont les monastères marquèrent l''Europe.', 'Colomban mena la mission irlandaise sur le Continent, fondant monastères devenus centres d''étude et de réforme; sa discipline et son zèle évangélisateur influencèrent le monachisme médiéval.', 'm. 615'),
-('saint-andrew-dung-lac-and-companions', 'Saints André Dũng‑Lạc et compagnons', 'Martyrs vietnamiens témoignants de la foi sous la persécution.', 'André Dũng‑Lạc et de nombreux compagnons subirent le martyre au Vietnam à différentes époques; leur mémoire fortifia les communautés chrétiennes locales et demeure un témoignage marquant de la foi asiatique.', ''),
+('saint-andrew-dung-lac', 'Saint André Dũng‑Lạc', 'Martyrs vietnamiens témoignants de la foi sous la persécution.', 'André Dũng‑Lạc et de nombreux compagnons subirent le martyre au Vietnam à différentes époques; leur mémoire fortifia les communautés chrétiennes locales et demeure un témoignage marquant de la foi asiatique.', ''),
 ('saint-catherine-of-alexandria', 'Sainte Catherine d''Alexandrie', 'Vierge et martyre traditionnellement honorée pour son savoir et son courage.', 'Catherine est fêtée comme une jeune érudite ayant défendu la foi devant les magistrats païens et ayant subi le martyre; son culte a inspiré la dévotion monastique et intellectuelle au Moyen Âge.', ''),
 ('saint-andrew-apostle', 'Saint André, apôtre', 'Apôtre, missionnaire et frère de saint Pierre; témoin précoce de l''Évangile.', 'André est vénéré comme l''un des Douze qui prêcha dans diverses régions; sa mémoire s''est imposée dans la tradition apostolique, marquée par le zèle missionnaire et le martyre.', 'Ier siècle')
 ) AS x(slug, name, short_description, full_biography, life_label)
@@ -3103,7 +3103,7 @@ JOIN (VALUES
 ('saint-cecilia', 'Sancta Caecilia, Virgo et Martyr', 'Patrona musicorum, venerata pro fide et martyrio.', 'Caecilia ut virgo‑martyr celebratur et cultus eius devotionem musicam et liturgicam excitavit; traditiones eam cum tutela cantus sacri et firma constantia in persecutione coniungunt.', ''),
 ('saint-clement-i', 'Sanctus Clemens I', 'Papa antiquus memor pastoralis in aetate apostolica.', 'Clemens Romae ordinis apostolici et caritatis servitium fovere coniunctus est; epistula eius ad Corinthios et martyrium eum in memoria Romana collocat.', 'saec. I'),
 ('saint-columban', 'Sanctus Columbanus', 'Abbas et fundator missionum, cuius monasteria Europam signaverunt.', 'Columbanus missionem Hibernicam in continentem duxit, monasteria condidit quae centros studii et reformationis effecerunt et monachismum medievalem formaverunt.', 'ob. 615'),
-('saint-andrew-dung-lac-and-companions', 'Sancti Andreas Dung‑Lac et Socii', 'Martyrs Vietnamenses qui fidem sub persecutione professi sunt.', 'Andreas Dung‑Lac et multi socii martyrio affecti sunt in Vietnamia; eorum memoria communitates christianas localiter firmavit et testimonium fidei Asiaticum repraesentationem habet.', ''),
+('saint-andrew-dung-lac', 'Sanctus Andreas Dung‑Lac', 'Martyrs Vietnamenses qui fidem sub persecutione professi sunt.', 'Andreas Dung‑Lac et multi socii martyrio affecti sunt in Vietnamia; eorum memoria communitates christianas localiter firmavit et testimonium fidei Asiaticum repraesentationem habet.', ''),
 ('saint-catherine-of-alexandria', 'Sancta Catharina Alexandrina', 'Virgo et martyr, tradita pro eruditione et fortitudine.', 'Catharina ut puella erudita memorialiter celebratur quae fidem coram magistratibus paganorum defendit et martyrio coronata est; cultus eius devotionem monasticam et intellectualem in Medio Aevo excitavit.', ''),
 ('saint-andrew-apostle', 'Sanctus Andreas, Apostolus', 'Apostolus et missionarius, frater Sancti Petri; primus testis Evangelii.', 'Andreas una ex Duodecim venerated est qui in varias regiones praedicationem retulit; memoria eius in traditione apostolica, zelo missionario et martyrio consistit.', 'saec. I')
 ) AS x(slug, name, short_description, full_biography, life_label)
@@ -3163,7 +3163,7 @@ INSERT INTO saints (
   (SELECT id FROM places WHERE code='MILAN')
 ),
 (
-  'saint-juan-diego', 'Saint Juan Diego Cuauhtlatoatzin',
+  'saint-juan-diego-cuauhtlatoatzin', 'Saint Juan Diego Cuauhtlatoatzin',
   1474, NULL, NULL, TRUE,
   1548, 5, 30, FALSE,
   16,

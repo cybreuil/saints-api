@@ -458,9 +458,9 @@ JOIN (
 ('saint-peter-exorcist', '/saints/saint-marcellinus-&-peter_2.webp', 3, FALSE, 'subject'),
 
 -- Saint Charles Lwanga and Companions
-('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions_icon.webp', 1, TRUE, 'subject'),
-('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions.avif', 2, FALSE, 'subject'),
-('saint-charles-lwanga-and-companions', '/saints/saint-charles-lwanga-and-companions_2.webp', 3, FALSE, 'subject'),
+('saint-charles-lwanga', '/saints/saint-charles-lwanga-and-companions_icon.webp', 1, TRUE, 'subject'),
+('saint-charles-lwanga', '/saints/saint-charles-lwanga-and-companions.avif', 2, FALSE, 'subject'),
+('saint-charles-lwanga', '/saints/saint-charles-lwanga-and-companions_2.webp', 3, FALSE, 'subject'),
 
 -- Saint Boniface
 ('saint-boniface', '/saints/saint-boniface_bloemaert.webp', 1, TRUE, 'subject'),
@@ -785,10 +785,10 @@ JOIN (
 ('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_icon_2.webp', 3, FALSE, 'subject'),
 ('saint-maximus-the-confessor', '/saints/saint-maximus-the-confessor_2.webp', 4, FALSE, 'subject'),
 
--- Saint Maximilien Kolbe
-('saint-maximilien-kolbe', '/saints/saint-maximilien-kolbe_pawlowski.webp', 1, TRUE, 'subject'),
-('saint-maximilien-kolbe', '/saints/saint-maximilien-kolbe.webp', 2, FALSE, 'subject'),
-('saint-maximilien-kolbe', '/saints/saint-maximilien-kolbe_2.webp', 3, FALSE, 'subject'),
+-- Saint Maximilian Kolbe
+('saint-maximilian-kolbe', '/saints/saint-maximilian-kolbe_pawlowski.webp', 1, TRUE, 'subject'),
+('saint-maximilian-kolbe', '/saints/saint-maximilian-kolbe.webp', 2, FALSE, 'subject'),
+('saint-maximilian-kolbe', '/saints/saint-maximilian-kolbe_2.webp', 3, FALSE, 'subject'),
 
 -- Saint Stephen of Hungary
 ('saint-stephen-of-hungary', '/saints/saint-stephen-of-hungary.webp', 1, TRUE, 'subject'),
@@ -1034,7 +1034,7 @@ JOIN (
 ('saint-john-henry-newman', '/saints/saint-john-henry-newman.webp', 3, FALSE, 'subject'),
 
 -- Saint John XXIII
-('saint-john-xxiii', '/saints/saint-john-xxiii.webp', 1, TRUE, 'subject'),
+('saint-john-xxiii', '/saints/saint-john-xxiii_wenner.webp', 1, TRUE, 'subject'),
 ('saint-john-xxiii', '/saints/saint-john-xxiii_photo.webp', 2, FALSE, 'subject'),
 ('saint-john-xxiii', '/saints/saint-john-xxiii_photo_2.webp', 3, FALSE, 'subject'),
 
@@ -1068,9 +1068,9 @@ JOIN (
 ('saint-margaret-mary-alacoque', '/saints/saint-margaret-mary-alacoque_3.webp', 3, FALSE, 'subject'),
 
 -- Saint Ignatius of Antioch, Bishop and Martyr
-('saint-ignatius-antioch', '/saints/saint-ignatius-antioch.webp', 1, TRUE, 'subject'),
-('saint-ignatius-antioch', '/saints/saint-ignatius-antioch_2.webp', 2, FALSE, 'subject'),
-('saint-ignatius-antioch', '/saints/saint-ignatius-antioch_3.webp', 3, FALSE, 'subject'),
+('saint-ignatius-of-antioch', '/saints/saint-ignatius-of-antioch.webp', 1, TRUE, 'subject'),
+('saint-ignatius-of-antioch', '/saints/saint-ignatius-of-antioch_2.webp', 2, FALSE, 'subject'),
+('saint-ignatius-of-antioch', '/saints/saint-ignatius-of-antioch_3.webp', 3, FALSE, 'subject'),
 
 -- Saint Luke, Evangelist
 ('saint-luke', '/saints/saint-luke_reni.webp', 1, TRUE, 'subject'),

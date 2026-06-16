@@ -827,9 +827,9 @@ INSERT INTO images (
 ('/saints/saint-bernard_vivar.webp', 'Saint Bernard', 'painting', 'Saint Bernard Painting', 'Juan Correa de Vivar', '1540-1545', 'Museo del Prado', NULL, 'Public Domain', NULL),
 
 -- Saint Maximilien Kolbe
-('/saints/saint-maximilien-kolbe_pawlowski.webp', 'Saint Maximilien Kolbe', 'painting', 'Saint Maximilien Kolbe Painting', 'Kevin Pawlowski', '2023', NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-maximilien-kolbe.webp', 'Saint Maximilien Kolbe', 'photograph', 'Saint Maximilien Kolbe Photograph', NULL, '1936', NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-maximilien-kolbe_2.webp', 'Saint Maximilien Kolbe', 'painting', 'Saint Maximilien Kolbe Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-maximilian-kolbe_pawlowski.webp', 'Saint Maximilian Kolbe', 'painting', 'Saint Maximilian Kolbe Painting', 'Kevin Pawlowski', '2023', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-maximilian-kolbe.webp', 'Saint Maximilian Kolbe', 'photograph', 'Saint Maximilian Kolbe Photograph', NULL, '1936', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-maximilian-kolbe_2.webp', 'Saint Maximilian Kolbe', 'painting', 'Saint Maximilian Kolbe Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Pius X
 ('/saints/saint-pius-x_gerrer.webp', 'Saint Pius X', 'painting', 'Saint Pius X Painting', 'Gregory Gerrer', '1904', NULL, NULL, 'Public Domain', NULL),
@@ -1052,7 +1052,7 @@ INSERT INTO images (
 ('/saints/saint-john-henry-newman.webp', 'Saint John Henry Newman', 'painting', 'Saint John Henry Newman Painting', NULL, NULL, 'a Church in Rome', NULL, 'Public Domain', NULL),
 
 -- Saint John XXIII
-('/saints/saint-john-xxiii.webp', 'Saint John XXIII', 'painting', 'Saint John XXIII Painting', 'Kurt Wenner', '2022', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-john-xxiii_wenner.webp', 'Saint John XXIII', 'painting', 'Saint John XXIII Painting', 'Kurt Wenner', '2022', NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-john-xxiii_photo.webp', 'Saint John XXIII', 'photograph', 'Saint John XXIII Photograph', 'Fotografia Felici', '1959-1962', 'Catholic News Service', NULL, 'Public Domain', NULL),
 ('/saints/saint-john-xxiii_photo_2.webp', 'Saint John XXIII', 'photograph', 'Saint John XXIII Photograph', NULL, '1958-1963', NULL, NULL, 'Public Domain', NULL),
 
@@ -1086,9 +1086,9 @@ INSERT INTO images (
 ('/saints/saint-margaret-mary-alacoque_3.webp', 'Saint Margaret Mary Alacoque Vision of Sacred Heart', 'painting', 'Saint Margaret Mary Alacoque Vision of Sacred Heart Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Ignatius of Antioch
-('/saints/saint-ignatius-antioch.webp', 'The Martyrdom of Saint Ignatius of Antioch', 'painting', 'The Martyrdom of Saint Ignatius of Antioch Painting', NULL, '17th Century', NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-ignatius-antioch_2.webp', 'The Martyrdom of Saint Ignatius of Antioch', 'painting', 'The Martyrdom of Saint Ignatius of Antioch Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-ignatius-antioch_3.webp', 'Saint Ignatius of Antioch', 'icon', 'Saint Ignatius of Antioch Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-ignatius-of-antioch.webp', 'The Martyrdom of Saint Ignatius of Antioch', 'painting', 'The Martyrdom of Saint Ignatius of Antioch Painting', NULL, '17th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-ignatius-of-antioch_2.webp', 'The Martyrdom of Saint Ignatius of Antioch', 'painting', 'The Martyrdom of Saint Ignatius of Antioch Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-ignatius-of-antioch_3.webp', 'Saint Ignatius of Antioch', 'icon', 'Saint Ignatius of Antioch Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Luke, Evangelist
 ('/saints/saint-luke_reni.webp', 'Saint Luke the Evangelist', 'painting', 'Saint Luke the Evangelist Painting', 'Guido Reni', '1621', 'Bob Jones University (USA)', NULL, 'Public Domain', NULL),
