@@ -424,7 +424,7 @@ JOIN (
 
 -- Saint Philip Neri
 ('saint-philip-neri', '/saints/saint-philip-neri_reni.webp', 1, TRUE, 'subject'),
-('saint-philip-neri', '/saints/saint-philip-neri_conca.gif', 2, FALSE, 'subject'),
+('saint-philip-neri', '/saints/saint-philip-neri_conca.webp', 2, FALSE, 'subject'),
 ('saint-philip-neri', '/saints/saint-philip-neri_dolci.webp', 3, FALSE, 'subject'),
 ('saint-philip-neri', '/saints/saint-philip-neri_tiepolo.webp', 4, FALSE, 'subject'),
 ('saint-philip-neri', '/saints/saint-philip-neri_nogari.webp', 5, FALSE, 'subject'),
@@ -1030,7 +1030,7 @@ JOIN (
 
 -- Saint John Henry Newman
 ('saint-john-henry-newman', '/saints/saint-john-henry-newman_millais.webp', 1, TRUE, 'subject'),
-('saint-john-henry-newman', '/saints/saint-john-henry-newman_photo.gif', 2, FALSE, 'subject'),
+('saint-john-henry-newman', '/saints/saint-john-henry-newman_photo.webp', 2, FALSE, 'subject'),
 ('saint-john-henry-newman', '/saints/saint-john-henry-newman.webp', 3, FALSE, 'subject'),
 
 -- Saint John XXIII
@@ -1236,7 +1236,7 @@ JOIN (
 
 -- Saint John Damascene
 ('saint-john-damascene', '/saints/saint-john-damascene.webp', 1, TRUE, 'subject'),
-('saint-john-damascene', '/saints/saint-john-damascene_homsi.gif', 2, FALSE, 'subject'),
+('saint-john-damascene', '/saints/saint-john-damascene_homsi.webp', 2, FALSE, 'subject'),
 ('saint-john-damascene', '/saints/saint-john-damascene_2.webp', 3, FALSE, 'subject'),
 ('saint-john-damascene', '/saints/saint-john-damascene_3.webp', 4, FALSE, 'subject'),
 
