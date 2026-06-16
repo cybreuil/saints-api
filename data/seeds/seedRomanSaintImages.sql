@@ -757,7 +757,7 @@ JOIN (
 
 -- Saint Clare
 ('saint-clare', '/saints/saint-clare_crivelli.webp', 1, TRUE, 'subject'),
-('saint-clare', '/saints/saint-clare_martini.webp', 2, TRUE, 'subject'),
+('saint-clare', '/saints/saint-clare_martini.webp', 2, FALSE, 'subject'),
 ('saint-clare', '/saints/saint-clare_moroni.webp', 3, FALSE, 'subject'),
 ('saint-clare', '/saints/saint-clare_arco.webp', 4, FALSE, 'subject'),
 

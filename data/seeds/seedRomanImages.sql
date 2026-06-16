@@ -333,7 +333,6 @@ INSERT INTO images (
 ('/saints/saint-adalbert-&-procopius.webp', 'Saint Adalbert and Saint Procopius', 'painting', 'Saint Adalbert and Saint Procopius Painting', 'Master of Eggenburg', '1490-1500', 'Metropolitan Museum of Art', NULL, 'Public Domain', NULL),
 
 -- Saint Fidelis of Sigmaringen
-('/saints/saint-fidelis-of-sigmaringen.webp', 'The Martyrdom of Saint Fidelis of Sigmaringen', 'painting', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
 ('/saints/saint-fidelis-of-sigmaringen.webp', 'The Martyrdom of Saint Fidelis of Sigmaringen', 'painting', 'The Martyrdom of Saint Fidelis of Sigmaringen Painting', NULL, '18th Century', 'Private Collection', NULL, 'Public Domain', NULL),
 ('/saints/saint-fidelis-of-sigmaringen-&-joseph-of-leonessa_tiepolo.webp', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa', 'painting', 'Saint Fidelis of Sigmaringen and Saint Joseph of Leonessa Painting', 'Giambattista Tiepolo', '1752-1758', 'Galleria nazionale di Parma', NULL, 'Public Domain', NULL),
 
