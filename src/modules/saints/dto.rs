@@ -56,6 +56,7 @@ pub struct SaintDetail {
     pub death_day: Option<i16>,
     pub death_is_approximate: Option<bool>,
     pub century: Option<i16>,
+    pub name: Option<String>,
     pub short_description: Option<String>,
     pub full_biography: Option<String>,
 }
