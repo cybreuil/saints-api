@@ -84,7 +84,7 @@ pub struct SaintImage {
 /// A location associated with a saint.
 #[derive(Debug, Serialize, FromRow)]
 pub struct SaintPlace {
-    pub id: i32,
+    pub role: String,
     pub code: String,
     pub country_code: String,
     pub latitude: f64,
@@ -92,12 +92,13 @@ pub struct SaintPlace {
     pub name: String,
 }
 
-// Final response: scalar saint fields (flattened) + the images array.
+// Final full-detailled response for slug
 #[derive(Debug, Serialize)]
 pub struct SaintDetailResponse {
     #[serde(flatten)]
     pub saint: SaintDetail,
     pub images: Vec<SaintImage>,
+    pub places: Vec<SaintPlace>,
 }
 
 #[derive(Debug, Deserialize)]

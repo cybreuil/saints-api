@@ -194,7 +194,7 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('PREMONTRE', 'FR', 49.9333, 3.3167), -- St Norbert context
 ('EDESSA', 'TR', 37.9667, 39.1000), -- St Ephrem context
 ('SALAMIS_CYPRUS', 'CY', 35.183333, 33.9),
-('VAL_DI_CASTRO', 'IT', 42.6667, 11.6667,
+('VAL_DI_CASTRO', 'IT', 42.6667, 11.6667),
 ('CAMALDOLI', 'IT', 43.7167, 11.9000),
 ('ROCHESTER', 'GB', 51.25, 0.5),
 ('JUDAEA', 'IL', 31.702, 35.305),
@@ -491,7 +491,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='HIERAPOLIS'), 'en', 'Hierapolis'),
 ((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'en', 'Almodóvar del Campo'),
 ((SELECT id FROM places WHERE code='MONTILLA'), 'en', 'Montilla'),
-((SELECT id FROM places WHERE code='CORDOUE'), 'en', 'Córdoba'),
+((SELECT id FROM places WHERE code='CORDOBA'), 'en', 'Córdoba'),
 ((SELECT id FROM places WHERE code='SYNNADA'), 'en', 'Synnada'),
 ((SELECT id FROM places WHERE code='TUSCANY'), 'en', 'Tuscany'),
 ((SELECT id FROM places WHERE code='MASSA_MARITTIMA'), 'en', 'Massa Marittima'),
@@ -628,7 +628,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'en', 'Freiburg im Breisgau'),
 ((SELECT id FROM places WHERE code='NIJMEGEN'), 'en', 'Nijmegen'),
 ((SELECT id FROM places WHERE code='VIENNA'), 'en', 'Vienna'),
-((SELECT id FROM places WHERE code='KETY'), 'en', 'Kęty'),
+((SELECT id FROM places WHERE code='KETY'), 'en', 'Kęty')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -807,7 +807,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='HIERAPOLIS'), 'fr', 'Hiérapolis'),
 ((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'fr', 'Almodóvar del Campo'),
 ((SELECT id FROM places WHERE code='MONTILLA'), 'fr', 'Montilla'),
-((SELECT id FROM places WHERE code='CORDOUE'), 'fr', 'Cordoue'),
+((SELECT id FROM places WHERE code='CORDOBA'), 'fr', 'Cordoue'),
 ((SELECT id FROM places WHERE code='SYNNADA'), 'fr', 'Synnada'),
 ((SELECT id FROM places WHERE code='TUSCANY'), 'fr', 'Toscane'),
 ((SELECT id FROM places WHERE code='MASSA_MARITTIMA'), 'fr', 'Massa Marittima'),
@@ -944,7 +944,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'fr', 'Fribourg-en-Brisgau'),
 ((SELECT id FROM places WHERE code='NIJMEGEN'), 'fr', 'Nimègue'),
 ((SELECT id FROM places WHERE code='VIENNA'), 'fr', 'Vienne'),
-((SELECT id FROM places WHERE code='KETY'), 'fr', 'Kenty'),
+((SELECT id FROM places WHERE code='KETY'), 'fr', 'Kenty')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1123,7 +1123,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='HIERAPOLIS'), 'la', 'Hierapolis'),
 ((SELECT id FROM places WHERE code='ALMODOVAR_DEL_CAMPO'), 'la', 'Almodóvar del Campo'),
 ((SELECT id FROM places WHERE code='MONTILLA'), 'la', 'Montilla'),
-((SELECT id FROM places WHERE code='CORDOUE'), 'la', 'Corduba'),
+((SELECT id FROM places WHERE code='CORDOBA'), 'la', 'Corduba'),
 ((SELECT id FROM places WHERE code='SYNNADA'), 'la', 'Synnada'),
 ((SELECT id FROM places WHERE code='TUSCANY'), 'la', 'Tuscia'),
 ((SELECT id FROM places WHERE code='MASSA_MARITTIMA'), 'la', 'Massa Veternensis'),
@@ -1260,7 +1260,7 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'la', 'Friburgum Brisgoviae'),
 ((SELECT id FROM places WHERE code='NIJMEGEN'), 'la', 'Noviomagus Batavorum'),
 ((SELECT id FROM places WHERE code='VIENNA'), 'la', 'Vindobona'),
-((SELECT id FROM places WHERE code='KETY'), 'la', 'Kęty'),
+((SELECT id FROM places WHERE code='KETY'), 'la', 'Kęty')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;

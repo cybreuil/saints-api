@@ -1356,7 +1356,7 @@ INSERT INTO saints (
   10,
   (SELECT id FROM places WHERE code='RAVENNA'),
   (SELECT id FROM places WHERE code='VAL_DI_CASTRO'),
-  (SELECT id FROM places WHERE code='CAMALDOLI'),
+  (SELECT id FROM places WHERE code='CAMALDOLI')
 ),
 (
   'saint-aloysius-gonzaga', 'Saint Aloysius Gonzaga',
@@ -1976,7 +1976,7 @@ INSERT INTO saints (
   20,
   (SELECT id FROM places WHERE code='WROCLAW'),
   (SELECT id FROM places WHERE code='AUSCHWITZ'),
-  (SELECT id FROM places WHERE code='COLOGNE'),
+  (SELECT id FROM places WHERE code='COLOGNE')
 ),
 (
   'saint-lawrence', 'Saint Lawrence, Deacon and Martyr',
@@ -2394,8 +2394,8 @@ INSERT INTO saints (
   1968, 9, 23, FALSE,
   20,
   (SELECT id FROM places WHERE code='PIETRELCINA'),
-  (SELECT id FROM places WHERE code='SAN_GIOVANNI_ROTOND'),
-  (SELECT id FROM places WHERE code='SAN_GIOVANNI_ROTOND')
+  (SELECT id FROM places WHERE code='SAN_GIOVANNI_ROTONDO'),
+  (SELECT id FROM places WHERE code='SAN_GIOVANNI_ROTONDO')
 ),
 (
   'saint-cosmas', 'Saint Cosmas',
@@ -2403,16 +2403,17 @@ INSERT INTO saints (
   300, NULL, NULL, TRUE,
   3,
   (SELECT id FROM places WHERE code='ARABIA'),
-  (SELECT id FROM places WHERE code='AEGAE_CILICI'),
-  (SELECT id FROM places WHERE code='AEGAE_CILICI')
+  (SELECT id FROM places WHERE code='AEGAE_CILICIA'),
+  (SELECT id FROM places WHERE code='AEGAE_CILICIA')
+),
 (
   'saint-damian', 'Saint Damian',
   NULL, NULL, NULL, TRUE,
   300, NULL, NULL, TRUE,
   3,
   (SELECT id FROM places WHERE code='ARABIA'),
-  (SELECT id FROM places WHERE code='AEGAE_CILICI'),
-  (SELECT id FROM places WHERE code='AEGAE_CILICI')
+  (SELECT id FROM places WHERE code='AEGAE_CILICIA'),
+  (SELECT id FROM places WHERE code='AEGAE_CILICIA')
 ),
 (
   'saint-vincent-de-paul', 'Saint Vincent de Paul',
@@ -2428,7 +2429,7 @@ INSERT INTO saints (
   907, NULL, NULL, TRUE,
   935, 9, 28, TRUE,
   10,
-  (SELECT id FROM places WHERE code='STOCHOV')
+  (SELECT id FROM places WHERE code='STOCHOV'),
   (SELECT id FROM places WHERE code='STARA_BOLESLAV'),
   (SELECT id FROM places WHERE code='PRAGUE')
 ),
@@ -2634,7 +2635,7 @@ INSERT INTO saints (
   1541, NULL, NULL, FALSE,
   1609, 10, 9, FALSE,
   17,
-  (SELECT id FROM places WHERE code='DIECIMO')
+  (SELECT id FROM places WHERE code='DIECIMO'),
   (SELECT id FROM places WHERE code='ROME'),
   (SELECT id FROM places WHERE code='LUCCA')
 ),
@@ -2746,7 +2747,7 @@ INSERT INTO saints (
   15,
   (SELECT id FROM places WHERE code='CAPESTRANO'),
   (SELECT id FROM places WHERE code='ILOK'),
-  (SELECT id FROM places WHERE code='BELGRADE'),
+  (SELECT id FROM places WHERE code='BELGRADE')
 ),
 (
   'saint-anthony-mary-claret', 'Saint Anthony Mary Claret, Bishop',
@@ -2963,7 +2964,7 @@ INSERT INTO saints (
   14,
   (SELECT id FROM places WHERE code='THURINGIA'),
   (SELECT id FROM places WHERE code='HELFTA'),
-  (SELECT id FROM places WHERE code='HELFTA'),
+  (SELECT id FROM places WHERE code='HELFTA')
 ),
 (
   'saint-elizabeth-of-hungary', 'Saint Elizabeth of Hungary',
@@ -2972,7 +2973,7 @@ INSERT INTO saints (
   13,
   (SELECT id FROM places WHERE code='SAROSPATAK'),
   (SELECT id FROM places WHERE code='MARBURG'),
-  (SELECT id FROM places WHERE code='MARBURG'),
+  (SELECT id FROM places WHERE code='MARBURG')
 ),
 (
   'saint-cecilia', 'Saint Cecilia, Virgin and Martyr',
@@ -2999,7 +3000,7 @@ INSERT INTO saints (
   7,
   (SELECT id FROM places WHERE code='MYSHALL'),
   (SELECT id FROM places WHERE code='BOBBIO'),
-  (SELECT id FROM places WHERE code='LUXEUIL'),
+  (SELECT id FROM places WHERE code='LUXEUIL')
 ),
 (
   'saint-andrew-dung-lac-and-companions', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs',

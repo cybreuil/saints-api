@@ -1,6 +1,6 @@
 use sqlx::PgPool;
 
-use super::dto::{SaintDetail, SaintImage, SaintListItem, SaintListItemComplete};
+use super::dto::{SaintDetail, SaintImage, SaintListItem, SaintListItemComplete, SaintPlace};
 
 use crate::core::error::ApiError;
 
@@ -103,8 +103,6 @@ pub async fn get_saint_by_slug(
     LEFT JOIN saint_translations st
     	ON st.saint_id = s.id
      	AND st.locale_code = $1
-    LEFT JOIN saint_images si
-    	ON si.saint_id = s.id
     WHERE s.slug = $2
 	"#,
     )
@@ -155,26 +153,34 @@ pub async fn get_saint_places(
 ) -> Result<Vec<SaintPlace>, ApiError> {
     let rows = sqlx::query_as::<_, SaintPlace>(
         r#"
-        SELECT
-            p.id,
-            p.code,
-            p.country_code,
-            p.latitude,
-            p.longitude,
-            pt.name
-        FROM places p
-        JOIN place_translations pt ON pt.place_id = p.id
-        WHERE p.id IN (SELECT id FROM saints WHERE slug = $1)
-        AND pt.language_code = $2
-        ORDER BY p.id
+    SELECT 'birth' AS role,
+           p.code, pt.name, p.country_code, p.latitude, p.longitude
+    FROM saints s
+    JOIN places p ON p.id = s.place_of_birth_id
+    LEFT JOIN place_translations pt ON pt.place_id = p.id AND pt.locale_code = $1
+    WHERE s.slug = $2
 
+    UNION ALL
+    SELECT 'death' AS role,
+           p.code, pt.name, p.country_code, p.latitude, p.longitude
+    FROM saints s
+    JOIN places p ON p.id = s.place_of_death_id
+    LEFT JOIN place_translations pt ON pt.place_id = p.id AND pt.locale_code = $1
+    WHERE s.slug = $2
+
+    UNION ALL
+    SELECT 'activity' AS role,
+           p.code, pt.name, p.country_code, p.latitude, p.longitude
+    FROM saints s
+    JOIN places p ON p.id = s.place_of_activity_id
+    LEFT JOIN place_translations pt ON pt.place_id = p.id AND pt.locale_code = $1
+    WHERE s.slug = $2
     "#,
     )
-    .bind(slug)
     .bind(language_code)
+    .bind(slug)
     .fetch_all(pool)
     .await?;
-
     Ok(rows)
 }
 

@@ -1,9 +1,7 @@
 use sqlx::PgPool;
 
 use super::{
-    dto::{
-        SaintDetail, SaintDetailResponse, SaintListItem, SaintListItemComplete, SaintListResponse,
-    },
+    dto::{SaintDetailResponse, SaintListItem, SaintListItemComplete, SaintListResponse},
     repo,
 };
 use crate::core::{
@@ -101,13 +99,18 @@ pub async fn get_saint_by_slug(
     let slug = validation::resolve_slug(slug)?;
     let lang = validation::resolve_locale(language_code)?;
 
-    // Double fetch: get saint and images concurrently
-    let (saint, images) = tokio::try_join!(
+    // Triple fetch: get saint, images, and places concurrently
+    let (saint, images, places) = tokio::try_join!(
         repo::get_saint_by_slug(pool, slug, lang),
         repo::get_saint_images(pool, slug),
+        repo::get_saint_places(pool, slug, lang),
     )?;
 
-    Ok(SaintDetailResponse { saint, images })
+    Ok(SaintDetailResponse {
+        saint,
+        images,
+        places,
+    })
 }
 
 // pub async fn get_saint(
