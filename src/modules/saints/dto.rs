@@ -81,6 +81,17 @@ pub struct SaintImage {
     pub is_primary: bool,
 }
 
+/// A location associated with a saint.
+#[derive(Debug, Serialize, FromRow)]
+pub struct SaintPlace {
+    pub id: i32,
+    pub code: String,
+    pub country_code: String,
+    pub latitude: f64,
+    pub longitude: f64,
+    pub name: String,
+}
+
 // Final response: scalar saint fields (flattened) + the images array.
 #[derive(Debug, Serialize)]
 pub struct SaintDetailResponse {

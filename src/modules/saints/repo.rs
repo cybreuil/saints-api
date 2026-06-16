@@ -148,6 +148,36 @@ pub async fn get_saint_images(pool: &PgPool, slug: &str) -> Result<Vec<SaintImag
     Ok(rows)
 }
 
+pub async fn get_saint_places(
+    pool: &PgPool,
+    slug: &str,
+    language_code: &str,
+) -> Result<Vec<SaintPlace>, ApiError> {
+    let rows = sqlx::query_as::<_, SaintPlace>(
+        r#"
+        SELECT
+            p.id,
+            p.code,
+            p.country_code,
+            p.latitude,
+            p.longitude,
+            pt.name
+        FROM places p
+        JOIN place_translations pt ON pt.place_id = p.id
+        WHERE p.id IN (SELECT id FROM saints WHERE slug = $1)
+        AND pt.language_code = $2
+        ORDER BY p.id
+
+    "#,
+    )
+    .bind(slug)
+    .bind(language_code)
+    .fetch_all(pool)
+    .await?;
+
+    Ok(rows)
+}
+
 pub async fn count_saints(pool: &PgPool) -> Result<i32, ApiError> {
     let row = sqlx::query!("SELECT COUNT(*) as count FROM saints")
         .fetch_one(pool)
