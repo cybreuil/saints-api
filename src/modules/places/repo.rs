@@ -13,11 +13,12 @@ pub async fn list_places(
     let rows = sqlx::query_as::<_, PlaceListItem>(
         r#"
     SELECT
+      	p.id,
     	p.code,
      	p.country_code,
       	pt.name,
       	p.latitude,
-       	p.longitude,
+       	p.longitude
 	FROM places p
 	LEFT JOIN place_translations pt
 		ON pt.place_id = p.id
