@@ -9,7 +9,6 @@ pub struct PlaceQuery {
 
 #[derive(Serialize, sqlx::FromRow)]
 pub struct PlaceListItem {
-    id: i32,
     code: String,
     country_code: String,
     latitude: Option<f64>,

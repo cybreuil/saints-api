@@ -13,7 +13,6 @@ pub async fn list_places(
     let rows = sqlx::query_as::<_, PlaceListItem>(
         r#"
     SELECT
-      	p.id,
     	p.code,
      	p.country_code,
       	pt.name,
