@@ -4,25 +4,6 @@ use super::dto::{SaintDetail, SaintImage, SaintListItem, SaintListItemComplete, 
 
 use crate::core::error::ApiError;
 
-pub async fn list_saints(
-    pool: &PgPool,
-    limit: i32,
-    offset: i32,
-) -> Result<Vec<SaintListItem>, ApiError> {
-    let rows = sqlx::query_as::<_, SaintListItem>(
-        "SELECT id, slug, default_name, birth_year, death_year
-         FROM saints
-         ORDER BY default_name ASC
-         LIMIT $1 OFFSET $2",
-    )
-    .bind(limit)
-    .bind(offset)
-    .fetch_all(pool)
-    .await?;
-
-    Ok(rows)
-}
-
 pub async fn list_saints_complete(
     pool: &PgPool,
     limit: i32,

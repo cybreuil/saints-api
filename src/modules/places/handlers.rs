@@ -13,7 +13,7 @@ pub async fn list_places(
     let result = service::list_places(
         pool.get_ref(),
         query.page.unwrap_or(1),
-        query.per_page.unwrap_or(16),
+        query.per_page.unwrap_or(20),
         query.language_code.as_deref(),
     )
     .await?;

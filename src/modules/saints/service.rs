@@ -1,7 +1,7 @@
 use sqlx::PgPool;
 
 use super::{
-    dto::{SaintDetailResponse, SaintListItem, SaintListItemComplete, SaintListResponse},
+    dto::{SaintDetailResponse, SaintListItem, SaintListItemComplete},
     repo,
 };
 use crate::core::{
@@ -9,56 +9,6 @@ use crate::core::{
     pagination::{Paginated, Pagination},
     validation,
 };
-
-// Calculate total pages based on total items and per-page limit
-fn total_pages(total: i32, per_page: i32) -> i32 {
-    if total == 0 {
-        0
-    } else {
-        (total + per_page - 1) / per_page
-    }
-}
-
-pub async fn list_saints(
-    pool: &PgPool,
-    page: i32,
-    per_page: i32,
-) -> Result<SaintListResponse, ApiError> {
-    let p = Pagination::new(Some(page), Some(per_page));
-
-    let total = repo::count_saints(pool).await? as i32;
-    let total_pages = (total + p.per_page - 1) / p.per_page;
-
-    // Total is zero, return empty data with pagination info
-    if total == 0 {
-        return Ok(SaintListResponse {
-            page: p.page,
-            per_page: p.per_page,
-            total,
-            total_pages: 0,
-            data: Vec::new(),
-        });
-    }
-
-    // Check if requested page is beyond total pages - 422
-    if p.beyond_total(total) {
-        return Err(ApiError::UnprocessableEntity(format!(
-            "Page {} is out of range. Total pages: {}",
-            p.page, total_pages
-        )));
-    }
-
-    // Fetch
-    let data = repo::list_saints(pool, p.per_page, p.offset).await?;
-
-    Ok(SaintListResponse {
-        page: p.page,
-        per_page: p.per_page,
-        total: total,
-        total_pages: total_pages,
-        data,
-    })
-}
 
 pub async fn list_saints_complete(
     pool: &PgPool,
@@ -84,6 +34,7 @@ pub async fn list_saints_complete(
     }
 
     let data = repo::list_saints_complete(pool, p.per_page, p.offset, lang).await?;
+
     Ok(Paginated::new(&p, total, data))
 }
 
