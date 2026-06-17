@@ -8,4 +8,5 @@ pub fn router() -> Scope {
         .service(modules::health::router::router())
         .service(modules::root::router::router())
         .service(modules::celebrations::router::router())
+        .service(modules::places::router::router())
 }

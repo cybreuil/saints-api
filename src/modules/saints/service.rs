@@ -26,7 +26,7 @@ pub async fn list_saints(
 ) -> Result<SaintListResponse, ApiError> {
     let p = Pagination::new(Some(page), Some(per_page));
 
-    let total = repo::count_saints(pool).await?;
+    let total = repo::count_saints(pool).await? as i32;
     let total_pages = (total + p.per_page - 1) / p.per_page;
 
     // Total is zero, return empty data with pagination info
@@ -70,7 +70,7 @@ pub async fn list_saints_complete(
     let lang = validation::resolve_locale(language_code)?;
 
     let p = Pagination::new(Some(page), Some(per_page));
-    let total = repo::count_saints(pool).await?;
+    let total = repo::count_saints(pool).await? as i32;
 
     if total == 0 {
         return Ok(Paginated::empty(&p));
