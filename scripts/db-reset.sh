@@ -49,7 +49,7 @@ echo "✅ Roman images seeded."
 run_sql "$ROOT_DIR/data/seeds/seedRomanSaintImages.sql"
 echo "✅ Roman saint images seeded."
 
-run_sql "$ROOT_DIR/data/seeds/seedROMAN.sql"
+run_sql "$ROOT_DIR/data/seeds/newSEEDROMAN.sql"
 echo "✅ ROMAN seeded."
 
 run_sql "$ROOT_DIR/data/seeds/seedRomanSeasons.sql"
