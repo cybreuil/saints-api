@@ -1,7 +1,7 @@
 -- =========================================================
 -- Roman General Calendar - (EN/FR/LA)
 -- Calendar: ROMAN_GENERAL
--- Color policy: RED only for explicit Martyr/Martyrs, else NULL
+
 -- =========================================================
 
 BEGIN;
@@ -116,24 +116,24 @@ FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
 -- Christmas octave
-('solemnity-of-mary-the-holy-mother-of-god', 1, 1, 'SOLEMNITY', NULL::TEXT, 'octave', FALSE, 'Wikipedia'),
+('solemnity-of-mary-the-holy-mother-of-god', 1, 1, 'SOLEMNITY', 'WHITE', 'octave', FALSE, 'Wikipedia'),
 -- Christmas octave ended
-('saints-basil-the-great-and-gregory-nazianzen-bishops-and-doctors-of-the-church', 1, 2, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-most-holy-name-of-jesus', 1, 3, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('the-epiphany-of-the-lord', 1, 6, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-raymond-of-penyafort-priest', 1, 7, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-hilary-bishop-and-doctor-of-the-church', 1, 13, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-anthony-abbot', 1, 17, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saints-basil-the-great-and-gregory-nazianzen-bishops-and-doctors-of-the-church', 1, 2, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-most-holy-name-of-jesus', 1, 3, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('the-epiphany-of-the-lord', 1, 6, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-raymond-of-penyafort-priest', 1, 7, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-hilary-bishop-and-doctor-of-the-church', 1, 13, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-anthony-abbot', 1, 17, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-fabian-pope-and-martyr', 1, 20, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-sebastian-martyr', 1, 20, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-agnes-virgin-and-martyr', 1, 21, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
 ('saint-vincent-deacon-and-martyr', 1, 22, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-francis-de-sales-bishop-and-doctor-of-the-church', 1, 24, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-conversion-of-saint-paul-the-apostle', 1, 25, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saints-timothy-and-titus-bishops', 1, 26, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-angela-merici-virgin', 1, 27, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-thomas-aquinas-priest-and-doctor-of-the-church', 1, 28, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-john-bosco-priest', 1, 31, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia')
+('saint-francis-de-sales-bishop-and-doctor-of-the-church', 1, 24, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-conversion-of-saint-paul-the-apostle', 1, 25, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saints-timothy-and-titus-bishops', 1, 26, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-angela-merici-virgin', 1, 27, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-thomas-aquinas-priest-and-doctor-of-the-church', 1, 28, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-john-bosco-priest', 1, 31, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -147,7 +147,7 @@ SELECT f.id, c.id, r.id, lc.id, 'movable', 'SUNDAY_AFTER_EPIPHANY', 0, 'normal',
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FEAST'
-LEFT JOIN liturgical_colors lc ON lc.code = NULL
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-baptism-of-the-lord'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
@@ -248,27 +248,26 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('the-presentation-of-the-lord', 2, 2, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('the-presentation-of-the-lord', 2, 2, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-blaise-bishop-and-martyr', 2, 3, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-ansgar-bishop', 2, 3, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-ansgar-bishop', 2, 3, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-agatha-virgin-and-martyr', 2, 5, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
 ('saints-paul-miki-and-companions-martyrs', 2, 6, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-jerome-emiliani-priest', 2, 8, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-josephine-bakhita-virgin', 2, 8, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-scholastica-virgin', 2, 10, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('our-lady-of-lourdes', 2, 11, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saints-cyril-monk-and-methodius-bishop', 2, 14, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-seven-holy-founders-of-the-servite-order', 2, 17, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-peter-damian-bishop-and-doctor-of-the-church', 2, 21, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('the-chair-of-saint-peter-the-apostle', 2, 22, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-jerome-emiliani-priest', 2, 8, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-josephine-bakhita-virgin', 2, 8, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-scholastica-virgin', 2, 10, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('our-lady-of-lourdes', 2, 11, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saints-cyril-monk-and-methodius-bishop', 2, 14, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-seven-holy-founders-of-the-servite-order', 2, 17, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-peter-damian-bishop-and-doctor-of-the-church', 2, 21, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('the-chair-of-saint-peter-the-apostle', 2, 22, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-polycarp-bishop-and-martyr', 2, 23, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-gregory-of-narek-abbot-and-doctor-of-the-church', 2, 27, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia')
+('saint-gregory-of-narek-abbot-and-doctor-of-the-church', 2, 27, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -356,15 +355,15 @@ SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('saint-casimir', 3, 4, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-casimir', 3, 4, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saints-perpetua-and-felicity-martyrs', 3, 7, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-john-of-god-religious', 3, 8, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-frances-of-rome-religious', 3, 9, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-patrick-bishop', 3, 17, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-cyril-of-jerusalem-bishop-and-doctor-of-the-church', 3, 18, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-joseph-spouse-of-the-blessed-virgin-mary', 3, 19, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-turibius-of-mongrovejo-bishop', 3, 23, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('the-annunciation-of-the-lord', 3, 25, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia')
+('saint-john-of-god-religious', 3, 8, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-frances-of-rome-religious', 3, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-patrick-bishop', 3, 17, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-cyril-of-jerusalem-bishop-and-doctor-of-the-church', 3, 18, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-joseph-spouse-of-the-blessed-virgin-mary', 3, 19, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-turibius-of-mongrovejo-bishop', 3, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('the-annunciation-of-the-lord', 3, 25, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -467,27 +466,26 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('saint-francis-of-paola-hermit', 4, 2, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-isidore-bishop-and-doctor-of-the-church', 4, 4, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-vincent-ferrer-priest', 4, 5, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-john-baptist-de-la-salle-priest', 4, 7, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-francis-of-paola-hermit', 4, 2, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-isidore-bishop-and-doctor-of-the-church', 4, 4, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-vincent-ferrer-priest', 4, 5, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-john-baptist-de-la-salle-priest', 4, 7, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-stanislaus-bishop-and-martyr', 4, 11, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
 ('saint-martin-i-pope-and-martyr', 4, 13, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-anselm-bishop-and-doctor-of-the-church', 4, 21, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-anselm-bishop-and-doctor-of-the-church', 4, 21, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-george-martyr', 4, 23, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-adalbert-bishop-and-martyr', 4, 23, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-fidelis-of-sigmaringen-priest-and-martyr', 4, 24, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-mark-evangelist', 4, 25, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-mark-evangelist', 4, 25, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-peter-chanel-priest-and-martyr', 4, 28, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-louis-grignon-de-montfort-priest', 4, 28, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-catherine-of-siena-virgin-and-doctor-of-the-church', 4, 29, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-pius-v-pope', 4, 30, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia')
+('saint-louis-grignon-de-montfort-priest', 4, 28, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-catherine-of-siena-virgin-and-doctor-of-the-church', 4, 29, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-pius-v-pope', 4, 30, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -606,31 +604,30 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('saint-joseph-the-worker', 5, 1, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-athanasius-bishop-and-doctor-of-the-church', 5, 2, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saints-philip-and-james-apostles', 5, 3, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-john-of-avila-priest-and-doctor-of-the-church', 5, 10, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-joseph-the-worker', 5, 1, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-athanasius-bishop-and-doctor-of-the-church', 5, 2, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saints-philip-and-james-apostles', 5, 3, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-john-of-avila-priest-and-doctor-of-the-church', 5, 10, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saints-nereus-and-achilleus-martyrs', 5, 12, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-pancras-martyr', 5, 12, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('our-lady-of-fatima', 5, 13, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-matthias-apostle', 5, 14, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('our-lady-of-fatima', 5, 13, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-matthias-apostle', 5, 14, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-john-i-pope-and-martyr', 5, 18, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-bernardine-of-siena-priest', 5, 20, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-bernardine-of-siena-priest', 5, 20, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-christopher-magallanes-priest-and-companions-martyrs', 5, 21, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-rita-of-cascia-religious', 5, 22, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-bede-the-venerable-priest-and-doctor-of-the-church', 5, 25, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-gregory-vii-pope', 5, 25, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-mary-magdalene-de-pazzi-virgin', 5, 25, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-philip-neri-priest', 5, 26, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-augustine-of-canterbury-bishop', 5, 27, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-paul-vi-pope', 5, 29, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('the-visitation-of-the-blessed-virgin-mary', 5, 31, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia')
+('saint-rita-of-cascia-religious', 5, 22, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-bede-the-venerable-priest-and-doctor-of-the-church', 5, 25, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-gregory-vii-pope', 5, 25, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-mary-magdalene-de-pazzi-virgin', 5, 25, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-philip-neri-priest', 5, 26, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-augustine-of-canterbury-bishop', 5, 27, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-paul-vi-pope', 5, 29, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('the-visitation-of-the-blessed-virgin-mary', 5, 31, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -741,7 +738,6 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
@@ -751,18 +747,18 @@ JOIN (VALUES
 ('saints-marcellinus-and-peter-martyrs', 6, 2, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saints-charles-lwanga-and-companions-martyrs', 6, 3, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
 ('saint-boniface-bishop-and-martyr', 6, 5, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-norbert-bishop', 6, 6, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-ephrem-deacon-and-doctor-of-the-church', 6, 9, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-barnabas-apostle', 6, 11, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-anthony-of-padua-priest-and-doctor-of-the-church', 6, 13, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-romuald-abbot', 6, 19, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-aloysius-gonzaga-religious', 6, 21, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-paulinus-of-nola-bishop', 6, 22, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-norbert-bishop', 6, 6, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-ephrem-deacon-and-doctor-of-the-church', 6, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-barnabas-apostle', 6, 11, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-anthony-of-padua-priest-and-doctor-of-the-church', 6, 13, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-romuald-abbot', 6, 19, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-aloysius-gonzaga-religious', 6, 21, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-paulinus-of-nola-bishop', 6, 22, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saints-john-fisher-bishop-and-thomas-more-martyrs', 6, 22, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('the-nativity-of-saint-john-the-baptist', 6, 24, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 6, 27, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('the-nativity-of-saint-john-the-baptist', 6, 24, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 6, 27, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 6, 28, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saints-peter-and-paul-apostles', 6, 29, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saints-peter-and-paul-apostles', 6, 29, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('the-first-martyrs-of-holy-roman-church', 6, 30, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
@@ -886,32 +882,31 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('saint-thomas-apostle', 7, 3, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-elizabeth-of-portugal', 7, 4, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-anthony-zaccaria-priest', 7, 5, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-thomas-apostle', 7, 3, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-elizabeth-of-portugal', 7, 4, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-anthony-zaccaria-priest', 7, 5, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-maria-goretti-virgin-and-martyr', 7, 6, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-augustine-zhao-rong-priest-and-companions-martyrs', 7, 9, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-benedict-abbot', 7, 11, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-henry', 7, 13, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-camillus-de-lellis-priest', 7, 14, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-bonaventure-bishop-and-doctor-of-the-church', 7, 15, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('our-lady-of-mount-carmel', 7, 16, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-benedict-abbot', 7, 11, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-henry', 7, 13, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-camillus-de-lellis-priest', 7, 14, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-bonaventure-bishop-and-doctor-of-the-church', 7, 15, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('our-lady-of-mount-carmel', 7, 16, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-apollinaris-bishop-and-martyr', 7, 20, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-lawrence-of-brindisi-priest-and-doctor-of-the-church', 7, 21, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-mary-magdalene', 7, 22, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-bridget-religious', 7, 23, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-sharbel-makhluf-priest', 7, 24, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-james-apostle', 7, 25, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saints-joachim-and-anne-parents-of-the-blessed-virgin-mary', 7, 26, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saints-martha-mary-and-lazarus', 7, 29, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-peter-chrysologus-bishop-and-doctor-of-the-church', 7, 30, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-ignatius-of-loyola-priest', 7, 31, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia')
+('saint-lawrence-of-brindisi-priest-and-doctor-of-the-church', 7, 21, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-mary-magdalene', 7, 22, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-bridget-religious', 7, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-sharbel-makhluf-priest', 7, 24, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-james-apostle', 7, 25, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saints-joachim-and-anne-parents-of-the-blessed-virgin-mary', 7, 26, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saints-martha-mary-and-lazarus', 7, 29, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-peter-chrysologus-bishop-and-doctor-of-the-church', 7, 30, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-ignatius-of-loyola-priest', 7, 31, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -1070,40 +1065,39 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('saint-alphonsus-liguori-bishop-and-doctor-of-the-church', 8, 1, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-eusebius-of-vercelli-bishop', 8, 2, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-peter-julian-eymard-priest', 8, 2, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-jean-vianney-priest', 8, 4, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-dedication-of-the-basilica-of-saint-mary-major', 8, 5, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('the-transfiguration-of-the-lord', 8, 6, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-alphonsus-liguori-bishop-and-doctor-of-the-church', 8, 1, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-eusebius-of-vercelli-bishop', 8, 2, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-peter-julian-eymard-priest', 8, 2, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-jean-vianney-priest', 8, 4, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-dedication-of-the-basilica-of-saint-mary-major', 8, 5, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('the-transfiguration-of-the-lord', 8, 6, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-sixtus-ii-pope-and-companions-martyrs', 8, 7, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-cajetan-priest', 8, 7, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-dominic-priest', 8, 8, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-cajetan-priest', 8, 7, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-dominic-priest', 8, 8, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-teresa-benedicta-of-the-cross-virgin-and-martyr', 8, 9, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-lawrence-deacon-and-martyr', 8, 10, 'FEAST', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-clare-virgin', 8, 11, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-jane-frances-de-chantal-religious', 8, 12, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-clare-virgin', 8, 11, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-jane-frances-de-chantal-religious', 8, 12, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saints-pontian-pope-and-hippolytus-priest-martyrs', 8, 13, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-maximus-the-confessor', 8, 13, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-maximus-the-confessor', 8, 13, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-maximilian-kolbe-priest-and-martyr', 8, 14, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('the-assumption-of-the-blessed-virgin-mary', 8, 15, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-stephen-of-hungary', 8, 16, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-john-eudes-priest', 8, 19, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-bernard-abbot-and-doctor-of-the-church', 8, 20, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-pius-x-pope', 8, 21, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-queenship-of-the-blessed-virgin-mary', 8, 22, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-rose-of-lima-virgin', 8, 23, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-bartholomew-apostle', 8, 24, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-louis', 8, 25, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-joseph-calasanz-priest', 8, 25, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-monica', 8, 27, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-augustine-of-hippo-bishop-and-doctor-of-the-church', 8, 28, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('the-assumption-of-the-blessed-virgin-mary', 8, 15, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-stephen-of-hungary', 8, 16, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-john-eudes-priest', 8, 19, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-bernard-abbot-and-doctor-of-the-church', 8, 20, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-pius-x-pope', 8, 21, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-queenship-of-the-blessed-virgin-mary', 8, 22, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-rose-of-lima-virgin', 8, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-bartholomew-apostle', 8, 24, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-louis', 8, 25, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-joseph-calasanz-priest', 8, 25, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-monica', 8, 27, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-augustine-of-hippo-bishop-and-doctor-of-the-church', 8, 28, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('the-passion-of-saint-john-the-baptist-martyr', 8, 29, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
@@ -1231,33 +1225,32 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('saint-gregory-the-great-pope-and-doctor-of-the-church', 9, 3, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-teresa-of-calcutta-virgin', 9, 5, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('the-nativity-of-the-blessed-virgin-mary', 9, 8, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-peter-claver-priest', 9, 9, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('the-most-holy-name-of-mary', 9, 12, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-john-chrysostom-bishop-and-doctor-of-the-church', 9, 13, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-exaltation-of-the-holy-cross', 9, 14, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('our-lady-of-sorrows', 9, 15, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-gregory-the-great-pope-and-doctor-of-the-church', 9, 3, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-teresa-of-calcutta-virgin', 9, 5, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('the-nativity-of-the-blessed-virgin-mary', 9, 8, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-peter-claver-priest', 9, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('the-most-holy-name-of-mary', 9, 12, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-john-chrysostom-bishop-and-doctor-of-the-church', 9, 13, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-exaltation-of-the-holy-cross', 9, 14, 'FEAST', 'RED', 'normal', FALSE, 'Wikipedia'),
+('our-lady-of-sorrows', 9, 15, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saints-cornelius-pope-and-cyprian-bishop-martyrs', 9, 16, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-robert-bellarmine-bishop-and-doctor-of-the-church', 9, 17, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-hildegard-of-bingen-virgin-and-doctor-of-the-church', 9, 17, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-robert-bellarmine-bishop-and-doctor-of-the-church', 9, 17, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-hildegard-of-bingen-virgin-and-doctor-of-the-church', 9, 17, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-januarius-bishop-and-martyr', 9, 19, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saints-andrew-kim-tae-gon-priest-paul-chong-ha-sang-and-companions-martyrs', 9, 20, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-matthew-apostle-and-evangelist', 9, 21, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-pius-of-pietrelcina-priest', 9, 23, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-matthew-apostle-and-evangelist', 9, 21, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-pius-of-pietrelcina-priest', 9, 23, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saints-cosmas-and-damian-martyrs', 9, 26, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-vincent-de-paul-priest', 9, 27, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-vincent-de-paul-priest', 9, 27, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-wenceslaus-martyr', 9, 28, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-lawrence-ruiz-and-companions-martyrs', 9, 28, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saints-michael-gabriel-and-raphael-archangels', 9, 29, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-jerome-priest-and-doctor-of-the-church', 9, 30, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia')
+('saints-michael-gabriel-and-raphael-archangels', 9, 29, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-jerome-priest-and-doctor-of-the-church', 9, 30, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -1388,34 +1381,33 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('saint-therese-of-the-child-jesus-virgin-and-doctor-of-the-church', 10, 1, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-holy-guardian-angels', 10, 2, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-francis-of-assisi', 10, 4, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-faustina-kowalska-virgin', 10, 5, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-bruno-priest', 10, 6, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('our-lady-of-the-rosary', 10, 7, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-therese-of-the-child-jesus-virgin-and-doctor-of-the-church', 10, 1, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-holy-guardian-angels', 10, 2, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-francis-of-assisi', 10, 4, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-faustina-kowalska-virgin', 10, 5, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-bruno-priest', 10, 6, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('our-lady-of-the-rosary', 10, 7, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-denis-bishop-and-companions-martyrs', 10, 9, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-john-leonardi-priest', 10, 9, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-john-henry-newman-priest-and-doctor-of-the-church', 10, 9, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-john-xxiii-pope', 10, 11, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-john-leonardi-priest', 10, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-john-henry-newman-priest-and-doctor-of-the-church', 10, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-john-xxiii-pope', 10, 11, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-callistus-i-pope-and-martyr', 10, 14, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-teresa-of-jesus-virgin-and-doctor-of-the-church', 10, 15, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-hedwig-religious', 10, 16, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-margaret-mary-alacoque-virgin', 10, 16, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-teresa-of-jesus-virgin-and-doctor-of-the-church', 10, 15, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-hedwig-religious', 10, 16, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-margaret-mary-alacoque-virgin', 10, 16, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-ignatius-of-antioch-bishop-and-martyr', 10, 17, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-luke-evangelist', 10, 18, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-luke-evangelist', 10, 18, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saints-john-de-brebeuf-isaac-jogues-priests-and-companions-martyrs', 10, 19, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-paul-of-the-cross-priest', 10, 19, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-john-paul-ii-pope', 10, 22, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-john-of-capistrano-priest', 10, 23, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-anthony-mary-claret-bishop', 10, 24, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saints-simon-and-jude-apostles', 10, 28, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia')
+('saint-paul-of-the-cross-priest', 10, 19, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-john-paul-ii-pope', 10, 22, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-john-of-capistrano-priest', 10, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-anthony-mary-claret-bishop', 10, 24, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saints-simon-and-jude-apostles', 10, 28, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -1538,32 +1530,31 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (RED only explicit martyrs)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('all-saints', 11, 1, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-commemoration-of-all-the-faithful-departed', 11, 2, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-martin-de-porres-religious', 11, 3, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-charles-borromeo-bishop', 11, 4, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-dedication-of-the-lateran-basilica', 11, 9, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-leo-the-great-pope-and-doctor-of-the-church', 11, 10, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-martin-of-tours-bishop', 11, 11, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('all-saints', 11, 1, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-commemoration-of-all-the-faithful-departed', 11, 2, 'SOLEMNITY', 'PURPLE', 'normal', FALSE, 'Wikipedia'),
+('saint-martin-de-porres-religious', 11, 3, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-charles-borromeo-bishop', 11, 4, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-dedication-of-the-lateran-basilica', 11, 9, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-leo-the-great-pope-and-doctor-of-the-church', 11, 10, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-martin-of-tours-bishop', 11, 11, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-josaphat-bishop-and-martyr', 11, 12, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-albert-the-great-bishop-and-doctor-of-the-church', 11, 15, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-margaret-of-scotland', 11, 16, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-gertrude-virgin', 11, 16, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-elizabeth-of-hungary-religious', 11, 17, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', 11, 18, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('the-presentation-of-the-blessed-virgin-mary', 11, 21, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
+('saint-albert-the-great-bishop-and-doctor-of-the-church', 11, 15, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-margaret-of-scotland', 11, 16, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-gertrude-virgin', 11, 16, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-elizabeth-of-hungary-religious', 11, 17, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', 11, 18, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('the-presentation-of-the-blessed-virgin-mary', 11, 21, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-cecilia-virgin-and-martyr', 11, 22, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
 ('saint-clement-i-pope-and-martyr', 11, 23, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-columban-abbot', 11, 23, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-columban-abbot', 11, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saints-andrew-dung-lac-priest-and-companions-martyrs', 11, 24, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
 ('saint-catherine-of-alexandria-virgin-and-martyr', 11, 25, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
-('saint-andrew-apostle', 11, 30, 'FEAST', NULL::TEXT, 'normal', FALSE, 'Wikipedia')
+('saint-andrew-apostle', 11, 30, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -1688,31 +1679,31 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- Celebrations (fixed; RED only explicit martyrs)
+-- Celebrations (fixed)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('saint-francis-xavier-priest', 12, 3, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-john-damascene-priest-and-doctor-of-the-church', 12, 4, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-nicholas-bishop', 12, 6, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-ambrose-bishop-and-doctor-of-the-church', 12, 7, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('the-immaculate-conception-of-the-blessed-virgin-mary', 12, 8, 'SOLEMNITY', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-juan-diego-cuauhtlatoatzin', 12, 9, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('our-lady-of-loreto', 12, 10, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-damasus-i-pope', 12, 11, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('our-lady-of-guadalupe', 12, 12, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
+('saint-francis-xavier-priest', 12, 3, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-john-damascene-priest-and-doctor-of-the-church', 12, 4, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-nicholas-bishop', 12, 6, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-ambrose-bishop-and-doctor-of-the-church', 12, 7, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-immaculate-conception-of-the-blessed-virgin-mary', 12, 8, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-juan-diego-cuauhtlatoatzin', 12, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('our-lady-of-loreto', 12, 10, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-damasus-i-pope', 12, 11, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('our-lady-of-guadalupe', 12, 12, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-lucy-virgin-and-martyr', 12, 13, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
-('saint-john-of-the-cross-priest-and-doctor-of-the-church', 12, 14, 'MEM_OBL', NULL::TEXT, 'normal', FALSE, 'Wikipedia'),
-('saint-peter-canisius-priest-and-doctor-of-the-church', 12, 21, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('saint-john-of-kanty-priest', 12, 23, 'MEM_OPT', NULL::TEXT, 'normal', TRUE, 'Wikipedia'),
-('nativity-of-the-lord', 12, 25, 'SOLEMNITY', NULL::TEXT, 'octave', FALSE, 'Wikipedia'),
+('saint-john-of-the-cross-priest-and-doctor-of-the-church', 12, 14, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('saint-peter-canisius-priest-and-doctor-of-the-church', 12, 21, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('saint-john-of-kanty-priest', 12, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
+('nativity-of-the-lord', 12, 25, 'SOLEMNITY', 'WHITE', 'octave', FALSE, 'Wikipedia'),
 ('saint-stephen-the-first-martyr', 12, 26, 'FEAST', 'RED', 'octave', FALSE, 'Wikipedia'),
-('saint-john-apostle-and-evangelist', 12, 27, 'FEAST', NULL::TEXT, 'octave', FALSE, 'Wikipedia'),
+('saint-john-apostle-and-evangelist', 12, 27, 'FEAST', 'WHITE', 'octave', FALSE, 'Wikipedia'),
 ('the-holy-innocents-martyrs', 12, 28, 'FEAST', 'RED', 'octave', FALSE, 'Wikipedia'),
 ('saint-thomas-becket-bishop-and-martyr', 12, 29, 'MEM_OPT', 'RED', 'octave', TRUE, 'Wikipedia'),
-('saint-sylvester-i-pope', 12, 31, 'MEM_OPT', NULL::TEXT, 'octave', TRUE, 'Wikipedia')
+('saint-sylvester-i-pope', 12, 31, 'MEM_OPT', 'WHITE', 'octave', TRUE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -1727,7 +1718,7 @@ SELECT f.id, c.id, r.id, lc.id, 'movable', 'SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DE
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FEAST'
-LEFT JOIN liturgical_colors lc ON lc.code = NULL
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-holy-family-of-jesus-mary-and-joseph'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
