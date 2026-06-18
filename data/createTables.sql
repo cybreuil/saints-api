@@ -6,7 +6,7 @@
 -- Nettoyage des tables existantes (ordre inverse des dépendances)
 DROP TABLE IF EXISTS celebrations CASCADE;
 DROP TABLE IF EXISTS feast_saints CASCADE;
-DROP TABLE IF EXISTS feast_dates CASCADE;
+-- DROP TABLE IF EXISTS feast_dates CASCADE;
 DROP TABLE IF EXISTS feast_translations CASCADE;
 DROP TABLE IF EXISTS saint_translations CASCADE;
 DROP TABLE IF EXISTS saint_patronages CASCADE;
@@ -416,13 +416,14 @@ CREATE TABLE celebrations (
 
 CREATE INDEX idx_calendars_parent ON calendars(parent_id);
 
-CREATE INDEX idx_feast_dates_fixed
-    ON feast_dates(calendar_id, month, day)
-    WHERE date_kind = 'fixed';
+-- WE DROPPED FEAST_DATES TABLE, SO THESE INDEXES ARE NOT NEEDED ANYMORE
+-- CREATE INDEX idx_feast_dates_fixed
+--     ON feast_dates(calendar_id, month, day)
+--     WHERE date_kind = 'fixed';
 
-CREATE INDEX idx_feast_dates_movable
-    ON feast_dates(calendar_id, movable_base, movable_offset_days)
-    WHERE date_kind = 'movable';
+-- CREATE INDEX idx_feast_dates_movable
+--     ON feast_dates(calendar_id, movable_base, movable_offset_days)
+--     WHERE date_kind = 'movable';
 
 CREATE INDEX idx_celebrations_calendar ON celebrations(calendar_id);
 CREATE INDEX idx_celebrations_feast ON celebrations(feast_id);
