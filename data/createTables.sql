@@ -411,8 +411,37 @@ CREATE TABLE celebrations (
 );
 
 -- =========================================================
+-- 9) Auth tables
+-- =========================================================
+--
+CREATE TABLE users (
+    id          SERIAL PRIMARY KEY,
+    email       TEXT UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+    -- 'admin' for now; extend to 'user', 'editor', etc. later
+    role        TEXT NOT NULL DEFAULT 'admin',
+    is_active   BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at  TIMESTAMPTZ NOT NULL DEFAULT now(),
+    last_login_at TIMESTAMPTZ
+);
+
+CREATE TABLE refresh_tokens (
+    id          SERIAL PRIMARY KEY,
+    user_id     INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    -- only the hash is stored, never the raw token
+    token_hash  TEXT NOT NULL UNIQUE,
+    expires_at  TIMESTAMPTZ NOT NULL,
+    revoked     BOOLEAN NOT NULL DEFAULT FALSE,
+    created_at  TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+
+-- =========================================================
 -- 9) Index
 -- =========================================================
+
+-- Auth Indexes
+CREATE INDEX idx_refresh_tokens_user_id   ON refresh_tokens(user_id);
+CREATE INDEX idx_refresh_tokens_token_hash ON refresh_tokens(token_hash);
 
 CREATE INDEX idx_calendars_parent ON calendars(parent_id);
 

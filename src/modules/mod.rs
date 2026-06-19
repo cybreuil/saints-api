@@ -1,3 +1,4 @@
+pub mod auth;
 pub mod celebrations;
 pub mod feasts;
 pub mod health;

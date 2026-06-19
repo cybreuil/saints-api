@@ -6,6 +6,9 @@ pub struct Config {
     pub bind_address: std::net::IpAddr,
     pub port: u16,
     pub jwt_secret: String,
+    pub jwt_ttl_minutes: i64,
+    pub refresh_token_days: i64,
+    pub is_prod: bool,
 }
 
 impl Config {
@@ -24,11 +27,28 @@ impl Config {
 
         let jwt_secret = env::var("JWT_SECRET").expect("JWT_SECRET must be set");
 
+        let jwt_ttl_minutes = env::var("JWT_TTL_MINUTES")
+            .unwrap_or_else(|_| "15".to_string())
+            .parse::<i64>()
+            .expect("JWT_TTL_MINUTES must be a valid integer");
+
+        let refresh_token_days = env::var("REFRESH_TOKEN_DAYS")
+            .unwrap_or_else(|_| "30".to_string())
+            .parse::<i64>()
+            .expect("REFRESH_TOKEN_DAYS must be a valid integer");
+
+        let is_prod = env::var("APP_ENV")
+            .unwrap_or_else(|_| "development".to_string())
+            .eq_ignore_ascii_case("production");
+
         Self {
             database_url,
             bind_address,
             port,
             jwt_secret,
+            jwt_ttl_minutes,
+            refresh_token_days,
+            is_prod,
         }
     }
 }

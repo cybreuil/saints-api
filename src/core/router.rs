@@ -3,6 +3,7 @@ use actix_web::{web, Scope};
 
 pub fn router() -> Scope {
     web::scope("")
+        .service(modules::auth::router::router())
         .service(modules::saints::router::router())
         .service(modules::feasts::router::router())
         .service(modules::health::router::router())
