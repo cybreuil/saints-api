@@ -7,8 +7,8 @@ const MAX_SLUG_LEN: usize = 200;
 // Resolve the locale from the language code, validating it as a primary language code
 pub fn resolve_locale(language_code: Option<&str>) -> Result<&str, ApiError> {
     let code = match language_code {
-        None => return Ok("en"), // absent -> défaut
-        Some(c) if c.is_empty() => return Ok("en"),
+        None => return Ok(DEFAULT_LOCALE), // absent -> défaut
+        Some(c) if c.is_empty() => return Ok(DEFAULT_LOCALE), // empty -> défaut
         Some(c) => c,
     };
     let primary = code.split('-').next().unwrap_or("");

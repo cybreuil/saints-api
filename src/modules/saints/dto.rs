@@ -27,8 +27,6 @@ pub struct SaintListItemComplete {
     pub id: i32,
     pub slug: String,
     pub default_name: String,
-    pub birth_year: Option<i16>,
-    pub death_year: Option<i16>,
     pub century: Option<i16>,
     pub name: Option<String>,
     pub image_url: Option<String>,

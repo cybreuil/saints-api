@@ -16,8 +16,6 @@ pub async fn list_saints_complete(
         s.id,
         s.slug,
         s.default_name,
-        s.birth_year,
-        s.death_year,
         s.century,
         st.name,
         img.image_url
