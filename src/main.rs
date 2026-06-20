@@ -28,7 +28,7 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(move || {
         App::new()
-            .wrap(cors())
+            .wrap(cors(&cfg_data))
             .wrap(Logger::default())
             // TODO gerer rate par route avec differentes instances
             // .wrap(RateLimiter::new(60, Duration::from_secs(60)))
