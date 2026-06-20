@@ -32,3 +32,11 @@ pub fn require_auth(req: &HttpRequest, jwt_secret: &str) -> Result<Claims, ApiEr
 
     Ok(token_data.claims)
 }
+
+pub fn require_admin(req: &HttpRequest, jwt_secret: &str) -> Result<Claims, ApiError> {
+    let claims = require_auth(req, jwt_secret)?;
+    if claims.role != "admin" {
+        return Err(ApiError::Forbidden);
+    }
+    Ok(claims)
+}
