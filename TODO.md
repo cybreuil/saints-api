@@ -35,3 +35,5 @@ ORDER BY default_name ASC
 
 Need mapping query errors on apierrors
 + need checking on differences between rome & vatican for places
+
++ cache control
