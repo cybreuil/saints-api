@@ -25,8 +25,8 @@ pub async fn get_celebrations_by_date(
 ) -> Result<HttpResponse, ApiError> {
     // Fallback sur now need check timezones
     let now = Utc::now();
-    let month = query.month.unwrap_or(now.month() as u8);
-    let day = query.day.unwrap_or(now.day() as u8);
+    let month = query.month.unwrap_or(now.month() as i16);
+    let day = query.day.unwrap_or(now.day() as i16);
 
     if month < 1 || month > 12 || day < 1 || day > 31 {
         return Err(ApiError::BadRequest("Invalid month or day".to_string()));

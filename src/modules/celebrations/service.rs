@@ -20,9 +20,9 @@ pub async fn celebration_of_today(pool: &PgPool) -> Result<Celebration, ApiError
 
 pub async fn get_celebrations_by_date(
     pool: &PgPool,
-    month: u8,
-    day: u8,
+    month: i16,
+    day: i16,
 ) -> Result<Vec<Celebration>, ApiError> {
-    let rows = repo::get_celebrations_by_date(pool, month as i8, day as i8).await?;
+    let rows = repo::get_celebrations_by_date(pool, month, day).await?;
     Ok(rows)
 }

@@ -33,8 +33,8 @@ pub async fn celebration_of_today(
 
 pub async fn get_celebrations_by_date(
     pool: &PgPool,
-    month: i8,
-    day: i8,
+    month: i16,
+    day: i16,
 ) -> Result<Vec<Celebration>, ApiError> {
     let rows = sqlx::query_as::<_, Celebration>(
         r#"
@@ -50,7 +50,7 @@ pub async fn get_celebrations_by_date(
                c.movable_offset_days,
                c.notes,
                c.observance_type,
-               f.feast_name,
+               f.default_name,
 			   f.feast_type
         FROM celebrations c
         LEFT JOIN feasts f ON c.feast_id = f.id

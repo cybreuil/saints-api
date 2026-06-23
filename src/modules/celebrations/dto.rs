@@ -4,8 +4,8 @@ use sqlx::FromRow;
 #[derive(Debug, Deserialize)]
 pub struct DateQuery {
     pub year: Option<i32>,
-    pub month: Option<u8>,
-    pub day: Option<u8>,
+    pub month: Option<i16>,
+    pub day: Option<i16>,
 }
 
 #[derive(Debug, Serialize, FromRow)]
@@ -22,6 +22,6 @@ pub struct Celebration {
     pub movable_offset_days: Option<i16>,
     pub notes: Option<String>,
     pub observance_type: Option<String>,
-    pub feast_name: Option<String>,
+    pub default_name: Option<String>,
     pub feast_type: Option<String>,
 }
