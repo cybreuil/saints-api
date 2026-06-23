@@ -132,8 +132,13 @@ pub async fn get_saint_places(
 ) -> Result<Vec<SaintPlace>, ApiError> {
     let rows = sqlx::query_as::<_, SaintPlace>(
         r#"
-    SELECT 'birth' AS role,
-           p.code, pt.name, p.country_code, p.latitude, p.longitude
+    SELECT
+    	'birth' AS role,
+        p.code,
+        pt.name,
+        p.country_code,
+        p.latitude,
+        p.longitude
     FROM saints s
     JOIN places p ON p.id = s.place_of_birth_id
     LEFT JOIN place_translations pt ON pt.place_id = p.id AND pt.locale_code = $1
@@ -160,6 +165,34 @@ pub async fn get_saint_places(
     .bind(slug)
     .fetch_all(pool)
     .await?;
+    Ok(rows)
+}
+
+pub async fn get_saint_attributes(
+    pool: &PgPool,
+    slug: &str,
+    language_code: &str,
+) -> Result<Vec<super::dto::SaintAttribute>, ApiError> {
+    let rows = sqlx::query_as::<_, super::dto::SaintAttribute>(
+        r#"
+	SELECT
+		a.code,
+		a.category,
+		at.label,
+		at.description
+	FROM saints s
+	JOIN saint_attributes sa ON sa.saint_id = s.id
+	JOIN attributes a ON a.id = sa.attribute_id
+	LEFT JOIN attribute_translations at ON at.attribute_id = a.id AND at.locale_code = $1
+	WHERE s.slug = $2
+	ORDER BY a.category, a.code
+	"#,
+    )
+    .bind(language_code)
+    .bind(slug)
+    .fetch_all(pool)
+    .await?;
+
     Ok(rows)
 }
 

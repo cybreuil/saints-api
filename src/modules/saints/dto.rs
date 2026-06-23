@@ -79,6 +79,14 @@ pub struct SaintImage {
     pub is_primary: bool,
 }
 
+#[derive(Debug, Serialize, FromRow)]
+pub struct SaintAttribute {
+    pub code: String,
+    pub category: String,
+    pub label: String,               // from attribute_translations
+    pub description: Option<String>, // from attribute_translations
+}
+
 /// A location associated with a saint.
 #[derive(Debug, Serialize, FromRow)]
 pub struct SaintPlace {
@@ -97,6 +105,7 @@ pub struct SaintDetailResponse {
     pub saint: SaintDetail,
     pub images: Vec<SaintImage>,
     pub places: Vec<SaintPlace>,
+    pub attributes: Vec<SaintAttribute>,
 }
 
 #[derive(Debug, Deserialize)]
