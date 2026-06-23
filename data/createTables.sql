@@ -307,8 +307,12 @@ CREATE TABLE patronage_translations (
 );
 
 CREATE TABLE saint_patronages (
-    saint_id INTEGER NOT NULL REFERENCES saints(id) ON DELETE CASCADE,
+    saint_id     INTEGER NOT NULL REFERENCES saints(id)    ON DELETE CASCADE,
     patronage_id INTEGER NOT NULL REFERENCES patronages(id) ON DELETE CASCADE,
+    source_type  TEXT CHECK (source_type IN ('OFF', 'TRD', 'DEV')),
+    -- OFF = proclamation officielle du Saint-Siège (Acta Apostolicae Sedis)
+    -- TRD = patronage traditionnel séculaire reconnu
+    -- DEV = dévotion populaire répandue
     PRIMARY KEY (saint_id, patronage_id)
 );
 
