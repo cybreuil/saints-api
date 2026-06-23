@@ -55,6 +55,11 @@ echo "✅ ROMAN seeded."
 run_sql "$ROOT_DIR/data/seeds/seedRomanSeasons.sql"
 echo "✅ Roman seasons seeded."
 
+run_sql "$ROOT_DIR/data/seeds/seedRomanSaintAttributes.sql"
+echo "✅ ROMAN saint attributes seeded."
+
+run_sql "$ROOT_DIR/data/seeds/seedRomanSaintPatronages.sql"
+echo "✅ ROMAN saint patronages seeded."
 
 # run_sql "$ROOT_DIR/data/seeds/seedROMAN_links.sql"
 # echo "✅ ROMAN links seeded."

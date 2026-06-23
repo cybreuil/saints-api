@@ -32,6 +32,8 @@ DROP TABLE IF EXISTS liturgical_season_colors CASCADE;
 DROP TABLE IF EXISTS liturgical_season_rules CASCADE;
 DROP TABLE IF EXISTS liturgical_season_translations CASCADE;
 DROP TABLE IF EXISTS liturgical_seasons CASCADE;
+DROP TABLE IF EXISTS refresh_tokens CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
 
 -- =========================================================
