@@ -98,6 +98,13 @@ pub struct SaintPlace {
     pub name: String,
 }
 
+#[derive(Debug, Serialize, FromRow)]
+pub struct SaintPatronage {
+    pub code: String,
+    pub label: Option<String>,
+    pub description: Option<String>,
+}
+
 // Final full-detailled response for slug
 #[derive(Debug, Serialize)]
 pub struct SaintDetailResponse {
@@ -106,6 +113,7 @@ pub struct SaintDetailResponse {
     pub images: Vec<SaintImage>,
     pub places: Vec<SaintPlace>,
     pub attributes: Vec<SaintAttribute>,
+    pub patronages: Vec<SaintPatronage>,
 }
 
 #[derive(Debug, Deserialize)]

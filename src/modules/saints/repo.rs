@@ -196,6 +196,33 @@ pub async fn get_saint_attributes(
     Ok(rows)
 }
 
+pub async fn get_saint_patronages(
+    pool: &PgPool,
+    slug: &str,
+    language_code: &str,
+) -> Result<Vec<super::dto::SaintPatronage>, ApiError> {
+    let rows = sqlx::query_as::<_, super::dto::SaintPatronage>(
+        r#"
+	SELECT
+		p.code,
+		pt.label,
+		pt.description
+	FROM saints s
+	JOIN saint_patronages sp ON sp.saint_id = s.id
+	JOIN patronages p ON p.id = sp.patronage_id
+	LEFT JOIN patronage_translations pt ON pt.patronage_id = p.id AND pt.locale_code = $1
+	WHERE s.slug = $2
+	ORDER BY p.code
+	"#,
+    )
+    .bind(language_code)
+    .bind(slug)
+    .fetch_all(pool)
+    .await?;
+
+    Ok(rows)
+}
+
 pub async fn count_saints(pool: &PgPool) -> Result<i64, ApiError> {
     let count = sqlx::query_scalar!(r#"SELECT COUNT(*) as "count!" FROM saints"#)
         .fetch_one(pool)

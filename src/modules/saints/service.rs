@@ -51,11 +51,12 @@ pub async fn get_saint_by_slug(
     let lang = validation::resolve_locale(language_code)?;
 
     // Triple fetch: get saint, images, and places concurrently
-    let (saint, images, places, attributes) = tokio::try_join!(
+    let (saint, images, places, attributes, patronages) = tokio::try_join!(
         repo::get_saint_by_slug(pool, slug, lang),
         repo::get_saint_images(pool, slug),
         repo::get_saint_places(pool, slug, lang),
-        repo::get_saint_attributes(pool, slug, lang)
+        repo::get_saint_attributes(pool, slug, lang),
+        repo::get_saint_patronages(pool, slug, lang)
     )?;
 
     Ok(SaintDetailResponse {
@@ -63,6 +64,7 @@ pub async fn get_saint_by_slug(
         images,
         places,
         attributes,
+        patronages,
     })
 }
 
