@@ -103,6 +103,7 @@ INSERT INTO patronages (code) VALUES
 ('ABUSE_VICTIMS'),
 ('IMMIGRANTS_REFUGEES'),
 ('ELDERLY'),
+('PREGNANT_WOMEN'),
 
 -- CAUSES & DOMAINES
 ('LOST_CAUSES'),
@@ -204,6 +205,7 @@ JOIN (VALUES
   ('ABUSE_VICTIMS',      'Victims of abuse and violence','Maria Goretti, martyr who forgave her attacker; also Rita of Cascia.'),
   ('IMMIGRANTS_REFUGEES','Immigrants and refugees',     'Josephine Bakhita, herself a slave and refugee; also Teresa of Calcutta (the destitute and displaced).'),
   ('ELDERLY',            'The elderly',                 'Anne, grandmother of Jesus; invoked by the elderly and those in the autumn of life.'),
+  ('PREGNANT_WOMEN',     'Pregnant women',             	'The Blessed Virgin Mary, model of motherhood; also Elizabeth, mother of John the Baptist.'),
   ('LOST_CAUSES',        'Lost and hopeless causes',    'Jude the Apostle, invoked for desperate and seemingly impossible situations since the Middle Ages.'),
   ('LOST_ITEMS',         'Lost objects',                'Anthony of Padua, invoked for finding lost objects since the 13th century.'),
   ('DESPERATE_CASES',    'Desperate and impossible cases','Rita of Cascia, the "saint of impossible cases," patron of the desperate.'),
@@ -305,6 +307,7 @@ JOIN (VALUES
   ('ABUSE_VICTIMS',      'Les victimes de violence',       'Marie Goretti, martyre qui pardonna à son agresseur ; aussi Rita de Cascia.'),
   ('IMMIGRANTS_REFUGEES','Les migrants et réfugiés',       'Joséphine Bakhita, elle-même esclave et réfugiée ; aussi Mère Teresa (les sans-abri).'),
   ('ELDERLY',            'Les personnes âgées',            'Anne, grand-mère de Jésus ; invoquée par les personnes âgées et en fin de vie.'),
+  ('PREGNANT_WOMEN',     'Les femmes enceintes',      	   'La Vierge Marie, modèle de la maternité ; aussi Élisabeth, mère de Jean-Baptiste.'),
   ('LOST_CAUSES',        'Les causes désespérées',         'Jude l''Apôtre, invoqué pour les situations sans espoir depuis le Moyen Âge.'),
   ('LOST_ITEMS',         'Les objets perdus',              'Antoine de Padoue, invoqué pour retrouver les objets perdus depuis le XIIIe siècle.'),
   ('DESPERATE_CASES',    'Les cas impossibles',            'Rita de Cascia, la « sainte des causes impossibles ».'),
@@ -406,6 +409,7 @@ JOIN (VALUES
   ('ABUSE_VICTIMS',      'Victimae violentiae',            'Maria Goretti, martyr quae aggressori ignovit; etiam Rita Cassiensis.'),
   ('IMMIGRANTS_REFUGEES','Peregrini et profugi',           'Iosephina Bakhita, ipsa serva et profuga; etiam Teresia Calcuttensis.'),
   ('ELDERLY',            'Senes',                          'Anna, avia Iesu; praesertim a senibus et moribundis invocatur.'),
+  ('PREGNANT_WOMEN',     'Feminae gravidæ',                'Beata Virgo Maria, exemplar maternitas; etiam Elisabeth, mater Ioannis Baptistae.'),
   ('LOST_CAUSES',        'Causae desperatae',              'Iudas Apostolus, pro causis desperatis a Medio Aevo invocatus.'),
   ('LOST_ITEMS',         'Res amissae',                    'Antonius Patavinus, pro rebus amissis a saeculo XIII invocatus.'),
   ('DESPERATE_CASES',    'Causae impossibiles',            'Rita Cassiensis, "sancta causarum impossibilium."'),
@@ -437,6 +441,7 @@ FROM (VALUES
   ('saint-mary',                          'CONVERTS',             'TRD'),  -- Fatima : chapelet pour la conversion des pécheurs
   ('saint-mary',                          'WIDOWS',               'TRD'),  -- tradition : elle survit à Joseph, modèle des veuves
   ('saint-mary',                          'MISSIONARIES',         'TRD'),  -- Reine des Apôtres, patronne de nombreuses congrégations missionnaires
+  ('saint-mary',                          'PREGNANT_WOMEN',       'TRD'),  -- modèle de maternité
 
   -- ── JOSEPH ───────────────────────────────────────────────────────────────
   ('saint-joseph',                        'UNIVERSAL_CHURCH',     'OFF'),  -- Pie IX, Quemadmodum Deus, 1870
