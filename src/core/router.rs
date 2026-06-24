@@ -10,4 +10,5 @@ pub fn router() -> Scope {
         .service(modules::root::router::router())
         .service(modules::celebrations::router::router())
         .service(modules::places::router::router())
+        .service(modules::calendars::router::router())
 }
