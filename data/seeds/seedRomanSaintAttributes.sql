@@ -81,6 +81,7 @@ INSERT INTO attributes (code, category) VALUES
 ('STAR',              'symbol'),  -- Étoile (Thomas d'Aquin ; Dominique ; Bruno)
 ('WINGS',             'symbol'),  -- Ailes d'ange (Françoise de Rome – ange visible ; Vincent Ferrier)
 ('BREAD',             'symbol'),  -- Pain (Élisabeth de Hongrie – charité envers les pauvres)
+('VEIL',              'symbol'),  -- Voile (Marie, femmes saintes – modestie et virginité)
 
 -- --- TITRES HAGIOGRAPHIQUES ---
 ('MARTYR',            'title'),   -- A versé son sang pour la foi
@@ -212,6 +213,7 @@ JOIN (VALUES
   ('STAR',              'Star',                   'Thomas Aquinas; star on Dominic''s brow; Bruno''s seven stars.'),
   ('WINGS',             'Angel wings',            'Frances of Rome (visible guardian angel); Vincent Ferrer (angel of Judgment).'),
   ('BREAD',             'Bread',                  'Elizabeth of Hungary, whose alms miraculously became roses.'),
+  ('VEIL',              'Veil',					  'Mary, holy women, and consecrated virgins; modesty and virginity.'),
   -- Titles
   ('MARTYR',            'Martyr',                 'One who shed their blood as witness to the Christian faith.'),
   ('VIRGIN',            'Virgin',                 'Consecrated virginity as total offering to Christ.'),
@@ -343,6 +345,7 @@ JOIN (VALUES
   ('STAR',              'Étoile',                     'Thomas d''Aquin ; étoile sur le front de Dominique ; sept étoiles de Bruno.'),
   ('WINGS',             'Ailes d''ange',              'Françoise de Rome (ange gardien visible) ; Vincent Ferrier (ange du Jugement).'),
   ('BREAD',             'Pain',                       'Élisabeth de Hongrie, dont les aumônes se changèrent miraculeusement en roses.'),
+  ('VEIL',              'Voile',                      'Marie, femmes saintes et vierges consacrées ; modestie et virginité.'),
   -- Titres
   ('MARTYR',            'Martyr',                     'Celui ou celle qui a versé son sang en témoignage de la foi chrétienne.'),
   ('VIRGIN',            'Vierge',                     'Virginité consacrée comme offrande totale au Christ.'),
@@ -474,6 +477,7 @@ JOIN (VALUES
   ('STAR',              'Stella',                 'Thomas Aquinas; stella in fronte Dominici; septem stellae Brunonis.'),
   ('WINGS',             'Alae angelicae',         'Francisca Romana (angelus visibilis); Vincentius Ferrarius (angelus Iudicii).'),
   ('BREAD',             'Panis',                  'Elisabeth Hungariae, cuius eleemosynae in rosas mirabiliter conversae sunt.'),
+  ('VEIL',              'Velum',                  'Maria, sanctae feminae et virgines consecratae; modestia et virginitas.'),
   -- Tituli
   ('MARTYR',            'Martyr',                 'Qui sanguinem pro fide christiana effudit.'),
   ('VIRGIN',            'Virgo',                  'Virginitas consecrata tamquam oblatio totalis Christo.'),
@@ -550,6 +554,8 @@ FROM (VALUES
   ('saint-mary', 'STAR'),
   ('saint-mary', 'SCAPULAR'),
   ('saint-mary', 'VIRGIN'),
+  ('saint-mary', 'VEIL'),
+  ('saint-mary', 'CHILD_JESUS'),
 
   -- Basil the Great & Gregory Nazianzen (Jan 2)
   ('saint-basil-the-great', 'BOOK'),
