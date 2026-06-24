@@ -39,7 +39,6 @@ pub async fn get_celebrations_by_date(
     let rows = sqlx::query_as::<_, Celebration>(
         r#"
         SELECT c.id,
-               c.color_id,
                c.is_optional,
                c.rank_id,
                c.feast_id,
@@ -51,9 +50,25 @@ pub async fn get_celebrations_by_date(
                c.notes,
                c.observance_type,
                f.default_name,
-			   f.feast_type
+			   f.feast_type,
+			   lct.label AS liturgical_color_name,
+			   lc.hex_color AS liturgical_color_hex,
+			   lr.code AS rank_code,
+			   lr.precedence AS rank_precedence,
+			   lrt.label AS rank_label
         FROM celebrations c
-        LEFT JOIN feasts f ON c.feast_id = f.id
+        LEFT JOIN feasts f
+        	ON c.feast_id = f.id
+        LEFT JOIN liturgical_colors lc
+        	ON c.color_id = lc.id
+        LEFT JOIN liturgical_color_translations lct
+        	ON lc.id = lct.color_id
+         	AND lct.locale_code = 'en'
+		LEFT JOIN liturgical_ranks lr
+			ON c.rank_id = lr.id
+		LEFT JOIN liturgical_rank_translations lrt
+			ON lr.id = lrt.rank_id
+		 	AND lrt.locale_code = 'en'
         WHERE c.month = $1 AND c.day = $2
         ORDER BY c.rank_id DESC, c.id ASC
         "#,
