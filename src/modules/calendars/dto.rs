@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use sqlx::prelude::FromRow;
+use sqlx::types::chrono::{DateTime, Utc};
 
 #[derive(Debug, Serialize, FromRow)]
 pub struct Calendar {
@@ -8,7 +9,7 @@ pub struct Calendar {
     pub date_system: String,
     pub easter_computation: String,
     pub is_active: bool,
-    pub created_at: String,
+    pub created_at: DateTime<Utc>,
     pub name: String,
     pub description: Option<String>,
 }

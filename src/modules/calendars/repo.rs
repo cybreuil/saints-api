@@ -19,7 +19,7 @@ pub async fn get_calendars(
 			c.created_at,
 			ct.name,
 			ct.description,
-			cp.code
+			cp.code AS parent_code
 		FROM calendars c
 		LEFT JOIN calendar_translations ct ON c.id = ct.calendar_id AND ct.locale_code = $3
 		LEFT JOIN calendars cp ON c.parent_id = cp.id
