@@ -1,5 +1,4 @@
 use sqlx::PgPool;
-use tracing::span::Id;
 
 use super::dto::{SaintDetail, SaintImage, SaintListItem, SaintListItemComplete, SaintPlace};
 

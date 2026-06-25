@@ -399,7 +399,7 @@ CREATE TABLE celebrations (
     month SMALLINT CHECK (month BETWEEN 1 AND 12),
     day SMALLINT CHECK (day BETWEEN 1 AND 31),
     movable_base TEXT,
-    movable_offset_days INTEGER,
+    movable_offset_days SMALLINT,
 
     is_optional BOOLEAN NOT NULL DEFAULT FALSE,
     notes TEXT,

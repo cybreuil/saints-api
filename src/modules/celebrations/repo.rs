@@ -3,10 +3,52 @@ use sqlx::PgPool;
 use super::dto::Celebration;
 use crate::core::error::ApiError;
 
-pub async fn get_celebrations(pool: &PgPool) -> Result<Vec<Celebration>, ApiError> {
+pub async fn get_celebrations(
+    pool: &PgPool,
+    limit: i32,
+    offset: i32,
+    language_code: &str,
+) -> Result<Vec<Celebration>, ApiError> {
     let rows = sqlx::query_as::<_, Celebration>(
-        "SELECT id, color_id, is_optional FROM celebrations ORDER BY id ASC",
+        r#"
+		SELECT c.id,
+			   c.is_optional,
+			   c.rank_id,
+			   c.feast_id,
+			   c.date_kind,
+			   c.month,
+			   c.day,
+			   c.movable_base,
+			   c.movable_offset_days,
+			   c.notes,
+			   c.observance_type,
+			   f.default_name,
+			   f.feast_type,
+			   lct.label AS liturgical_color_name,
+			   lc.hex_color AS liturgical_color_hex,
+			   lr.code AS rank_code,
+			   lr.precedence AS rank_precedence,
+			   lrt.label AS rank_label
+		FROM celebrations c
+		LEFT JOIN feasts f
+			ON c.feast_id = f.id
+		LEFT JOIN liturgical_colors lc
+			ON c.color_id = lc.id
+		LEFT JOIN liturgical_color_translations lct
+			ON lc.id = lct.color_id
+		 	AND lct.locale_code = $3
+		LEFT JOIN liturgical_ranks lr
+			ON c.rank_id = lr.id
+		LEFT JOIN liturgical_rank_translations lrt
+			ON lr.id = lrt.rank_id
+		 	AND lrt.locale_code = $3
+		ORDER BY c.rank_id DESC, c.id ASC
+		LIMIT $1 OFFSET $2
+		"#,
     )
+    .bind(limit)
+    .bind(offset)
+    .bind(language_code)
     .fetch_all(pool)
     .await?;
 
@@ -79,4 +121,12 @@ pub async fn get_celebrations_by_date(
     .await?;
 
     Ok(rows)
+}
+
+pub async fn count_celebrations(pool: &PgPool) -> Result<i64, ApiError> {
+    let count = sqlx::query_scalar!(r#"SELECT COUNT(*) as "count!" FROM celebrations"#)
+        .fetch_one(pool)
+        .await?;
+
+    Ok(count)
 }

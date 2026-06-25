@@ -1,13 +1,37 @@
-use super::dto::Celebration;
-use super::repo;
-use crate::core::error::ApiError;
 use chrono::Utc;
 use sqlx::PgPool;
 
-pub async fn get_celebrations(pool: &PgPool) -> Result<Vec<Celebration>, ApiError> {
-    let celebrations = repo::get_celebrations(pool).await?;
+use super::dto::Celebration;
+use super::repo;
+use crate::core::error::ApiError;
+use crate::core::pagination::{Paginated, Pagination};
+use crate::core::validation;
 
-    Ok(celebrations)
+pub async fn get_celebrations(
+    pool: &PgPool,
+    page: i32,
+    per_page: i32,
+    language_code: Option<&str>,
+) -> Result<Paginated<Celebration>, ApiError> {
+    let lang = validation::resolve_locale(language_code)?;
+
+    let p = Pagination::new(Some(page), Some(per_page));
+    let total = repo::count_celebrations(pool).await? as i32;
+
+    if total == 0 {
+        return Ok(Paginated::empty(&p));
+    }
+    if p.beyond_total(total) {
+        return Err(ApiError::UnprocessableEntity(format!(
+            "Page {} is out of range. Total pages: {}",
+            p.page,
+            p.total_pages(total)
+        )));
+    }
+
+    let data = repo::get_celebrations(pool, p.per_page, p.offset, lang).await?;
+
+    Ok(Paginated::new(&p, total, data))
 }
 
 pub async fn celebration_of_today(pool: &PgPool) -> Result<Celebration, ApiError> {

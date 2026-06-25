@@ -8,6 +8,13 @@ pub struct DateQuery {
     pub day: Option<i16>,
 }
 
+#[derive(Debug, Deserialize)]
+pub struct CelebrationQuery {
+    pub page: Option<i32>,
+    pub per_page: Option<i32>,
+    pub language_code: Option<String>,
+}
+
 #[derive(Debug, Serialize, FromRow)]
 pub struct Celebration {
     pub id: i32,

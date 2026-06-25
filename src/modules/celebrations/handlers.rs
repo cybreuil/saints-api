@@ -7,8 +7,17 @@ use crate::core::error::ApiError;
 
 use super::service;
 
-pub async fn get_celebrations(pool: web::Data<PgPool>) -> Result<HttpResponse, ApiError> {
-    let result = service::get_celebrations(pool.get_ref()).await?;
+pub async fn get_celebrations(
+    pool: web::Data<PgPool>,
+    query: web::Query<dto::CelebrationQuery>,
+) -> Result<HttpResponse, ApiError> {
+    let result = service::get_celebrations(
+        pool.get_ref(),
+        query.page.unwrap_or(1),
+        query.per_page.unwrap_or(20),
+        query.language_code.as_deref(),
+    )
+    .await?;
 
     Ok(HttpResponse::Ok().json(result))
 }
