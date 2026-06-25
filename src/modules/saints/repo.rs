@@ -1,4 +1,5 @@
 use sqlx::PgPool;
+use tracing::span::Id;
 
 use super::dto::{SaintDetail, SaintImage, SaintListItem, SaintListItemComplete, SaintPlace};
 
@@ -93,7 +94,7 @@ pub async fn get_saint_by_slug(
     Ok(row)
 }
 
-pub async fn get_saint_images(pool: &PgPool, slug: &str) -> Result<Vec<SaintImage>, ApiError> {
+pub async fn get_saint_images(pool: &PgPool, saint_id: i32) -> Result<Vec<SaintImage>, ApiError> {
     let rows = sqlx::query_as::<_, SaintImage>(
         r#"
     SELECT
@@ -113,12 +114,11 @@ pub async fn get_saint_images(pool: &PgPool, slug: &str) -> Result<Vec<SaintImag
         si.is_primary
     FROM saint_images si
     JOIN images i ON i.id = si.image_id
-    JOIN saints s ON s.id = si.saint_id
-    WHERE s.slug = $1
+    	WHERE si.saint_id = $1
     ORDER BY si.is_primary DESC, si.sort_order ASC
     "#,
     )
-    .bind(slug)
+    .bind(saint_id)
     .fetch_all(pool)
     .await?;
 
@@ -127,7 +127,7 @@ pub async fn get_saint_images(pool: &PgPool, slug: &str) -> Result<Vec<SaintImag
 
 pub async fn get_saint_places(
     pool: &PgPool,
-    slug: &str,
+    saint_id: i32,
     language_code: &str,
 ) -> Result<Vec<SaintPlace>, ApiError> {
     let rows = sqlx::query_as::<_, SaintPlace>(
@@ -142,7 +142,7 @@ pub async fn get_saint_places(
     FROM saints s
     JOIN places p ON p.id = s.place_of_birth_id
     LEFT JOIN place_translations pt ON pt.place_id = p.id AND pt.locale_code = $1
-    WHERE s.slug = $2
+    WHERE s.id = $2
 
     UNION ALL
     SELECT 'death' AS role,
@@ -150,7 +150,7 @@ pub async fn get_saint_places(
     FROM saints s
     JOIN places p ON p.id = s.place_of_death_id
     LEFT JOIN place_translations pt ON pt.place_id = p.id AND pt.locale_code = $1
-    WHERE s.slug = $2
+    WHERE s.id = $2
 
     UNION ALL
     SELECT 'activity' AS role,
@@ -158,11 +158,11 @@ pub async fn get_saint_places(
     FROM saints s
     JOIN places p ON p.id = s.place_of_activity_id
     LEFT JOIN place_translations pt ON pt.place_id = p.id AND pt.locale_code = $1
-    WHERE s.slug = $2
+    WHERE s.id = $2
     "#,
     )
     .bind(language_code)
-    .bind(slug)
+    .bind(saint_id)
     .fetch_all(pool)
     .await?;
     Ok(rows)
@@ -170,7 +170,7 @@ pub async fn get_saint_places(
 
 pub async fn get_saint_attributes(
     pool: &PgPool,
-    slug: &str,
+    saint_id: i32,
     language_code: &str,
 ) -> Result<Vec<super::dto::SaintAttribute>, ApiError> {
     let rows = sqlx::query_as::<_, super::dto::SaintAttribute>(
@@ -184,12 +184,12 @@ pub async fn get_saint_attributes(
 	JOIN saint_attributes sa ON sa.saint_id = s.id
 	JOIN attributes a ON a.id = sa.attribute_id
 	LEFT JOIN attribute_translations at ON at.attribute_id = a.id AND at.locale_code = $1
-	WHERE s.slug = $2
+	WHERE s.id = $2
 	ORDER BY a.category, a.code
 	"#,
     )
     .bind(language_code)
-    .bind(slug)
+    .bind(saint_id)
     .fetch_all(pool)
     .await?;
 
@@ -198,7 +198,7 @@ pub async fn get_saint_attributes(
 
 pub async fn get_saint_patronages(
     pool: &PgPool,
-    slug: &str,
+    saint_id: i32,
     language_code: &str,
 ) -> Result<Vec<super::dto::SaintPatronage>, ApiError> {
     let rows = sqlx::query_as::<_, super::dto::SaintPatronage>(
@@ -211,12 +211,12 @@ pub async fn get_saint_patronages(
 	JOIN saint_patronages sp ON sp.saint_id = s.id
 	JOIN patronages p ON p.id = sp.patronage_id
 	LEFT JOIN patronage_translations pt ON pt.patronage_id = p.id AND pt.locale_code = $1
-	WHERE s.slug = $2
+	WHERE s.id = $2
 	ORDER BY p.code
 	"#,
     )
     .bind(language_code)
-    .bind(slug)
+    .bind(saint_id)
     .fetch_all(pool)
     .await?;
 
