@@ -34,7 +34,6 @@ pub struct SaintListItemComplete {
 
 #[derive(Debug, Deserialize)]
 pub struct SaintQuery {
-    // pub locale: Option<String>,
     pub page: Option<i32>,
     pub per_page: Option<i32>,
     pub language_code: Option<String>,

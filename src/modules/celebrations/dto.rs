@@ -2,16 +2,19 @@ use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 
 #[derive(Debug, Deserialize)]
-pub struct DateQuery {
+pub struct CelebrationByDateQuery {
     pub year: Option<i32>,
     pub month: Option<i16>,
     pub day: Option<i16>,
+    pub calendar_code: Option<String>,
+    pub language_code: Option<String>,
 }
 
 #[derive(Debug, Deserialize)]
-pub struct CelebrationQuery {
+pub struct CelebrationListQuery {
     pub page: Option<i32>,
     pub per_page: Option<i32>,
+    pub calendar_code: Option<String>,
     pub language_code: Option<String>,
 }
 
@@ -30,6 +33,8 @@ pub struct Celebration {
     pub observance_type: Option<String>,
     pub default_name: Option<String>,
     pub feast_type: Option<String>,
+    pub feast_name: Option<String>,
+    pub feast_description: Option<String>,
     pub liturgical_color_name: Option<String>,
     pub liturgical_color_hex: Option<String>,
     pub rank_code: Option<String>,

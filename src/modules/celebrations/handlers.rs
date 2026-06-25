@@ -9,12 +9,13 @@ use super::service;
 
 pub async fn get_celebrations(
     pool: web::Data<PgPool>,
-    query: web::Query<dto::CelebrationQuery>,
+    query: web::Query<dto::CelebrationListQuery>,
 ) -> Result<HttpResponse, ApiError> {
     let result = service::get_celebrations(
         pool.get_ref(),
         query.page.unwrap_or(1),
         query.per_page.unwrap_or(20),
+        query.calendar_code.as_deref(),
         query.language_code.as_deref(),
     )
     .await?;
@@ -30,19 +31,24 @@ pub async fn celebration_of_today(pool: web::Data<PgPool>) -> Result<HttpRespons
 
 pub async fn get_celebrations_by_date(
     pool: web::Data<PgPool>,
-    query: web::Query<dto::DateQuery>,
+    query: web::Query<dto::CelebrationByDateQuery>,
 ) -> Result<HttpResponse, ApiError> {
     // Fallback sur now need check timezones
     let now = Utc::now();
+
     let month = query.month.unwrap_or(now.month() as i16);
     let day = query.day.unwrap_or(now.day() as i16);
+    let language_code = query.language_code.as_deref();
+    let calendar_code = query.calendar_code.as_deref();
 
     if month < 1 || month > 12 || day < 1 || day > 31 {
         return Err(ApiError::BadRequest("Invalid month or day".to_string()));
     }
 
     // Maybe i should add cache control headers here, but for now, let's just return the result
-    let result = service::get_celebrations_by_date(pool.get_ref(), month, day).await?;
+    let result =
+        service::get_celebrations_by_date(pool.get_ref(), month, day, language_code, calendar_code)
+            .await?;
 
     Ok(HttpResponse::Ok().json(result))
 }

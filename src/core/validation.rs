@@ -2,6 +2,7 @@ use crate::core::error::ApiError;
 
 const DEFAULT_LOCALE: &str = "en";
 const MAX_SLUG_LEN: usize = 200;
+const DEFAULT_CALENDAR: &str = "ROMAN_GENERAL";
 
 // Utility fonctions
 // Resolve the locale from the language code, validating it as a primary language code
@@ -34,5 +35,25 @@ pub fn resolve_slug(slug: &str) -> Result<&str, ApiError> {
         Ok(slug)
     } else {
         Err(ApiError::BadRequest("Invalid slug".to_string()))
+    }
+}
+
+pub fn resolve_calendar(code: Option<&str>) -> Result<&str, ApiError> {
+    let c = match code {
+        None | Some("") => DEFAULT_CALENDAR,
+        Some(v) => v,
+    };
+
+    // validation légère : format + convention
+    let valid = c.len() <= 50
+        && c.chars()
+            .all(|ch| ch.is_ascii_uppercase() || ch == '_' || ch.is_ascii_digit())
+        && !c.starts_with('_')
+        && !c.ends_with('_');
+
+    if valid {
+        Ok(c)
+    } else {
+        Err(ApiError::BadRequest("Invalid calendar code".to_string()))
     }
 }

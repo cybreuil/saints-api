@@ -11,9 +11,11 @@ pub async fn get_celebrations(
     pool: &PgPool,
     page: i32,
     per_page: i32,
+    cal: Option<&str>,
     language_code: Option<&str>,
 ) -> Result<Paginated<Celebration>, ApiError> {
     let lang = validation::resolve_locale(language_code)?;
+    let cal = validation::resolve_calendar(cal)?;
 
     let p = Pagination::new(Some(page), Some(per_page));
     let total = repo::count_celebrations(pool).await? as i32;
@@ -29,7 +31,7 @@ pub async fn get_celebrations(
         )));
     }
 
-    let data = repo::get_celebrations(pool, p.per_page, p.offset, lang).await?;
+    let data = repo::get_celebrations(pool, p.per_page, p.offset, cal, lang).await?;
 
     Ok(Paginated::new(&p, total, data))
 }
@@ -46,7 +48,13 @@ pub async fn get_celebrations_by_date(
     pool: &PgPool,
     month: i16,
     day: i16,
+    language_code: Option<&str>,
+    calendar_code: Option<&str>,
 ) -> Result<Vec<Celebration>, ApiError> {
-    let rows = repo::get_celebrations_by_date(pool, month, day).await?;
+    let lang = validation::resolve_locale(language_code)?;
+    let cal = validation::resolve_calendar(calendar_code)?;
+
+    let rows = repo::get_celebrations_by_date(pool, month, day, lang, cal).await?;
+
     Ok(rows)
 }
