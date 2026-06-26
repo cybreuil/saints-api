@@ -37,3 +37,29 @@ Need mapping query errors on apierrors
 + need checking on differences between rome & vatican for places
 
 + cache control
+
++++ logique celebration en table pour l'année ?
+Une autre possibilité (que beaucoup de projets liturgiques utilisent)
+
+Au démarrage de l'application (ou via un cron annuel), tu génères toutes les célébrations mobiles de l'année et tu les stockes dans une table du type :
+
+celebration_occurrences
+-----------------------
+celebration_id
+date
+calendar_id
+
+Par exemple :
+
+2026-04-05  Easter
+2026-04-06  Monday in Easter Octave
+2026-05-14  Ascension
+2026-06-04  Corpus Christi
+
+Ensuite ton endpoint devient simplement :
+
+SELECT ...
+FROM celebration_occurrences
+WHERE date = $1;
+
+C'est extrêmement rapide et toute la logique de calcul est déplacée dans une étape de génération.

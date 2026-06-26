@@ -83,7 +83,7 @@ pub async fn celebration_of_today(
     Ok(rows)
 }
 
-pub async fn get_celebrations_by_date(
+pub async fn get_fixed_celebrations_by_date(
     pool: &PgPool,
     month: i16,
     day: i16,
@@ -133,7 +133,8 @@ pub async fn get_celebrations_by_date(
 			AND cal.code = $4
 		WHERE c.month = $1
 			AND c.day = $2
-        ORDER BY c.rank_id DESC, c.id ASC
+			AND c.date_kind = 'fixed'
+        ORDER BY c.rank_precedence ASC, c.id ASC
         "#,
     )
     .bind(month)
@@ -146,8 +147,66 @@ pub async fn get_celebrations_by_date(
     Ok(rows)
 }
 
+pub async fn get_moveable_celebrations(
+    pool: &PgPool,
+    language_code: &str,
+    calendar_code: &str,
+) -> Result<Vec<Celebration>, ApiError> {
+    let rows = sqlx::query_as::<_, Celebration>(
+        r#"
+    SELECT c.id,
+           c.is_optional,
+           c.rank_id,
+           c.feast_id,
+           c.date_kind,
+           c.month,
+           c.day,
+           c.movable_base,
+           c.movable_offset_days,
+           c.notes,
+           c.observance_type,
+           f.default_name,
+           f.feast_type,
+           ft.name AS feast_name,
+           ft.description AS feast_description,
+           lct.label AS liturgical_color_name,
+           lc.hex_color AS liturgical_color_hex,
+		   lr.code AS rank_code,
+		   lr.precedence AS rank_precedence,
+		   lrt.label AS rank_label
+    FROM celebrations c
+    LEFT JOIN feasts f
+    	ON c.feast_id = f.id
+    LEFT JOIN feast_translations ft
+		ON f.id = ft.feast_id
+		AND ft.locale_code = $1
+    LEFT JOIN liturgical_colors lc
+    	ON c.color_id = lc.id
+    LEFT JOIN liturgical_color_translations lct
+    	ON lc.id = lct.color_id
+    	AND lct.locale_code = $1
+	LEFT JOIN liturgical_ranks lr
+		ON c.rank_id = lr.id
+	LEFT JOIN liturgical_rank_translations lrt
+		ON lr.id = lrt.rank_id
+	 	AND lrt.locale_code = $1
+	INNER JOIN calendars cal
+		ON c.calendar_id = cal.id
+		AND cal.code = $2
+	WHERE c.date_kind = 'moveable'
+    ORDER BY c.rank_id DESC, c.id ASC
+    "#,
+    )
+    .bind(language_code)
+    .bind(calendar_code)
+    .fetch_all(pool)
+    .await?;
+
+    Ok(rows)
+}
+
 pub async fn count_celebrations(pool: &PgPool) -> Result<i64, ApiError> {
-    let count = sqlx::query_scalar!(r#"SELECT COUNT(*) as "count!" FROM celebrations"#)
+    let count = sqlx::query_scalar!(r#"SELECT COUNT(*) as "count!" FROM celebrations"#,)
         .fetch_one(pool)
         .await?;
 

@@ -54,7 +54,8 @@ pub async fn get_celebrations_by_date(
     let lang = validation::resolve_locale(language_code)?;
     let cal = validation::resolve_calendar(calendar_code)?;
 
-    let rows = repo::get_celebrations_by_date(pool, month, day, lang, cal).await?;
+    let fixed = repo::get_fixed_celebrations_by_date(pool, month, day, lang, cal).await?;
+    let moveable = repo::get_moveable_celebrations(pool, lang, cal).await?;
 
-    Ok(rows)
+    let easter = compute_easter(Utc::now().year());
 }
