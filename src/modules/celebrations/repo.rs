@@ -117,6 +117,7 @@ pub async fn get_celebrations_by_date(
         	ON c.feast_id = f.id
         LEFT JOIN feast_translations ft
 			ON f.id = ft.feast_id
+			AND ft.locale_code = $3
         LEFT JOIN liturgical_colors lc
         	ON c.color_id = lc.id
         LEFT JOIN liturgical_color_translations lct
@@ -127,10 +128,11 @@ pub async fn get_celebrations_by_date(
 		LEFT JOIN liturgical_rank_translations lrt
 			ON lr.id = lrt.rank_id
 		 	AND lrt.locale_code = $3
-		LEFT JOIN calendars cal
+		INNER JOIN calendars cal
 			ON c.calendar_id = cal.id
 			AND cal.code = $4
-        WHERE c.month = $1 AND c.day = $2
+		WHERE c.month = $1
+			AND c.day = $2
         ORDER BY c.rank_id DESC, c.id ASC
         "#,
     )
