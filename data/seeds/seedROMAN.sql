@@ -2242,40 +2242,45 @@ JOIN (VALUES
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
--- DATE RULES (relative to Easter Sunday)
-INSERT INTO feast_dates (feast_id, calendar_id, date_kind, movable_base, movable_offset_days, notes)
-SELECT f.id, c.id, 'movable', 'EASTER_SUNDAY', x.offset_days, 'Computed by API (Easter octave)'
-FROM feasts f
-JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN (VALUES
-('easter-sunday-of-the-resurrection-of-the-lord', 0),
-('monday-in-the-octave-of-easter', 1),
-('tuesday-in-the-octave-of-easter', 2),
-('wednesday-in-the-octave-of-easter', 3),
-('thursday-in-the-octave-of-easter', 4),
-('friday-in-the-octave-of-easter', 5),
-('saturday-in-the-octave-of-easter', 6),
-('second-sunday-of-easter-divine-mercy-sunday', 7)
-) AS x(slug, offset_days)
-ON f.slug = x.slug;
-
--- CELEBRATIONS (all octave, including Easter Sunday)
-INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, observance_type, is_optional, notes)
-SELECT f.id, c.id, r.id, lc.id, 'octave', FALSE, 'Roman General Calendar (Easter Octave)'
+-- CELEBRATIONS (EASTER OCTAVE) WITH DATES UPDATE FROM feast_dates !!!
+INSERT INTO celebrations (
+    feast_id,
+    calendar_id,
+    rank_id,
+    color_id,
+    date_kind,
+    movable_base,
+    movable_offset_days,
+    observance_type,
+    is_optional,
+    notes
+)
+SELECT
+    f.id,
+    c.id,
+    r.id,
+    lc.id,
+    'movable',
+    'EASTER_SUNDAY',
+    x.offset_days,
+    'octave',
+    FALSE,
+    'Roman General Calendar (Easter Octave)'
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SOLEMNITY'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
-WHERE f.slug IN (
-  'easter-sunday-of-the-resurrection-of-the-lord',
-  'monday-in-the-octave-of-easter',
-  'tuesday-in-the-octave-of-easter',
-  'wednesday-in-the-octave-of-easter',
-  'thursday-in-the-octave-of-easter',
-  'friday-in-the-octave-of-easter',
-  'saturday-in-the-octave-of-easter',
-  'second-sunday-of-easter-divine-mercy-sunday'
-)
+JOIN (VALUES
+    ('easter-sunday-of-the-resurrection-of-the-lord', 0),
+    ('monday-in-the-octave-of-easter', 1),
+    ('tuesday-in-the-octave-of-easter', 2),
+    ('wednesday-in-the-octave-of-easter', 3),
+    ('thursday-in-the-octave-of-easter', 4),
+    ('friday-in-the-octave-of-easter', 5),
+    ('saturday-in-the-octave-of-easter', 6),
+    ('second-sunday-of-easter-divine-mercy-sunday', 7)
+) AS x(slug, offset_days)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================

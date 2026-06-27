@@ -134,7 +134,7 @@ pub async fn get_fixed_celebrations_by_date(
 		WHERE c.month = $1
 			AND c.day = $2
 			AND c.date_kind = 'fixed'
-        ORDER BY c.rank_precedence ASC, c.id ASC
+        ORDER BY rank_precedence ASC, c.id ASC
         "#,
     )
     .bind(month)
