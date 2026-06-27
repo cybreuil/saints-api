@@ -1,15 +1,26 @@
-use chrono::{Duration, NaiveDate};
+use chrono::{Datelike, Duration, NaiveDate, Weekday};
 
 use super::error::ApiError;
 
-// List of moveable
-// SUNDAY_AFTER_EPIPHANY
+// List of actual movable dates
+// EASTER_SUNDAY
 // PALM_SUNDAY
 // DIVINE_MERCY_SUNDAY
+// PENTECOST
+// TRINITY_SUNDAY
+// SECOND_SUNDAY_AFTER_PENTECOST
+// FIRST_ADVENT_SUNDAY
+// SUNDAY_AFTER_EPIPHANY
 // SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30
-// ... WIP
 
-/// Computes the date of Easter Sunday for the given year.
+pub enum MovableBase {
+    Easter,
+    Christmas,
+    Advent,
+    Epiphany,
+}
+
+/// Computes the date of Easter Sunday for the given year for the Gregorian calendar.
 ///
 /// Uses the Meeus/Jones/Butcher Gregorian algorithm.
 pub fn easter_sunday(year: i32) -> NaiveDate {
@@ -30,7 +41,23 @@ pub fn easter_sunday(year: i32) -> NaiveDate {
     let day = ((h + l - 7 * m + 114) % 31) + 1;
 
     NaiveDate::from_ymd_opt(year, month as u32, day as u32)
-        .expect("Failed to compute Easter Sunday")
+        .expect("Failed to compute Gregorian Easter Sunday")
+}
+
+/// Computes the date of Easter Sunday for the given year for the Julian calendar.
+///
+/// Uses the Meeus/Jones/Butcher Julian algorithm.
+pub fn easter_sunday_julian(year: i32) -> NaiveDate {
+    let a = year % 4;
+    let b = year % 7;
+    let c = year % 19;
+    let d = (19 * c + 15) % 30;
+    let e = (2 * a + 4 * b - d + 34) % 7;
+    let month = (d + e + 114) / 31;
+    let day = ((d + e + 114) % 31) + 1;
+
+    NaiveDate::from_ymd_opt(year, month as u32, day as u32)
+        .expect("Failed to compute Julian Easter Sunday")
 }
 
 /// Returns a date relative to Easter Sunday.
@@ -38,32 +65,115 @@ pub fn from_easter(year: i32, offset_days: i16) -> NaiveDate {
     easter_sunday(year) + Duration::days(offset_days as i64)
 }
 
-/// Returns the date of Christmas Day.
-pub fn christmas(year: i32) -> NaiveDate {
-    NaiveDate::from_ymd_opt(year, 12, 25).expect("Failed to construct Christmas date")
+/// Returns a date relative to Easter Sunday in the Julian calendar.
+pub fn from_easter_julian(year: i32, offset_days: i16) -> NaiveDate {
+    easter_sunday_julian(year) + Duration::days(offset_days as i64)
 }
 
-/// Returns a date relative to Christmas Day.
-pub fn from_christmas(year: i32, offset_days: i16) -> NaiveDate {
-    christmas(year) + Duration::days(offset_days as i64)
+/// Returns the date of Palm Sunday for the given year.
+pub fn palm_sunday(year: i32) -> NaiveDate {
+    from_easter(year, -7)
+}
+
+/// Returns the date of Divine Mercy Sunday for the given year.
+pub fn divine_mercy_sunday(year: i32) -> NaiveDate {
+    from_easter(year, 7)
+}
+
+/// Returns the date of Pentecost for the given year.
+pub fn pentecost(year: i32) -> NaiveDate {
+    from_easter(year, 49)
+}
+
+/// Returns the date of Trinity Sunday for the given year.
+pub fn trinity_sunday(year: i32) -> NaiveDate {
+    from_easter(year, 56)
+}
+
+/// Returns the date of the Second Sunday after Pentecost.
+pub fn second_sunday_after_pentecost(year: i32) -> NaiveDate {
+    from_easter(year, 63)
+}
+
+/// Returns the date of the First Sunday of Advent.
+///
+/// This is the Sunday falling between November 27 and December 3 inclusive.
+pub fn first_advent_sunday(year: i32) -> NaiveDate {
+    let mut date = NaiveDate::from_ymd_opt(year, 11, 27).unwrap();
+
+    while date.weekday() != Weekday::Sun {
+        date += Duration::days(1);
+    }
+
+    date
+}
+
+/// Returns the Sunday after Epiphany.
+///
+/// Assumes Epiphany is fixed on January 6.
+pub fn sunday_after_epiphany(year: i32) -> NaiveDate {
+    let mut date = NaiveDate::from_ymd_opt(year, 1, 7).unwrap();
+
+    while date.weekday() != Weekday::Sun {
+        date += Duration::days(1);
+    }
+
+    date
+}
+
+/// Returns the Sunday within the Christmas Octave,
+/// or December 30 if there is no Sunday.
+///
+/// The Christmas Octave is December 26–31.
+pub fn sunday_within_christmas_octave_or_dec30(year: i32) -> NaiveDate {
+    let mut date = NaiveDate::from_ymd_opt(year, 12, 26).unwrap();
+
+    while date <= NaiveDate::from_ymd_opt(year, 12, 31).unwrap() {
+        if date.weekday() == Weekday::Sun {
+            return date;
+        }
+        date += Duration::days(1);
+    }
+
+    NaiveDate::from_ymd_opt(year, 12, 30).unwrap()
+}
+
+/// Universal function to offset a date by a number of days. This can be used for any movable date.
+pub fn offset(date: NaiveDate, days: i16) -> NaiveDate {
+    date + Duration::days(days as i64)
 }
 
 /// Resolves a movable date from its base and day offset.
 ///
-/// Supported bases:
-/// - `easter`
-/// - `christmas`
+/// For all base movable dates listed above
 pub fn resolve_movable_date(
     year: i32,
-    base: &str,
+    base: MovableBase,
     offset_days: i16,
-) -> Result<NaiveDate, ApiError> {
+    is_julian: bool,
+) -> NaiveDate {
     match base {
-        "easter" => Ok(from_easter(year, offset_days)),
-        "christmas" => Ok(from_christmas(year, offset_days)),
-        _ => Err(ApiError::InternalError(format!(
-            "Unknown movable base '{}'",
-            base
-        ))),
+        MovableBase::Easter => {
+            if is_julian {
+                from_easter_julian(year, offset_days)
+            } else {
+                from_easter(year, offset_days)
+            }
+        }
+        MovableBase::Christmas => {
+            NaiveDate::from_ymd_opt(year, 12, 25).expect("Failed to compute Christmas date")
+                + Duration::days(offset_days as i64)
+        }
+        MovableBase::Advent => {
+            // First Sunday of Advent is the fourth Sunday before Christmas
+            let christmas =
+                NaiveDate::from_ymd_opt(year, 12, 25).expect("Failed to compute Christmas date");
+            let first_advent_sunday = christmas - Duration::days(21);
+            first_advent_sunday + Duration::days(offset_days as i64)
+        }
+        MovableBase::Epiphany => {
+            NaiveDate::from_ymd_opt(year, 1, 6).expect("Failed to compute Epiphany date")
+                + Duration::days(offset_days as i64)
+        }
     }
 }
