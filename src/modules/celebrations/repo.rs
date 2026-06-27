@@ -193,7 +193,7 @@ pub async fn get_movable_celebrations(
 	INNER JOIN calendars cal
 		ON c.calendar_id = cal.id
 		AND cal.code = $2
-	WHERE c.date_kind = 'moveable'
+	WHERE c.date_kind = 'movable'
     ORDER BY c.rank_id DESC, c.id ASC
     "#,
     )
