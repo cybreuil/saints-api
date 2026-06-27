@@ -1,9 +1,10 @@
-use chrono::Utc;
+use chrono::{Datelike, Utc};
 use sqlx::PgPool;
 
 use super::dto::Celebration;
 use super::repo;
 use crate::core::error::ApiError;
+use crate::core::movable_dates::{resolve_movable_date, MovableBase};
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
 
@@ -46,6 +47,7 @@ pub async fn celebration_of_today(pool: &PgPool) -> Result<Celebration, ApiError
 
 pub async fn get_celebrations_by_date(
     pool: &PgPool,
+    year: i32,
     month: i16,
     day: i16,
     language_code: Option<&str>,
@@ -54,8 +56,37 @@ pub async fn get_celebrations_by_date(
     let lang = validation::resolve_locale(language_code)?;
     let cal = validation::resolve_calendar(calendar_code)?;
 
-    let fixed = repo::get_fixed_celebrations_by_date(pool, month, day, lang, cal).await?;
-    let moveable = repo::get_moveable_celebrations(pool, lang, cal).await?;
+    // 1. FIXED (DB)
+    let mut celebrations =
+        repo::get_fixed_celebrations_by_date(pool, month, day, lang, cal).await?;
 
-    let easter = compute_easter(Utc::now().year());
+    // 2. MOVABLE (DB)
+    let movable_celebrations = repo::get_movable_celebrations(pool, lang, cal).await?;
+
+    for celebration in movable_celebrations {
+        let base_str = match &celebration.movable_base {
+            Some(b) => b.as_str(),
+            None => continue,
+        };
+
+        let base = match MovableBase::try_from(base_str) {
+            Ok(b) => b,
+            Err(_) => continue,
+        };
+
+        let date = resolve_movable_date(
+            year,
+            base,
+            celebration.movable_offset_days.unwrap_or(0),
+            crate::core::movable_dates::CalendarType::Gregorian,
+        );
+
+        if date.month() == month as u32 && date.day() == day as u32 {
+            celebrations.push(celebration);
+        }
+    }
+
+    celebrations.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
+
+    Ok(celebrations)
 }

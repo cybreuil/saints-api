@@ -28,6 +28,43 @@ pub enum MovableBase {
     SundayWithinChristmasOctaveOrDec30,
 }
 
+impl TryFrom<&str> for MovableBase {
+    type Error = ();
+
+    fn try_from(value: &str) -> Result<Self, Self::Error> {
+        match value {
+            "EASTER_SUNDAY" => Ok(Self::EasterSunday),
+            "PALM_SUNDAY" => Ok(Self::PalmSunday),
+            "DIVINE_MERCY_SUNDAY" => Ok(Self::DivineMercySunday),
+            "PENTECOST" => Ok(Self::Pentecost),
+            "TRINITY_SUNDAY" => Ok(Self::TrinitySunday),
+            "SECOND_SUNDAY_AFTER_PENTECOST" => Ok(Self::SecondSundayAfterPentecost),
+            "FIRST_ADVENT_SUNDAY" => Ok(Self::FirstAdventSunday),
+            "SUNDAY_AFTER_EPIPHANY" => Ok(Self::SundayAfterEpiphany),
+            "SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30" => {
+                Ok(Self::SundayWithinChristmasOctaveOrDec30)
+            }
+            _ => Err(()),
+        }
+    }
+}
+
+impl MovableBase {
+    pub fn as_str(&self) -> &'static str {
+        match self {
+            Self::EasterSunday => "EASTER_SUNDAY",
+            Self::PalmSunday => "PALM_SUNDAY",
+            Self::DivineMercySunday => "DIVINE_MERCY_SUNDAY",
+            Self::Pentecost => "PENTECOST",
+            Self::TrinitySunday => "TRINITY_SUNDAY",
+            Self::SecondSundayAfterPentecost => "SECOND_SUNDAY_AFTER_PENTECOST",
+            Self::FirstAdventSunday => "FIRST_ADVENT_SUNDAY",
+            Self::SundayAfterEpiphany => "SUNDAY_AFTER_EPIPHANY",
+            Self::SundayWithinChristmasOctaveOrDec30 => "SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30",
+        }
+    }
+}
+
 pub enum CalendarType {
     Gregorian,
     Julian,

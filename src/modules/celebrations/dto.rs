@@ -1,6 +1,8 @@
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 
+use crate::core::movable_dates::MovableBase;
+
 #[derive(Debug, Deserialize)]
 pub struct CelebrationByDateQuery {
     pub year: Option<i32>,

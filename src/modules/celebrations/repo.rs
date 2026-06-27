@@ -147,7 +147,7 @@ pub async fn get_fixed_celebrations_by_date(
     Ok(rows)
 }
 
-pub async fn get_moveable_celebrations(
+pub async fn get_movable_celebrations(
     pool: &PgPool,
     language_code: &str,
     calendar_code: &str,
