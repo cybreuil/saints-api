@@ -1,4 +1,5 @@
 use chrono::{Datelike, Duration, NaiveDate, Weekday};
+use serde::{Deserialize, Serialize};
 
 use super::error::ApiError;
 
@@ -13,11 +14,34 @@ use super::error::ApiError;
 // SUNDAY_AFTER_EPIPHANY
 // SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30
 
+#[derive(Serialize, Deserialize)]
+#[serde(rename_all = "SCREAMING_SNAKE_CASE")]
 pub enum MovableBase {
-    Easter,
-    Christmas,
-    Advent,
-    Epiphany,
+    EasterSunday,
+    PalmSunday,
+    DivineMercySunday,
+    Pentecost,
+    TrinitySunday,
+    SecondSundayAfterPentecost,
+    FirstAdventSunday,
+    SundayAfterEpiphany,
+    SundayWithinChristmasOctaveOrDec30,
+}
+
+pub enum CalendarType {
+    Gregorian,
+    Julian,
+}
+
+pub enum EpiphanyMode {
+    FixedJan6,
+    // 1962: Epiphany is Jan 6, but Sunday After Epiphany logic may depend on rubrics
+    Missal1962,
+}
+
+/// Universal function to offset a date by a number of days. This can be used for any movable date.
+pub fn offset(date: NaiveDate, days: i16) -> NaiveDate {
+    date + Duration::days(days as i64)
 }
 
 /// Computes the date of Easter Sunday for the given year for the Gregorian calendar.
@@ -60,39 +84,29 @@ pub fn easter_sunday_julian(year: i32) -> NaiveDate {
         .expect("Failed to compute Julian Easter Sunday")
 }
 
-/// Returns a date relative to Easter Sunday.
-pub fn from_easter(year: i32, offset_days: i16) -> NaiveDate {
-    easter_sunday(year) + Duration::days(offset_days as i64)
-}
-
-/// Returns a date relative to Easter Sunday in the Julian calendar.
-pub fn from_easter_julian(year: i32, offset_days: i16) -> NaiveDate {
-    easter_sunday_julian(year) + Duration::days(offset_days as i64)
-}
-
 /// Returns the date of Palm Sunday for the given year.
 pub fn palm_sunday(year: i32) -> NaiveDate {
-    from_easter(year, -7)
+    offset(easter_sunday(year), -7)
 }
 
 /// Returns the date of Divine Mercy Sunday for the given year.
 pub fn divine_mercy_sunday(year: i32) -> NaiveDate {
-    from_easter(year, 7)
+    offset(easter_sunday(year), 7)
 }
 
 /// Returns the date of Pentecost for the given year.
 pub fn pentecost(year: i32) -> NaiveDate {
-    from_easter(year, 49)
+    offset(easter_sunday(year), 49)
 }
 
 /// Returns the date of Trinity Sunday for the given year.
 pub fn trinity_sunday(year: i32) -> NaiveDate {
-    from_easter(year, 56)
+    offset(easter_sunday(year), 56)
 }
 
 /// Returns the date of the Second Sunday after Pentecost.
 pub fn second_sunday_after_pentecost(year: i32) -> NaiveDate {
-    from_easter(year, 63)
+    offset(easter_sunday(year), 63)
 }
 
 /// Returns the date of the First Sunday of Advent.
@@ -138,11 +152,6 @@ pub fn sunday_within_christmas_octave_or_dec30(year: i32) -> NaiveDate {
     NaiveDate::from_ymd_opt(year, 12, 30).unwrap()
 }
 
-/// Universal function to offset a date by a number of days. This can be used for any movable date.
-pub fn offset(date: NaiveDate, days: i16) -> NaiveDate {
-    date + Duration::days(days as i64)
-}
-
 /// Resolves a movable date from its base and day offset.
 ///
 /// For all base movable dates listed above
@@ -150,30 +159,24 @@ pub fn resolve_movable_date(
     year: i32,
     base: MovableBase,
     offset_days: i16,
-    is_julian: bool,
+    calendar_type: CalendarType,
 ) -> NaiveDate {
     match base {
-        MovableBase::Easter => {
-            if is_julian {
-                from_easter_julian(year, offset_days)
-            } else {
-                from_easter(year, offset_days)
-            }
+        MovableBase::EasterSunday => match calendar_type {
+            CalendarType::Gregorian => offset(easter_sunday(year), offset_days),
+            CalendarType::Julian => offset(easter_sunday_julian(year), offset_days),
+        },
+        MovableBase::FirstAdventSunday => offset(first_advent_sunday(year), offset_days),
+        MovableBase::SundayAfterEpiphany => offset(sunday_after_epiphany(year), offset_days),
+        MovableBase::SundayWithinChristmasOctaveOrDec30 => {
+            offset(sunday_within_christmas_octave_or_dec30(year), offset_days)
         }
-        MovableBase::Christmas => {
-            NaiveDate::from_ymd_opt(year, 12, 25).expect("Failed to compute Christmas date")
-                + Duration::days(offset_days as i64)
-        }
-        MovableBase::Advent => {
-            // First Sunday of Advent is the fourth Sunday before Christmas
-            let christmas =
-                NaiveDate::from_ymd_opt(year, 12, 25).expect("Failed to compute Christmas date");
-            let first_advent_sunday = christmas - Duration::days(21);
-            first_advent_sunday + Duration::days(offset_days as i64)
-        }
-        MovableBase::Epiphany => {
-            NaiveDate::from_ymd_opt(year, 1, 6).expect("Failed to compute Epiphany date")
-                + Duration::days(offset_days as i64)
+        MovableBase::PalmSunday => offset(palm_sunday(year), offset_days),
+        MovableBase::DivineMercySunday => offset(divine_mercy_sunday(year), offset_days),
+        MovableBase::Pentecost => offset(pentecost(year), offset_days),
+        MovableBase::TrinitySunday => offset(trinity_sunday(year), offset_days),
+        MovableBase::SecondSundayAfterPentecost => {
+            offset(second_sunday_after_pentecost(year), offset_days)
         }
     }
 }
