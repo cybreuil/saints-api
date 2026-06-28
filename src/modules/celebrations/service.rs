@@ -78,7 +78,7 @@ pub async fn get_celebrations_by_date(
             year,
             base,
             celebration.movable_offset_days.unwrap_or(0),
-            // We force Gregorian Calendar
+            // We force Gregorian Calendar for now
             crate::core::movable_dates::CalendarType::Gregorian,
         );
 
