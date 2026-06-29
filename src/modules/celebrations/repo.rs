@@ -206,9 +206,13 @@ pub async fn get_movable_celebrations(
 }
 
 pub async fn count_celebrations(pool: &PgPool) -> Result<i64, ApiError> {
-    let count = sqlx::query_scalar!(r#"SELECT COUNT(*) as "count!" FROM celebrations"#,)
-        .fetch_one(pool)
-        .await?;
+    let count = sqlx::query_scalar!(
+        r#"
+    SELECT COUNT(*) as "count!" FROM celebrations
+    "#,
+    )
+    .fetch_one(pool)
+    .await?;
 
     Ok(count)
 }

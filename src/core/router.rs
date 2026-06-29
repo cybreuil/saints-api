@@ -11,4 +11,5 @@ pub fn router() -> Scope {
         .service(modules::celebrations::router::router())
         .service(modules::places::router::router())
         .service(modules::calendars::router::router())
+        .service(modules::liturgical_seasons::router::router())
 }

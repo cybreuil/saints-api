@@ -745,31 +745,4 @@ JOIN (VALUES
 ) AS x(code, label)
 ON lc.code = x.code;
 
--- Temps liturgiques
-INSERT INTO liturgical_seasons (code, default_name) VALUES
-('ADVENT', 'Advent'),
-('CHRISTMASTIDE', 'Christmas Time'),
-('ORDINARY_TIME', 'Ordinary Time'),
-('LENT', 'Lent'),
-('TRIDUUM', 'Paschal Triduum'),
-('EASTERTIDE', 'Easter Time');
-
--- Traductions FR
-INSERT INTO liturgical_season_translations (season_code, locale_code, label) VALUES
-('ADVENT', 'fr', 'Temps de l''Avent'),
-('CHRISTMASTIDE', 'fr', 'Temps de Noël'),
-('ORDINARY_TIME', 'fr', 'Temps ordinaire'),
-('LENT', 'fr', 'Temps du Carême'),
-('TRIDUUM', 'fr', 'Triduum pascal'),
-('EASTERTIDE', 'fr', 'Temps pascal')
-ON CONFLICT DO NOTHING;
-
--- Traductions EN
-INSERT INTO liturgical_season_translations (season_code, locale_code, label) VALUES
-('ADVENT', 'en', 'Advent'),
-('CHRISTMASTIDE', 'en', 'Christmas Time'),
-('ORDINARY_TIME', 'en', 'Ordinary Time'),
-('LENT', 'en', 'Lent'),
-('TRIDUUM', 'en', 'Paschal Triduum'),
-('EASTERTIDE', 'en', 'Easter Time')
-ON CONFLICT DO NOTHING;
+COMMIT;
