@@ -58,7 +58,8 @@ fn resolve_rule(rule: &LiturgicalSeasonRule, year: i32) -> Result<NaiveDate, Api
         }
 
         "movable" => {
-            let base = MovableBase::try_from(rule.movable_base.as_ref().unwrap().as_str())?;
+            let base = MovableBase::try_from(rule.movable_base.as_deref().unwrap())
+                .map_err(|_| ApiError::InternalError)?;
 
             Ok(resolve_movable_date(
                 year,

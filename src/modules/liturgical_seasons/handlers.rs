@@ -7,7 +7,7 @@ use super::service;
 use crate::core::error::ApiError;
 
 pub async fn get_liturgical_season(
-    pool: web::Data<&PgPool>,
+    pool: web::Data<PgPool>,
     query: web::Query<dto::LiturgicalSeasonQuery>,
 ) -> Result<HttpResponse, ApiError> {
     let now = Utc::now();
@@ -19,10 +19,13 @@ pub async fn get_liturgical_season(
     let calendar_code = query.calendar_code.as_deref();
 
     if month < 1 || month > 12 || day < 1 || day > 31 {
-        return Err(ApiError::BadRequest("Invalid month or day".to_string()));
+        return Err(ApiError::BadRequest(format!(
+            "Invalid Month or Day: month={}, day={}",
+            month, day
+        )));
     }
     if year < 1 || year > 9999 {
-        return Err(ApiError::BadRequest("Invalid year".to_string()));
+        return Err(ApiError::BadRequest(format!("Invalid Year: year={}", year)));
     }
 
     let result =
