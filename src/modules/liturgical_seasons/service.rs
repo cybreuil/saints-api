@@ -44,7 +44,9 @@ pub async fn list_liturgical_seasons(
 
     let rules = repo::get_liturgical_season_rules(pool, cal, lang).await?;
 
-    let intervals = liturgical_seasons::build_intervals(&rules, year)?;
+    let mut intervals = liturgical_seasons::build_intervals(&rules, year)?;
+
+    intervals.sort_by_key(|s| s.start);
 
     Ok(intervals.into_iter().map(|s| s.into()).collect())
 }
