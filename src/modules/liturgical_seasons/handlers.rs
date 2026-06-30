@@ -34,3 +34,21 @@ pub async fn get_liturgical_season(
 
     Ok(HttpResponse::Ok().json(result))
 }
+
+pub async fn list_liturgical_seasons(
+    pool: web::Data<PgPool>,
+    query: web::Query<dto::LiturgicalSeasonsListQuery>,
+) -> Result<HttpResponse, ApiError> {
+    let year = query.year.unwrap_or(Utc::now().year() as i32);
+    let language_code = query.language_code.as_deref();
+    let calendar_code = query.calendar_code.as_deref();
+
+    if year < 1 || year > 9999 {
+        return Err(ApiError::BadRequest(format!("Invalid Year: year={}", year)));
+    }
+
+    let result =
+        service::list_liturgical_seasons(&pool, year, language_code, calendar_code).await?;
+
+    Ok(HttpResponse::Ok().json(result))
+}

@@ -154,7 +154,7 @@ CREATE TABLE liturgical_season_rules (
 
     -- movable boundary
     movable_base TEXT,              -- ex: EASTER, ASH_WEDNESDAY, FIRST_ADVENT_SUNDAY
-    movable_offset_days INTEGER,    -- ex: -46, +49
+    movable_offset_days SMALLINT,    -- ex: -46, +49
 
     is_start BOOLEAN NOT NULL,      -- TRUE=start boundary, FALSE=end boundary
     inclusive BOOLEAN NOT NULL DEFAULT TRUE,

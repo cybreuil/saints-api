@@ -10,6 +10,13 @@ pub struct LiturgicalSeasonQuery {
     pub language_code: Option<String>,
 }
 
+#[derive(Debug, Deserialize)]
+pub struct LiturgicalSeasonsListQuery {
+    pub year: Option<i32>,
+    pub calendar_code: Option<String>,
+    pub language_code: Option<String>,
+}
+
 #[derive(Debug, Serialize)]
 pub struct LiturgicalSeasonResponse {
     pub code: String,

@@ -26,6 +26,9 @@ pub enum MovableBase {
     FirstAdventSunday,
     SundayAfterEpiphany,
     SundayWithinChristmasOctaveOrDec30,
+    BaptismOfTheLord,
+    AshWednesday,
+    HolyThursday,
 }
 
 impl TryFrom<&str> for MovableBase {
@@ -44,6 +47,9 @@ impl TryFrom<&str> for MovableBase {
             "SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30" => {
                 Ok(Self::SundayWithinChristmasOctaveOrDec30)
             }
+            "BAPTISM_OF_THE_LORD" => Ok(Self::BaptismOfTheLord),
+            "ASH_WEDNESDAY" => Ok(Self::AshWednesday),
+            "HOLY_THURSDAY" => Ok(Self::HolyThursday),
             _ => Err(()),
         }
     }
@@ -61,6 +67,9 @@ impl MovableBase {
             Self::FirstAdventSunday => "FIRST_ADVENT_SUNDAY",
             Self::SundayAfterEpiphany => "SUNDAY_AFTER_EPIPHANY",
             Self::SundayWithinChristmasOctaveOrDec30 => "SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30",
+            Self::BaptismOfTheLord => "BAPTISM_OF_THE_LORD",
+            Self::AshWednesday => "ASH_WEDNESDAY",
+            Self::HolyThursday => "HOLY_THURSDAY",
         }
     }
 }
@@ -189,6 +198,28 @@ pub fn sunday_within_christmas_octave_or_dec30(year: i32) -> NaiveDate {
     NaiveDate::from_ymd_opt(year, 12, 30).unwrap()
 }
 
+/// Returns the date of the Baptism of the Lord for the given year.
+/// Assumes Epiphany is fixed on January 6, and the Baptism of the Lord is the Sunday after Epiphany.
+pub fn baptism_of_the_lord(year: i32) -> NaiveDate {
+    let epiphany = NaiveDate::from_ymd_opt(year, 1, 6).unwrap();
+    let mut date = epiphany + Duration::days(1);
+
+    while date.weekday() != Weekday::Sun {
+        date += Duration::days(1);
+    }
+
+    date
+}
+
+/// Returns the date of Ash Wednesday for the given year.
+pub fn ash_wednesday(year: i32) -> NaiveDate {
+    offset(easter_sunday(year), -46)
+}
+
+pub fn holy_thursday(year: i32) -> NaiveDate {
+    offset(easter_sunday(year), -3)
+}
+
 /// Resolves a movable date from its base and day offset.
 ///
 /// For all base movable dates listed above
@@ -215,5 +246,8 @@ pub fn resolve_movable_date(
         MovableBase::SecondSundayAfterPentecost => {
             offset(second_sunday_after_pentecost(year), offset_days)
         }
+        MovableBase::BaptismOfTheLord => offset(baptism_of_the_lord(year), offset_days),
+        MovableBase::AshWednesday => offset(ash_wednesday(year), offset_days),
+        MovableBase::HolyThursday => offset(holy_thursday(year), offset_days),
     }
 }

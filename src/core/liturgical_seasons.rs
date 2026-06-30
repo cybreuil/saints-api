@@ -81,6 +81,7 @@ pub fn build_intervals(
     let mut map = std::collections::HashMap::<String, SeasonIntervalBuilder>::new();
 
     for rule in rules {
+        println!("{:?}", rule);
         let date = resolve_rule(rule, year)?;
 
         let entry = map

@@ -32,3 +32,19 @@ pub async fn get_liturgical_season(
 
     Ok(None)
 }
+
+pub async fn list_liturgical_seasons(
+    pool: &PgPool,
+    year: i32,
+    language_code: Option<&str>,
+    calendar_code: Option<&str>,
+) -> Result<Vec<LiturgicalSeasonResponse>, ApiError> {
+    let lang = validation::resolve_locale(language_code)?;
+    let cal = validation::resolve_calendar(calendar_code)?;
+
+    let rules = repo::get_liturgical_season_rules(pool, cal, lang).await?;
+
+    let intervals = liturgical_seasons::build_intervals(&rules, year)?;
+
+    Ok(intervals.into_iter().map(|s| s.into()).collect())
+}
