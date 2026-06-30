@@ -17,12 +17,12 @@ pub async fn get_liturgical_season(
     let lang = validation::resolve_locale(language_code)?;
     let cal = validation::resolve_calendar(calendar_code)?;
 
-    let rules = repo::get_liturgical_season_rules(pool, cal, lang).await?;
+    let rows = repo::get_liturgical_season_intervals(pool, cal, lang).await?;
 
     let date = chrono::NaiveDate::from_ymd_opt(year, month as u32, day as u32)
         .ok_or_else(|| ApiError::BadRequest("Invalid date".to_string()))?;
 
-    let intervals = liturgical_seasons::build_intervals(&rules, year)?;
+    let intervals = liturgical_seasons::build_intervals(&rows, year)?;
 
     for season in intervals {
         if date >= season.start && date <= season.end {
@@ -42,11 +42,11 @@ pub async fn list_liturgical_seasons(
     let lang = validation::resolve_locale(language_code)?;
     let cal = validation::resolve_calendar(calendar_code)?;
 
-    let rules = repo::get_liturgical_season_rules(pool, cal, lang).await?;
+    let rows = repo::get_liturgical_season_intervals(pool, cal, lang).await?;
 
-    let mut intervals = liturgical_seasons::build_intervals(&rules, year)?;
+    let mut intervals = liturgical_seasons::build_intervals(&rows, year)?;
 
-    intervals.sort_by_key(|s| s.start);
+    intervals.sort_by(|a, b| a.start.cmp(&b.start));
 
     Ok(intervals.into_iter().map(|s| s.into()).collect())
 }

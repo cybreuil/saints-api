@@ -1,23 +1,34 @@
 use sqlx::PgPool;
 
-use crate::core::{error::ApiError, liturgical_seasons::LiturgicalSeasonRule};
+use crate::core::{error::ApiError, liturgical_seasons::LiturgicalSeasonIntervalRow};
 
-pub async fn get_liturgical_season_rules(
+pub async fn get_liturgical_season_intervals(
     pool: &PgPool,
     calendar_code: &str,
     language_code: &str,
-) -> Result<Vec<LiturgicalSeasonRule>, ApiError> {
-    let rows = sqlx::query_as::<_, LiturgicalSeasonRule>(
+) -> Result<Vec<LiturgicalSeasonIntervalRow>, ApiError> {
+    let rows = sqlx::query_as::<_, LiturgicalSeasonIntervalRow>(
         r#"
         SELECT
-            lsr.season_code,
-            lsr.rule_kind,
-            lsr.month,
-            lsr.day,
-            lsr.movable_base,
-            lsr.movable_offset_days,
-            lsr.is_start,
-            lsr.inclusive,
+            lsi.season_code,
+            lsi.segment_index,
+
+            lsi.start_kind,
+            lsi.start_month,
+            lsi.start_day,
+            lsi.start_movable_base,
+            lsi.start_offset_days,
+
+            lsi.end_kind,
+            lsi.end_month,
+            lsi.end_day,
+            lsi.end_movable_base,
+            lsi.end_offset_days,
+
+            lsi.inclusive,
+            lsi.notes,
+
+            ls.default_name,
 
             lst.label,
 
@@ -25,14 +36,14 @@ pub async fn get_liturgical_season_rules(
             lct.label AS color_label,
             lc.hex_color
 
-        FROM liturgical_season_rules lsr
+        FROM liturgical_season_intervals lsi
 
         INNER JOIN calendars cal
-            ON cal.id = lsr.calendar_id
+            ON cal.id = lsi.calendar_id
             AND cal.code = $1
 
         INNER JOIN liturgical_seasons ls
-            ON ls.code = lsr.season_code
+            ON ls.code = lsi.season_code
 
         LEFT JOIN liturgical_season_translations lst
             ON lst.season_code = ls.code
@@ -49,7 +60,7 @@ pub async fn get_liturgical_season_rules(
             ON lct.color_id = lc.id
             AND lct.locale_code = $2
 
-        ORDER BY lsr.season_code, lsr.is_start DESC
+        ORDER BY lsi.season_code, lsi.segment_index
         "#,
     )
     .bind(calendar_code)

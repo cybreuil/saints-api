@@ -1,30 +1,31 @@
-use super::error::ApiError;
-use super::movable_dates::{resolve_movable_date, CalendarType, MovableBase};
+use crate::core::error::ApiError;
+use crate::core::movable_dates::{resolve_movable_date, CalendarType, MovableBase};
+use chrono::NaiveDate;
 
-#[derive(Debug, sqlx::FromRow)]
-pub struct LiturgicalSeasonRule {
+#[derive(Debug, sqlx::FromRow, Clone)]
+pub struct LiturgicalSeasonIntervalRow {
     pub season_code: String,
+    pub segment_index: i16,
 
-    pub rule_kind: String,
+    pub start_kind: String,
+    pub start_month: Option<i16>,
+    pub start_day: Option<i16>,
+    pub start_movable_base: Option<String>,
+    pub start_offset_days: Option<i16>,
 
-    pub month: Option<i16>,
-    pub day: Option<i16>,
+    pub end_kind: String,
+    pub end_month: Option<i16>,
+    pub end_day: Option<i16>,
+    pub end_movable_base: Option<String>,
+    pub end_offset_days: Option<i16>,
 
-    pub movable_base: Option<String>,
-    pub movable_offset_days: Option<i16>,
-
-    pub is_start: bool,
-    pub inclusive: bool,
-
-    pub label: Option<String>,
-
+    pub label: Option<String>, // season label
     pub color_code: Option<String>,
     pub color_label: Option<String>,
     pub hex_color: Option<String>,
 }
 
-use chrono::NaiveDate;
-
+#[derive(Debug, Clone)]
 pub struct SeasonInterval {
     pub code: String,
     pub label: Option<String>,
@@ -35,36 +36,30 @@ pub struct SeasonInterval {
     pub hex_color: Option<String>,
 }
 
-struct SeasonIntervalBuilder {
-    code: String,
-
-    label: Option<String>,
-
-    start: Option<NaiveDate>,
-    end: Option<NaiveDate>,
-
-    color_code: Option<String>,
-    color_label: Option<String>,
-    hex_color: Option<String>,
-}
-
-fn resolve_rule(rule: &LiturgicalSeasonRule, year: i32) -> Result<NaiveDate, ApiError> {
-    match rule.rule_kind.as_str() {
+fn resolve_boundary(
+    kind: &str,
+    month: Option<i16>,
+    day: Option<i16>,
+    movable_base: Option<&str>,
+    offset_days: Option<i16>,
+    year: i32,
+) -> Result<NaiveDate, ApiError> {
+    match kind {
         "fixed" => {
-            Ok(
-                NaiveDate::from_ymd_opt(year, rule.month.unwrap() as u32, rule.day.unwrap() as u32)
-                    .unwrap(),
-            )
+            let m = month.ok_or(ApiError::InternalError)? as u32;
+            let d = day.ok_or(ApiError::InternalError)? as u32;
+
+            NaiveDate::from_ymd_opt(year, m, d).ok_or(ApiError::InternalError)
         }
 
         "movable" => {
-            let base = MovableBase::try_from(rule.movable_base.as_deref().unwrap())
+            let base = MovableBase::try_from(movable_base.ok_or(ApiError::InternalError)?)
                 .map_err(|_| ApiError::InternalError)?;
 
             Ok(resolve_movable_date(
                 year,
                 base,
-                rule.movable_offset_days.unwrap_or(0),
+                offset_days.unwrap_or(0),
                 CalendarType::Gregorian,
             ))
         }
@@ -73,77 +68,41 @@ fn resolve_rule(rule: &LiturgicalSeasonRule, year: i32) -> Result<NaiveDate, Api
     }
 }
 
-// ATTENTION NOEL
 pub fn build_intervals(
-    rules: &[LiturgicalSeasonRule],
+    rows: &[LiturgicalSeasonIntervalRow],
     year: i32,
 ) -> Result<Vec<SeasonInterval>, ApiError> {
-    let mut map = std::collections::HashMap::<String, SeasonIntervalBuilder>::new();
+    let mut intervals = Vec::with_capacity(rows.len());
 
-    for rule in rules {
-        println!("{:?}", rule);
-        let date = resolve_rule(rule, year)?;
+    for row in rows {
+        let start = resolve_boundary(
+            &row.start_kind,
+            row.start_month,
+            row.start_day,
+            row.start_movable_base.as_deref(),
+            row.start_offset_days,
+            year,
+        )?;
 
-        let entry = map
-            .entry(rule.season_code.clone())
-            .or_insert_with(|| SeasonIntervalBuilder {
-                code: rule.season_code.clone(),
+        let end = resolve_boundary(
+            &row.end_kind,
+            row.end_month,
+            row.end_day,
+            row.end_movable_base.as_deref(),
+            row.end_offset_days,
+            year,
+        )?;
 
-                label: rule.label.clone(),
-
-                start: None,
-                end: None,
-
-                color_code: rule.color_code.clone(),
-                color_label: rule.color_label.clone(),
-                hex_color: rule.hex_color.clone(),
-            });
-
-        if rule.is_start {
-            entry.start = Some(date);
-        } else {
-            entry.end = Some(date);
-        }
+        intervals.push(SeasonInterval {
+            code: row.season_code.clone(),
+            label: row.label.clone(),
+            start,
+            end,
+            color_code: row.color_code.clone(),
+            color_label: row.color_label.clone(),
+            hex_color: row.hex_color.clone(),
+        });
     }
 
-    Ok(map
-        .into_values()
-        .filter_map(|b| {
-            Some(SeasonInterval {
-                code: b.code,
-
-                label: b.label,
-
-                start: b.start?,
-                end: b.end?,
-
-                color_code: b.color_code,
-                color_label: b.color_label,
-                hex_color: b.hex_color,
-            })
-        })
-        .collect())
+    Ok(intervals)
 }
-
-// pub async fn get_liturgical_season(
-//     pool: &PgPool,
-//     year: i32,
-//     month: u32,
-//     day: u32,
-//     language: &str,
-//     calendar: &str,
-// ) -> Result<Option<SeasonInterval>, ApiError> {
-//     let rules = repo::get_liturgical_season_rules(pool, calendar, language).await?;
-
-//     let date = chrono::NaiveDate::from_ymd_opt(year, month, day).unwrap();
-
-//     let intervals = build_intervals(&rules, year)?;
-
-//     for season in intervals {
-//         if date >= season.start && date <= season.end {
-//             return Ok(Some(season));
-//         }
-//     }
-
-//     Ok(None)
-// }
