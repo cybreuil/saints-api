@@ -52,7 +52,10 @@ pub async fn list_liturgical_seasons(
     };
 
     let p = Pagination::new(Some(page), Some(per_page));
-    let total = repo::count_liturgical_season_intervals(pool, cal).await? as i32;
+
+    let rows = repo::get_liturgical_season_intervals(pool, cal, lang).await?;
+    let intervals = liturgical_seasons::build_intervals(&rows, year)?;
+    let total = intervals.len() as i32;
 
     if total == 0 {
         return Ok(Paginated::empty_with_context(&p, context));
@@ -65,10 +68,6 @@ pub async fn list_liturgical_seasons(
             p.total_pages(total)
         )));
     }
-
-    let rows = repo::get_liturgical_season_intervals(pool, cal, lang).await?;
-    let mut intervals = liturgical_seasons::build_intervals(&rows, year)?;
-    intervals.sort_by(|a, b| a.start.cmp(&b.start));
 
     let data = intervals
         .into_iter()

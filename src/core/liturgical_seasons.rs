@@ -1,6 +1,7 @@
 use crate::core::error::ApiError;
 use crate::core::movable_dates::{resolve_movable_date, CalendarType, MovableBase};
 use chrono::NaiveDate;
+use std::collections::HashMap;
 
 #[derive(Debug, sqlx::FromRow, Clone)]
 pub struct LiturgicalSeasonIntervalRow {
@@ -69,42 +70,207 @@ fn resolve_boundary(
     }
 }
 
-pub fn build_intervals(
-    rows: &[LiturgicalSeasonIntervalRow],
-    year: i32,
-) -> Result<Vec<SeasonInterval>, ApiError> {
-    let mut intervals = Vec::with_capacity(rows.len());
+fn build_occurrence(
+    row: &LiturgicalSeasonIntervalRow,
+    anchor_year: i32,
+) -> Result<(NaiveDate, NaiveDate), ApiError> {
+    let start = resolve_boundary(
+        &row.start_kind,
+        row.start_month,
+        row.start_day,
+        row.start_movable_base.as_deref(),
+        row.start_offset_days,
+        anchor_year,
+    )?;
 
-    for row in rows {
-        let start = resolve_boundary(
-            &row.start_kind,
-            row.start_month,
-            row.start_day,
-            row.start_movable_base.as_deref(),
-            row.start_offset_days,
-            year,
-        )?;
+    let end_same_year = resolve_boundary(
+        &row.end_kind,
+        row.end_month,
+        row.end_day,
+        row.end_movable_base.as_deref(),
+        row.end_offset_days,
+        anchor_year,
+    )?;
 
-        let end = resolve_boundary(
+    let end = if end_same_year >= start {
+        end_same_year
+    } else {
+        resolve_boundary(
             &row.end_kind,
             row.end_month,
             row.end_day,
             row.end_movable_base.as_deref(),
             row.end_offset_days,
-            year,
-        )?;
+            anchor_year + 1,
+        )?
+    };
 
-        intervals.push(SeasonInterval {
-            code: row.season_code.clone(),
-            segment_index: row.segment_index,
-            label: row.label.clone(),
-            start,
-            end,
-            color_code: row.color_code.clone(),
-            color_label: row.color_label.clone(),
-            hex_color: row.hex_color.clone(),
-        });
+    Ok((start, end))
+}
+
+fn overlap_with_year(
+    start: NaiveDate,
+    end: NaiveDate,
+    year_start: NaiveDate,
+    year_end: NaiveDate,
+) -> Option<(NaiveDate, NaiveDate)> {
+    let start = start.max(year_start);
+    let end = end.min(year_end);
+
+    (start <= end).then_some((start, end))
+}
+
+pub fn build_intervals(
+    rows: &[LiturgicalSeasonIntervalRow],
+    year: i32,
+) -> Result<Vec<SeasonInterval>, ApiError> {
+    let year_start = NaiveDate::from_ymd_opt(year, 1, 1).ok_or(ApiError::InternalError)?;
+    let year_end = NaiveDate::from_ymd_opt(year, 12, 31).ok_or(ApiError::InternalError)?;
+    let mut intervals = Vec::with_capacity(rows.len() * 2);
+
+    for row in rows {
+        if year > 1 {
+            let (start, end) = build_occurrence(row, year - 1)?;
+
+            if let Some((start, end)) = overlap_with_year(start, end, year_start, year_end) {
+                intervals.push(SeasonInterval {
+                    code: row.season_code.clone(),
+                    segment_index: row.segment_index,
+                    label: row.label.clone(),
+                    start,
+                    end,
+                    color_code: row.color_code.clone(),
+                    color_label: row.color_label.clone(),
+                    hex_color: row.hex_color.clone(),
+                });
+            }
+        }
+
+        let (start, end) = build_occurrence(row, year)?;
+
+        if let Some((start, end)) = overlap_with_year(start, end, year_start, year_end) {
+            intervals.push(SeasonInterval {
+                code: row.season_code.clone(),
+                segment_index: row.segment_index,
+                label: row.label.clone(),
+                start,
+                end,
+                color_code: row.color_code.clone(),
+                color_label: row.color_label.clone(),
+                hex_color: row.hex_color.clone(),
+            });
+        }
+    }
+
+    intervals.sort_by(|a, b| {
+        a.start
+            .cmp(&b.start)
+            .then(a.end.cmp(&b.end))
+            .then_with(|| a.code.cmp(&b.code))
+            .then(a.segment_index.cmp(&b.segment_index))
+    });
+
+    let mut next_segment_index_by_code: HashMap<String, i16> = HashMap::new();
+
+    for interval in &mut intervals {
+        let next_segment_index = next_segment_index_by_code
+            .entry(interval.code.clone())
+            .or_insert(0);
+
+        interval.segment_index = *next_segment_index;
+        *next_segment_index += 1;
     }
 
     Ok(intervals)
+}
+
+#[cfg(test)]
+mod tests {
+    use super::{build_intervals, LiturgicalSeasonIntervalRow};
+    use chrono::NaiveDate;
+
+    fn fixed_row(
+        season_code: &str,
+        segment_index: i16,
+        start_month: i16,
+        start_day: i16,
+        end_month: i16,
+        end_day: i16,
+    ) -> LiturgicalSeasonIntervalRow {
+        LiturgicalSeasonIntervalRow {
+            season_code: season_code.to_string(),
+            segment_index,
+            start_kind: "fixed".to_string(),
+            start_month: Some(start_month),
+            start_day: Some(start_day),
+            start_movable_base: None,
+            start_offset_days: None,
+            end_kind: "fixed".to_string(),
+            end_month: Some(end_month),
+            end_day: Some(end_day),
+            end_movable_base: None,
+            end_offset_days: None,
+            label: Some(season_code.to_string()),
+            color_code: None,
+            color_label: None,
+            hex_color: None,
+        }
+    }
+
+    #[test]
+    fn build_intervals_splits_cross_year_intervals_for_civil_year() {
+        let rows = vec![
+            fixed_row("CHRISTMASTIDE", 0, 12, 25, 1, 11),
+            fixed_row("ORDINARY_TIME", 0, 1, 12, 2, 17),
+            fixed_row("ORDINARY_TIME", 1, 5, 25, 11, 28),
+        ];
+
+        let intervals = build_intervals(&rows, 2026).expect("intervals should build");
+
+        assert_eq!(intervals.len(), 4);
+
+        assert_eq!(intervals[0].code, "CHRISTMASTIDE");
+        assert_eq!(intervals[0].segment_index, 0);
+        assert_eq!(
+            intervals[0].start,
+            NaiveDate::from_ymd_opt(2026, 1, 1).unwrap()
+        );
+        assert_eq!(
+            intervals[0].end,
+            NaiveDate::from_ymd_opt(2026, 1, 11).unwrap()
+        );
+
+        assert_eq!(intervals[1].code, "ORDINARY_TIME");
+        assert_eq!(intervals[1].segment_index, 0);
+        assert_eq!(
+            intervals[1].start,
+            NaiveDate::from_ymd_opt(2026, 1, 12).unwrap()
+        );
+        assert_eq!(
+            intervals[1].end,
+            NaiveDate::from_ymd_opt(2026, 2, 17).unwrap()
+        );
+
+        assert_eq!(intervals[2].code, "ORDINARY_TIME");
+        assert_eq!(intervals[2].segment_index, 1);
+        assert_eq!(
+            intervals[2].start,
+            NaiveDate::from_ymd_opt(2026, 5, 25).unwrap()
+        );
+        assert_eq!(
+            intervals[2].end,
+            NaiveDate::from_ymd_opt(2026, 11, 28).unwrap()
+        );
+
+        assert_eq!(intervals[3].code, "CHRISTMASTIDE");
+        assert_eq!(intervals[3].segment_index, 1);
+        assert_eq!(
+            intervals[3].start,
+            NaiveDate::from_ymd_opt(2026, 12, 25).unwrap()
+        );
+        assert_eq!(
+            intervals[3].end,
+            NaiveDate::from_ymd_opt(2026, 12, 31).unwrap()
+        );
+    }
 }
