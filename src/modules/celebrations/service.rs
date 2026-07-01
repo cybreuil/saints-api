@@ -1,12 +1,14 @@
 use chrono::Datelike;
-use sqlx::PgPool;
+use sqlx::{PgPool, Row};
+use std::collections::HashMap;
 
-use super::dto::{Celebration, CelebrationByDateContext, CelebrationByDateResponse};
+use super::dto::{Celebration, CelebrationByDateContext, CelebrationByDateResponse, Saint};
 use super::repo;
 use crate::core::error::ApiError;
 use crate::core::movable_dates::{resolve_movable_date, MovableBase};
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
+use crate::modules::celebrations::dto::CelebrationWithSaints;
 use crate::modules::liturgical_seasons;
 
 pub async fn get_celebrations(
@@ -36,6 +38,35 @@ pub async fn get_celebrations(
     let data = repo::get_celebrations(pool, p.per_page, p.offset, cal, lang).await?;
 
     Ok(Paginated::new(&p, total, data))
+}
+
+async fn attach_saints(
+    pool: &PgPool,
+    rows: Vec<Celebration>,
+    language_code: &str,
+) -> Result<Vec<CelebrationWithSaints>, ApiError> {
+    let feast_ids: Vec<i32> = rows.iter().map(|r| r.feast_id).collect();
+
+    let saint_rows = repo::get_saints_for_feasts(pool, &feast_ids, language_code).await?;
+
+    // Group saints by feast_id
+    let mut saints_by_feast: HashMap<i32, Vec<Saint>> = HashMap::new();
+    for s in saint_rows {
+        saints_by_feast
+            .entry(s.feast_id)
+            .or_default()
+            .push(s.into());
+    }
+
+    let celebrations = rows
+        .into_iter()
+        .map(|row| {
+            let saints = saints_by_feast.remove(&row.feast_id).unwrap_or_default();
+            Celebration::from_row(row, saints)
+        })
+        .collect();
+
+    Ok(celebrations)
 }
 
 pub async fn get_celebrations_by_date(
@@ -90,6 +121,8 @@ pub async fn get_celebrations_by_date(
 
     celebrations.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
 
+    let celebrations_with_saints = attach_saints(pool, celebrations, lang).await?;
+
     // Resolve the liturgical season
     let liturgical_season =
         liturgical_seasons::get_liturgical_season(pool, year, month, day, Some(lang), Some(cal))
@@ -98,6 +131,6 @@ pub async fn get_celebrations_by_date(
     Ok(CelebrationByDateResponse {
         context,
         liturgical_season,
-        celebrations,
+        celebrations: celebrations_with_saints,
     })
 }
