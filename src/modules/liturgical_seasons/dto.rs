@@ -30,6 +30,8 @@ pub struct LiturgicalSeasonListContext {
 pub struct LiturgicalSeasonResponse {
     pub code: String,
 
+    pub segment_index: i16,
+
     pub label: Option<String>,
 
     pub start: String,
@@ -44,6 +46,7 @@ impl From<SeasonInterval> for LiturgicalSeasonResponse {
     fn from(s: SeasonInterval) -> Self {
         Self {
             code: s.code,
+            segment_index: s.segment_index,
             label: s.label,
             start: s.start.to_string(),
             end: s.end.to_string(),

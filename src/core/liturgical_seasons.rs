@@ -28,6 +28,7 @@ pub struct LiturgicalSeasonIntervalRow {
 #[derive(Debug, Clone)]
 pub struct SeasonInterval {
     pub code: String,
+    pub segment_index: i16,
     pub label: Option<String>,
     pub start: NaiveDate,
     pub end: NaiveDate,
@@ -95,6 +96,7 @@ pub fn build_intervals(
 
         intervals.push(SeasonInterval {
             code: row.season_code.clone(),
+            segment_index: row.segment_index,
             label: row.label.clone(),
             start,
             end,
