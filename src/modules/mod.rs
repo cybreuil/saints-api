@@ -1,7 +1,7 @@
 pub mod auth;
 pub mod calendars;
 pub mod celebrations;
-pub mod feasts;
+// pub mod feasts;
 pub mod health;
 pub mod liturgical_seasons;
 pub mod places;

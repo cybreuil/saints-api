@@ -1,8 +1,6 @@
 use chrono::{Datelike, Duration, NaiveDate, Weekday};
 use serde::{Deserialize, Serialize};
 
-use super::error::ApiError;
-
 // List of actual movable dates
 // EASTER_SUNDAY
 // PALM_SUNDAY

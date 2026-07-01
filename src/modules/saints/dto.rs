@@ -3,15 +3,6 @@ use sqlx::FromRow;
 // use chrono::NaiveDate;
 use serde::{Deserialize, Serialize};
 
-// Saints Paginated Response
-#[derive(Debug, Serialize)]
-pub struct SaintListResponse {
-    pub page: i32,
-    pub per_page: i32,
-    pub total: i32,
-    pub total_pages: i32,
-    pub data: Vec<SaintListItem>,
-}
 // Saint small struct for listing
 #[derive(Debug, Serialize, FromRow)]
 pub struct SaintListItem {

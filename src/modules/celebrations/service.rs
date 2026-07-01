@@ -1,4 +1,4 @@
-use chrono::{Datelike, Utc};
+use chrono::Datelike;
 use sqlx::PgPool;
 
 use super::dto::{Celebration, CelebrationByDateContext, CelebrationByDateResponse};
