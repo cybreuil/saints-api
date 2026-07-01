@@ -40,25 +40,25 @@ echo "✅ Tables dropped and created."
 run_sql "$ROOT_DIR/data/seeds/seedPlaces.sql"
 echo "✅ Places seeded."
 
-run_sql "$ROOT_DIR/data/seeds/seedRomanSaints.sql"
+run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanSaints.sql"
 echo "✅ Roman saints seeded."
 
-run_sql "$ROOT_DIR/data/seeds/seedRomanImages.sql"
+run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanImages.sql"
 echo "✅ Roman images seeded."
 
-run_sql "$ROOT_DIR/data/seeds/seedRomanSaintImages.sql"
+run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanSaintImages.sql"
 echo "✅ Roman saint images seeded."
 
-run_sql "$ROOT_DIR/data/seeds/newSEEDROMAN.sql"
+run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRoman.sql"
 echo "✅ ROMAN seeded."
 
-run_sql "$ROOT_DIR/data/seeds/seedRomanSeasons.sql"
+run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanSeasons.sql"
 echo "✅ Roman seasons seeded."
 
-run_sql "$ROOT_DIR/data/seeds/seedRomanSaintAttributes.sql"
+run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanSaintAttributes.sql"
 echo "✅ ROMAN saint attributes seeded."
 
-run_sql "$ROOT_DIR/data/seeds/seedRomanSaintPatronages.sql"
+run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanSaintPatronages.sql"
 echo "✅ ROMAN saint patronages seeded."
 
 # run_sql "$ROOT_DIR/data/seeds/seedROMAN_links.sql"
