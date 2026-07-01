@@ -151,6 +151,12 @@ pub async fn get_movable_celebrations(
            f.feast_type,
            ft.name AS feast_name,
            ft.description AS feast_description,
+           fs.id AS saint_id,
+		   fs.slug AS saint_slug,
+	       fs.default_name AS saint_name,
+ 	       fs.century AS saint_century,
+	       fs.image_url AS saint_image_url,
+		   fst.name AS saint_translation_name,
            lct.label AS liturgical_color_name,
            lc.hex_color AS liturgical_color_hex,
 		   lr.code AS rank_code,
@@ -162,6 +168,11 @@ pub async fn get_movable_celebrations(
     LEFT JOIN feast_translations ft
 		ON f.id = ft.feast_id
 		AND ft.locale_code = $1
+	LEFT JOIN feast_saints fs
+		ON f.id = fs.feast_id
+	LEFT JOIN saint_translations fst
+		ON fs.saint_id = fst.saint_id
+		AND fst.locale_code = $1
     LEFT JOIN liturgical_colors lc
     	ON c.color_id = lc.id
     LEFT JOIN liturgical_color_translations lct

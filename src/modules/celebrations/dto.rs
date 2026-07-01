@@ -37,6 +37,15 @@ pub struct CelebrationListQuery {
 }
 
 #[derive(Debug, Serialize, FromRow)]
+pub struct Saint {
+    pub saint_id: i32,
+    pub saint_slug: String,
+    pub saint_name: String,
+    pub saint_century: Option<i16>,
+    pub saint_image_url: Option<String>,
+}
+
+#[derive(Debug, Serialize, FromRow)]
 pub struct Celebration {
     pub id: i32,
     pub is_optional: bool,
@@ -52,6 +61,7 @@ pub struct Celebration {
     pub default_name: Option<String>,
     pub feast_type: Option<String>,
     pub feast_name: Option<String>,
+    pub feast_saints: Option<Vec<Saint>>,
     pub feast_description: Option<String>,
     pub liturgical_color_name: Option<String>,
     pub liturgical_color_hex: Option<String>,
