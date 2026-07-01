@@ -1,3 +1,4 @@
+BEGIN;
 -- =========================================================
 -- SCHÉMA SQL - Site "Ordo"
 -- Compatible & optimisé pour PostgreSQL
@@ -421,10 +422,18 @@ CREATE TABLE celebrations (
     -- valid_to DATE,
 
     -- Enlever unique si on veut gerer les anciennes célébrations historiques avec from / to
-    UNIQUE (feast_id, calendar_id)
+    UNIQUE (feast_id, calendar_id),
+
     -- CHECK (
     --     valid_to IS NULL OR valid_from IS NULL OR valid_to >= valid_from
     -- )
+
+    -- On check que la date est cohérente selon le type (fixed ou movable)
+    CHECK (
+		(date_kind = 'fixed' AND month IS NOT NULL AND day IS NOT NULL AND movable_base IS NULL AND movable_offset_days IS NULL)
+		OR
+		(date_kind = 'movable' AND movable_base IS NOT NULL AND month IS NULL AND day IS NULL)
+	)
 );
 
 -- =========================================================
