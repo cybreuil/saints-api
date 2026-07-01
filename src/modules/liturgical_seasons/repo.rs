@@ -70,3 +70,23 @@ pub async fn get_liturgical_season_intervals(
 
     Ok(rows)
 }
+
+pub async fn count_liturgical_season_intervals(
+    pool: &PgPool,
+    calendar_code: &str,
+) -> Result<i64, ApiError> {
+    let count = sqlx::query_scalar!(
+        r#"
+        SELECT COUNT(*) as "count!"
+        FROM liturgical_season_intervals lsi
+        INNER JOIN calendars cal
+            ON cal.id = lsi.calendar_id
+            AND cal.code = $1
+        "#,
+        calendar_code
+    )
+    .fetch_one(pool)
+    .await?;
+
+    Ok(count)
+}

@@ -43,12 +43,16 @@ pub async fn list_liturgical_seasons(
     let language_code = query.language_code.as_deref();
     let calendar_code = query.calendar_code.as_deref();
 
+    let page = query.page.unwrap_or(1);
+    let per_page = query.per_page.unwrap_or(20);
+
     if year < 1 || year > 9999 {
         return Err(ApiError::BadRequest(format!("Invalid Year: year={}", year)));
     }
 
     let result =
-        service::list_liturgical_seasons(&pool, year, language_code, calendar_code).await?;
+        service::list_liturgical_seasons(&pool, year, language_code, calendar_code, page, per_page)
+            .await?;
 
     Ok(HttpResponse::Ok().json(result))
 }

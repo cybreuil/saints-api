@@ -1,9 +1,10 @@
 use sqlx::PgPool;
 
-use super::dto::LiturgicalSeasonResponse;
+use super::dto::{LiturgicalSeasonListContext, LiturgicalSeasonResponse};
 use super::repo;
 use crate::core::error::ApiError;
 use crate::core::liturgical_seasons;
+use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
 
 pub async fn get_liturgical_season(
@@ -38,15 +39,43 @@ pub async fn list_liturgical_seasons(
     year: i32,
     language_code: Option<&str>,
     calendar_code: Option<&str>,
-) -> Result<Vec<LiturgicalSeasonResponse>, ApiError> {
+    page: i32,
+    per_page: i32,
+) -> Result<Paginated<LiturgicalSeasonResponse, LiturgicalSeasonListContext>, ApiError> {
     let lang = validation::resolve_locale(language_code)?;
     let cal = validation::resolve_calendar(calendar_code)?;
 
+    let context = LiturgicalSeasonListContext {
+        year,
+        language_code: lang.to_string(),
+        calendar_code: cal.to_string(),
+    };
+
+    let p = Pagination::new(Some(page), Some(per_page));
+    let total = repo::count_liturgical_season_intervals(pool, cal).await? as i32;
+
+    if total == 0 {
+        return Ok(Paginated::empty_with_context(&p, context));
+    }
+
+    if p.beyond_total(total) {
+        return Err(ApiError::UnprocessableEntity(format!(
+            "Page {} is out of range. Total pages: {}",
+            p.page,
+            p.total_pages(total)
+        )));
+    }
+
     let rows = repo::get_liturgical_season_intervals(pool, cal, lang).await?;
-
     let mut intervals = liturgical_seasons::build_intervals(&rows, year)?;
-
     intervals.sort_by(|a, b| a.start.cmp(&b.start));
 
-    Ok(intervals.into_iter().map(|s| s.into()).collect())
+    let data = intervals
+        .into_iter()
+        .skip(p.offset as usize)
+        .take(p.per_page as usize)
+        .map(Into::into)
+        .collect();
+
+    Ok(Paginated::with_context(&p, total, context, data))
 }

@@ -15,6 +15,15 @@ pub struct LiturgicalSeasonsListQuery {
     pub year: Option<i32>,
     pub calendar_code: Option<String>,
     pub language_code: Option<String>,
+    pub page: Option<i32>,
+    pub per_page: Option<i32>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct LiturgicalSeasonListContext {
+    pub year: i32,
+    pub language_code: String,
+    pub calendar_code: String,
 }
 
 #[derive(Debug, Serialize)]

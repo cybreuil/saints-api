@@ -44,11 +44,15 @@ impl Pagination {
 /// Generic paginated response wrapper.
 #[derive(Debug, Serialize)]
 // #[serde(rename_all = "camelCase")]
-pub struct Paginated<T> {
+pub struct Paginated<T, C = ()> {
     pub page: i32,
     pub per_page: i32,
     pub total: i32,
     pub total_pages: i32,
+
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub context: Option<C>,
+
     pub data: Vec<T>,
 }
 
@@ -60,6 +64,7 @@ impl<T> Paginated<T> {
             per_page: pagination.per_page,
             total,
             total_pages: pagination.total_pages(total),
+            context: None,
             data,
         }
     }
@@ -71,6 +76,31 @@ impl<T> Paginated<T> {
             per_page: pagination.per_page,
             total: 0,
             total_pages: 0,
+            context: None,
+            data: Vec::new(),
+        }
+    }
+}
+
+impl<T, C> Paginated<T, C> {
+    pub fn with_context(pagination: &Pagination, total: i32, context: C, data: Vec<T>) -> Self {
+        Self {
+            page: pagination.page,
+            per_page: pagination.per_page,
+            total,
+            total_pages: pagination.total_pages(total),
+            context: Some(context),
+            data,
+        }
+    }
+
+    pub fn empty_with_context(pagination: &Pagination, context: C) -> Self {
+        Self {
+            page: pagination.page,
+            per_page: pagination.per_page,
+            total: 0,
+            total_pages: 0,
+            context: Some(context),
             data: Vec::new(),
         }
     }
