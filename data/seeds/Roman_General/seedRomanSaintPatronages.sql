@@ -433,6 +433,7 @@ SELECT s.id, p.id, pairs.source_type
 FROM (VALUES
 
   -- ── MARIE ────────────────────────────────────────────────────────────────
+  ('saint-mary',                          'FRANCE',               'OFF'),  -- Pie XI, 2 mars 1922: patronne principale de la France
   ('saint-mary',                          'MOTHERS',              'TRD'),  -- modèle universel de la maternité
   ('saint-mary',                          'FAMILIES',             'TRD'),  -- mère de la Sainte Famille
   ('saint-mary',                          'POOR',                 'TRD'),  -- Magnificat : il a comblé de biens les affamés
@@ -685,6 +686,8 @@ FROM (VALUES
   ('saint-john-henry-newman',             'CONVERTS',             'TRD'),
 
   ('saint-therese-of-the-child-jesus',    'MISSIONARIES',         'OFF'),  -- Pie XI, 1927
+  ('saint-therese-of-the-child-jesus',    'FRANCE',               'TRD'),
+
 
   ('saint-teresa-of-jesus',               'THEOLOGIANS',          'TRD'),
   ('saint-teresa-of-jesus',               'SICK',                 'TRD'),  -- souffrit de maladies graves toute sa vie

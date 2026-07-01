@@ -61,7 +61,7 @@ echo "✅ ROMAN saint attributes seeded."
 run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanSaintPatronages.sql"
 echo "✅ ROMAN saint patronages seeded."
 
-# run_sql "$ROOT_DIR/data/seeds/seedROMAN_links.sql"
-# echo "✅ ROMAN links seeded."
+run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanFeastSaints.sql"
+echo "✅ ROMAN Feast Saints links seeded."
 
 echo "✅ DB seeded."
