@@ -33,8 +33,6 @@ pub async fn get_celebrations(
 			   lr.precedence AS rank_precedence,
 			   lrt.label AS rank_label
 		FROM celebrations c
-		INNER JOIN calendars cal
-			ON c.calendar_id = cal.id
 		LEFT JOIN feasts f
 			ON c.feast_id = f.id
 		LEFT JOIN feast_translations ft
@@ -50,7 +48,9 @@ pub async fn get_celebrations(
 		LEFT JOIN liturgical_rank_translations lrt
 			ON lr.id = lrt.rank_id
 		 	AND lrt.locale_code = $3
-		WHERE cal.code = $4
+		LEFT JOIN calendars cal
+			ON c.calendar_id = cal.id
+			AND cal.code = $4
 		ORDER BY c.id ASC
 		LIMIT $1 OFFSET $2
 		"#,
@@ -151,12 +151,6 @@ pub async fn get_movable_celebrations(
            f.feast_type,
            ft.name AS feast_name,
            ft.description AS feast_description,
-           fs.id AS saint_id,
-		   fs.slug AS saint_slug,
-	       fs.default_name AS saint_name,
- 	       fs.century AS saint_century,
-	       fs.image_url AS saint_image_url,
-		   fst.name AS saint_translation_name,
            lct.label AS liturgical_color_name,
            lc.hex_color AS liturgical_color_hex,
 		   lr.code AS rank_code,
@@ -168,11 +162,6 @@ pub async fn get_movable_celebrations(
     LEFT JOIN feast_translations ft
 		ON f.id = ft.feast_id
 		AND ft.locale_code = $1
-	LEFT JOIN feast_saints fs
-		ON f.id = fs.feast_id
-	LEFT JOIN saint_translations fst
-		ON fs.saint_id = fst.saint_id
-		AND fst.locale_code = $1
     LEFT JOIN liturgical_colors lc
     	ON c.color_id = lc.id
     LEFT JOIN liturgical_color_translations lct
@@ -198,15 +187,52 @@ pub async fn get_movable_celebrations(
     Ok(rows)
 }
 
+/// Fetches all saints linked to the given feast IDs, one row per saint.
+/// The caller groups them by `feast_id`.
+pub async fn get_saints_for_feasts(
+    pool: &PgPool,
+    feast_ids: &[i32],
+    language_code: &str,
+) -> Result<Vec<SaintRow>, ApiError> {
+    if feast_ids.is_empty() {
+        return Ok(vec![]);
+    }
+
+    let rows = sqlx::query_as::<_, SaintRow>(
+        r#"
+        SELECT
+            fs.feast_id,
+            s.id   AS saint_id,
+            s.slug AS saint_slug,
+            COALESCE(st.name, s.default_name) AS saint_name,
+            s.century AS saint_century,
+            s.image_url AS saint_image_url
+        FROM feast_saints fs
+        JOIN saints s
+            ON s.id = fs.saint_id
+        LEFT JOIN saint_translations st
+            ON st.saint_id = s.id
+            AND st.locale_code = $2
+        WHERE fs.feast_id = ANY($1)
+        ORDER BY fs.feast_id, fs.role, s.id
+        "#,
+    )
+    .bind(feast_ids)
+    .bind(language_code)
+    .fetch_all(pool)
+    .await?;
+
+    Ok(rows)
+}
+
 pub async fn count_celebrations(pool: &PgPool, calendar_code: &str) -> Result<i64, ApiError> {
     let count = sqlx::query_scalar!(
         r#"
-        SELECT COUNT(*) as "count!"
-        FROM celebrations c
-        INNER JOIN calendars cal
-            ON c.calendar_id = cal.id
-        WHERE cal.code = $1
-        "#,
+    SELECT COUNT(*) as "count!" FROM celebrations
+    INNER JOIN calendars cal
+		ON celebrations.calendar_id = cal.id
+		WHERE cal.code = $1
+    "#,
         calendar_code
     )
     .fetch_one(pool)

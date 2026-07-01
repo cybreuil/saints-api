@@ -61,7 +61,6 @@ pub struct Celebration {
     pub default_name: Option<String>,
     pub feast_type: Option<String>,
     pub feast_name: Option<String>,
-    pub feast_saints: Option<Vec<Saint>>,
     pub feast_description: Option<String>,
     pub liturgical_color_name: Option<String>,
     pub liturgical_color_hex: Option<String>,
