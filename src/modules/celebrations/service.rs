@@ -1,12 +1,13 @@
 use chrono::{Datelike, Utc};
 use sqlx::PgPool;
 
-use super::dto::Celebration;
+use super::dto::{Celebration, CelebrationByDateContext, CelebrationByDateResponse};
 use super::repo;
 use crate::core::error::ApiError;
 use crate::core::movable_dates::{resolve_movable_date, MovableBase};
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
+use crate::modules::liturgical_seasons;
 
 pub async fn get_celebrations(
     pool: &PgPool,
@@ -19,7 +20,7 @@ pub async fn get_celebrations(
     let cal = validation::resolve_calendar(cal)?;
 
     let p = Pagination::new(Some(page), Some(per_page));
-    let total = repo::count_celebrations(pool).await? as i32;
+    let total = repo::count_celebrations(pool, cal).await? as i32;
 
     if total == 0 {
         return Ok(Paginated::empty(&p));
@@ -37,14 +38,6 @@ pub async fn get_celebrations(
     Ok(Paginated::new(&p, total, data))
 }
 
-pub async fn celebration_of_today(pool: &PgPool) -> Result<Celebration, ApiError> {
-    let date = Utc::now();
-
-    let celebration = repo::celebration_of_today(pool, date).await?;
-
-    Ok(celebration)
-}
-
 pub async fn get_celebrations_by_date(
     pool: &PgPool,
     year: i32,
@@ -52,9 +45,17 @@ pub async fn get_celebrations_by_date(
     day: i16,
     language_code: Option<&str>,
     calendar_code: Option<&str>,
-) -> Result<Vec<Celebration>, ApiError> {
+) -> Result<CelebrationByDateResponse, ApiError> {
     let lang = validation::resolve_locale(language_code)?;
     let cal = validation::resolve_calendar(calendar_code)?;
+
+    let context = CelebrationByDateContext {
+        year,
+        month,
+        day,
+        language_code: lang.to_string(),
+        calendar_code: cal.to_string(),
+    };
 
     // 1. FIXED (DB)
     let mut celebrations =
@@ -89,5 +90,14 @@ pub async fn get_celebrations_by_date(
 
     celebrations.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
 
-    Ok(celebrations)
+    // Resolve the liturgical season
+    let liturgical_season =
+        liturgical_seasons::get_liturgical_season(pool, year, month, day, Some(lang), Some(cal))
+            .await?;
+
+    Ok(CelebrationByDateResponse {
+        context,
+        liturgical_season,
+        celebrations,
+    })
 }

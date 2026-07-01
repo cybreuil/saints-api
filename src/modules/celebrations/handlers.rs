@@ -23,12 +23,6 @@ pub async fn get_celebrations(
     Ok(HttpResponse::Ok().json(result))
 }
 
-pub async fn celebration_of_today(pool: web::Data<PgPool>) -> Result<HttpResponse, ApiError> {
-    let result = service::celebration_of_today(pool.get_ref()).await?;
-
-    Ok(HttpResponse::Ok().json(result))
-}
-
 pub async fn get_celebrations_by_date(
     pool: web::Data<PgPool>,
     query: web::Query<dto::CelebrationByDateQuery>,

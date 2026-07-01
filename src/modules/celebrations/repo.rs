@@ -33,6 +33,8 @@ pub async fn get_celebrations(
 			   lr.precedence AS rank_precedence,
 			   lrt.label AS rank_label
 		FROM celebrations c
+		INNER JOIN calendars cal
+			ON c.calendar_id = cal.id
 		LEFT JOIN feasts f
 			ON c.feast_id = f.id
 		LEFT JOIN feast_translations ft
@@ -48,9 +50,7 @@ pub async fn get_celebrations(
 		LEFT JOIN liturgical_rank_translations lrt
 			ON lr.id = lrt.rank_id
 		 	AND lrt.locale_code = $3
-		LEFT JOIN calendars cal
-			ON c.calendar_id = cal.id
-			AND cal.code = $4
+		WHERE cal.code = $4
 		ORDER BY c.id ASC
 		LIMIT $1 OFFSET $2
 		"#,
@@ -60,24 +60,6 @@ pub async fn get_celebrations(
     .bind(language_code)
     .bind(calendar_code)
     .fetch_all(pool)
-    .await?;
-
-    Ok(rows)
-}
-
-pub async fn celebration_of_today(
-    pool: &PgPool,
-    date: chrono::DateTime<chrono::Utc>,
-) -> Result<Celebration, ApiError> {
-    let rows = sqlx::query_as::<_, Celebration>(
-        "SELECT c.id, c.color_id, c.is_optional, fd.month, fd.day
-        FROM celebrations c
-        LEFT JOIN
-        feast_dates fd ON c.feast_id = fd.feast_id
-        WHERE fd.date = $1",
-    )
-    .bind(date)
-    .fetch_one(pool)
     .await?;
 
     Ok(rows)
@@ -205,11 +187,16 @@ pub async fn get_movable_celebrations(
     Ok(rows)
 }
 
-pub async fn count_celebrations(pool: &PgPool) -> Result<i64, ApiError> {
+pub async fn count_celebrations(pool: &PgPool, calendar_code: &str) -> Result<i64, ApiError> {
     let count = sqlx::query_scalar!(
         r#"
-    SELECT COUNT(*) as "count!" FROM celebrations
-    "#,
+        SELECT COUNT(*) as "count!"
+        FROM celebrations c
+        INNER JOIN calendars cal
+            ON c.calendar_id = cal.id
+        WHERE cal.code = $1
+        "#,
+        calendar_code
     )
     .fetch_one(pool)
     .await?;

@@ -1,3 +1,4 @@
+use crate::modules::liturgical_seasons::LiturgicalSeasonResponse;
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 
@@ -8,6 +9,23 @@ pub struct CelebrationByDateQuery {
     pub day: Option<i16>,
     pub calendar_code: Option<String>,
     pub language_code: Option<String>,
+}
+
+#[derive(Debug, Serialize)]
+pub struct CelebrationByDateContext {
+    pub year: i32,
+    pub month: i16,
+    pub day: i16,
+    pub language_code: String,
+    pub calendar_code: String,
+}
+
+// Depends on LiturgicalSeasonResponse, which is defined in the liturgical_seasons module
+#[derive(Debug, Serialize)]
+pub struct CelebrationByDateResponse {
+    pub context: CelebrationByDateContext,
+    pub liturgical_season: Option<LiturgicalSeasonResponse>,
+    pub celebrations: Vec<Celebration>,
 }
 
 #[derive(Debug, Deserialize)]
