@@ -1,6 +1,6 @@
 use sqlx::PgPool;
 
-use super::dto::{CelebrationRow, SaintRow};
+use super::dto::{CelebrationRow, LiturgicalRankRow, SaintRow};
 use crate::core::error::ApiError;
 
 pub async fn get_celebrations(
@@ -227,6 +227,37 @@ pub async fn get_saints_for_feasts(
     .await?;
 
     Ok(rows)
+}
+
+pub async fn get_lowest_rank(
+    pool: &PgPool,
+    calendar_code: &str,
+    language_code: &str,
+) -> Result<LiturgicalRankRow, ApiError> {
+    let rank = sqlx::query_as::<_, LiturgicalRankRow>(
+        r#"
+		SELECT
+			lr.id,
+			lr.code,
+			lr.precedence,
+			lrt.label
+		FROM liturgical_ranks lr
+		LEFT JOIN liturgical_rank_translations lrt
+			ON lr.id = lrt.rank_id
+			AND lrt.locale_code = $2
+		INNER JOIN calendars cal
+			ON cal.id = lr.calendar_id
+			AND cal.code = $1
+		ORDER BY lr.precedence DESC
+		LIMIT 1
+		"#,
+    )
+    .bind(calendar_code)
+    .bind(language_code)
+    .fetch_one(pool)
+    .await?;
+
+    Ok(rank)
 }
 
 pub async fn count_celebrations(pool: &PgPool, calendar_code: &str) -> Result<i64, ApiError> {

@@ -134,8 +134,11 @@ pub async fn get_celebrations_by_date(
         let date = NaiveDate::from_ymd_opt(year, month as u32, day as u32)
             .ok_or(ApiError::InternalError)?;
 
+        let rank = repo::get_lowest_rank(pool, cal, lang).await?;
+
         let feria_info = feria::build_feria_info(date, lang);
-        celebrations_with_saints.push(CelebrationWithSaints::feria(feria_info.label));
+
+        celebrations_with_saints.push(CelebrationWithSaints::feria(feria_info.label, rank));
     }
 
     Ok(CelebrationByDateResponse {

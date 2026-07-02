@@ -67,6 +67,14 @@ impl From<SaintRow> for Saint {
 }
 
 #[derive(Debug, Serialize, FromRow)]
+pub struct LiturgicalRankRow {
+    pub id: i32,
+    pub code: String,
+    pub precedence: i16,
+    pub label: String,
+}
+
+#[derive(Debug, Serialize, FromRow)]
 pub struct CelebrationRow {
     pub id: i32,
     pub is_optional: bool,
@@ -94,10 +102,10 @@ pub struct CelebrationRow {
 pub struct CelebrationWithSaints {
     pub id: Option<i32>,
     pub is_optional: bool,
-    pub feast_id: Option<i32>,
     pub notes: Option<String>,
     pub observance_type: Option<String>,
     pub default_name: Option<String>,
+    pub feast_id: Option<i32>,
     pub feast_type: Option<String>,
     pub feast_name: Option<String>,
     pub feast_description: Option<String>,
@@ -114,16 +122,16 @@ impl CelebrationWithSaints {
         Self {
             id: Some(row.id),
             is_optional: row.is_optional,
-            rank_id: row.rank_id,
-            feast_id: Some(row.feast_id),
             notes: row.notes,
             observance_type: row.observance_type,
             default_name: row.default_name,
+            feast_id: Some(row.feast_id),
             feast_type: row.feast_type,
             feast_name: row.feast_name,
             feast_description: row.feast_description,
             liturgical_color_name: row.liturgical_color_name,
             liturgical_color_hex: row.liturgical_color_hex,
+            rank_id: row.rank_id,
             rank_code: row.rank_code,
             rank_precedence: row.rank_precedence,
             rank_label: row.rank_label,
@@ -132,23 +140,23 @@ impl CelebrationWithSaints {
     }
 }
 impl CelebrationWithSaints {
-    pub fn feria(label: String) -> Self {
+    pub fn feria(label: String, rank: LiturgicalRankRow) -> Self {
         Self {
             id: None,
             is_optional: false,
-            rank_id: 0,
-            feast_id: None,
             notes: None,
             observance_type: Some("normal".to_string()),
             default_name: Some(label.clone()),
+            feast_id: None,
             feast_type: Some("feria".to_string()),
             feast_name: Some(label),
             feast_description: None,
             liturgical_color_name: None,
             liturgical_color_hex: None,
-            rank_label: None,
-            rank_code: None,
-            rank_precedence: None,
+            rank_id: rank.id,
+            rank_code: Some(rank.code),
+            rank_precedence: Some(rank.precedence),
+            rank_label: Some(rank.label),
             saints: vec![],
         }
     }
