@@ -136,7 +136,9 @@ pub async fn get_celebrations_by_date(
 
         let rank = repo::get_lowest_rank(pool, cal, lang).await?;
 
-        let feria_info = feria::build_feria_info(date, lang);
+        // WIP - Build feria info based on the liturgical season
+        let feria_info =
+            feria::build_feria_info(date, lang, season_label(liturgical_season.as_ref()));
 
         celebrations_with_saints.push(CelebrationWithSaints::feria(feria_info.label, rank));
     }
