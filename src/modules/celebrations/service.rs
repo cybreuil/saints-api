@@ -1,10 +1,11 @@
-use chrono::Datelike;
+use chrono::{Datelike, NaiveDate};
 use sqlx::PgPool;
 use std::collections::HashMap;
 
 use super::dto::{CelebrationByDateContext, CelebrationByDateResponse, CelebrationRow, SaintRow};
 use super::repo;
 use crate::core::error::ApiError;
+use crate::core::feria;
 use crate::core::movable_dates::{resolve_movable_date, MovableBase};
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
@@ -121,12 +122,21 @@ pub async fn get_celebrations_by_date(
 
     celebrations.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
 
-    let celebrations_with_saints = attach_saints(pool, celebrations, lang).await?;
+    let mut celebrations_with_saints = attach_saints(pool, celebrations, lang).await?;
 
     // Resolve the liturgical season
     let liturgical_season =
         liturgical_seasons::get_liturgical_season(pool, year, month, day, Some(lang), Some(cal))
             .await?;
+
+    // Fallback feria
+    if celebrations_with_saints.is_empty() {
+        let date = NaiveDate::from_ymd_opt(year, month as u32, day as u32)
+            .ok_or(ApiError::InternalError)?;
+
+        let feria_info = feria::build_feria_info(date, lang);
+        celebrations_with_saints.push(CelebrationWithSaints::feria(feria_info.label));
+    }
 
     Ok(CelebrationByDateResponse {
         context,

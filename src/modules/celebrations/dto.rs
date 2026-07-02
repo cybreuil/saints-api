@@ -1,4 +1,5 @@
 use crate::modules::liturgical_seasons::LiturgicalSeasonResponse;
+use chrono::{Datelike, NaiveDate};
 use serde::{Deserialize, Serialize};
 use sqlx::FromRow;
 
@@ -91,15 +92,9 @@ pub struct CelebrationRow {
 
 #[derive(Debug, Serialize)]
 pub struct CelebrationWithSaints {
-    pub id: i32,
+    pub id: Option<i32>,
     pub is_optional: bool,
-    pub rank_id: i32,
-    pub feast_id: i32,
-    pub date_kind: Option<String>,
-    pub month: Option<i16>,
-    pub day: Option<i16>,
-    pub movable_base: Option<String>,
-    pub movable_offset_days: Option<i16>,
+    pub feast_id: Option<i32>,
     pub notes: Option<String>,
     pub observance_type: Option<String>,
     pub default_name: Option<String>,
@@ -108,6 +103,7 @@ pub struct CelebrationWithSaints {
     pub feast_description: Option<String>,
     pub liturgical_color_name: Option<String>,
     pub liturgical_color_hex: Option<String>,
+    pub rank_id: i32,
     pub rank_code: Option<String>,
     pub rank_precedence: Option<i16>,
     pub rank_label: Option<String>,
@@ -116,15 +112,10 @@ pub struct CelebrationWithSaints {
 impl CelebrationWithSaints {
     pub fn from(row: CelebrationRow, saints: Vec<Saint>) -> Self {
         Self {
-            id: row.id,
+            id: Some(row.id),
             is_optional: row.is_optional,
             rank_id: row.rank_id,
-            feast_id: row.feast_id,
-            date_kind: row.date_kind,
-            month: row.month,
-            day: row.day,
-            movable_base: row.movable_base,
-            movable_offset_days: row.movable_offset_days,
+            feast_id: Some(row.feast_id),
             notes: row.notes,
             observance_type: row.observance_type,
             default_name: row.default_name,
@@ -137,6 +128,28 @@ impl CelebrationWithSaints {
             rank_precedence: row.rank_precedence,
             rank_label: row.rank_label,
             saints,
+        }
+    }
+}
+impl CelebrationWithSaints {
+    pub fn feria(label: String) -> Self {
+        Self {
+            id: None,
+            is_optional: false,
+            rank_id: 0,
+            feast_id: None,
+            notes: None,
+            observance_type: Some("normal".to_string()),
+            default_name: Some(label.clone()),
+            feast_type: Some("feria".to_string()),
+            feast_name: Some(label),
+            feast_description: None,
+            liturgical_color_name: None,
+            liturgical_color_hex: None,
+            rank_label: None,
+            rank_code: None,
+            rank_precedence: None,
+            saints: vec![],
         }
     }
 }
