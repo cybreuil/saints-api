@@ -1,6 +1,6 @@
 use sqlx::PgPool;
 
-use super::dto::Celebration;
+use super::dto::{CelebrationRow, SaintRow};
 use crate::core::error::ApiError;
 
 pub async fn get_celebrations(
@@ -9,8 +9,8 @@ pub async fn get_celebrations(
     offset: i32,
     calendar_code: &str,
     language_code: &str,
-) -> Result<Vec<Celebration>, ApiError> {
-    let rows = sqlx::query_as::<_, Celebration>(
+) -> Result<Vec<CelebrationRow>, ApiError> {
+    let rows = sqlx::query_as::<_, CelebrationRow>(
         r#"
 		SELECT c.id,
 			   c.is_optional,
@@ -71,8 +71,8 @@ pub async fn get_fixed_celebrations_by_date(
     day: i16,
     language_code: &str,
     calendar_code: &str,
-) -> Result<Vec<Celebration>, ApiError> {
-    let rows = sqlx::query_as::<_, Celebration>(
+) -> Result<Vec<CelebrationRow>, ApiError> {
+    let rows = sqlx::query_as::<_, CelebrationRow>(
         r#"
         SELECT c.id,
                c.is_optional,
@@ -133,8 +133,8 @@ pub async fn get_movable_celebrations(
     pool: &PgPool,
     language_code: &str,
     calendar_code: &str,
-) -> Result<Vec<Celebration>, ApiError> {
-    let rows = sqlx::query_as::<_, Celebration>(
+) -> Result<Vec<CelebrationRow>, ApiError> {
+    let rows = sqlx::query_as::<_, CelebrationRow>(
         r#"
     SELECT c.id,
            c.is_optional,
@@ -194,25 +194,29 @@ pub async fn get_saints_for_feasts(
     feast_ids: &[i32],
     language_code: &str,
 ) -> Result<Vec<SaintRow>, ApiError> {
-    if feast_ids.is_empty() {
-        return Ok(vec![]);
-    }
-
     let rows = sqlx::query_as::<_, SaintRow>(
         r#"
         SELECT
             fs.feast_id,
             s.id   AS saint_id,
             s.slug AS saint_slug,
-            COALESCE(st.name, s.default_name) AS saint_name,
+            st.name AS saint_name,
             s.century AS saint_century,
-            s.image_url AS saint_image_url
+            img.image_url AS saint_image_url
         FROM feast_saints fs
         JOIN saints s
             ON s.id = fs.saint_id
         LEFT JOIN saint_translations st
             ON st.saint_id = s.id
             AND st.locale_code = $2
+        LEFT JOIN LATERAL (
+            SELECT i.image_url
+            FROM saint_images si
+            JOIN images i ON i.id = si.image_id
+            WHERE si.saint_id = s.id
+            ORDER BY si.is_primary DESC, si.sort_order ASC
+            LIMIT 1
+        ) img ON TRUE
         WHERE fs.feast_id = ANY($1)
         ORDER BY fs.feast_id, fs.role, s.id
         "#,

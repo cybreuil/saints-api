@@ -1,14 +1,14 @@
 use chrono::Datelike;
-use sqlx::{PgPool, Row};
+use sqlx::PgPool;
 use std::collections::HashMap;
 
-use super::dto::{Celebration, CelebrationByDateContext, CelebrationByDateResponse, Saint};
+use super::dto::{CelebrationByDateContext, CelebrationByDateResponse, CelebrationRow, SaintRow};
 use super::repo;
 use crate::core::error::ApiError;
 use crate::core::movable_dates::{resolve_movable_date, MovableBase};
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
-use crate::modules::celebrations::dto::CelebrationWithSaints;
+use crate::modules::celebrations::dto::{CelebrationWithSaints, Saint};
 use crate::modules::liturgical_seasons;
 
 pub async fn get_celebrations(
@@ -17,7 +17,7 @@ pub async fn get_celebrations(
     per_page: i32,
     cal: Option<&str>,
     language_code: Option<&str>,
-) -> Result<Paginated<Celebration>, ApiError> {
+) -> Result<Paginated<CelebrationRow>, ApiError> {
     let lang = validation::resolve_locale(language_code)?;
     let cal = validation::resolve_calendar(cal)?;
 
@@ -42,7 +42,7 @@ pub async fn get_celebrations(
 
 async fn attach_saints(
     pool: &PgPool,
-    rows: Vec<Celebration>,
+    rows: Vec<CelebrationRow>,
     language_code: &str,
 ) -> Result<Vec<CelebrationWithSaints>, ApiError> {
     let feast_ids: Vec<i32> = rows.iter().map(|r| r.feast_id).collect();
@@ -55,14 +55,14 @@ async fn attach_saints(
         saints_by_feast
             .entry(s.feast_id)
             .or_default()
-            .push(s.into());
+            .push(Saint::from(s));
     }
 
     let celebrations = rows
         .into_iter()
         .map(|row| {
             let saints = saints_by_feast.remove(&row.feast_id).unwrap_or_default();
-            Celebration::from_row(row, saints)
+            CelebrationWithSaints::from(row, saints)
         })
         .collect();
 
