@@ -1,11 +1,17 @@
 use chrono::{Datelike, NaiveDate, Weekday};
 
+use crate::modules::liturgical_seasons;
+
 #[derive(Debug, Clone)]
 pub struct FeriaInfo {
     pub label: String,
 }
 
-pub fn build_feria_info(date: NaiveDate, language_code: &str) -> FeriaInfo {
+pub fn build_feria_info(
+    date: NaiveDate,
+    language_code: &str,
+    liturgical_season_label: Option<&str>,
+) -> FeriaInfo {
     let label = match language_code {
         "fr" => match date.weekday() {
             Weekday::Mon => "Lundi de la férie",
@@ -37,6 +43,6 @@ pub fn build_feria_info(date: NaiveDate, language_code: &str) -> FeriaInfo {
     };
 
     FeriaInfo {
-        label: label.to_string(),
+        label: format!("{} de {}", label, liturgical_season_label.unwrap_or("")),
     }
 }
