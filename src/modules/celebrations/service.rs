@@ -139,6 +139,7 @@ pub async fn get_celebrations_by_date(
         .map(|s| s.code.as_deref() == Some("ORDINARY_TIME"))
         .unwrap_or(false);
 
+    // NEED EXTRA CHECK CALENDAR + SOLEMNITY ON SUNDAY
     // Fallback Celebration (Feria / Sunday) for roman calendar if no celebrations are found or if it's a Sunday
     if celebrations_with_saints.is_empty() || (is_sunday && is_ordinary_time) {
         let rank = if is_sunday {
