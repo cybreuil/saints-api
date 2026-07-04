@@ -2,11 +2,11 @@ use chrono::{Datelike, NaiveDate};
 use sqlx::PgPool;
 use std::collections::HashMap;
 
-use super::dto::{CelebrationByDateContext, CelebrationByDateResponse, CelebrationRow, SaintRow};
+use super::dto::{CelebrationByDateContext, CelebrationByDateResponse, CelebrationRow};
 use super::repo;
 use crate::core::error::ApiError;
 use crate::core::feria;
-use crate::core::movable_dates::{resolve_movable_date, MovableBase};
+use crate::core::movable_dates::{resolve_movable_date, sunday_number_in_season, MovableBase};
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
 use crate::modules::celebrations::dto::{CelebrationWithSaints, Saint};
@@ -129,21 +129,33 @@ pub async fn get_celebrations_by_date(
         liturgical_seasons::get_liturgical_season(pool, year, month, day, Some(lang), Some(cal))
             .await?;
 
-    // Fallback feria
-    if celebrations_with_saints.is_empty() {
-        let date = NaiveDate::from_ymd_opt(year, month as u32, day as u32)
-            .ok_or(ApiError::InternalError)?;
+    let date =
+        NaiveDate::from_ymd_opt(year, month as u32, day as u32).ok_or(ApiError::InternalError)?;
 
-        let rank = repo::get_lowest_rank(pool, cal, lang).await?;
+    let is_sunday = date.weekday() == chrono::Weekday::Sun;
 
-        // WIP - Build feria info based on the liturgical season
+    // Fallback Celebration (Feria / Sunday) for roman calendar if no celebrations are found or if it's a Sunday
+    if celebrations_with_saints.is_empty() || is_sunday {
+        let rank = if is_sunday {
+            repo::get_sunday_rank(pool, cal, lang).await?
+        } else {
+            repo::get_lowest_rank(pool, cal, lang).await?
+        };
+
+        // movable_dates calculation for the Sunday number in Ordinary Time
+        let sunday_number = sunday_number_in_season(date, year);
+
         let feria_info = feria::build_feria_info(
             date,
             lang,
             liturgical_season.as_ref().and_then(|s| s.label.as_deref()),
+            sunday_number,
         );
 
         celebrations_with_saints.push(CelebrationWithSaints::feria(feria_info.label, rank));
+
+        // We sort by rank precedence again to ensure the feria is in the correct order
+        celebrations_with_saints.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
     }
 
     Ok(CelebrationByDateResponse {

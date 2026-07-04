@@ -605,9 +605,10 @@ FROM calendars c
 CROSS JOIN (VALUES
     ('SOLEMNITY', 1),
     ('FEAST', 2),
-    ('MEM_OBL', 3),
-    ('MEM_OPT', 4),
-    ('FERIA', 5)
+    ('SUNDAY', 3),
+    ('MEM_OBL', 4),
+    ('MEM_OPT', 5),
+    ('FERIA', 6)
 ) AS x(code, precedence)
 WHERE c.code = 'ROMAN_GENERAL';
 
@@ -619,6 +620,7 @@ JOIN calendars c ON c.id = r.calendar_id
 JOIN (VALUES
     ('SOLEMNITY', 'Solennité'),
     ('FEAST', 'Fête'),
+    ('SUNDAY', 'Dimanche'),
     ('MEM_OBL', 'Mémoire obligatoire'),
     ('MEM_OPT', 'Mémoire facultative'),
     ('FERIA', 'Férie')
@@ -634,6 +636,7 @@ JOIN calendars c ON c.id = r.calendar_id
 JOIN (VALUES
     ('SOLEMNITY', 'Solemnity'),
     ('FEAST', 'Feast'),
+    ('SUNDAY', 'Sunday'),
     ('MEM_OBL', 'Obligatory Memorial'),
     ('MEM_OPT', 'Optional Memorial'),
     ('FERIA', 'Feria')
@@ -649,6 +652,7 @@ JOIN calendars c ON c.id = r.calendar_id
 JOIN (VALUES
     ('SOLEMNITY', 'Sollemnitas'),
     ('FEAST', 'Festum'),
+    ('SUNDAY', 'Dominica'),
     ('MEM_OBL', 'Memoria obligatoria'),
     ('MEM_OPT', 'Memoria ad libitum'),
     ('FERIA', 'Feria')

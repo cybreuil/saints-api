@@ -218,6 +218,74 @@ pub fn holy_thursday(year: i32) -> NaiveDate {
     offset(easter_sunday(year), -3)
 }
 
+/// Returns the ordinal number (1-based) of a Sunday within its liturgical season.
+/// Returns `None` if the date is not a Sunday, or falls in Christmas time
+/// (where Sundays are individually seeded feasts).
+///
+/// Coverage:
+/// - Advent:        1st – 4th
+/// - Lent:          1st – 6th (6th = Palm Sunday)
+/// - Eastertide:    1st – 7th (1st = Easter; Pentecost excluded, it is seeded)
+/// - Ordinary Time: 2nd – 34th (counted backward from Christ the King)
+pub fn sunday_number_in_season(date: NaiveDate, year: i32) -> Option<u32> {
+    if date.weekday() != Weekday::Sun {
+        return None;
+    }
+
+    let baptism = baptism_of_the_lord(year);
+    let easter = easter_sunday(year);
+    let pent = pentecost(year);
+    let advent = first_advent_sunday(year);
+
+    // Ash Wednesday = Easter - 46; first Sunday of Lent = Easter - 42
+    let first_lent = offset(easter, -42);
+    // Christ the King = Sunday immediately before 1st Advent Sunday = 34th Sunday of OT
+    let christ_king = offset(advent, -7);
+
+    // ── ADVENT ── 1st through 4th Sunday
+    if date >= advent {
+        let n = ((date - advent).num_days() / 7) as u32 + 1;
+        if n <= 4 {
+            return Some(n);
+        }
+    }
+
+    // ── LENT ── 1st through 6th Sunday (Palm Sunday is the 6th)
+    if date >= first_lent && date < easter {
+        let n = ((date - first_lent).num_days() / 7) as u32 + 1;
+        return Some(n);
+    }
+
+    // ── EASTERTIDE ── 1st (Easter) through 7th Sunday
+    // Pentecost (+49) is seeded separately; we stop at +42.
+    if date >= easter && date <= offset(easter, 42) {
+        let n = ((date - easter).num_days() / 7) as u32 + 1;
+        return Some(n);
+    }
+
+    // ── ORDINARY TIME I ── 2nd Sunday (after Baptism) to last Sunday before Lent
+    // Baptism of the Lord is always a Sunday, so OT I begins the following Sunday (+7).
+    let first_ot1 = offset(baptism, 7);
+    let last_ot1 = offset(first_lent, -7);
+
+    if date >= first_ot1 && date <= last_ot1 {
+        let n = ((date - first_ot1).num_days() / 7) as u32 + 2;
+        return Some(n);
+    }
+
+    // ── ORDINARY TIME II ── Trinity Sunday (+7 after Pentecost) through Christ the King
+    // Numbered backward from Christ the King (= 34th Sunday of OT).
+    let first_ot2 = offset(pent, 7); // Trinity Sunday
+
+    if date >= first_ot2 && date <= christ_king {
+        let weeks_before_end = ((christ_king - date).num_days() / 7) as u32;
+        return Some(34 - weeks_before_end);
+    }
+
+    // Christmas time: Holy Family, Baptism of the Lord, etc. are seeded individually.
+    None
+}
+
 /// Resolves a movable date from its base and day offset.
 ///
 /// For all base movable dates listed above
