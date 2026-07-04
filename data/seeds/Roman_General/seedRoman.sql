@@ -1882,8 +1882,74 @@ LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
--- Easter Vigil (J-1)
+-- Sundays of Eastertide 3rd–7th
+-- (3rd = +14, 4th Good Shepherd = +21, 5th = +28, 6th = +35, 7th = +42)
 -- =========================================================
+
+-- FEASTS
+INSERT INTO feasts (slug, default_name, feast_type) VALUES
+('third-sunday-of-easter',  'Third Sunday of Easter',                'christological'),
+('fourth-sunday-of-easter', 'Fourth Sunday of Easter (Good Shepherd)', 'christological'),
+('fifth-sunday-of-easter',  'Fifth Sunday of Easter',                 'christological'),
+('sixth-sunday-of-easter',  'Sixth Sunday of Easter',                 'christological'),
+('seventh-sunday-of-easter','Seventh Sunday of Easter',               'christological')
+ON CONFLICT (slug) DO NOTHING;
+
+-- TRANSLATIONS EN
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'en', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+  ('third-sunday-of-easter',  'Third Sunday of Easter'),
+  ('fourth-sunday-of-easter', 'Fourth Sunday of Easter (Good Shepherd)'),
+  ('fifth-sunday-of-easter',  'Fifth Sunday of Easter'),
+  ('sixth-sunday-of-easter',  'Sixth Sunday of Easter'),
+  ('seventh-sunday-of-easter','Seventh Sunday of Easter')
+) AS x(slug, name) ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- TRANSLATIONS FR
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'fr', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+  ('third-sunday-of-easter',  'Troisième dimanche de Pâques'),
+  ('fourth-sunday-of-easter', 'Quatrième dimanche de Pâques (Bon Pasteur)'),
+  ('fifth-sunday-of-easter',  'Cinquième dimanche de Pâques'),
+  ('sixth-sunday-of-easter',  'Sixième dimanche de Pâques'),
+  ('seventh-sunday-of-easter','Septième dimanche de Pâques')
+) AS x(slug, name) ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- TRANSLATIONS LA
+INSERT INTO feast_translations (feast_id, locale_code, name, description)
+SELECT f.id, 'la', x.name, NULL
+FROM feasts f
+JOIN (VALUES
+  ('third-sunday-of-easter',  'Dominica III Paschae'),
+  ('fourth-sunday-of-easter', 'Dominica IV Paschae (Boni Pastoris)'),
+  ('fifth-sunday-of-easter',  'Dominica V Paschae'),
+  ('sixth-sunday-of-easter',  'Dominica VI Paschae'),
+  ('seventh-sunday-of-easter','Dominica VII Paschae')
+) AS x(slug, name) ON f.slug = x.slug
+ON CONFLICT (feast_id, locale_code) DO NOTHING;
+
+-- CELEBRATIONS (movable, EASTER_SUNDAY + offset)
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'movable', x.movable_base, x.offset_days, 'normal', FALSE, 'Roman General Calendar'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+  ('third-sunday-of-easter',   'EASTER_SUNDAY', 14, 'SOLEMNITY', 'WHITE'),
+  ('fourth-sunday-of-easter',  'EASTER_SUNDAY', 21, 'SOLEMNITY', 'WHITE'),
+  ('fifth-sunday-of-easter',   'EASTER_SUNDAY', 28, 'SOLEMNITY', 'WHITE'),
+  ('sixth-sunday-of-easter',   'EASTER_SUNDAY', 35, 'SOLEMNITY', 'WHITE'),
+  ('seventh-sunday-of-easter', 'EASTER_SUNDAY', 42, 'SOLEMNITY', 'WHITE')
+) AS x(slug, movable_base, offset_days, rank_code, color_code) ON f.slug = x.slug
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
 
 -- FEAST
 INSERT INTO feasts (slug, default_name, feast_type) VALUES

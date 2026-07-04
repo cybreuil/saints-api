@@ -139,7 +139,7 @@ impl CelebrationWithSaints {
     }
 }
 impl CelebrationWithSaints {
-    pub fn feria(label: String, rank: LiturgicalRankRow) -> Self {
+    pub fn feria(label: String, rank: LiturgicalRankRow, feast_type: String) -> Self {
         Self {
             id: None,
             is_optional: false,
@@ -147,7 +147,7 @@ impl CelebrationWithSaints {
             observance_type: Some("normal".to_string()),
             default_name: Some(label.clone()),
             feast_id: None,
-            feast_type: Some("feria".to_string()),
+            feast_type: Some(feast_type),
             feast_name: Some(label),
             feast_description: None,
             liturgical_color_name: None,

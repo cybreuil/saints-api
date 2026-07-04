@@ -134,12 +134,23 @@ pub async fn get_celebrations_by_date(
 
     let is_sunday = date.weekday() == chrono::Weekday::Sun;
 
+    let is_ordinary_time = liturgical_season
+        .as_ref()
+        .map(|s| s.code.as_deref() == Some("ORDINARY_TIME"))
+        .unwrap_or(false);
+
     // Fallback Celebration (Feria / Sunday) for roman calendar if no celebrations are found or if it's a Sunday
-    if celebrations_with_saints.is_empty() || is_sunday {
+    if celebrations_with_saints.is_empty() || (is_sunday && is_ordinary_time) {
         let rank = if is_sunday {
             repo::get_sunday_rank(pool, cal, lang).await?
         } else {
             repo::get_lowest_rank(pool, cal, lang).await?
+        };
+
+        let feast_type = if is_sunday {
+            "sunday".to_string()
+        } else {
+            "feria".to_string()
         };
 
         // movable_dates calculation for the Sunday number in Ordinary Time
@@ -152,7 +163,11 @@ pub async fn get_celebrations_by_date(
             sunday_number,
         );
 
-        celebrations_with_saints.push(CelebrationWithSaints::feria(feria_info.label, rank));
+        celebrations_with_saints.push(CelebrationWithSaints::feria(
+            feria_info.label,
+            rank,
+            feast_type,
+        ));
 
         // We sort by rank precedence again to ensure the feria is in the correct order
         celebrations_with_saints.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
