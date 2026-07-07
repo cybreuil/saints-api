@@ -142,10 +142,49 @@ pub async fn get_celebrations_by_date(
     // NEED EXTRA CHECK CALENDAR + SOLEMNITY ON SUNDAY
     // Fallback Celebration (Feria / Sunday) for roman calendar if no celebrations are found or if it's a Sunday
     if celebrations_with_saints.is_empty() || (is_sunday && is_ordinary_time) {
-        let rank = if is_sunday {
-            repo::get_sunday_rank(pool, cal, lang).await?
-        } else {
-            repo::get_lowest_rank(pool, cal, lang).await?
+        // Try to obtain a rank, climbing parents if necessary
+        let rank = {
+            let mut current_cal = cal.to_string();
+            let mut depth = 0usize;
+            let mut last_err: Option<crate::core::error::ApiError> = None;
+
+            loop {
+                let attempt = if is_sunday {
+                    repo::get_sunday_rank(pool, &current_cal, lang).await
+                } else {
+                    repo::get_lowest_rank(pool, &current_cal, lang).await
+                };
+
+                match attempt {
+                    Ok(r) => break r,
+                    Err(e) => {
+                        // remember last error and try parent
+                        last_err = Some(e);
+
+                        // get parent code if any
+                        let parent_code_opt: Option<String> = sqlx::query_scalar!(
+                        "SELECT code FROM calendars WHERE id = (SELECT parent_id FROM calendars WHERE code = $1)",
+                        current_cal
+                    )
+                    .fetch_optional(pool)
+                    .await?;
+
+                        if let Some(parent_code) = parent_code_opt {
+                            current_cal = parent_code;
+                        } else {
+                            // no parent -> rethrow last error (or convert to NotFound)
+                            return Err(
+                                last_err.unwrap_or_else(|| crate::core::error::ApiError::NotFound)
+                            );
+                        }
+
+                        depth += 1;
+                        if depth > 10 {
+                            return Err(crate::core::error::ApiError::InternalError);
+                        }
+                    }
+                }
+            }
         };
 
         let feast_type = if is_sunday {

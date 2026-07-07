@@ -11,6 +11,7 @@ use serde::{Deserialize, Serialize};
 // FIRST_ADVENT_SUNDAY
 // SUNDAY_AFTER_EPIPHANY
 // SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30
+// EPIPHANY_SUNDAY  (France/Belgium/etc: Sunday between Jan 2–8)
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all = "SCREAMING_SNAKE_CASE")]
@@ -27,6 +28,7 @@ pub enum MovableBase {
     BaptismOfTheLord,
     AshWednesday,
     HolyThursday,
+    EpiphanySunday,
 }
 
 impl TryFrom<&str> for MovableBase {
@@ -48,6 +50,7 @@ impl TryFrom<&str> for MovableBase {
             "BAPTISM_OF_THE_LORD" => Ok(Self::BaptismOfTheLord),
             "ASH_WEDNESDAY" => Ok(Self::AshWednesday),
             "HOLY_THURSDAY" => Ok(Self::HolyThursday),
+            "EPIPHANY_SUNDAY" => Ok(Self::EpiphanySunday),
             _ => Err(()),
         }
     }
@@ -68,6 +71,7 @@ impl MovableBase {
             Self::BaptismOfTheLord => "BAPTISM_OF_THE_LORD",
             Self::AshWednesday => "ASH_WEDNESDAY",
             Self::HolyThursday => "HOLY_THURSDAY",
+            Self::EpiphanySunday => "EPIPHANY_SUNDAY",
         }
     }
 }
@@ -218,6 +222,18 @@ pub fn holy_thursday(year: i32) -> NaiveDate {
     offset(easter_sunday(year), -3)
 }
 
+/// Returns Epiphany for calendars where it is moved to the nearest Sunday
+/// in [Jan 2, Jan 8] (France, Belgium, etc.).
+/// If Jan 6 falls on Sunday the result is Jan 6, otherwise it is the
+/// unique Sunday in that window (always exactly one).
+pub fn epiphany_france(year: i32) -> NaiveDate {
+    let mut date = NaiveDate::from_ymd_opt(year, 1, 2).unwrap();
+    while date.weekday() != Weekday::Sun {
+        date += Duration::days(1);
+    }
+    date
+}
+
 /// Returns the ordinal number (1-based) of a Sunday within its liturgical season.
 /// Returns `None` if the date is not a Sunday, or falls in Christmas time
 /// (where Sundays are individually seeded feasts).
@@ -315,5 +331,6 @@ pub fn resolve_movable_date(
         MovableBase::BaptismOfTheLord => offset(baptism_of_the_lord(year), offset_days),
         MovableBase::AshWednesday => offset(ash_wednesday(year), offset_days),
         MovableBase::HolyThursday => offset(holy_thursday(year), offset_days),
+        MovableBase::EpiphanySunday => offset(epiphany_france(year), offset_days),
     }
 }

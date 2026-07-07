@@ -163,4 +163,35 @@ LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-assumption-of-the-blessed-virgin-mary'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
+-- =========================================================
+-- Movable feasts: Epiphany and Baptism of the Lord
+--
+-- France (and Belgium) move Epiphany to the Sunday between
+-- Jan 2 and Jan 8 (EPIPHANY_SUNDAY base).
+-- The Baptism of the Lord then falls on the following Sunday
+-- (EPIPHANY_SUNDAY +7), never conflicting with Epiphany itself.
+-- =========================================================
+
+-- Épiphanie du Seigneur (dimanche entre le 2 et le 8 janvier)
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional)
+SELECT f.id, cal.id, r.id, lc.id, 'movable', 'EPIPHANY_SUNDAY', 0, 'normal', FALSE
+FROM feasts f
+JOIN calendars cal  ON cal.code  = 'ROMAN_FRANCE'
+JOIN calendars rcal ON rcal.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = rcal.id AND r.code = 'SOLEMNITY'
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
+WHERE f.slug = 'the-epiphany-of-the-lord'
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- Baptême du Seigneur (dimanche suivant l'Épiphanie française)
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional)
+SELECT f.id, cal.id, r.id, lc.id, 'movable', 'EPIPHANY_SUNDAY', 7, 'normal', FALSE
+FROM feasts f
+JOIN calendars cal  ON cal.code  = 'ROMAN_FRANCE'
+JOIN calendars rcal ON rcal.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = rcal.id AND r.code = 'FEAST'
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
+WHERE f.slug = 'the-baptism-of-the-lord'
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
 COMMIT;
