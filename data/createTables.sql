@@ -606,9 +606,10 @@ CROSS JOIN (VALUES
     ('SOLEMNITY', 1),
     ('FEAST', 2),
     ('SUNDAY', 3),
-    ('MEM_OBL', 4),
-    ('MEM_OPT', 5),
-    ('FERIA', 6)
+    ('FERIA_PRIVILEGED', 4),
+    ('MEM_OBL', 5),
+    ('MEM_OPT', 6),
+    ('FERIA', 7)
 ) AS x(code, precedence)
 WHERE c.code = 'ROMAN_GENERAL';
 
@@ -621,6 +622,7 @@ JOIN (VALUES
     ('SOLEMNITY', 'Solennité'),
     ('FEAST', 'Fête'),
     ('SUNDAY', 'Dimanche'),
+    ('FERIA_PRIVILEGED', 'Férie privilégiée'),
     ('MEM_OBL', 'Mémoire obligatoire'),
     ('MEM_OPT', 'Mémoire facultative'),
     ('FERIA', 'Férie')
@@ -637,6 +639,7 @@ JOIN (VALUES
     ('SOLEMNITY', 'Solemnity'),
     ('FEAST', 'Feast'),
     ('SUNDAY', 'Sunday'),
+    ('FERIA_PRIVILEGED', 'Privileged Feria'),
     ('MEM_OBL', 'Obligatory Memorial'),
     ('MEM_OPT', 'Optional Memorial'),
     ('FERIA', 'Feria')
@@ -653,6 +656,7 @@ JOIN (VALUES
     ('SOLEMNITY', 'Sollemnitas'),
     ('FEAST', 'Festum'),
     ('SUNDAY', 'Dominica'),
+    ('FERIA_PRIVILEGED', 'Feria Privilegiata'),
     ('MEM_OBL', 'Memoria obligatoria'),
     ('MEM_OPT', 'Memoria ad libitum'),
     ('FERIA', 'Feria')

@@ -67,3 +67,4 @@ C'est extrêmement rapide et toute la logique de calcul est déplacée dans une 
 ++ Need gerer heritage des celebrations en fonction des calendriers
 
 + Check ash wednesday / bernadette soubirous
++ Need double check feria lent / advent are privileged ???

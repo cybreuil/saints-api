@@ -2055,12 +2055,12 @@ FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
 ('palm-sunday-of-the-passion-of-the-lord', 'EASTER_SUNDAY', -7, 'SOLEMNITY', 'RED', 'normal'),
-('monday-of-holy-week', 'EASTER_SUNDAY', -6, 'FERIA', 'PURPLE', 'normal'),
-('tuesday-of-holy-week', 'EASTER_SUNDAY', -5, 'FERIA', 'PURPLE', 'normal'),
-('wednesday-of-holy-week', 'EASTER_SUNDAY', -4, 'FERIA', 'PURPLE', 'normal'),
+('monday-of-holy-week', 'EASTER_SUNDAY', -6, 'FERIA_PRIVILEGED', 'PURPLE', 'normal'),
+('tuesday-of-holy-week', 'EASTER_SUNDAY', -5, 'FERIA_PRIVILEGED', 'PURPLE', 'normal'),
+('wednesday-of-holy-week', 'EASTER_SUNDAY', -4, 'FERIA_PRIVILEGED', 'PURPLE', 'normal'),
 ('holy-thursday-evening-mass-of-the-lords-supper', 'EASTER_SUNDAY', -3, 'SOLEMNITY', 'WHITE', 'normal'),
 ('friday-of-the-passion-of-the-lord', 'EASTER_SUNDAY', -2, 'SOLEMNITY', 'RED', 'normal'),
-('holy-saturday', 'EASTER_SUNDAY', -1, 'FERIA', 'PURPLE', 'normal')
+('holy-saturday', 'EASTER_SUNDAY', -1, 'FERIA_PRIVILEGED', 'PURPLE', 'normal')
 ) AS x(slug, movable_base, movable_offset_days, rank_code, color_code, observance_type)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -2136,7 +2136,7 @@ SELECT f.id, c.id, r.id, lc.id, 'movable', x.movable_base, x.movable_offset_days
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('ash-wednesday', 'EASTER_SUNDAY', -46, 'FERIA', 'PURPLE'),
+('ash-wednesday', 'EASTER_SUNDAY', -46, 'FERIA_PRIVILEGED', 'PURPLE'),
 ('first-sunday-of-lent', 'EASTER_SUNDAY', -42, 'SOLEMNITY', 'PURPLE'),
 ('second-sunday-of-lent', 'EASTER_SUNDAY', -35, 'SOLEMNITY', 'PURPLE'),
 ('third-sunday-of-lent', 'EASTER_SUNDAY', -28, 'SOLEMNITY', 'PURPLE'),
