@@ -172,6 +172,7 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 -- (EPIPHANY_SUNDAY +7), never conflicting with Epiphany itself.
 -- =========================================================
 
+-- WIP
 -- Épiphanie du Seigneur (dimanche entre le 2 et le 8 janvier)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional)
 SELECT f.id, cal.id, r.id, lc.id, 'movable', 'EPIPHANY_SUNDAY', 0, 'normal', FALSE

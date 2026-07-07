@@ -65,3 +65,5 @@ WHERE date = $1;
 C'est extrêmement rapide et toute la logique de calcul est déplacée dans une étape de génération.
 
 ++ Need gerer heritage des celebrations en fonction des calendriers
+
++ Check ash wednesday / bernadette soubirous

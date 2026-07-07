@@ -5,6 +5,7 @@ use sqlx::types::chrono::{DateTime, Utc};
 #[derive(Debug, Serialize, FromRow)]
 pub struct Calendar {
     pub code: String,
+    pub parent_id: Option<i32>,
     pub parent_code: Option<String>,
     pub date_system: String,
     pub easter_computation: String,

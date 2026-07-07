@@ -291,6 +291,23 @@ pub async fn get_sunday_rank(
     Ok(rank)
 }
 
+pub async fn get_parent_calendar_code(
+    pool: &PgPool,
+    calendar_code: &str,
+) -> Result<Option<String>, ApiError> {
+    let parent_calendar_code = sqlx::query_scalar!(
+        r#"
+		SELECT code FROM calendars
+		WHERE id = (SELECT parent_id FROM calendars WHERE code = $1)
+		"#,
+        calendar_code
+    )
+    .fetch_optional(pool)
+    .await?;
+
+    Ok(parent_calendar_code)
+}
+
 pub async fn count_celebrations(pool: &PgPool, calendar_code: &str) -> Result<i64, ApiError> {
     let count = sqlx::query_scalar!(
         r#"

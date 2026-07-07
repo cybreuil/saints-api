@@ -13,6 +13,7 @@ pub async fn get_calendars(
         r#"
 		SELECT
 			c.code,
+			c.parent_id,
 			c.date_system,
 			c.easter_computation,
 			c.is_active,
@@ -34,4 +35,68 @@ pub async fn get_calendars(
     .await?;
 
     Ok(rows)
+}
+
+pub async fn get_calendar_by_code(
+    pool: &PgPool,
+    code: &str,
+    language_code: &str,
+) -> Result<Calendar, ApiError> {
+    let calendar = sqlx::query_as::<_, Calendar>(
+        r#"
+        SELECT
+			c.code,
+			c.parent_id,
+			c.date_system,
+			c.easter_computation,
+			c.is_active,
+			c.created_at,
+			ct.name,
+			ct.description,
+			cp.code AS parent_code
+		FROM calendars c
+		LEFT JOIN calendar_translations ct ON c.id = ct.calendar_id
+		AND ct.locale_code = $2
+		LEFT JOIN calendars cp ON c.parent_id = cp.id
+		WHERE c.code = $1
+		"#,
+    )
+    .bind(code)
+    .bind(language_code)
+    .fetch_one(pool)
+    .await?;
+
+    Ok(calendar)
+}
+
+pub async fn get_calendar_by_id(
+    pool: &PgPool,
+    id: i32,
+    language_code: &str,
+) -> Result<Calendar, ApiError> {
+    let calendar = sqlx::query_as::<_, Calendar>(
+        r#"
+		SELECT
+			c.code,
+			c.parent_id,
+			c.date_system,
+			c.easter_computation,
+			c.is_active,
+			c.created_at,
+			ct.name,
+			ct.description,
+			cp.code AS parent_code
+		FROM calendars c
+		LEFT JOIN calendar_translations ct ON c.id = ct.calendar_id
+		AND ct.locale_code = $2
+		LEFT JOIN calendars cp ON c.parent_id = cp.id
+		WHERE c.id = $1
+		"#,
+    )
+    .bind(id)
+    .bind(language_code)
+    .fetch_one(pool)
+    .await?;
+
+    Ok(calendar)
 }

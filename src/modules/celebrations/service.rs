@@ -9,6 +9,7 @@ use crate::core::feria;
 use crate::core::movable_dates::{resolve_movable_date, sunday_number_in_season, MovableBase};
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
+use crate::modules::calendars;
 use crate::modules::celebrations::dto::{CelebrationWithSaints, Saint};
 use crate::modules::liturgical_seasons;
 
@@ -70,6 +71,70 @@ async fn attach_saints(
     Ok(celebrations)
 }
 
+/// Fetches fixed + resolved movable celebrations for a given calendar on a given date.
+async fn fetch_celebrations_for_calendar(
+    pool: &PgPool,
+    year: i32,
+    month: i16,
+    day: i16,
+    lang: &str,
+    cal: &str,
+) -> Result<Vec<CelebrationRow>, ApiError> {
+    let mut celebrations =
+        repo::get_fixed_celebrations_by_date(pool, month, day, lang, cal).await?;
+
+    let movable_celebrations = repo::get_movable_celebrations(pool, lang, cal).await?;
+
+    for celebration in movable_celebrations {
+        let base_str = match &celebration.movable_base {
+            Some(b) => b.as_str(),
+            None => continue,
+        };
+        let base = match MovableBase::try_from(base_str) {
+            Ok(b) => b,
+            Err(_) => continue,
+        };
+        let date = resolve_movable_date(
+            year,
+            base,
+            celebration.movable_offset_days.unwrap_or(0),
+            crate::core::movable_dates::CalendarType::Gregorian,
+        );
+        if date.month() == month as u32 && date.day() == day as u32 {
+            celebrations.push(celebration);
+        }
+    }
+
+    celebrations.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
+    Ok(celebrations)
+}
+
+// Building calendar hierarchy for a given calendar code, starting from the specified calendar and climbing up to its parents.
+async fn load_calendar_hierarchy(
+    pool: &PgPool,
+    code: &str,
+    language_code: &str,
+) -> Result<Vec<calendars::Calendar>, ApiError> {
+    let mut hierarchy = Vec::new();
+
+    let mut calendar = calendars::get_calendar_by_code(pool, code, language_code).await?;
+
+    loop {
+        let parent_id = calendar.parent_id;
+
+        hierarchy.push(calendar);
+
+        match parent_id {
+            Some(parent_id) => {
+                calendar = calendars::get_calendar_by_id(pool, parent_id, language_code).await?;
+            }
+            None => break,
+        }
+    }
+
+    Ok(hierarchy)
+}
+
 pub async fn get_celebrations_by_date(
     pool: &PgPool,
     year: i32,
@@ -81,6 +146,8 @@ pub async fn get_celebrations_by_date(
     let lang = validation::resolve_locale(language_code)?;
     let cal = validation::resolve_calendar(calendar_code)?;
 
+    let calendars = load_calendar_hierarchy(pool, cal, lang).await?;
+
     let context = CelebrationByDateContext {
         year,
         month,
@@ -89,45 +156,37 @@ pub async fn get_celebrations_by_date(
         calendar_code: cal.to_string(),
     };
 
-    // 1. FIXED (DB)
-    let mut celebrations =
-        repo::get_fixed_celebrations_by_date(pool, month, day, lang, cal).await?;
+    let mut celebrations = Vec::new();
 
-    // 2. MOVABLE (DB)
-    let movable_celebrations = repo::get_movable_celebrations(pool, lang, cal).await?;
+    for calendar in &calendars {
+        celebrations =
+            fetch_celebrations_for_calendar(pool, year, month, day, lang, &calendar.code).await?;
 
-    for celebration in movable_celebrations {
-        let base_str = match &celebration.movable_base {
-            Some(b) => b.as_str(),
-            None => continue,
-        };
-
-        let base = match MovableBase::try_from(base_str) {
-            Ok(b) => b,
-            Err(_) => continue,
-        };
-
-        let date = resolve_movable_date(
-            year,
-            base,
-            celebration.movable_offset_days.unwrap_or(0),
-            // We force Gregorian Calendar for now
-            crate::core::movable_dates::CalendarType::Gregorian,
-        );
-
-        if date.month() == month as u32 && date.day() == day as u32 {
-            celebrations.push(celebration);
+        if !celebrations.is_empty() {
+            break;
         }
     }
-
-    celebrations.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
 
     let mut celebrations_with_saints = attach_saints(pool, celebrations, lang).await?;
 
     // Resolve the liturgical season
-    let liturgical_season =
-        liturgical_seasons::get_liturgical_season(pool, year, month, day, Some(lang), Some(cal))
-            .await?;
+    let mut liturgical_season = None;
+
+    for calendar in &calendars {
+        liturgical_season = liturgical_seasons::get_liturgical_season(
+            pool,
+            year,
+            month,
+            day,
+            Some(lang),
+            Some(&calendar.code),
+        )
+        .await?;
+
+        if liturgical_season.is_some() {
+            break;
+        }
+    }
 
     let date =
         NaiveDate::from_ymd_opt(year, month as u32, day as u32).ok_or(ApiError::InternalError)?;
@@ -143,49 +202,26 @@ pub async fn get_celebrations_by_date(
     // Fallback Celebration (Feria / Sunday) for roman calendar if no celebrations are found or if it's a Sunday
     if celebrations_with_saints.is_empty() || (is_sunday && is_ordinary_time) {
         // Try to obtain a rank, climbing parents if necessary
-        let rank = {
-            let mut current_cal = cal.to_string();
-            let mut depth = 0usize;
-            let mut last_err: Option<crate::core::error::ApiError> = None;
+        let mut last_error = None;
+        let mut rank = None;
 
-            loop {
-                let attempt = if is_sunday {
-                    repo::get_sunday_rank(pool, &current_cal, lang).await
-                } else {
-                    repo::get_lowest_rank(pool, &current_cal, lang).await
-                };
+        for calendar in &calendars {
+            let result = if is_sunday {
+                repo::get_sunday_rank(pool, &calendar.code, lang).await
+            } else {
+                repo::get_lowest_rank(pool, &calendar.code, lang).await
+            };
 
-                match attempt {
-                    Ok(r) => break r,
-                    Err(e) => {
-                        // remember last error and try parent
-                        last_err = Some(e);
-
-                        // get parent code if any
-                        let parent_code_opt: Option<String> = sqlx::query_scalar!(
-                        "SELECT code FROM calendars WHERE id = (SELECT parent_id FROM calendars WHERE code = $1)",
-                        current_cal
-                    )
-                    .fetch_optional(pool)
-                    .await?;
-
-                        if let Some(parent_code) = parent_code_opt {
-                            current_cal = parent_code;
-                        } else {
-                            // no parent -> rethrow last error (or convert to NotFound)
-                            return Err(
-                                last_err.unwrap_or_else(|| crate::core::error::ApiError::NotFound)
-                            );
-                        }
-
-                        depth += 1;
-                        if depth > 10 {
-                            return Err(crate::core::error::ApiError::InternalError);
-                        }
-                    }
+            match result {
+                Ok(r) => {
+                    rank = Some(r);
+                    break;
                 }
+                Err(e) => last_error = Some(e),
             }
-        };
+        }
+
+        let rank = rank.ok_or_else(|| last_error.unwrap_or(ApiError::NotFound))?;
 
         let feast_type = if is_sunday {
             "sunday".to_string()
