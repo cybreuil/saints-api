@@ -136,7 +136,7 @@ pub async fn get_celebrations_by_date(
 
     let is_ordinary_time = liturgical_season
         .as_ref()
-        .map(|s| s.code.as_deref() == Some("ORDINARY_TIME"))
+        .map(|s| s.code == ("ORDINARY_TIME"))
         .unwrap_or(false);
 
     // NEED EXTRA CHECK CALENDAR + SOLEMNITY ON SUNDAY
