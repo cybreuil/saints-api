@@ -64,4 +64,20 @@ echo "✅ ROMAN saint patronages seeded."
 run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanFeastSaints.sql"
 echo "✅ ROMAN Feast Saints links seeded."
 
+# France Calendar seeding
+run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFrance.sql"
+echo "✅ Roman France seeded."
+
+run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceSaints.sql"
+echo "✅ Roman France saints seeded."
+
+run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceFeastSaints.sql"
+echo "✅ Roman France Feast Saints links seeded."
+
+# run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceSaintAttributes.sql"
+# echo "✅ Roman France saint attributes seeded."
+
+# run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceSaintPatronages.sql"
+# echo "✅ Roman France saint patronages seeded."
+
 echo "✅ DB seeded."
