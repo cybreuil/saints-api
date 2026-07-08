@@ -68,3 +68,5 @@ C'est extrêmement rapide et toute la logique de calcul est déplacée dans une 
 
 + Check ash wednesday / bernadette soubirous
 + Need double check feria lent / advent are privileged ???
+
+++ need dedicated file with full recap of precedence and rules by calendar replacements etc
