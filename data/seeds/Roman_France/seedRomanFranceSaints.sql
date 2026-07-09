@@ -56,7 +56,7 @@ INSERT INTO saints (
   15,
   (SELECT id FROM places WHERE code='DOMREMY-LA-PUCELLE'),
   (SELECT id FROM places WHERE code='ROUEN'),
-  (SELECT id FROM places WHERE code='FRANCE')
+  (SELECT id FROM places WHERE code='ORLEANS')
 ),
 (
   'saint-pothinus', 'Saint Pothinus',
@@ -89,8 +89,8 @@ INSERT INTO saints (
   'saint-caesarius-of-arles', 'Saint Caesarius of Arles',
   470, NULL, NULL, TRUE,
   542, 8, 27, FALSE,
-  5,
-  (SELECT id FROM places WHERE code='CHALONS-SUR-SAONE'),
+  6,
+  (SELECT id FROM places WHERE code='CHALON-SUR-SAONE'),
   (SELECT id FROM places WHERE code='ARLES'),
   (SELECT id FROM places WHERE code='ARLES')
 )

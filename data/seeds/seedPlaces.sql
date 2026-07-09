@@ -312,7 +312,16 @@ INSERT INTO places (code, country_code, latitude, longitude) VALUES
 ('FREIBURG_IM_BREISGAU', 'DE', 47.995, 7.85),
 ('NIJMEGEN', 'NL', 51.8475, 5.8625),
 ('VIENNA', 'AT', 48.2083, 16.3725),
-('KETY', 'PL', 49.9, 19.216667)
+('KETY', 'PL', 49.9, 19.216667),
+('NANTERRE', 'FR', 48.8927, 2.2083),
+('CERNY-EN-LAONNOIS', 'FR', 49.444, 3.6694),
+('NEVERS', 'FR', 46.9943, 3.1613),
+('MINIHY-TREGUIER', 'FR', 48.777, -3.2272),
+('TREGOR', 'FR', 48.7335, -3.4552),
+('DOMREMY-LA-PUCELLE', 'FR', 48.4447, 5.6772),
+('ORLEANS', 'FR', 47.9025, 1.909),
+('CHALON-SUR-SAONE', 'FR', 46.7822, 4.8532),
+('ARLES', 'FR', 43.6768, 4.628)
 ON CONFLICT (code) DO NOTHING;
 
 -- Bloc 2: place_translations EN
@@ -628,7 +637,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'en', 'Freiburg im Breisgau'),
 ((SELECT id FROM places WHERE code='NIJMEGEN'), 'en', 'Nijmegen'),
 ((SELECT id FROM places WHERE code='VIENNA'), 'en', 'Vienna'),
-((SELECT id FROM places WHERE code='KETY'), 'en', 'Kęty')
+((SELECT id FROM places WHERE code='KETY'), 'en', 'Kęty'),
+((SELECT id FROM places WHERE code='NANTERRE'), 'en', 'Nanterre'),
+((SELECT id FROM places WHERE code='CERNY-EN-LAONNOIS'), 'en', 'Cerny-en-Laonnois'),
+((SELECT id FROM places WHERE code='NEVERS'), 'en', 'Nevers'),
+((SELECT id FROM places WHERE code='MINIHY-TREGUIER'), 'en', 'Minihy-Tréguier'),
+((SELECT id FROM places WHERE code='TREGOR'), 'en', 'Trégor'),
+((SELECT id FROM places WHERE code='DOMREMY-LA-PUCELLE'), 'en', 'Domrémy-la-Pucelle'),
+((SELECT id FROM places WHERE code='ORLEANS'), 'en', 'Orléans'),
+((SELECT id FROM places WHERE code='CHALON-SUR-SAONE'), 'en', 'Chalon-sur-Saône'),
+((SELECT id FROM places WHERE code='ARLES'), 'en', 'Arles')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 3: place_translations FR
@@ -944,7 +962,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'fr', 'Fribourg-en-Brisgau'),
 ((SELECT id FROM places WHERE code='NIJMEGEN'), 'fr', 'Nimègue'),
 ((SELECT id FROM places WHERE code='VIENNA'), 'fr', 'Vienne'),
-((SELECT id FROM places WHERE code='KETY'), 'fr', 'Kenty')
+((SELECT id FROM places WHERE code='KETY'), 'fr', 'Kenty'),
+((SELECT id FROM places WHERE code='NANTERRE'), 'fr', 'Nanterre'),
+((SELECT id FROM places WHERE code='CERNY-EN-LAONNOIS'), 'fr', 'Cerny-en-Laonnois'),
+((SELECT id FROM places WHERE code='NEVERS'), 'fr', 'Nevers'),
+((SELECT id FROM places WHERE code='MINIHY-TREGUIER'), 'fr', 'Minihy-Tréguier'),
+((SELECT id FROM places WHERE code='TREGOR'), 'fr', 'Trégor'),
+((SELECT id FROM places WHERE code='DOMREMY-LA-PUCELLE'), 'fr', 'Domrémy-la-Pucelle'),
+((SELECT id FROM places WHERE code='ORLEANS'), 'fr', 'Orléans'),
+((SELECT id FROM places WHERE code='CHALON-SUR-SAONE'), 'fr', 'Chalon-sur-Saône'),
+((SELECT id FROM places WHERE code='ARLES'), 'fr', 'Arles')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 -- Bloc 4: place_translations LA
@@ -1260,7 +1287,16 @@ INSERT INTO place_translations (place_id, locale_code, name) VALUES
 ((SELECT id FROM places WHERE code='FREIBURG_IM_BREISGAU'), 'la', 'Friburgum Brisgoviae'),
 ((SELECT id FROM places WHERE code='NIJMEGEN'), 'la', 'Noviomagus Batavorum'),
 ((SELECT id FROM places WHERE code='VIENNA'), 'la', 'Vindobona'),
-((SELECT id FROM places WHERE code='KETY'), 'la', 'Kęty')
+((SELECT id FROM places WHERE code='KETY'), 'la', 'Kęty'),
+((SELECT id FROM places WHERE code='NANTERRE'), 'la', 'Nemetodurum'),
+((SELECT id FROM places WHERE code='CERNY-EN-LAONNOIS'), 'la', 'Cerny-en-Laonnois'),
+((SELECT id FROM places WHERE code='NEVERS'), 'la', 'Nivernum'),
+((SELECT id FROM places WHERE code='MINIHY-TREGUIER'), 'la', 'Minihy-Tréguier'),
+((SELECT id FROM places WHERE code='TREGOR'), 'la', 'Tregor'),
+((SELECT id FROM places WHERE code='DOMREMY-LA-PUCELLE'), 'la', 'Domnum Remigium'),
+((SELECT id FROM places WHERE code='ORLEANS'), 'la', 'Aurelianum'),
+((SELECT id FROM places WHERE code='CHALON-SUR-SAONE'), 'la', 'Cabillonum'),
+((SELECT id FROM places WHERE code='ARLES'), 'la', 'Arelate')
 ON CONFLICT (place_id, locale_code) DO NOTHING;
 
 COMMIT;
