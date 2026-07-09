@@ -9,52 +9,54 @@ INSERT INTO saints (
   birth_year, birth_month, birth_day, birth_is_approximate,
   death_year, death_month, death_day, death_is_approximate,
   century,
-  place_of_birth_id, place_of_death_id, place_of_activity_id
+  place_of_birth_id,
+  place_of_death_id,
+  place_of_activity_id
 ) VALUES
 (
   'saint-genevieve', 'Saint Geneviève',
   422, NULL, NULL, TRUE,
-  502, NULL, NULL, FALSE,
-  5,
-  NULL,
-  NULL,
-  NULL
+  502, NULL, NULL, TRUE,
+  6,
+  (SELECT id FROM places WHERE code='NANTERRE'),
+  (SELECT id FROM places WHERE code='PARIS'),
+  (SELECT id FROM places WHERE code='PARIS')
 ),
 (
   'saint-remigius', 'Saint Remigius',
-  438, NULL, NULL, TRUE,
-  533, NULL, NULL, FALSE,
-  5,
-  NULL,
-  NULL,
-  NULL
+  437, NULL, NULL, TRUE,
+  533, 1, 13, FALSE,
+  6,
+  (SELECT id FROM places WHERE code='CERNY-EN-LAONNOIS'),
+  (SELECT id FROM places WHERE code='REIMS'),
+  (SELECT id FROM places WHERE code='REIMS')
 ),
 (
   'saint-bernadette-soubirous', 'Saint Bernadette Soubirous',
   1844, 1, 7, FALSE,
   1879, 4, 16, FALSE,
   19,
-  NULL,
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='LOURDES'),
+  (SELECT id FROM places WHERE code='NEVERS'),
+  (SELECT id FROM places WHERE code='LOURDES')
 ),
 (
   'saint-ivo-of-kermartin', 'Saint Ivo of Kermartin',
-  1253, NULL, NULL, FALSE,
+  1253, NULL, NULL, TRUE,
   1303, 5, 19, FALSE,
-  13,
-  NULL,
-  NULL,
-  NULL
+  14,
+  (SELECT id FROM places WHERE code='MINIHY-TREGUIER'),
+  (SELECT id FROM places WHERE code='MINIHY-TREGUIER'),
+  (SELECT id FROM places WHERE code='TREGOR')
 ),
 (
   'saint-joan-of-arc', 'Saint Joan of Arc',
   1412, 1, 6, TRUE,
   1431, 5, 30, FALSE,
   15,
-  NULL,
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='DOMREMY-LA-PUCELLE'),
+  (SELECT id FROM places WHERE code='ROUEN'),
+  (SELECT id FROM places WHERE code='FRANCE')
 ),
 (
   'saint-pothinus', 'Saint Pothinus',
@@ -62,8 +64,8 @@ INSERT INTO saints (
   177, NULL, NULL, FALSE,
   2,
   NULL,
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='LYON'),
+  (SELECT id FROM places WHERE code='LYON')
 ),
 (
   'saint-blandina', 'Saint Blandina',
@@ -71,26 +73,26 @@ INSERT INTO saints (
   177, NULL, NULL, FALSE,
   2,
   NULL,
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='LYON'),
+  (SELECT id FROM places WHERE code='LYON')
 ),
 (
   'saint-clotilde', 'Saint Clotilde',
   474, NULL, NULL, TRUE,
-  545, 6, 3, FALSE,
-  5,
+  545, 6, 3, TRUE,
+  6,
   NULL,
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='TOURS'),
+  (SELECT id FROM places WHERE code='PARIS')
 ),
 (
   'saint-caesarius-of-arles', 'Saint Caesarius of Arles',
   470, NULL, NULL, TRUE,
-  542, NULL, NULL, FALSE,
+  542, 8, 27, FALSE,
   5,
-  NULL,
-  NULL,
-  NULL
+  (SELECT id FROM places WHERE code='CHALONS-SUR-SAONE'),
+  (SELECT id FROM places WHERE code='ARLES'),
+  (SELECT id FROM places WHERE code='ARLES')
 )
 ON CONFLICT (slug) DO NOTHING;
 
