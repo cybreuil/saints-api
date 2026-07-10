@@ -38,5 +38,13 @@ INSERT INTO images (
 
 -- Saint Bernadette Soubirous (FEB 18)
 ('/saints/fr/saint-bernadette-soubirous.webp', 'Saint Bernadette Soubirous', 'painting', 'Saint Bernadette Soubirous Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/fr/saint-bernadette-soubirous_2.webp', 'Saint Bernadette Soubirous', 'photograph', 'Saint Bernadette Soubirous Photograph', NULL, 1858, NULL, NULL, 'Public Domain', NULL),
+('/saints/fr/saint-bernadette-soubirous_3.webp', 'Saint Bernadette Soubirous', 'photograph', 'Saint Bernadette Soubirous Photograph', NULL, 1861, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Ivo of Kermartin (MAY 19)
+('/saints/fr/saint-ivo-of-kermartin_weyden.webp', 'Saint Ivo of Kermartin', 'painting', 'Saint Ivo of Kermartin Painting', 'Rogier van der Weyden', '1450', 'National Gallery', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-ivo-of-kermartin_jordaens.webp', 'Saint Ivo of Kermartin', 'painting', 'Saint Ivo of Kermartin Painting', 'Jacob Jordaens', '1645', 'Royal Museum of Fine Arts Antwerp', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-ivo-of-kermartin_empoli.webp', 'Saint Ivo of Kermartin', 'painting', 'Saint Ivo of Kermartin Painting', 'Jacopo da Empoli', '17th Century', 'Palazzo Pitti', NULL, 'Public Domain', NULL),
+
 
 COMMIT;
