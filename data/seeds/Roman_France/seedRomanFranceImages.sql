@@ -61,5 +61,24 @@ INSERT INTO images (
 ('/saints/fr/saint-joan-of-arc_hillingford.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'Robert Alexander Hillingford', '19th Century', 'Private Collection', NULL, 'Public Domain', NULL),
 ('/saints/fr/saint-joan-of-arc_gasparo.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'Giovanni Gasparo', '2018', NULL, NULL, 'Public Domain', NULL),
 
+-- Saint Pothinus (JUN 2)
+('/saints/fr/saint-pothinus_stained-glass.webp', 'Saint Pothinus', 'stained glass', 'Saint Pothinus Stained Glass', 'Lucien Bégule', '1901', 'Saint Irenaeus Church (Lyon)', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-pothinus.webp', 'The Martyrdom of Saint Pothinus', 'painting', 'The Martyrdom of Saint Pothinus Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Blandina (JUN 2)
+('/saints/fr/saint-blandina_stained-glass.webp', 'Saint Blandina', 'stained glass', 'Saint Blandina Stained Glass', 'Lucien Bégule', '1901', 'Saint Irenaeus Church (Lyon)', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-blandina_bayard.webp', 'The Martyrdom of Saint Blandina', 'painting', 'The Martyrdom of Saint Blandina Painting', 'Émile-Antoine Bayard', '19th Century', NULL, NULL, 'Public Domain', NULL),
+('/saints/fr/saint-blandina_guillemet.webp', 'The Martyrdom of Saint Blandina', 'painting', 'The Martyrdom of Saint Blandina Painting', 'Pierre-Désiré Guillemet', '1862', NULL, NULL, 'Public Domain', NULL),
+
+-- Saint Clotilde (JUN 4)
+('/saints/fr/saint-clotilde_loo.webp', 'Saint Clotilde Praying at the Foot of Saint Martin''s Tomb', 'painting', 'Saint Clotilde Praying at the Foot of Saint Martin''s Tomb Painting', 'Charles André van Loo', '1753', 'Musée des Beaux-Arts de Brest', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-clotilde.webp', 'Saint Clotilde converting King Clovis', 'painting', 'Saint Clotilde converting King Clovis Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/fr/saint-clotilde_deveria.webp', 'The Glorification of Saint Clotilde', 'painting', 'The Glorification of Saint Clotilde Painting', 'Achille Devéria', '19th Century', 'Church of Saint-Roch (Paris)', NULL, 'Public Domain', NULL),
+
+-- Saint Caesarius of Arles (AUG 27)
+('/saints/fr/saint-caesarius-of-arles_icon.webp', 'Saint Caesarius of Arles', 'icon', 'Saint Caesarius of Arles Icon', NULL, NULL, NULL, NULL, 'Public Domain', NULL);
+--WIP
+
+
 
 COMMIT;
