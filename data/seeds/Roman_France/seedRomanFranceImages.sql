@@ -47,19 +47,19 @@ INSERT INTO images (
 ('/saints/fr/saint-ivo-of-kermartin_empoli.webp', 'Saint Ivo of Kermartin', 'painting', 'Saint Ivo of Kermartin Painting', 'Jacopo da Empoli', '17th Century', 'Palazzo Pitti', NULL, 'Public Domain', NULL),
 
 -- Saint Joan of Arc (MAY 30)
+('/saints/fr/saint-joan-of-arc_thirion.webp', 'Saint Joan of Arc Listening to her Voices', 'painting', 'Saint Joan of Arc Listening to her Voices Painting', 'Eugène Thirion', '1876', 'Église Notre-Dame de Chatou', NULL, 'Public Domain', NULL),
 ('/saints/fr/saint-joan-of-arc_lenepveu.webp', 'Saint Joan of Arc at the Stake', 'painting', 'Saint Joan of Arc at the Stake Painting', 'Jules-Eugène Lenepveu', '1886-1890', 'Panthéon (Paris)', NULL, 'Public Domain', NULL),
-('/saints/fr/saint-joan-of-arc_gasparo.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'Giovanni Gasparo', '2018', NULL, NULL, 'Public Domain', NULL),
-('/saints/fr/saint-joan-of-arc_lynch.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'Albert Lynch', '1901', 'Private Collection', NULL, 'Public Domain', NULL),
-('/saints/fr/saint-joan-of-arc_millais.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'John Everett Millais', '1865', 'Private Collection', NULL, 'Public Domain', NULL),
-('/saints/fr/saint-joan-of-arc_scherrer.webp', 'Saint Joan of Arc Enters Orleans', 'painting', 'Saint Joan of Arc Enters Orleans Painting', 'Jean-Jacques Scherrer', '1887', 'Musée des Beaux-Arts d''Orléans', NULL, 'Public Domain', NULL),
-('/saints/fr/saint-joan-of-arc_stilke_2.webp', 'Saint Joan of Arc Death at the Stake', 'painting', 'Saint Joan of Arc Death at the Stake Painting', 'Hermann Anton Stilke', '1843', 'Hermitage Museum', NULL, 'Public Domain', NULL),
 ('/saints/fr/saint-joan-of-arc_lenepveu_2.webp', 'Saint Joan of Arc at the Siege of Orleans', 'painting', 'Saint Joan of Arc at the Siege of Orleans Painting', 'Jules-Eugène Lenepveu', '1886-1890', 'Panthéon (Paris)', NULL, 'Public Domain', NULL),
 ('/saints/fr/saint-joan-of-arc_lenepveu_3.webp', 'Saint Joan of Arc at the Coronation of Charles VII', 'painting', 'Saint Joan of Arc at the Coronation of Charles VII Painting', 'Jules-Eugène Lenepveu', '1886-1890', 'Panthéon (Paris)', NULL, 'Public Domain', NULL),
 ('/saints/fr/saint-joan-of-arc_lenepveu_4.webp', 'Saint Joan of Arc Shepherdess', 'painting', 'Saint Joan of Arc Shepherdess Painting', 'Jules-Eugène Lenepveu', '1886-1890', 'Panthéon (Paris)', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-joan-of-arc_lynch.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'Albert Lynch', '1901', 'Private Collection', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-joan-of-arc_millais.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'John Everett Millais', '1865', 'Private Collection', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-joan-of-arc_scherrer.webp', 'Saint Joan of Arc Enters Orleans', 'painting', 'Saint Joan of Arc Enters Orleans Painting', 'Jean-Jacques Scherrer', '1887', 'Musée des Beaux-Arts d''Orléans', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-joan-of-arc_stilke.webp', 'Appearance of Saints Catherine and Michael to Saint Joan of Arc', 'painting', 'Appearance of Saints Catherine and Michael to Saint Joan of Arc Painting', 'Hermann Anton Stilke', '1843', 'Hermitage Museum', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-joan-of-arc_stilke_2.webp', 'Saint Joan of Arc Death at the Stake', 'painting', 'Saint Joan of Arc Death at the Stake Painting', 'Hermann Anton Stilke', '1843', 'Hermitage Museum', NULL, 'Public Domain', NULL),
 ('/saints/fr/saint-joan-of-arc_benouville.webp', 'Saint Joan of Arc Listening to her Voices', 'painting', 'Saint Joan of Arc Listening to her Voices Painting', 'François Léon Benouville', '1859', 'Musée des Beaux-Arts de Rouen', NULL, 'Attribution-ShareAlike 4.0 International', NULL),
 ('/saints/fr/saint-joan-of-arc_hillingford.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'Robert Alexander Hillingford', '19th Century', 'Private Collection', NULL, 'Public Domain', NULL),
-('/saints/fr/saint-joan-of-arc_stilke.webp', 'Appearance of Saints Catherine and Michael to Saint Joan of Arc', 'painting', 'Appearance of Saints Catherine and Michael to Saint Joan of Arc Painting', 'Hermann Anton Stilke', '1843', 'Hermitage Museum', NULL, 'Public Domain', NULL),
-('/saints/fr/saint-joan-of-arc_thirion.webp', 'Saint Joan of Arc Listening to her Voices', 'painting', 'Saint Joan of Arc Listening to her Voices Painting', 'Eugène Thirion', '1876', 'Église Notre-Dame de Chatou', NULL, 'Public Domain', NULL),
+('/saints/fr/saint-joan-of-arc_gasparo.webp', 'Saint Joan of Arc', 'painting', 'Saint Joan of Arc Painting', 'Giovanni Gasparo', '2018', NULL, NULL, 'Public Domain', NULL),
 
 
 COMMIT;
