@@ -70,3 +70,5 @@ C'est extrêmement rapide et toute la logique de calcul est déplacée dans une 
 + Need double check feria lent / advent are privileged ???
 
 ++ need dedicated file with full recap of precedence and rules by calendar replacements etc
+
+++ Need double check on tridentine saints & celebrations
