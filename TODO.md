@@ -72,3 +72,9 @@ C'est extrêmement rapide et toute la logique de calcul est déplacée dans une 
 ++ need dedicated file with full recap of precedence and rules by calendar replacements etc
 
 ++ Need double check on tridentine saints & celebrations
+
++ should i add diocesan calendars ? maybe not, too much complexity for now, maybe later if needed
+we can stick for france for now
+
+Should change name of tridentine calendar; it is not really tridentine, which is with double, but the final calendar before vatican II, so maybe "pre-vatican II calendar" or "1962 calendar" or "1960 calendar" ?
+Need brainstorm this

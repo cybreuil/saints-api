@@ -1,5 +1,5 @@
 use crate::core::error::ApiError;
-use crate::core::movable_dates::{resolve_movable_date, CalendarType, MovableBase};
+use crate::core::movable_dates::{resolve_movable_date, LiturgicalConfig, MovableBase};
 use chrono::NaiveDate;
 use std::collections::HashMap;
 
@@ -45,6 +45,7 @@ fn resolve_boundary(
     movable_base: Option<&str>,
     offset_days: Option<i16>,
     year: i32,
+    config: LiturgicalConfig,
 ) -> Result<NaiveDate, ApiError> {
     match kind {
         "fixed" => {
@@ -62,7 +63,7 @@ fn resolve_boundary(
                 year,
                 base,
                 offset_days.unwrap_or(0),
-                CalendarType::Gregorian,
+                config,
             ))
         }
 
@@ -73,6 +74,7 @@ fn resolve_boundary(
 fn build_occurrence(
     row: &LiturgicalSeasonIntervalRow,
     anchor_year: i32,
+    config: LiturgicalConfig,
 ) -> Result<(NaiveDate, NaiveDate), ApiError> {
     let start = resolve_boundary(
         &row.start_kind,
@@ -81,6 +83,7 @@ fn build_occurrence(
         row.start_movable_base.as_deref(),
         row.start_offset_days,
         anchor_year,
+        config,
     )?;
 
     let end_same_year = resolve_boundary(
@@ -90,6 +93,7 @@ fn build_occurrence(
         row.end_movable_base.as_deref(),
         row.end_offset_days,
         anchor_year,
+        config,
     )?;
 
     let end = if end_same_year >= start {
@@ -102,6 +106,7 @@ fn build_occurrence(
             row.end_movable_base.as_deref(),
             row.end_offset_days,
             anchor_year + 1,
+            config,
         )?
     };
 
@@ -123,6 +128,7 @@ fn overlap_with_year(
 pub fn build_intervals(
     rows: &[LiturgicalSeasonIntervalRow],
     year: i32,
+    config: LiturgicalConfig,
 ) -> Result<Vec<SeasonInterval>, ApiError> {
     let year_start = NaiveDate::from_ymd_opt(year, 1, 1).ok_or(ApiError::InternalError)?;
     let year_end = NaiveDate::from_ymd_opt(year, 12, 31).ok_or(ApiError::InternalError)?;
@@ -130,7 +136,7 @@ pub fn build_intervals(
 
     for row in rows {
         if year > 1 {
-            let (start, end) = build_occurrence(row, year - 1)?;
+            let (start, end) = build_occurrence(row, year - 1, config)?;
 
             if let Some((start, end)) = overlap_with_year(start, end, year_start, year_end) {
                 intervals.push(SeasonInterval {
@@ -146,7 +152,7 @@ pub fn build_intervals(
             }
         }
 
-        let (start, end) = build_occurrence(row, year)?;
+        let (start, end) = build_occurrence(row, year, config)?;
 
         if let Some((start, end)) = overlap_with_year(start, end, year_start, year_end) {
             intervals.push(SeasonInterval {
@@ -187,6 +193,7 @@ pub fn build_intervals(
 #[cfg(test)]
 mod tests {
     use super::{build_intervals, LiturgicalSeasonIntervalRow};
+    use crate::core::movable_dates::LiturgicalConfig;
     use chrono::NaiveDate;
 
     fn fixed_row(
@@ -225,7 +232,9 @@ mod tests {
             fixed_row("ORDINARY_TIME", 1, 5, 25, 11, 28),
         ];
 
-        let intervals = build_intervals(&rows, 2026).expect("intervals should build");
+        let config = LiturgicalConfig::default();
+
+        let intervals = build_intervals(&rows, 2026, config).expect("intervals should build");
 
         assert_eq!(intervals.len(), 4);
 

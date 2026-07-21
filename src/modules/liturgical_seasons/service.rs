@@ -6,6 +6,7 @@ use crate::core::error::ApiError;
 use crate::core::liturgical_seasons;
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
+use crate::modules::calendars;
 
 pub async fn get_liturgical_season(
     pool: &PgPool,
@@ -23,7 +24,10 @@ pub async fn get_liturgical_season(
     let date = chrono::NaiveDate::from_ymd_opt(year, month as u32, day as u32)
         .ok_or_else(|| ApiError::BadRequest("Invalid date".to_string()))?;
 
-    let intervals = liturgical_seasons::build_intervals(&rows, year)?;
+    let calendar = calendars::get_calendar_by_code(pool, cal, lang).await?;
+    let config = calendars::mapper::to_liturgical_config(&calendar);
+
+    let intervals = liturgical_seasons::build_intervals(&rows, year, config)?;
 
     for season in intervals {
         if date >= season.start && date <= season.end {
@@ -53,8 +57,10 @@ pub async fn list_liturgical_seasons(
 
     let p = Pagination::new(Some(page), Some(per_page));
 
+    let calendar = calendars::get_calendar_by_code(pool, cal, lang).await?;
+    let config = calendars::mapper::to_liturgical_config(&calendar);
     let rows = repo::get_liturgical_season_intervals(pool, cal, lang).await?;
-    let intervals = liturgical_seasons::build_intervals(&rows, year)?;
+    let intervals = liturgical_seasons::build_intervals(&rows, year, config)?;
     let total = intervals.len() as i32;
 
     if total == 0 {

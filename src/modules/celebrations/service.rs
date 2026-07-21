@@ -5,14 +5,17 @@ use std::collections::HashMap;
 use super::dto::{CelebrationByDateContext, CelebrationByDateResponse, CelebrationRow};
 use super::repo;
 use crate::core::error::ApiError;
-use crate::core::feria;
-use crate::core::movable_dates::{resolve_movable_date, sunday_number_in_season, MovableBase};
+use crate::core::movable_dates::{
+    resolve_movable_date, sunday_number_in_season, LiturgicalConfig, MovableBase,
+};
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
+use crate::core::{config, feria};
 use crate::modules::calendars;
 use crate::modules::celebrations::dto::{CelebrationWithSaints, Saint};
 use crate::modules::liturgical_seasons;
 
+// Get all celebrations with pagination, filtering by optional calendar and language code
 pub async fn get_celebrations(
     pool: &PgPool,
     page: i32,
@@ -79,6 +82,7 @@ async fn fetch_celebrations_for_calendar(
     day: i16,
     lang: &str,
     cal: &str,
+    config: LiturgicalConfig,
 ) -> Result<Vec<CelebrationRow>, ApiError> {
     let mut celebrations =
         repo::get_fixed_celebrations_by_date(pool, month, day, lang, cal).await?;
@@ -98,7 +102,7 @@ async fn fetch_celebrations_for_calendar(
             year,
             base,
             celebration.movable_offset_days.unwrap_or(0),
-            crate::core::movable_dates::CalendarType::Gregorian,
+            config,
         );
         if date.month() == month as u32 && date.day() == day as u32 {
             celebrations.push(celebration);
@@ -110,6 +114,7 @@ async fn fetch_celebrations_for_calendar(
 }
 
 // Building calendar hierarchy for a given calendar code, starting from the specified calendar and climbing up to its parents.
+// For example roman for french calendar
 async fn load_calendar_hierarchy(
     pool: &PgPool,
     code: &str,
@@ -159,8 +164,12 @@ pub async fn get_celebrations_by_date(
     let mut celebrations = Vec::new();
 
     for calendar in &calendars {
+        // Get the liturgical config for the current calendar
+        let config = calendars::mapper::to_liturgical_config(calendar);
+
         celebrations =
-            fetch_celebrations_for_calendar(pool, year, month, day, lang, &calendar.code).await?;
+            fetch_celebrations_for_calendar(pool, year, month, day, lang, &calendar.code, config)
+                .await?;
 
         if !celebrations.is_empty() {
             break;
@@ -229,8 +238,10 @@ pub async fn get_celebrations_by_date(
             "feria".to_string()
         };
 
+        let config = calendars::mapper::to_liturgical_config(&calendars[0]);
+
         // movable_dates calculation for the Sunday number in Ordinary Time
-        let sunday_number = sunday_number_in_season(date, year);
+        let sunday_number = sunday_number_in_season(date, year, config);
 
         let feria_info = feria::build_feria_info(
             date,

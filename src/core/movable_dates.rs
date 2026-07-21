@@ -11,7 +11,7 @@ use serde::{Deserialize, Serialize};
 // FIRST_ADVENT_SUNDAY
 // SUNDAY_AFTER_EPIPHANY
 // SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30
-// EPIPHANY_SUNDAY  (France/Belgium/etc: Sunday between Jan 2–8)
+// EPIPHANY  (France/Belgium/etc: Sunday between Jan 2–8; roman general or 1960 is fixed JAN 6)
 
 #[derive(Serialize, Deserialize)]
 #[serde(rename_all = "SCREAMING_SNAKE_CASE")]
@@ -28,7 +28,7 @@ pub enum MovableBase {
     BaptismOfTheLord,
     AshWednesday,
     HolyThursday,
-    EpiphanySunday,
+    Epiphany,
 }
 
 impl TryFrom<&str> for MovableBase {
@@ -50,7 +50,7 @@ impl TryFrom<&str> for MovableBase {
             "BAPTISM_OF_THE_LORD" => Ok(Self::BaptismOfTheLord),
             "ASH_WEDNESDAY" => Ok(Self::AshWednesday),
             "HOLY_THURSDAY" => Ok(Self::HolyThursday),
-            "EPIPHANY_SUNDAY" => Ok(Self::EpiphanySunday),
+            "EPIPHANY" => Ok(Self::Epiphany),
             _ => Err(()),
         }
     }
@@ -71,20 +71,61 @@ impl MovableBase {
             Self::BaptismOfTheLord => "BAPTISM_OF_THE_LORD",
             Self::AshWednesday => "ASH_WEDNESDAY",
             Self::HolyThursday => "HOLY_THURSDAY",
-            Self::EpiphanySunday => "EPIPHANY_SUNDAY",
+            Self::Epiphany => "EPIPHANY",
         }
     }
 }
 
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub enum CalendarType {
     Gregorian,
     Julian,
 }
 
+#[derive(Debug, Clone, Copy, PartialEq)]
 pub enum EpiphanyMode {
-    FixedJan6,
-    // 1962: Epiphany is Jan 6, but Sunday After Epiphany logic may depend on rubrics
-    Missal1962,
+    FixedJan6,      // Epiphany is fixed on Jan 6 (Roman General, 1960, etc.)
+    MovableJan2to8, // Epiphany is moved to the nearest Sunday in Jan 2–8 (France, Belgium, etc.)
+}
+
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub enum ChristKingMode {
+    LastSundayBeforeAdvent, // Christ the King is celebrated on the last Sunday before Advent (Roman General)
+    LastSundayOfOctober,    // Christ the King is celebrated on the last Sunday of October (1962)
+}
+
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub enum AscensionMode {
+    Thursday, // Ascension is celebrated on Thursday (traditional)
+    Sunday,   // Ascension is celebrated on the following Sunday (some dioceses)
+}
+
+#[derive(Debug, Clone, Copy, PartialEq)]
+pub enum CorpusChristiMode {
+    Thursday,
+    Sunday,
+}
+
+// Global Configuration for liturgical calendar calculations, including calendar type and epiphany mode.
+#[derive(Debug, Clone, Copy)]
+pub struct LiturgicalConfig {
+    pub calendar_type: CalendarType,
+    pub epiphany_mode: EpiphanyMode,
+    pub christ_king_mode: ChristKingMode,
+    pub ascension_mode: AscensionMode,
+    pub corpus_christi_mode: CorpusChristiMode,
+}
+// Default configuration: Gregorian calendar with fixed Epiphany on Jan 6.
+impl Default for LiturgicalConfig {
+    fn default() -> Self {
+        Self {
+            calendar_type: CalendarType::Gregorian,
+            epiphany_mode: EpiphanyMode::FixedJan6,
+            christ_king_mode: ChristKingMode::LastSundayBeforeAdvent,
+            ascension_mode: AscensionMode::Thursday,
+            corpus_christi_mode: CorpusChristiMode::Thursday,
+        }
+    }
 }
 
 /// Universal function to offset a date by a number of days. This can be used for any movable date.
@@ -92,69 +133,73 @@ pub fn offset(date: NaiveDate, days: i16) -> NaiveDate {
     date + Duration::days(days as i64)
 }
 
-/// Computes the date of Easter Sunday for the given year for the Gregorian calendar.
+/// Computes the date of Easter Sunday for the given year for the Gregorian calendar & Julian calendar.
 ///
-/// Uses the Meeus/Jones/Butcher Gregorian algorithm.
-pub fn easter_sunday(year: i32) -> NaiveDate {
-    let a = year % 19;
-    let b = year / 100;
-    let c = year % 100;
-    let d = b / 4;
-    let e = b % 4;
-    let f = (b + 8) / 25;
-    let g = (b - f + 1) / 3;
-    let h = (19 * a + b - d - g + 15) % 30;
-    let i = c / 4;
-    let k = c % 4;
-    let l = (32 + 2 * e + 2 * i - h - k) % 7;
-    let m = (a + 11 * h + 22 * l) / 451;
+/// Uses the Meeus/Jones/Butcher algorithm.
+pub fn easter_sunday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    match config.calendar_type {
+        CalendarType::Gregorian => {
+            let a = year % 19;
+            let b = year / 100;
+            let c = year % 100;
+            let d = b / 4;
+            let e = b % 4;
+            let f = (b + 8) / 25;
+            let g = (b - f + 1) / 3;
+            let h = (19 * a + b - d - g + 15) % 30;
+            let i = c / 4;
+            let k = c % 4;
+            let l = (32 + 2 * e + 2 * i - h - k) % 7;
+            let m = (a + 11 * h + 22 * l) / 451;
 
-    let month = (h + l - 7 * m + 114) / 31;
-    let day = ((h + l - 7 * m + 114) % 31) + 1;
+            let month = (h + l - 7 * m + 114) / 31;
+            let day = ((h + l - 7 * m + 114) % 31) + 1;
 
-    NaiveDate::from_ymd_opt(year, month as u32, day as u32)
-        .expect("Failed to compute Gregorian Easter Sunday")
-}
+            NaiveDate::from_ymd_opt(year, month as u32, day as u32)
+                .expect("Failed to compute Gregorian Easter Sunday")
+        }
+        CalendarType::Julian => {
+            let a = year % 4;
+            let b = year % 7;
+            let c = year % 19;
+            let d = (19 * c + 15) % 30;
+            let e = (2 * a + 4 * b - d + 34) % 7;
+            let month = (d + e + 114) / 31;
+            let day = ((d + e + 114) % 31) + 1;
 
-/// Computes the date of Easter Sunday for the given year for the Julian calendar.
-///
-/// Uses the Meeus/Jones/Butcher Julian algorithm.
-pub fn easter_sunday_julian(year: i32) -> NaiveDate {
-    let a = year % 4;
-    let b = year % 7;
-    let c = year % 19;
-    let d = (19 * c + 15) % 30;
-    let e = (2 * a + 4 * b - d + 34) % 7;
-    let month = (d + e + 114) / 31;
-    let day = ((d + e + 114) % 31) + 1;
-
-    NaiveDate::from_ymd_opt(year, month as u32, day as u32)
-        .expect("Failed to compute Julian Easter Sunday")
+            NaiveDate::from_ymd_opt(year, month as u32, day as u32)
+                .expect("Failed to compute Julian Easter Sunday")
+        }
+    }
 }
 
 /// Returns the date of Palm Sunday for the given year.
-pub fn palm_sunday(year: i32) -> NaiveDate {
-    offset(easter_sunday(year), -7)
+/// Palm Sunday is the Sunday before Easter Sunday, which is 7 days before Easter.
+pub fn palm_sunday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), -7)
 }
 
 /// Returns the date of Divine Mercy Sunday for the given year.
-pub fn divine_mercy_sunday(year: i32) -> NaiveDate {
-    offset(easter_sunday(year), 7)
+/// Divine Mercy Sunday is the Sunday after Easter Sunday, which is 7 days after Easter.
+pub fn divine_mercy_sunday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), 7)
 }
 
 /// Returns the date of Pentecost for the given year.
-pub fn pentecost(year: i32) -> NaiveDate {
-    offset(easter_sunday(year), 49)
+/// Pentecost is the 50th day after Easter Sunday, which is 49 days after Easter.
+pub fn pentecost(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), 49)
 }
 
 /// Returns the date of Trinity Sunday for the given year.
-pub fn trinity_sunday(year: i32) -> NaiveDate {
-    offset(easter_sunday(year), 56)
+/// Trinity Sunday is the Sunday after Pentecost, which is 56 days after Easter.
+pub fn trinity_sunday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), 56)
 }
 
 /// Returns the date of the Second Sunday after Pentecost.
-pub fn second_sunday_after_pentecost(year: i32) -> NaiveDate {
-    offset(easter_sunday(year), 63)
+pub fn second_sunday_after_pentecost(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), 63)
 }
 
 /// Returns the date of the First Sunday of Advent.
@@ -170,11 +215,25 @@ pub fn first_advent_sunday(year: i32) -> NaiveDate {
     date
 }
 
-/// Returns the Sunday after Epiphany.
-///
-/// Assumes Epiphany is fixed on January 6.
-pub fn sunday_after_epiphany(year: i32) -> NaiveDate {
-    let mut date = NaiveDate::from_ymd_opt(year, 1, 7).unwrap();
+pub fn epiphany(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    match config.epiphany_mode {
+        EpiphanyMode::FixedJan6 => NaiveDate::from_ymd_opt(year, 1, 6).unwrap(),
+        EpiphanyMode::MovableJan2to8 => {
+            let mut date = NaiveDate::from_ymd_opt(year, 1, 2).unwrap();
+
+            while date.weekday() != Weekday::Sun {
+                date += Duration::days(1);
+            }
+
+            date
+        }
+    }
+}
+
+// 1962: Epiphany is Jan 6, but Sunday After Epiphany logic may depend on rubrics...
+pub fn sunday_after_epiphany(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    let epiphany_date = epiphany(year, config);
+    let mut date = epiphany_date + Duration::days(1);
 
     while date.weekday() != Weekday::Sun {
         date += Duration::days(1);
@@ -201,10 +260,26 @@ pub fn sunday_within_christmas_octave_or_dec30(year: i32) -> NaiveDate {
 }
 
 /// Returns the date of the Baptism of the Lord for the given year.
-/// Assumes Epiphany is fixed on January 6, and the Baptism of the Lord is the Sunday after Epiphany.
-pub fn baptism_of_the_lord(year: i32) -> NaiveDate {
-    let epiphany = NaiveDate::from_ymd_opt(year, 1, 6).unwrap();
-    let mut date = epiphany + Duration::days(1);
+/// Sunday after Epiphany if epiphany fixed on Jan 6,
+/// otherwise if epiphany is movable and falls on 7 or 8 Jan, then Baptism of the Lord is on the following Monday (9 or 10 Jan). If epiphany is on 2–6 Jan, then Baptism of the Lord is on the following Sunday (3–7 Jan).
+pub fn baptism_of_the_lord(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    let epiphany = epiphany(year, config);
+
+    if config.epiphany_mode == EpiphanyMode::MovableJan2to8 && epiphany.day() >= 7 {
+        // Epiphany is on Jan 7 or 8, so Baptism of the Lord is on the following Monday (Jan 9 or 10) which means day + 1
+        return epiphany + Duration::days(1);
+    }
+
+    // Otherwise, Baptism of the Lord is on the Sunday after Epiphany
+    let days_until_sunday = 7 - epiphany.weekday().num_days_from_sunday();
+    epiphany + Duration::days(days_until_sunday as i64)
+}
+
+// Returns the date of the first Sunday after the Baptism of the Lord for the given year.
+fn first_sunday_after_baptism(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    let baptism = baptism_of_the_lord(year, config);
+
+    let mut date = baptism + Duration::days(1);
 
     while date.weekday() != Weekday::Sun {
         date += Duration::days(1);
@@ -214,24 +289,35 @@ pub fn baptism_of_the_lord(year: i32) -> NaiveDate {
 }
 
 /// Returns the date of Ash Wednesday for the given year.
-pub fn ash_wednesday(year: i32) -> NaiveDate {
-    offset(easter_sunday(year), -46)
+/// Ash Wednesday is 46 days before Easter Sunday (40 days of Lent + 6 Sundays).
+pub fn ash_wednesday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), -46)
 }
 
-pub fn holy_thursday(year: i32) -> NaiveDate {
-    offset(easter_sunday(year), -3)
+/// Returns the date of Holy Thursday for the given year.
+/// Holy Thursday is 3 days before Easter Sunday.
+pub fn holy_thursday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), -3)
 }
 
-/// Returns Epiphany for calendars where it is moved to the nearest Sunday
-/// in [Jan 2, Jan 8] (France, Belgium, etc.).
-/// If Jan 6 falls on Sunday the result is Jan 6, otherwise it is the
-/// unique Sunday in that window (always exactly one).
-pub fn epiphany_france(year: i32) -> NaiveDate {
-    let mut date = NaiveDate::from_ymd_opt(year, 1, 2).unwrap();
-    while date.weekday() != Weekday::Sun {
-        date += Duration::days(1);
+/// Returns the date of Christ the King for the given year.
+/// Christ the King is the Sunday immediately before the First Sunday of Advent or the last Sunday of October, depending on the configuration.
+pub fn christ_the_king(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    match config.christ_king_mode {
+        ChristKingMode::LastSundayBeforeAdvent => {
+            let first_advent = first_advent_sunday(year);
+            offset(first_advent, -7)
+        }
+        ChristKingMode::LastSundayOfOctober => {
+            let mut date = NaiveDate::from_ymd_opt(year, 10, 31).unwrap();
+
+            while date.weekday() != Weekday::Sun {
+                date -= Duration::days(1);
+            }
+
+            date
+        }
     }
-    date
 }
 
 /// Returns the ordinal number (1-based) of a Sunday within its liturgical season.
@@ -243,20 +329,23 @@ pub fn epiphany_france(year: i32) -> NaiveDate {
 /// - Lent:          1st – 6th (6th = Palm Sunday)
 /// - Eastertide:    1st – 7th (1st = Easter; Pentecost excluded, it is seeded)
 /// - Ordinary Time: 2nd – 34th (counted backward from Christ the King)
-pub fn sunday_number_in_season(date: NaiveDate, year: i32) -> Option<u32> {
+pub fn sunday_number_in_season(
+    date: NaiveDate,
+    year: i32,
+    config: LiturgicalConfig,
+) -> Option<u32> {
     if date.weekday() != Weekday::Sun {
         return None;
     }
 
-    let baptism = baptism_of_the_lord(year);
-    let easter = easter_sunday(year);
-    let pent = pentecost(year);
+    let first_sunday_after_baptism = first_sunday_after_baptism(year, config);
+    let easter = easter_sunday(year, config);
     let advent = first_advent_sunday(year);
 
     // Ash Wednesday = Easter - 46; first Sunday of Lent = Easter - 42
     let first_lent = offset(easter, -42);
     // Christ the King = Sunday immediately before 1st Advent Sunday = 34th Sunday of OT
-    let christ_king = offset(advent, -7);
+    let christ_king = christ_the_king(year, config);
 
     // ── ADVENT ── 1st through 4th Sunday
     if date >= advent {
@@ -279,9 +368,10 @@ pub fn sunday_number_in_season(date: NaiveDate, year: i32) -> Option<u32> {
         return Some(n);
     }
 
-    // ── ORDINARY TIME I ── 2nd Sunday (after Baptism) to last Sunday before Lent
-    // Baptism of the Lord is always a Sunday, so OT I begins the following Sunday (+7).
-    let first_ot1 = offset(baptism, 7);
+    // ORDINARY TIME I: from the first Sunday after Baptism of the Lord
+    // until the Sunday before Ash Wednesday.
+
+    let first_ot1 = first_sunday_after_baptism;
     let last_ot1 = offset(first_lent, -7);
 
     if date >= first_ot1 && date <= last_ot1 {
@@ -291,7 +381,7 @@ pub fn sunday_number_in_season(date: NaiveDate, year: i32) -> Option<u32> {
 
     // ── ORDINARY TIME II ── Trinity Sunday (+7 after Pentecost) through Christ the King
     // Numbered backward from Christ the King (= 34th Sunday of OT).
-    let first_ot2 = offset(pent, 7); // Trinity Sunday
+    let first_ot2 = trinity_sunday(year, config);
 
     if date >= first_ot2 && date <= christ_king {
         let weeks_before_end = ((christ_king - date).num_days() / 7) as u32;
@@ -309,28 +399,27 @@ pub fn resolve_movable_date(
     year: i32,
     base: MovableBase,
     offset_days: i16,
-    calendar_type: CalendarType,
+    config: LiturgicalConfig,
 ) -> NaiveDate {
     match base {
-        MovableBase::EasterSunday => match calendar_type {
-            CalendarType::Gregorian => offset(easter_sunday(year), offset_days),
-            CalendarType::Julian => offset(easter_sunday_julian(year), offset_days),
-        },
+        MovableBase::EasterSunday => offset(easter_sunday(year, config), offset_days),
         MovableBase::FirstAdventSunday => offset(first_advent_sunday(year), offset_days),
-        MovableBase::SundayAfterEpiphany => offset(sunday_after_epiphany(year), offset_days),
+        MovableBase::SundayAfterEpiphany => {
+            offset(sunday_after_epiphany(year, config), offset_days)
+        }
         MovableBase::SundayWithinChristmasOctaveOrDec30 => {
             offset(sunday_within_christmas_octave_or_dec30(year), offset_days)
         }
-        MovableBase::PalmSunday => offset(palm_sunday(year), offset_days),
-        MovableBase::DivineMercySunday => offset(divine_mercy_sunday(year), offset_days),
-        MovableBase::Pentecost => offset(pentecost(year), offset_days),
-        MovableBase::TrinitySunday => offset(trinity_sunday(year), offset_days),
+        MovableBase::PalmSunday => offset(palm_sunday(year, config), offset_days),
+        MovableBase::DivineMercySunday => offset(divine_mercy_sunday(year, config), offset_days),
+        MovableBase::Pentecost => offset(pentecost(year, config), offset_days),
+        MovableBase::TrinitySunday => offset(trinity_sunday(year, config), offset_days),
         MovableBase::SecondSundayAfterPentecost => {
-            offset(second_sunday_after_pentecost(year), offset_days)
+            offset(second_sunday_after_pentecost(year, config), offset_days)
         }
-        MovableBase::BaptismOfTheLord => offset(baptism_of_the_lord(year), offset_days),
-        MovableBase::AshWednesday => offset(ash_wednesday(year), offset_days),
-        MovableBase::HolyThursday => offset(holy_thursday(year), offset_days),
-        MovableBase::EpiphanySunday => offset(epiphany_france(year), offset_days),
+        MovableBase::BaptismOfTheLord => offset(baptism_of_the_lord(year, config), offset_days),
+        MovableBase::AshWednesday => offset(ash_wednesday(year, config), offset_days),
+        MovableBase::HolyThursday => offset(holy_thursday(year, config), offset_days),
+        MovableBase::Epiphany => offset(epiphany(year, config), offset_days),
     }
 }
