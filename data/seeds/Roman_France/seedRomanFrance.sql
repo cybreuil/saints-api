@@ -175,7 +175,7 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 -- WIP
 -- Épiphanie du Seigneur (dimanche entre le 2 et le 8 janvier)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional)
-SELECT f.id, cal.id, r.id, lc.id, 'movable', 'EPIPHANY_SUNDAY', 0, 'normal', FALSE
+SELECT f.id, cal.id, r.id, lc.id, 'movable', 'EPIPHANY', 0, 'normal', FALSE
 FROM feasts f
 JOIN calendars cal  ON cal.code  = 'ROMAN_FRANCE'
 JOIN calendars rcal ON rcal.code = 'ROMAN_GENERAL'
@@ -186,7 +186,7 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- Baptême du Seigneur (dimanche suivant l'Épiphanie française)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional)
-SELECT f.id, cal.id, r.id, lc.id, 'movable', 'EPIPHANY_SUNDAY', 7, 'normal', FALSE
+SELECT f.id, cal.id, r.id, lc.id, 'movable', 'BAPTISM_OF_THE_LORD', 0, 'normal', FALSE
 FROM feasts f
 JOIN calendars cal  ON cal.code  = 'ROMAN_FRANCE'
 JOIN calendars rcal ON rcal.code = 'ROMAN_GENERAL'
