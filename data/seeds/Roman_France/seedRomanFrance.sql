@@ -102,22 +102,22 @@ ON CONFLICT (feast_id, locale_code) DO NOTHING;
 -- ROMAN_FRANCE has no own liturgical_ranks rows.
 -- =========================================================
 
-INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional)
-SELECT f.id, cal.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
+SELECT f.id, cal.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
 JOIN calendars cal  ON cal.code  = 'ROMAN_FRANCE'
 JOIN calendars rcal ON rcal.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-  ('saint-genevieve-virgin',                          1,  3, 'MEM_OPT', 'WHITE', 'normal', true),
-  ('saint-remigius-bishop',                           1, 15, 'MEM_OPT', 'WHITE', 'normal', true),
-  ('saint-bernadette-soubirous-virgin',               2, 18, 'MEM_OPT', 'WHITE', 'normal', true),
-  ('saint-ivo-of-kermartin-priest',                   5, 19, 'MEM_OPT', 'WHITE', 'normal', true),
-  ('saint-joan-of-arc-virgin',                        5, 30, 'MEM_OBL', 'WHITE', 'normal', false),
-  ('saints-pothinus-blandina-and-companions-martyrs', 6,  2, 'MEM_OPT', 'RED',   'normal', true),
-  ('saint-clotilde',                                  6,  4, 'MEM_OPT', 'WHITE', 'normal', true),
-  ('saint-caesarius-of-arles-bishop',                 8, 26, 'MEM_OPT', 'WHITE', 'normal', true),
-  ('our-lady-of-la-salette',                          9, 19, 'MEM_OPT', 'WHITE', 'normal', true)
-) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional)
+  ('saint-genevieve-virgin',                          1,  3, 'MEM_OPT', 'WHITE', 'normal', true, 'Wikipedia'),
+  ('saint-remigius-bishop',                           1, 15, 'MEM_OPT', 'WHITE', 'normal', true, 'Wikipedia'),
+  ('saint-bernadette-soubirous-virgin',               2, 18, 'MEM_OPT', 'WHITE', 'normal', true, 'Wikipedia'),
+  ('saint-ivo-of-kermartin-priest',                   5, 19, 'MEM_OPT', 'WHITE', 'normal', true, 'Wikipedia'),
+  ('saint-joan-of-arc-virgin',                        5, 30, 'MEM_OBL', 'WHITE', 'normal', false, 'Wikipedia'),
+  ('saints-pothinus-blandina-and-companions-martyrs', 6,  2, 'MEM_OPT', 'RED',   'normal', true, 'Wikipedia'),
+  ('saint-clotilde',                                  6,  4, 'MEM_OPT', 'WHITE', 'normal', true, 'Wikipedia'),
+  ('saint-caesarius-of-arles-bishop',                 8, 26, 'MEM_OPT', 'WHITE', 'normal', true, 'Wikipedia'),
+  ('our-lady-of-la-salette',                          9, 19, 'MEM_OPT', 'WHITE', 'normal', true, 'Wikipedia')
+) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
   ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = rcal.id AND r.code = x.rank_code
 LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
@@ -138,11 +138,11 @@ FROM feasts f
 JOIN calendars cal  ON cal.code  = 'ROMAN_FRANCE'
 JOIN calendars rcal ON rcal.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-  ('saints-cyril-monk-and-methodius-bishop',                                 2, 14, 'FEAST',     'WHITE', 'normal', false, NULL),
-  ('saint-catherine-of-siena-virgin-and-doctor-of-the-church',               4, 29, 'FEAST',     'WHITE', 'normal', false, NULL),
-  ('saint-benedict-abbot',                                                    7, 11, 'FEAST',     'WHITE', 'normal', false, NULL),
-  ('saint-bridget-religious',                                                 7, 23, 'FEAST',     'WHITE', 'normal', false, NULL),
-  ('saint-teresa-benedicta-of-the-cross-virgin-and-martyr',                  8,  9, 'FEAST',     'RED',   'normal', false, NULL),
+  ('saints-cyril-monk-and-methodius-bishop',                                 2, 14, 'FEAST',     'WHITE', 'normal', false, 'Wikipedia'),
+  ('saint-catherine-of-siena-virgin-and-doctor-of-the-church',               4, 29, 'FEAST',     'WHITE', 'normal', false, 'Wikipedia'),
+  ('saint-benedict-abbot',                                                    7, 11, 'FEAST',     'WHITE', 'normal', false, 'Wikipedia'),
+  ('saint-bridget-religious',                                                 7, 23, 'FEAST',     'WHITE', 'normal', false, 'Wikipedia'),
+  ('saint-teresa-benedicta-of-the-cross-virgin-and-martyr',                  8,  9, 'FEAST',     'RED',   'normal', false, 'Wikipedia'),
   ('saint-therese-of-the-child-jesus-virgin-and-doctor-of-the-church',      10,  1, 'MEM_OBL',   'WHITE', 'normal', false, 'Secondary Patroness of France')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
   ON f.slug = x.slug
