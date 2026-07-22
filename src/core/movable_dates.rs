@@ -29,6 +29,8 @@ pub enum MovableBase {
     AshWednesday,
     HolyThursday,
     Epiphany,
+    SaintJoseph, // March 19 (fixed), but if it is inside Holy Week, back to the Saturday before Palm Sunday
+    Annunciation, // March 25 (fixed), but if it is inside Holy Week or Easter Octave, moved to Monday after the Octave of Easter
 }
 
 impl TryFrom<&str> for MovableBase {
@@ -51,6 +53,8 @@ impl TryFrom<&str> for MovableBase {
             "ASH_WEDNESDAY" => Ok(Self::AshWednesday),
             "HOLY_THURSDAY" => Ok(Self::HolyThursday),
             "EPIPHANY" => Ok(Self::Epiphany),
+            "SAINT_JOSEPH" => Ok(Self::SaintJoseph),
+            "ANNUNCIATION" => Ok(Self::Annunciation),
             _ => Err(()),
         }
     }
@@ -72,6 +76,8 @@ impl MovableBase {
             Self::AshWednesday => "ASH_WEDNESDAY",
             Self::HolyThursday => "HOLY_THURSDAY",
             Self::Epiphany => "EPIPHANY",
+            Self::SaintJoseph => "SAINT_JOSEPH",
+            Self::Annunciation => "ANNUNCIATION",
         }
     }
 }
@@ -320,6 +326,37 @@ pub fn christ_the_king(year: i32, config: LiturgicalConfig) -> NaiveDate {
     }
 }
 
+/// Returns the date of the Saint Joseph feast for the given year, considering the liturgical rules.
+/// If March 19 falls within Holy Week, the feast is moved to the Saturday before Palm Sunday. Otherwise, it is celebrated on March 19.
+pub fn saint_joseph(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    let march_19 = NaiveDate::from_ymd_opt(year, 3, 19).unwrap();
+    let palm_sunday = palm_sunday(year, config);
+    let holy_week_end = palm_sunday + Duration::days(6); // Samedi Saint
+
+    if march_19 >= palm_sunday && march_19 <= holy_week_end {
+        palm_sunday - Duration::days(1)
+    } else {
+        march_19
+    }
+}
+
+/// Returns the date of the Annunciation for the given year, considering the liturgical rules.
+/// If March 25 falls within Holy Week or the Easter Octave, the feast is moved to the Monday after the Octave of Easter. Otherwise, it is celebrated on March 25.
+pub fn annunciation(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    let march_25 = NaiveDate::from_ymd_opt(year, 3, 25).unwrap();
+
+    let easter = easter_sunday(year, config);
+    let palm_sunday = palm_sunday(year, config);
+
+    let octave_end = easter + Duration::days(7); // samedi après Pâques
+
+    if march_25 >= palm_sunday && march_25 <= octave_end {
+        return easter + Duration::days(8); // lundi après le 2e dimanche de Pâques
+    }
+
+    march_25
+}
+
 /// Returns the ordinal number (1-based) of a Sunday within its liturgical season.
 /// Returns `None` if the date is not a Sunday, or falls in Christmas time
 /// (where Sundays are individually seeded feasts).
@@ -421,5 +458,7 @@ pub fn resolve_movable_date(
         MovableBase::AshWednesday => offset(ash_wednesday(year, config), offset_days),
         MovableBase::HolyThursday => offset(holy_thursday(year, config), offset_days),
         MovableBase::Epiphany => offset(epiphany(year, config), offset_days),
+        MovableBase::SaintJoseph => offset(saint_joseph(year, config), offset_days),
+        MovableBase::Annunciation => offset(annunciation(year, config), offset_days),
     }
 }

@@ -78,3 +78,5 @@ we can stick for france for now
 
 Should change name of tridentine calendar; it is not really tridentine, which is with double, but the final calendar before vatican II, so maybe "pre-vatican II calendar" or "1962 calendar" or "1960 calendar" ?
 Need brainstorm this
+
++ Need correction on saint joseph on sunday, should go sunday+1 to not conflict with sunday celebration, especially lent sundays

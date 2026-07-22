@@ -277,7 +277,8 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 -- Roman General Calendar - March (append mode, EN/FR/LA)
 -- Calendar: ROMAN_GENERAL
 -- With movable handling for:
---   - Saint Joseph (March 19) if overlaps Holy Week / Easter Octave
+--   - Saint Joseph (March 19)
+-- 		if overlaps Holy Week --> Saturday before Palm Sunday
 --   - Annunciation (March 25) if overlaps Holy Week / Easter Octave
 -- =========================================================
 
@@ -360,13 +361,27 @@ JOIN (VALUES
 ('saint-frances-of-rome-religious', 3, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-patrick-bishop', 3, 17, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-cyril-of-jerusalem-bishop-and-doctor-of-the-church', 3, 18, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
-('saint-joseph-spouse-of-the-blessed-virgin-mary', 3, 19, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
-('saint-turibius-of-mongrovejo-bishop', 3, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
-('the-annunciation-of-the-lord', 3, 25, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia')
+('saint-turibius-of-mongrovejo-bishop', 3, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia')
 ) AS x(slug, month, day, rank_code, color_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
 LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- Saint Joseph Movable Rule (almost fixed - 19 March - but with movable handling for Holy Week)
+-- &
+-- Annunciation Movable Rule (almost fixed - 25 March - but with movable handling for Holy Week / Easter Octave)
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'movable', x.movable_base, x.movable_offset_days, x.observance_type, x.is_optional, x.notes
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN (VALUES
+('saint-joseph-spouse-of-the-blessed-virgin-mary', 'SAINT_JOSEPH', 0, 'SOLEMNITY', 'normal', FALSE, 'Wikipedia'),
+('the-annunciation-of-the-lord', 'ANNUNCIATION', 0, 'SOLEMNITY', 'normal', FALSE, 'Wikipedia')
+) AS x(slug, movable_base, movable_offset_days, rank_code, observance_type, is_optional, notes)
+ON f.slug = x.slug
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
