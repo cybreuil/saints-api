@@ -1,6 +1,6 @@
 use chrono::{Datelike, NaiveDate};
 use sqlx::PgPool;
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 use super::dto::{CelebrationByDateContext, CelebrationByDateResponse, CelebrationRow};
 use super::repo;
@@ -161,26 +161,41 @@ pub async fn get_celebrations_by_date(
         calendar_code: cal.to_string(),
     };
 
-    let mut celebrations = Vec::new();
+    // Fetch celebrations for each calendar in the hierarchy, starting from the most specific (child) to the most general (parent).
+    let mut all_celebrations: Vec<CelebrationRow> = Vec::new();
+    let mut claimed_feast_ids: HashSet<i32> = HashSet::new();
 
-    for calendar in &calendars {
-        // Get the liturgical config for the current calendar
+    for (i, calendar) in calendars.iter().enumerate() {
         let config = calendars::mapper::to_liturgical_config(calendar);
 
-        celebrations =
+        let level_celebrations =
             fetch_celebrations_for_calendar(pool, year, month, day, lang, &calendar.code, config)
                 .await?;
 
-        if !celebrations.is_empty() {
-            break;
+        for c in level_celebrations {
+            if !claimed_feast_ids.contains(&c.feast_id) {
+                all_celebrations.push(c);
+            }
+        }
+
+        // Construit l'ensemble d'exclusion pour le niveau parent suivant.
+        // Si un calendrier enfant "possède" une fête (quelle que soit la date),
+        // la version du parent est supprimée.
+        if i < calendars.len() - 1 {
+            let claimed = repo::get_claimed_feast_ids(pool, &calendar.code).await?;
+            claimed_feast_ids.extend(claimed);
         }
     }
 
-    let mut celebrations_with_saints = attach_saints(pool, celebrations, lang).await?;
+    all_celebrations.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
+
+    let mut celebrations_with_saints = attach_saints(pool, all_celebrations, lang).await?;
 
     // Resolve the liturgical season
     let mut liturgical_season = None;
 
+    // Try to get the liturgical season for each calendar in the hierarchy
+    // until one is found !
     for calendar in &calendars {
         liturgical_season = liturgical_seasons::get_liturgical_season(
             pool,

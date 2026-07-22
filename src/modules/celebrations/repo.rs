@@ -323,3 +323,25 @@ pub async fn count_celebrations(pool: &PgPool, calendar_code: &str) -> Result<i6
 
     Ok(count)
 }
+
+/// Returns all feast_ids claimed by a given calendar (regardless of date).
+/// Used to build the exclusion set when merging calendar hierarchies:
+/// if a child calendar owns a feast, the parent's version is suppressed in all ancestors.
+pub async fn get_claimed_feast_ids(
+    pool: &PgPool,
+    calendar_code: &str,
+) -> Result<Vec<i32>, ApiError> {
+    let ids = sqlx::query_scalar(
+        r#"
+        SELECT DISTINCT c.feast_id
+        FROM celebrations c
+        INNER JOIN calendars cal ON cal.id = c.calendar_id
+        WHERE cal.code = $1
+        "#,
+    )
+    .bind(calendar_code)
+    .fetch_all(pool)
+    .await?;
+
+    Ok(ids)
+}
