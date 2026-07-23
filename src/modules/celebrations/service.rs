@@ -222,7 +222,6 @@ pub async fn get_celebrations_by_date(
         .map(|s| s.code == ("ORDINARY_TIME"))
         .unwrap_or(false);
 
-    // NEED EXTRA CHECK CALENDAR + SOLEMNITY ON SUNDAY
     // Fallback Celebration (Feria / Sunday) for roman calendar if no celebrations are found or if it's a Sunday
     if celebrations_with_saints.is_empty() || (is_sunday && is_ordinary_time) {
         // Try to obtain a rank, climbing parents if necessary
@@ -231,7 +230,7 @@ pub async fn get_celebrations_by_date(
 
         for calendar in &calendars {
             let result = if is_sunday {
-                repo::get_sunday_rank(pool, &calendar.code, lang).await
+                repo::get_ordinary_sunday_rank(pool, &calendar.code, lang).await
             } else {
                 repo::get_lowest_rank(pool, &calendar.code, lang).await
             };

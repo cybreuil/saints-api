@@ -179,7 +179,7 @@ SELECT f.id, cal.id, r.id, lc.id, 'movable', 'EPIPHANY', 0, 'normal', FALSE
 FROM feasts f
 JOIN calendars cal  ON cal.code  = 'ROMAN_FRANCE'
 JOIN calendars rcal ON rcal.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = rcal.id AND r.code = 'SOLEMNITY'
+JOIN liturgical_ranks r ON r.calendar_id = rcal.id AND r.code = 'SOLEMNITY_LORD'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-epiphany-of-the-lord'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
@@ -190,7 +190,7 @@ SELECT f.id, cal.id, r.id, lc.id, 'movable', 'BAPTISM_OF_THE_LORD', 0, 'normal',
 FROM feasts f
 JOIN calendars cal  ON cal.code  = 'ROMAN_FRANCE'
 JOIN calendars rcal ON rcal.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = rcal.id AND r.code = 'FEAST'
+JOIN liturgical_ranks r ON r.calendar_id = rcal.id AND r.code = 'FEAST_LORD'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-baptism-of-the-lord'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;

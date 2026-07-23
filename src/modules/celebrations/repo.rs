@@ -260,7 +260,7 @@ pub async fn get_lowest_rank(
     Ok(rank)
 }
 
-pub async fn get_sunday_rank(
+pub async fn get_ordinary_sunday_rank(
     pool: &PgPool,
     calendar_code: &str,
     language_code: &str,
@@ -279,7 +279,7 @@ pub async fn get_sunday_rank(
 		INNER JOIN calendars cal
 			ON cal.id = lr.calendar_id
 			AND cal.code = $1
-		WHERE lr.code = 'SUNDAY'
+		WHERE lr.code = 'SUNDAY_ORDINARY'
 		LIMIT 1
 		"#,
     )

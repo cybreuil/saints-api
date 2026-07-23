@@ -377,7 +377,7 @@ FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
 ('saint-joseph-spouse-of-the-blessed-virgin-mary', 'SAINT_JOSEPH', 0, 'SOLEMNITY', 'normal', FALSE, 'Wikipedia'),
-('the-annunciation-of-the-lord', 'ANNUNCIATION', 0, 'SOLEMNITY_LORD', 'normal', FALSE, 'Wikipedia')
+('the-annunciation-of-the-lord', 'ANNUNCIATION', 0, 'SOLEMNITY', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, movable_base, movable_offset_days, rank_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -1711,7 +1711,7 @@ JOIN (VALUES
 ('saint-john-of-the-cross-priest-and-doctor-of-the-church', 12, 14, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-peter-canisius-priest-and-doctor-of-the-church', 12, 21, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-john-of-kanty-priest', 12, 23, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
-('nativity-of-the-lord', 12, 25, 'SOLEMNITY', 'WHITE', 'octave', FALSE, 'Wikipedia'),
+('nativity-of-the-lord', 12, 25, 'SOLEMNITY_LORD', 'WHITE', 'octave', FALSE, 'Wikipedia'),
 ('saint-stephen-the-first-martyr', 12, 26, 'FEAST', 'RED', 'octave', FALSE, 'Wikipedia'),
 ('saint-john-apostle-and-evangelist', 12, 27, 'FEAST', 'WHITE', 'octave', FALSE, 'Wikipedia'),
 ('the-holy-innocents-martyrs', 12, 28, 'FEAST', 'RED', 'octave', FALSE, 'Wikipedia'),
@@ -1779,7 +1779,7 @@ INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, m
 SELECT f.id, c.id, r.id, lc.id, 'fixed', 12, 24, 'vigil', FALSE, 'Roman General Calendar'
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SOLEMNITY'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FERIA_PRIVILEGED'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'christmas-vigil'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
@@ -1891,14 +1891,14 @@ SELECT f.id, c.id, r.id, lc.id, 'movable', x.movable_base, x.movable_offset_days
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('easter-sunday-of-the-resurrection-of-the-lord', 'EASTER_SUNDAY', 0, 'SOLEMNITY', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)'),
+('easter-sunday-of-the-resurrection-of-the-lord', 'EASTER_SUNDAY', 0, 'SUNDAY_ADVENT_LENT_EASTER', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)'),
 ('monday-in-the-octave-of-easter', 'EASTER_SUNDAY', 1, 'SOLEMNITY', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)'),
 ('tuesday-in-the-octave-of-easter', 'EASTER_SUNDAY', 2, 'SOLEMNITY', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)'),
 ('wednesday-in-the-octave-of-easter', 'EASTER_SUNDAY', 3, 'SOLEMNITY', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)'),
 ('thursday-in-the-octave-of-easter', 'EASTER_SUNDAY', 4, 'SOLEMNITY', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)'),
 ('friday-in-the-octave-of-easter', 'EASTER_SUNDAY', 5, 'SOLEMNITY', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)'),
 ('saturday-in-the-octave-of-easter', 'EASTER_SUNDAY', 6, 'SOLEMNITY', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)'),
-('second-sunday-of-easter-divine-mercy-sunday', 'EASTER_SUNDAY', 7, 'SOLEMNITY', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)')
+('second-sunday-of-easter-divine-mercy-sunday', 'EASTER_SUNDAY', 7, 'SUNDAY_ADVENT_LENT_EASTER', 'WHITE', 'octave', 'Roman General Calendar (Easter Octave)')
 ) AS x(slug, movable_base, movable_offset_days, rank_code, color_code, observance_type, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -1964,11 +1964,11 @@ SELECT f.id, c.id, r.id, lc.id, 'movable', x.movable_base, x.offset_days, 'norma
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-  ('third-sunday-of-easter',   'EASTER_SUNDAY', 14, 'SOLEMNITY', 'WHITE'),
-  ('fourth-sunday-of-easter',  'EASTER_SUNDAY', 21, 'SOLEMNITY', 'WHITE'),
-  ('fifth-sunday-of-easter',   'EASTER_SUNDAY', 28, 'SOLEMNITY', 'WHITE'),
-  ('sixth-sunday-of-easter',   'EASTER_SUNDAY', 35, 'SOLEMNITY', 'WHITE'),
-  ('seventh-sunday-of-easter', 'EASTER_SUNDAY', 42, 'SOLEMNITY', 'WHITE')
+  ('third-sunday-of-easter',   'EASTER_SUNDAY', 14, 'SUNDAY_ADVENT_LENT_EASTER', 'WHITE'),
+  ('fourth-sunday-of-easter',  'EASTER_SUNDAY', 21, 'SUNDAY_ADVENT_LENT_EASTER', 'WHITE'),
+  ('fifth-sunday-of-easter',   'EASTER_SUNDAY', 28, 'SUNDAY_ADVENT_LENT_EASTER', 'WHITE'),
+  ('sixth-sunday-of-easter',   'EASTER_SUNDAY', 35, 'SUNDAY_ADVENT_LENT_EASTER', 'WHITE'),
+  ('seventh-sunday-of-easter', 'EASTER_SUNDAY', 42, 'SUNDAY_ADVENT_LENT_EASTER', 'WHITE')
 ) AS x(slug, movable_base, offset_days, rank_code, color_code) ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
 LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
@@ -2004,7 +2004,7 @@ INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, m
 SELECT f.id, c.id, r.id, lc.id, 'movable', 'EASTER_SUNDAY', -1, 'vigil', FALSE, 'Roman General Calendar'
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SOLEMNITY'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'PASCHAL_TRIDUUM'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'easter-vigil-in-the-holy-night'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
@@ -2078,13 +2078,13 @@ SELECT f.id, c.id, r.id, lc.id, 'movable', x.movable_base, x.movable_offset_days
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('palm-sunday-of-the-passion-of-the-lord', 'EASTER_SUNDAY', -7, 'SOLEMNITY', 'RED', 'normal'),
+('palm-sunday-of-the-passion-of-the-lord', 'EASTER_SUNDAY', -7, 'SUNDAY_ADVENT_LENT_EASTER', 'RED', 'normal'),
 ('monday-of-holy-week', 'EASTER_SUNDAY', -6, 'FERIA_PRIVILEGED', 'PURPLE', 'normal'),
 ('tuesday-of-holy-week', 'EASTER_SUNDAY', -5, 'FERIA_PRIVILEGED', 'PURPLE', 'normal'),
 ('wednesday-of-holy-week', 'EASTER_SUNDAY', -4, 'FERIA_PRIVILEGED', 'PURPLE', 'normal'),
-('holy-thursday-evening-mass-of-the-lords-supper', 'EASTER_SUNDAY', -3, 'SOLEMNITY', 'WHITE', 'normal'),
-('friday-of-the-passion-of-the-lord', 'EASTER_SUNDAY', -2, 'SOLEMNITY', 'RED', 'normal'),
-('holy-saturday', 'EASTER_SUNDAY', -1, 'FERIA_PRIVILEGED', 'PURPLE', 'normal')
+('holy-thursday-evening-mass-of-the-lords-supper', 'EASTER_SUNDAY', -3, 'PASCHAL_TRIDUUM', 'WHITE', 'normal'),
+('friday-of-the-passion-of-the-lord', 'EASTER_SUNDAY', -2, 'PASCHAL_TRIDUUM', 'RED', 'normal'),
+('holy-saturday', 'EASTER_SUNDAY', -1, 'PASCHAL_TRIDUUM', 'PURPLE', 'normal')
 ) AS x(slug, movable_base, movable_offset_days, rank_code, color_code, observance_type)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -2161,11 +2161,11 @@ FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
 ('ash-wednesday', 'EASTER_SUNDAY', -46, 'FERIA_PRIVILEGED', 'PURPLE'),
-('first-sunday-of-lent', 'EASTER_SUNDAY', -42, 'SOLEMNITY', 'PURPLE'),
-('second-sunday-of-lent', 'EASTER_SUNDAY', -35, 'SOLEMNITY', 'PURPLE'),
-('third-sunday-of-lent', 'EASTER_SUNDAY', -28, 'SOLEMNITY', 'PURPLE'),
-('fourth-sunday-of-lent', 'EASTER_SUNDAY', -21, 'SOLEMNITY', 'ROSE'),
-('fifth-sunday-of-lent', 'EASTER_SUNDAY', -14, 'SOLEMNITY', 'PURPLE')
+('first-sunday-of-lent', 'EASTER_SUNDAY', -42, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE'),
+('second-sunday-of-lent', 'EASTER_SUNDAY', -35, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE'),
+('third-sunday-of-lent', 'EASTER_SUNDAY', -28, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE'),
+('fourth-sunday-of-lent', 'EASTER_SUNDAY', -21, 'SUNDAY_ADVENT_LENT_EASTER', 'ROSE'),
+('fifth-sunday-of-lent', 'EASTER_SUNDAY', -14, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE')
 ) AS x(slug, movable_base, movable_offset_days, rank_code, color_code)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -2235,10 +2235,10 @@ SELECT f.id, c.id, r.id, lc.id, 'movable', x.movable_base, x.movable_offset_days
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('first-sunday-of-advent', 'FIRST_ADVENT_SUNDAY', 0, 'SOLEMNITY', 'PURPLE', 'normal'),
-('second-sunday-of-advent', 'FIRST_ADVENT_SUNDAY', 7, 'SOLEMNITY', 'PURPLE', 'normal'),
-('third-sunday-of-advent', 'FIRST_ADVENT_SUNDAY', 14, 'SOLEMNITY', 'ROSE', 'normal'),
-('fourth-sunday-of-advent', 'FIRST_ADVENT_SUNDAY', 21, 'SOLEMNITY', 'PURPLE', 'normal')
+('first-sunday-of-advent', 'FIRST_ADVENT_SUNDAY', 0, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE', 'normal'),
+('second-sunday-of-advent', 'FIRST_ADVENT_SUNDAY', 7, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE', 'normal'),
+('third-sunday-of-advent', 'FIRST_ADVENT_SUNDAY', 14, 'SUNDAY_ADVENT_LENT_EASTER', 'ROSE', 'normal'),
+('fourth-sunday-of-advent', 'FIRST_ADVENT_SUNDAY', 21, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE', 'normal')
 ) AS x(slug, movable_base, movable_offset_days, rank_code, color_code, observance_type)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -2250,7 +2250,7 @@ INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, m
 SELECT f.id, c.id, r.id, lc.id, 'fixed', 12, 24, 'normal', FALSE, 'Roman General Calendar'
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FERIA'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FERIA_PRIVILEGED'
 LEFT JOIN liturgical_colors lc ON lc.code = 'PURPLE'
 WHERE f.slug = 'december-24-advent-feria'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
