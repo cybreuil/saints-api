@@ -96,3 +96,5 @@ Classe	Exemples
 10	Mémoires obligatoires
 11	Mémoires facultatives
 12	Féries
+
++ maybe build differences between vigils and day celebrations based on a time request, like if the celebration is before or after 18h
