@@ -31,6 +31,7 @@ pub enum MovableBase {
     Epiphany,
     SaintJoseph, // March 19 (fixed), but if it is inside Holy Week, back to the Saturday before Palm Sunday
     Annunciation, // March 25 (fixed), but if it is inside Holy Week or Easter Octave, moved to Monday after the Octave of Easter
+    ImmaculateConception, // December 8 (fixed), but if it falls on a Sunday (Advent Sunday), moved to December 9
 }
 
 impl TryFrom<&str> for MovableBase {
@@ -55,6 +56,7 @@ impl TryFrom<&str> for MovableBase {
             "EPIPHANY" => Ok(Self::Epiphany),
             "SAINT_JOSEPH" => Ok(Self::SaintJoseph),
             "ANNUNCIATION" => Ok(Self::Annunciation),
+            "IMMACULATE_CONCEPTION" => Ok(Self::ImmaculateConception),
             _ => Err(()),
         }
     }
@@ -78,6 +80,7 @@ impl MovableBase {
             Self::Epiphany => "EPIPHANY",
             Self::SaintJoseph => "SAINT_JOSEPH",
             Self::Annunciation => "ANNUNCIATION",
+            Self::ImmaculateConception => "IMMACULATE_CONCEPTION",
         }
     }
 }
@@ -327,7 +330,8 @@ pub fn christ_the_king(year: i32, config: LiturgicalConfig) -> NaiveDate {
 }
 
 /// Returns the date of the Saint Joseph feast for the given year, considering the liturgical rules.
-/// If March 19 falls within Holy Week, the feast is moved to the Saturday before Palm Sunday. Otherwise, it is celebrated on March 19.
+/// If March 19 falls within Holy Week, the feast is moved to the Saturday Before Palm Sunday. Otherwise, it is celebrated on March 19.
+/// New rule: if saint joseph is on a Sunday, it is moved to the following Monday (March 20).
 pub fn saint_joseph(year: i32, config: LiturgicalConfig) -> NaiveDate {
     let march_19 = NaiveDate::from_ymd_opt(year, 3, 19).unwrap();
     let palm_sunday = palm_sunday(year, config);
@@ -335,6 +339,8 @@ pub fn saint_joseph(year: i32, config: LiturgicalConfig) -> NaiveDate {
 
     if march_19 >= palm_sunday && march_19 <= holy_week_end {
         palm_sunday - Duration::days(1)
+    } else if march_19.weekday() == Weekday::Sun {
+        march_19 + Duration::days(1)
     } else {
         march_19
     }
@@ -355,6 +361,21 @@ pub fn annunciation(year: i32, config: LiturgicalConfig) -> NaiveDate {
     }
 
     march_25
+}
+
+/// Returns the date of the Immaculate Conception for the given year
+/// It should be celebrated on December 8, but if it falls on a Sunday (Advent Sunday), it is moved to the following Monday (December 9).
+pub fn immaculate_conception(year: i32) -> NaiveDate {
+    let dec_8 = NaiveDate::from_ymd_opt(year, 12, 8).unwrap();
+    let first_advent = first_advent_sunday(year);
+    let fourth_advent = first_advent + Duration::days(21);
+
+    // If dec 8 is sunday & in advent time
+    if dec_8 >= first_advent && dec_8 <= fourth_advent && dec_8.weekday() == Weekday::Sun {
+        dec_8 + Duration::days(1)
+    } else {
+        dec_8
+    }
 }
 
 /// Returns the ordinal number (1-based) of a Sunday within its liturgical season.
@@ -460,5 +481,6 @@ pub fn resolve_movable_date(
         MovableBase::Epiphany => offset(epiphany(year, config), offset_days),
         MovableBase::SaintJoseph => offset(saint_joseph(year, config), offset_days),
         MovableBase::Annunciation => offset(annunciation(year, config), offset_days),
+        MovableBase::ImmaculateConception => offset(immaculate_conception(year), offset_days),
     }
 }

@@ -80,3 +80,19 @@ Should change name of tridentine calendar; it is not really tridentine, which is
 Need brainstorm this
 
 + Need correction on saint joseph on sunday, should go sunday+1 to not conflict with sunday celebration, especially lent sundays
+
++ maybe i should complexify preseance like this
+	+ version simplifiée 
+Classe	Exemples
+1	Triduum pascal
+2	Noël, Épiphanie, Ascension, Pentecôte
+3	Dimanches de l'Avent, du Carême et de Pâques
+4	Solennités du Seigneur, de la Vierge et des saints du calendrier général
+5	Commémoration de tous les fidèles défunts (2 novembre)
+6	Dimanches du Temps de Noël et du Temps ordinaire
+7	Fêtes du Seigneur
+8	Fêtes de la Vierge et des saints du calendrier général
+9	Fêtes propres (diocèse, patron, etc.)
+10	Mémoires obligatoires
+11	Mémoires facultatives
+12	Féries

@@ -603,13 +603,17 @@ INSERT INTO liturgical_ranks (calendar_id, code, precedence)
 SELECT c.id, x.code, x.precedence
 FROM calendars c
 CROSS JOIN (VALUES
-    ('SOLEMNITY', 1),
-    ('FEAST', 2),
-    ('SUNDAY', 3),
-    ('FERIA_PRIVILEGED', 4),
-    ('MEM_OBL', 5),
-    ('MEM_OPT', 6),
-    ('FERIA', 7)
+('PASCHAL_TRIDUUM', 1),
+('SUNDAY_ADVENT_LENT_EASTER', 2),
+('SOLEMNITY_LORD', 3),
+('SOLEMNITY', 4),
+('FEAST_LORD', 5),
+('SUNDAY_ORDINARY', 6),
+('FERIA_PRIVILEGED', 7),
+('FEAST', 8),
+('MEM_OBL', 9),
+('MEM_OPT', 10),
+('FERIA', 11)
 ) AS x(code, precedence)
 WHERE c.code = 'ROMAN_GENERAL';
 
@@ -619,10 +623,14 @@ SELECT r.id, 'fr', x.label
 FROM liturgical_ranks r
 JOIN calendars c ON c.id = r.calendar_id
 JOIN (VALUES
+    ('PASCHAL_TRIDUUM', 'Triduum pascal'),
+    ('SUNDAY_ADVENT_LENT_EASTER', 'Dimanche de l''Avent, du Carême ou de Pâques'),
+    ('SOLEMNITY_LORD', 'Solennité du Seigneur'),
     ('SOLEMNITY', 'Solennité'),
-    ('FEAST', 'Fête'),
-    ('SUNDAY', 'Dimanche'),
+    ('FEAST_LORD', 'Fête du Seigneur'),
+    ('SUNDAY_ORDINARY', 'Dimanche du Temps ordinaire'),
     ('FERIA_PRIVILEGED', 'Férie privilégiée'),
+    ('FEAST', 'Fête'),
     ('MEM_OBL', 'Mémoire obligatoire'),
     ('MEM_OPT', 'Mémoire facultative'),
     ('FERIA', 'Férie')
@@ -636,13 +644,17 @@ SELECT r.id, 'en', x.label
 FROM liturgical_ranks r
 JOIN calendars c ON c.id = r.calendar_id
 JOIN (VALUES
-    ('SOLEMNITY', 'Solemnity'),
-    ('FEAST', 'Feast'),
-    ('SUNDAY', 'Sunday'),
-    ('FERIA_PRIVILEGED', 'Privileged Feria'),
-    ('MEM_OBL', 'Obligatory Memorial'),
-    ('MEM_OPT', 'Optional Memorial'),
-    ('FERIA', 'Feria')
+    ('PASCHAL_TRIDUUM', 'Paschal Triduum'),
+	('SUNDAY_ADVENT_LENT_EASTER', 'Sunday of Advent, Lent or Easter'),
+	('SOLEMNITY_LORD', 'Solemnity of the Lord'),
+	('SOLEMNITY', 'Solemnity'),
+	('FEAST_LORD', 'Feast of the Lord'),
+	('SUNDAY_ORDINARY', 'Sunday of Ordinary Time'),
+	('FERIA_PRIVILEGED', 'Privileged Feria'),
+	('FEAST', 'Feast'),
+	('MEM_OBL', 'Obligatory Memorial'),
+	('MEM_OPT', 'Optional Memorial'),
+	('FERIA', 'Feria')
 ) AS x(code, label)
 ON r.code = x.code
 WHERE c.code = 'ROMAN_GENERAL';
@@ -653,13 +665,17 @@ SELECT r.id, 'la', x.label
 FROM liturgical_ranks r
 JOIN calendars c ON c.id = r.calendar_id
 JOIN (VALUES
-    ('SOLEMNITY', 'Sollemnitas'),
-    ('FEAST', 'Festum'),
-    ('SUNDAY', 'Dominica'),
-    ('FERIA_PRIVILEGED', 'Feria Privilegiata'),
-    ('MEM_OBL', 'Memoria obligatoria'),
-    ('MEM_OPT', 'Memoria ad libitum'),
-    ('FERIA', 'Feria')
+    ('PASCHAL_TRIDUUM', 'Triduum Paschale'),
+	('SUNDAY_ADVENT_LENT_EASTER', 'Dominica Adventus, Quadragesimae vel Paschae'),
+	('SOLEMNITY_LORD', 'Solemnitas Domini'),
+	('SOLEMNITY', 'Solemnitas'),
+	('FEAST_LORD', 'Festum Domini'),
+	('SUNDAY_ORDINARY', 'Dominica Temporis Ordinarii'),
+	('FERIA_PRIVILEGED', 'Feria Privilegiata'),
+	('FEAST', 'Festum'),
+	('MEM_OBL', 'Memoria Obligatoria'),
+	('MEM_OPT', 'Memoria Facultativa'),
+	('FERIA', 'Feria')
 ) AS x(code, label)
 ON r.code = x.code
 WHERE c.code = 'ROMAN_GENERAL';

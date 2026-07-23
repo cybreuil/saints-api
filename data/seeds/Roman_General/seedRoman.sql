@@ -119,7 +119,7 @@ JOIN (VALUES
 -- Christmas octave ended
 ('saints-basil-the-great-and-gregory-nazianzen-bishops-and-doctors-of-the-church', 1, 2, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('the-most-holy-name-of-jesus', 1, 3, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
-('the-epiphany-of-the-lord', 1, 6, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-epiphany-of-the-lord', 1, 6, 'SOLEMNITY_LORD', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-raymond-of-penyafort-priest', 1, 7, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-hilary-bishop-and-doctor-of-the-church', 1, 13, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-anthony-abbot', 1, 17, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
@@ -142,10 +142,10 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 -- January movable rule:
 -- Sunday after 6 January: The Baptism of the Lord
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
-SELECT f.id, c.id, r.id, lc.id, 'movable', 'SUNDAY_AFTER_EPIPHANY', 0, 'normal', FALSE, 'Wikipedia movable'
+SELECT f.id, c.id, r.id, lc.id, 'movable', 'BAPTISM_OF_THE_LORD', 0, 'normal', FALSE, 'Wikipedia movable'
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FEAST'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FEAST_LORD'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-baptism-of-the-lord'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
@@ -252,7 +252,7 @@ SELECT f.id, c.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
-('the-presentation-of-the-lord', 2, 2, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-presentation-of-the-lord', 2, 2, 'FEAST_LORD', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-blaise-bishop-and-martyr', 2, 3, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-ansgar-bishop', 2, 3, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-agatha-virgin-and-martyr', 2, 5, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
@@ -377,7 +377,7 @@ FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
 ('saint-joseph-spouse-of-the-blessed-virgin-mary', 'SAINT_JOSEPH', 0, 'SOLEMNITY', 'normal', FALSE, 'Wikipedia'),
-('the-annunciation-of-the-lord', 'ANNUNCIATION', 0, 'SOLEMNITY', 'normal', FALSE, 'Wikipedia')
+('the-annunciation-of-the-lord', 'ANNUNCIATION', 0, 'SOLEMNITY_LORD', 'normal', FALSE, 'Wikipedia')
 ) AS x(slug, movable_base, movable_offset_days, rank_code, observance_type, is_optional, notes)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
@@ -1089,7 +1089,7 @@ JOIN (VALUES
 ('saint-peter-julian-eymard-priest', 8, 2, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-jean-vianney-priest', 8, 4, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('the-dedication-of-the-basilica-of-saint-mary-major', 8, 5, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
-('the-transfiguration-of-the-lord', 8, 6, 'FEAST', 'WHITE', 'normal', FALSE, 'Wikipedia'),
+('the-transfiguration-of-the-lord', 8, 6, 'FEAST_LORD', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-sixtus-ii-pope-and-companions-martyrs', 8, 7, 'MEM_OPT', 'RED', 'normal', TRUE, 'Wikipedia'),
 ('saint-cajetan-priest', 8, 7, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-dominic-priest', 8, 8, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
@@ -1250,7 +1250,7 @@ JOIN (VALUES
 ('saint-peter-claver-priest', 9, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('the-most-holy-name-of-mary', 9, 12, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-john-chrysostom-bishop-and-doctor-of-the-church', 9, 13, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
-('the-exaltation-of-the-holy-cross', 9, 14, 'FEAST', 'RED', 'normal', FALSE, 'Wikipedia'),
+('the-exaltation-of-the-holy-cross', 9, 14, 'FEAST_LORD', 'RED', 'normal', FALSE, 'Wikipedia'),
 ('our-lady-of-sorrows', 9, 15, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saints-cornelius-pope-and-cyprian-bishop-martyrs', 9, 16, 'MEM_OBL', 'RED', 'normal', FALSE, 'Wikipedia'),
 ('saint-robert-bellarmine-bishop-and-doctor-of-the-church', 9, 17, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
@@ -1703,7 +1703,6 @@ JOIN (VALUES
 ('saint-john-damascene-priest-and-doctor-of-the-church', 12, 4, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-nicholas-bishop', 12, 6, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-ambrose-bishop-and-doctor-of-the-church', 12, 7, 'MEM_OBL', 'WHITE', 'normal', FALSE, 'Wikipedia'),
-('the-immaculate-conception-of-the-blessed-virgin-mary', 12, 8, 'SOLEMNITY', 'WHITE', 'normal', FALSE, 'Wikipedia'),
 ('saint-juan-diego-cuauhtlatoatzin', 12, 9, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('our-lady-of-loreto', 12, 10, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
 ('saint-damasus-i-pope', 12, 11, 'MEM_OPT', 'WHITE', 'normal', TRUE, 'Wikipedia'),
@@ -1734,6 +1733,17 @@ JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FEAST'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-holy-family-of-jesus-mary-and-joseph'
+ON CONFLICT (feast_id, calendar_id) DO NOTHING;
+
+-- MOVABLE rule:
+-- Immaculate Conception (Dec 8) is a Solemnity, but if it falls on a Sunday (Advent Sunday), it is transferred to Dec 9.
+INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
+SELECT f.id, c.id, r.id, lc.id, 'movable', 'IMMACULATE_CONCEPTION', 0, 'normal', FALSE, 'Wikipedia movable'
+FROM feasts f
+JOIN calendars c ON c.code = 'ROMAN_GENERAL'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SOLEMNITY_LORD'
+LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
+WHERE f.slug = 'the-immaculate-conception-of-the-blessed-virgin-mary'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
@@ -2332,11 +2342,11 @@ JOIN (VALUES
 ('the-ascension-of-the-lord', 'EASTER_SUNDAY', 39, 'SOLEMNITY', 'WHITE'),
 ('pentecost-sunday', 'EASTER_SUNDAY', 49, 'SOLEMNITY', 'RED'),
 ('blessed-virgin-mary-mother-of-the-church', 'PENTECOST', 1, 'MEM_OBL', 'WHITE'),
-('the-most-holy-trinity', 'PENTECOST', 7, 'SOLEMNITY', 'WHITE'),
-('the-most-holy-body-and-blood-of-christ', 'TRINITY_SUNDAY', 4, 'SOLEMNITY', 'WHITE'),
-('the-most-sacred-heart-of-jesus', 'SECOND_SUNDAY_AFTER_PENTECOST', 5, 'SOLEMNITY', 'WHITE'),
+('the-most-holy-trinity', 'PENTECOST', 7, 'SOLEMNITY_LORD', 'WHITE'),
+('the-most-holy-body-and-blood-of-christ', 'TRINITY_SUNDAY', 4, 'SOLEMNITY_LORD', 'WHITE'),
+('the-most-sacred-heart-of-jesus', 'SECOND_SUNDAY_AFTER_PENTECOST', 5, 'SOLEMNITY_LORD', 'WHITE'),
 ('the-immaculate-heart-of-the-blessed-virgin-mary', 'SECOND_SUNDAY_AFTER_PENTECOST', 6, 'MEM_OBL', 'WHITE'),
-('our-lord-jesus-christ-king-of-the-universe', 'FIRST_ADVENT_SUNDAY', -7, 'SOLEMNITY', 'WHITE')
+('our-lord-jesus-christ-king-of-the-universe', 'FIRST_ADVENT_SUNDAY', -7, 'SOLEMNITY_LORD', 'WHITE')
 ) AS x(slug, movable_base, movable_offset_days, rank_code, color_code)
 ON f.slug = x.slug
 JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = x.rank_code
