@@ -80,6 +80,9 @@ fn build_label(
         "fr" => {
             if is_sunday {
                 match (sunday_number, season_label) {
+                    // Si paques ou avent pas "du" mais "de"
+                    (Some(n), Some("Pâques")) => format!("{} dimanche de Pâques", ordinal_fr(n)),
+                    (Some(n), Some("Avent")) => format!("{} dimanche de l'Avent", ordinal_fr(n)),
                     (Some(n), Some(s)) => format!("{} dimanche du {}", ordinal_fr(n), s),
                     (Some(n), None) => format!("{} dimanche", ordinal_fr(n)),
                     (None, Some(s)) => format!("Dimanche du {}", s),
@@ -96,6 +99,9 @@ fn build_label(
                     Weekday::Sun => unreachable!(),
                 };
                 match season_label {
+                    // Si paques ou avent pas "du" mais "de"
+                    Some("Pâques") => format!("{} de la férie de Pâques", weekday),
+                    Some("Avent") => format!("{} de la férie de l'Avent", weekday),
                     Some(s) => format!("{} de la férie du {}", weekday, s),
                     None => format!("{} de la férie", weekday),
                 }
