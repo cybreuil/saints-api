@@ -6,7 +6,7 @@ use super::dto::{CelebrationByDateContext, CelebrationByDateResponse, Celebratio
 use super::repo;
 use crate::core::error::ApiError;
 use crate::core::movable_dates::{
-    resolve_movable_date, sunday_number_in_season, LiturgicalConfig, MovableBase,
+    resolve_movable_date, week_number_in_season, LiturgicalConfig, MovableBase,
 };
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
@@ -222,7 +222,7 @@ pub async fn get_celebrations_by_date(
         .map(|s| s.code == ("ORDINARY_TIME"))
         .unwrap_or(false);
 
-    // Fallback Celebration (Feria / Sunday) for roman calendar if no celebrations are found or if it's a Sunday
+    // Fallback Celebration (Feria / Sunday) for roman calendar if no celebrations are found or if it's an Ordinary Sunday
     if celebrations_with_saints.is_empty() || (is_sunday && is_ordinary_time) {
         // Try to obtain a rank, climbing parents if necessary
         let mut last_error = None;
@@ -255,13 +255,13 @@ pub async fn get_celebrations_by_date(
         let config = calendars::mapper::to_liturgical_config(&calendars[0]);
 
         // movable_dates calculation for the Sunday number in Ordinary Time
-        let sunday_number = sunday_number_in_season(date, year, config);
+        let week_number = week_number_in_season(date, year, config);
 
         let feria_info = feria::build_feria_info(
             date,
             lang,
             liturgical_season.as_ref().and_then(|s| s.label.as_deref()),
-            sunday_number,
+            week_number,
         );
 
         celebrations_with_saints.push(CelebrationWithSaints::feria(
