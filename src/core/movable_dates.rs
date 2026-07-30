@@ -500,22 +500,29 @@ pub fn week_number_in_season(date: NaiveDate, year: i32, config: LiturgicalConfi
     }
 
     // ── ORDINARY TIME (Part I) ────────────────────────────────────────────────
-    // From the day after the Baptism of the Lord until the day before Ash Wednesday.
+    // From the Sunday after the Baptism of the Lord until Ash Wednesday.
+    // The week number is determined by the preceding Sunday.
     let first_ot1 = first_sunday_after_baptism;
     let last_ot1 = offset(first_lent, -1);
 
     if date >= first_ot1 && date <= last_ot1 {
-        let week = ((date - first_ot1).num_days() / 7) as u32 + 2;
-        return Some(week);
+        let sunday = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
+
+        let weeks_from_start = ((sunday - first_ot1).num_days() / 7) as u32;
+
+        return Some(2 + weeks_from_start);
     }
 
-    // ── ORDINARY TIME (Part II) ───────────────────────────────────────────────
+    // ── ORDINARY TIME (Part II) ────────────────────────────────────────────────
     // From Trinity Sunday until Christ the King.
     // Count backwards from Week 34.
+    // Normalize to the Sunday starting the liturgical week so weekdays keep the same number.
     let first_ot2 = trinity_sunday(year, config);
 
-    if date >= first_ot2 && date <= christ_king {
-        let weeks_before_end = ((christ_king - date).num_days() / 7) as u32;
+    let sunday_of_week = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
+
+    if sunday_of_week >= first_ot2 && sunday_of_week <= christ_king {
+        let weeks_before_end = ((christ_king - sunday_of_week).num_days() / 7) as u32;
         return Some(34 - weeks_before_end);
     }
 

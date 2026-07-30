@@ -98,3 +98,33 @@ Classe	Exemples
 12	Féries
 
 + maybe build differences between vigils and day celebrations based on a time request, like if the celebration is before or after 18h
+
++ need debug here
++ 5) Le gros point : Temps ordinaire I
+
+Tu as :
+
+let first_ot1 = first_sunday_after_baptism;
+
+Puis :
+
+let week = ((date - first_ot1).num_days() / 7) as u32 + 2;
+
+Ça suppose que le premier dimanche après le Baptême est toujours la 2e semaine du Temps ordinaire.
+
+C'est presque toujours vrai dans le missel romain actuel.
+
+Exemple :
+
+Baptême du Seigneur : dimanche
+lundi suivant : férial de la 1re semaine du Temps ordinaire ?
+dimanche suivant : 2e dimanche du Temps ordinaire
+
+Donc ton calcul fonctionne pour les dimanches.
+
+Mais pour les féries, il y a une subtilité :
+
+Le lundi après le Baptême n'est pas forcément "Monday of the 2nd Week".
+
+C'est bien :
+Monday of the First Week in Ordinary Time
