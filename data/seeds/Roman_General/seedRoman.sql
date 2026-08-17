@@ -3062,88 +3062,568 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', x.name, NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('saint-thomas-apostle', 'Saint Thomas, Apostle'),
-('saint-elizabeth-of-portugal', 'Saint Elizabeth of Portugal'),
-('saint-anthony-zaccaria-priest', 'Saint Anthony Zaccaria, Priest'),
-('saint-maria-goretti-virgin-and-martyr', 'Saint Maria Goretti, Virgin and Martyr'),
-('saint-augustine-zhao-rong-priest-and-companions-martyrs', 'Saint Augustine Zhao Rong, Priest, and Companions, Martyrs'),
-('saint-benedict-abbot', 'Saint Benedict, Abbot'),
-('saint-henry', 'Saint Henry'),
-('saint-camillus-de-lellis-priest', 'Saint Camillus de Lellis, Priest'),
-('saint-bonaventure-bishop-and-doctor-of-the-church', 'Saint Bonaventure, Bishop and Doctor of the Church'),
-('our-lady-of-mount-carmel', 'Our Lady of Mount Carmel'),
-('saint-apollinaris-bishop-and-martyr', 'Saint Apollinaris, Bishop and Martyr'),
-('saint-lawrence-of-brindisi-priest-and-doctor-of-the-church', 'Saint Lawrence of Brindisi, Priest and Doctor of the Church'),
-('saint-mary-magdalene', 'Saint Mary Magdalene'),
-('saint-bridget-religious', 'Saint Bridget, Religious'),
-('saint-sharbel-makhluf-priest', 'Saint Sharbel Makhluf, Priest'),
-('saint-james-apostle', 'Saint James, Apostle'),
-('saints-joachim-and-anne-parents-of-the-blessed-virgin-mary', 'Saints Joachim and Anne, Parents of the Blessed Virgin Mary'),
-('saints-martha-mary-and-lazarus', 'Saints Martha, Mary and Lazarus'),
-('saint-peter-chrysologus-bishop-and-doctor-of-the-church', 'Saint Peter Chrysologus, Bishop and Doctor of the Church'),
-('saint-ignatius-of-loyola-priest', 'Saint Ignatius of Loyola, Priest')
-) AS x(slug, name)
+('saint-thomas-apostle', 'Saint Thomas, Apostle', $desc$
+Celebrated on July 3rd with the rank of Feast, this celebration is vested in white and falls within Ordinary Time, honoring one of the Twelve chosen personally by Christ and commemorating in particular the singular grace of his encounter with the Risen Lord.
+
+The feast celebrates the apostle remembered for his honest doubt and his still more honest faith, the disciple who would not believe secondhand testimony to the Resurrection but demanded to see and touch the wounds of Christ, and who, once satisfied, uttered the Gospel's most complete confession of faith, "My Lord and my God." Theologically, Thomas stands for every believer who struggles toward faith through the trial of doubt, and his story proclaims that Christ meets honest questioning with patient, tangible mercy rather than rebuke, drawing the doubter into the deepest possible confession of his divinity.
+
+Ancient tradition, supported by early Christian writers and by the enduring witness of Christian communities in India who trace their origins to his preaching, holds that Thomas carried the Gospel eastward as far as India, where he was martyred for the faith; his relics have been venerated at Mylapore, at Edessa, and later at Ortona in Italy. The 1969 reform of the Roman Calendar moved his feast from December 21st, its very ancient Western date but one always overshadowed by the nearness of Christmas, to July 3rd, the date long kept by the Syro-Malabar and other Eastern traditions closely linked to his own mission field, restoring greater prominence to his celebration.
+
+Saint Thomas invites believers today, who likewise have not seen yet are called to believe, to bring their honest doubts and questions to Christ rather than suppress them, trusting that he draws near to reassure the sincere seeker and to lead every doubt toward the fullness of adoring faith.
+$desc$),
+('saint-elizabeth-of-portugal', 'Saint Elizabeth of Portugal', $desc$
+Celebrated on July 4th as an optional memorial, this celebration is vested in white and occurs within the summer stretch of Ordinary Time, honoring a queen whose royal rank became the instrument rather than the obstacle of her holiness.
+
+The memorial celebrates the vocation to sanctity within marriage, motherhood, and public responsibility, and in particular the grace of peacemaking amid violence and family discord. Elizabeth's life proclaims that political power, so often an occasion of pride and conflict, can be placed entirely at the service of reconciliation and the poor, and that widowhood, rather than closing off a life of service, can open it more fully to prayer and consecrated simplicity.
+
+Born a Spanish princess and given in marriage to King Denis of Portugal, Elizabeth was named for her great-aunt Saint Elizabeth of Hungary and modeled her charity upon her, enduring her husband's infidelities with patience while repeatedly brokering peace between him and their rebellious son, and later between Portugal and neighboring Castile. Widowed, she took the habit of a Franciscan tertiary and retired near a Poor Clare monastery she had founded, dying in 1336 and being canonized in 1625; the 1969 calendar reform confirmed her memorial as optional, fixing it on July 4th, the date associated with the translation of her relics.
+
+Her example invites the faithful today, especially those exercising authority or bearing the wounds of family conflict, to seek reconciliation patiently and to let no worldly position keep them from a life of prayer, humility, and care for the poor.
+$desc$),
+('saint-anthony-zaccaria-priest', 'Saint Anthony Zaccaria, Priest', $desc$
+Celebrated on July 5th as an optional memorial, this celebration is vested in white and falls in the summer weeks of Ordinary Time, honoring a physician turned priest whose zeal helped renew the spiritual life of sixteenth-century Italy.
+
+The memorial celebrates the vocation of the reforming preacher and founder, the priest who labors to rekindle fervor in a Church grown lukewarm through frequent recourse to the sacraments and bold, direct proclamation of Christ crucified. Anthony's charism proclaims the abiding power of frequent Communion and public preaching to renew both clergy and laity, anticipating by centuries the Eucharistic and catechetical emphases that the Church would later make universal.
+
+Trained first as a physician, Anthony Zaccaria turned to the priesthood and founded the Clerics Regular of St. Paul, popularly called the Barnabites after their Milanese church of St. Barnabas, together with a companion congregation for religious women and an association for the laity, promoting frequent, even daily, Communion at a time when this was uncommon. He died young, in 1539, worn out by his labors, and was canonized in 1897; the 1969 reform retained his celebration as an optional memorial on July 5th, the traditional date of his death. His brief life shows that neither youth nor a late vocation limits the fruitfulness of grace when placed wholly at the service of souls.
+
+His witness invites the faithful today to draw more frequently and fervently on the Eucharist as the true source of spiritual renewal, and to proclaim Christ crucified with the same directness and courage that marked his own brief but fruitful ministry.
+$desc$),
+('saint-maria-goretti-virgin-and-martyr', 'Saint Maria Goretti, Virgin and Martyr', $desc$
+Celebrated on July 6th as an optional memorial, this celebration is vested in red and falls within Ordinary Time, honoring one of the youngest saints of the modern era and a martyr not for confessing the Faith openly but for defending purity unto death.
+
+The memorial celebrates the dignity of chastity and the heroism possible even in a child, showing that martyrdom can spring from fidelity to the moral demands of the Gospel and not only from refusal to deny Christ in word. Maria's dying forgiveness of her attacker proclaims with singular clarity the Gospel's call to love one's enemies, revealing mercy as the fruit and completion of authentic holiness rather than a mere afterthought to it.
+
+A poor Italian farm girl, Maria Goretti was attacked in 1902 at the age of eleven by Alessandro Serenelli, a young neighbor, and was fatally stabbed as she resisted his advances, forgiving him explicitly before she died; Serenelli, converted years later partly through a vision of Maria offering him lilies, lived to see her canonized in 1950, a canonization notable for drawing an immense crowd that included her own mother. The 1969 calendar reform preserved her memorial as optional on July 6th, the anniversary of her death.
+
+Her witness invites the faithful today, especially the young, to value chastity as a genuine and costly form of holiness, and encourages every wounded heart to believe that forgiveness, however difficult, is always possible through the grace that sustained Maria to her last breath.
+$desc$),
+('saint-augustine-zhao-rong-priest-and-companions-martyrs', 'Saint Augustine Zhao Rong, Priest, and Companions, Martyrs', $desc$
+Celebrated on July 9th as an optional memorial, this celebration is vested in red and falls in Ordinary Time, honoring together the many martyrs of China, bishops, priests, religious, and lay faithful of every age, who gave their lives for Christ across several centuries of persecution.
+
+The memorial celebrates the Church's rootedness in Chinese soil through the blood of her own children and of the missionaries who served them, proclaiming that the Gospel truly took flesh in that land and was truly its own, not merely an import maintained by foreigners. It affirms that martyrdom continues into the modern age and that holiness flowers as readily among ordinary catechists, mothers, and children as among clergy and religious.
+
+The 120 martyrs commemorated together died between the mid-seventeenth century and the Boxer Uprising of 1900, the latter claiming the greatest number, including the priest Augustine Zhao Rong, once a soldier who guarded Bishop Gabriele Taurin Dufresse before himself embracing the faith and later dying for it; Pope John Paul II canonized this vast company together in Rome in the Jubilee Year 2000. The 1969 calendar reform predates this canonization, and the memorial was subsequently added to the General Roman Calendar to give the universal Church a fixed day for honoring these martyrs on July 9th.
+
+Their witness invites the faithful today to pray for the Church in China and for persecuted Christians everywhere, and to recognize that fidelity to Christ, even to the point of death, remains as real and as costly a possibility now as in every preceding age.
+$desc$),
+('saint-benedict-abbot', 'Saint Benedict, Abbot', $desc$
+Celebrated on July 11th as an obligatory memorial, this celebration is vested in white and falls in the heart of summer Ordinary Time, honoring the father of Western monasticism on the date associated with the translation of his relics rather than on the anniversary of his death.
+
+The memorial celebrates the vocation to seek God above all else, ordering the whole of life, prayer, work, and community, around that single pursuit expressed in the Benedictine motto ora et labora. Benedict's Rule proclaims a balanced, humane, and profoundly Christ-centered path to holiness that has shaped monastic life, and through it the whole of Western culture, for a millennium and a half, showing that stability, obedience, and ordered common life are themselves ways of following Christ.
+
+Born around 480 at Norcia, Benedict withdrew from a dissolute Rome to a life of prayer, eventually founding the monastery of Monte Cassino, where he wrote his celebrated Rule, and he died around the year 547; Pope Paul VI declared him Patron of Europe in 1964, recognizing the monastery's civilizing role after the fall of the Roman Empire. The 1969 calendar reform moved his feast from March 21st, the traditional date of his death but one that regularly falls within Lent, to July 11th, the date of the translation of his relics to Fleury, allowing his memorial to be kept with its full, obligatory solemnity.
+
+His witness invites the faithful today, whatever their state in life, to seek a right ordering of prayer and work, and to rediscover in stability, silence, and simple daily fidelity a genuine and accessible path to holiness.
+$desc$),
+('saint-henry', 'Saint Henry', $desc$
+Celebrated on July 13th as an optional memorial, this celebration is vested in white and falls within Ordinary Time, honoring an emperor remembered less for the power he wielded than for the piety with which he wielded it.
+
+The memorial celebrates the vocation to holiness within the exercise of civil authority and within the married state, proclaiming that governance itself, when animated by faith, can become an instrument of the Church's mission and that marriage, even a childless one, can be lived as a path of mutual sanctification. Henry's example stands as a rebuke to any notion that worldly power and personal holiness are incompatible.
+
+Henry II, Holy Roman Emperor in the early eleventh century, was renowned for his generous endowment of churches, monasteries, and the diocese of Bamberg which he founded, and tradition holds that he and his wife Cunigunde lived their marriage in continence, offering their union entirely to God; he died in 1024 and was canonized in 1146. The 1969 calendar reform retained his celebration as an optional memorial on July 13th, the traditional date associated with his death.
+
+His witness invites those who exercise authority today, in whatever sphere, to see their responsibilities as a genuine field for holiness, and invites every married couple to recognize that their union, however it is lived, can be wholly consecrated to God.
+$desc$),
+('saint-camillus-de-lellis-priest', 'Saint Camillus de Lellis, Priest', $desc$
+Celebrated on July 14th as an optional memorial, this celebration is vested in white and falls within summer Ordinary Time, honoring a former soldier and inveterate gambler whose conversion gave the Church one of her great pioneers of Christian care for the sick.
+
+The memorial celebrates the vocation to see and serve Christ himself in the person of the suffering, and Camillus's charism proclaims that compassionate, competent, and loving care for the body is itself a genuine work of the Gospel, not a distraction from spiritual concerns. His life shows that no depth of dissipation places a soul beyond the reach of grace, nor beyond the possibility of becoming, in turn, an instrument of grace for others.
+
+After years as a mercenary soldier ruined by gambling, Camillus de Lellis experienced a profound conversion, trained as a priest, and founded the Ministers of the Sick, known as the Camillians, whose members wear a red cross and vow to serve the sick even at risk to their own lives; he pioneered improved hospital practices and nursing standards and died in 1614, being canonized in 1746 and later named patron of the sick, of nurses, and of hospitals. The 1969 calendar reform preserved his celebration as an optional memorial on July 14th, near the traditional date of his death.
+
+His witness invites the faithful today, especially those who care for the sick professionally or within their own families, to see in that care a true and demanding form of discipleship, and to ask his intercession for patience and tenderness in every encounter with human suffering.
+$desc$),
+('saint-bonaventure-bishop-and-doctor-of-the-church', 'Saint Bonaventure, Bishop and Doctor of the Church', $desc$
+Celebrated on July 15th as an obligatory memorial, this celebration is vested in white and falls within Ordinary Time, honoring a Franciscan friar who rose to lead his order and to rank among the greatest theologians of the medieval Church.
+
+The memorial celebrates the harmony of intellect and mystical love that marked Bonaventure's theology, earning him the title "Seraphic Doctor" for the way his scholarship remained always ordered toward the soul's ascent to union with God. His writings proclaim that true theology is inseparable from prayer and contemplation, and that the mind's rigorous pursuit of truth finds its proper completion only in the heart's burning love for God.
+
+Bonaventure entered the Franciscan order, studied and later taught in Paris alongside his friend Thomas Aquinas, and was elected Minister General of the Friars Minor, guiding the order through a difficult period of internal division while continuing to write extensively on theology and spirituality; he died in 1274 while attending the Second Council of Lyon, having been made a cardinal bishop shortly before, and Pope Sixtus V declared him a Doctor of the Church in 1588. The 1969 calendar reform confirmed his obligatory memorial on July 15th, near the traditional date of his death.
+
+His witness invites the faithful today to remember that authentic learning about God must lead toward deeper love of God, and to seek, as Bonaventure did, a wisdom that unites careful thought with humble, ardent prayer.
+$desc$),
+('our-lady-of-mount-carmel', 'Our Lady of Mount Carmel', $desc$
+Celebrated on July 16th as an optional memorial, this celebration is vested in white and falls within Ordinary Time, honoring the Blessed Virgin Mary under the title given her by the Carmelite Order, whose origins lie among hermits who settled on Mount Carmel in the Holy Land.
+
+The memorial celebrates Mary as model and protectress of the contemplative life and of all who seek to imitate her total configuration to Christ, and it commemorates the tradition of the Brown Scapular, said to have been given by Our Lady to Saint Simon Stock as a sign of her maternal protection and a pledge of perseverance for those who wear it with faith and live accordingly. The devotion proclaims Mary's continual closeness to those striving for holiness through prayer, simplicity, and trust in her intercession.
+
+The hermits who gathered on Mount Carmel from the twelfth century regarded Mary as their patroness and model from the Order's earliest days, drawing on the mountain's rich biblical associations with the prophet Elijah, and the Scapular devotion, attested from the fourteenth century onward, spread widely through Carmelite preaching and remains one of the most popular Marian sacramentals in the Church. The 1969 calendar reform retained this celebration as an optional memorial on July 16th, its long-established date.
+
+Her feast invites the faithful today to entrust themselves to Mary's maternal protection amid the trials of daily life, and to let the Scapular, where it is worn, be not a superstitious charm but a genuine sign of consecration to her and to her Son.
+$desc$),
+('saint-apollinaris-bishop-and-martyr', 'Saint Apollinaris, Bishop and Martyr', $desc$
+Celebrated on July 20th as an optional memorial, this celebration is vested in red and falls within Ordinary Time, honoring the first bishop of Ravenna and a martyr of the Church's earliest centuries.
+
+The memorial celebrates the apostolic foundations of the local churches of Italy and the courage of those first pastors who established and defended the faith at the cost of their own lives. Apollinaris's witness proclaims the continuity between the apostolic preaching of the first generation and the flourishing local churches that grew from their labors, even when few details of a martyr's life have survived beyond the fact of his fidelity to death.
+
+Tradition holds that Apollinaris was a disciple of Saint Peter who was sent to Ravenna, where he served as bishop, endured repeated persecution and exile for his preaching, and was eventually martyred, giving Ravenna a foundation story that linked it directly to the apostolic see of Rome. The 1969 calendar reform retained his celebration as an optional memorial on July 20th, simplifying a cultus that had accumulated considerable legendary material over the centuries while preserving the essential memory of his episcopate and martyrdom.
+
+His witness invites the faithful today to give thanks for the founders of their own local churches, often unknown or half-remembered, and to recognize that every Christian community stands upon a foundation of faith paid for, in ways seen and unseen, by the fidelity of those who came before.
+$desc$),
+('saint-lawrence-of-brindisi-priest-and-doctor-of-the-church', 'Saint Lawrence of Brindisi, Priest and Doctor of the Church', $desc$
+Celebrated on July 21st as an optional memorial, this celebration is vested in white and falls within Ordinary Time, honoring a Capuchin friar whose extraordinary gifts of language and preaching served both the pulpit and the courts of Europe.
+
+The memorial celebrates the vocation of the preacher-diplomat, the friar whose eloquence in the pulpit was matched by skill in reconciling princes and defending Christendom, showing that intellectual and linguistic gifts, wholly consecrated to God, can serve the Gospel in the most public and demanding of arenas. His life proclaims that contemplative religious life and vigorous engagement with the wider world are not opposed but can be held together in a single, fruitful vocation.
+
+Lawrence of Brindisi mastered numerous languages, including Hebrew, and used this gift in preaching and in diplomatic missions, serving as Minister General of the Capuchins and rallying Christian forces in defense of Hungary against Ottoman advance; he died in 1619, and Pope John XXIII declared him a Doctor of the Church in 1959, giving him the title "Apostolic Doctor" for his tireless missionary and pastoral labors. The 1969 calendar reform confirmed his optional memorial on July 21st, near the traditional date of his death.
+
+His witness invites the faithful today, especially those gifted with learning or eloquence, to place such talents entirely at the service of the Gospel, trusting that no field of human engagement lies outside the reach of a genuinely consecrated life.
+$desc$),
+('saint-mary-magdalene', 'Saint Mary Magdalene', $desc$
+Celebrated on July 22nd with the rank of Feast, this celebration is vested in white and falls within Ordinary Time, honoring the disciple who was the first witness of the Risen Christ and the first to announce his Resurrection to the other apostles.
+
+The feast celebrates Mary Magdalene's unique privilege at the empty tomb, where the Risen Lord first appeared to her and sent her to tell the apostles what she had seen, earning her the ancient title "Apostle to the Apostles." Theologically, her encounter with Christ in the garden proclaims that the Resurrection was entrusted first to a faithful witness of love, that the Gospel of the Resurrection is announced through personal encounter before it is formulated into doctrine, and that fidelity in staying at the foot of the cross and at the tomb is rewarded with the deepest intimacy with the Risen Lord.
+
+Long venerated as a disciple who accompanied Jesus, ministered to him and the apostles from her own means, and remained faithful through the crucifixion and burial, Mary Magdalene was celebrated in the West for centuries with only the rank of memorial; in 2016 Pope Francis raised her celebration to the rank of Feast, equal to that of the other apostles, precisely to honor her title as Apostle to the Apostles and her singular role in the Resurrection narrative. The 1969 calendar reform had already clarified her identity in the liturgical books, distinguishing her more clearly from other Gospel women with whom she had sometimes been popularly conflated.
+
+Her witness invites the faithful today, especially women engaged in every form of ministry and apostolate, to recognize in her the model of the first evangelist of the Resurrection, and to seek that same intimate, personal encounter with the Risen Christ that transformed her grief into joyful proclamation.
+$desc$),
+('saint-bridget-religious', 'Saint Bridget, Religious', $desc$
+Celebrated on July 23rd as an optional memorial, this celebration is vested in white and falls within Ordinary Time, honoring a Swedish noblewoman whose long life encompassed marriage, motherhood, widowhood, and the foundation of a religious order.
+
+The memorial celebrates the holiness accessible within every state of life through which Bridget passed, and in particular the gift of mystical revelation placed at the service of the whole Church, her visions of Christ's Passion nourishing devotion far beyond her own community. Her life proclaims that profound contemplative gifts can flourish in a soul formed first by married love and domestic responsibility, and that widowhood can become the doorway to a still more radical consecration.
+
+Bridget of Sweden bore eight children, one of whom became Saint Catherine of Sweden, and after her husband's death she devoted herself to prayer, pilgrimage, and the recording of her visions, eventually founding the Bridgettine Order and settling in Rome, where she died in 1373; she was canonized in 1391, and Pope John Paul II named her a co-patroness of Europe in 1999 alongside Saint Catherine of Siena and Saint Teresa Benedicta of the Cross. The 1969 calendar reform confirmed her optional memorial on July 23rd, the anniversary of her death.
+
+Her witness invites the faithful today, particularly those discerning holiness across the different seasons of family life, to trust that God can draw a single, coherent vocation to sanctity through marriage, motherhood, widowhood, and religious consecration in turn.
+$desc$),
+('saint-sharbel-makhluf-priest', 'Saint Sharbel Makhluf, Priest', $desc$
+Celebrated on July 24th as an optional memorial, this celebration is vested in white and falls within Ordinary Time, honoring a Lebanese Maronite monk whose hidden life of prayer became, after his death, a source of extraordinary favors for pilgrims of every faith.
+
+The memorial celebrates the eremitic and monastic vocation, the conviction that a life poured out in silence, penance, and unceasing prayer, hidden from the eyes of the world, remains fully fruitful for the whole Church even when it produces no visible activity or public ministry. Sharbel's life proclaims that holiness of the most radical kind can be lived far from public notice, in obscurity chosen deliberately for the sake of closer union with God.
+
+Born Youssef Antoun Makhlouf, he entered a Maronite monastery, was ordained a priest, and after some years withdrew to the hermitage of Saints Peter and Paul, where he lived an austere and largely silent life of prayer and manual labor until his death in 1898; extraordinary phenomena and healings reported at his tomb led to a rapid growth of devotion, and he was canonized in 1977. The 1969 calendar reform predates his canonization, and his memorial was subsequently added to the calendar as his cultus spread from Lebanon to the universal Church, observed as an optional memorial on July 24th.
+
+His witness invites the faithful today, amid the noise and busyness of modern life, to value silence, penance, and hidden prayer as genuine and powerful ways of drawing near to God and interceding for others.
+$desc$),
+('saint-james-apostle', 'Saint James, Apostle', $desc$
+Celebrated on July 25th with the rank of Feast, this celebration is vested in white and falls within Ordinary Time, honoring one of the Twelve, called "the Greater" to distinguish him from the other apostle of the same name, and the brother of Saint John the Evangelist.
+
+The feast celebrates James's privileged place among the inner circle of three disciples whom Jesus drew closest to himself, present at the Transfiguration and in Gethsemane, and above all his distinction as the first of the apostles to seal his witness with martyrdom. His death proclaims the cost of discipleship foretold by Christ himself, who asked James and John if they could drink the cup he would drink, and it stands as the Gospel's earliest fulfillment, among the Twelve, of that costly promise.
+
+James was beheaded by order of King Herod Agrippa I around the year 44, as recorded in the Acts of the Apostles, making him the first apostle to be martyred; a strong tradition, especially cherished in Spain, holds that his body was later translated to Compostela, where the shrine of Santiago de Compostela became one of Christendom's greatest pilgrimage destinations and James became the nation's patron. The 1969 calendar reform confirmed his feast on July 25th, its traditional and universally observed date.
+
+His witness invites the faithful today, including the countless modern pilgrims who walk the Camino de Santiago in his honor, to recognize that following Christ closely may indeed mean drinking his cup, and to ask for the same courage that carried James to the first apostolic martyrdom.
+$desc$),
+('saints-joachim-and-anne-parents-of-the-blessed-virgin-mary', 'Saints Joachim and Anne, Parents of the Blessed Virgin Mary', $desc$
+Celebrated on July 26th as an obligatory memorial, this celebration is vested in white and falls within Ordinary Time, honoring the parents of the Blessed Virgin Mary and thus the grandparents, according to the flesh, of Jesus Christ himself.
+
+The memorial celebrates the hidden holiness of family life and the quiet fidelity of those who, through ordinary domestic virtue, prepared the immediate human setting into which the Mother of God was born and raised. Joachim and Anne are honored as models of grandparents and of the whole extended family, proclaiming that God's saving plan unfolds not only through great public deeds but through generations of humble faithfulness within the home.
+
+Their names and story come not from the canonical Scriptures, which are silent about Mary's parents, but from the ancient apocryphal Protoevangelium of James, which nonetheless preserved a devotion attested from the earliest centuries, particularly strong in the Christian East, where their cultus long predates its full flowering in the West. The 1969 calendar reform raised their joint commemoration to the rank of obligatory memorial on July 26th, the date already associated in both East and West with Saint Anne, thereby giving Joachim equal honor alongside his wife.
+
+Their memorial invites grandparents and elders today to recognize their own quiet, often unseen influence as a genuine share in God's work of transmitting the faith, and it invites every family to entrust its own generations, past and present, to their intercession.
+$desc$),
+('saints-martha-mary-and-lazarus', 'Saints Martha, Mary and Lazarus', $desc$
+Celebrated on July 29th as an obligatory memorial, this celebration is vested in white and falls within Ordinary Time, honoring together the three siblings of Bethany whose home Jesus visited often and whose friendship the Gospels present as a model of intimacy with Christ.
+
+The memorial celebrates hospitality, deep personal faith, and the reality of resurrection, each embodied by one member of this household: Martha's generous service and her confession, "I believe that you are the Christ, the Son of God," Mary's contemplative attentiveness at the Lord's feet, and Lazarus's being called forth from the tomb, prefiguring the victory over death that Christ himself would soon accomplish. Together they proclaim that friendship with Jesus, lived through service, faith, and hope even in the face of death, is itself a genuine path of discipleship.
+
+The Gospel of John records the family's close bond with Jesus, his tears at Lazarus's tomb, and his raising of Lazarus after four days, the sign that most immediately precipitated the plot against Jesus's own life; for centuries the Roman calendar kept a memorial of Martha alone on July 29th, but in 2021 Pope Francis extended the celebration to include Mary and Lazarus as well, wishing to honor the entire household of Bethany together as an example of family life placed at the service of Christ. This adjustment did not alter the date but enriched the memorial's scope within the same July 29th observance established by the 1969 reform.
+
+Their witness invites the faithful today to welcome Christ into their own homes through hospitality and service, to sit attentively at his feet in prayer, and to trust him, even amid grief, as the one who calls the dead back to life.
+$desc$),
+('saint-peter-chrysologus-bishop-and-doctor-of-the-church', 'Saint Peter Chrysologus, Bishop and Doctor of the Church', $desc$
+Celebrated on July 30th as an optional memorial, this celebration is vested in white and falls within Ordinary Time, honoring a bishop of Ravenna renowned for homilies so vivid and precise that he earned the surname "Chrysologus," the golden-worded.
+
+The memorial celebrates the ministry of preaching at its finest, brief, luminous, and thoroughly grounded in Scripture, capable of unfolding the mysteries of the faith to ordinary people in language they could readily grasp and retain. Peter's surviving sermons proclaim that the pulpit, when placed at the service of clarity and charity rather than mere display of learning, remains one of the Church's most powerful instruments for forming the faith of her people.
+
+Peter served as bishop of Ravenna in the fifth century, then an imperial capital of considerable importance, and his brief, carefully crafted homilies, of which a substantial number survive, show a pastor deeply attentive to the concrete needs of his flock; he died around the year 450, and Pope Benedict XIII declared him a Doctor of the Church in 1729. The 1969 calendar reform confirmed his optional memorial on July 30th, near the traditional date associated with his death.
+
+His witness invites preachers and teachers of the faith today to strive for the same clarity and warmth that marked his sermons, and invites every believer to return often and attentively to the words of Scripture as the surest source of a faith that can be readily understood and firmly held.
+$desc$),
+('saint-ignatius-of-loyola-priest', 'Saint Ignatius of Loyola, Priest', $desc$
+Celebrated on July 31st as an obligatory memorial, this celebration is vested in white and falls within Ordinary Time, honoring a Basque soldier whose battlefield wound became, through the providence of God, the wound that opened him to sanctity.
+
+The memorial celebrates the discernment of spirits and the total offering of one's talents and ambitions to the greater glory of God, the motto Ignatius made famous, Ad maiorem Dei gloriam. His spiritual teaching proclaims that God can be found and served in all things, and that the ordered examination of one's own thoughts, desires, and consolations is itself a genuine path to knowing and following the divine will.
+
+Wounded in battle at Pamplona in 1521, Ignatius of Loyola underwent a long convalescence during which his reading turned his ambitions from worldly glory to the following of Christ, leading him to compose the Spiritual Exercises and, together with a small band of companions including Saint Francis Xavier, to found the Society of Jesus in 1540, an order that would become one of the great engines of Catholic missionary expansion, education, and reform; he died in Rome in 1556 and was canonized in 1622. The 1969 calendar reform confirmed his obligatory memorial on July 31st, the traditional date of his death.
+
+His witness invites the faithful today to seek God actively in every circumstance of ordinary life, and to make their own, in whatever vocation they follow, the Ignatian resolve to place every talent and ambition wholly at the service of God's greater glory.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- FR translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', x.name, NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('saint-thomas-apostle', 'Saint Thomas, apôtre'),
-('saint-elizabeth-of-portugal', 'Sainte Élisabeth du Portugal'),
-('saint-anthony-zaccaria-priest', 'Saint Antoine-Marie Zaccaria, prêtre'),
-('saint-maria-goretti-virgin-and-martyr', 'Sainte Maria Goretti, vierge et martyre'),
-('saint-augustine-zhao-rong-priest-and-companions-martyrs', 'Saint Augustin Zhao Rong, prêtre, et ses compagnons, martyrs'),
-('saint-benedict-abbot', 'Saint Benoît, abbé'),
-('saint-henry', 'Saint Henri'),
-('saint-camillus-de-lellis-priest', 'Saint Camille de Lellis, prêtre'),
-('saint-bonaventure-bishop-and-doctor-of-the-church', 'Saint Bonaventure, évêque et docteur de l''Église'),
-('our-lady-of-mount-carmel', 'Notre-Dame du Mont-Carmel'),
-('saint-apollinaris-bishop-and-martyr', 'Saint Apollinaire, évêque et martyr'),
-('saint-lawrence-of-brindisi-priest-and-doctor-of-the-church', 'Saint Laurent de Brindes, prêtre et docteur de l''Église'),
-('saint-mary-magdalene', 'Sainte Marie-Madeleine'),
-('saint-bridget-religious', 'Sainte Brigitte, religieuse'),
-('saint-sharbel-makhluf-priest', 'Saint Charbel Makhlouf, prêtre'),
-('saint-james-apostle', 'Saint Jacques, apôtre'),
-('saints-joachim-and-anne-parents-of-the-blessed-virgin-mary', 'Saints Joachim et Anne, parents de la Bienheureuse Vierge Marie'),
-('saints-martha-mary-and-lazarus', 'Saints Marthe, Marie et Lazare'),
-('saint-peter-chrysologus-bishop-and-doctor-of-the-church', 'Saint Pierre Chrysologue, évêque et docteur de l''Église'),
-('saint-ignatius-of-loyola-priest', 'Saint Ignace de Loyola, prêtre')
-) AS x(slug, name)
+('saint-thomas-apostle', 'Saint Thomas, apôtre', $desc$
+Célébrée le 3 juillet avec le rang de Fête, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant l'un des Douze choisis personnellement par le Christ et rappelant en particulier la grâce singulière de sa rencontre avec le Ressuscité.
+
+La fête célèbre l'apôtre resté dans les mémoires pour son doute sincère et sa foi plus sincère encore, ce disciple qui refusa de croire sur la seule parole d'autrui à la Résurrection et exigea de voir et de toucher les plaies du Christ, avant de prononcer, une fois satisfait, la confession de foi la plus complète de tout l'Évangile : « Mon Seigneur et mon Dieu. » Théologiquement, Thomas représente tout croyant qui chemine vers la foi à travers l'épreuve du doute, et son histoire proclame que le Christ répond à une interrogation sincère par une miséricorde patiente et tangible plutôt que par le reproche, conduisant celui qui doute jusqu'à la confession la plus haute de sa divinité.
+
+Une tradition ancienne, appuyée par des écrivains chrétiens des premiers siècles et par le témoignage durable des communautés chrétiennes d'Inde qui font remonter leur origine à sa prédication, rapporte que Thomas porta l'Évangile jusqu'en Inde, où il subit le martyre pour la foi ; ses reliques furent vénérées à Mylapore, à Édesse, puis à Ortona en Italie. La réforme du calendrier romain de 1969 déplaça sa fête du 21 décembre, date très ancienne en Occident mais toujours éclipsée par la proximité de Noël, au 3 juillet, date depuis longtemps retenue par les traditions syro-malabare et d'autres traditions orientales étroitement liées à son propre champ de mission, rendant à sa célébration tout son éclat.
+
+Saint Thomas invite aujourd'hui les croyants qui, sans avoir vu, sont pareillement appelés à croire, à porter leurs doutes et leurs questions sincères devant le Christ plutôt qu'à les étouffer, confiants qu'il s'approche pour rassurer celui qui cherche loyalement et pour conduire tout doute vers la plénitude d'une foi adorante.
+$desc$),
+('saint-elizabeth-of-portugal', 'Sainte Élisabeth du Portugal', $desc$
+Célébrée le 4 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant les semaines estivales du Temps ordinaire, honorant une reine dont le rang royal devint l'instrument, et non l'obstacle, de sa sainteté.
+
+La mémoire célèbre la vocation à la sainteté au sein du mariage, de la maternité et de la responsabilité publique, et en particulier la grâce de l'artisan de paix au milieu de la violence et de la discorde familiale. La vie d'Élisabeth proclame que le pouvoir politique, si souvent occasion d'orgueil et de conflit, peut se mettre tout entier au service de la réconciliation et des pauvres, et que le veuvage, loin de clore une vie de service, peut l'ouvrir plus pleinement à la prière et à une simplicité consacrée.
+
+Née princesse d'Aragon et donnée en mariage au roi Denis du Portugal, Élisabeth reçut le nom de sa grande-tante sainte Élisabeth de Hongrie et modela sa charité sur la sienne, supportant avec patience les infidélités de son époux tout en négociant à plusieurs reprises la paix entre lui et leur fils révolté, puis entre le Portugal et la Castille voisine. Devenue veuve, elle prit l'habit de tertiaire franciscaine et se retira près d'un monastère de clarisses qu'elle avait fondé, mourant en 1336 et étant canonisée en 1625 ; la réforme du calendrier de 1969 confirma sa mémoire facultative, fixée au 4 juillet, date liée à la translation de ses reliques.
+
+Son exemple invite aujourd'hui ceux qui exercent l'autorité ou qui portent les blessures des conflits familiaux à rechercher patiemment la réconciliation, et invite chaque époux et épouse à reconnaître qu'aucune position mondaine ne saurait les détourner d'une vie de prière, d'humilité et de charité envers les pauvres.
+$desc$),
+('saint-anthony-zaccaria-priest', 'Saint Antoine-Marie Zaccaria, prêtre', $desc$
+Célébrée le 5 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant les semaines estivales du Temps ordinaire, honorant un médecin devenu prêtre dont le zèle contribua au renouveau de la vie spirituelle de l'Italie du seizième siècle.
+
+La mémoire célèbre la vocation du prédicateur réformateur et fondateur, ce prêtre qui travaille à raviver la ferveur d'une Église devenue tiède, par le recours fréquent aux sacrements et par une prédication directe et audacieuse du Christ crucifié. Le charisme d'Antoine proclame la puissance durable de la communion fréquente et de la prédication publique pour renouveler tant le clergé que les laïcs, anticipant de plusieurs siècles les accents eucharistiques et catéchétiques que l'Église rendra plus tard universels.
+
+D'abord formé comme médecin, Antoine Zaccaria se tourna vers le sacerdoce et fonda les Clercs réguliers de Saint-Paul, appelés populairement Barnabites d'après leur église milanaise de Saint-Barnabé, ainsi qu'une congrégation sœur de religieuses et une association de laïcs, promouvant la communion fréquente, voire quotidienne, à une époque où cela n'était pas courant. Il mourut jeune, en 1539, épuisé par ses travaux, et fut canonisé en 1897 ; la réforme de 1969 conserva sa célébration comme mémoire facultative le 5 juillet, date traditionnelle de sa mort. Sa vie brève montre que ni la jeunesse ni une vocation tardive ne limitent la fécondité de la grâce lorsqu'elle est mise tout entière au service des âmes.
+
+Son témoignage invite aujourd'hui les fidèles à puiser plus fréquemment et plus ardemment dans l'Eucharistie comme véritable source de renouveau spirituel, et à annoncer le Christ crucifié avec la même franchise et le même courage qui marquèrent son bref mais fécond ministère.
+$desc$),
+('saint-maria-goretti-virgin-and-martyr', 'Sainte Maria Goretti, vierge et martyre', $desc$
+Célébrée le 6 juillet comme mémoire facultative, cette célébration est vécue en ornements rouges durant le Temps ordinaire, honorant l'une des plus jeunes saintes de l'époque moderne, martyre non pour avoir confessé ouvertement la foi mais pour avoir défendu la pureté jusqu'à la mort.
+
+La mémoire célèbre la dignité de la chasteté et l'héroïsme possible même chez une enfant, montrant que le martyre peut naître de la fidélité aux exigences morales de l'Évangile et pas seulement du refus de renier le Christ en paroles. Le pardon accordé par Maria à son agresseur, à l'heure de sa mort, proclame avec une clarté singulière l'appel évangélique à aimer ses ennemis, révélant la miséricorde comme le fruit et l'accomplissement d'une sainteté authentique, non comme un simple ajout à celle-ci.
+
+Pauvre fille de paysans italiens, Maria Goretti fut agressée en 1902 à l'âge de onze ans par Alessandro Serenelli, un jeune voisin, et mortellement poignardée alors qu'elle résistait à ses avances, lui pardonnant explicitement avant de mourir ; Serenelli, converti des années plus tard en partie grâce à une vision de Maria lui offrant des lys, vécut assez longtemps pour voir sa canonisation en 1950, marquée par une foule immense où figurait sa propre mère. La réforme du calendrier de 1969 conserva sa mémoire facultative le 6 juillet, anniversaire de sa mort.
+
+Son témoignage invite aujourd'hui les fidèles, en particulier les jeunes, à estimer la chasteté comme une forme authentique et exigeante de sainteté, et encourage tout cœur blessé à croire que le pardon, si difficile soit-il, demeure toujours possible par la grâce qui soutint Maria jusqu'à son dernier souffle.
+$desc$),
+('saint-augustine-zhao-rong-priest-and-companions-martyrs', 'Saint Augustin Zhao Rong, prêtre, et ses compagnons, martyrs', $desc$
+Célébrée le 9 juillet comme mémoire facultative, cette célébration est vécue en ornements rouges durant le Temps ordinaire, honorant ensemble les nombreux martyrs de Chine, évêques, prêtres, religieux et fidèles laïcs de tout âge, qui donnèrent leur vie pour le Christ au long de plusieurs siècles de persécution.
+
+La mémoire célèbre l'enracinement de l'Église en terre chinoise par le sang de ses propres enfants et des missionnaires qui les servirent, proclamant que l'Évangile s'y est véritablement incarné et lui appartient en propre, non comme un simple apport étranger maintenu de l'extérieur. Elle affirme que le martyre se poursuit jusqu'à l'époque moderne et que la sainteté fleurit aussi bien chez de simples catéchistes, mères de famille et enfants que chez le clergé et les religieux.
+
+Les cent vingt martyrs commémorés ensemble moururent entre le milieu du dix-septième siècle et la révolte des Boxers de 1900, laquelle fit le plus grand nombre de victimes, parmi elles le prêtre Augustin Zhao Rong, ancien soldat qui garda l'évêque Gabriel-Taurin Dufresse avant d'embrasser lui-même la foi et de mourir pour elle plus tard ; le pape Jean-Paul II canonisa cette vaste compagnie ensemble à Rome durant l'Année jubilaire 2000. La réforme du calendrier de 1969 est antérieure à cette canonisation, et la mémoire fut ajoutée par la suite au calendrier romain général, fixant au 9 juillet un jour propre pour honorer ces martyrs dans toute l'Église.
+
+Leur témoignage invite aujourd'hui les fidèles à prier pour l'Église en Chine et pour les chrétiens persécutés partout dans le monde, et à reconnaître que la fidélité au Christ, jusqu'à la mort s'il le faut, demeure une possibilité aussi réelle et aussi coûteuse aujourd'hui qu'à toute époque précédente.
+$desc$),
+('saint-benedict-abbot', 'Saint Benoît, abbé', $desc$
+Célébrée le 11 juillet comme mémoire obligatoire, cette célébration est vécue en ornements blancs en plein cœur de l'été du Temps ordinaire, honorant le père du monachisme occidental à la date liée à la translation de ses reliques plutôt qu'à l'anniversaire de sa mort.
+
+La mémoire célèbre la vocation à chercher Dieu par-dessus tout, ordonnant la vie tout entière, prière, travail et vie communautaire, autour de cette seule quête exprimée dans la devise bénédictine ora et labora. La Règle de Benoît proclame un chemin équilibré, humain et profondément christocentrique vers la sainteté, qui a façonné la vie monastique, et par elle toute la culture occidentale, durant un millénaire et demi, montrant que la stabilité, l'obéissance et une vie commune ordonnée sont elles-mêmes des manières de suivre le Christ.
+
+Né vers 480 à Nursie, Benoît quitta une Rome dissolue pour une vie de prière, fondant finalement le monastère du Mont-Cassin où il rédigea sa célèbre Règle, et il mourut vers l'an 547 ; le pape Paul VI le déclara Patron de l'Europe en 1964, reconnaissant le rôle civilisateur du monachisme après la chute de l'Empire romain. La réforme du calendrier de 1969 déplaça sa fête du 21 mars, date traditionnelle de sa mort mais tombant régulièrement en Carême, au 11 juillet, date de la translation de ses reliques à Fleury, permettant à sa mémoire d'être célébrée avec toute sa pleine solennité obligatoire.
+
+Son témoignage invite aujourd'hui les fidèles, quel que soit leur état de vie, à rechercher un juste équilibre entre prière et travail, et à redécouvrir dans la stabilité, le silence et la fidélité quotidienne un chemin authentique et accessible vers la sainteté.
+$desc$),
+('saint-henry', 'Saint Henri', $desc$
+Célébrée le 13 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant un empereur dont on se souvient moins pour le pouvoir qu'il exerça que pour la piété avec laquelle il l'exerça.
+
+La mémoire célèbre la vocation à la sainteté dans l'exercice de l'autorité civile et dans l'état du mariage, proclamant que le gouvernement lui-même, animé par la foi, peut devenir un instrument de la mission de l'Église, et que le mariage, même sans descendance, peut être vécu comme un chemin de sanctification mutuelle. L'exemple d'Henri dément toute idée selon laquelle le pouvoir temporel et la sainteté personnelle seraient incompatibles.
+
+Henri II, empereur du Saint-Empire romain germanique au début du onzième siècle, fut renommé pour sa générosité envers les églises, les monastères et le diocèse de Bamberg qu'il fonda, et la tradition rapporte que lui et son épouse Cunégonde vécurent leur mariage dans la continence, offrant entièrement leur union à Dieu ; il mourut en 1024 et fut canonisé en 1146. La réforme du calendrier de 1969 conserva sa célébration comme mémoire facultative le 13 juillet, date traditionnellement liée à sa mort.
+
+Son témoignage invite aujourd'hui ceux qui exercent l'autorité, en quelque domaine que ce soit, à considérer leurs responsabilités comme un champ véritable de sainteté, et invite chaque couple marié à reconnaître que leur union, quelle qu'en soit la forme, peut être tout entière consacrée à Dieu.
+$desc$),
+('saint-camillus-de-lellis-priest', 'Saint Camille de Lellis, prêtre', $desc$
+Célébrée le 14 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant l'été du Temps ordinaire, honorant un ancien soldat et joueur invétéré dont la conversion donna à l'Église l'un de ses grands pionniers du soin chrétien des malades.
+
+La mémoire célèbre la vocation à voir et à servir le Christ lui-même dans la personne du souffrant, et le charisme de Camille proclame qu'un soin compatissant, compétent et aimant pour le corps constitue en lui-même une véritable œuvre évangélique, non une distraction par rapport aux préoccupations spirituelles. Sa vie montre qu'aucune profondeur de dissipation ne place une âme hors de portée de la grâce, ni hors de la possibilité de devenir à son tour un instrument de grâce pour autrui.
+
+Après des années comme soldat mercenaire ruiné par le jeu, Camille de Lellis connut une profonde conversion, se forma au sacerdoce et fonda les Ministres des malades, dits Camilliens, dont les membres portent une croix rouge et font vœu de servir les malades même au péril de leur propre vie ; il fut un pionnier de l'amélioration des pratiques hospitalières et des soins infirmiers, mourut en 1614, fut canonisé en 1746 et déclaré plus tard patron des malades, des infirmiers et des hôpitaux. La réforme du calendrier de 1969 conserva sa célébration comme mémoire facultative le 14 juillet, proche de la date traditionnelle de sa mort.
+
+Son témoignage invite aujourd'hui les fidèles, en particulier ceux qui soignent des malades par profession ou au sein de leur propre famille, à voir dans ce soin une véritable forme, exigeante, de disciple, et à demander son intercession pour la patience et la tendresse dans toute rencontre avec la souffrance humaine.
+$desc$),
+('saint-bonaventure-bishop-and-doctor-of-the-church', 'Saint Bonaventure, évêque et docteur de l''Église', $desc$
+Célébrée le 15 juillet comme mémoire obligatoire, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant un frère franciscain qui parvint à diriger son ordre et à compter parmi les plus grands théologiens de l'Église médiévale.
+
+La mémoire célèbre l'harmonie entre intelligence et amour mystique qui marqua la théologie de Bonaventure, lui valant le titre de « Docteur séraphique » tant sa science demeura toujours orientée vers l'ascension de l'âme jusqu'à l'union avec Dieu. Ses écrits proclament que la théologie véritable est inséparable de la prière et de la contemplation, et que la recherche rigoureuse de la vérité par l'esprit ne trouve son plein achèvement que dans l'amour ardent du cœur pour Dieu.
+
+Bonaventure entra dans l'ordre franciscain, étudia puis enseigna à Paris aux côtés de son ami Thomas d'Aquin, et fut élu Ministre général des Frères mineurs, conduisant l'ordre à travers une période difficile de division interne tout en poursuivant une œuvre abondante de théologie et de spiritualité ; il mourut en 1274 alors qu'il participait au deuxième concile de Lyon, ayant été fait cardinal-évêque peu auparavant, et le pape Sixte V le déclara docteur de l'Église en 1588. La réforme du calendrier de 1969 confirma sa mémoire obligatoire le 15 juillet, proche de la date traditionnelle de sa mort.
+
+Son témoignage invite aujourd'hui les fidèles à se souvenir qu'une connaissance authentique de Dieu doit conduire à un amour plus profond de Dieu, et à rechercher, à l'exemple de Bonaventure, une sagesse qui unisse une pensée soigneuse à une prière humble et ardente.
+$desc$),
+('our-lady-of-mount-carmel', 'Notre-Dame du Mont-Carmel', $desc$
+Célébrée le 16 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant la Bienheureuse Vierge Marie sous le titre que lui donne l'ordre du Carmel, dont les origines remontent à des ermites établis sur le mont Carmel en Terre sainte.
+
+La mémoire célèbre Marie comme modèle et protectrice de la vie contemplative et de tous ceux qui cherchent à imiter sa configuration totale au Christ, et elle rappelle la tradition du Scapulaire brun, que Notre-Dame aurait donné à saint Simon Stock en signe de sa protection maternelle et gage de persévérance pour ceux qui le portent avec foi et vivent en conséquence. Cette dévotion proclame la proximité continuelle de Marie envers ceux qui s'efforcent à la sainteté par la prière, la simplicité et la confiance en son intercession.
+
+Les ermites rassemblés sur le mont Carmel dès le douzième siècle regardèrent Marie comme leur patronne et leur modèle dès les origines de l'ordre, s'appuyant sur les riches références bibliques de la montagne liées au prophète Élie, et la dévotion au Scapulaire, attestée dès le quatorzième siècle, se répandit largement par la prédication carmélitaine et demeure l'un des sacramentaux mariaux les plus populaires de l'Église. La réforme du calendrier de 1969 conserva cette célébration comme mémoire facultative le 16 juillet, sa date de longue date établie.
+
+Sa fête invite aujourd'hui les fidèles à se confier à la protection maternelle de Marie au milieu des épreuves de la vie quotidienne, et à faire du Scapulaire, là où il est porté, non un porte-bonheur superstitieux mais un signe véritable de consécration à elle et à son Fils.
+$desc$),
+('saint-apollinaris-bishop-and-martyr', 'Saint Apollinaire, évêque et martyr', $desc$
+Célébrée le 20 juillet comme mémoire facultative, cette célébration est vécue en ornements rouges durant le Temps ordinaire, honorant le premier évêque de Ravenne et martyr des tout premiers siècles de l'Église.
+
+La mémoire célèbre les fondations apostoliques des Églises locales d'Italie et le courage de ces premiers pasteurs qui établirent et défendirent la foi au prix de leur propre vie. Le témoignage d'Apollinaire proclame la continuité entre la prédication apostolique de la première génération et les Églises locales florissantes issues de leurs labeurs, même lorsque peu de détails sur la vie d'un martyr nous sont parvenus au-delà du fait de sa fidélité jusqu'à la mort.
+
+La tradition rapporte qu'Apollinaire fut disciple de saint Pierre et envoyé à Ravenne, où il exerça la charge épiscopale, subit persécutions répétées et exil pour sa prédication, et fut finalement mis à mort, donnant à Ravenne un récit fondateur la reliant directement au siège apostolique de Rome. La réforme du calendrier de 1969 conserva sa célébration comme mémoire facultative le 20 juillet, simplifiant un culte qui avait accumulé au fil des siècles un matériau légendaire considérable, tout en préservant la mémoire essentielle de son épiscopat et de son martyre.
+
+Son témoignage invite aujourd'hui les fidèles à rendre grâce pour les fondateurs de leurs propres Églises locales, souvent inconnus ou à peine gardés en mémoire, et à reconnaître que toute communauté chrétienne repose sur un fondement de foi payé, de manière visible ou cachée, par la fidélité de ceux qui l'ont précédée.
+$desc$),
+('saint-lawrence-of-brindisi-priest-and-doctor-of-the-church', 'Saint Laurent de Brindes, prêtre et docteur de l''Église', $desc$
+Célébrée le 21 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant un frère capucin dont les dons extraordinaires de langues et de prédication servirent aussi bien la chaire que les cours d'Europe.
+
+La mémoire célèbre la vocation du prédicateur-diplomate, ce religieux dont l'éloquence dans la chaire égalait l'habileté à réconcilier les princes et à défendre la chrétienté, montrant que des dons intellectuels et linguistiques, entièrement consacrés à Dieu, peuvent servir l'Évangile dans les arènes les plus publiques et les plus exigeantes. Sa vie proclame que la vie religieuse contemplative et l'engagement vigoureux dans le monde ne s'opposent pas, mais peuvent se conjuguer en une seule et féconde vocation.
+
+Laurent de Brindes maîtrisait de nombreuses langues, dont l'hébreu, et mit ce don au service de la prédication et de missions diplomatiques, exerçant la charge de Ministre général des Capucins et rassemblant les forces chrétiennes pour défendre la Hongrie face à l'avancée ottomane ; il mourut en 1619, et le pape Jean XXIII le déclara docteur de l'Église en 1959, lui donnant le titre de « Docteur apostolique » en raison de ses infatigables labeurs missionnaires et pastoraux. La réforme du calendrier de 1969 confirma sa mémoire facultative le 21 juillet, proche de la date traditionnelle de sa mort.
+
+Son témoignage invite aujourd'hui les prédicateurs et les enseignants de la foi, particulièrement ceux doués de savoir ou d'éloquence, à mettre entièrement de tels talents au service de l'Évangile, confiants qu'aucun domaine de l'engagement humain n'échappe à la portée d'une vie véritablement consacrée.
+$desc$),
+('saint-mary-magdalene', 'Sainte Marie-Madeleine', $desc$
+Célébrée le 22 juillet avec le rang de Fête, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant la disciple qui fut la première témoin du Christ ressuscité et la première à annoncer sa Résurrection aux autres apôtres.
+
+La fête célèbre le privilège unique de Marie-Madeleine au tombeau vide, où le Seigneur ressuscité lui apparut le premier et l'envoya annoncer aux apôtres ce qu'elle avait vu, lui valant l'antique titre d'« Apôtre des apôtres ». Théologiquement, sa rencontre avec le Christ au jardin proclame que la Résurrection fut confiée d'abord à une témoin fidèle de l'amour, que l'Évangile de la Résurrection s'annonce d'abord par une rencontre personnelle avant d'être formulé en doctrine, et que la fidélité au pied de la croix et au tombeau est récompensée par la plus profonde intimité avec le Seigneur ressuscité.
+
+Vénérée de longue date comme disciple qui accompagna Jésus, le servit ainsi que les apôtres de ses propres biens et demeura fidèle jusqu'à la croix et à la mise au tombeau, Marie-Madeleine fut célébrée en Occident pendant des siècles avec le seul rang de mémoire ; en 2016, le pape François éleva sa célébration au rang de Fête, à l'égal des autres apôtres, précisément pour honorer son titre d'Apôtre des apôtres et son rôle singulier dans le récit de la Résurrection. La réforme du calendrier de 1969 avait déjà clarifié son identité dans les livres liturgiques, la distinguant plus nettement d'autres femmes de l'Évangile avec lesquelles elle avait parfois été confondue populairement.
+
+Son témoignage invite aujourd'hui les fidèles, en particulier les femmes engagées dans toute forme de ministère et d'apostolat, à reconnaître en elle le modèle de la première évangélisatrice de la Résurrection, et à rechercher cette même rencontre intime et personnelle avec le Christ ressuscité qui transforma son chagrin en annonce joyeuse.
+$desc$),
+('saint-bridget-religious', 'Sainte Brigitte, religieuse', $desc$
+Célébrée le 23 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant une noble suédoise dont la longue vie embrassa le mariage, la maternité, le veuvage et la fondation d'un ordre religieux.
+
+La mémoire célèbre la sainteté accessible dans chacun des états de vie que traversa Brigitte, et en particulier le don de la révélation mystique mis au service de l'Église tout entière, ses visions de la Passion du Christ ayant nourri la dévotion bien au-delà de sa propre communauté. Sa vie proclame que des dons contemplatifs profonds peuvent fleurir dans une âme d'abord formée par l'amour conjugal et la responsabilité familiale, et que le veuvage peut devenir la porte d'une consécration encore plus radicale.
+
+Brigitte de Suède mit au monde huit enfants, dont l'une devint sainte Catherine de Suède, et après la mort de son époux, elle se consacra à la prière, au pèlerinage et à la mise par écrit de ses visions, fondant finalement l'ordre brigittin et s'établissant à Rome, où elle mourut en 1373 ; elle fut canonisée en 1391, et le pape Jean-Paul II la nomma co-patronne de l'Europe en 1999, aux côtés de sainte Catherine de Sienne et de sainte Thérèse-Bénédicte de la Croix. La réforme du calendrier de 1969 confirma sa mémoire facultative le 23 juillet, anniversaire de sa mort.
+
+Son témoignage invite aujourd'hui les fidèles, en particulier ceux qui discernent la sainteté à travers les différentes saisons de la vie familiale, à croire que Dieu peut tracer une seule et même vocation cohérente à la sainteté à travers le mariage, la maternité, le veuvage puis la consécration religieuse.
+$desc$),
+('saint-sharbel-makhluf-priest', 'Saint Charbel Makhlouf, prêtre', $desc$
+Célébrée le 24 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant un moine maronite libanais dont la vie cachée de prière devint, après sa mort, source de faveurs extraordinaires pour des pèlerins de toute confession.
+
+La mémoire célèbre la vocation érémitique et monastique, la conviction qu'une vie tout entière donnée dans le silence, la pénitence et la prière incessante, cachée aux yeux du monde, demeure pleinement féconde pour l'Église entière, même sans produire d'activité visible ni de ministère public. La vie de Charbel proclame qu'une sainteté des plus radicales peut se vivre loin des regards, dans une obscurité délibérément choisie pour une union plus étroite à Dieu.
+
+Né Youssef Antoun Makhlouf, il entra dans un monastère maronite, fut ordonné prêtre, puis se retira après quelques années à l'ermitage des Saints-Pierre-et-Paul, où il mena une vie austère et largement silencieuse de prière et de travail manuel jusqu'à sa mort en 1898 ; des phénomènes extraordinaires et des guérisons rapportés à son tombeau suscitèrent une dévotion rapidement croissante, et il fut canonisé en 1977. La réforme du calendrier de 1969 est antérieure à sa canonisation, et sa mémoire fut ajoutée par la suite au calendrier à mesure que son culte se répandait du Liban à l'Église universelle, observée comme mémoire facultative le 24 juillet.
+
+Son témoignage invite aujourd'hui les fidèles, au milieu du bruit et de l'agitation de la vie moderne, à estimer le silence, la pénitence et la prière cachée comme des voies authentiques et puissantes pour s'approcher de Dieu et intercéder pour autrui.
+$desc$),
+('saint-james-apostle', 'Saint Jacques, apôtre', $desc$
+Célébrée le 25 juillet avec le rang de Fête, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant l'un des Douze, appelé « le Majeur » pour le distinguer de l'autre apôtre du même nom, et frère de saint Jean l'Évangéliste.
+
+La fête célèbre la place privilégiée de Jacques parmi le cercle restreint des trois disciples que Jésus rapprocha le plus de lui, présent à la Transfiguration et à Gethsémani, et surtout sa distinction d'avoir été le premier des apôtres à sceller son témoignage par le martyre. Sa mort proclame le prix du discipulat annoncé par le Christ lui-même, qui demanda à Jacques et à Jean s'ils pouvaient boire la coupe qu'il allait boire, et elle constitue, parmi les Douze, le premier accomplissement évangélique de cette promesse coûteuse.
+
+Jacques fut décapité sur ordre du roi Hérode Agrippa Ier vers l'an 44, comme le rapportent les Actes des Apôtres, ce qui fait de lui le premier apôtre martyrisé ; une forte tradition, particulièrement chère à l'Espagne, rapporte que son corps fut ensuite transféré à Compostelle, où le sanctuaire de Saint-Jacques-de-Compostelle devint l'une des plus grandes destinations de pèlerinage de la chrétienté et Jacques le patron de la nation. La réforme du calendrier de 1969 confirma sa fête le 25 juillet, sa date traditionnelle et universellement observée.
+
+Son témoignage invite aujourd'hui les fidèles, y compris les innombrables pèlerins modernes qui marchent sur le Chemin de Saint-Jacques en son honneur, à reconnaître que suivre le Christ de près peut effectivement signifier boire sa coupe, et à demander ce même courage qui conduisit Jacques au premier martyre apostolique.
+$desc$),
+('saints-joachim-and-anne-parents-of-the-blessed-virgin-mary', 'Saints Joachim et Anne, parents de la Bienheureuse Vierge Marie', $desc$
+Célébrée le 26 juillet comme mémoire obligatoire, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant les parents de la Bienheureuse Vierge Marie et donc, selon la chair, les grands-parents de Jésus-Christ lui-même.
+
+La mémoire célèbre la sainteté cachée de la vie familiale et la fidélité discrète de ceux qui, par la vertu domestique ordinaire, préparèrent le cadre humain immédiat dans lequel naquit et grandit la Mère de Dieu. Joachim et Anne sont honorés comme modèles des grands-parents et de toute la famille élargie, proclamant que le dessein salvifique de Dieu se déploie non seulement par de grandes actions publiques mais aussi par des générations d'humble fidélité au sein du foyer.
+
+Leurs noms et leur histoire ne proviennent pas des Écritures canoniques, silencieuses sur les parents de Marie, mais de l'ancien Protévangile apocryphe de Jacques, qui préserva néanmoins une dévotion attestée dès les premiers siècles, particulièrement vivace en Orient chrétien, où leur culte précède de loin son plein épanouissement en Occident. La réforme du calendrier de 1969 éleva leur commémoration commune au rang de mémoire obligatoire le 26 juillet, date déjà associée en Orient comme en Occident à sainte Anne, donnant ainsi à Joachim un honneur égal à celui de son épouse.
+
+Leur mémoire invite aujourd'hui les grands-parents et les aînés à reconnaître dans leur influence discrète, souvent invisible, une véritable participation à l'œuvre de Dieu qui transmet la foi, et invite chaque famille à confier ses propres générations, passées et présentes, à leur intercession.
+$desc$),
+('saints-martha-mary-and-lazarus', 'Saints Marthe, Marie et Lazare', $desc$
+Célébrée le 29 juillet comme mémoire obligatoire, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant ensemble les trois frères et sœurs de Béthanie dont Jésus fréquenta souvent la maison et dont l'amitié, selon les Évangiles, constitue un modèle d'intimité avec le Christ.
+
+La mémoire célèbre l'hospitalité, la foi personnelle profonde et la réalité de la résurrection, chacune incarnée par un membre de cette maisonnée : le service généreux de Marthe et sa confession, « Je crois que tu es le Christ, le Fils de Dieu », l'attention contemplative de Marie aux pieds du Seigneur, et Lazare rappelé du tombeau, préfigurant la victoire sur la mort que le Christ lui-même allait bientôt remporter. Ensemble, ils proclament que l'amitié avec Jésus, vécue par le service, la foi et l'espérance même face à la mort, constitue en elle-même un authentique chemin de disciple.
+
+L'Évangile de Jean rapporte le lien étroit de cette famille avec Jésus, ses larmes au tombeau de Lazare, et la résurrection de celui-ci après quatre jours, signe qui précipita le plus directement le complot contre la vie de Jésus lui-même ; pendant des siècles, le calendrier romain garda une mémoire de Marthe seule le 29 juillet, mais en 2021 le pape François étendit la célébration pour y inclure Marie et Lazare, voulant honorer ensemble toute la maisonnée de Béthanie comme un exemple de vie familiale mise au service du Christ. Cet ajustement ne modifia pas la date mais enrichit la portée de la mémoire, à l'intérieur de la même observance du 29 juillet établie par la réforme de 1969.
+
+Leur témoignage invite aujourd'hui les fidèles à accueillir le Christ dans leurs propres maisons par l'hospitalité et le service, à s'asseoir avec attention à ses pieds dans la prière, et à lui faire confiance, même dans le deuil, comme à celui qui rappelle les morts à la vie.
+$desc$),
+('saint-peter-chrysologus-bishop-and-doctor-of-the-church', 'Saint Pierre Chrysologue, évêque et docteur de l''Église', $desc$
+Célébrée le 30 juillet comme mémoire facultative, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant un évêque de Ravenne renommé pour des homélies si vives et si précises qu'elles lui valurent le surnom de « Chrysologue », c'est-à-dire à la parole d'or.
+
+La mémoire célèbre le ministère de la prédication à son meilleur, bref, lumineux et solidement enraciné dans l'Écriture, capable de déployer les mystères de la foi devant des gens simples en un langage qu'ils pouvaient aisément saisir et retenir. Les sermons conservés de Pierre proclament que la chaire, mise au service de la clarté et de la charité plutôt que du simple étalage de savoir, demeure l'un des instruments les plus puissants de l'Église pour former la foi de son peuple.
+
+Pierre exerça la charge épiscopale à Ravenne au cinquième siècle, alors capitale impériale de grande importance, et ses homélies brèves et soigneusement composées, dont un nombre substantiel nous est parvenu, révèlent un pasteur profondément attentif aux besoins concrets de son troupeau ; il mourut vers l'an 450, et le pape Benoît XIII le déclara docteur de l'Église en 1729. La réforme du calendrier de 1969 confirma sa mémoire facultative le 30 juillet, proche de la date traditionnelle liée à sa mort.
+
+Son témoignage invite aujourd'hui les prédicateurs et les enseignants de la foi à rechercher la même clarté et la même chaleur qui marquèrent ses sermons, et invite chaque croyant à revenir souvent et attentivement aux paroles de l'Écriture comme à la source la plus sûre d'une foi aisément comprise et fermement tenue.
+$desc$),
+('saint-ignatius-of-loyola-priest', 'Saint Ignace de Loyola, prêtre', $desc$
+Célébrée le 31 juillet comme mémoire obligatoire, cette célébration est vécue en ornements blancs durant le Temps ordinaire, honorant un soldat basque dont la blessure reçue au combat devint, par la providence de Dieu, la blessure qui l'ouvrit à la sainteté.
+
+La mémoire célèbre le discernement des esprits et l'offrande totale de ses talents et de ses ambitions pour la plus grande gloire de Dieu, devise rendue célèbre par Ignace, Ad maiorem Dei gloriam. Son enseignement spirituel proclame que Dieu peut être trouvé et servi en toutes choses, et que l'examen ordonné de ses propres pensées, désirs et consolations constitue lui-même un chemin authentique pour connaître et suivre la volonté divine.
+
+Blessé au combat à Pampelune en 1521, Ignace de Loyola connut une longue convalescence durant laquelle ses lectures détournèrent son ambition de la gloire mondaine vers la suite du Christ, le conduisant à composer les Exercices spirituels et, avec une petite bande de compagnons dont saint François Xavier, à fonder la Compagnie de Jésus en 1540, ordre qui deviendrait l'un des grands moteurs de l'expansion missionnaire, de l'éducation et de la réforme catholiques ; il mourut à Rome en 1556 et fut canonisé en 1622. La réforme du calendrier de 1969 confirma sa mémoire obligatoire le 31 juillet, date traditionnelle de sa mort.
+
+Son témoignage invite aujourd'hui les fidèles à chercher Dieu activement en toute circonstance de la vie ordinaire, et à faire leur, quelle que soit la vocation qu'ils suivent, la résolution ignatienne de mettre tout talent et toute ambition entièrement au service de la plus grande gloire de Dieu.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- LA translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('saint-thomas-apostle', 'Sanctus Thomas, Apostolus'),
-('saint-elizabeth-of-portugal', 'Sancta Elisabeth Lusitaniae'),
-('saint-anthony-zaccaria-priest', 'Sanctus Antonius Maria Zaccaria, presbyter'),
-('saint-maria-goretti-virgin-and-martyr', 'Sancta Maria Goretti, virgo et martyr'),
-('saint-augustine-zhao-rong-priest-and-companions-martyrs', 'Sanctus Augustinus Zhao Rong et Socii, martyres'),
-('saint-benedict-abbot', 'Sanctus Benedictus, abbas'),
-('saint-henry', 'Sanctus Henricus'),
-('saint-camillus-de-lellis-priest', 'Sanctus Camillus de Lellis, presbyter'),
-('saint-bonaventure-bishop-and-doctor-of-the-church', 'Sanctus Bonaventura, episcopus et Ecclesiae doctor'),
-('our-lady-of-mount-carmel', 'Beata Maria Virgo de Monte Carmelo'),
-('saint-apollinaris-bishop-and-martyr', 'Sanctus Apollinaris, episcopus et martyr'),
-('saint-lawrence-of-brindisi-priest-and-doctor-of-the-church', 'Sanctus Laurentius a Brundusio, presbyter et Ecclesiae doctor'),
-('saint-mary-magdalene', 'Sancta Maria Magdalena'),
-('saint-bridget-religious', 'Sancta Birgitta, religiosa'),
-('saint-sharbel-makhluf-priest', 'Sanctus Charbel Makhlouf, presbyter'),
-('saint-james-apostle', 'Sanctus Iacobus, Apostolus'),
-('saints-joachim-and-anne-parents-of-the-blessed-virgin-mary', 'Sancti Ioachim et Anna'),
-('saints-martha-mary-and-lazarus', 'Sanctae Martha, Maria et Lazarus'),
-('saint-peter-chrysologus-bishop-and-doctor-of-the-church', 'Sanctus Petrus Chrysologus, episcopus et Ecclesiae doctor'),
-('saint-ignatius-of-loyola-priest', 'Sanctus Ignatius de Loyola, presbyter')
-) AS x(slug, name)
+('saint-thomas-apostle', 'Sanctus Thomas, Apostolus', $desc$
+Die tertio mensis Iulii, gradu Festi, colore albo, celebratur haec sollemnitas tempore per annum, unum ex Duodecim a Christo ipso electum honorans, praesertim gratiam singularem occursus eius cum Domino resurgente commemorans.
+
+Festum celebrat Apostolum ob dubitationem sinceram et fidem sinceriorem memorabilem, discipulum qui testimonio alieno de Resurrectione credere noluit sed vulnera Christi videre et tangere postulavit, et, semel satisfactus, perfectissimam totius Evangelii fidei confessionem protulit: «Dominus meus et Deus meus». Theologice, Thomas omnem credentem repraesentat qui per dubitationis experimentum ad fidem tendit, et eius historia proclamat Christum sinceram quaestionem non increpatione sed misericordia patienti ac tangibili occurrere, dubitantem ad altissimam suae divinitatis confessionem ducens.
+
+Antiqua traditio, scriptoribus christianis antiquis et perenni testimonio communitatum christianarum in India, quae originem suam eius praedicationi tribuunt, testata, tenet Thomam Evangelium usque ad Indiam detulisse, ubi pro fide martyrium passus est; reliquiae eius Mylaporae, Edessae, ac postea Ortonae in Italia cultae sunt. Reformatio Calendarii Romani anno 1969 facta festum eius a die 21 Decembris, antiquissima quidem in Occidente sed semper Nativitatis vicinitate obumbrata, ad diem 3 Iulii transtulit, quam traditiones Syro-Malabarenses aliaeque Orientales, campo eius missionali arcte coniunctae, iam diu servaverant, ita maiorem sollemnitatem eius celebrationi restituens.
+
+Sanctus Thomas hodiernos fideles, qui pariter non viderunt sed credere vocantur, invitat ut dubitationes suas sinceras potius Christo afferant quam supprimant, confidentes eum sincero quaerenti prope adesse et omnem dubitationem ad plenitudinem fidei adorantis perducere.
+$desc$),
+('saint-elizabeth-of-portugal', 'Sancta Elisabeth Lusitaniae', $desc$
+Die quarto mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio tempore aestivo per annum, reginam honorans cuius regalis dignitas sanctitatis instrumentum potius quam obstaculum evasit.
+
+Memoria celebrat vocationem ad sanctitatem in matrimonio, maternitate et publica responsabilitate exercendam, praesertim gratiam pacificatricis inter bella et discordias familiares. Vita Elisabeth proclamat potestatem politicam, tam saepe superbiae et contentionis occasionem, posse reconciliationi et pauperibus omnino inservire, et viduitatem, longe a vita servitii claudenda, eam ad orationem et simplicitatem consecratam plenius aperire posse.
+
+Nata Hispana regia stirpe et Dionysio regi Lusitaniae in matrimonium data, Elisabeth nomen a magna amita sua Sancta Elisabeth Hungariae accepit et eius caritatem imitata est, mariti infidelitates patienter sustinens dum pacem inter eum filiumque rebellem, deinde inter Lusitaniam et vicinam Castellam, saepius componebat. Vidua facta, habitum tertii Ordinis Franciscani sumpsit et prope monasterium Clarissarum a se fundatum se recepit, anno 1336 obiens et anno 1625 canonizata; reformatio Calendarii anno 1969 memoriam eius ad libitum confirmavit, die 4 Iulii, translationi reliquiarum eius associato.
+
+Exemplum eius hodiernos, praesertim eos qui auctoritatem exercent vel familiarum discordiarum vulnera portant, invitat ut reconciliationem patienter quaerant, nullamque mundanam dignitatem se a vita orationis, humilitatis et curae pauperum avertere sinant.
+$desc$),
+('saint-anthony-zaccaria-priest', 'Sanctus Antonius Maria Zaccaria, presbyter', $desc$
+Die quinto mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio hebdomadis aestivis per annum, medicum qui presbyter factus est honorans, cuius studium vitam spiritualem Italiae saeculi sexti decimi renovare adiuvit.
+
+Memoria celebrat vocationem praedicatoris reformatoris et fundatoris, presbyteri qui ad fervorem in Ecclesia tepescente per frequentem sacramentorum usum et audacem, directam Christi crucifixi praedicationem excitandum laborat. Charisma Antonii proclamat perennem virtutem Communionis frequentis et publicae praedicationis ad clerum laicosque renovandos, multis ante saeculis accentus eucharisticos et catecheticos anticipans quos Ecclesia postea universales fecit.
+
+Primum medicus, Antonius Zaccaria ad sacerdotium se convertit et Clericos Regulares Sancti Pauli fundavit, vulgo Barnabitas ab ecclesia Mediolanensi Sancti Barnabae dictos, simul cum congregatione sociali monialium et sodalitate laicorum, Communionem frequentem, immo cotidianam, promovens tempore quo id insolitum erat. Iuvenis obiit, anno 1539, laboribus consumptus, et anno 1897 canonizatus est; reformatio anni 1969 memoriam eius ad libitum die 5 Iulii, traditionali mortis eius die, servavit. Vita eius brevis ostendit neque iuventutem neque vocationem seram fecunditatem gratiae limitare, ubi ea animarum servitio penitus dedicatur.
+
+Testimonium eius hodiernos invitat ut Eucharistiam frequentius ferventiusque adeant tamquam veram renovationis spiritualis fontem, et Christum crucifixum eadem qua ille directione ac fortitudine annuntient, quae breve sed fecundum eius ministerium signavit.
+$desc$),
+('saint-maria-goretti-virgin-and-martyr', 'Sancta Maria Goretti, virgo et martyr', $desc$
+Die sexto mensis Iulii, memoria ad libitum, colore rubro, celebratur haec commemoratio tempore per annum, unam ex iunioribus sanctis aetatis modernae honorans, martyrem non pro fide aperte confessa sed pro castitate usque ad mortem defensa.
+
+Memoria celebrat dignitatem castitatis et heroismum etiam in puella possibilem, ostendens martyrium ex fidelitate exigentiis moralibus Evangelii oriri posse, non solum ex confessionis Christi verbo negatae recusatione. Venia a Maria moriente aggressori data proclamat singulari claritate Evangelii praeceptum inimicos diligendi, misericordiam tamquam fructum et complementum authenticae sanctitatis revelans, non tamquam simplicem eius appendicem.
+
+Puella Italica pauper agricola, Maria Goretti anno 1902, undecim annos nata, ab Alexandro Serenelli, iuvene vicino, aggressa est et, dum se opponebat, mortiferis vulneribus confossa, ei ante mortem explicite ignovit; Serenelli, annis post partim visione Mariae ei lilia offerentis conversus, canonizationem eius anno 1950 vivens vidit, quae ingentem turbam, inter quam ipsa mater eius aderat, attraxit. Reformatio Calendarii anno 1969 memoriam eius ad libitum die 6 Iulii, anniversario mortis eius, servavit.
+
+Testimonium eius hodiernos fideles, praesertim iuvenes, invitat ut castitatem tamquam formam authenticam et pretiosam sanctitatis aestiment, et omne cor vulneratum hortatur ut credat veniam, quamvis difficilem, semper possibilem esse per gratiam quae Mariam usque ad ultimum halitum sustinuit.
+$desc$),
+('saint-augustine-zhao-rong-priest-and-companions-martyrs', 'Sanctus Augustinus Zhao Rong et Socii, martyres', $desc$
+Die nono mensis Iulii, memoria ad libitum, colore rubro, celebratur haec commemoratio tempore per annum, multos martyres Sinenses, episcopos, presbyteros, religiosos et fideles laicos omnis aetatis, simul honorans, qui per plura saecula persecutionis vitam pro Christo dederunt.
+
+Memoria celebrat Ecclesiae radices in terra Sinensi per sanguinem filiorum suorum et missionariorum qui eis servierunt fixas, proclamans Evangelium ibi vere incarnatum et proprium factum esse, non merum importatum externorum ope conservatum. Affirmat martyrium usque ad aetatem modernam perdurare, sanctitatemque tam apud simplices catechistas, matres et pueros quam apud clerum et religiosos florere.
+
+Centum viginti martyres simul commemorati inter medium saeculum septimum decimum et Rebellionem Boxer anni 1900, quae plurimos rapuit, obierunt, inter quos Augustinus Zhao Rong presbyter, olim miles qui episcopum Gabrielem Taurinum Dufresse custodivit antequam ipse fidem amplecteretur et postea pro ea moreretur; Ioannes Paulus Papa II hanc ingentem cohortem simul Romae anno Iubilaei 2000 canonizavit. Reformatio Calendarii anni 1969 hanc canonizationem antecedit, et memoria postea Calendario Romano Generali addita est, diem 9 Iulii universae Ecclesiae ad hos martyres honorandos assignans.
+
+Testimonium eorum hodiernos fideles invitat ut pro Ecclesia in Sinis et pro christianis ubique persecutis orent, et agnoscant fidelitatem Christo, etiam usque ad mortem, tam realem tamque pretiosam possibilitatem hodie manere quam omni aetate praecedenti.
+$desc$),
+('saint-benedict-abbot', 'Sanctus Benedictus, abbas', $desc$
+Die undecimo mensis Iulii, memoria obligatoria, colore albo, celebratur haec commemoratio media aestate tempore per annum, patrem monachatus Occidentalis honorans die translationi reliquiarum eius potius quam anniversario mortis associato.
+
+Memoria celebrat vocationem Deum super omnia quaerendi, vitam totam, orationem, laborem et vitam communem, circa hanc unicam intentionem in bene noto Benedictino elogio ora et labora ordinantem. Regula Benedicti proclamat viam aequilibratam, humanam et profunde Christocentricam ad sanctitatem, quae vitam monasticam, et per eam totam culturam Occidentalem, per millennium et dimidium formavit, ostendens stabilitatem, oboedientiam et vitam communem ordinatam ipsas esse vias Christum sequendi.
+
+Circa annum 480 Nursiae natus, Benedictus a Roma dissoluta ad vitam orationis se recepit, tandem monasterium Montis Cassini fundans ubi Regulam suam celebrem scripsit, et circa annum 547 obiit; Paulus Papa VI eum anno 1964 Patronum Europae declaravit, munus civilizans monachatus post Imperii Romani occasum agnoscens. Reformatio Calendarii anni 1969 festum eius a die 21 Martii, traditionali mortis die sed in Quadragesima saepe cadente, ad diem 11 Iulii, translationis reliquiarum eius ad Floriacum diem, transtulit, memoriam eius plena sollemnitate obligatoria celebrandam permittens.
+
+Testimonium eius hodiernos fideles, quocumque vitae statu, invitat ut rectam orationis et laboris ordinationem quaerant, et in stabilitate, silentio ac fideli cotidiana simplicitate viam authenticam et accessibilem ad sanctitatem redinveniant.
+$desc$),
+('saint-henry', 'Sanctus Henricus', $desc$
+Die decimo tertio mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio tempore per annum, imperatorem honorans qui non tam propter potestatem quam exercuit quam propter pietatem qua eam exercuit memoratur.
+
+Memoria celebrat vocationem ad sanctitatem in auctoritate civili exercenda et in statu coniugali vivendo, proclamans gubernationem ipsam, fide animatam, instrumentum missionis Ecclesiae fieri posse, et matrimonium, etiam sine prole, viam mutuae sanctificationis vivi posse. Exemplum Henrici omnem opinionem repellit qua potestas mundana et sanctitas personalis inter se incompatibiles ducerentur.
+
+Henricus II, Sacri Romani Imperii imperator saeculo undecimo, propter liberalitatem erga ecclesias, monasteria et dioecesim Bambergensem ab eo fundatam celebris fuit, et traditio tenet eum cum uxore Cunegunde matrimonium in continentia vixisse, unionem suam Deo penitus offerentes; anno 1024 obiit et anno 1146 canonizatus est. Reformatio Calendarii anni 1969 commemorationem eius ad libitum die 13 Iulii, mortis eius traditionali die, servavit.
+
+Testimonium eius hodiernos, qui auctoritatem quocumque in campo exercent, invitat ut munera sua tamquam verum sanctitatis campum aestiment, et omnem coniugum copulam invitat ut unionem suam, quocumque modo vivatur, Deo penitus consecratam esse agnoscat.
+$desc$),
+('saint-camillus-de-lellis-priest', 'Sanctus Camillus de Lellis, presbyter', $desc$
+Die decimo quarto mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio tempore aestivo per annum, olim militem et alea inveteratum honorans cuius conversio Ecclesiae unum ex magnis praecursoribus curae christianae aegrotorum dedit.
+
+Memoria celebrat vocationem Christum ipsum in persona patientis videndi et serviendi, et charisma Camilli proclamat curam corporis compassivam, peritam et amantem opus vere evangelicum esse, non a spiritualibus curis distractionem. Vita eius ostendit nullam dissipationis profunditatem animam a gratiae aditu removere, neque a possibilitate qua ipse instrumentum gratiae aliis fiat.
+
+Post annos militiae mercenariae alea deperditos, Camillus de Lellis profundam conversionem passus, ad sacerdotium se paravit et Ministros Infirmorum, Camillianos dictos, fundavit, quorum sodales crucem rubram gerunt et infirmis, etiam cum vitae suae periculo, servire vovent; melioribus praxibus nosocomialibus et curae infirmariae studuit, anno 1614 obiit, anno 1746 canonizatus est, et postea patronus infirmorum, infirmariorum et nosocomiorum nominatus. Reformatio Calendarii anni 1969 commemorationem eius ad libitum die 14 Iulii, prope traditionalem mortis eius diem, servavit.
+
+Testimonium eius hodiernos, praesertim eos qui aegrotos professione vel in propria familia curant, invitat ut in hac cura veram et exigentem discipulatus formam agnoscant, eiusque intercessionem pro patientia et lenitate in omni occursu cum humano dolore petant.
+$desc$),
+('saint-bonaventure-bishop-and-doctor-of-the-church', 'Sanctus Bonaventura, episcopus et Ecclesiae doctor', $desc$
+Die decimo quinto mensis Iulii, memoria obligatoria, colore albo, celebratur haec commemoratio tempore per annum, fratrem Franciscanum honorans qui ad ordinis sui gubernationem ascendit et inter maximos theologos Ecclesiae medii aevi numeratur.
+
+Memoria celebrat concordiam inter intellectum et amorem mysticum quae theologiam Bonaventurae signavit, ei titulum «Doctoris Seraphici» conferens, quia eius doctrina semper ad animae ascensum in Deo unionem ordinata mansit. Scripta eius proclamant veram theologiam ab oratione et contemplatione seiungi non posse, et mentis rigorosam veritatis quaestionem in ardenti cordis amore erga Deum tantum plenam complementum invenire.
+
+Bonaventura in Ordinem Franciscanum ingressus, Parisiis studuit et postea docuit una cum amico suo Thoma Aquinate, Minister Generalis Fratrum Minorum electus est, ordinem per difficile divisionis internae tempus regens dum scriptis theologicis et spiritualibus abundanter vacabat; anno 1274, dum Concilio Lugdunensi Secundo intererat, obiit, paulo ante cardinalis episcopus creatus, et Sixtus Papa V eum anno 1588 Ecclesiae Doctorem declaravit. Reformatio Calendarii anni 1969 memoriam eius obligatoriam die 15 Iulii, prope traditionalem mortis eius diem, confirmavit.
+
+Testimonium eius hodiernos fideles invitat ut meminerint veram Dei cognitionem ad profundiorem Dei amorem ducere debere, et, exemplo Bonaventurae, sapientiam quaerant quae diligentem cogitationem cum humili et ardenti oratione coniungat.
+$desc$),
+('our-lady-of-mount-carmel', 'Beata Maria Virgo de Monte Carmelo', $desc$
+Die sexto decimo mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio tempore per annum, Beatam Virginem Mariam sub titulo ab Ordine Carmelitano dato honorans, cuius origines apud eremitas in Monte Carmelo in Terra Sancta sedentes iacent.
+
+Memoria celebrat Mariam tamquam exemplar et protectricem vitae contemplativae et omnium qui totalem configurationem eius cum Christo imitari student, et commemorat traditionem Scapularis Bruni, quod Domina Nostra Sancto Simoni Stock dedisse fertur in signum maternae protectionis et pignus perseverantiae iis qui illud fide gerunt et secundum illud vivunt. Devotio proclamat continuam Mariae propinquitatem erga eos qui ad sanctitatem per orationem, simplicitatem et fiduciam in eius intercessione contendunt.
+
+Eremitae qui in Monte Carmelo a saeculo duodecimo congregati sunt, Mariam ab ipsis Ordinis primordiis tamquam patronam et exemplar habuerunt, ex divitibus montis biblicis associationibus cum propheta Elia haustis, et devotio Scapularis, a saeculo quarto decimo testata, per praedicationem Carmelitanam late diffusa est et unum ex popularissimis sacramentalibus Marianis in Ecclesia manet. Reformatio Calendarii anni 1969 hanc commemorationem ad libitum die 16 Iulii, diu iam statuto, servavit.
+
+Festum eius hodiernos fideles invitat ut se maternae Mariae protectioni inter vitae cotidianae probationes committant, et Scapulare, ubi geritur, non superstitiosum amuletum sed verum consecrationis signum erga ipsam eiusque Filium esse patiantur.
+$desc$),
+('saint-apollinaris-bishop-and-martyr', 'Sanctus Apollinaris, episcopus et martyr', $desc$
+Die vicesimo mensis Iulii, memoria ad libitum, colore rubro, celebratur haec commemoratio tempore per annum, primum episcopum Ravennatem honorans, martyrem primorum Ecclesiae saeculorum.
+
+Memoria celebrat fundamenta apostolica Ecclesiarum localium Italiae et fortitudinem primorum illorum pastorum qui fidem pretio vitae suae condiderunt et defenderunt. Testimonium Apollinaris proclamat continuitatem inter praedicationem apostolicam primae generationis et Ecclesias locales florentes ex eorum laboribus ortas, etiam ubi pauca de martyris vita praeter fidelitatem usque ad mortem ad nos pervenerunt.
+
+Traditio tenet Apollinarem discipulum Sancti Petri fuisse, Ravennam missum, ubi episcopatum gessit, persecutiones et exilium propter praedicationem suam saepe passus, et tandem martyrio coronatus, Ravennae narrationem fundatricem dans quae eam directe cum sede apostolica Romana coniungeret. Reformatio Calendarii anni 1969 commemorationem eius ad libitum die 20 Iulii servavit, cultum per saecula materia legendaria auctum simplificans dum memoriam essentialem episcopatus eius et martyrii conservavit.
+
+Testimonium eius hodiernos fideles invitat ut gratias agant pro fundatoribus Ecclesiarum suarum localium, saepe ignotis vel vix memoratis, et agnoscant omnem communitatem christianam super fundamentum fidei, visibiliter vel occulte, fidelitate praecedentium redemptum niti.
+$desc$),
+('saint-lawrence-of-brindisi-priest-and-doctor-of-the-church', 'Sanctus Laurentius a Brundusio, presbyter et Ecclesiae doctor', $desc$
+Die vicesimo primo mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio tempore per annum, fratrem Capuccinum honorans cuius dona extraordinaria linguarum et praedicationis tam cathedrae quam aulis Europae inservierunt.
+
+Memoria celebrat vocationem praedicatoris-legati, religiosi cuius eloquentia in cathedra peritiae in principibus reconciliandis et Christianitate defendenda aequabatur, ostendens dona intellectualia et linguistica, Deo penitus consecrata, Evangelio in publicissimis et exigentissimis arenis servire posse. Vita eius proclamat vitam religiosam contemplativam et vigorosam mundo latiori inserviendam non opponi, sed in unam fecundam vocationem coniungi posse.
+
+Laurentius a Brundusio linguas multas, inter quas Hebraicam, calluit, hocque dono in praedicatione et legationibus diplomaticis usus est, Minister Generalis Capuccinorum factus et copias Christianas ad Hungariam contra Ottomanicum impetum defendendam congregans; anno 1619 obiit, et Ioannes Papa XXIII eum anno 1959 Ecclesiae Doctorem declaravit, titulum «Doctoris Apostolici» ei ob indefessos labores missionarios et pastorales conferens. Reformatio Calendarii anni 1969 memoriam eius ad libitum die 21 Iulii, prope traditionalem mortis eius diem, confirmavit.
+
+Testimonium eius hodiernos praedicatores et fidei doctores, praesertim doctrina vel eloquentia praeditos, invitat ut talenta sua Evangelio penitus dedicent, confidentes nullum campum humani studii extra ambitum vitae vere consecratae iacere.
+$desc$),
+('saint-mary-magdalene', 'Sancta Maria Magdalena', $desc$
+Die vicesimo secundo mensis Iulii, gradu Festi, colore albo, celebratur haec sollemnitas tempore per annum, discipulam honorans quae prima testis Christi resurgentis fuit primaque Resurrectionem eius apostolis ceteris nuntiavit.
+
+Festum celebrat privilegium singulare Mariae Magdalenae ad sepulcrum vacuum, ubi Dominus resurgens ei primae apparuit eamque misit ut apostolis quae viderat nuntiaret, titulum antiquum «Apostolorum Apostolae» ei conferens. Theologice, eius occursus cum Christo in horto proclamat Resurrectionem primum fideli amoris testi commissam esse, Evangelium Resurrectionis per occursum personalem prius quam in doctrinam formulatum annuntiari, et fidelitatem ad crucis pedem et ad sepulcrum manentem intimissima cum Domino resurgente familiaritate remunerari.
+
+Iam diu culta tamquam discipula quae Iesum secuta est, ei apostolisque de bonis suis ministravit, et usque ad crucem et sepulturam fidelis mansit, Maria Magdalena in Occidente per saecula solo memoriae gradu celebrata est; anno 2016 Franciscus Papa celebrationem eius ad gradum Festi, ceteris apostolis aequalem, extulit, praecise ut titulum eius Apostolorum Apostolae eiusque munus singulare in narratione Resurrectionis honoraret. Reformatio Calendarii anni 1969 iam identitatem eius in libris liturgicis clarificaverat, eam clarius ab aliis mulieribus evangelicis, quibuscum popularier aliquando confusa erat, distinguens.
+
+Testimonium eius hodiernos fideles, praesertim mulieres in omni ministerii et apostolatus forma occupatas, invitat ut in ea exemplar primae evangelistae Resurrectionis agnoscant, et eundem occursum intimum ac personalem cum Christo resurgente quaerant qui luctum eius in nuntium gaudii transformavit.
+$desc$),
+('saint-bridget-religious', 'Sancta Birgitta, religiosa', $desc$
+Die vicesimo tertio mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio tempore per annum, nobilem Suecicam honorans cuius longa vita matrimonium, maternitatem, viduitatem et ordinis religiosi fundationem complexa est.
+
+Memoria celebrat sanctitatem in omni vitae statu quem Birgitta pertransivit accessibilem, praesertim donum revelationis mysticae toti Ecclesiae inservientis, visionibus eius de Passione Christi devotionem longe ultra propriam communitatem nutrientibus. Vita eius proclamat dona contemplativa profunda in anima primum amore coniugali et responsabilitate domestica formata florere posse, et viduitatem ianuam consecrationis adhuc radicalioris fieri posse.
+
+Birgitta Suecica octo liberos genuit, quorum una Sancta Catharina Suecica facta est, et post mariti mortem se orationi, peregrinationi et visionum suarum scriptioni dedicavit, tandem Ordinem Birgittinum fundans et Romae se constituens, ubi anno 1373 obiit; anno 1391 canonizata est, et Ioannes Paulus Papa II eam anno 1999 co-patronam Europae, una cum Sancta Catharina Senensi et Sancta Teresia Benedicta a Cruce, nominavit. Reformatio Calendarii anni 1969 memoriam eius ad libitum die 23 Iulii, anniversario mortis eius, confirmavit.
+
+Testimonium eius hodiernos fideles, praesertim eos qui sanctitatem per varias vitae familiaris tempestates discernunt, invitat ut confidant Deum unam et coherentem vocationem ad sanctitatem per matrimonium, maternitatem, viduitatem et consecrationem religiosam vicissim ducere posse.
+$desc$),
+('saint-sharbel-makhluf-priest', 'Sanctus Charbel Makhluf, presbyter', $desc$
+Die vicesimo quarto mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio tempore per annum, monachum Maronitam Libanensem honorans cuius vita occulta orationis post mortem fons factus est favorum extraordinariorum peregrinis omnis fidei.
+
+Memoria celebrat vocationem eremiticam et monasticam, persuasionem qua vita in silentio, paenitentia et oratione incessanti effusa, mundi oculis occulta, toti Ecclesiae plene fecunda manet, etiam si nullam actionem visibilem vel ministerium publicum producit. Vita Charbel proclamat sanctitatem radicalissimam procul ab hominum notitia vivi posse, in obscuritate de industria electa arctioris cum Deo unionis causa.
+
+Ioseph Antonius Makhlouf natus, monasterium Maroniticum ingressus, sacerdos ordinatus est, et post aliquot annos ad eremitorium Sanctorum Petri et Pauli se recepit, ubi vitam austeram et magna ex parte silentem orationis et laboris manualis usque ad mortem anno 1898 duxit; phaenomena extraordinaria et sanationes ad tumulum eius relatae devotionem celeriter crescentem excitaverunt, et anno 1977 canonizatus est. Reformatio Calendarii anni 1969 canonizationem eius antecedit, et memoria postea calendario addita est, cultu eius a Libano ad Ecclesiam universalem diffuso, die 24 Iulii tamquam memoria ad libitum observata.
+
+Testimonium eius hodiernos fideles, inter strepitum et occupationes vitae modernae, invitat ut silentium, paenitentiam et orationem occultam tamquam vias authenticas ac potentes ad Deum accedendi et pro aliis intercedendi aestiment.
+$desc$),
+('saint-james-apostle', 'Sanctus Iacobus, Apostolus', $desc$
+Die vicesimo quinto mensis Iulii, gradu Festi, colore albo, celebratur haec sollemnitas tempore per annum, unum ex Duodecim, «Maiorem» dictum ut ab altero apostolo eiusdem nominis distingueretur, fratremque Sancti Ioannis Evangelistae honorans.
+
+Festum celebrat locum praecipuum Iacobi inter tres discipulos quos Iesus sibi proxime adiunxit, praesentem in Transfiguratione et in Gethsemani, et super omnia eius distinctionem qua primus apostolorum martyrio testimonium suum obsignavit. Mors eius proclamat pretium discipulatus a Christo ipso praedictum, qui Iacobum et Ioannem interrogavit an calicem quem ipse bibiturus erat bibere possent, primumque inter Duodecim huius pretiosae promissionis adimpletionem constituit.
+
+Iacobus, ut in Actibus Apostolorum refertur, iussu Herodis Agrippae Primi regis circa annum 44 capite truncatus est, primus apostolorum martyr factus; firma traditio, praesertim in Hispania cara, tenet corpus eius postea Compostellam translatum esse, ubi sanctuarium Sancti Iacobi de Compostella una ex maximis peregrinationum destinationibus christianitatis factum est et Iacobus patronus nationis. Reformatio Calendarii anni 1969 festum eius die 25 Iulii, die traditionali et universaliter observato, confirmavit.
+
+Testimonium eius hodiernos fideles, inter quos innumeri peregrini moderni qui Iter Sancti Iacobi in eius honorem calcant, invitat ut agnoscant Christum arcte sequi revera posse calicem eius bibere significare, eandemque fortitudinem petant quae Iacobum ad primum martyrium apostolicum duxit.
+$desc$),
+('saints-joachim-and-anne-parents-of-the-blessed-virgin-mary', 'Sancti Ioachim et Anna', $desc$
+Die vicesimo sexto mensis Iulii, memoria obligatoria, colore albo, celebratur haec commemoratio tempore per annum, parentes Beatae Mariae Virginis, et ideo secundum carnem avos Iesu Christi ipsius, honorans.
+
+Memoria celebrat sanctitatem occultam vitae familiaris et fidelitatem quietam eorum qui, per virtutem domesticam ordinariam, ambitum humanum immediatum praeparaverunt in quo Mater Dei nata et educata est. Ioachim et Anna tamquam exemplaria aviorum et totius familiae amplioris honorantur, proclamantes consilium Dei salvificum non solum per magna facta publica, sed etiam per generationes humilis fidelitatis intra domum, explicari.
+
+Nomina eorum et historia non ex Scripturis canonicis, quae de parentibus Mariae silent, sed ex antiquo Protoevangelio Iacobi apocrypho proveniunt, quod nihilominus devotionem a primis saeculis testatam conservavit, praesertim in Oriente christiano vigentem, ubi cultus eorum plenam suam florescentiam in Occidente longe antecedit. Reformatio Calendarii anni 1969 commemorationem eorum communem ad gradum memoriae obligatoriae die 26 Iulii extulit, die iam in Oriente et Occidente Sanctae Annae associato, ita Ioachim honorem uxori suae aequalem tribuens.
+
+Memoria eorum hodiernos avos et seniores invitat ut in influxu suo quieto, saepe invisibili, veram participationem operis Dei fidem tradentis agnoscant, et omnem familiam invitat ut generationes suas, praeteritas et praesentes, eorum intercessioni committat.
+$desc$),
+('saints-martha-mary-and-lazarus', 'Sanctae Martha, Maria et Lazarus', $desc$
+Die vicesimo nono mensis Iulii, memoria obligatoria, colore albo, celebratur haec commemoratio tempore per annum, tres fratres et sorores Bethaniae simul honorans, quorum domum Iesus saepe visitavit et quorum amicitiam Evangelia exemplar intimitatis cum Christo praesentant.
+
+Memoria celebrat hospitalitatem, fidem personalem profundam et resurrectionis realitatem, quarum unaquaeque per unum huius familiae membrum exprimitur: servitium generosum Marthae eiusque confessio, «Ego credo quia tu es Christus Filius Dei», attentio contemplativa Mariae ad pedes Domini, et Lazarus e sepulcro vocatus, victoriam super mortem praefigurans quam Christus ipse mox consummaturus erat. Simul proclamant amicitiam cum Iesu, per servitium, fidem et spem etiam coram morte vixam, veram esse discipulatus viam.
+
+Evangelium secundum Ioannem arctum huius familiae vinculum cum Iesu refert, lacrimas eius ad tumulum Lazari, et suscitationem eius post quattuor dies, signum quod insidias contra vitam Iesu ipsius maxime praecipitavit; per saecula calendarium Romanum memoriam solius Marthae die 29 Iulii servavit, sed anno 2021 Franciscus Papa celebrationem extendit ut Mariam et Lazarum quoque includeret, volens totam Bethaniae familiam simul honorare tamquam exemplar vitae familiaris Christo inservientis. Haec mutatio diem non mutavit sed ambitum memoriae auxit, intra eandem observantiam diei 29 Iulii a reformatione anni 1969 statutam.
+
+Testimonium eorum hodiernos fideles invitat ut Christum in domus suas per hospitalitatem et servitium accipiant, ut attente ad pedes eius in oratione sedeant, et ut ei, etiam in luctu, tamquam ei qui mortuos ad vitam revocat, confidant.
+$desc$),
+('saint-peter-chrysologus-bishop-and-doctor-of-the-church', 'Sanctus Petrus Chrysologus, episcopus et Ecclesiae doctor', $desc$
+Die trigesimo mensis Iulii, memoria ad libitum, colore albo, celebratur haec commemoratio tempore per annum, episcopum Ravennatem honorans, homiliis tam vivis et praecisis celebrem ut cognomen «Chrysologi», hoc est aureo sermone praediti, mereretur.
+
+Memoria celebrat ministerium praedicationis in optima sua forma, breve, lucidum et in Scriptura solide fundatum, mysteria fidei populo simplici lingua facile comprehensibili et memorabili explicare valens. Sermones Petri qui supersunt proclamant cathedram, claritati et caritati potius quam ostentationi scientiae inservientem, unum ex potentissimis Ecclesiae instrumentis manere ad fidem populi sui formandam.
+
+Petrus episcopatum Ravennae saeculo quinto gessit, tunc capitali imperiali magni momenti, et homiliae eius breves diligenterque compositae, quarum copia notabilis ad nos pervenit, pastorem grebi suo necessitatibus concretis attentissimum ostendunt; circa annum 450 obiit, et Benedictus Papa XIII eum anno 1729 Ecclesiae Doctorem declaravit. Reformatio Calendarii anni 1969 memoriam eius ad libitum die 30 Iulii, prope traditionalem mortis eius diem, confirmavit.
+
+Testimonium eius hodiernos praedicatores et fidei doctores invitat ut eandem claritatem et caliditatem quae sermones eius signavit sectentur, et omnem credentem invitat ut ad verba Scripturae saepe attenteque redeat, tamquam ad certissimum fontem fidei facile intellectae et firmiter tentae.
+$desc$),
+('saint-ignatius-of-loyola-priest', 'Sanctus Ignatius de Loyola, presbyter', $desc$
+Die trigesimo primo mensis Iulii, memoria obligatoria, colore albo, celebratur haec commemoratio tempore per annum, militem Vasconem honorans cuius vulnus in proelio acceptum, providentia Dei, vulnus factum est quod eum ad sanctitatem aperuit.
+
+Memoria celebrat discretionem spirituum et totalem oblationem talentorum et ambitionum ad maiorem Dei gloriam, elogium ab Ignatio celebratum, Ad maiorem Dei gloriam. Doctrina eius spiritualis proclamat Deum in omnibus rebus inveniri et servari posse, et ordinatum suarum cogitationum, desideriorum et consolationum examen ipsum viam authenticam esse ad divinam voluntatem cognoscendam et sequendam.
+
+Vulneratus in proelio Pompelonensi anno 1521, Ignatius de Loyola longam convalescentiam expertus est, qua lectiones eius ambitiones ab gloria mundana ad Christi sequelam converterunt, eum ducentes ad Exercitia Spiritualia componenda et, cum parvo sociorum grege inter quos Sanctus Franciscus Xaverius, ad Societatem Iesu anno 1540 fundandam, ordinem qui unum ex magnis motoribus expansionis missionalis, educationis et reformationis catholicae futurus erat; Romae anno 1556 obiit et anno 1622 canonizatus est. Reformatio Calendarii anni 1969 memoriam eius obligatoriam die 31 Iulii, traditionali mortis eius die, confirmavit.
+
+Testimonium eius hodiernos fideles invitat ut Deum in omni vitae ordinariae condicione actuose quaerant, et suam faciant, quamcumque vocationem sequantur, propositum Ignatianum omne talentum et ambitionem ad maiorem Dei gloriam penitus consecrandi.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
