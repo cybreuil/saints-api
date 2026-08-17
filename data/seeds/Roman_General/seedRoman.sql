@@ -2822,29 +2822,184 @@ $desc$)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
+
+
+```sql
 -- LA translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('saint-justin-martyr', 'Sanctus Iustinus, martyr'),
-('saints-marcellinus-and-peter-martyrs', 'Sancti Marcellinus et Petrus, martyres'),
-('saints-charles-lwanga-and-companions-martyrs', 'Sancti Carolus Lwanga et Socii, martyres'),
-('saint-boniface-bishop-and-martyr', 'Sanctus Bonifatius, episcopus et martyr'),
-('saint-norbert-bishop', 'Sanctus Norbertus, episcopus'),
-('saint-ephrem-deacon-and-doctor-of-the-church', 'Sanctus Ephraem, diaconus et Ecclesiae doctor'),
-('saint-barnabas-apostle', 'Sanctus Barnabas, Apostolus'),
-('saint-anthony-of-padua-priest-and-doctor-of-the-church', 'Sanctus Antonius Patavinus, presbyter et Ecclesiae doctor'),
-('saint-romuald-abbot', 'Sanctus Romualdus, abbas'),
-('saint-aloysius-gonzaga-religious', 'Sanctus Aloisius Gonzaga, religiosus'),
-('saint-paulinus-of-nola-bishop', 'Sanctus Paulinus Nolanus, episcopus'),
-('saints-john-fisher-bishop-and-thomas-more-martyrs', 'Sancti Ioannes Fisher et Thomas Morus, martyres'),
-('the-nativity-of-saint-john-the-baptist', 'Nativitas Sancti Ioannis Baptistae'),
-('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'Sanctus Cyrillus Alexandrinus, episcopus et Ecclesiae doctor'),
-('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Sanctus Irenaeus, episcopus, martyr et Ecclesiae doctor'),
-('saints-peter-and-paul-apostles', 'Sancti Petrus et Paulus, Apostoli'),
-('the-first-martyrs-of-holy-roman-church', 'Sancti Primi Martyres Sanctae Romanae Ecclesiae')
-) AS x(slug, name)
+('saint-justin-martyr', 'Sanctus Iustinus, martyr', $desc$
+Die prima mensis Iunii memoria obligatoria Sancti Iustini, martyris, in Calendario Romano Generali recolitur, inter dies per annum post Pentecosten collocata. Color liturgicus ruber est, martyrii signum. Cum memoria sit, non memoria, non sollemnitas vel festum, liturgiam dominicalem non excludit, sed Missam et Officium feriale, si eo die occurrat, colorat.
+
+Haec celebratio virum laicum et philosophum honorat, qui, veritatem per scholas philosophiae paganae quaesitam, in Christianismo tandem invenit id quod ratio ipsa altissime desiderabat: **veram philosophiam**. Festum eius concordiam fidei et rationis celebrat, vocationem doctorum ut scientiam Evangelio subiciant, atque huius vocationis sigillum ultimum in martyrio, quo Iustinus sanguine confirmavit quae calamo defenderat.
+
+Commemoratio mortis Iustini - qui flagellis caesus et Romae sub praefecto Rustico circa annum CLXV decapitatus est - antiquissimas radices habet, et Acta iudicii eius inter vetustissima martyrum acta authentica numerantur quae ex antiquitate supersunt. Ante instaurationem Calendarii post Concilium Vaticanum II peractam, memoria eius die XIV Aprilis servabatur; recognitio anni MCMLXIX eam ad diem I Iunii transtulit, propius traditioni antiquae, apud Orientales quoque servatae, quae eum aestatis initio consociat, ita ut festum a densitate temporis quadragesimalis-paschalis liberius consisteret.
+
+Aetate nostra, qua dialogus inter fidem, culturam et scientiam renovatur, festum Iustini singularem vim pastoralem habet: exemplar praebet cum cogitatione huius temporis sine timore congrediendi, ratione tamquam ponte, non obstaculo, ad fidem utendo. Patronus philosophorum et apologetarum est, eiusque testimonium Ecclesia invocat pro omnibus qui rationem spei quae in ipsis est reddere student.
+$desc$),
+
+('saints-marcellinus-and-peter-martyrs', 'Sancti Marcellinus et Petrus, martyres', $desc$
+Die secunda mensis Iunii memoria ad libitum Sanctorum Marcellini et Petri, martyrum, agitur, inter dies per annum post Pentecosten, colore rubro martyrii proprio. Cum memoria ad libitum sit, celebratio fidelibus et sacerdotibus optione relinquitur, ita ut cursus ordinarius temporis liturgici plerumque praevaleat.
+
+Hi duo martyres Romani, exorcista et presbyter, fidem usque ad sanguinis effusionem servaverunt, testimonium reddentes Christo in ipsa urbe quae eos ad mortem damnavit. Eorum memoria Ecclesiam docet fidelitatem in persecutione, et unitatem inter clerum minorem maioremque in eodem certamine pro fide confirmat.
+
+Marcellinus et Petrus sub persecutione Diocletiani, saeculo quarto ineunte, martyrium passi sunt; eorum nomina inter antiquissima in traditione Romana leguntur, adeo ut in ipso Canone Romano, inter martyres post consecrationem commemoratos, locum obtineant - signum venerationis quam iam saeculo quinto Ecclesia Romana eis tribuebat. Instauratio Calendarii anno MCMLXIX facta memoriam eorum ab obligatoria ad libitum redegit, cultum antiquum servans sine onere obligationis universalis.
+
+Horum martyrum exemplum fideles hodiernos invitat ad considerandum quomodo humiles ministri Ecclesiae, saepe ignoti mundo, magna constantia fidem confiteri possint. Eorum inclusio in ipso Canone Missae quotidie memoriam eorum praesentem reddit, etiam ubi memoria liturgica non celebratur.
+$desc$),
+
+('saints-charles-lwanga-and-companions-martyrs', 'Sancti Carolus Lwanga et Socii, martyres', $desc$
+Die tertia mensis Iunii memoria obligatoria Sanctorum Caroli Lwanga et Sociorum, martyrum, in Calendario Romano recolitur, colore rubro insignita, tempore per annum post Pentecosten. Hoc festum peculiarem locum tenet, cum martyres recentiores et extra Europam passos celebret, testimonium universalitatis Ecclesiae praebens.
+
+Horum iuvenum martyrum cultus theologiam martyrii in contextu novo illustrat: fidelitas Baptismo data praevaluit etiam contra potestatem regiam et minas mortis atrocissimae. Carolus et socii, pagi aulici regis, castitatem et fidem Christianam servare maluerunt quam voluntati regis Mwanga II obtemperare, sic Evangelium usque ad supremum sacrificium testificantes.
+
+Inter annos MDCCCLXXXV et MDCCCLXXXVII in regno Bugandae, hodierna Uganda, hi iuvenes, alii catechumeni alii iam baptizati, igne combusti vel gladio caesi sunt quia fidem abnegare recusabant. Papa Paulus VI eos anno MCMLXIV canonizavit, primos sanctos Africae subsaharianae hac ratione ab Ecclesia latina declaratos; eorum memoria statim post canonizationem Calendario universali inserta est, et instauratio liturgica anni MCMLXIX eam ut obligatoriam confirmavit.
+
+Horum martyrum exemplum praesertim iuvenes hodiernos alloquitur, eos invitans ut fidelitatem castitatis et fidei etiam inter pressuras sociales et culturales tueantur. Eorum cultus signum est Ecclesiae vere catholicae, in omni gente et natione radicatae, sanguine martyrum ubique terrarum fecundatae.
+$desc$),
+
+('saint-boniface-bishop-and-martyr', 'Sanctus Bonifatius, episcopus et martyr', $desc$
+Die quinta mensis Iunii memoria obligatoria Sancti Bonifatii, episcopi et martyris, recolitur, colore rubro martyrii, in tempore per annum post Pentecosten. Hic dies illum honorat qui, monachus Anglus, ad gentes Germanicas evangelizandas se totum contulit atque episcopalem in illis regionibus Ecclesiam constituit.
+
+Theologia huius festi in ipsa missione evangelizandi radicatur: Bonifatius, arborem sacram Donaris - vulgo "Thor" - propria manu succidens, non solum superstitionem paganam publice refutavit, sed etiam Crucem Christi supra idola veterum deorum triumphare ostendit. Eius vita exemplum praebet zeli apostolici qui culturas transformat sine violentia, sed potestate signi et verbi.
+
+Bonifatius, natus in Anglia, dioceses per Germaniam ordinavit, monasteria fundavit, atque relationes inter Ecclesiam Germanicam et Sedem Romanam firmiter statuit; senex iam, ad gentes Frisias evangelizandas rediit, ubi anno DCCLIV apud Dokkum a paganis interfectus est. Vocatur ideo "Apostolus Germaniae." Cultus eius statim post mortem increvit, et memoria eius in Calendario Romano post instaurationem anni MCMLXIX ut obligatoria retenta est, testimonium perpetuum missionis ad gentes tribuens.
+
+Bonifatii exemplum Ecclesiam hodiernam ad novam evangelizationem incitat, praesertim in regionibus ubi fides antiquitus florens nunc languescit vel oblivioni traditur. Fideles invitat ut audaciam missionalem cum patientia pastorali coniungant, sciendo fructus evangelizationis saepe post multa saecula plene maturescere.
+$desc$),
+
+('saint-norbert-bishop', 'Sanctus Norbertus, episcopus', $desc$
+Die sexta mensis Iunii memoria ad libitum Sancti Norberti, episcopi, celebratur, colore albo insignita, in tempore per annum post Pentecosten. Cum memoria ad libitum sit, eius celebratio optioni particularis Ecclesiae vel communitatis relinquitur.
+
+Norbertus, vita mutata a curiali in praedicatorem paenitentiae, exemplum praebet conversionis radicalis et zeli reformandae vitae clericalis et religiosae. Ordinem Praemonstratensem instituens, canonicos regulares secundum regulam Augustini viventes coniunxit vitae contemplativae cum ministerio pastorali actuoso, ita ut sanctitas personalis et cura animarum simul florerent.
+
+Natus circa annum MLXXX, Norbertus post conversionem subitam praedicator itinerans factus est, Praemonstrati in Gallia anno MCXXI ordinem novum fundavit, et tandem Archiepiscopus Magdeburgensis creatus est, ubi Ecclesiam a laxitate ad disciplinam revocare studuit. Obiit anno MCXXXIV; instauratio Calendarii anni MCMLXIX eius memoriam ut ad libitum servavit, locum dans aliis celebrationibus sanctorum fundatorum.
+
+Norbertus fideles hodiernos invitat ad considerandam vim conversionis interioris, quae vitam totam transformare potest, atque ad quaerendam illam unionem inter orationem et actionem apostolicam quae vera reformatio Ecclesiae semper requirit.
+$desc$),
+
+('saint-ephrem-deacon-and-doctor-of-the-church', 'Sanctus Ephraem, diaconus et Ecclesiae doctor', $desc$
+Die nona mensis Iunii memoria ad libitum Sancti Ephraem, diaconi et Ecclesiae doctoris, in Calendario Romano occurrit, colore albo, tempore per annum post Pentecosten. Sanctus, licet numquam presbyter factus sit, inter doctores Ecclesiae Latinae computatur ob eximiam doctrinae et poeseos sacrae excellentiam.
+
+Ephraem, "Cithara Spiritus Sancti" appellatus, theologiam per hymnos et carmina magis quam per tractatus scholasticos exposuit, ostendens fidem posse pulchritudine verborum et musicae tam profunde quam ratione discursiva communicari. Eius opera Mariologiam, mysteria Incarnationis et Eucharistiae, necnon vitam asceticam, poetico modo illustrant, ita ut theologia et liturgia arte inseparabiliter iungantur.
+
+Natus Nisibi in Mesopotamia circa annum CCCVI, diaconus ecclesiae Syriacae factus, scholam theologicam Edessae rexit, atque innumeros hymnos composuit qui usque hodie in liturgiis Syriacis resonant; obiit anno CCCLXXIII pauperibus in peste laborantibus serviens. Anno MCMXX Benedictus XV eum Doctorem Ecclesiae declaravit, primum inter Syros hoc titulo insignitum; instauratio liturgica anni MCMLXIX memoriam eius, prius minus frequentatam in Occidente, ut ad libitum in Calendarium universale intulit.
+
+Ephraem hodiernos invitat ad redintegrandam pulchritudinem in cultu divino et in praedicatione fidei, ostendens quomodo poesis et musica sacra instrumenta efficacissima catechesis et contemplationis esse possint.
+$desc$),
+
+('saint-barnabas-apostle', 'Sanctus Barnabas, Apostolus', $desc$
+Die undecima mensis Iunii memoria obligatoria Sancti Barnabae, Apostoli, celebratur, colore albo insignita, tempore per annum post Pentecosten. Quamvis inter Duodecim non numeretur, titulo apostolico ab antiquissima traditione ornatur, ob peculiare munus in prima Ecclesiae expansione.
+
+Barnabas, cuius nomen "filius consolationis" interpretatur, imaginem exhibet discipuli qui, generositate et prudentia insignis, alios in fide confirmat et communitatem aedificat. Eius exemplum praesertim illos illuminat qui in Ecclesia munus mediationis et reconciliationis gerunt, sicut ipse Paulum, adhuc suspectum, Hierosolymitanae communitati commendavit.
+
+Levita Cyprius, Ioseph nomine, qui ab Apostolis Barnabas appellatus est, socius Pauli in primo itinere missionali fuit, Antiochiae Ecclesiam auxit, et in Actibus Apostolorum saepe memoratur ob suam liberalitatem et discretionem spiritualem. Traditio eum in Cypro martyrium passum tradit. Cum in Calendario ante instaurationem iam die XI Iunii coleretur, recognitio anni MCMLXIX gradum eius ut memoriae obligatoriae confirmavit, agnitione data muneris eius vere apostolici licet extra Duodecim.
+
+Barnabae exemplum fideles hodiernos ad opus consolationis et incorporationis in communitate ecclesiali invitat, praesertim erga illos qui, sicut olim Paulus, primos passus in fide vel in vita ecclesiali difficulter inveniunt.
+$desc$),
+
+('saint-anthony-of-padua-priest-and-doctor-of-the-church', 'Sanctus Antonius Patavinus, presbyter et Ecclesiae doctor', $desc$
+Die tertia decima mensis Iunii memoria obligatoria Sancti Antonii Patavini, presbyteri et Ecclesiae doctoris, occurrit, colore albo, in tempore per annum post Pentecosten. Inter sanctos popularissimos numeratur, cuius invocatio per totum orbem Christianum diffusa est.
+
+Antonius, frater Franciscanus, praedicator eximius contra haereses temporis sui - praesertim contra Catharos - exstitit, adeo ut "Malleus Haereticorum" vocaretur; eius eloquentia scientiam theologicam cum ardore apostolico et simplicitate evangelica coniunxit, ostendens praedicationem veram semper ex intima cum Deo unione oriri debere.
+
+Natus Ulixbonae anno MCXCV, frater Minor factus, a Francisco ipso ad theologiam docendam missus est; obiit Patavii anno MCCXXXI, admodum iuvenis. Pius XII eum anno MCMXLVI Doctorem Ecclesiae declaravit, "Doctorem Evangelicum" appellans. Devotio popularis, quae eum patronum rerum amissarum invocat, testimonium perhibet quam profunde eius sanctitas in cor populi Christiani penetraverit; instauratio liturgica anni MCMLXIX memoriam eius ut obligatoriam confirmavit, dignitatem doctoralem agnoscens.
+
+Antonii exemplum fideles hodiernos ad praedicationem simplicem et efficacem invitat, quae doctrinam soliditate et caritate populari simul praestet, atque ad fiduciam in intercessione sanctorum pro rebus etiam minimis vitae quotidianae.
+$desc$),
+
+('saint-romuald-abbot', 'Sanctus Romualdus, abbas', $desc$
+Die undevicesima mensis Iunii memoria ad libitum Sancti Romualdi, abbatis, in Calendario Romano recolitur, colore albo, tempore per annum post Pentecosten. Cum memoria ad libitum sit, celebratio secundum consuetudinem particularium Ecclesiarum instituitur.
+
+Romualdus vitam monasticam ad puritatem primaevam heremiticae disciplinae reducere studuit, coniungens solitudinem contemplativam cum vita communi fratrum, ita ut disciplina rigorosa et caritas fraterna simul in una forma vitae coalescerent. Eius exemplum ostendit quomodo silentium et paenitentia viam ad intimam cum Deo unionem aperiant.
+
+Natus Ravennae circa annum DCCCCLI, post vitam saecularem turbulentam ad monasterium conversus est, plures domus reformavit, et tandem apud Campum Maldulum eremum instituit unde Ordo Camaldulensis nomen traxit. Obiit anno MXXVII. Recognitio Calendarii anni MCMLXIX memoriam eius, prius die VII Februarii servatam, ad diem XIX Iunii transtulit, ut a densitate temporis quadragesimalis segregaretur.
+
+Romualdi exemplum hodiernos invitat ad quaerendum in vita quotidiana spatia silentii et orationis, etiam in medio societatis strepitu plenae, sciendo hanc solitudinem non fugam esse sed fontem verae communionis fraternae.
+$desc$),
+
+('saint-aloysius-gonzaga-religious', 'Sanctus Aloisius Gonzaga, religiosus', $desc$
+Die vicesima prima mensis Iunii memoria obligatoria Sancti Aloisii Gonzaga, religiosi, celebratur, colore albo insignita, tempore per annum post Pentecosten. Hic sanctus iuvenis inter patronos iuventutis praecipuum locum tenet, exemplum sanctitatis in ipso aetatis flore ostendens.
+
+Aloisius, hereditate nobili et gloria mundana sponte relictis, vitam religiosam in Societate Iesu elegit, ostendens quomodo gratia divina possit vincere etiam ambitiones et honores saeculares maxime blandientes. Eius mors, dum aegrotos peste laborantes caritative sublevat, caritatem heroicam usque ad supremum sacrificium exemplificat.
+
+Natus anno MDLXVIII in familia principum Mantuanorum, Aloisius adulescens Societati Iesu nomen dedit, contra voluntatem paternam; Romae, dum in nosocomio pestilentibus servit, morbum ipse contraxit et anno MDXCI, vix tricesimum aetatis annum agens, obiit. Devotio erga eum statim inter iuvenes exorta est; instauratio liturgica anni MCMLXIX memoriam eius ut obligatoriam confirmavit, eum patronum praecipuum iuventutis Christianae declarans.
+
+Aloisii exemplum praesertim iuvenes hodiernos alloquitur, eos invitans ut vocationem propriam supra ambitiones mundanas anteponant, et caritatem erga proximum, etiam cum periculo vitae propriae, sine formidine exerceant.
+$desc$),
+
+('saint-paulinus-of-nola-bishop', 'Sanctus Paulinus Nolanus, episcopus', $desc$
+Die vicesima secunda mensis Iunii memoria ad libitum Sancti Paulini Nolani, episcopi, in Calendario Romano occurrit, colore albo, tempore per annum post Pentecosten. Cum eodem die etiam memoria Sanctorum Ioannis Fisher et Thomae Mori celebretur, particulari Ecclesiae vel fidelibus optio relinquitur.
+
+Paulinus, vir nobilis et opibus abundans, exemplum praebet renuntiationis evangelicae: divitiis et honoribus saecularibus sponte depositis, vitam episcopalem simplicem et poeticam elegit, ostendens quomodo cultura et eloquentia possint plene Evangelio subici, non extincta sed transformata.
+
+Natus Burdigalae circa annum CCCLIV, senator Romanus et vir litteratus, post uxoris consensum bona sua pauperibus distribuit et presbyter, deinde episcopus Nolanus in Campania factus est; carminibus sacris et epistulis cum Augustino atque Hieronymo amicitiam spiritualem coluit. Obiit anno CDXXXI. Instauratio Calendarii anni MCMLXIX memoriam eius ut ad libitum in Calendarium universale primum intulit, cultum antea magis localem Campaniae ad Ecclesiam universalem extendens.
+
+Paulini exemplum hodiernos, praesertim homines cultos et opibus praeditos, invitat ad considerandam vanitatem divitiarum temporalium prae thesauro incorruptibili amicitiae cum Deo et fratribus in fide.
+$desc$),
+
+('saints-john-fisher-bishop-and-thomas-more-martyrs', 'Sancti Ioannes Fisher et Thomas Morus, martyres', $desc$
+Die vicesima secunda mensis Iunii memoria ad libitum Sanctorum Ioannis Fisher, episcopi, et Thomae Mori, martyrum, recolitur, colore rubro martyrii insignita, tempore per annum post Pentecosten. Optio celebrandi inter hanc memoriam et illam Sancti Paulini eodem die particulari Ecclesiae relinquitur.
+
+Hi duo martyres Anglicani, episcopus alter, laicus alter, unitatem Ecclesiae et primatum Petrinum usque ad mortem defenderunt, recusantes Actum Supremationis regiae super Ecclesiam agnoscere. Eorum testimonium ostendit conscientiam rectam potestati civili, etiam summae, subiici non posse ubi fides et unitas Ecclesiae in periculum vocantur.
+
+Ioannes Fisher, Episcopus Roffensis et vir doctrina insignis, atque Thomas Morus, cancellarius regni Angliae et humanista celeberrimus, ambo sub rege Henrico VIII anno MDXXXV capite damnati sunt quia supremationem regiam super Ecclesiam agnoscere noluerunt. Pius XI eos anno MCMXXXV simul canonizavit. Instauratio Calendarii anni MCMLXIX eorum memoriam communem ut ad libitum instituit, eodem die quo Paulinus Nolanus, ita ut particulares Ecclesiae inter has celebrationes eligere possint.
+
+Horum martyrum exemplum hodiernos invitat ad fidelitatem conscientiae rectae etiam ubi potestates civiles fidem premunt, atque ad testimonium reddendum unitati Ecclesiae supra omnem commodum temporalem vel pericula personalia.
+$desc$),
+
+('the-nativity-of-saint-john-the-baptist', 'Nativitas Sancti Ioannis Baptistae', $desc$
+Die vicesima quarta mensis Iunii Sollemnitas Nativitatis Sancti Ioannis Baptistae celebratur, colore albo insignita, sex mensibus ante Nativitatem Domini secundum Evangelium Lucae collocata. Haec sollemnitas inter rarissimas est quae natalem diem non mortis sed ipsius ortus sancti recolunt, honore quem sola Beata Virgo Maria et Dominus Iesus praeterea in Calendario obtinent.
+
+Ioannes, ultimus prophetarum Veteris Testamenti et primus testis Novi, in ipso ortu suo mysterium salutis annuntiat: eius nativitas mirabilis, sterilitate Elisabeth superata, praeparationem et gaudium adventus Messiae praesignat. Sollemnitas eius ideo non tantum vitam sancti particularis, sed ipsum mysterium Praecursoris celebrat, qui "viam Domini parare" ab utero matris destinatus est.
+
+Cultus Nativitatis Ioannis Baptistae ad antiquissima tempora Ecclesiae remontat, jam saeculo quarto in Oriente et Occidente pariter celebratus, coniunctus computo sex mensium inter Annuntiationem et Nativitatem Ioannis, deinde inter hanc et Nativitatem Domini, secundum Lucae narrationem. Instauratio liturgica anni MCMLXIX hanc sollemnitatem antiquissimam integre servavit, eius praecipuam dignitatem inter festivitates sanctorum agnoscens.
+
+Fideles hodierni per hanc sollemnitatem invitantur ad considerandam vocationem propriam iam ab utero materno a Deo praeparatam, atque ad missionem Praecursoris imitandam: minui ut Christus crescat, et viam Domini in corde proprio et in mundo humiliter parare.
+$desc$),
+
+('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'Sanctus Cyrillus Alexandrinus, episcopus et Ecclesiae doctor', $desc$
+Die vicesima septima mensis Iunii memoria ad libitum Sancti Cyrilli Alexandrini, episcopi et Ecclesiae doctoris, occurrit, colore albo, tempore per annum post Pentecosten. Hic dies unum ex magnis defensoribus fidei Christologicae et Mariologicae honorat.
+
+Cyrillus, adversus Nestorium pugnans, veritatem unius personae in Christo, Deo et homine, defendit, atque ex hac veritate consequenter titulum Beatae Virgini Mariae **Theotokos**, id est Deiparae, vindicavit. Eius theologia ostendit quomodo Mariologia semper ex Christologia proficiscatur, et quomodo defensio veri tituli Mariae ipsam fidem in Incarnationem Verbi tueatur.
+
+Episcopus Alexandrinus a saeculo quinto ineunte, Cyrillus in Concilio Ephesino anno CDXXXI praesedit, ubi Nestorii doctrina damnata est et titulus Theotokos sollemniter confirmatus. Obiit anno CDXLIV. Leo XIII eum anno MDCCCLXXXII Doctorem Ecclesiae declaravit, "Doctorem Incarnationis" appellans. Instauratio liturgica anni MCMLXIX memoriam eius ut ad libitum in Calendarium universale intulit, prius minus frequentatam extra traditionem Orientalem et Alexandrinam.
+
+Cyrilli exemplum fideles hodiernos invitat ad firmitatem in confessione plena mysterii Incarnationis, atque ad veram devotionem Marianam quae semper ex vera fide Christologica oriatur, non ab ea seiuncta.
+$desc$),
+
+('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Sanctus Irenaeus, episcopus, martyr et Ecclesiae doctor', $desc$
+Die vicesima octava mensis Iunii memoria obligatoria Sancti Irenaei, episcopi, martyris et Ecclesiae doctoris, celebratur, colore rubro insignita, tempore per annum post Pentecosten, pridie sollemnitatis Sanctorum Petri et Pauli. Titulus martyris, recentissime additus, huic memoriae peculiarem significationem confert inter festa mensis Iunii.
+
+Irenaeus, discipulus Polycarpi qui ipse a Ioanne Apostolo doctrinam acceperat, catenam traditionis apostolicae usque ad ipsos Apostolos viva voce transmisit, atque opere suo **Adversus Haereses** contra doctrinas gnosticas veritatem unitatis inter Deum Creatorem et Deum Redemptorem, atque integritatem historiae salutis, egregie defendit.
+
+Natus in Asia Minore circa medium saeculum secundum, Irenaeus episcopus Lugdunensis in Gallia factus est, ubi Ecclesiam post persecutionem gubernavit et pacem inter Ecclesias Orientis et Occidentis de quaestione paschali sedulo curavit; mortem eius circa annum CCII antiqua traditio martyrio ascribit, licet documenta certa desint. Instauratio Calendarii anni MCMLXIX eum inter doctores sine titulo martyris posuit, propter incertitudinem historicam; Papa Franciscus autem anno MMXXII, re accuratius considerata, titulum martyris illi restituit, eum "Doctorem Unitatis" nominans, ob eius studium ad unitatem Ecclesiae inter Orientem et Occidentem fovendam.
+
+Irenaei exemplum hodiernos ad quaerendam veram unitatem Ecclesiae, per fidelem traditionis apostolicae transmissionem, invitat, atque ad defensionem integritatis doctrinae contra ideologias quae hodie, sicut olim gnosticismus, fidem simplicem populi Dei subvertere conantur.
+$desc$),
+
+('saints-peter-and-paul-apostles', 'Sancti Petrus et Paulus, Apostoli', $desc$
+Die vicesima nona mensis Iunii Sollemnitas Sanctorum Petri et Pauli, Apostolorum, agitur, colore albo insignita, inter praecipuas totius anni sollemnitates. Haec dies festum patronale urbis Romae constituit et, in multis regionibus, praeceptum manet.
+
+Petrus et Paulus, licet vocatione et charismate diversissimi, unam eandemque Ecclesiam aedificant: alter fundamentum visibile unitatis et communionis, alter praeco audacissimus Evangelii ad gentes. Eorum coniuncta celebratio ostendit quomodo diversitas donorum in una eademque missione Ecclesiae ad unitatem convergat, potestate scilicet et amore.
+
+Ambo Romae sub Nerone martyrium passi sunt, Petrus cruce affixus, ut traditio narrat, capite deorsum verso, Paulus gladio decollatus, circa annum LXIV vel paulo post. Eorum sepulcra, in Vaticano et in Via Ostiensi, iam ab antiquissimis temporibus culta, fundamentum devotionis Romanae constituunt. Instauratio liturgica anni MCMLXIX hanc sollemnitatem antiquissimam, iam a saeculo quarto celebratam, integre confirmavit, eius praecipuam dignitatem inter omnes anni sollemnitates retinens.
+
+Fideles hodierni per hanc sollemnitatem invitantur ad considerandam pulchritudinem Ecclesiae quae in diversitate charismatum unita manet, atque ad imitandam fortitudinem duorum Apostolorum qui, humanis defectibus non obstantibus, usque ad supremum testimonium sanguinis Christo fideles perstiterunt.
+$desc$),
+
+('the-first-martyrs-of-holy-roman-church', 'Sancti Primi Martyres Sanctae Romanae Ecclesiae', $desc$
+Die trigesima mensis Iunii memoria ad libitum Sanctorum Primorum Martyrum Sanctae Romanae Ecclesiae recolitur, colore rubro insignita, statim post sollemnitatem Sanctorum Petri et Pauli collocata. Hi martyres, licet nominibus fere omnes ignoti, primam magnam persecutionem Christianorum Romae passam repraesentant.
+
+Horum martyrum anonymorum cultus ostendit quod sanctitas et fidelitas usque ad mortem non tantum insignibus personis, sed etiam multitudini fidelium simplicium, quorum nomina sola Deo nota sunt, propria est. Eorum memoria omnem persecutionis victimam, etiam ignotam mundo, tamquam testem authenticum Christi agnoscit.
+
+Anno LXIV, post incendium magnum urbis Romae, Nero Christianos, tamquam incendii auctores falso accusatos, atrocissimis suppliciis - crucibus, bestiis, ignibus - necavit, sicut historicus Tacitus in Annalibus suis testatur. Hi martyres, licet distincti a Petro et Paulo qui eodem tempore vel paulo post passi sunt, arctissime cum illis coniunguntur, tamquam prima magna moles sanguinis pro Christo Romae effusi. Instauratio liturgica anni MCMLXIX hanc memoriam, prius minus distincte in Calendario praesentem, ut ad libitum instituit, statim post sollemnitatem Apostolorum Petri et Pauli, ut fundamentum martyriale Ecclesiae Romanae plene appareat.
+
+Horum martyrum anonymorum exemplum hodiernos invitat ad memoriam omnium qui hodie quoque, in variis mundi partibus, fidem suam usque ad sanguinem sine nomine noto testificantur, atque ad gratitudinem erga fundamenta quae martyres primi Ecclesiae Romanae ipsis suis corporibus posuerunt.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
