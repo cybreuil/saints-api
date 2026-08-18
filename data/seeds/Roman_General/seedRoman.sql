@@ -3669,265 +3669,265 @@ SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
 ('saint-alphonsus-liguori-bishop-and-doctor-of-the-church', 'Saint Alphonsus Liguori, Bishop and Doctor of the Church', $desc$
-Kept on August 1 as an **obligatory memorial**, the feast of Saint Alphonsus Liguori honors a bishop and Doctor of the Church renowned above all as a moral theologian and founder of the Redemptorists. White vestments mark the day, and the memorial opens the month with a celebration of pastoral zeal placed at the service of ordinary sinners rather than the spiritually elite.
+Saint Alphonsus Liguori is honored as a bishop and Doctor of the Church, though he is remembered above all as a moral theologian who placed the whole weight of his learning at the service of ordinary sinners rather than the spiritually elite. In the Roman General Calendar his memorial opens the month of August, a fitting overture to a season rich in the witness of pastors and founders.
 
-The celebration commemorates Alphonsus's contribution to moral theology, above all his system of equiprobabilism, which steered a middle course between excessive rigorism and dangerous laxity in the confessional. His insistence that the sacraments, especially penance and the Eucharist, be administered with both fidelity to the law and tender mercy toward the penitent expresses the deeper conviction that grace seeks out the weak and the burdened rather than waiting for them to become strong.
+The heart of his legacy is a moral theology that steered a middle course between excessive rigorism and dangerous laxity, the system later known as equiprobabilism. His insistence that the sacraments, especially penance and the Eucharist, be administered with both fidelity to the law and tender mercy toward the penitent flows from a deeper conviction: that grace seeks out the weak and the burdened rather than waiting for them to become strong.
 
-Alphonsus founded the Congregation of the Most Holy Redeemer in 1732 to evangelize the rural poor neglected by more urban forms of pastoral care, and his vast body of writing, especially on prayer and devotion to Mary, shaped Catholic piety for generations after his death in 1787. He was declared a Doctor of the Church in 1871 in recognition of his enduring influence on moral theology and pastoral practice.
+Alphonsus founded the Congregation of the Most Holy Redeemer in 1732 to evangelize the rural poor neglected by more urban forms of pastoral care, and his vast writings, especially on prayer and devotion to Mary, shaped Catholic piety for generations after his death in 1787. He was declared a Doctor of the Church in 1871 in recognition of his enduring influence on moral theology and pastoral practice.
 
-The memorial today calls confessors and pastors to imitate Alphonsus's balance of firm truth and compassionate accompaniment, and it reminds the whole Church that sound doctrine exists to serve, not to burden, souls seeking reconciliation with God.
+His witness calls confessors and pastors to imitate his balance of firm truth and compassionate accompaniment, and it reminds the whole Church that sound doctrine exists to serve, not to burden, souls seeking reconciliation with God.
 $desc$),
 ('saint-eusebius-of-vercelli-bishop', 'Saint Eusebius of Vercelli, Bishop', $desc$
-Observed on August 2 as an **optional memorial**, the feast of Saint Eusebius of Vercelli commemorates one of the fourth century's staunchest defenders of Nicene orthodoxy against the Arian crisis that convulsed the Church. White vestments are worn, and the memorial's modest rank reflects how this day, shared with Saint Peter Julian Eymard, allows either commemoration or ferial observance according to local custom.
+Saint Eusebius of Vercelli stands among the fourth century's staunchest defenders of Nicene orthodoxy against the Arian crisis that convulsed the Church. He is remembered as a bishop who joined the rigors of ascetical life to the labors of episcopal governance, an unusual pairing that would prove influential in the centuries after him.
 
-The celebration honors a bishop who paid dearly in exile for his refusal to compromise the divinity of Christ, joining ascetical life with episcopal governance by gathering his clergy into a common life of prayer, an innovation that anticipated later forms of canonical religious life for priests. His witness testifies that fidelity to right doctrine and personal holiness are not separable pursuits but mutually reinforcing dimensions of episcopal ministry.
+His witness testifies that fidelity to right doctrine and personal holiness are not separable pursuits but mutually reinforcing dimensions of ministry. By gathering his clergy into a common life of prayer under a shared rule, he anticipated later forms of canonical religious life for priests, uniting the defense of the divinity of Christ with a discipline of conversion in his own household.
 
 Eusebius was banished by the Emperor Constantius II for his opposition to Arian formulas at the Council of Milan in 355, spending years in harsh exile in the East before being restored to his see, where he died around 371. His memory endured in the Piedmont region he had shepherded and eventually entered the universal calendar as a witness to courageous fidelity under imperial pressure.
 
-His example today encourages bishops and all the faithful to hold fast to revealed truth even when doing so carries real cost, trusting that the Church's unity in faith outlasts the passing pressures of any age.
+His example encourages bishops and all the faithful to hold fast to revealed truth even when doing so carries real cost, trusting that the Church's unity in faith outlasts the passing pressures of any age.
 $desc$),
 ('saint-peter-julian-eymard-priest', 'Saint Peter Julian Eymard, Priest', $desc$
-Kept on August 2 as an **optional memorial**, alongside Saint Eusebius of Vercelli, the feast of Saint Peter Julian Eymard honors a nineteenth-century French priest known as the Apostle of the Eucharist. White vestments are worn on this day dedicated to a life centered wholly on the Blessed Sacrament.
+Saint Peter Julian Eymard, a nineteenth-century French priest known as the Apostle of the Eucharist, gave his life to a single conviction: that the Blessed Sacrament is the source from which all Christian holiness and apostolic charity must flow. His whole vocation gathered itself around adoration of the Real Presence.
 
-The celebration lifts up Eymard's conviction that Eucharistic adoration is not a private devotion added onto pastoral life but the very heart from which apostolic charity must flow. His founding of the Congregation of the Blessed Sacrament and the Servants of the Blessed Sacrament gave institutional form to a spirituality centered on continuous adoration, reparation, and the reception of Communion as the wellspring of Christian holiness.
+For Eymard, Eucharistic adoration was never a private devotion added onto pastoral life but the very heart of it. His founding of the Congregation of the Blessed Sacrament and the Servants of the Blessed Sacrament gave institutional form to a spirituality centered on continuous adoration, reparation, and the reception of Communion as the wellspring of the Christian life.
 
-Born in 1811, Eymard served as a diocesan priest and later a Marist before founding his own congregations in 1856 and 1858 dedicated exclusively to Eucharistic worship, work that met with both admiration and initial ecclesiastical caution before gaining full approval. He died in 1868 and was canonized in 1962, during the Second Vatican Council's own renewed emphasis on the Eucharist as source and summit of the Christian life.
+Born in 1811, Eymard served as a diocesan priest and later a Marist before founding his own congregations in 1856 and 1858, dedicated exclusively to Eucharistic worship, work that met with both admiration and initial ecclesiastical caution before gaining full approval. He died in 1868 and was canonized in 1962, during the Second Vatican Council's own renewed emphasis on the Eucharist as source and summit of the Christian life.
 
-His memorial today invites the faithful to rediscover Eucharistic adoration as the source of apostolic energy, reminding the Church that mission flows most fruitfully from contemplative rest before the Real Presence of Christ.
+His witness invites the faithful to rediscover Eucharistic adoration as the source of apostolic energy, reminding the Church that mission flows most fruitfully from contemplative rest before the presence of Christ.
 $desc$),
 ('saint-jean-vianney-priest', 'Saint Jean Vianney, Priest', $desc$
-Celebrated on August 4 as an **obligatory memorial**, the feast of Saint Jean Vianney, the Curé of Ars, honors the patron saint of parish priests throughout the world. White vestments mark this day, which the Church keeps as an occasion to reflect on the dignity and demands of ordinary parish ministry.
+Saint John Vianney, the Curé of Ars, is honored throughout the world as the patron of parish priests, a man whose life reveals the dignity and the demands of ordinary parish ministry. His fame rests not on learning or eloquence but on a holiness that transfigured the humblest of pastoral assignments.
 
-The celebration commemorates a priest who, though possessing modest intellectual gifts by seminary standards, transformed a small, spiritually indifferent French village into a center of pilgrimage through relentless prayer, extraordinary penance, and above all countless hours spent hearing confessions. His ministry embodies the truth that pastoral fruitfulness depends less on human talent than on personal holiness and total availability to souls in need of mercy.
+Though possessing modest intellectual gifts by seminary standards, he transformed a small, spiritually indifferent village into a center of pilgrimage through relentless prayer, extraordinary penance, and above all countless hours spent hearing confessions. His ministry embodies the truth that pastoral fruitfulness depends less on human talent than on personal holiness and total availability to souls in need of mercy.
 
 Jean-Baptiste Vianney was ordained in 1815 despite great academic struggle and assigned in 1818 to the obscure parish of Ars, where he remained until his death in 1859, drawing tens of thousands of penitents from across France by the end of his life. Pope Pius XI declared him patron of parish priests in 1929, cementing his place as a model of pastoral charity exercised in the humblest of circumstances.
 
-His memorial today calls priests to renew their confidence in the sacrament of confession and their availability to the faithful, while inviting all Christians to appreciate the hidden, often unglamorous fidelity that sustains genuine pastoral care.
+His witness calls priests to renew their confidence in the sacrament of confession and their availability to the faithful, while inviting all Christians to appreciate the hidden, often unglamorous fidelity that sustains genuine pastoral care.
 $desc$),
 ('the-dedication-of-the-basilica-of-saint-mary-major', 'The Dedication of the Basilica of Saint Mary Major', $desc$
-Observed on August 5 as an **optional memorial**, this feast commemorates the dedication of the oldest Marian basilica in the West, built in Rome following the Council of Ephesus. White vestments are worn, celebrating a building whose very existence proclaims the dogma defined in 431 that Mary is truly Mother of God.
+This commemoration honors the dedication of the oldest Marian basilica in the West, raised in Rome in the wake of the Council of Ephesus. It is a feast of a building, yet a building whose very stones proclaim a doctrine: that Mary is truly the Mother of God.
 
-The observance is inseparable from that doctrinal moment: the basilica was raised as a monument in stone to the truth that the one Mary bore in her womb was, in his one Person, true God and true man. Its splendid mosaics, among the oldest and most theologically rich Marian art in Christendom, continue to instruct the faithful in the mysteries of the Incarnation and Mary's unique place within it.
+The observance is inseparable from that doctrinal moment. The basilica was raised as a monument in stone to the truth, defined at Ephesus in 431, that the one Mary bore in her womb was, in his one Person, true God and true man. Its splendid mosaics, among the oldest and most theologically rich Marian art in Christendom, continue to instruct the faithful in the mysteries of the Incarnation and Mary's unique place within it.
 
-Tradition recounts a miraculous summer snowfall on the Esquiline Hill that indicated where the church should be built, giving the basilica its popular title, Our Lady of the Snows; historically, Pope Sixtus III dedicated the basilica around 434-440 in the years immediately following Ephesus. It remains one of Rome's four papal major basilicas and houses a relic long venerated as part of the crib of Bethlehem.
+Tradition recounts a miraculous summer snowfall on the Esquiline Hill that marked out where the church should rise, giving the basilica its popular title, Our Lady of the Snows; historically, Pope Sixtus III dedicated it around 434-440, in the years immediately following Ephesus. It remains one of Rome's four papal major basilicas and houses a relic long venerated as part of the crib of Bethlehem.
 
-The memorial today invites the faithful to honor sacred architecture as a bearer of doctrine across centuries, and to renew devotion to Mary as Mother of God in the very city where that title was first solemnly vindicated.
+The commemoration invites the faithful to honor sacred architecture as a bearer of doctrine across centuries, and to renew devotion to Mary as Mother of God in the very city where that title was first solemnly vindicated.
 $desc$),
 ('the-transfiguration-of-the-lord', 'The Transfiguration of the Lord', $desc$
-Celebrated on August 6 as a **Feast of the Lord**, the Transfiguration commemorates the moment when Jesus revealed his divine glory to Peter, James, and John on the mountain, appearing radiant with Moses and Elijah at his side. White vestments are worn, and the feast's rank ensures it takes precedence over any weekday or optional memorial that might otherwise fall on this date.
+The Transfiguration commemorates the moment when Jesus revealed his divine glory to Peter, James, and John on the mountain, appearing radiant with Moses and Elijah at his side. In the Roman General Calendar it is kept as a Feast of the Lord, taking precedence over any weekday or optional memorial that might otherwise fall on the date, a rank that signals the mystery's weight within the Church's contemplation of Christ.
 
-Theologically, the feast anticipates the glory of the Resurrection even as it strengthens the disciples, and through them the whole Church, to face the scandal of the Cross that Jesus had just foretold. The presence of Moses and Elijah signifies that the Law and the Prophets find their fulfillment in Christ, while the Father's voice, "This is my beloved Son, listen to him," echoes the words spoken at the Baptism and points forward to the definitive revelation accomplished in the Paschal mystery.
+Theologically the feast anticipates the glory of the Resurrection even as it strengthens the disciples, and through them the whole Church, to face the scandal of the Cross that Jesus had just foretold. The presence of Moses and Elijah signifies that the Law and the Prophets find their fulfillment in Christ, while the Father's voice, "This is my beloved Son, listen to him," echoes the words spoken at the Baptism and points forward to the definitive revelation accomplished in the Paschal mystery.
 
-The feast has ancient roots in the Christian East, where it was kept as one of the Twelve Great Feasts from an early date, and it entered the Western calendar more gradually before being extended to the universal Church by Pope Callixtus III in 1456 in thanksgiving for a military victory over the Ottoman advance at Belgrade. Its date in high summer also situates it, in agricultural societies, near the traditional blessing of first fruits.
+The feast has ancient roots in the Christian East, where it was kept from an early date among the Twelve Great Feasts, and it entered the Western calendar more gradually before being extended to the universal Church by Pope Callixtus III in 1456 in thanksgiving for the deliverance of Belgrade from the Ottoman advance. Its place in high summer also situates it, in agricultural societies, near the traditional blessing of first fruits.
 
 Pastorally, the Transfiguration invites believers to hold together, as the disciples were asked to do, the mystery of suffering and the promise of glory, trusting that every trial faced in union with Christ is already illumined by the light glimpsed on the mountain.
 $desc$),
 ('saint-sixtus-ii-pope-and-companions-martyrs', 'Saint Sixtus II, Pope, and Companions, Martyrs', $desc$
-Kept on August 7 as an **optional memorial**, this feast honors Pope Sixtus II and several deacons martyred together during the persecution of the Emperor Valerian in 258. Red vestments mark the day, proper to the commemoration of martyrs who shed their blood for Christ.
+This commemoration honors Pope Sixtus II and several deacons martyred together during the persecution of the Emperor Valerian in 258. Theirs is a martyrdom of the sanctuary, for the pope was seized and killed while presiding at the Eucharistic liturgy in a Roman cemetery, with his deacons standing at his side rather than fleeing.
 
-The celebration recalls a pope who was seized and put to death while presiding at the Eucharistic liturgy in a Roman cemetery, together with deacons who stood at his side rather than flee. Their joint martyrdom illustrates the deep bond between the bishop of Rome and his closest collaborators, a bond of shared sacramental ministry that even mortal danger could not sever, and it prefigures the martyrdom of the deacon Lawrence, which followed only days later.
+Their joint death illustrates the deep bond between the bishop of Rome and his closest collaborators, a bond of shared sacramental ministry that even mortal danger could not sever. It also prefigures the martyrdom of the deacon Lawrence, who served under Sixtus and followed him in death only days afterward, so that the two commemorations of early August belong together as a single testimony.
 
-Valerian's edict of 258 specifically targeted the Christian clergy, ordering the immediate execution of bishops, priests, and deacons; Sixtus II was among the first Roman bishops to die under this decree, and his name was later inserted into the Roman Canon among the martyrs invoked at every Mass. His memory has been kept continuously in Rome since antiquity.
+Valerian's edict of 258 specifically targeted the Christian clergy, ordering the immediate execution of bishops, priests, and deacons; Sixtus II was among the first Roman bishops to die under it, and his name was later inserted into the Roman Canon among the martyrs invoked at Mass. His memory has been kept continuously in Rome since antiquity.
 
-The memorial today holds up the courage of those who remained faithful to their sacramental office even at the cost of life, encouraging clergy and faithful alike to see ministry itself as a form of witness that death cannot silence.
+The commemoration holds up the courage of those who remained faithful to their sacramental office even at the cost of life, encouraging clergy and faithful alike to see ministry itself as a form of witness that death cannot silence.
 $desc$),
 ('saint-cajetan-priest', 'Saint Cajetan, Priest', $desc$
-Observed on August 7 as an **optional memorial**, shared with Saint Sixtus II, the feast of Saint Cajetan honors a sixteenth-century Italian priest devoted to the renewal of clerical life and works of charity toward the poor and sick. White vestments are worn for this founder's memorial.
+Saint Cajetan was a sixteenth-century Italian priest who devoted himself to the renewal of clerical life and to works of charity toward the poor and the sick. He belongs to that generation of reformers who sought to purify the Church from within, decades before the Council of Trent gave such impulses their conciliar expression.
 
-The celebration commemorates Cajetan's central conviction that clergy reform begins with a return to apostolic simplicity: common life, unadorned trust in Providence rather than fixed income, and unflagging pastoral care for the abandoned, particularly the sick in hospitals and the poor pressed by usurious debt. His work anticipated by decades many of the reforming impulses later given conciliar expression at Trent.
+At the center of his life stood the conviction that reform of the clergy begins with a return to apostolic simplicity: common life, unadorned trust in Providence rather than fixed income, and unflagging care for the abandoned, especially the sick in hospitals and the poor crushed by usurious debt. For Cajetan, institutional reform and practical charity were a single work of the Gospel.
 
-Cajetan co-founded the Theatines in 1524, one of the first clerks regular congregations, alongside Gian Pietro Carafa, the future Pope Paul IV, and he later founded charitable pawnshops offering low-interest loans to protect the poor from exploitation, a forerunner of the Catholic monti di pietà tradition. He died in Naples in 1547 and was canonized in 1671.
+He co-founded the Theatines in 1524, one of the first congregations of clerks regular, alongside Gian Pietro Carafa, the future Pope Paul IV, and he later founded charitable pawnshops offering low-interest loans to shield the poor from exploitation, a forerunner of the Catholic monti di pietà. He died in Naples in 1547 and was canonized in 1671.
 
-His memorial today invites priests and the whole Church to examine how institutional reform and practical charity toward the economically vulnerable belong together as a single work of the Gospel, rather than as separate or competing concerns.
+His witness invites priests and the whole Church to see how the reform of institutions and love of the economically vulnerable belong together, rather than standing as separate or competing concerns.
 $desc$),
 ('saint-dominic-priest', 'Saint Dominic, Priest', $desc$
-Celebrated on August 8 as an **obligatory memorial**, the feast of Saint Dominic honors the founder of the Order of Preachers, one of the most influential religious families in the history of the Church. White vestments mark this day dedicated to a saint whose charism placed preaching and doctrinal formation at the center of consecrated life.
+Saint Dominic founded the Order of Preachers, one of the most influential religious families in the history of the Church, placing preaching and doctrinal formation at the very center of consecrated life. His charism married contemplative depth to active mission in a way that reshaped medieval Christianity.
 
-The celebration commemorates Dominic's founding insight that the fight against heresy and religious ignorance required not merely refutation but a new form of religious life combining rigorous study, communal poverty, and itinerant preaching. His vision joined contemplative depth with active mission, summed up in the Dominican motto to contemplate and to hand on to others the fruits of contemplation, a synthesis that continues to shape Catholic intellectual and pastoral life.
+His founding insight was that the struggle against heresy and religious ignorance required not merely refutation but a new form of religious life combining rigorous study, communal poverty, and itinerant preaching. The Dominican motto, to contemplate and to hand on to others the fruits of contemplation, captures a synthesis that continues to shape Catholic intellectual and pastoral life.
 
 Dominic founded his order in 1216 in response to the Albigensian crisis in southern France, securing papal approval from Honorius III, and he sent his first friars to the great university cities of Europe to root preaching in serious theological formation. He died in Bologna in 1221 and was canonized in 1234, leaving behind an order that would produce some of the Church's greatest theologians, including Saint Thomas Aquinas.
 
-His memorial today calls the faithful to esteem sound preaching and theological study as forms of charity toward souls hungry for truth, and it honors every effort to unite deep prayer with the courageous proclamation of the Gospel.
+His witness calls the faithful to esteem sound preaching and theological study as forms of charity toward souls hungry for truth, and it honors every effort to unite deep prayer with the courageous proclamation of the Gospel.
 $desc$),
 ('saint-teresa-benedicta-of-the-cross-virgin-and-martyr', 'Saint Teresa Benedicta of the Cross, Virgin and Martyr', $desc$
-Kept on August 9 as an **optional memorial**, the feast of Saint Teresa Benedicta of the Cross honors Edith Stein, the Jewish-born philosopher, Carmelite nun, and martyr murdered at Auschwitz in 1942. Red vestments mark the day, proper to a martyr's witness.
+Saint Teresa Benedicta of the Cross is the name in religion of Edith Stein, the Jewish-born philosopher and Carmelite nun murdered at Auschwitz in 1942. Her life gathers together, with rare intensity, the searching of modern philosophy, the depths of contemplative prayer, and the horror of the twentieth century's greatest crime.
 
-The celebration commemorates a woman whose journey from atheism through rigorous philosophical inquiry led her to baptism in 1922 and eventually to Carmel, where she embraced the name Teresa Benedicta of the Cross in recognition of the cross she perceived as her particular vocation, shared in solidarity with her Jewish people under Nazi persecution. Her death in the gas chambers, arrested precisely because of her Jewish ancestry despite her religious profession, unites the horror of the Shoah with the mystery of Christian martyrdom in a way the Church regards as deeply significant for the twentieth century.
+Her journey from atheism through rigorous philosophical inquiry led her to baptism in 1922 and eventually to Carmel, where she took the name Teresa Benedicta of the Cross in recognition of the cross she perceived as her particular vocation, borne in solidarity with her Jewish people under Nazi persecution. Her death in the gas chambers, arrested precisely because of her Jewish ancestry despite her religious profession, binds the Shoah to the mystery of Christian martyrdom in a way the Church regards as deeply significant.
 
-Stein was arrested in 1942 in reprisal for a Dutch bishops' letter condemning Nazi racial policies and was deported to Auschwitz, where she died on August 9 of that year. She was canonized in 1998 by Pope John Paul II, who later named her a co-patroness of Europe, holding her forward as a bridge figure between Judaism and Christianity and between rigorous intellectual life and total surrender to God.
+Stein was arrested in 1942 in reprisal for a Dutch bishops' letter condemning Nazi racial policies and deported to Auschwitz, where she died on the ninth of August that year. She was canonized in 1998 by Pope John Paul II, who later named her a co-patroness of Europe, holding her forward as a bridge between Judaism and Christianity and between rigorous intellectual life and total surrender to God.
 
-Her memorial today invites reflection on the compatibility of searching reason and living faith, and it stands as a solemn reminder of the Church's call to resist every ideology of hatred, especially antisemitism, with the witness of charity even unto death.
+Her witness invites reflection on the harmony of searching reason and living faith, and it stands as a solemn summons to resist every ideology of hatred, especially antisemitism, with the witness of charity even unto death.
 $desc$),
 ('saint-lawrence-deacon-and-martyr', 'Saint Lawrence, Deacon and Martyr', $desc$
-Celebrated on August 10 as a **Feast**, the memorial of Saint Lawrence ranks among the most ancient and beloved of the Roman martyrs' feasts, outranking the ordinary weekday and any optional memorial that might otherwise fall on this date. Red vestments mark the day, proper to a martyr's witness.
+Saint Lawrence ranks among the most ancient and beloved of the Roman martyrs, a deacon of the Roman Church whose fidelity gave rise to one of Christianity's most enduring images of courage. In the Roman General Calendar his celebration is kept as a Feast, a rare distinction for one who was neither bishop nor pope, and a measure of the devotion he inspired.
 
-The celebration honors a deacon of the Roman Church who, according to enduring tradition, was ordered by the civil authorities to hand over the treasures of the Church and instead presented the poor whom he served as the Church's true riches, a gesture that reveals with striking clarity the deacon's vocation to charity as itself sacred wealth. His reported martyrdom, roasted alive on a gridiron, became one of the most vivid images of steadfast faith in the entire martyrological tradition.
+According to enduring tradition, when the civil authorities ordered him to hand over the treasures of the Church, he presented instead the poor whom he served as the Church's true riches, a gesture that reveals with striking clarity the deacon's vocation to charity as itself a sacred wealth. His reported martyrdom, roasted alive on a gridiron, became one of the most vivid emblems of steadfast faith in the whole martyrological tradition.
 
-Lawrence died in 258, days after Pope Sixtus II under the same Valerianic persecution, and devotion to him grew with extraordinary speed in Rome; Saint Augustine and Saint Ambrose both preached on his courage, and numerous churches in Rome and beyond were dedicated in his honor within a few generations of his death. His feast has been kept with high solemnity in Rome since antiquity, a rare distinction for someone who was neither bishop nor pope.
+Lawrence died in 258, days after Pope Sixtus II under the same Valerianic persecution, and devotion to him grew with extraordinary speed; Saint Augustine and Saint Ambrose both preached on his courage, and churches in Rome and beyond were dedicated in his honor within a few generations. His feast has been kept with high solemnity in Rome since antiquity.
 
-His memorial today lifts up the diaconal ministry of charity as an essential and irreplaceable expression of the Church's life, encouraging deacons and all the faithful to recognize the poor as bearers of a wealth no persecution can seize.
+His witness lifts up the diaconal ministry of charity as an essential and irreplaceable expression of the Church's life, encouraging deacons and all the faithful to recognize the poor as bearers of a wealth no persecution can seize.
 $desc$),
 ('saint-clare-virgin', 'Saint Clare, Virgin', $desc$
-Observed on August 11 as an **obligatory memorial**, the feast of Saint Clare of Assisi honors the foundress of the Poor Clares and one of Saint Francis's earliest and most devoted followers. White vestments mark this day dedicated to a life of radical poverty and contemplative enclosure.
+Saint Clare of Assisi, foundress of the Poor Clares, was among Saint Francis's earliest and most devoted followers, and she gave the Franciscan movement its enduring form of contemplative enclosure lived in radical poverty. Her life is a mirror held up to the poor and crucified Christ.
 
-The celebration commemorates Clare's fierce insistence on the privilege of poverty, a way of life she defended before popes themselves as essential to her community's fidelity to the Gospel, refusing every offer of relaxed rules or guaranteed income for her sisters. Her spirituality, centered on gazing upon Christ crucified as in a mirror, models a contemplative life wholly oriented toward configuration to the poor and suffering Christ.
+She is remembered for her fierce insistence on the privilege of poverty, a way of life she defended before popes themselves as essential to her community's fidelity to the Gospel, refusing every offer of relaxed rules or guaranteed income for her sisters. Her spirituality, centered on gazing upon Christ crucified as in a mirror, orients the whole contemplative life toward configuration to the poor and suffering Lord.
 
 Clare fled her wealthy family's home in 1212 to join Francis's nascent movement, founding what became the Order of Poor Ladies at San Damiano, where she lived and governed for over forty years until her death in 1253, only two days after receiving papal confirmation of her Rule, the first religious rule known to have been written by a woman for women. She was canonized just two years later, in 1255.
 
-Her memorial today calls religious and laity alike to consider how radical poverty, far from impoverishing the human spirit, can free it for a more single-hearted contemplation of Christ, and it honors the enduring witness of enclosed contemplative life within the Church.
+Her witness calls religious and laity alike to consider how radical poverty, far from impoverishing the human spirit, can free it for a more single-hearted contemplation of Christ, and it honors the enduring gift of enclosed contemplative life within the Church.
 $desc$),
 ('saint-jane-frances-de-chantal-religious', 'Saint Jane Frances de Chantal, Religious', $desc$
-Kept on August 12 as an **optional memorial**, the feast of Saint Jane Frances de Chantal honors a French widow, mother, and foundress whose spiritual friendship with Saint Francis de Sales shaped one of the great collaborations of Catholic spirituality. White vestments mark this day of quiet, steady sanctity.
+Saint Jane Frances de Chantal was a French widow, mother, and foundress whose spiritual friendship with Saint Francis de Sales became one of the great collaborations in the history of Catholic spirituality. Her holiness unfolded quietly, woven through the successive states of an ordinary yet remarkable life.
 
-The celebration commemorates a life that embraced multiple vocations in sequence: devoted wife, grieving widow, attentive mother, and finally consecrated religious foundress, showing that holiness is not confined to a single state of life but can be woven through the changing circumstances Providence allows. Her collaboration with Francis de Sales in founding the Visitation Sisters gave institutional shape to a spirituality of gentleness, interior devotion, and accessibility to those, including the sick and elderly, excluded from stricter forms of religious life.
+Her sanctity embraced several vocations in sequence: devoted wife, grieving widow, attentive mother, and finally consecrated foundress, showing that holiness is not confined to a single state of life but can run through the changing circumstances Providence allows. Her partnership with Francis de Sales in founding the Visitation gave institutional shape to a spirituality of gentleness, interior devotion, and accessibility to those, including the sick and elderly, excluded from stricter forms of religious life.
 
-Widowed in 1601 after the accidental death of her husband, Jane Frances met Francis de Sales in 1604 and together they founded the Order of the Visitation of Holy Mary in 1610, a community intended to combine contemplative prayer with active charity without the austere penances of older orders. She died in 1641 and was canonized in 1767, leaving behind an order that continues her spirit of gentle, interior devotion.
+Widowed in 1601 after the accidental death of her husband, Jane Frances met Francis de Sales in 1604, and together they founded the Order of the Visitation of Holy Mary in 1610, a community meant to unite contemplative prayer with active charity apart from the austere penances of older orders. She died in 1641 and was canonized in 1767, leaving behind an order that still carries her spirit of gentle, interior devotion.
 
-Her memorial today encourages the faithful, especially those navigating major transitions in life such as bereavement or vocational change, to trust that God can draw forth new and fruitful callings from even the most painful turns of a life's story.
+Her witness encourages the faithful, especially those navigating bereavement or vocational change, to trust that God can draw forth new and fruitful callings even from the most painful turns of a life's story.
 $desc$),
 ('saints-pontian-pope-and-hippolytus-priest-martyrs', 'Saints Pontian, Pope, and Hippolytus, Priest, Martyrs', $desc$
-Observed on August 13 as an **optional memorial**, this feast honors two third-century Roman martyrs whose story is remarkable for reconciling a pope and a onetime rival within the same act of witness. Red vestments mark the day, proper to the commemoration of martyrs.
+This commemoration honors two third-century Roman martyrs whose story is remarkable for reconciling a pope and a onetime rival within a single act of witness. What began as bitter division ended as shared testimony, sealed in blood.
 
-The celebration recalls Pontian, the legitimate bishop of Rome, and Hippolytus, a learned priest and theologian who had for years stood at the head of a schismatic community opposed to the Roman see, both condemned together to the mines of Sardinia under imperial persecution. Tradition holds that the two were reconciled before their deaths, so that division within the Church's leadership gave way, under the pressure of suffering, to restored unity, an image the Church treasures as a sign that shared martyrdom can heal even the deepest ecclesial wounds.
+Pontian, the legitimate bishop of Rome, and Hippolytus, a learned priest and theologian who had for years led a schismatic community opposed to the Roman see, were condemned together to the mines of Sardinia under imperial persecution. Tradition holds that the two were reconciled before their deaths, so that division within the Church's leadership gave way, under the pressure of suffering, to restored unity, an image the Church treasures as a sign that shared martyrdom can heal even the deepest ecclesial wounds.
 
-Pontian resigned the papacy in 235 to make possible the election of a successor once he was condemned to hard labor in the Sardinian mines, an early and significant precedent for papal resignation; Hippolytus, whose extensive theological and liturgical writings remain influential, died in the same exile. Their remains were later returned to Rome for honorable burial, testifying to the Church's full restoration of their communion.
+Pontian resigned the papacy in 235 to allow the election of a successor once he was condemned to hard labor, an early and significant precedent for papal resignation; Hippolytus, whose extensive theological and liturgical writings remain influential, died in the same exile. Their remains were later returned to Rome for honorable burial, testifying to the Church's full restoration of their communion.
 
-Their shared memorial today speaks powerfully to the possibility of reconciliation even after serious ecclesial division, encouraging the faithful to seek unity in charity above the vindication of past disputes.
+Their witness speaks powerfully of the possibility of reconciliation even after serious ecclesial division, encouraging the faithful to seek unity in charity above the vindication of past disputes.
 $desc$),
 ('saint-maximus-the-confessor', 'Saint Maximus the Confessor', $desc$
-Kept on August 13 as an **optional memorial**, alongside Saints Pontian and Hippolytus, the feast of Saint Maximus the Confessor honors a seventh-century monk and theologian who suffered greatly in defense of the full humanity of Christ. White vestments mark this day of doctrinal witness.
+Saint Maximus the Confessor was a seventh-century monk and theologian who suffered greatly in defense of the full humanity of Christ. His title, the Confessor, marks him as one who bore witness to the faith through suffering short of death, and few have borne it at greater personal cost.
 
-The celebration commemorates Maximus's defense of dyothelitism, the teaching that Christ possesses both a divine and a human will acting in perfect harmony, against the Monothelite position favored by imperial authority, which held that Christ had only a single divine will. His insistence, on the principle that what is not assumed is not healed, safeguarded the reality of Christ's human freedom and, with it, the full scope of the redemption offered to humanity's own capacity to will and choose.
+He is remembered for his defense of the teaching that Christ possesses both a divine and a human will, acting in perfect harmony, against the Monothelite position favored by imperial authority, which held that Christ had only a single divine will. His insistence, on the principle that what is not assumed is not healed, safeguarded the reality of Christ's human freedom and, with it, the full scope of the redemption offered to humanity's own power to will and choose.
 
-For his opposition to imperial religious policy, Maximus suffered the amputation of his right hand and the removal of his tongue around 662, brutal punishments intended to silence both his writing and his preaching, and he died shortly afterward in exile in the Caucasus. His theological positions were vindicated at the Third Council of Constantinople in 680-681, which formally condemned Monothelitism.
+For his opposition to imperial religious policy, Maximus suffered the amputation of his right hand and the removal of his tongue around 662, brutal punishments meant to silence both his writing and his preaching, and he died shortly afterward in exile in the Caucasus. His theological positions were vindicated at the Third Council of Constantinople in 680-681, which formally condemned Monothelitism.
 
-His memorial today honors theologians and all believers who endure real suffering for the sake of doctrinal precision, reminding the Church that seemingly abstract questions about Christ's humanity carry immense consequences for the reality of human salvation.
+His witness honors theologians and all believers who endure real suffering for the sake of doctrinal precision, reminding the Church that seemingly abstract questions about Christ's humanity carry immense consequences for human salvation.
 $desc$),
 ('saint-maximilian-kolbe-priest-and-martyr', 'Saint Maximilian Kolbe, Priest and Martyr', $desc$
-Celebrated on August 14 as an **obligatory memorial**, the feast of Saint Maximilian Kolbe honors a twentieth-century Franciscan priest who offered his own life in exchange for that of a fellow prisoner at Auschwitz. Red vestments mark the day, proper to a martyr's witness, and the memorial falls fittingly on the vigil of the Assumption, uniting a modern act of self-gift with the Church's oldest Marian solemnity.
+Saint Maximilian Kolbe was a twentieth-century Franciscan priest who offered his own life in exchange for that of a fellow prisoner at Auschwitz. In the Roman General Calendar his memorial falls on the vigil of the Assumption, a placement that quietly unites a modern act of self-gift with the Church's most ancient Marian solemnity, since his whole life had been consecrated to the Immaculate.
 
-The celebration commemorates an act of substitutionary sacrifice in the starkest imaginable circumstances: when the Nazi camp authorities selected ten prisoners to die by starvation in reprisal for an escape, Kolbe volunteered to take the place of a married man with a family, a choice the Church reads as a luminous image of Christ's own self-offering for others. His lifelong Marian consecration, expressed through the Militia Immaculatae he founded, shaped a spirituality in which total surrender to Mary prepared him for total surrender of his own life.
+His death was an act of substitutionary sacrifice in the starkest imaginable circumstances: when the camp authorities selected ten prisoners to die by starvation in reprisal for an escape, Kolbe volunteered to take the place of a married man with a family, a choice the Church reads as a luminous image of Christ's own self-offering. His lifelong Marian consecration, expressed through the Militia Immaculatae he founded, shaped a spirituality in which total surrender to Mary prepared him for the total surrender of his life.
 
-Kolbe died on August 14, 1941, having survived two weeks of starvation before being killed by lethal injection, and the man whose life he saved, Franciszek Gajowniczek, survived the war and was present at Kolbe's canonization by Pope John Paul II in 1982, who declared him a martyr of charity.
+Kolbe died on the fourteenth of August, 1941, having survived two weeks of starvation before being killed by lethal injection. The man whose life he saved, Franciszek Gajowniczek, survived the war and was present when Pope John Paul II canonized Kolbe in 1982 and declared him a martyr of charity.
 
-His memorial today holds before the Church the possibility of heroic, freely chosen self-sacrifice for another, and it stands as an enduring sign that love proves stronger than the machinery of hatred and death.
+His witness holds before the Church the possibility of heroic, freely chosen self-sacrifice for another, and it stands as an enduring sign that love proves stronger than the machinery of hatred and death.
 $desc$),
 ('the-assumption-of-the-blessed-virgin-mary', 'The Assumption of the Blessed Virgin Mary', $desc$
-Celebrated on August 15 as a **Solemnity**, and in many countries a Holy Day of Obligation, the Assumption of the Blessed Virgin Mary ranks among the highest feasts of the Marian calendar. White vestments are worn, and the solemnity's rank ensures it prevails over every ordinary Sunday of the year on which it may fall, though not over a Sunday of Advent, Lent, or Easter.
+The Assumption of the Blessed Virgin Mary ranks among the highest feasts of the Marian year and is, in many countries, a Holy Day of Obligation. In the Roman General Calendar it is celebrated as a Solemnity, so weighty that it takes precedence over an ordinary Sunday of the year on which it may fall, a rank that expresses the mystery's place at the summit of the Church's hope.
 
-The solemnity proclaims the dogma, defined by Pope Pius XII in 1950, that Mary, at the end of her earthly life, was assumed body and soul into heavenly glory, a privilege flowing from her unique participation in her Son's victory over sin and death. As the first among the redeemed to share fully and bodily in the Resurrection's promise, Mary stands as the pledge and image of what awaits every faithful Christian at the end of the age, uniting the Church's Marian devotion inseparably to her hope in the resurrection of the body.
+The solemnity proclaims the dogma, defined by Pope Pius XII in 1950, that Mary, at the end of her earthly life, was assumed body and soul into heavenly glory, a privilege flowing from her unique participation in her Son's victory over sin and death. As the first among the redeemed to share fully and bodily in the promise of the Resurrection, Mary stands as the pledge and image of what awaits every faithful Christian, binding the Church's Marian devotion inseparably to her hope in the resurrection of the body.
 
-Belief in Mary's bodily assumption is attested in both East and West from the early centuries, celebrated liturgically as the Dormition in the Byzantine tradition and gradually incorporated into the Roman calendar by the seventh century, long before its formal dogmatic definition. Pope Pius XII's 1950 constitution Munificentissimus Deus gave definitive doctrinal expression to a belief already deeply rooted in the Church's ancient liturgical and devotional life.
+Belief in Mary's bodily assumption is attested in both East and West from the early centuries, celebrated liturgically as the Dormition in the Byzantine tradition and gradually incorporated into the Roman calendar by the seventh century, long before its formal definition. Pope Pius XII's constitution Munificentissimus Deus gave definitive doctrinal expression to a belief already deeply rooted in the Church's ancient liturgical and devotional life.
 
-The solemnity today invites the faithful to entrust their own hope of bodily resurrection to Mary's intercession, and it remains, in many cultures, an occasion for popular processions, blessings of harvests, and communal festivity that binds devotion to Mary with gratitude for the goodness of creation.
+The solemnity invites the faithful to entrust their own hope of bodily resurrection to Mary's intercession, and it remains, in many cultures, an occasion for processions, blessings of the harvest, and communal festivity that binds devotion to Mary with gratitude for the goodness of creation.
 $desc$),
 ('saint-stephen-of-hungary', 'Saint Stephen of Hungary', $desc$
-Kept on August 16 as an **optional memorial**, the feast of Saint Stephen of Hungary honors the first Christian king of Hungary, credited with establishing the Church and Christian civil order throughout his realm. White vestments mark this day dedicated to a model of Christian statesmanship.
+Saint Stephen of Hungary was the first Christian king of his people, credited with establishing both the Church and a Christian civil order across his realm. He is honored as a model of Christian statesmanship, in whom royal power became an instrument of the Gospel.
 
-The celebration commemorates a ruler who understood royal authority as inseparable from responsibility for the spiritual welfare of his people, founding dioceses, monasteries, and churches while codifying laws that protected the weak and promoted the practice of the Christian faith throughout a still largely pagan land. His reign illustrates how legitimate political power, rightly exercised, can serve rather than compete with the mission of the Church.
+He understood royal authority as inseparable from responsibility for the spiritual welfare of his people, founding dioceses, monasteries, and churches while codifying laws that protected the weak and fostered the practice of the faith throughout a still largely pagan land. His reign illustrates how legitimate political power, rightly exercised, can serve rather than rival the mission of the Church.
 
-Crowned King of Hungary around the year 1000 with a crown traditionally linked to Pope Sylvester II, Stephen worked tirelessly to consolidate both the political unity and the Christian evangelization of his kingdom before his death in 1038; he was canonized in 1083 alongside his son Emeric, a rare instance of both a ruler and his heir being honored as saints.
+Crowned King of Hungary around the year 1000 with a crown traditionally linked to Pope Sylvester II, Stephen labored tirelessly to secure both the political unity and the Christian evangelization of his kingdom until his death in 1038; he was canonized in 1083 alongside his son Emeric, a rare instance of a ruler and his heir honored together as saints.
 
-His memorial today offers political leaders a model of authority exercised in service of the common good and the flourishing of the faith, and it encourages the Christian faithful to see in legitimate civil governance a field open to sanctification rather than an obstacle to it.
+His witness offers political leaders a model of authority exercised in service of the common good and the flourishing of the faith, and it encourages the faithful to see in legitimate civil governance a field open to sanctification rather than an obstacle to it.
 $desc$),
 ('saint-john-eudes-priest', 'Saint John Eudes, Priest', $desc$
-Observed on August 19 as an **optional memorial**, the feast of Saint John Eudes honors a seventeenth-century French priest who pioneered devotion to the Sacred Heart of Jesus and the Immaculate Heart of Mary. White vestments mark this day dedicated to a founder whose theological insight would later flower into one of the Church's most cherished devotions.
+Saint John Eudes was a seventeenth-century French priest who pioneered devotion to the Sacred Heart of Jesus and the Immaculate Heart of Mary, giving liturgical shape to a piety that would later spread through the whole Church. His theological instinct anticipated one of Catholicism's most cherished devotions.
 
-The celebration commemorates John Eudes's role as a forerunner of Sacred Heart spirituality, composing liturgical texts in honor of the Hearts of Jesus and Mary decades before the private revelations to Saint Margaret Mary Alacoque gave the devotion wider popular expression. His preaching and pastoral labor throughout Normandy also placed great emphasis on the reform of clerical formation, a concern that led to one of his most lasting institutional contributions.
+He composed liturgical texts in honor of the Hearts of Jesus and Mary decades before the private revelations to Saint Margaret Mary Alacoque gave the devotion its wider popular expression. His preaching and pastoral labor throughout Normandy also placed great weight on the reform of clerical formation, a concern that bore fruit in one of his most lasting institutional achievements.
 
-Eudes founded the Congregation of Jesus and Mary, known as the Eudists, in 1643, dedicated especially to the establishment of seminaries for the proper formation of priests, and he later founded the Order of Our Lady of Charity to care for women in difficult circumstances. He died in 1680 and was canonized in 1925, with Pope Pius XI recognizing him as father, doctor, and apostle of the liturgical cult of the Hearts of Jesus and Mary.
+Eudes founded the Congregation of Jesus and Mary, known as the Eudists, in 1643, dedicated especially to the establishment of seminaries for the proper formation of priests, and he later founded the Order of Our Lady of Charity to care for women in difficult circumstances. He died in 1680 and was canonized in 1925, with Pope Pius XI hailing him as father, doctor, and apostle of the liturgical cult of the Hearts of Jesus and Mary.
 
-His memorial today invites the faithful to deepen devotion to the Sacred and Immaculate Hearts as a school of love uniting contemplation of Christ's mercy with imitation of Mary's interior union with her Son.
+His witness invites the faithful to deepen devotion to the Sacred and Immaculate Hearts as a school of love, uniting contemplation of Christ's mercy with imitation of Mary's interior union with her Son.
 $desc$),
 ('saint-bernard-abbot-and-doctor-of-the-church', 'Saint Bernard, Abbot and Doctor of the Church', $desc$
-Celebrated on August 20 as an **obligatory memorial**, the feast of Saint Bernard of Clairvaux honors one of the most influential monastic reformers and mystical theologians of the Middle Ages. White vestments mark this day dedicated to a Doctor whose eloquence shaped both monastic spirituality and the wider life of the medieval Church.
+Saint Bernard of Clairvaux was one of the most influential monastic reformers and mystical theologians of the Middle Ages, an abbot whose eloquence shaped both the interior life of monks and the wider affairs of the Church. He is often called the Marian Doctor for the tenderness of his devotion to the Mother of God.
 
-The celebration commemorates Bernard's decisive role in reforming and expanding the Cistercian order, whose austere observance he made a byword for monastic fervor, and his mystical theology centered on love as the path by which the soul is drawn into union with God, expressed above all in his celebrated sermons on the Song of Songs. His tender devotion to Mary, from whom he is traditionally called the Marian Doctor, wove contemplative theology together with warm affective piety in a manner that influenced centuries of spiritual writing.
+His mystical theology centered on love as the path by which the soul is drawn into union with God, expressed above all in his celebrated sermons on the Song of Songs, while his reform gave the Cistercian order its byword of austere fervor. In him contemplative depth and warm affective piety were woven together in a manner that would influence centuries of spiritual writing.
 
-Bernard entered Cîteaux in 1112 and founded Clairvaux in 1115, from which the Cistercian reform spread rapidly across Europe; he also intervened decisively in the wider affairs of the Church, preaching the Second Crusade and playing a central role in resolving a papal schism. He died in 1153 and was canonized in 1174, later being declared a Doctor of the Church in 1830.
+Bernard entered Cîteaux in 1112 and founded Clairvaux in 1115, from which the Cistercian reform spread rapidly across Europe; he also intervened decisively in the wider life of the Church, preaching the Second Crusade and helping to resolve a papal schism. He died in 1153 and was canonized in 1174, later being declared a Doctor of the Church in 1830.
 
-His memorial today invites the faithful to seek God not merely through argument but through the transforming experience of love, and it holds up monastic life as a wellspring of theology capable of enriching the whole Church.
+His witness invites the faithful to seek God not merely through argument but through the transforming experience of love, and it holds up monastic life as a wellspring of theology capable of enriching the whole Church.
 $desc$),
 ('saint-pius-x-pope', 'Saint Pius X, Pope', $desc$
-Kept on August 21 as an **obligatory memorial**, the feast of Saint Pius X honors a pope remembered above all for his pastoral reforms concerning the Eucharist and his resistance to theological modernism. White vestments mark this day dedicated to a pontiff whose motto, to restore all things in Christ, guided a wide-ranging program of renewal.
+Saint Pius X is remembered above all for his pastoral reforms concerning the Eucharist and for his resistance to theological modernism. His motto, to restore all things in Christ, guided a wide-ranging program of renewal that touched the ordinary life of every Catholic.
 
-The celebration commemorates Pius X's most enduring pastoral legacy: lowering the age for First Communion to the age of reason and encouraging frequent, even daily, Communion among the faithful, decisions that reshaped ordinary Catholic practice by restoring immediate access to the Eucharist as nourishment for everyday discipleship rather than a rare and solemn exception. He likewise promoted the reform of Gregorian chant and catechetical instruction, seeking a Church whose worship and teaching were both accessible and doctrinally sound.
+His most enduring pastoral legacy was to lower the age for First Communion to the age of reason and to encourage frequent, even daily, Communion, decisions that reshaped ordinary Catholic practice by restoring immediate access to the Eucharist as nourishment for everyday discipleship rather than a rare and solemn exception. He likewise promoted the reform of Gregorian chant and of catechetical instruction, seeking a Church whose worship and teaching were both accessible and doctrinally sound.
 
 Born Giuseppe Sarto in 1835, he was elected pope in 1903 and undertook a significant codification of canon law, later completed under his successor, along with a firm response to modernist currents he judged incompatible with the Church's doctrinal integrity. He died in 1914, shortly after the outbreak of the First World War, and was canonized in 1954.
 
-His memorial today invites the faithful to appreciate ready access to the Eucharist as central to Christian life, and it commends careful discernment between authentic doctrinal development and currents that would dissolve the faith's coherence.
+His witness invites the faithful to treasure ready access to the Eucharist as central to Christian life, and it commends careful discernment between authentic doctrinal development and currents that would dissolve the coherence of the faith.
 $desc$),
 ('the-queenship-of-the-blessed-virgin-mary', 'The Queenship of the Blessed Virgin Mary', $desc$
-Observed on August 22 as an **obligatory memorial**, the feast of the Queenship of Mary was deliberately placed to conclude the octave of the Assumption, drawing out the logical consequence of Mary's bodily glorification. White vestments mark the day, proclaiming Mary's share in her Son's royal dignity.
+The Queenship of Mary draws out the logical consequence of her bodily glorification: she who was assumed into heaven now shares in her Son's royal dignity. In the Roman General Calendar the memorial falls on the octave day of the Assumption, deliberately placed one week after that solemnity so that the crowning of the Virgin flows directly from her being taken up into glory.
 
-The celebration proclaims that Mary, assumed body and soul into heaven, now reigns with Christ as Queen of heaven and earth, a queenship rooted not in worldly power but in her unique cooperation with the redemption and her perfect conformity to her Son, the King of the universe. Her royal dignity is thus inseparable from her humility, since it is precisely as the lowly handmaid of the Lord that she was exalted above every creature.
+The celebration proclaims that Mary, assumed body and soul into heaven, reigns with Christ as Queen of heaven and earth, a queenship rooted not in worldly power but in her unique cooperation with the redemption and her perfect conformity to her Son, the King of the universe. Her royal dignity is thus inseparable from her humility, since it was precisely as the lowly handmaid of the Lord that she was exalted above every creature.
 
-Devotion to Mary's queenship has ancient roots in Christian art and hymnody, but the feast in its current form was instituted by Pope Pius XII in 1954 in the encyclical Ad Caeli Reginam, marking the centenary year of the dogma of the Immaculate Conception and deliberately linked to the Assumption defined just four years earlier.
+Devotion to Mary's queenship has ancient roots in Christian art and hymnody, but the feast in its present form was instituted by Pope Pius XII in 1954, in the encyclical Ad Caeli Reginam, marking the centenary of the dogma of the Immaculate Conception and deliberately linked to the Assumption defined just four years earlier.
 
-The memorial today invites the faithful to approach Mary with the confidence due a mother who reigns as queen, entrusting to her intercession every need of the Church and the world, while recalling that all true royal dignity in the Kingdom of God is exercised, as hers was, through humble service.
+The memorial invites the faithful to approach Mary with the confidence due a mother who reigns as queen, entrusting to her every need of the Church and the world, while recalling that all true royal dignity in the Kingdom of God is exercised, as hers was, through humble service.
 $desc$),
 ('saint-rose-of-lima-virgin', 'Saint Rose of Lima, Virgin', $desc$
-Kept on August 23 as an **optional memorial**, the feast of Saint Rose of Lima honors the first canonized saint of the Americas, a laywoman renowned for extraordinary penance and mystical prayer in colonial Peru. White vestments mark this day dedicated to a singular flowering of holiness in the New World.
+Saint Rose of Lima was the first canonized saint of the Americas, a laywoman renowned for extraordinary penance and mystical prayer in colonial Peru. Her holiness marked a singular flowering of sanctity in the newly evangelized New World.
 
-The celebration commemorates Rose's radical embrace of penitential asceticism, undertaken as a Dominican tertiary living within her family home rather than in a convent, expressing a conviction that intense suffering, freely accepted, could be united to Christ's own passion for the salvation of souls. Her care for the poor, the sick, and indigenous peoples of Lima accompanied her contemplative life, showing that rigorous asceticism and practical charity are not opposed but can flow from a single, consuming love of God.
+She embraced a radical penitential asceticism, undertaken as a Dominican tertiary living within her family home rather than in a convent, out of a conviction that intense suffering, freely accepted, could be united to Christ's own passion for the salvation of souls. Her care for the poor, the sick, and the indigenous peoples of Lima accompanied her contemplative life, showing that rigorous asceticism and practical charity are not opposed but can flow from a single, consuming love of God.
 
-Born Isabel Flores de Oliva in Lima in 1586, she took the religious name Rose and lived as a Dominican tertiary, dying in 1617; she was canonized in 1671 by Pope Clement X, becoming the first person born in the Americas to be so honored, and was later named patroness of Latin America, the Philippines, and the Indies.
+Born Isabel Flores de Oliva in Lima in 1586, she took the religious name Rose and lived as a Dominican tertiary until her death in 1617; she was canonized in 1671 by Pope Clement X, the first person born in the Americas to be so honored, and was later named patroness of Latin America, the Philippines, and the Indies.
 
-Her memorial today honors the vocation of lay penitents and tertiaries within the Church, and it stands as a sign of the flourishing sanctity that took root in the newly evangelized lands of the Americas from the Church's earliest missionary encounter with the continent.
+Her witness honors the vocation of lay penitents and tertiaries within the Church, and it stands as a sign of the sanctity that took root in the newly evangelized lands of the Americas from the Church's earliest missionary encounter with the continent.
 $desc$),
 ('saint-bartholomew-apostle', 'Saint Bartholomew, Apostle', $desc$
-Celebrated on August 24 as a **Feast**, the memorial of Saint Bartholomew the Apostle honors one of the Twelve chosen by Christ, traditionally identified with the Nathanael of John's Gospel. Red vestments mark the day, proper to the commemoration of an apostle whose witness culminated in martyrdom.
+Saint Bartholomew was one of the Twelve chosen by Christ, traditionally identified with the Nathanael of John's Gospel. In the Roman General Calendar his celebration is kept as a Feast, the rank proper to the apostles, whose foundational place in the Church the liturgy honors above the ordinary memorials of the saints.
 
-The celebration commemorates a disciple whom Jesus himself praised as an Israelite in whom there is no duplicity, a description the Church reads as a model of the guileless faith to which every believer is called. Tradition holds that Bartholomew carried the Gospel to distant lands, including Armenia and India, and that he suffered a particularly severe martyrdom, traditionally by flaying, a fate later immortalized in Christian art, most famously in Michelangelo's Last Judgment.
+Jesus himself praised him as an Israelite in whom there is no duplicity, a description the Church reads as a model of the guileless faith to which every believer is called. Tradition holds that Bartholomew carried the Gospel to distant lands, including Armenia and India, and that he suffered a particularly severe martyrdom, traditionally by flaying, a fate later immortalized in Christian art, most famously in Michelangelo's Last Judgment.
 
-Little historical detail survives beyond the Gospel references naming him among the Twelve, but ancient tradition consistently associates him with missionary activity in Armenia, where he is venerated as a founding apostle of that ancient Christian nation, and his relics have been the object of devotion in Rome and elsewhere since antiquity.
+Little historical detail survives beyond the Gospel references that name him among the Twelve, but ancient tradition consistently associates him with missionary labor in Armenia, where he is venerated as a founding apostle of that ancient Christian nation, and his relics have been objects of devotion in Rome and elsewhere since antiquity.
 
-His memorial today invites believers to imitate the transparency of heart for which Christ commended him, and it honors the missionary courage of apostles who carried the Gospel to the ends of the known world at the cost of their own lives.
+His witness invites believers to imitate the transparency of heart for which Christ commended him, and it honors the missionary courage of apostles who carried the Gospel to the ends of the known world at the cost of their own lives.
 $desc$),
 ('saint-louis', 'Saint Louis', $desc$
-Observed on August 25 as an **optional memorial**, shared with Saint Joseph Calasanz, the feast of Saint Louis honors King Louis IX of France, remembered as a model of Christian kingship marked by justice, personal austerity, and devotion to the poor. White vestments mark this day dedicated to sanctity exercised amid the exercise of temporal power.
+Saint Louis, King Louis IX of France, is remembered as a model of Christian kingship marked by justice, personal austerity, and devotion to the poor. In him sanctity was exercised not apart from temporal power but in its very midst, sanctifying the demanding office of a medieval monarch.
 
-The celebration commemorates a monarch who understood his royal office as a trust to be exercised for the good of his subjects rather than for personal aggrandizement, reforming the French judicial system to curb abuses, personally hearing the grievances of the poor beneath an oak tree at Vincennes, and observing rigorous personal penance despite the trappings of royal luxury available to him. His participation in two Crusades, though militarily unsuccessful and ending in his own death, was undertaken from sincere religious conviction rather than mere political ambition.
+He understood his royal office as a trust to be exercised for the good of his subjects rather than for personal aggrandizement, reforming the administration of justice, tending personally to the sick and the destitute, and setting the honesty of a Christian ruler above the calculations of statecraft. His life gave the later Middle Ages its enduring ideal of the just and pious king.
 
-Louis IX reigned as King of France from 1226 until his death in 1270 during the Eighth Crusade near Tunis, and he was canonized in 1297 by Pope Boniface VIII, becoming one of the few kings of France honored as a saint and a touchstone for the ideal of Christian monarchy throughout the later Middle Ages.
+Louis IX reigned as King of France from 1226 until his death in 1270 during the Eighth Crusade near Tunis, and he was canonized in 1297 by Pope Boniface VIII, becoming one of the few kings of France honored as a saint and a touchstone for the ideal of Christian monarchy for centuries afterward.
 
-His memorial today offers those who exercise public authority a model of governance ordered to justice and care for the vulnerable, and it reminds the whole Church that worldly power, when animated by genuine faith, can become a genuine instrument of holiness.
+His witness offers those who exercise public authority a model of governance ordered to justice and care for the vulnerable, and it reminds the whole Church that worldly power, when animated by genuine faith, can become a real instrument of holiness.
 $desc$),
 ('saint-joseph-calasanz-priest', 'Saint Joseph Calasanz, Priest', $desc$
-Kept on August 25 as an **optional memorial**, alongside Saint Louis, the feast of Saint Joseph Calasanz honors the founder of the first free public schools in Europe dedicated to the education of poor children. White vestments mark this day dedicated to a pioneer of Christian education.
+Saint Joseph Calasanz founded the first free public schools in Europe dedicated to the education of poor children, and he is honored as a pioneer of Christian education. His life bound the mission of the Church to the classroom, seeing in the instruction of the young a work of the Gospel.
 
-The celebration commemorates Calasanz's conviction that education was among the most powerful instruments for lifting children out of poverty and ignorance, and that this work belonged properly to the mission of the Church rather than to charity alone, since the formation of intellect and conscience together prepares children for both temporal flourishing and eternal salvation. His insistence on free, quality schooling for the poor anticipated by centuries later developments in universal education.
+He was convinced that education was among the most powerful instruments for lifting children out of poverty and ignorance, and that this work belonged properly to the mission of the Church, since the formation of intellect and conscience together prepares children for both temporal flourishing and eternal salvation. His insistence on free, quality schooling for the poor anticipated by centuries later movements toward universal education.
 
-Calasanz founded the Piarist order in Rome in 1597 to establish and staff schools for poor children, facing significant institutional difficulties and even a temporary suppression of his congregation late in his life before it was ultimately restored; he died in 1648, and the Piarists were fully vindicated and later flourished across Europe. He was canonized in 1767.
+Calasanz founded the Piarist order in Rome in 1597 to establish and staff schools for poor children, facing significant institutional difficulties and even a temporary suppression of his congregation late in his life before it was ultimately restored; he died in 1648, and the Piarists were later vindicated and flourished across Europe. He was canonized in 1767.
 
-His memorial today honors the dignity of teaching as a form of charity and evangelization, and it encourages the Church to continue prioritizing the education of the poor as an essential dimension of its mission in the world.
+His witness honors the dignity of teaching as a form of charity and evangelization, and it encourages the Church to keep the education of the poor among the essential dimensions of its mission in the world.
 $desc$),
 ('saint-monica', 'Saint Monica', $desc$
-Celebrated on August 27 as an **obligatory memorial**, the feast of Saint Monica honors a mother whose persevering prayer and tears accompanied the long conversion of her son, Saint Augustine of Hippo. White vestments mark this day, fittingly placed on the eve of her son's own memorial.
+Saint Monica is honored as the mother whose persevering prayer and tears accompanied the long conversion of her son, Saint Augustine of Hippo. In the Roman General Calendar her memorial stands on the eve of her son's own, so that the intercessor and the fruit of her prayers are commemorated on successive days.
 
-The celebration commemorates a model of maternal faith exercised through decades of patient intercession, enduring a difficult marriage and years of anguish over her son's wayward youth and adherence to Manichaean error before witnessing, near the very end of her life, his baptism and conversion to the Catholic faith. Her example demonstrates that persevering prayer, sustained even when its answer seems endlessly deferred, remains one of the most powerful forms of participation in another soul's salvation.
+Hers is a model of maternal faith exercised through decades of patient intercession, enduring a difficult marriage and years of anguish over her son's wayward youth and adherence to Manichaean error before witnessing, near the very end of her life, his baptism and conversion to the Catholic faith. Her example shows that persevering prayer, sustained even when its answer seems endlessly deferred, remains one of the most powerful forms of participation in another soul's salvation.
 
-Monica followed her son from North Africa to Italy, praying constantly for his conversion, and was present in Milan for his baptism by Saint Ambrose in 387; she died later that same year at Ostia, as her son later recounted movingly in his Confessions, in a scene of shared mystical contemplation with Augustine that remains one of the most celebrated passages in Christian literature.
+Monica followed her son from North Africa to Italy, praying constantly for his conversion, and was present in Milan for his baptism by Saint Ambrose in 387; she died later that same year at Ostia, in a scene of shared mystical contemplation with Augustine that he later recounted movingly in his Confessions, among the most celebrated passages in Christian literature.
 
-Her memorial today comforts every parent who prays for a wayward child, holding up hope that grace can accomplish, in God's own time, what human effort and worry alone cannot achieve.
+Her witness comforts every parent who prays for a wayward child, holding up the hope that grace can accomplish, in God's own time, what human effort and worry alone cannot achieve.
 $desc$),
 ('saint-augustine-of-hippo-bishop-and-doctor-of-the-church', 'Saint Augustine of Hippo, Bishop and Doctor of the Church', $desc$
-Kept on August 28 as an **obligatory memorial**, the feast of Saint Augustine of Hippo honors one of the most influential theologians in the history of Western Christianity, whose writings shaped Catholic doctrine on grace, the Trinity, and the nature of the Church for over a millennium and a half. White vestments mark this day dedicated to a towering Doctor of the Church.
+Saint Augustine of Hippo is among the most influential theologians in the history of Western Christianity, whose writings shaped Catholic doctrine on grace, the Trinity, and the nature of the Church for over a millennium and a half. In the Roman General Calendar his memorial follows immediately upon that of his mother Monica, whose prayers the Church credits with his conversion.
 
-The celebration commemorates Augustine's dramatic conversion from a restless life of ambition and disordered love, movingly recounted in his Confessions, to a life wholly given over to God, a Godward journey he famously summarized in his conviction that the human heart remains restless until it rests in God. His theological legacy, especially his teaching on grace developed against the Pelagian controversy, established the framework within which the Western Church would understand human freedom, sin, and divine mercy for centuries afterward.
+His life turned upon a dramatic conversion from restless ambition and disordered love, movingly recounted in his Confessions, to a life wholly given to God, a journey he summed up in his famous conviction that the human heart remains restless until it rests in God. His theological legacy, especially his teaching on grace developed against the Pelagian controversy, established the framework within which the Western Church would understand human freedom, sin, and divine mercy for centuries.
 
-Baptized by Saint Ambrose in Milan in 387 through the prayers of his mother Monica, Augustine returned to North Africa, was ordained a priest and later bishop of Hippo in 395, and produced an immense body of writing, including the City of God, before his death in 430 as the Vandals besieged his city, marking the twilight of Roman Africa.
+Baptized by Saint Ambrose in Milan in 387 through the prayers of his mother, Augustine returned to North Africa, was ordained a priest and then bishop of Hippo in 395, and produced an immense body of writing, including the City of God, before his death in 430 as the Vandals besieged his city, at the twilight of Roman Africa.
 
-His memorial today invites believers to trust that no life is too disordered for grace to reach, and it commends sustained theological reflection on grace and freedom as an enduring service the Church owes to every generation of believers.
+His witness invites believers to trust that no life is too disordered for grace to reach, and it commends sustained reflection on grace and freedom as an enduring service the Church owes to every generation.
 $desc$),
 ('the-passion-of-saint-john-the-baptist-martyr', 'The Passion of Saint John the Baptist, Martyr', $desc$
-Observed on August 29 as an **obligatory memorial**, this feast, commonly called the Beheading of Saint John the Baptist, commemorates the martyrdom of the last and greatest of the Old Testament prophets, the herald of Christ. Red vestments mark the day, proper to a martyr's witness, closing the summer cycle of saints with the death of the one who first proclaimed the Lamb of God.
+This commemoration, commonly called the Beheading of Saint John the Baptist, marks the martyrdom of the last and greatest of the Old Testament prophets, the herald of Christ. He who first pointed to the Lamb of God now precedes him even into death.
 
-The celebration recalls the Gospel account of Herod's unlawful marriage to Herodias, John's fearless denunciation of that union as contrary to the law of God, and his subsequent beheading at the request of Herodias's daughter, a death exacted through royal vanity and reckless oath rather than any legal process. John's martyrdom for defending the sanctity of marriage against political convenience stands as the culmination of his entire mission: having pointed to Christ throughout his life, he now precedes him even into death, prefiguring the Lord's own unjust condemnation.
+It recalls the Gospel account of Herod's unlawful marriage to Herodias, John's fearless denunciation of that union as contrary to the law of God, and his beheading at the request of Herodias's daughter, a death exacted through royal vanity and a reckless oath rather than any process of law. John's martyrdom for defending the sanctity of marriage against political convenience crowns his whole mission: having pointed to Christ throughout his life, he now prefigures the Lord's own unjust condemnation.
 
-The Gospels of Mark and Matthew provide the narrative on which this ancient commemoration rests, and the feast has been kept in the Roman calendar since antiquity as a companion to the celebration of John's nativity on June 24, the only two occasions apart from Christ and Mary on which the Roman Rite commemorates a saint's death alongside his birth.
+The Gospels of Mark and Matthew provide the narrative on which this ancient commemoration rests, and it has been kept in the Roman calendar since antiquity as a companion to the celebration of John's nativity on June 24, the only figure apart from Christ and Mary whose death and birth the Roman Rite both commemorate.
 
-The memorial today honors the courage to speak uncomfortable moral truth to those in power, whatever the personal cost, and it holds up John's fidelity even unto death as the fitting close of the herald's mission to prepare the way of the Lord.
+The commemoration honors the courage to speak uncomfortable moral truth to those in power, whatever the personal cost, and it holds up John's fidelity even unto death as the fitting close of the herald's mission to prepare the way of the Lord.
 $desc$)
 ) AS x(slug, name, description)
 ON f.slug = x.slug
@@ -3939,265 +3939,265 @@ SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
 ('saint-alphonsus-liguori-bishop-and-doctor-of-the-church', 'Saint Alphonse de Liguori, évêque et docteur de l''Église', $desc$
-Inscrite au 1er août comme **mémoire obligatoire**, la fête de saint Alphonse de Liguori honore un évêque et docteur de l'Église connu surtout comme théologien moraliste et fondateur des Rédemptoristes. Les ornements blancs marquent ce jour, et cette mémoire ouvre le mois par une célébration du zèle pastoral mis au service des pécheurs ordinaires plutôt que des âmes déjà avancées.
+Saint Alphonse de Liguori est honoré comme évêque et docteur de l'Église, mais on le connaît surtout comme un théologien moraliste qui mit tout le poids de sa science au service des pécheurs ordinaires plutôt que des âmes déjà avancées. Dans le calendrier romain général, sa mémoire ouvre le mois d'août, ouverture heureuse d'une saison riche du témoignage des pasteurs et des fondateurs.
 
-La célébration rappelle la contribution d'Alphonse à la théologie morale, en particulier son système de l'équiprobabilisme, qui traçait une voie médiane entre un rigorisme excessif et un laxisme dangereux au confessionnal. Son insistance à administrer les sacrements, surtout la pénitence et l'Eucharistie, avec à la fois fidélité à la loi et tendre miséricorde envers le pénitent, exprime la conviction plus profonde que la grâce recherche les faibles et les accablés plutôt que d'attendre qu'ils deviennent forts.
+Le cœur de son héritage est une théologie morale traçant une voie médiane entre un rigorisme excessif et un laxisme dangereux, le système que l'on appellera équiprobabilisme. Son insistance à administrer les sacrements, surtout la pénitence et l'Eucharistie, avec à la fois fidélité à la loi et tendre miséricorde envers le pénitent, jaillit d'une conviction plus profonde : la grâce recherche les faibles et les accablés plutôt que d'attendre qu'ils deviennent forts.
 
 Alphonse fonda en 1732 la Congrégation du Très Saint Rédempteur pour évangéliser les pauvres des campagnes négligés par des formes plus urbaines de soin pastoral, et son immense œuvre écrite, notamment sur la prière et la dévotion à Marie, forma la piété catholique pendant des générations après sa mort en 1787. Il fut proclamé docteur de l'Église en 1871 en reconnaissance de son influence durable sur la théologie morale et la pratique pastorale.
 
-Cette mémoire appelle aujourd'hui confesseurs et pasteurs à imiter chez Alphonse l'équilibre entre vérité ferme et accompagnement compatissant, et elle rappelle à toute l'Église que la saine doctrine existe pour servir, non pour accabler, les âmes en quête de réconciliation avec Dieu.
+Son témoignage appelle confesseurs et pasteurs à imiter chez lui l'équilibre entre vérité ferme et accompagnement compatissant, et il rappelle à toute l'Église que la saine doctrine existe pour servir, non pour accabler, les âmes en quête de réconciliation avec Dieu.
 $desc$),
 ('saint-eusebius-of-vercelli-bishop', 'Saint Eusèbe de Verceil, évêque', $desc$
-Inscrite au 2 août comme **mémoire facultative**, la fête de saint Eusèbe de Verceil commémore l'un des plus fermes défenseurs de l'orthodoxie nicéenne au IVe siècle contre la crise arienne qui bouleversa l'Église. Les ornements blancs sont portés, et le rang modeste de cette mémoire reflète le fait que ce jour, partagé avec saint Pierre-Julien Eymard, permet soit une commémoraison, soit une férie ordinaire selon l'usage local.
+Saint Eusèbe de Verceil compte parmi les plus fermes défenseurs de l'orthodoxie nicéenne au IVe siècle, face à la crise arienne qui bouleversa l'Église. On le retient comme un évêque qui unit les rigueurs de la vie ascétique aux labeurs du gouvernement épiscopal, alliance peu commune qui devait marquer les siècles suivants.
 
-La célébration honore un évêque qui paya cher, par l'exil, son refus de compromettre la divinité du Christ, unissant vie ascétique et gouvernement épiscopal en réunissant son clergé dans une vie commune de prière, innovation qui anticipa des formes ultérieures de vie religieuse canoniale pour prêtres. Son témoignage atteste que fidélité à la vraie doctrine et sainteté personnelle ne sont pas des voies séparées mais des dimensions qui se renforcent mutuellement dans le ministère épiscopal.
+Son témoignage atteste que fidélité à la vraie doctrine et sainteté personnelle ne sont pas des voies séparées, mais des dimensions qui se renforcent mutuellement. En réunissant son clergé dans une vie commune de prière sous une règle partagée, il anticipa des formes ultérieures de vie religieuse canoniale pour prêtres, unissant la défense de la divinité du Christ à une discipline de conversion dans sa propre maison.
 
 Eusèbe fut banni par l'empereur Constance II pour son opposition aux formules ariennes au concile de Milan en 355, passant des années d'exil rigoureux en Orient avant d'être rétabli sur son siège, où il mourut vers 371. Sa mémoire perdura dans la région piémontaise qu'il avait gouvernée et entra finalement dans le calendrier universel comme témoignage de fidélité courageuse sous la pression impériale.
 
-Son exemple encourage aujourd'hui les évêques et tous les fidèles à tenir ferme à la vérité révélée même lorsque cela comporte un coût réel, confiants que l'unité de l'Église dans la foi survit aux pressions passagères de toute époque.
+Son exemple encourage les évêques et tous les fidèles à tenir ferme à la vérité révélée même lorsque cela comporte un coût réel, confiants que l'unité de l'Église dans la foi survit aux pressions passagères de toute époque.
 $desc$),
 ('saint-peter-julian-eymard-priest', 'Saint Pierre-Julien Eymard, prêtre', $desc$
-Inscrite au 2 août comme **mémoire facultative**, aux côtés de saint Eusèbe de Verceil, la fête de saint Pierre-Julien Eymard honore un prêtre français du XIXe siècle connu comme l'Apôtre de l'Eucharistie. Les ornements blancs sont portés en ce jour dédié à une vie tout entière centrée sur le Saint-Sacrement.
+Saint Pierre-Julien Eymard, prêtre français du XIXe siècle appelé l'Apôtre de l'Eucharistie, consacra sa vie à une seule conviction : le Saint-Sacrement est la source d'où doivent jaillir toute sainteté chrétienne et toute charité apostolique. Sa vocation tout entière se rassembla autour de l'adoration de la présence réelle.
 
-La célébration met en lumière la conviction d'Eymard que l'adoration eucharistique n'est pas une dévotion privée ajoutée à la vie pastorale, mais le cœur même d'où doit jaillir la charité apostolique. La fondation de la Congrégation du Saint-Sacrement et des Servantes du Saint-Sacrement donna forme institutionnelle à une spiritualité centrée sur l'adoration continue, la réparation et la réception de la communion comme source de la sainteté chrétienne.
+Pour Eymard, l'adoration eucharistique ne fut jamais une dévotion privée ajoutée à la vie pastorale, mais son cœur même. La fondation de la Congrégation du Saint-Sacrement et des Servantes du Saint-Sacrement donna forme institutionnelle à une spiritualité centrée sur l'adoration continue, la réparation et la réception de la communion comme source de la vie chrétienne.
 
 Né en 1811, Eymard fut prêtre diocésain puis mariste avant de fonder ses propres congrégations en 1856 et 1858, consacrées exclusivement au culte eucharistique, œuvre qui rencontra à la fois admiration et prudence ecclésiastique initiale avant d'obtenir pleine approbation. Il mourut en 1868 et fut canonisé en 1962, au moment même où le concile Vatican II renouvelait l'accent mis sur l'Eucharistie comme source et sommet de la vie chrétienne.
 
-Sa mémoire invite aujourd'hui les fidèles à redécouvrir l'adoration eucharistique comme source de l'énergie apostolique, rappelant à l'Église que la mission jaillit le plus fructueusement du repos contemplatif devant la présence réelle du Christ.
+Son témoignage invite les fidèles à redécouvrir l'adoration eucharistique comme source de l'énergie apostolique, rappelant à l'Église que la mission jaillit le plus fructueusement du repos contemplatif devant la présence du Christ.
 $desc$),
 ('saint-jean-vianney-priest', 'Saint Jean-Marie Vianney, prêtre', $desc$
-Célébrée le 4 août comme **mémoire obligatoire**, la fête de saint Jean-Marie Vianney, le Curé d'Ars, honore le saint patron des curés du monde entier. Les ornements blancs marquent ce jour, que l'Église garde comme une occasion de réfléchir à la dignité et aux exigences du ministère paroissial ordinaire.
+Saint Jean-Marie Vianney, le Curé d'Ars, est honoré dans le monde entier comme le patron des curés, un homme dont la vie révèle la dignité et les exigences du ministère paroissial ordinaire. Sa renommée ne tient ni au savoir ni à l'éloquence, mais à une sainteté qui transfigura la plus humble des charges pastorales.
 
-La célébration rappelle un prêtre qui, malgré des dons intellectuels modestes selon les critères du séminaire, transforma un petit village français spirituellement indifférent en un centre de pèlerinage par une prière incessante, une pénitence extraordinaire et surtout d'innombrables heures passées à confesser. Son ministère incarne la vérité selon laquelle la fécondité pastorale dépend moins du talent humain que de la sainteté personnelle et de la disponibilité totale envers les âmes en quête de miséricorde.
+Malgré des dons intellectuels modestes selon les critères du séminaire, il transforma un petit village spirituellement indifférent en un centre de pèlerinage par une prière incessante, une pénitence extraordinaire et surtout d'innombrables heures passées à confesser. Son ministère incarne la vérité selon laquelle la fécondité pastorale dépend moins du talent humain que de la sainteté personnelle et de la disponibilité totale envers les âmes en quête de miséricorde.
 
 Jean-Baptiste Vianney fut ordonné en 1815 malgré de grandes difficultés scolaires et affecté en 1818 à l'obscure paroisse d'Ars, où il demeura jusqu'à sa mort en 1859, attirant des dizaines de milliers de pénitents de toute la France à la fin de sa vie. Le pape Pie XI le déclara patron des curés en 1929, consacrant sa place de modèle de charité pastorale exercée dans les circonstances les plus humbles.
 
-Sa mémoire appelle aujourd'hui les prêtres à renouveler leur confiance dans le sacrement de la confession et leur disponibilité envers les fidèles, tout en invitant tous les chrétiens à apprécier la fidélité cachée, souvent sans éclat, qui soutient un authentique soin pastoral.
+Son témoignage appelle les prêtres à renouveler leur confiance dans le sacrement de la confession et leur disponibilité envers les fidèles, tout en invitant tous les chrétiens à apprécier la fidélité cachée, souvent sans éclat, qui soutient un authentique soin pastoral.
 $desc$),
 ('the-dedication-of-the-basilica-of-saint-mary-major', 'Dédicace de la basilique Sainte-Marie-Majeure', $desc$
-Inscrite au 5 août comme **mémoire facultative**, cette fête commémore la dédicace de la plus ancienne basilique mariale d'Occident, construite à Rome à la suite du concile d'Éphèse. Les ornements blancs sont portés, célébrant un édifice dont l'existence même proclame le dogme défini en 431 selon lequel Marie est véritablement Mère de Dieu.
+Cette commémoration honore la dédicace de la plus ancienne basilique mariale d'Occident, élevée à Rome au lendemain du concile d'Éphèse. C'est la fête d'un édifice, mais d'un édifice dont les pierres mêmes proclament une doctrine : Marie est véritablement Mère de Dieu.
 
-Cette célébration est indissociable de ce moment doctrinal : la basilique fut élevée comme un monument de pierre à la vérité selon laquelle celui que Marie porta en son sein était, en sa personne unique, vrai Dieu et vrai homme. Ses splendides mosaïques, parmi les plus anciennes et les plus riches théologiquement de l'art marial chrétien, continuent d'instruire les fidèles sur les mystères de l'Incarnation et la place unique de Marie en son sein.
+La célébration est indissociable de ce moment doctrinal. La basilique fut élevée comme un monument de pierre à la vérité, définie à Éphèse en 431, selon laquelle celui que Marie porta en son sein était, en sa personne unique, vrai Dieu et vrai homme. Ses splendides mosaïques, parmi les plus anciennes et les plus riches théologiquement de l'art marial chrétien, continuent d'instruire les fidèles sur les mystères de l'Incarnation et la place unique de Marie en son sein.
 
-La tradition rapporte une neige miraculeuse tombée en plein été sur l'Esquilin, indiquant l'emplacement où l'église devait être bâtie, donnant à la basilique son titre populaire de Notre-Dame des Neiges ; historiquement, le pape Sixte III dédia la basilique vers 434-440, dans les années qui suivirent immédiatement Éphèse. Elle demeure l'une des quatre basiliques papales majeures de Rome et conserve une relique vénérée de longue date comme provenant de la crèche de Bethléem.
+La tradition rapporte une neige miraculeuse tombée en plein été sur l'Esquilin, indiquant l'emplacement où l'église devait s'élever, donnant à la basilique son titre populaire de Notre-Dame des Neiges ; historiquement, le pape Sixte III la dédia vers 434-440, dans les années qui suivirent immédiatement Éphèse. Elle demeure l'une des quatre basiliques papales majeures de Rome et conserve une relique vénérée de longue date comme provenant de la crèche de Bethléem.
 
-Cette mémoire invite aujourd'hui les fidèles à honorer l'architecture sacrée comme porteuse de doctrine à travers les siècles, et à renouveler la dévotion à Marie Mère de Dieu dans la ville même où ce titre fut solennellement défendu pour la première fois.
+Cette commémoration invite les fidèles à honorer l'architecture sacrée comme porteuse de doctrine à travers les siècles, et à renouveler la dévotion à Marie Mère de Dieu dans la ville même où ce titre fut solennellement défendu pour la première fois.
 $desc$),
 ('the-transfiguration-of-the-lord', 'Transfiguration du Seigneur', $desc$
-Célébrée le 6 août comme **Fête du Seigneur**, la Transfiguration commémore le moment où Jésus révéla sa gloire divine à Pierre, Jacques et Jean sur la montagne, apparaissant resplendissant aux côtés de Moïse et d'Élie. Les ornements blancs sont portés, et le rang de cette fête assure qu'elle prime sur toute férie ou mémoire facultative qui tomberait autrement à cette date.
+La Transfiguration commémore le moment où Jésus révéla sa gloire divine à Pierre, Jacques et Jean sur la montagne, apparaissant resplendissant aux côtés de Moïse et d'Élie. Dans le calendrier romain général, elle est célébrée comme Fête du Seigneur, l'emportant sur toute férie ou mémoire facultative qui tomberait à cette date, rang qui signale le poids de ce mystère dans la contemplation du Christ par l'Église.
 
 Sur le plan théologique, la fête anticipe la gloire de la Résurrection tout en fortifiant les disciples, et par eux toute l'Église, pour affronter le scandale de la Croix que Jésus venait d'annoncer. La présence de Moïse et d'Élie signifie que la Loi et les Prophètes trouvent leur accomplissement dans le Christ, tandis que la voix du Père, « Celui-ci est mon Fils bien-aimé, écoutez-le », fait écho aux paroles prononcées au Baptême et annonce la révélation définitive accomplie dans le mystère pascal.
 
-La fête a des racines anciennes en Orient chrétien, où elle fut comptée dès une date ancienne parmi les Douze Grandes Fêtes, et elle entra plus graduellement dans le calendrier occidental avant d'être étendue à l'Église universelle par le pape Calixte III en 1456, en action de grâce pour une victoire militaire remportée sur l'avancée ottomane à Belgrade. Sa date, en plein été, la situe aussi, dans les sociétés agricoles, près de la bénédiction traditionnelle des premiers fruits.
+La fête a des racines anciennes en Orient chrétien, où elle fut comptée dès une date ancienne parmi les Douze Grandes Fêtes, et elle entra plus graduellement dans le calendrier occidental avant d'être étendue à l'Église universelle par le pape Calixte III en 1456, en action de grâce pour la délivrance de Belgrade de l'avancée ottomane. Sa place en plein été la situe aussi, dans les sociétés agricoles, près de la bénédiction traditionnelle des premiers fruits.
 
 Sur le plan pastoral, la Transfiguration invite les croyants à tenir ensemble, comme il fut demandé aux disciples, le mystère de la souffrance et la promesse de la gloire, confiants que toute épreuve affrontée en union avec le Christ est déjà illuminée par la lumière entrevue sur la montagne.
 $desc$),
 ('saint-sixtus-ii-pope-and-companions-martyrs', 'Saint Sixte II, pape, et ses compagnons, martyrs', $desc$
-Inscrite au 7 août comme **mémoire facultative**, cette fête honore le pape Sixte II et plusieurs diacres martyrisés ensemble durant la persécution de l'empereur Valérien en 258. Les ornements rouges marquent ce jour, propres à la commémoration des martyrs qui versèrent leur sang pour le Christ.
+Cette commémoration honore le pape Sixte II et plusieurs diacres martyrisés ensemble durant la persécution de l'empereur Valérien en 258. C'est un martyre du sanctuaire, car le pape fut saisi et mis à mort alors qu'il présidait la liturgie eucharistique dans un cimetière romain, ses diacres demeurant à ses côtés plutôt que de fuir.
 
-La célébration rappelle un pape qui fut saisi et mis à mort alors qu'il présidait la liturgie eucharistique dans un cimetière romain, avec des diacres qui restèrent à ses côtés plutôt que de fuir. Leur martyre commun illustre le lien profond entre l'évêque de Rome et ses plus proches collaborateurs, un lien de ministère sacramentel partagé qu'aucun danger mortel ne put rompre, et il préfigure le martyre du diacre Laurent, survenu seulement quelques jours plus tard.
+Leur mort commune illustre le lien profond entre l'évêque de Rome et ses plus proches collaborateurs, un lien de ministère sacramentel partagé qu'aucun danger mortel ne put rompre. Elle préfigure aussi le martyre du diacre Laurent, qui servait sous Sixte et le suivit dans la mort quelques jours plus tard, de sorte que les deux commémorations du début d'août forment un seul témoignage.
 
-L'édit de Valérien de 258 visait spécifiquement le clergé chrétien, ordonnant l'exécution immédiate des évêques, prêtres et diacres ; Sixte II fut parmi les premiers évêques de Rome à mourir sous ce décret, et son nom fut plus tard inséré dans le Canon romain parmi les martyrs invoqués à chaque messe. Sa mémoire s'est perpétuée à Rome depuis l'Antiquité.
+L'édit de Valérien de 258 visait spécifiquement le clergé chrétien, ordonnant l'exécution immédiate des évêques, prêtres et diacres ; Sixte II fut parmi les premiers évêques de Rome à mourir sous ce décret, et son nom fut plus tard inséré dans le Canon romain parmi les martyrs invoqués à la messe. Sa mémoire s'est perpétuée à Rome depuis l'Antiquité.
 
-Cette mémoire honore aujourd'hui le courage de ceux qui restèrent fidèles à leur charge sacramentelle au prix même de leur vie, encourageant clergé et fidèles à voir dans le ministère lui-même une forme de témoignage que la mort ne peut faire taire.
+Cette commémoration honore le courage de ceux qui restèrent fidèles à leur charge sacramentelle au prix même de leur vie, encourageant clergé et fidèles à voir dans le ministère lui-même une forme de témoignage que la mort ne peut faire taire.
 $desc$),
 ('saint-cajetan-priest', 'Saint Gaétan, prêtre', $desc$
-Inscrite au 7 août comme **mémoire facultative**, partagée avec saint Sixte II, la fête de saint Gaétan honore un prêtre italien du XVIe siècle dévoué au renouveau de la vie cléricale et aux œuvres de charité envers les pauvres et les malades. Les ornements blancs sont portés pour cette mémoire d'un fondateur.
+Saint Gaétan fut un prêtre italien du XVIe siècle qui se consacra au renouveau de la vie cléricale et aux œuvres de charité envers les pauvres et les malades. Il appartient à cette génération de réformateurs qui cherchèrent à purifier l'Église de l'intérieur, des décennies avant que le concile de Trente ne donne à ces élans leur expression conciliaire.
 
-La célébration rappelle la conviction centrale de Gaétan selon laquelle la réforme du clergé commence par un retour à la simplicité apostolique : vie commune, confiance dépouillée en la Providence plutôt qu'en un revenu fixe, et soin pastoral inlassable des délaissés, en particulier les malades dans les hôpitaux et les pauvres accablés de dettes usuraires. Son œuvre anticipa de plusieurs décennies bon nombre des impulsions réformatrices qui trouveront ensuite une expression conciliaire à Trente.
+Au centre de sa vie se tenait la conviction que la réforme du clergé commence par un retour à la simplicité apostolique : vie commune, confiance dépouillée en la Providence plutôt qu'en un revenu fixe, et soin inlassable des délaissés, en particulier les malades dans les hôpitaux et les pauvres accablés de dettes usuraires. Pour Gaétan, réforme des institutions et charité concrète formaient une seule œuvre de l'Évangile.
 
-Gaétan cofonda en 1524 les Théatins, l'une des premières congrégations de clercs réguliers, avec Gian Pietro Carafa, futur pape Paul IV, et il fonda plus tard des monts-de-piété charitables offrant des prêts à faible intérêt pour protéger les pauvres de l'exploitation, préfigurant la tradition catholique des monti di pietà. Il mourut à Naples en 1547 et fut canonisé en 1671.
+Il cofonda en 1524 les Théatins, l'une des premières congrégations de clercs réguliers, avec Gian Pietro Carafa, futur pape Paul IV, et il fonda plus tard des monts-de-piété charitables offrant des prêts à faible intérêt pour protéger les pauvres de l'exploitation, préfigurant la tradition catholique des monti di pietà. Il mourut à Naples en 1547 et fut canonisé en 1671.
 
-Sa mémoire invite aujourd'hui les prêtres et toute l'Église à examiner comment réforme institutionnelle et charité concrète envers les plus vulnérables économiquement forment ensemble une seule et même œuvre de l'Évangile, plutôt que des préoccupations séparées ou concurrentes.
+Son témoignage invite les prêtres et toute l'Église à voir comment la réforme des institutions et l'amour des plus vulnérables sur le plan économique vont ensemble, plutôt que de se poser en préoccupations séparées ou rivales.
 $desc$),
 ('saint-dominic-priest', 'Saint Dominique, prêtre', $desc$
-Célébrée le 8 août comme **mémoire obligatoire**, la fête de saint Dominique honore le fondateur de l'Ordre des Prêcheurs, l'une des familles religieuses les plus influentes de l'histoire de l'Église. Les ornements blancs marquent ce jour dédié à un saint dont le charisme plaça la prédication et la formation doctrinale au centre de la vie consacrée.
+Saint Dominique fonda l'Ordre des Prêcheurs, l'une des familles religieuses les plus influentes de l'histoire de l'Église, plaçant la prédication et la formation doctrinale au cœur même de la vie consacrée. Son charisme unit profondeur contemplative et mission active d'une manière qui remodela la chrétienté médiévale.
 
-La célébration rappelle l'intuition fondatrice de Dominique selon laquelle la lutte contre l'hérésie et l'ignorance religieuse exigeait non seulement la réfutation mais une nouvelle forme de vie religieuse alliant étude rigoureuse, pauvreté commune et prédication itinérante. Sa vision unissait profondeur contemplative et mission active, résumée dans la devise dominicaine de contempler et de transmettre aux autres les fruits de la contemplation, synthèse qui continue de façonner la vie intellectuelle et pastorale catholique.
+Son intuition fondatrice fut que la lutte contre l'hérésie et l'ignorance religieuse exigeait non seulement la réfutation, mais une forme nouvelle de vie religieuse alliant étude rigoureuse, pauvreté communautaire et prédication itinérante. La devise dominicaine, contempler et transmettre aux autres les fruits de la contemplation, résume une synthèse qui continue de façonner la vie intellectuelle et pastorale catholique.
 
-Dominique fonda son ordre en 1216 en réponse à la crise albigeoise dans le sud de la France, obtenant l'approbation pontificale d'Honorius III, et il envoya ses premiers frères dans les grandes villes universitaires d'Europe pour enraciner la prédication dans une formation théologique sérieuse. Il mourut à Bologne en 1221 et fut canonisé en 1234, laissant derrière lui un ordre qui produirait certains des plus grands théologiens de l'Église, dont saint Thomas d'Aquin.
+Dominique fonda son ordre en 1216 en réponse à la crise albigeoise du sud de la France, obtenant l'approbation du pape Honorius III, et il envoya ses premiers frères dans les grandes villes universitaires d'Europe pour enraciner la prédication dans une sérieuse formation théologique. Il mourut à Bologne en 1221 et fut canonisé en 1234, laissant un ordre qui devait produire quelques-uns des plus grands théologiens de l'Église, dont saint Thomas d'Aquin.
 
-Sa mémoire appelle aujourd'hui les fidèles à estimer la prédication saine et l'étude théologique comme des formes de charité envers les âmes affamées de vérité, et elle honore tout effort pour unir prière profonde et proclamation courageuse de l'Évangile.
+Son témoignage appelle les fidèles à estimer la saine prédication et l'étude théologique comme des formes de charité envers les âmes assoiffées de vérité, et il honore tout effort d'unir la prière profonde à la proclamation courageuse de l'Évangile.
 $desc$),
 ('saint-teresa-benedicta-of-the-cross-virgin-and-martyr', 'Sainte Thérèse-Bénédicte de la Croix, vierge et martyre', $desc$
-Inscrite au 9 août comme **mémoire facultative**, la fête de sainte Thérèse-Bénédicte de la Croix honore Edith Stein, philosophe d'origine juive, carmélite et martyre assassinée à Auschwitz en 1942. Les ornements rouges marquent ce jour, propres au témoignage d'une martyre.
+Sainte Thérèse-Bénédicte de la Croix est le nom en religion d'Edith Stein, la philosophe d'origine juive devenue carmélite, assassinée à Auschwitz en 1942. Sa vie rassemble, avec une rare intensité, la recherche de la philosophie moderne, les profondeurs de la prière contemplative et l'horreur du plus grand crime du XXe siècle.
 
-La célébration rappelle une femme dont le parcours, de l'athéisme à une recherche philosophique rigoureuse, la conduisit au baptême en 1922 puis au Carmel, où elle prit le nom de Thérèse-Bénédicte de la Croix en reconnaissance de la croix qu'elle percevait comme sa vocation particulière, vécue en solidarité avec son peuple juif sous la persécution nazie. Sa mort dans les chambres à gaz, arrêtée précisément à cause de son ascendance juive malgré sa profession religieuse, unit l'horreur de la Shoah au mystère du martyre chrétien d'une manière que l'Église juge profondément significative pour le vingtième siècle.
+Son cheminement, de l'athéisme jusqu'à une rigoureuse enquête philosophique, la conduisit au baptême en 1922 puis au Carmel, où elle prit le nom de Thérèse-Bénédicte de la Croix, reconnaissant dans la croix sa vocation particulière, portée en solidarité avec son peuple juif sous la persécution nazie. Sa mort dans les chambres à gaz, arrêtée précisément en raison de son ascendance juive malgré sa profession religieuse, unit la Shoah au mystère du martyre chrétien d'une manière que l'Église tient pour profondément significative.
 
-Stein fut arrêtée en 1942 en représailles d'une lettre des évêques néerlandais condamnant la politique raciale nazie, et fut déportée à Auschwitz, où elle mourut le 9 août de cette même année. Elle fut canonisée en 1998 par le pape Jean-Paul II, qui la nomma plus tard co-patronne de l'Europe, la présentant comme une figure de pont entre judaïsme et christianisme et entre vie intellectuelle rigoureuse et remise totale à Dieu.
+Edith Stein fut arrêtée en 1942 en représailles à une lettre des évêques néerlandais condamnant les politiques raciales nazies, et déportée à Auschwitz, où elle mourut le 9 août de cette année-là. Elle fut canonisée en 1998 par le pape Jean-Paul II, qui la nomma plus tard copatronne de l'Europe, la proposant comme un pont entre le judaïsme et le christianisme, et entre la vie intellectuelle rigoureuse et le don total à Dieu.
 
-Sa mémoire invite aujourd'hui à réfléchir sur la compatibilité entre la raison en quête de vérité et la foi vécue, et elle demeure un rappel solennel de l'appel de l'Église à résister à toute idéologie de haine, en particulier l'antisémitisme, par le témoignage de la charité jusqu'à la mort.
+Son témoignage invite à méditer l'harmonie de la raison qui cherche et de la foi qui vit, et il demeure un rappel solennel de l'appel de l'Église à résister à toute idéologie de haine, spécialement l'antisémitisme, par le témoignage de la charité jusqu'à la mort.
 $desc$),
 ('saint-lawrence-deacon-and-martyr', 'Saint Laurent, diacre et martyr', $desc$
-Célébrée le 10 août comme **Fête**, la mémoire de saint Laurent compte parmi les plus anciennes et les plus chères fêtes des martyrs romains, primant sur la férie ordinaire et sur toute mémoire facultative qui tomberait autrement à cette date. Les ornements rouges marquent ce jour, propres au témoignage d'un martyr.
+Saint Laurent compte parmi les plus anciens et les plus aimés des martyrs romains, un diacre de l'Église de Rome dont la fidélité donna naissance à l'une des images les plus durables du courage chrétien. Dans le calendrier romain général, sa célébration est gardée comme Fête, distinction rare pour qui ne fut ni évêque ni pape, et mesure de la dévotion qu'il suscita.
 
-La célébration honore un diacre de l'Église romaine qui, selon une tradition constante, reçut des autorités civiles l'ordre de livrer les trésors de l'Église et présenta à leur place les pauvres qu'il servait comme les véritables richesses de l'Église, geste qui révèle avec une clarté saisissante la vocation diaconale de la charité comme richesse sacrée en elle-même. Son martyre rapporté, rôti vivant sur un gril, devint l'une des images les plus vives de la foi inébranlable dans toute la tradition martyrologique.
+Selon une tradition tenace, sommé par les autorités civiles de livrer les trésors de l'Église, il présenta à leur place les pauvres qu'il servait comme les vraies richesses de l'Église, geste qui révèle avec éclat la vocation du diacre à la charité comme une richesse sacrée. Son martyre, brûlé vif sur un gril d'après la tradition, devint l'un des emblèmes les plus vifs de la foi inébranlable dans toute la tradition martyrologique.
 
-Laurent mourut en 258, quelques jours après le pape Sixte II sous la même persécution valérienne, et la dévotion à son égard grandit avec une rapidité extraordinaire à Rome ; saint Augustin et saint Ambroise prêchèrent tous deux sur son courage, et de nombreuses églises à Rome et ailleurs furent dédiées en son honneur quelques générations à peine après sa mort. Sa fête a été gardée avec une haute solennité à Rome depuis l'Antiquité, distinction rare pour quelqu'un qui ne fut ni évêque ni pape.
+Laurent mourut en 258, quelques jours après le pape Sixte II sous la même persécution de Valérien, et la dévotion à son égard grandit avec une rapidité extraordinaire ; saint Augustin et saint Ambroise prêchèrent tous deux sur son courage, et des églises furent dédiées en son honneur à Rome et au-delà en l'espace de quelques générations. Sa fête est gardée avec grande solennité à Rome depuis l'Antiquité.
 
-Sa mémoire élève aujourd'hui le ministère diaconal de la charité comme expression essentielle et irremplaçable de la vie de l'Église, encourageant diacres et fidèles à reconnaître dans les pauvres les porteurs d'une richesse qu'aucune persécution ne peut ravir.
+Son témoignage met en lumière le ministère diaconal de la charité comme une expression essentielle et irremplaçable de la vie de l'Église, encourageant les diacres et tous les fidèles à reconnaître dans les pauvres les porteurs d'une richesse qu'aucune persécution ne peut saisir.
 $desc$),
 ('saint-clare-virgin', 'Sainte Claire, vierge', $desc$
-Inscrite au 11 août comme **mémoire obligatoire**, la fête de sainte Claire d'Assise honore la fondatrice des Clarisses et l'une des premières et plus dévouées disciples de saint François. Les ornements blancs marquent ce jour dédié à une vie de pauvreté radicale et de clôture contemplative.
+Sainte Claire d'Assise, fondatrice des Clarisses, fut l'une des premières et des plus dévouées disciples de saint François, et elle donna au mouvement franciscain sa forme durable de clôture contemplative vécue dans une pauvreté radicale. Sa vie est un miroir tendu vers le Christ pauvre et crucifié.
 
-La célébration rappelle l'insistance farouche de Claire sur le privilège de pauvreté, mode de vie qu'elle défendit devant les papes eux-mêmes comme essentiel à la fidélité de sa communauté à l'Évangile, refusant toute offre de règle assouplie ou de revenu garanti pour ses sœurs. Sa spiritualité, centrée sur la contemplation du Christ crucifié comme en un miroir, modèle une vie contemplative tout entière orientée vers la configuration au Christ pauvre et souffrant.
+On la retient pour son insistance ardente sur le privilège de la pauvreté, mode de vie qu'elle défendit devant les papes eux-mêmes comme essentiel à la fidélité de sa communauté à l'Évangile, refusant toute offre de règle adoucie ou de revenu garanti pour ses sœurs. Sa spiritualité, centrée sur la contemplation du Christ crucifié comme dans un miroir, oriente toute la vie contemplative vers la configuration au Seigneur pauvre et souffrant.
 
-Claire quitta la maison de sa riche famille en 1212 pour rejoindre le mouvement naissant de François, fondant ce qui devint l'Ordre des Dames Pauvres à San Damiano, où elle vécut et gouverna pendant plus de quarante ans jusqu'à sa mort en 1253, seulement deux jours après avoir reçu la confirmation pontificale de sa Règle, la première règle religieuse connue à avoir été écrite par une femme pour des femmes. Elle fut canonisée deux ans plus tard seulement, en 1255.
+Claire s'enfuit de la maison de sa riche famille en 1212 pour rejoindre le mouvement naissant de François, fondant ce qui devint l'Ordre des Pauvres Dames à Saint-Damien, où elle vécut et gouverna plus de quarante ans jusqu'à sa mort en 1253, deux jours seulement après avoir reçu la confirmation pontificale de sa Règle, la première règle religieuse connue écrite par une femme pour des femmes. Elle fut canonisée deux ans plus tard, en 1255.
 
-Sa mémoire appelle aujourd'hui religieux et laïcs à considérer comment la pauvreté radicale, loin d'appauvrir l'esprit humain, peut le libérer pour une contemplation plus unifiée du Christ, et elle honore le témoignage durable de la vie contemplative cloîtrée au sein de l'Église.
+Son témoignage invite religieux et laïcs à considérer comment la pauvreté radicale, loin d'appauvrir l'esprit humain, peut le libérer pour une contemplation du Christ plus indivise, et il honore le don durable de la vie contemplative cloîtrée dans l'Église.
 $desc$),
 ('saint-jane-frances-de-chantal-religious', 'Sainte Jeanne-Françoise de Chantal, religieuse', $desc$
-Inscrite au 12 août comme **mémoire facultative**, la fête de sainte Jeanne-Françoise de Chantal honore une veuve, mère et fondatrice française dont l'amitié spirituelle avec saint François de Sales façonna l'une des grandes collaborations de la spiritualité catholique. Les ornements blancs marquent ce jour d'une sainteté discrète et constante.
+Sainte Jeanne-Françoise de Chantal fut une veuve, mère et fondatrice française dont l'amitié spirituelle avec saint François de Sales devint l'une des grandes collaborations de l'histoire de la spiritualité catholique. Sa sainteté se déploya sans bruit, tissée à travers les états successifs d'une vie ordinaire et pourtant remarquable.
 
-La célébration rappelle une vie qui embrassa successivement plusieurs vocations : épouse dévouée, veuve éprouvée, mère attentive, et enfin fondatrice religieuse consacrée, montrant que la sainteté n'est pas enfermée dans un seul état de vie mais peut se tisser à travers les circonstances changeantes que permet la Providence. Sa collaboration avec François de Sales dans la fondation des sœurs de la Visitation donna une forme institutionnelle à une spiritualité de douceur, de dévotion intérieure et d'accessibilité envers celles, y compris malades et âgées, exclues des formes plus austères de vie religieuse.
+Sa sainteté embrassa plusieurs vocations tour à tour : épouse dévouée, veuve éprouvée, mère attentive et enfin fondatrice consacrée, montrant que la sainteté ne se limite pas à un seul état de vie mais peut traverser les circonstances changeantes que la Providence permet. Sa collaboration avec François de Sales pour fonder la Visitation donna forme institutionnelle à une spiritualité de douceur, de dévotion intérieure et d'accueil de celles, malades ou âgées, que les formes plus austères de vie religieuse excluaient.
 
-Devenue veuve en 1601 après la mort accidentelle de son mari, Jeanne-Françoise rencontra François de Sales en 1604, et ensemble ils fondèrent l'Ordre de la Visitation Sainte-Marie en 1610, communauté destinée à unir prière contemplative et charité active sans les pénitences austères des ordres plus anciens. Elle mourut en 1641 et fut canonisée en 1767, laissant un ordre qui perpétue son esprit de douce dévotion intérieure.
+Devenue veuve en 1601 après la mort accidentelle de son mari, Jeanne-Françoise rencontra François de Sales en 1604, et ensemble ils fondèrent l'Ordre de la Visitation de Sainte-Marie en 1610, communauté destinée à unir la prière contemplative à la charité active sans les austères pénitences des ordres plus anciens. Elle mourut en 1641 et fut canonisée en 1767, laissant un ordre qui porte encore son esprit de dévotion douce et intérieure.
 
-Sa mémoire encourage aujourd'hui les fidèles, en particulier ceux qui traversent de grandes transitions de vie comme un deuil ou un changement de vocation, à faire confiance que Dieu peut faire naître des appels nouveaux et féconds des tournants les plus douloureux d'une existence.
+Son témoignage encourage les fidèles, surtout ceux qui traversent un deuil ou un changement de vocation, à croire que Dieu peut faire naître des appels nouveaux et féconds même des tournants les plus douloureux d'une existence.
 $desc$),
 ('saints-pontian-pope-and-hippolytus-priest-martyrs', 'Saints Pontien, pape, et Hippolyte, prêtre, martyrs', $desc$
-Inscrite au 13 août comme **mémoire facultative**, cette fête honore deux martyrs romains du IIIe siècle dont l'histoire est remarquable en ce qu'elle réconcilie un pape et un ancien rival au sein d'un même acte de témoignage. Les ornements rouges marquent ce jour, propres à la commémoration des martyrs.
+Cette commémoration honore deux martyrs romains du IIIe siècle dont l'histoire est remarquable pour avoir réconcilié un pape et un ancien rival dans un même acte de témoignage. Ce qui avait commencé comme une amère division s'acheva en témoignage partagé, scellé dans le sang.
 
-La célébration rappelle Pontien, évêque légitime de Rome, et Hippolyte, prêtre et théologien érudit qui avait pendant des années dirigé une communauté schismatique opposée au siège romain, tous deux condamnés ensemble aux mines de Sardaigne sous la persécution impériale. La tradition veut que les deux hommes se soient réconciliés avant leur mort, de sorte que la division au sein de la direction de l'Église céda, sous la pression de la souffrance, la place à une unité restaurée, image que l'Église chérit comme signe qu'un martyre partagé peut guérir même les blessures ecclésiales les plus profondes.
+Pontien, l'évêque légitime de Rome, et Hippolyte, prêtre et théologien savant qui avait pendant des années dirigé une communauté schismatique opposée au siège de Rome, furent condamnés ensemble aux mines de Sardaigne sous la persécution impériale. La tradition rapporte que les deux se réconcilièrent avant leur mort, de sorte que la division au sein de la direction de l'Église céda, sous la pression de la souffrance, à l'unité retrouvée, image que l'Église chérit comme un signe que le martyre partagé peut guérir jusqu'aux plus profondes blessures ecclésiales.
 
-Pontien renonça à la papauté en 235 pour permettre l'élection d'un successeur une fois condamné aux travaux forcés dans les mines de Sardaigne, précédent précoce et significatif de renoncement pontifical ; Hippolyte, dont les vastes écrits théologiques et liturgiques demeurent influents, mourut dans le même exil. Leurs restes furent plus tard ramenés à Rome pour y être inhumés honorablement, attestant de la pleine restauration de leur communion par l'Église.
+Pontien renonça à la papauté en 235 pour permettre l'élection d'un successeur une fois condamné aux travaux forcés, précédent précoce et significatif de renonciation pontificale ; Hippolyte, dont les vastes écrits théologiques et liturgiques demeurent influents, mourut dans le même exil. Leurs restes furent plus tard ramenés à Rome pour une sépulture honorable, attestant la pleine restauration de leur communion par l'Église.
 
-Leur mémoire commune parle aujourd'hui avec force de la possibilité d'une réconciliation même après une grave division ecclésiale, encourageant les fidèles à rechercher l'unité dans la charité plutôt que la justification de querelles passées.
+Leur témoignage parle avec force de la possibilité de la réconciliation même après une grave division ecclésiale, encourageant les fidèles à chercher l'unité dans la charité au-dessus de la revendication des querelles passées.
 $desc$),
 ('saint-maximus-the-confessor', 'Saint Maxime le Confesseur', $desc$
-Inscrite au 13 août comme **mémoire facultative**, aux côtés des saints Pontien et Hippolyte, la fête de saint Maxime le Confesseur honore un moine et théologien du VIIe siècle qui souffrit grandement pour la défense de la pleine humanité du Christ. Les ornements blancs marquent ce jour de témoignage doctrinal.
+Saint Maxime le Confesseur fut un moine et théologien du VIIe siècle qui souffrit grandement pour la défense de la pleine humanité du Christ. Son titre, le Confesseur, le désigne comme celui qui témoigna de la foi par une souffrance en deçà de la mort, et peu l'ont portée à un tel prix personnel.
 
-La célébration rappelle la défense par Maxime du dyothélisme, enseignement selon lequel le Christ possède à la fois une volonté divine et une volonté humaine agissant en parfaite harmonie, contre la position monothélite favorisée par l'autorité impériale, qui soutenait que le Christ n'avait qu'une seule volonté divine. Son insistance, fondée sur le principe que ce qui n'est pas assumé n'est pas sauvé, préserva la réalité de la liberté humaine du Christ et, avec elle, toute la portée de la rédemption offerte à la capacité même de l'humanité de vouloir et de choisir.
+On le retient pour sa défense de l'enseignement selon lequel le Christ possède à la fois une volonté divine et une volonté humaine, agissant en parfaite harmonie, contre la position monothélite favorisée par l'autorité impériale, qui soutenait que le Christ n'avait qu'une seule volonté divine. Son insistance, sur le principe que ce qui n'est pas assumé n'est pas guéri, sauvegarda la réalité de la liberté humaine du Christ et, avec elle, toute l'étendue de la rédemption offerte au pouvoir humain de vouloir et de choisir.
 
-Pour son opposition à la politique religieuse impériale, Maxime subit l'amputation de la main droite et l'ablation de la langue vers 662, châtiments brutaux destinés à faire taire à la fois ses écrits et sa prédication, et il mourut peu après en exil dans le Caucase. Ses positions théologiques furent justifiées au troisième concile de Constantinople en 680-681, qui condamna formellement le monothélisme.
+Pour son opposition à la politique religieuse impériale, Maxime subit l'amputation de sa main droite et l'ablation de sa langue vers 662, châtiments brutaux destinés à faire taire son écriture comme sa parole, et il mourut peu après en exil dans le Caucase. Ses positions théologiques furent confirmées au troisième concile de Constantinople en 680-681, qui condamna formellement le monothélisme.
 
-Sa mémoire honore aujourd'hui les théologiens et tous les croyants qui endurent une souffrance réelle pour la précision doctrinale, rappelant à l'Église que des questions en apparence abstraites sur l'humanité du Christ portent d'immenses conséquences pour la réalité du salut humain.
+Son témoignage honore les théologiens et tous les croyants qui endurent une souffrance réelle pour la précision de la doctrine, rappelant à l'Église que des questions en apparence abstraites sur l'humanité du Christ portent d'immenses conséquences pour le salut de l'homme.
 $desc$),
 ('saint-maximilian-kolbe-priest-and-martyr', 'Saint Maximilien Kolbe, prêtre et martyr', $desc$
-Célébrée le 14 août comme **mémoire obligatoire**, la fête de saint Maximilien Kolbe honore un prêtre franciscain du vingtième siècle qui offrit sa propre vie en échange de celle d'un compagnon prisonnier à Auschwitz. Les ornements rouges marquent ce jour, propres au témoignage d'un martyr, et cette mémoire tombe justement à la veille de l'Assomption, unissant un acte moderne de don de soi à la plus ancienne solennité mariale de l'Église.
+Saint Maximilien Kolbe fut un prêtre franciscain du XXe siècle qui offrit sa propre vie en échange de celle d'un compagnon de captivité à Auschwitz. Dans le calendrier romain général, sa mémoire tombe à la veille de l'Assomption, coïncidence qui unit discrètement un acte moderne de don de soi à la plus ancienne solennité mariale de l'Église, car toute sa vie avait été consacrée à l'Immaculée.
 
-La célébration commémore un acte de sacrifice substitutif dans les circonstances les plus dures qui soient : lorsque les autorités du camp nazi désignèrent dix prisonniers à mourir de faim en représailles d'une évasion, Kolbe se porta volontaire pour prendre la place d'un homme marié et père de famille, choix que l'Église lit comme une image lumineuse du don de soi du Christ pour les autres. Sa consécration mariale de toute une vie, exprimée à travers la Militia Immaculatae qu'il fonda, façonna une spiritualité où la remise totale à Marie le préparait à la remise totale de sa propre vie.
+Sa mort fut un acte de sacrifice substitutif dans les circonstances les plus terribles que l'on puisse imaginer : lorsque les autorités du camp désignèrent dix prisonniers pour mourir de faim en représailles d'une évasion, Kolbe se porta volontaire pour prendre la place d'un homme marié et père de famille, choix que l'Église lit comme une image lumineuse de l'offrande que le Christ fit de lui-même. Sa consécration mariale de toute une vie, exprimée dans la Milice de l'Immaculée qu'il avait fondée, façonna une spiritualité où le don total à Marie le prépara au don total de sa vie.
 
-Kolbe mourut le 14 août 1941, après avoir survécu deux semaines de privation avant d'être achevé par une injection létale, et l'homme dont il avait sauvé la vie, Franciszek Gajowniczek, survécut à la guerre et fut présent à la canonisation de Kolbe par le pape Jean-Paul II en 1982, qui le déclara martyr de la charité.
+Kolbe mourut le 14 août 1941, ayant survécu à deux semaines de famine avant d'être achevé par une injection mortelle. L'homme dont il sauva la vie, Franciszek Gajowniczek, survécut à la guerre et fut présent lorsque le pape Jean-Paul II canonisa Kolbe en 1982 et le déclara martyr de la charité.
 
-Sa mémoire tient aujourd'hui devant l'Église la possibilité d'un sacrifice héroïque et librement choisi pour autrui, et elle demeure un signe durable que l'amour se révèle plus fort que la machinerie de la haine et de la mort.
+Son témoignage place devant l'Église la possibilité d'un sacrifice de soi héroïque et librement choisi pour autrui, et il demeure un signe durable que l'amour se révèle plus fort que la machinerie de la haine et de la mort.
 $desc$),
 ('the-assumption-of-the-blessed-virgin-mary', 'Assomption de la Bienheureuse Vierge Marie', $desc$
-Célébrée le 15 août comme **Solennité**, et fête d'obligation dans de nombreux pays, l'Assomption de la Bienheureuse Vierge Marie compte parmi les plus hautes fêtes du calendrier marial. Les ornements blancs sont portés, et le rang de cette solennité assure qu'elle prime sur tout dimanche ordinaire de l'année où elle pourrait tomber, mais non sur un dimanche de l'Avent, du Carême ou du Temps pascal.
+L'Assomption de la Bienheureuse Vierge Marie compte parmi les plus hautes fêtes de l'année mariale et demeure, dans bien des pays, une fête d'obligation. Dans le calendrier romain général, elle est célébrée comme Solennité, d'un tel poids qu'elle l'emporte sur un dimanche ordinaire de l'année où elle viendrait à tomber, rang qui exprime la place de ce mystère au sommet de l'espérance de l'Église.
 
-La solennité proclame le dogme, défini par le pape Pie XII en 1950, selon lequel Marie, au terme de sa vie terrestre, fut élevée corps et âme à la gloire céleste, privilège découlant de sa participation unique à la victoire de son Fils sur le péché et la mort. Première parmi les rachetés à partager pleinement et corporellement la promesse de la Résurrection, Marie se tient comme le gage et l'image de ce qui attend tout chrétien fidèle à la fin des temps, unissant indissociablement la dévotion mariale de l'Église à son espérance en la résurrection de la chair.
+La solennité proclame le dogme, défini par le pape Pie XII en 1950, selon lequel Marie, au terme de sa vie terrestre, fut élevée corps et âme dans la gloire céleste, privilège découlant de sa participation unique à la victoire de son Fils sur le péché et la mort. Première parmi les rachetés à partager pleinement et corporellement la promesse de la Résurrection, Marie se tient comme le gage et l'image de ce qui attend tout chrétien fidèle, liant indissolublement la dévotion mariale de l'Église à son espérance en la résurrection de la chair.
 
-La croyance en l'assomption corporelle de Marie est attestée en Orient comme en Occident dès les premiers siècles, célébrée liturgiquement comme la Dormition dans la tradition byzantine et progressivement incorporée au calendrier romain dès le VIIe siècle, bien avant sa définition dogmatique formelle. La constitution Munificentissimus Deus du pape Pie XII en 1950 donna une expression doctrinale définitive à une croyance déjà profondément enracinée dans la vie liturgique et dévotionnelle ancienne de l'Église.
+La croyance en l'assomption corporelle de Marie est attestée en Orient comme en Occident dès les premiers siècles, célébrée liturgiquement comme la Dormition dans la tradition byzantine et peu à peu intégrée au calendrier romain dès le VIIe siècle, bien avant sa définition formelle. La constitution Munificentissimus Deus de Pie XII donna expression doctrinale définitive à une croyance déjà profondément enracinée dans la vie liturgique et dévotionnelle ancienne de l'Église.
 
-La solennité invite aujourd'hui les fidèles à confier à l'intercession de Marie leur propre espérance de résurrection corporelle, et elle demeure, dans de nombreuses cultures, une occasion de processions populaires, de bénédictions des récoltes et de réjouissances communautaires qui unissent la dévotion à Marie à la gratitude pour la bonté de la création.
+La solennité invite les fidèles à confier à l'intercession de Marie leur propre espérance de résurrection corporelle, et elle demeure, en bien des cultures, une occasion de processions, de bénédictions des récoltes et de fêtes communautaires qui lient la dévotion à Marie à la reconnaissance envers la bonté de la création.
 $desc$),
 ('saint-stephen-of-hungary', 'Saint Étienne de Hongrie', $desc$
-Inscrite au 16 août comme **mémoire facultative**, la fête de saint Étienne de Hongrie honore le premier roi chrétien de Hongrie, à qui l'on attribue l'établissement de l'Église et de l'ordre civil chrétien dans tout son royaume. Les ornements blancs marquent ce jour dédié à un modèle de gouvernance chrétienne.
+Saint Étienne de Hongrie fut le premier roi chrétien de son peuple, à qui l'on attribue l'établissement à la fois de l'Église et d'un ordre civil chrétien dans tout son royaume. On l'honore comme un modèle d'art de gouverner chrétien, en qui le pouvoir royal devint un instrument de l'Évangile.
 
-La célébration rappelle un souverain qui comprenait l'autorité royale comme inséparable de la responsabilité du bien spirituel de son peuple, fondant diocèses, monastères et églises tout en codifiant des lois protégeant les faibles et favorisant la pratique de la foi chrétienne dans une terre encore largement païenne. Son règne illustre comment le pouvoir politique légitime, exercé à bon droit, peut servir la mission de l'Église plutôt que lui faire concurrence.
+Il comprit l'autorité royale comme inséparable de la responsabilité du bien spirituel de son peuple, fondant des diocèses, des monastères et des églises tout en codifiant des lois qui protégeaient les faibles et favorisaient la pratique de la foi dans un pays encore largement païen. Son règne montre comment un pouvoir politique légitime, bien exercé, peut servir la mission de l'Église plutôt que de la concurrencer.
 
-Couronné roi de Hongrie vers l'an 1000, avec une couronne traditionnellement liée au pape Sylvestre II, Étienne œuvra sans relâche à consolider à la fois l'unité politique et l'évangélisation chrétienne de son royaume avant sa mort en 1038 ; il fut canonisé en 1083 avec son fils Émeric, rare exemple d'un souverain et de son héritier honorés ensemble comme saints.
+Couronné roi de Hongrie vers l'an 1000 avec une couronne traditionnellement liée au pape Sylvestre II, Étienne travailla sans relâche à assurer l'unité politique et l'évangélisation chrétienne de son royaume jusqu'à sa mort en 1038 ; il fut canonisé en 1083 avec son fils Émeric, cas rare d'un souverain et de son héritier honorés ensemble comme saints.
 
-Sa mémoire offre aujourd'hui aux responsables politiques un modèle d'autorité exercée au service du bien commun et de l'épanouissement de la foi, et elle encourage les fidèles chrétiens à voir dans le gouvernement civil légitime un champ ouvert à la sanctification plutôt qu'un obstacle à celle-ci.
+Son témoignage offre aux responsables politiques un modèle d'autorité exercée au service du bien commun et de l'épanouissement de la foi, et il encourage les fidèles à voir dans le gouvernement civil légitime un champ ouvert à la sanctification plutôt qu'un obstacle à celle-ci.
 $desc$),
 ('saint-john-eudes-priest', 'Saint Jean Eudes, prêtre', $desc$
-Inscrite au 19 août comme **mémoire facultative**, la fête de saint Jean Eudes honore un prêtre français du XVIIe siècle, pionnier de la dévotion au Sacré-Cœur de Jésus et au Cœur Immaculé de Marie. Les ornements blancs marquent ce jour dédié à un fondateur dont l'intuition théologique devait plus tard s'épanouir en l'une des dévotions les plus chères de l'Église.
+Saint Jean Eudes fut un prêtre français du XVIIe siècle qui fut un pionnier de la dévotion au Sacré-Cœur de Jésus et au Cœur immaculé de Marie, donnant forme liturgique à une piété qui devait plus tard se répandre dans toute l'Église. Son intuition théologique anticipa l'une des dévotions les plus chères au catholicisme.
 
-La célébration rappelle le rôle de Jean Eudes comme précurseur de la spiritualité du Sacré-Cœur, composant des textes liturgiques en l'honneur des Cœurs de Jésus et de Marie des décennies avant que les révélations privées à sainte Marguerite-Marie Alacoque ne donnent à cette dévotion une expression populaire plus large. Sa prédication et son labeur pastoral à travers la Normandie mirent aussi un grand accent sur la réforme de la formation cléricale, souci qui déboucha sur l'une de ses contributions institutionnelles les plus durables.
+Il composa des textes liturgiques en l'honneur des Cœurs de Jésus et de Marie des décennies avant que les révélations privées à sainte Marguerite-Marie Alacoque ne donnent à la dévotion son expression populaire plus large. Sa prédication et son labeur pastoral en Normandie mirent aussi un grand poids sur la réforme de la formation cléricale, souci qui porta fruit dans l'une de ses réalisations institutionnelles les plus durables.
 
-Eudes fonda en 1643 la Congrégation de Jésus et Marie, dite des Eudistes, dédiée particulièrement à l'établissement de séminaires pour la juste formation des prêtres, et il fonda plus tard l'Ordre de Notre-Dame de Charité pour prendre soin des femmes en difficulté. Il mourut en 1680 et fut canonisé en 1925, le pape Pie XI le reconnaissant comme père, docteur et apôtre du culte liturgique des Cœurs de Jésus et de Marie.
+Eudes fonda la Congrégation de Jésus et Marie, connue sous le nom d'Eudistes, en 1643, dédiée en particulier à l'établissement de séminaires pour la juste formation des prêtres, et il fonda plus tard l'Ordre de Notre-Dame de Charité pour prendre soin des femmes en difficulté. Il mourut en 1680 et fut canonisé en 1925, le pape Pie XI le saluant comme père, docteur et apôtre du culte liturgique des Cœurs de Jésus et de Marie.
 
-Sa mémoire invite aujourd'hui les fidèles à approfondir la dévotion aux Cœurs Sacré et Immaculé comme une école d'amour unissant la contemplation de la miséricorde du Christ à l'imitation de l'union intérieure de Marie avec son Fils.
+Son témoignage invite les fidèles à approfondir la dévotion aux Cœurs sacré et immaculé comme une école d'amour, unissant la contemplation de la miséricorde du Christ à l'imitation de l'union intérieure de Marie avec son Fils.
 $desc$),
 ('saint-bernard-abbot-and-doctor-of-the-church', 'Saint Bernard, abbé et docteur de l''Église', $desc$
-Célébrée le 20 août comme **mémoire obligatoire**, la fête de saint Bernard de Clairvaux honore l'un des réformateurs monastiques et théologiens mystiques les plus influents du Moyen Âge. Les ornements blancs marquent ce jour dédié à un docteur dont l'éloquence façonna à la fois la spiritualité monastique et la vie plus large de l'Église médiévale.
+Saint Bernard de Clairvaux fut l'un des plus influents réformateurs monastiques et théologiens mystiques du Moyen Âge, un abbé dont l'éloquence façonna à la fois la vie intérieure des moines et les grandes affaires de l'Église. On l'appelle souvent le Docteur marial pour la tendresse de sa dévotion à la Mère de Dieu.
 
-La célébration rappelle le rôle décisif de Bernard dans la réforme et l'expansion de l'ordre cistercien, dont il fit de l'observance austère un symbole de ferveur monastique, ainsi que sa théologie mystique centrée sur l'amour comme voie par laquelle l'âme est attirée dans l'union avec Dieu, exprimée surtout dans ses célèbres sermons sur le Cantique des Cantiques. Sa tendre dévotion à Marie, qui lui valut d'être traditionnellement appelé le Docteur marial, tissa ensemble théologie contemplative et piété affective chaleureuse d'une manière qui influença des siècles d'écrits spirituels.
+Sa théologie mystique fit de l'amour le chemin par lequel l'âme est attirée dans l'union avec Dieu, exprimé surtout dans ses célèbres sermons sur le Cantique des cantiques, tandis que sa réforme donna à l'ordre cistercien sa réputation de ferveur austère. En lui, profondeur contemplative et piété affective chaleureuse se tissèrent ensemble d'une manière qui devait influencer des siècles d'écriture spirituelle.
 
-Bernard entra à Cîteaux en 1112 et fonda Clairvaux en 1115, d'où la réforme cistercienne se répandit rapidement en Europe ; il intervint aussi de façon décisive dans les affaires plus larges de l'Église, prêchant la deuxième croisade et jouant un rôle central dans la résolution d'un schisme pontifical. Il mourut en 1153 et fut canonisé en 1174, puis déclaré docteur de l'Église en 1830.
+Bernard entra à Cîteaux en 1112 et fonda Clairvaux en 1115, d'où la réforme cistercienne se répandit rapidement à travers l'Europe ; il intervint aussi de façon décisive dans la vie plus large de l'Église, prêchant la deuxième croisade et contribuant à résoudre un schisme pontifical. Il mourut en 1153 et fut canonisé en 1174, avant d'être proclamé docteur de l'Église en 1830.
 
-Sa mémoire invite aujourd'hui les fidèles à chercher Dieu non seulement par l'argumentation mais par l'expérience transformante de l'amour, et elle érige la vie monastique en source vive de théologie capable d'enrichir toute l'Église.
+Son témoignage invite les fidèles à chercher Dieu non seulement par l'argument, mais par l'expérience transformante de l'amour, et il présente la vie monastique comme une source de théologie capable d'enrichir toute l'Église.
 $desc$),
 ('saint-pius-x-pope', 'Saint Pie X, pape', $desc$
-Inscrite au 21 août comme **mémoire obligatoire**, la fête de saint Pie X honore un pape que l'on retient surtout pour ses réformes pastorales concernant l'Eucharistie et sa résistance au modernisme théologique. Les ornements blancs marquent ce jour dédié à un pontife dont la devise, tout restaurer dans le Christ, guida un vaste programme de renouveau.
+Saint Pie X est retenu avant tout pour ses réformes pastorales touchant l'Eucharistie et pour sa résistance au modernisme théologique. Sa devise, tout restaurer dans le Christ, guida un vaste programme de renouveau qui atteignit la vie ordinaire de chaque catholique.
 
-La célébration rappelle l'héritage pastoral le plus durable de Pie X : l'abaissement de l'âge de la première communion à l'âge de raison, et l'encouragement d'une communion fréquente, voire quotidienne, parmi les fidèles, décisions qui remodelèrent la pratique catholique ordinaire en restaurant l'accès immédiat à l'Eucharistie comme nourriture pour le disciple de tous les jours plutôt que comme exception rare et solennelle. Il promut également la réforme du chant grégorien et de l'instruction catéchétique, cherchant une Église dont le culte et l'enseignement fussent à la fois accessibles et solides sur le plan doctrinal.
+Son héritage pastoral le plus durable fut d'abaisser l'âge de la première communion à l'âge de raison et d'encourager la communion fréquente, voire quotidienne, décisions qui remodelèrent la pratique catholique ordinaire en rétablissant l'accès immédiat à l'Eucharistie comme nourriture de la vie chrétienne de chaque jour plutôt que comme exception rare et solennelle. Il promut de même la réforme du chant grégorien et de l'instruction catéchétique, cherchant une Église dont le culte et l'enseignement fussent à la fois accessibles et doctrinalement sûrs.
 
-Né Giuseppe Sarto en 1835, il fut élu pape en 1903 et entreprit une codification importante du droit canonique, achevée plus tard sous son successeur, ainsi qu'une réponse ferme aux courants modernistes qu'il jugeait incompatibles avec l'intégrité doctrinale de l'Église. Il mourut en 1914, peu après le déclenchement de la Première Guerre mondiale, et fut canonisé en 1954.
+Né Giuseppe Sarto en 1835, il fut élu pape en 1903 et entreprit une importante codification du droit canonique, achevée plus tard sous son successeur, ainsi qu'une ferme réponse aux courants modernistes qu'il jugeait incompatibles avec l'intégrité doctrinale de l'Église. Il mourut en 1914, peu après le déclenchement de la Première Guerre mondiale, et fut canonisé en 1954.
 
-Sa mémoire invite aujourd'hui les fidèles à apprécier l'accès facile à l'Eucharistie comme central dans la vie chrétienne, et elle recommande un discernement attentif entre le développement doctrinal authentique et les courants qui dissoudraient la cohérence de la foi.
+Son témoignage invite les fidèles à chérir l'accès aisé à l'Eucharistie comme central dans la vie chrétienne, et il recommande un discernement attentif entre l'authentique développement doctrinal et les courants qui dissoudraient la cohérence de la foi.
 $desc$),
 ('the-queenship-of-the-blessed-virgin-mary', 'La Royauté de la Bienheureuse Vierge Marie', $desc$
-Inscrite au 22 août comme **mémoire obligatoire**, la fête de la Royauté de Marie fut délibérément placée pour conclure l'octave de l'Assomption, tirant la conséquence logique de la glorification corporelle de Marie. Les ornements blancs marquent ce jour, proclamant la part de Marie dans la dignité royale de son Fils.
+La Royauté de Marie tire la conséquence logique de sa glorification corporelle : celle qui fut élevée au ciel partage désormais la dignité royale de son Fils. Dans le calendrier romain général, la mémoire tombe au jour octave de l'Assomption, placée à dessein une semaine après cette solennité, afin que le couronnement de la Vierge découle directement de son élévation dans la gloire.
 
-La célébration proclame que Marie, élevée corps et âme au ciel, règne désormais avec le Christ comme Reine du ciel et de la terre, royauté enracinée non dans un pouvoir mondain mais dans sa coopération unique à la rédemption et sa parfaite conformité à son Fils, Roi de l'univers. Sa dignité royale est ainsi inséparable de son humilité, puisque c'est précisément en tant qu'humble servante du Seigneur qu'elle fut exaltée au-dessus de toute créature.
+La célébration proclame que Marie, élevée corps et âme au ciel, règne avec le Christ comme Reine du ciel et de la terre, royauté enracinée non dans un pouvoir mondain mais dans sa coopération unique à la rédemption et sa parfaite conformité à son Fils, le Roi de l'univers. Sa dignité royale est ainsi inséparable de son humilité, puisque c'est précisément comme l'humble servante du Seigneur qu'elle fut exaltée au-dessus de toute créature.
 
-La dévotion à la royauté de Marie a des racines anciennes dans l'art et l'hymnographie chrétiens, mais la fête sous sa forme actuelle fut instituée par le pape Pie XII en 1954 dans l'encyclique Ad Caeli Reginam, marquant le centenaire du dogme de l'Immaculée Conception et délibérément liée à l'Assomption définie quatre ans plus tôt seulement.
+La dévotion à la royauté de Marie a d'anciennes racines dans l'art et l'hymnographie chrétiens, mais la fête sous sa forme actuelle fut instituée par le pape Pie XII en 1954, dans l'encyclique Ad Caeli Reginam, marquant le centenaire du dogme de l'Immaculée Conception et délibérément liée à l'Assomption définie quatre ans plus tôt.
 
-Cette mémoire invite aujourd'hui les fidèles à s'approcher de Marie avec la confiance due à une mère qui règne en reine, lui confiant tout besoin de l'Église et du monde, tout en rappelant que toute véritable dignité royale dans le Royaume de Dieu s'exerce, comme la sienne, par un humble service.
+La mémoire invite les fidèles à s'approcher de Marie avec la confiance due à une mère qui règne comme reine, lui confiant tout besoin de l'Église et du monde, tout en rappelant que toute vraie dignité royale dans le Royaume de Dieu s'exerce, comme la sienne, par l'humble service.
 $desc$),
 ('saint-rose-of-lima-virgin', 'Sainte Rose de Lima, vierge', $desc$
-Inscrite au 23 août comme **mémoire facultative**, la fête de sainte Rose de Lima honore la première sainte canonisée des Amériques, laïque renommée pour une pénitence extraordinaire et une prière mystique dans le Pérou colonial. Les ornements blancs marquent ce jour dédié à un épanouissement singulier de sainteté dans le Nouveau Monde.
+Sainte Rose de Lima fut la première sainte canonisée des Amériques, une laïque renommée pour sa pénitence extraordinaire et sa prière mystique dans le Pérou colonial. Sa sainteté marqua une floraison singulière au sein du Nouveau Monde récemment évangélisé.
 
-La célébration rappelle l'embrassement radical par Rose de l'ascèse pénitentielle, vécue comme tertiaire dominicaine demeurant dans la maison familiale plutôt qu'au couvent, exprimant la conviction qu'une souffrance intense, librement acceptée, pouvait être unie à la passion même du Christ pour le salut des âmes. Son soin des pauvres, des malades et des populations autochtones de Lima accompagnait sa vie contemplative, montrant qu'ascèse rigoureuse et charité concrète ne s'opposent pas mais peuvent jaillir d'un seul et même amour dévorant pour Dieu.
+Elle embrassa un ascétisme pénitentiel radical, mené comme tertiaire dominicaine vivant dans la maison familiale plutôt qu'au couvent, par conviction que la souffrance intense, librement acceptée, pouvait être unie à la passion même du Christ pour le salut des âmes. Son soin des pauvres, des malades et des populations indigènes de Lima accompagna sa vie contemplative, montrant qu'ascétisme rigoureux et charité concrète ne s'opposent pas mais peuvent jaillir d'un unique et dévorant amour de Dieu.
 
-Née Isabel Flores de Oliva à Lima en 1586, elle prit le nom de Rose et vécut comme tertiaire dominicaine, mourant en 1617 ; elle fut canonisée en 1671 par le pape Clément X, devenant la première personne née dans les Amériques à recevoir cet honneur, et fut plus tard nommée patronne de l'Amérique latine, des Philippines et des Indes.
+Née Isabel Flores de Oliva à Lima en 1586, elle prit le nom de religion de Rose et vécut comme tertiaire dominicaine jusqu'à sa mort en 1617 ; elle fut canonisée en 1671 par le pape Clément X, première personne née dans les Amériques à recevoir cet honneur, et fut plus tard nommée patronne de l'Amérique latine, des Philippines et des Indes.
 
-Sa mémoire honore aujourd'hui la vocation des pénitents laïcs et des tertiaires au sein de l'Église, et elle demeure un signe de la sainteté florissante qui s'enracina dans les terres nouvellement évangélisées des Amériques dès la première rencontre missionnaire de l'Église avec le continent.
+Son témoignage honore la vocation des pénitents laïcs et des tertiaires au sein de l'Église, et il demeure un signe de la sainteté qui prit racine dans les terres nouvellement évangélisées des Amériques dès la première rencontre missionnaire de l'Église avec ce continent.
 $desc$),
 ('saint-bartholomew-apostle', 'Saint Barthélemy, apôtre', $desc$
-Célébrée le 24 août comme **Fête**, la mémoire de saint Barthélemy l'Apôtre honore l'un des Douze choisis par le Christ, traditionnellement identifié au Nathanaël de l'évangile de Jean. Les ornements rouges marquent ce jour, propres à la commémoration d'un apôtre dont le témoignage culmina dans le martyre.
+Saint Barthélemy fut l'un des Douze choisis par le Christ, traditionnellement identifié au Nathanaël de l'évangile de Jean. Dans le calendrier romain général, sa célébration est gardée comme Fête, rang propre aux apôtres, dont la liturgie honore la place fondatrice dans l'Église au-dessus des mémoires ordinaires des saints.
 
-La célébration rappelle un disciple que Jésus lui-même loua comme un Israélite sans détour, description que l'Église lit comme un modèle de la foi sans duplicité à laquelle tout croyant est appelé. La tradition veut que Barthélemy ait porté l'Évangile jusqu'en des terres lointaines, notamment l'Arménie et l'Inde, et qu'il ait subi un martyre particulièrement sévère, traditionnellement par écorchement, sort plus tard immortalisé dans l'art chrétien, le plus célèbre exemple étant le Jugement dernier de Michel-Ange.
+Jésus lui-même le loua comme un Israélite en qui il n'y a pas de duplicité, description que l'Église lit comme un modèle de la foi sans détour à laquelle tout croyant est appelé. La tradition tient que Barthélemy porta l'Évangile en des terres lointaines, dont l'Arménie et l'Inde, et qu'il subit un martyre particulièrement cruel, par écorchement selon la tradition, sort immortalisé plus tard dans l'art chrétien, notamment dans le Jugement dernier de Michel-Ange.
 
-Peu de détails historiques subsistent au-delà des références évangéliques le nommant parmi les Douze, mais la tradition ancienne l'associe constamment à une activité missionnaire en Arménie, où il est vénéré comme un apôtre fondateur de cette antique nation chrétienne, et ses reliques ont fait l'objet d'une dévotion à Rome et ailleurs depuis l'Antiquité.
+Peu de détails historiques subsistent au-delà des mentions évangéliques qui le nomment parmi les Douze, mais l'ancienne tradition l'associe constamment à un labeur missionnaire en Arménie, où il est vénéré comme un apôtre fondateur de cette antique nation chrétienne, et ses reliques sont objets de dévotion à Rome et ailleurs depuis l'Antiquité.
 
-Sa mémoire invite aujourd'hui les croyants à imiter la transparence de cœur pour laquelle le Christ le loua, et elle honore le courage missionnaire des apôtres qui portèrent l'Évangile jusqu'aux confins du monde connu au prix de leur propre vie.
+Son témoignage invite les croyants à imiter la transparence du cœur pour laquelle le Christ le loua, et il honore le courage missionnaire des apôtres qui portèrent l'Évangile jusqu'aux confins du monde connu au prix de leur vie.
 $desc$),
 ('saint-louis', 'Saint Louis', $desc$
-Inscrite au 25 août comme **mémoire facultative**, partagée avec saint Joseph Calasanz, la fête de saint Louis honore le roi Louis IX de France, retenu comme modèle de royauté chrétienne marquée par la justice, l'austérité personnelle et la charité envers les pauvres. Les ornements blancs marquent ce jour dédié à une sainteté exercée au cœur même de l'exercice du pouvoir temporel.
+Saint Louis, le roi Louis IX de France, est retenu comme un modèle de la royauté chrétienne marqué par la justice, l'austérité personnelle et la dévotion aux pauvres. En lui, la sainteté s'exerça non pas à l'écart du pouvoir temporel mais en son cœur même, sanctifiant la charge exigeante d'un monarque médiéval.
 
-La célébration rappelle un monarque qui comprenait sa charge royale comme un dépôt à exercer pour le bien de ses sujets et non pour son propre agrandissement, réformant le système judiciaire français pour en corriger les abus, entendant personnellement les doléances des pauvres sous un chêne à Vincennes, et observant une pénitence personnelle rigoureuse malgré les fastes du luxe royal à sa disposition. Sa participation à deux croisades, bien qu'infructueuse militairement et se terminant par sa propre mort, fut entreprise par sincère conviction religieuse plutôt que par simple ambition politique.
+Il comprit son office royal comme un dépôt à exercer pour le bien de ses sujets plutôt que pour son propre agrandissement, réformant l'administration de la justice, soignant en personne les malades et les indigents, et plaçant l'honnêteté du roi chrétien au-dessus des calculs de la politique. Sa vie donna au Moyen Âge finissant son idéal durable du roi juste et pieux.
 
-Louis IX régna comme roi de France de 1226 jusqu'à sa mort en 1270, durant la huitième croisade près de Tunis, et il fut canonisé en 1297 par le pape Boniface VIII, devenant l'un des rares rois de France honorés comme saint et une référence de l'idéal de monarchie chrétienne tout au long de la fin du Moyen Âge.
+Louis IX régna comme roi de France de 1226 jusqu'à sa mort en 1270, pendant la huitième croisade près de Tunis, et il fut canonisé en 1297 par le pape Boniface VIII, devenant l'un des rares rois de France honorés comme saints et une pierre de touche de l'idéal de la monarchie chrétienne pour les siècles suivants.
 
-Sa mémoire offre aujourd'hui à ceux qui exercent l'autorité publique un modèle de gouvernance ordonné à la justice et au soin des plus vulnérables, et elle rappelle à toute l'Église que le pouvoir temporel, animé d'une foi authentique, peut devenir un véritable instrument de sainteté.
+Son témoignage offre à ceux qui exercent l'autorité publique un modèle de gouvernement ordonné à la justice et au soin des plus vulnérables, et il rappelle à toute l'Église que le pouvoir mondain, animé par une foi authentique, peut devenir un véritable instrument de sainteté.
 $desc$),
 ('saint-joseph-calasanz-priest', 'Saint Joseph Calasanz, prêtre', $desc$
-Inscrite au 25 août comme **mémoire facultative**, aux côtés de saint Louis, la fête de saint Joseph Calasanz honore le fondateur des premières écoles publiques gratuites d'Europe dédiées à l'éducation des enfants pauvres. Les ornements blancs marquent ce jour dédié à un pionnier de l'éducation chrétienne.
+Saint Joseph Calasanz fonda les premières écoles publiques gratuites d'Europe consacrées à l'éducation des enfants pauvres, et on l'honore comme un pionnier de l'éducation chrétienne. Sa vie lia la mission de l'Église à la salle de classe, voyant dans l'instruction des jeunes une œuvre de l'Évangile.
 
-La célébration rappelle la conviction de Calasanz selon laquelle l'éducation était l'un des instruments les plus puissants pour sortir les enfants de la pauvreté et de l'ignorance, et que cette œuvre appartenait proprement à la mission de l'Église et non à la seule charité, puisque la formation conjointe de l'intelligence et de la conscience prépare les enfants à la fois à l'épanouissement temporel et au salut éternel. Son insistance sur une instruction gratuite et de qualité pour les pauvres anticipa de plusieurs siècles des développements ultérieurs vers l'éducation universelle.
+Il était convaincu que l'éducation comptait parmi les instruments les plus puissants pour arracher les enfants à la pauvreté et à l'ignorance, et que cette œuvre relevait proprement de la mission de l'Église, puisque la formation conjointe de l'intelligence et de la conscience prépare les enfants à l'épanouissement temporel comme au salut éternel. Son exigence d'une scolarité gratuite et de qualité pour les pauvres anticipa de plusieurs siècles les mouvements ultérieurs vers l'éducation universelle.
 
-Calasanz fonda l'ordre des Piaristes à Rome en 1597 pour établir et animer des écoles pour les enfants pauvres, affrontant d'importantes difficultés institutionnelles, y compris une suppression temporaire de sa congrégation vers la fin de sa vie, avant qu'elle ne fût finalement rétablie ; il mourut en 1648, et les Piaristes furent pleinement justifiés et prospérèrent ensuite à travers l'Europe. Il fut canonisé en 1767.
+Calasanz fonda l'ordre des Piaristes à Rome en 1597 pour établir et desservir des écoles destinées aux enfants pauvres, affrontant de sérieuses difficultés institutionnelles et même une suppression temporaire de sa congrégation à la fin de sa vie avant qu'elle ne soit rétablie ; il mourut en 1648, et les Piaristes furent plus tard réhabilités et prospérèrent à travers l'Europe. Il fut canonisé en 1767.
 
-Sa mémoire honore aujourd'hui la dignité de l'enseignement comme forme de charité et d'évangélisation, et elle encourage l'Église à continuer de faire de l'éducation des pauvres une dimension essentielle de sa mission dans le monde.
+Son témoignage honore la dignité de l'enseignement comme une forme de charité et d'évangélisation, et il encourage l'Église à maintenir l'éducation des pauvres parmi les dimensions essentielles de sa mission dans le monde.
 $desc$),
 ('saint-monica', 'Sainte Monique', $desc$
-Célébrée le 27 août comme **mémoire obligatoire**, la fête de sainte Monique honore une mère dont la prière persévérante et les larmes accompagnèrent la longue conversion de son fils, saint Augustin d'Hippone. Les ornements blancs marquent ce jour, placé à propos la veille de la mémoire de son fils.
+Sainte Monique est honorée comme la mère dont la prière persévérante et les larmes accompagnèrent la longue conversion de son fils, saint Augustin d'Hippone. Dans le calendrier romain général, sa mémoire précède immédiatement celle de son fils, de sorte que l'intercesseur et le fruit de ses prières sont commémorés en des jours successifs.
 
-La célébration rappelle un modèle de foi maternelle exercée à travers des décennies d'intercession patiente, endurant un mariage difficile et des années d'angoisse devant la jeunesse égarée de son fils et son adhésion à l'erreur manichéenne, avant d'être témoin, presque à la fin de sa propre vie, de son baptême et de sa conversion à la foi catholique. Son exemple montre qu'une prière persévérante, soutenue même lorsque sa réponse semble indéfiniment différée, demeure l'une des formes les plus puissantes de participation au salut d'une autre âme.
+Elle est un modèle de foi maternelle exercée à travers des décennies de patiente intercession, supportant un mariage difficile et des années d'angoisse devant la jeunesse égarée de son fils et son adhésion à l'erreur manichéenne, avant de voir, tout près du terme de sa vie, son baptême et sa conversion à la foi catholique. Son exemple montre que la prière persévérante, soutenue même quand sa réponse semble indéfiniment différée, demeure l'une des formes les plus puissantes de participation au salut d'une autre âme.
 
-Monique suivit son fils de l'Afrique du Nord jusqu'en Italie, priant sans cesse pour sa conversion, et fut présente à Milan pour son baptême par saint Ambroise en 387 ; elle mourut plus tard la même année à Ostie, comme son fils le raconta plus tard avec émotion dans ses Confessions, dans une scène de contemplation mystique partagée avec Augustin qui demeure l'un des passages les plus célèbres de la littérature chrétienne.
+Monique suivit son fils d'Afrique du Nord en Italie, priant sans cesse pour sa conversion, et fut présente à Milan pour son baptême par saint Ambroise en 387 ; elle mourut plus tard cette même année à Ostie, dans une scène de contemplation mystique partagée avec Augustin qu'il rapporta plus tard avec émotion dans ses Confessions, parmi les pages les plus célèbres de la littérature chrétienne.
 
-Sa mémoire réconforte aujourd'hui tout parent qui prie pour un enfant égaré, entretenant l'espérance que la grâce peut accomplir, au moment choisi par Dieu, ce que le seul effort humain et l'inquiétude ne peuvent réaliser.
+Son témoignage console tout parent qui prie pour un enfant égaré, tenant haut l'espérance que la grâce peut accomplir, au temps de Dieu, ce que l'effort et l'inquiétude humains ne sauraient à eux seuls obtenir.
 $desc$),
 ('saint-augustine-of-hippo-bishop-and-doctor-of-the-church', 'Saint Augustin d''Hippone, évêque et docteur de l''Église', $desc$
-Inscrite au 28 août comme **mémoire obligatoire**, la fête de saint Augustin d'Hippone honore l'un des théologiens les plus influents de l'histoire du christianisme occidental, dont les écrits façonnèrent la doctrine catholique sur la grâce, la Trinité et la nature de l'Église pendant plus d'un millénaire et demi. Les ornements blancs marquent ce jour dédié à un docteur de l'Église d'une envergure exceptionnelle.
+Saint Augustin d'Hippone compte parmi les théologiens les plus influents de l'histoire du christianisme occidental, dont les écrits façonnèrent la doctrine catholique sur la grâce, la Trinité et la nature de l'Église pendant plus d'un millénaire et demi. Dans le calendrier romain général, sa mémoire suit immédiatement celle de sa mère Monique, dont l'Église attribue les prières à sa conversion.
 
-La célébration rappelle la conversion spectaculaire d'Augustin, d'une vie inquiète d'ambition et d'amour désordonné, racontée avec émotion dans ses Confessions, à une vie entièrement remise à Dieu, cheminement qu'il résuma fameusement dans sa conviction que le cœur de l'homme demeure inquiet tant qu'il ne repose pas en Dieu. Son héritage théologique, en particulier son enseignement sur la grâce développé contre la controverse pélagienne, établit le cadre dans lequel l'Église d'Occident comprendrait la liberté humaine, le péché et la miséricorde divine pendant des siècles.
+Sa vie tourna autour d'une conversion dramatique, d'une ambition inquiète et d'un amour désordonné vers une vie tout entière donnée à Dieu, cheminement qu'il résuma dans sa célèbre conviction que le cœur humain demeure inquiet tant qu'il ne repose pas en Dieu. Son héritage théologique, en particulier son enseignement sur la grâce élaboré contre la controverse pélagienne, établit le cadre dans lequel l'Église d'Occident comprendra pendant des siècles la liberté humaine, le péché et la miséricorde divine.
 
-Baptisé par saint Ambroise à Milan en 387 grâce aux prières de sa mère Monique, Augustin retourna en Afrique du Nord, fut ordonné prêtre puis évêque d'Hippone en 395, et produisit une œuvre écrite immense, dont la Cité de Dieu, avant sa mort en 430 alors que les Vandales assiégeaient sa ville, marquant le crépuscule de l'Afrique romaine.
+Baptisé par saint Ambroise à Milan en 387 grâce aux prières de sa mère, Augustin regagna l'Afrique du Nord, fut ordonné prêtre puis évêque d'Hippone en 395, et produisit une œuvre immense, dont la Cité de Dieu, avant sa mort en 430, alors que les Vandales assiégeaient sa ville, au crépuscule de l'Afrique romaine.
 
-Sa mémoire invite aujourd'hui les croyants à croire qu'aucune vie n'est trop désordonnée pour que la grâce ne l'atteigne, et elle recommande une réflexion théologique soutenue sur la grâce et la liberté comme un service durable que l'Église doit à chaque génération de croyants.
+Son témoignage invite les croyants à croire qu'aucune vie n'est trop désordonnée pour que la grâce l'atteigne, et il recommande une réflexion soutenue sur la grâce et la liberté comme un service durable que l'Église doit à chaque génération.
 $desc$),
 ('the-passion-of-saint-john-the-baptist-martyr', 'Passion de saint Jean-Baptiste, martyr', $desc$
-Inscrite au 29 août comme **mémoire obligatoire**, cette fête, communément appelée la Décollation de saint Jean-Baptiste, commémore le martyre du dernier et du plus grand des prophètes de l'Ancien Testament, le héraut du Christ. Les ornements rouges marquent ce jour, propres au témoignage d'un martyr, clôturant le cycle estival des saints par la mort de celui qui, le premier, proclama l'Agneau de Dieu.
+Cette commémoration, communément appelée la Décollation de saint Jean-Baptiste, marque le martyre du dernier et du plus grand des prophètes de l'Ancien Testament, le héraut du Christ. Celui qui montra le premier l'Agneau de Dieu le précède désormais jusque dans la mort.
 
-La célébration rappelle le récit évangélique du mariage illégitime d'Hérode avec Hérodiade, la dénonciation intrépide par Jean de cette union comme contraire à la loi de Dieu, et sa décollation qui suivit à la demande de la fille d'Hérodiade, mort exigée par vanité royale et serment irréfléchi plutôt que par toute procédure légale. Le martyre de Jean pour avoir défendu la sainteté du mariage contre la convenance politique constitue le point culminant de toute sa mission : ayant désigné le Christ tout au long de sa vie, il le précède maintenant jusque dans la mort, préfigurant la condamnation injuste du Seigneur lui-même.
+Elle rappelle le récit évangélique du mariage illégitime d'Hérode avec Hérodiade, la dénonciation intrépide par Jean de cette union comme contraire à la loi de Dieu, et sa décapitation à la demande de la fille d'Hérodiade, mort exigée par la vanité royale et un serment imprudent plutôt que par un quelconque procès. Le martyre de Jean pour la défense de la sainteté du mariage contre la convenance politique couronne toute sa mission : ayant désigné le Christ tout au long de sa vie, il préfigure désormais la condamnation injuste du Seigneur lui-même.
 
-Les évangiles de Marc et de Matthieu fournissent le récit sur lequel repose cette ancienne commémoration, et la fête a été gardée dans le calendrier romain depuis l'Antiquité comme pendant à la célébration de la nativité de Jean le 24 juin, les deux seules occasions, hormis le Christ et Marie, où le rite romain commémore la mort d'un saint en même temps que sa naissance.
+Les évangiles de Marc et de Matthieu fournissent le récit sur lequel repose cette ancienne commémoration, gardée dans le calendrier romain depuis l'Antiquité en pendant de la célébration de la nativité de Jean le 24 juin, seule figure hormis le Christ et Marie dont le rite romain commémore à la fois la mort et la naissance.
 
-Cette mémoire honore aujourd'hui le courage de dire une vérité morale inconfortable à ceux qui détiennent le pouvoir, quel qu'en soit le coût personnel, et elle érige la fidélité de Jean jusque dans la mort comme la clôture appropriée de la mission du héraut chargé de préparer le chemin du Seigneur.
+Cette commémoration honore le courage de dire l'inconfortable vérité morale aux puissants, quel qu'en soit le prix personnel, et elle présente la fidélité de Jean jusqu'à la mort comme la juste conclusion de la mission du héraut qui prépara le chemin du Seigneur.
 $desc$)
 ) AS x(slug, name, description)
 ON f.slug = x.slug
@@ -5357,88 +5357,568 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', x.name, NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('all-saints', 'All Saints'),
-('the-commemoration-of-all-the-faithful-departed', 'The Commemoration of All the Faithful Departed'),
-('saint-martin-de-porres-religious', 'Saint Martin de Porres, Religious'),
-('saint-charles-borromeo-bishop', 'Saint Charles Borromeo, Bishop'),
-('the-dedication-of-the-lateran-basilica', 'The Dedication of the Lateran Basilica'),
-('saint-leo-the-great-pope-and-doctor-of-the-church', 'Saint Leo the Great, Pope and Doctor of the Church'),
-('saint-martin-of-tours-bishop', 'Saint Martin of Tours, Bishop'),
-('saint-josaphat-bishop-and-martyr', 'Saint Josaphat, Bishop and Martyr'),
-('saint-albert-the-great-bishop-and-doctor-of-the-church', 'Saint Albert the Great, Bishop and Doctor of the Church'),
-('saint-margaret-of-scotland', 'Saint Margaret of Scotland'),
-('saint-gertrude-virgin', 'Saint Gertrude, Virgin'),
-('saint-elizabeth-of-hungary-religious', 'Saint Elizabeth of Hungary, Religious'),
-('the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', 'The Dedication of the Basilicas of Saints Peter and Paul, Apostles'),
-('the-presentation-of-the-blessed-virgin-mary', 'The Presentation of the Blessed Virgin Mary'),
-('saint-cecilia-virgin-and-martyr', 'Saint Cecilia, Virgin and Martyr'),
-('saint-clement-i-pope-and-martyr', 'Saint Clement I, Pope and Martyr'),
-('saint-columban-abbot', 'Saint Columban, Abbot'),
-('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs'),
-('saint-catherine-of-alexandria-virgin-and-martyr', 'Saint Catherine of Alexandria, Virgin and Martyr'),
-('saint-andrew-apostle', 'Saint Andrew, Apostle')
-) AS x(slug, name)
+('all-saints', 'All Saints', $desc$
+The Solemnity of All Saints gathers into a single celebration the whole company of the redeemed who now share the glory of God, both the canonized saints whose names fill the calendar and the countless unknown holy men and women whose sanctity is known to God alone. It is a feast of the Church triumphant, a joyful acknowledgment that holiness is the ordinary vocation of every baptized person and that heaven is already full of those who reached it.
+
+At the heart of the celebration stands the doctrine of the communion of saints: the living bond uniting the pilgrim Church on earth, the suffering Church being purified, and the glorified Church in heaven. The Gospel of the Beatitudes proclaimed on this day sets before the faithful the very portrait of the saints, showing that beatitude is found not in worldly success but in poverty of spirit, mercy, purity of heart, and endurance for the sake of righteousness.
+
+A general commemoration of martyrs emerged in the East by the fourth century, and in Rome the dedication of the Pantheon to Mary and all the martyrs by Pope Boniface IV in the early seventh century gave the observance a fixed home. Pope Gregory III later dedicated an oratory in Saint Peter's to all the saints, and by the time of Gregory IV in the ninth century the November 1 date had spread throughout the Western Church, broadening the commemoration beyond martyrs to all the saints.
+
+For believers today the feast is both consolation and challenge: consolation in knowing that the saints intercede and that the goal of the Christian life is genuinely attainable, and challenge in the reminder that each person is called to join their number. It invites an honest examination of life measured against the Beatitudes and renewed confidence in the grace that has already made saints of so many.
+$desc$),
+('the-commemoration-of-all-the-faithful-departed', 'The Commemoration of All the Faithful Departed', $desc$
+Following immediately upon the joy of All Saints, this day turns the Church's prayer toward all who have died and are not yet fully purified, the faithful departed who belong to Christ but await the fullness of his glory. It is a day of intercession rather than mourning, when the living exercise their charity toward the dead through prayer, almsgiving, and above all the offering of the Eucharist.
+
+The commemoration rests on the ancient conviction that the bonds of love are not severed by death and that the living can assist the dead through prayer, a belief rooted in the practice of purification after death and expressed in the doctrine of purgatory. To pray for the dead is an act of hope, professing faith in the resurrection of the body and confidence that God's mercy completes the work of salvation in those who died in his friendship.
+
+The observance was given lasting form by Saint Odilo of Cluny, who around the year 998 fixed November 2 for the commemoration of all the departed throughout the monasteries of his order, from which it spread across the Latin Church. The custom later arose, confirmed by Pope Benedict XV in 1915 amid the carnage of the First World War, of allowing priests to celebrate three Masses on this day, a privilege that expressed the Church's intensified prayer for the multitude of the dead.
+
+The day remains one of the most tender in the Christian year, drawing the faithful to cemeteries, to the lighting of candles, and to prayer for parents, friends, and all the forgotten dead. It teaches a healthy remembrance of mortality and a confident charity that reaches beyond the grave, reminding every believer that the Church embraces the living and the dead in one unbroken communion.
+$desc$),
+('saint-martin-de-porres-religious', 'Saint Martin de Porres, Religious', $desc$
+Saint Martin de Porres was a Dominican lay brother of Lima whose humble service and extraordinary charity made him one of the most beloved saints of the Americas. The son of a Spanish nobleman and a freed woman of African descent, he knew rejection and poverty from childhood, yet grew into a figure of astonishing tenderness toward the sick, the enslaved, and the abandoned.
+
+His life gives flesh to the Gospel teaching that greatness lies in service and that no one is beyond the reach of God's love. Assigned the lowliest tasks in his priory, he transformed menial work into an offering of love, and his care for the poor, his founding of an orphanage, and the wonders attributed to his prayer revealed a holiness that transcended the racial barriers of his society.
+
+Born in Lima in 1579, Martin joined the Dominican convent of the Holy Rosary as a servant and later as a professed lay brother, serving there until his death in 1639. Widely venerated in Peru and beyond, he was beatified by Pope Gregory XVI in 1837 and canonized by Pope John XXIII in 1962, who held him up as a model of interracial justice and Christian charity.
+
+In an age still wounded by racism and social division, Saint Martin speaks with peculiar force as a patron of social justice and of all who work for reconciliation. His example encourages the faithful to find holiness in ordinary duties faithfully done and to see in every poor and rejected person the face of Christ.
+$desc$),
+('saint-charles-borromeo-bishop', 'Saint Charles Borromeo, Bishop', $desc$
+Saint Charles Borromeo was Archbishop of Milan and one of the towering figures of the Catholic Reformation, a bishop whose tireless energy gave concrete shape to the reforms of the Council of Trent. Well-born and elevated young to high office, he chose instead a life of austerity, pastoral labor, and total dedication to the renewal of the Church.
+
+His episcopate embodies the ideal of the reforming pastor: resident in his diocese, personally visiting its remotest parishes, founding seminaries for the proper formation of clergy, and giving himself heroically to the sick during the plague that struck Milan. His life proclaims that the reform of the Church begins with the holiness and diligence of her shepherds.
+
+Born in 1538 into the aristocratic Borromeo family and nephew of Pope Pius IV, Charles played a decisive role in bringing the Council of Trent to its conclusion and in producing the Roman Catechism. As Archbishop of Milan he held provincial councils, issued detailed instructions for pastoral life, and established seminaries, dying worn out by his labors in 1584 at the age of forty-six. He was canonized by Pope Paul V in 1610.
+
+Regarded ever since as a patron of bishops, seminarians, and catechists, Saint Charles remains a model of pastoral zeal and administrative wisdom placed wholly at the service of souls. He challenges those in positions of leadership to spend themselves for their people and to seek reform first of all in their own lives.
+$desc$),
+('the-dedication-of-the-lateran-basilica', 'The Dedication of the Lateran Basilica', $desc$
+This feast commemorates the dedication of the Basilica of Saint John Lateran, the cathedral church of the Bishop of Rome and, as the inscription on its façade proclaims, the mother and head of all the churches of the city and the world. Though many think first of Saint Peter's, it is the Lateran that is the pope's own cathedral, and its dedication is celebrated by the whole Church as a sign of unity around the See of Peter.
+
+To celebrate the dedication of a building throughout the universal Church may seem surprising, but the stone church is a sign of a deeper reality: the living temple built of believers, and the unity of all local churches with the Church of Rome that presides in charity. The feast honors the visible Church as the sacrament of communion and points beyond brick and marble to Christ, the true foundation.
+
+The basilica stands on land once belonging to the Laterani family, given by the Emperor Constantine to the Church in the early fourth century, and was dedicated by Pope Sylvester I around the year 324 as the first great public church of Rome. Repeatedly damaged, sacked, and rebuilt over the centuries, it has remained the cathedral of Rome throughout, and its universal observance spread from the twelfth century as a way of honoring the pope's cathedral.
+
+The feast invites the faithful of every land to recognize their bond with the Bishop of Rome and with the whole Catholic communion. It is an occasion to give thanks for the unity of the Church and to remember that every stone church, however humble, is a sign of the living temple of God built of the faithful themselves.
+$desc$),
+('saint-leo-the-great-pope-and-doctor-of-the-church', 'Saint Leo the Great, Pope and Doctor of the Church', $desc$
+Saint Leo the Great was one of the most consequential popes of antiquity, a pastor and theologian whose defense of orthodox faith and whose vigorous exercise of the Petrine office left a lasting mark on the Church. He guided Rome through a time of political collapse and doctrinal crisis with a clarity and firmness that earned him the title "the Great."
+
+His theological achievement centers on the mystery of the Incarnation, above all his celebrated Tome, which set forth the doctrine that in Christ two natures, divine and human, are united in one person. This teaching became the touchstone of orthodoxy and expressed the deep conviction that the salvation of humanity depends on the true God becoming truly man.
+
+Elected pope in 440, Leo governed the Church for over two decades, asserting the authority of the Roman See and confronting the heresies of his day. His Tome was acclaimed at the Council of Chalcedon in 451, whose fathers cried that Peter had spoken through Leo, and tradition credits him with persuading Attila the Hun to spare Rome in 452. He died in 461 and was later declared a Doctor of the Church, the first pope to bear that title.
+
+Saint Leo endures as a model of the pastor who unites doctrinal courage with pastoral care and administrative skill. His surviving sermons, still read for their clarity and depth, continue to nourish the faith, and his example encourages steadfast confession of the truth of Christ amid confusion and change.
+$desc$),
+('saint-martin-of-tours-bishop', 'Saint Martin of Tours, Bishop', $desc$
+Saint Martin of Tours is among the most venerated saints of the West, a former soldier who became a monk and bishop and whose fame spread the cult of the confessors, holy men who witnessed to Christ not by martyrdom but by a life of heroic virtue. The image of the young soldier dividing his cloak for a beggar has become one of the most enduring in Christian art.
+
+His life witnesses to the radical demands of charity and to the possibility of holiness in every state of life. Reluctant to shed blood as a soldier, he embraced instead the warfare of the spirit, and his tireless evangelization of the countryside, his destruction of pagan shrines, and his gentleness toward sinners embodied a Gospel lived to the full.
+
+Born around 316 in what is now Hungary and raised in Italy, Martin served in the Roman army before being baptized and founding one of the earliest monastic communities in Gaul at Ligugé. Acclaimed Bishop of Tours around 371, he governed his see as a monk-bishop until his death in 397, and his tomb at Tours became one of the great pilgrimage centers of medieval Europe, his life recorded by his contemporary Sulpicius Severus.
+
+Patron of soldiers, of the poor, and of France, Saint Martin remains a beloved figure whose feast once marked the season of Martinmas across Europe. His generosity to the beggar continues to summon the faithful to see Christ in the needy and to give without counting the cost.
+$desc$),
+('saint-josaphat-bishop-and-martyr', 'Saint Josaphat, Bishop and Martyr', $desc$
+Saint Josaphat Kuncevyc was an Eastern-rite archbishop who gave his life for the cause of unity between the Byzantine Christians of Ukraine and the See of Rome. A monk and pastor of great zeal, he became the first saint of the Eastern Catholic Churches to be formally canonized by Rome, and his martyrdom sealed his lifelong labor for communion.
+
+His witness illuminates the difficult and often painful path of Christian unity, the reconciliation of ancient traditions long divided. Deeply attached to the Byzantine liturgy and spirituality, he sought to bring his people into full communion with Rome while preserving their venerable rites, and he died as a martyr precisely for that vision of a Church both Eastern and Catholic.
+
+Born around 1580 in Volhynia, Josaphat became a monk of the Order of Saint Basil and in 1617 Archbishop of Polotsk, where he labored to consolidate the union established at Brest. His reforming zeal provoked fierce opposition, and in 1623 he was murdered by a mob at Vitebsk. He was beatified by Pope Urban VIII in 1643 and canonized by Pope Pius IX in 1867, the first formal canonization of an Eastern Catholic.
+
+In an age still striving for the reconciliation of Christians, Saint Josaphat stands as a patron of ecumenical effort and of the Eastern Catholic Churches. His life reminds the faithful that unity is a costly gift and that fidelity to both tradition and communion may demand the ultimate sacrifice.
+$desc$),
+('saint-albert-the-great-bishop-and-doctor-of-the-church', 'Saint Albert the Great, Bishop and Doctor of the Church', $desc$
+Saint Albert the Great was a Dominican friar, bishop, and one of the most encyclopedic minds of the Middle Ages, celebrated both for his sanctity and for the vast range of his learning. Teacher of Thomas Aquinas, he pioneered the fruitful dialogue between Christian faith and the natural sciences and earned the rare title of "the Great" already in his lifetime.
+
+His intellectual achievement lay in showing that faith and reason are not enemies but allies, and that the study of nature is a path toward its Creator. Steeped in the newly recovered works of Aristotle, he brought philosophy, theology, and the observation of the natural world into a harmonious synthesis, insisting that grace perfects rather than destroys the created order.
+
+Born in Swabia around 1200, Albert joined the Dominicans, taught at Paris and Cologne, and served briefly as Bishop of Regensburg before returning to his scholarship and preaching. His writings ranged across theology, philosophy, botany, zoology, and astronomy, and he defended the orthodoxy of his pupil Thomas after the latter's death. He died at Cologne in 1280, was canonized and declared a Doctor of the Church by Pope Pius XI in 1931, and was named patron of natural scientists.
+
+Saint Albert remains a compelling patron for scientists and scholars and a witness against any false opposition between faith and knowledge. His example encourages believers to pursue truth wherever it is found, confident that all genuine learning leads back to God.
+$desc$),
+('saint-margaret-of-scotland', 'Saint Margaret of Scotland', $desc$
+Saint Margaret of Scotland was a queen whose personal holiness transformed the life of a kingdom, a woman of royal blood who used her position not for power but for the service of God and the poor. Wife of King Malcolm III, she brought to the Scottish court a refinement of faith and a devotion that reached from the palace to the humblest of her subjects.
+
+Her life shows how sanctity can flourish in the married and public state, and how charity and reform can flow from a home. Devoted to prayer, to the Scriptures, and to works of mercy, she reformed the practices of the Scottish Church, cared personally for orphans and the destitute, and made her royal household a school of Christian virtue.
+
+Born around 1045, a granddaughter of an English king and raised in exile in Hungary and England, Margaret came to Scotland after the Norman Conquest and married Malcolm around 1070. She promoted synods to correct abuses, founded churches and monasteries, and established a ferry for pilgrims at what became Queensferry. She died in 1093, shortly after learning of her husband's death, and was canonized by Pope Innocent IV in 1250.
+
+Honored as a patron of Scotland, Saint Margaret remains a model of the sanctified use of wealth and influence. She shows rulers and families alike that authority is rightly exercised in service, and that a life of prayer and charity can leave a lasting imprint on a whole nation.
+$desc$),
+('saint-gertrude-virgin', 'Saint Gertrude, Virgin', $desc$
+Saint Gertrude the Great was a German Benedictine nun and mystic whose intimate experiences of Christ made her one of the great voices of medieval spirituality. A woman of deep learning and deeper prayer, she is especially associated with devotion to the Sacred Heart of Jesus, of which her writings are among the earliest witnesses.
+
+Her spirituality centers on the boundless love of Christ revealed in his Heart and on the union of the soul with him through the liturgy and the Scriptures. Her visions, recorded in her writings, express a tender and confident love, and her teaching on trust in divine mercy and on the infinite value of Christ's love has nourished countless souls.
+
+Born in 1256 and entrusted as a child to the monastery of Helfta, then a flourishing center of learning and mysticism, Gertrude passed her whole life within its walls. A conversion in her twenties turned her from secular studies to wholehearted devotion, and she recorded her mystical experiences in the "Herald of Divine Love." She died around 1302, and though never formally canonized, her cult was confirmed and her feast extended to the universal Church, with Pope Innocent XI approving her veneration.
+
+Saint Gertrude endures as a guide to confident prayer and to devotion to the Heart of Christ. Her writings continue to draw readers toward a personal and loving relationship with the Lord, and her trust in divine mercy remains a consolation for all who feel unworthy of God's love.
+$desc$),
+('saint-elizabeth-of-hungary-religious', 'Saint Elizabeth of Hungary, Religious', $desc$
+Saint Elizabeth of Hungary was a princess and young widow whose radical generosity to the poor made her one of the most beloved saints of the Middle Ages. Renouncing the comforts of her rank, she gave herself wholly to the service of the sick and the destitute and became a shining model of Franciscan charity lived in the world.
+
+Her life proclaims the Gospel of poverty and mercy, the truth that love of Christ is inseparable from love of his poor. Married young and widowed young, she embraced a life of penance and service under Franciscan inspiration, giving away her wealth, tending lepers with her own hands, and building a hospital where she personally cared for the suffering.
+
+Born in 1207, the daughter of the King of Hungary, Elizabeth was married at fourteen to Louis of Thuringia and bore him three children before his death on crusade in 1227. Driven from court, she joined the Third Order of Saint Francis and spent her remaining years in prayer and care for the poor at Marburg, dying in 1231 at the age of twenty-four. So swift was her fame that Pope Gregory IX canonized her in 1235, only four years later.
+
+Patroness of the Third Order Franciscans and of charitable works, Saint Elizabeth remains a model for the young, for widows, and for all who serve the poor. Her cheerful renunciation of privilege and her tender care for the suffering continue to inspire lives of practical charity.
+$desc$),
+('the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', 'The Dedication of the Basilicas of Saints Peter and Paul, Apostles', $desc$
+This observance commemorates the dedication of the two great Roman basilicas raised over the tombs of the apostles Peter and Paul, the twin pillars on whom, according to ancient Roman tradition, the Church of the city was founded. It joins in a single celebration the memory of the Prince of the Apostles and the Apostle of the Gentiles, whose martyrdom consecrated Rome.
+
+To celebrate the dedication of these churches is to profess the apostolic foundation of the Church and the enduring intercession of those who bore witness to Christ by their blood. The basilicas are sacred not chiefly for their grandeur but because they enshrine the relics of the apostles and mark the places sanctified by their preaching and death, drawing pilgrims from every nation to the heart of the Christian faith.
+
+The original Basilica of Saint Peter was built by the Emperor Constantine over the apostle's tomb on the Vatican Hill in the fourth century and rebuilt in its present magnificent form during the sixteenth and seventeenth centuries. The Basilica of Saint Paul Outside the Walls, likewise of Constantinian origin over Paul's burial place on the road to Ostia, was destroyed by fire in 1823 and faithfully rebuilt in the following decades. Their joint commemoration has long been kept in Rome as a sign of the apostles' shared witness.
+
+The feast invites the faithful to renew their bond with the apostolic Church and to give thanks for the witness of Peter and Paul. It is an occasion to reflect on the unity and universality of the Church founded on the apostles, and on the pilgrimage of faith that draws believers toward the tombs of the martyrs.
+$desc$),
+('the-presentation-of-the-blessed-virgin-mary', 'The Presentation of the Blessed Virgin Mary', $desc$
+This memorial celebrates the tradition that the child Mary was offered to God in the Temple by her parents, dedicated to his service from her earliest years. It is a feast less of a documented event than of a profound truth about Mary's total consecration to God, her whole being given over to his will from the beginning of her life.
+
+The mystery honored here is Mary's complete availability to God, the disposition of a soul wholly consecrated even before she consciously chose it. The feast contemplates her as the true temple in which the Word would come to dwell, and celebrates the grace that prepared her from the first to be the dwelling place of God among men.
+
+The observance draws upon the apocryphal Protoevangelium of James, which recounts that Anna and Joachim brought their three-year-old daughter to the Temple in fulfillment of a vow. Celebrated in the Christian East from at least the sixth century, the feast entered the Western calendar in the later Middle Ages, was suppressed and later restored, and has been kept on November 21 as a memorial honoring Mary's dedication rather than any historical incident.
+
+The feast invites the faithful to imitate Mary's self-offering by consecrating their own lives to God without reserve. It has long been associated with prayer for those in the consecrated life and remains an occasion to renew one's own dedication, learning from the child of the Temple what it means to belong wholly to the Lord.
+$desc$),
+('saint-cecilia-virgin-and-martyr', 'Saint Cecilia, Virgin and Martyr', $desc$
+Saint Cecilia is one of the most celebrated of the early Roman martyrs, a virgin whose devotion and courage have made her name resound through the centuries. Honored in the ancient Roman canon of the Mass among the martyrs of the city, she is beloved above all as the patron of sacred music, said to have sung to God in her heart even amid her sufferings.
+
+Her witness proclaims the beauty of consecrated virginity and the strength of faith that outlasts persecution. Tradition tells of a young woman who converted her husband and his brother, led them to baptism and martyrdom, and gave her own life rather than renounce Christ, singing praise to God to the end and so becoming the emblem of a heart wholly turned toward heaven.
+
+Cecilia's veneration is very ancient, attested in Rome by the fourth or fifth century, and a church bearing her name has stood in the Trastevere quarter since antiquity, traditionally on the site of her house. The accounts of her passion are legendary in form, and the details of her life cannot be established with certainty, yet the antiquity and constancy of her cult are beyond doubt. Her association with music arose in the later Middle Ages and flowered in the great musical tradition of her feast.
+
+Patroness of musicians, singers, and church music, Saint Cecilia continues to inspire the offering of beauty to God. Her feast remains an occasion to celebrate sacred music as a form of prayer and to honor the courageous purity that made her, in the Church's memory, a bride wholly given to Christ.
+$desc$),
+('saint-clement-i-pope-and-martyr', 'Saint Clement I, Pope and Martyr', $desc$
+Saint Clement I was among the earliest successors of Saint Peter as Bishop of Rome and stands as one of the first witnesses to the exercise of Roman authority in the wider Church. Counted among the Apostolic Fathers, he is remembered both for his martyrdom and for a letter that ranks among the most precious documents of the early Christian centuries.
+
+His importance rests above all on his Letter to the Corinthians, written to a divided community to restore order and obedience, which reveals the early Roman Church intervening with authority in the affairs of another. The letter bears witness to the apostolic succession of ministers and to the concern of the Roman Church for the unity and peace of the whole body of believers.
+
+Clement served as Bishop of Rome around the end of the first century, reckoned traditionally as the third or fourth successor of Peter. His epistle was so esteemed that it was read publicly in some churches alongside the Scriptures. Later tradition recounts his exile and martyrdom by drowning with an anchor, and relics venerated as his were brought to Rome by Saints Cyril and Methodius, whose missionary labors were bound up with his memory.
+
+Saint Clement remains a patron of the unity and good order of the Church and a witness to the antiquity of the Roman primacy. His letter continues to be read as a testimony to the faith and structure of the apostolic age, and his memory encourages the pursuit of peace and concord within the Christian community.
+$desc$),
+('saint-columban-abbot', 'Saint Columban, Abbot', $desc$
+Saint Columban was an Irish monk whose missionary journeys carried the fervor of Celtic monasticism into the heart of continental Europe. A scholar, abbot, and fearless preacher, he founded a series of monasteries that became centers of learning and renewal and left a lasting imprint on the Christian civilization of the West.
+
+His life embodies the ideal of peregrinatio, the voluntary exile of the monk for the love of Christ, and the reforming power of a disciplined common life. Austere in his own observance and bold in confronting kings and bishops alike, he spread a monastic rule and a rigorous penitential discipline that revitalized the faith in lands grown lax.
+
+Born in Ireland around 543 and formed at the monastery of Bangor, Columban set out around 590 with a band of companions for Gaul, where he founded Luxeuil and other houses. His outspoken defense of Irish customs and his rebuke of the Frankish court led to his expulsion, and he journeyed on through Switzerland to northern Italy, founding the great monastery of Bobbio, where he died in 615. His monastic rule long flourished before yielding to that of Saint Benedict.
+
+Honored as one of the fathers of European monasticism, Saint Columban has been invoked as a patron of a united Europe forged from Christian roots. His courage, learning, and missionary zeal continue to inspire, and his life stands as a reminder of the power of consecrated men and women to renew the faith of nations.
+$desc$),
+('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints Andrew Dung-Lac, Priest, and Companions, Martyrs', $desc$
+This memorial honors the martyrs of Vietnam, a great company of Vietnamese and missionary Christians who gave their lives for the faith during the persecutions of the seventeenth, eighteenth, and nineteenth centuries. Represented by the priest Andrew Dung-Lac, they include bishops, priests, and laity of every condition who sealed their belief in Christ with their blood.
+
+Their witness proclaims the universality of the Gospel and the readiness of ordinary believers to die rather than deny their faith. Subjected to terrible tortures, they persevered in fidelity to Christ and to the Church, and their steadfastness became the seed of a Christian community that has continued to grow and endure through later trials.
+
+The persecutions in Vietnam claimed many thousands of lives over some three centuries, as successive rulers sought to suppress the Christian faith brought by missionaries and embraced by the people. Among the martyrs was Andrew Dung-Lac, a native priest beheaded in 1839. One hundred and seventeen of these martyrs, drawn from many decades of persecution, were canonized together by Pope John Paul II in 1988, and their common feast was set on November 24.
+
+The martyrs of Vietnam stand as an inspiration to a Church that in every age knows persecution, and as patrons of the Vietnamese people scattered throughout the world. Their memory encourages the faithful to steadfastness under trial and reminds the whole Church of the price that has been paid, and is still being paid, for fidelity to the Gospel.
+$desc$),
+('saint-catherine-of-alexandria-virgin-and-martyr', 'Saint Catherine of Alexandria, Virgin and Martyr', $desc$
+Saint Catherine of Alexandria is one of the most famous virgin martyrs of Christian antiquity, a young woman celebrated for her learning as much as for her courage. Renowned in legend as a princess who confounded pagan philosophers by the force of her arguments, she became one of the most popular saints of the medieval world and a patron of scholars.
+
+Her story exalts the union of faith and wisdom and the invincible constancy of the martyr. Tradition tells of a brilliant and noble maiden who defended the Christian faith before an emperor, converted the very philosophers sent to refute her, and endured torture on a spiked wheel and death by the sword rather than abandon Christ, her name forever linked to the instrument of her passion.
+
+Catherine's cult flourished from the early Middle Ages, especially after her supposed relics were venerated at the monastery on Mount Sinai that bears her name. The historical details of her life cannot be verified, and the accounts of her passion are legendary in character, so that her memorial was left as optional in the reformed calendar; yet the antiquity and vast popularity of her veneration secured her place. She was counted among the Fourteen Holy Helpers and honored as one of the voices heard by Joan of Arc.
+
+Patroness of philosophers, students, and theologians, Saint Catherine continues to represent the harmony of intellect and faith. Her legend, whatever its historical basis, has long encouraged believers to defend the truth with courage and to place all learning at the service of Christ.
+$desc$),
+('saint-andrew-apostle', 'Saint Andrew, Apostle', $desc$
+Saint Andrew was one of the Twelve and the brother of Simon Peter, honored in tradition as the "first-called" among the apostles. A fisherman of Galilee who left his nets at the word of Christ, he holds a special place as the one who first brought his brother to Jesus, and his feast fittingly stands at the turning of the liturgical year.
+
+His witness proclaims the grace of the apostolic call and the missionary impulse that flows from encountering Christ. Having found the Messiah, Andrew's first act was to seek out his brother and lead him to the Lord, a gesture that makes him a model of evangelization, and his own martyrdom completed his configuration to the Master he had followed.
+
+Andrew appears in the Gospels at the calling of the first disciples and at the feeding of the multitude, and early tradition sends him to preach in Greece and the lands around the Black Sea. He is said to have been crucified at Patras on an X-shaped cross, which has become his emblem. Venerated as the founder of the see later associated with Constantinople, he is honored as patron of Scotland, Greece, and Russia, and his feast on November 30 always falls near the beginning of Advent.
+
+Because his feast marks the boundary of the Church's year and the approach of Advent, Saint Andrew is bound up with the season of waiting for the Lord's coming. As the first to follow Christ and the first to bring another to him, he continues to summon the faithful to answer the call without delay and to share their discovery of the Savior with others.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- FR translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', x.name, NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('all-saints', 'Tous les Saints'),
-('the-commemoration-of-all-the-faithful-departed', 'Commémoration de tous les fidèles défunts'),
-('saint-martin-de-porres-religious', 'Saint Martin de Porres, religieux'),
-('saint-charles-borromeo-bishop', 'Saint Charles Borromée, évêque'),
-('the-dedication-of-the-lateran-basilica', 'Dédicace de la basilique du Latran'),
-('saint-leo-the-great-pope-and-doctor-of-the-church', 'Saint Léon le Grand, pape et docteur de l''Église'),
-('saint-martin-of-tours-bishop', 'Saint Martin de Tours, évêque'),
-('saint-josaphat-bishop-and-martyr', 'Saint Josaphat, évêque et martyr'),
-('saint-albert-the-great-bishop-and-doctor-of-the-church', 'Saint Albert le Grand, évêque et docteur de l''Église'),
-('saint-margaret-of-scotland', 'Sainte Marguerite d''Écosse'),
-('saint-gertrude-virgin', 'Sainte Gertrude, vierge'),
-('saint-elizabeth-of-hungary-religious', 'Sainte Élisabeth de Hongrie, religieuse'),
-('the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', 'Dédicace des basiliques des saints Pierre et Paul, apôtres'),
-('the-presentation-of-the-blessed-virgin-mary', 'Présentation de la Bienheureuse Vierge Marie'),
-('saint-cecilia-virgin-and-martyr', 'Sainte Cécile, vierge et martyre'),
-('saint-clement-i-pope-and-martyr', 'Saint Clément Ier, pape et martyr'),
-('saint-columban-abbot', 'Saint Colomban, abbé'),
-('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints André Dung-Lac, prêtre, et ses compagnons, martyrs'),
-('saint-catherine-of-alexandria-virgin-and-martyr', 'Sainte Catherine d''Alexandrie, vierge et martyre'),
-('saint-andrew-apostle', 'Saint André, apôtre')
-) AS x(slug, name)
+('all-saints', 'Tous les Saints', $desc$
+La solennité de la Toussaint rassemble en une seule célébration toute la multitude des rachetés qui partagent désormais la gloire de Dieu, aussi bien les saints canonisés dont les noms remplissent le calendrier que la foule innombrable des hommes et des femmes dont la sainteté n'est connue que de Dieu seul. C'est la fête de l'Église triomphante, la reconnaissance joyeuse que la sainteté est la vocation ordinaire de tout baptisé et que le ciel est déjà rempli de ceux qui l'ont atteint.
+
+Au cœur de cette célébration se tient le dogme de la communion des saints : le lien vivant qui unit l'Église en marche sur la terre, l'Église souffrante qui se purifie et l'Église glorieuse du ciel. L'Évangile des Béatitudes, proclamé en ce jour, dresse le portrait même des saints, montrant que le bonheur ne se trouve pas dans la réussite du monde mais dans la pauvreté de cœur, la miséricorde, la pureté et la persévérance pour la justice.
+
+Une commémoration générale des martyrs apparut en Orient dès le IVe siècle, et à Rome la dédicace du Panthéon à Marie et à tous les martyrs par le pape Boniface IV au début du VIIe siècle donna à cette fête un lieu fixe. Le pape Grégoire III dédia plus tard un oratoire à Saint-Pierre en l'honneur de tous les saints, et du temps de Grégoire IV, au IXe siècle, la date du 1er novembre s'était répandue dans tout l'Occident, élargissant la commémoration des martyrs à l'ensemble des saints.
+
+Pour les croyants d'aujourd'hui, cette fête est à la fois consolation et appel : consolation de savoir que les saints intercèdent et que le but de la vie chrétienne est réellement accessible, appel qui rappelle que chacun est invité à grossir leur nombre. Elle convie à un examen sincère de la vie mesurée aux Béatitudes et à une confiance renouvelée dans la grâce qui a déjà fait tant de saints.
+$desc$),
+('the-commemoration-of-all-the-faithful-departed', 'Commémoration de tous les fidèles défunts', $desc$
+Au lendemain même de la joie de la Toussaint, l'Église tourne sa prière vers tous ceux qui sont morts et ne sont pas encore pleinement purifiés, les fidèles défunts qui appartiennent au Christ mais attendent la plénitude de sa gloire. C'est un jour d'intercession plus que de deuil, où les vivants exercent leur charité envers les morts par la prière, l'aumône et surtout l'offrande de l'Eucharistie.
+
+Cette commémoration repose sur la conviction ancienne que les liens de l'amour ne sont pas rompus par la mort et que les vivants peuvent secourir les défunts par la prière, croyance enracinée dans la doctrine de la purification après la mort qu'exprime le dogme du purgatoire. Prier pour les morts est un acte d'espérance, profession de foi en la résurrection de la chair et confiance que la miséricorde de Dieu achève l'œuvre du salut en ceux qui sont morts dans son amitié.
+
+Cette célébration reçut sa forme durable de saint Odilon de Cluny qui, vers l'an 998, fixa au 2 novembre la commémoration de tous les défunts dans les monastères de son ordre, d'où elle se répandit dans toute l'Église latine. Plus tard s'établit la coutume, confirmée par le pape Benoît XV en 1915 au milieu du carnage de la Première Guerre mondiale, de permettre aux prêtres de célébrer trois messes ce jour-là, privilège qui exprimait la prière intensifiée de l'Église pour la multitude des morts.
+
+Ce jour demeure l'un des plus tendres de l'année chrétienne, conduisant les fidèles aux cimetières, à l'allumage des cierges et à la prière pour les parents, les amis et tous les défunts oubliés. Il enseigne un souvenir salutaire de la mort et une charité confiante qui franchit le tombeau, rappelant à chacun que l'Église embrasse les vivants et les morts en une seule communion sans rupture.
+$desc$),
+('saint-martin-de-porres-religious', 'Saint Martin de Porres, religieux', $desc$
+Saint Martin de Porres fut un frère convers dominicain de Lima dont l'humble service et l'extraordinaire charité firent l'un des saints les plus aimés des Amériques. Fils d'un noble espagnol et d'une femme affranchie d'ascendance africaine, il connut dès l'enfance le rejet et la pauvreté, mais devint une figure d'une tendresse étonnante envers les malades, les esclaves et les abandonnés.
+
+Sa vie donne chair à l'enseignement évangélique selon lequel la grandeur est dans le service et nul n'est hors d'atteinte de l'amour de Dieu. Chargé des tâches les plus humbles de son couvent, il transforma le travail servile en offrande d'amour, et son soin des pauvres, la fondation d'un orphelinat et les prodiges attribués à sa prière manifestèrent une sainteté qui transcendait les barrières raciales de sa société.
+
+Né à Lima en 1579, Martin entra au couvent dominicain du Saint-Rosaire comme serviteur puis comme frère convers profès, où il servit jusqu'à sa mort en 1639. Vénéré au Pérou et bien au-delà, il fut béatifié par le pape Grégoire XVI en 1837 et canonisé par le pape Jean XXIII en 1962, qui le proposa comme modèle de justice entre les races et de charité chrétienne.
+
+À une époque encore blessée par le racisme et les divisions sociales, saint Martin parle avec une force singulière comme patron de la justice sociale et de tous ceux qui œuvrent à la réconciliation. Son exemple invite les fidèles à trouver la sainteté dans les devoirs ordinaires fidèlement accomplis et à reconnaître dans tout pauvre et tout rejeté le visage du Christ.
+$desc$),
+('saint-charles-borromeo-bishop', 'Saint Charles Borromée, évêque', $desc$
+Saint Charles Borromée fut archevêque de Milan et l'une des grandes figures de la Réforme catholique, un évêque dont l'énergie infatigable donna forme concrète aux réformes du concile de Trente. De haute naissance et élevé jeune aux plus hautes charges, il choisit pourtant une vie d'austérité, de labeur pastoral et de dévouement total au renouveau de l'Église.
+
+Son épiscopat incarne l'idéal du pasteur réformateur : résidant dans son diocèse, visitant en personne ses paroisses les plus reculées, fondant des séminaires pour la juste formation du clergé et se donnant héroïquement aux malades lors de la peste qui frappa Milan. Sa vie proclame que la réforme de l'Église commence par la sainteté et le zèle de ses pasteurs.
+
+Né en 1538 dans l'aristocratique famille Borromée et neveu du pape Pie IV, Charles joua un rôle décisif dans l'achèvement du concile de Trente et dans la rédaction du Catéchisme romain. Archevêque de Milan, il tint des conciles provinciaux, publia des instructions détaillées pour la vie pastorale et établit des séminaires, mourant épuisé par ses travaux en 1584 à quarante-six ans. Il fut canonisé par le pape Paul V en 1610.
+
+Regardé depuis lors comme patron des évêques, des séminaristes et des catéchistes, saint Charles demeure un modèle de zèle pastoral et de sagesse mis tout entiers au service des âmes. Il appelle ceux qui exercent une charge à se dépenser pour leur peuple et à chercher d'abord la réforme dans leur propre vie.
+$desc$),
+('the-dedication-of-the-lateran-basilica', 'Dédicace de la basilique du Latran', $desc$
+Cette fête commémore la dédicace de la basilique Saint-Jean-de-Latran, église cathédrale de l'évêque de Rome et, comme le proclame l'inscription de sa façade, mère et tête de toutes les églises de la ville et du monde. Bien que l'on songe d'abord à Saint-Pierre, c'est le Latran qui est la cathédrale propre du pape, et sa dédicace est célébrée par toute l'Église comme signe d'unité autour du siège de Pierre.
+
+Célébrer la dédicace d'un édifice dans l'Église universelle peut surprendre, mais l'église de pierre est le signe d'une réalité plus profonde : le temple vivant bâti des croyants et l'unité de toutes les Églises locales avec l'Église de Rome qui préside dans la charité. La fête honore l'Église visible comme sacrement de communion et renvoie, au-delà de la brique et du marbre, au Christ, véritable fondement.
+
+La basilique s'élève sur un terrain ayant appartenu à la famille des Latran, donné par l'empereur Constantin à l'Église au début du IVe siècle, et fut dédiée par le pape Sylvestre Ier vers 324 comme la première grande église publique de Rome. Maintes fois endommagée, saccagée et rebâtie au fil des siècles, elle est demeurée la cathédrale de Rome, et sa célébration universelle se répandit à partir du XIIe siècle en l'honneur de la cathédrale du pape.
+
+La fête invite les fidèles de toute terre à reconnaître leur lien avec l'évêque de Rome et avec toute la communion catholique. Elle est l'occasion de rendre grâce pour l'unité de l'Église et de se rappeler que toute église de pierre, si humble soit-elle, est le signe du temple vivant de Dieu bâti des fidèles eux-mêmes.
+$desc$),
+('saint-leo-the-great-pope-and-doctor-of-the-church', 'Saint Léon le Grand, pape et docteur de l''Église', $desc$
+Saint Léon le Grand fut l'un des papes les plus marquants de l'Antiquité, pasteur et théologien dont la défense de la foi orthodoxe et l'exercice vigoureux de la charge pétrinienne laissèrent une empreinte durable sur l'Église. Il conduisit Rome à travers un temps d'effondrement politique et de crise doctrinale avec une clarté et une fermeté qui lui valurent le titre de « Grand ».
+
+Son œuvre théologique se concentre sur le mystère de l'Incarnation, surtout son célèbre Tome, qui exposa la doctrine selon laquelle dans le Christ deux natures, divine et humaine, sont unies en une seule personne. Cet enseignement devint la pierre de touche de l'orthodoxie et exprima la conviction profonde que le salut des hommes dépend du vrai Dieu devenu vraiment homme.
+
+Élu pape en 440, Léon gouverna l'Église plus de vingt ans, affirmant l'autorité du siège de Rome et affrontant les hérésies de son temps. Son Tome fut acclamé au concile de Chalcédoine en 451, dont les Pères s'écrièrent que Pierre avait parlé par Léon, et la tradition lui attribue d'avoir persuadé Attila d'épargner Rome en 452. Il mourut en 461 et fut proclamé plus tard docteur de l'Église, le premier pape à porter ce titre.
+
+Saint Léon demeure un modèle de pasteur unissant le courage doctrinal au soin pastoral et au sens du gouvernement. Ses sermons, encore lus pour leur clarté et leur profondeur, continuent de nourrir la foi, et son exemple encourage à confesser fermement la vérité du Christ au milieu des troubles et des changements.
+$desc$),
+('saint-martin-of-tours-bishop', 'Saint Martin de Tours, évêque', $desc$
+Saint Martin de Tours compte parmi les saints les plus vénérés de l'Occident, ancien soldat devenu moine et évêque, dont la renommée répandit le culte des confesseurs, ces saints qui rendirent témoignage au Christ non par le martyre mais par une vie de vertu héroïque. L'image du jeune soldat partageant son manteau pour un mendiant est devenue l'une des plus durables de l'art chrétien.
+
+Sa vie témoigne des exigences radicales de la charité et de la possibilité de la sainteté en tout état de vie. Répugnant à verser le sang comme soldat, il embrassa le combat de l'esprit, et son évangelisation infatigable des campagnes, sa destruction des sanctuaires païens et sa douceur envers les pécheurs incarnèrent un Évangile vécu en plénitude.
+
+Né vers 316 dans l'actuelle Hongrie et élevé en Italie, Martin servit dans l'armée romaine avant d'être baptisé et de fonder à Ligugé l'une des premières communautés monastiques de Gaule. Acclamé évêque de Tours vers 371, il gouverna son siège en moine-évêque jusqu'à sa mort en 397, et son tombeau à Tours devint l'un des grands centres de pèlerinage de l'Europe médiévale, sa vie rapportée par son contemporain Sulpice Sévère.
+
+Patron des soldats, des pauvres et de la France, saint Martin demeure une figure aimée dont la fête marquait autrefois la Saint-Martin dans toute l'Europe. Sa générosité envers le mendiant continue d'appeler les fidèles à reconnaître le Christ dans le nécessiteux et à donner sans compter.
+$desc$),
+('saint-josaphat-bishop-and-martyr', 'Saint Josaphat, évêque et martyr', $desc$
+Saint Josaphat Kuncevyc fut un archevêque de rite oriental qui donna sa vie pour l'unité entre les chrétiens byzantins d'Ukraine et le siège de Rome. Moine et pasteur d'un grand zèle, il devint le premier saint des Églises catholiques orientales à être formellement canonisé par Rome, et son martyre scella son labeur de toute une vie pour la communion.
+
+Son témoignage éclaire le chemin difficile et souvent douloureux de l'unité chrétienne, la réconciliation de traditions anciennes longtemps divisées. Profondément attaché à la liturgie et à la spiritualité byzantines, il chercha à conduire son peuple à la pleine communion avec Rome tout en préservant ses rites vénérables, et il mourut martyr précisément pour cette vision d'une Église à la fois orientale et catholique.
+
+Né vers 1580 en Volhynie, Josaphat devint moine de l'Ordre de Saint-Basile et, en 1617, archevêque de Polotsk, où il travailla à consolider l'union conclue à Brest. Son zèle réformateur suscita une vive opposition, et en 1623 il fut assassiné par une foule à Vitebsk. Il fut béatifié par le pape Urbain VIII en 1643 et canonisé par le pape Pie IX en 1867, première canonisation formelle d'un catholique oriental.
+
+À une époque qui aspire encore à la réconciliation des chrétiens, saint Josaphat se dresse comme patron de l'effort œcuménique et des Églises catholiques orientales. Sa vie rappelle aux fidèles que l'unité est un don coûteux et que la fidélité à la fois à la tradition et à la communion peut exiger le sacrifice suprême.
+$desc$),
+('saint-albert-the-great-bishop-and-doctor-of-the-church', 'Saint Albert le Grand, évêque et docteur de l''Église', $desc$
+Saint Albert le Grand fut un frère dominicain, évêque et l'un des esprits les plus encyclopédiques du Moyen Âge, célèbre autant pour sa sainteté que pour l'immense étendue de son savoir. Maître de Thomas d'Aquin, il fut le pionnier d'un dialogue fécond entre la foi chrétienne et les sciences de la nature et mérita le rare titre de « Grand » dès son vivant.
+
+Son œuvre intellectuelle fut de montrer que la foi et la raison ne sont pas ennemies mais alliées, et que l'étude de la nature est un chemin vers son Créateur. Nourri des œuvres d'Aristote récemment retrouvées, il amena la philosophie, la théologie et l'observation du monde naturel à une synthèse harmonieuse, affirmant que la grâce perfectionne l'ordre créé au lieu de le détruire.
+
+Né en Souabe vers 1200, Albert entra chez les Dominicains, enseigna à Paris et à Cologne et fut brièvement évêque de Ratisbonne avant de revenir à l'étude et à la prédication. Ses écrits parcoururent la théologie, la philosophie, la botanique, la zoologie et l'astronomie, et il défendit l'orthodoxie de son disciple Thomas après la mort de celui-ci. Il mourut à Cologne en 1280, fut canonisé et proclamé docteur de l'Église par le pape Pie XI en 1931, puis nommé patron des sciences naturelles.
+
+Saint Albert demeure un patron éclairant pour les savants et les chercheurs et un témoin contre toute fausse opposition entre foi et savoir. Son exemple encourage les croyants à poursuivre la vérité partout où elle se trouve, assurés que tout savoir véritable ramène à Dieu.
+$desc$),
+('saint-margaret-of-scotland', 'Sainte Marguerite d''Écosse', $desc$
+Sainte Marguerite d'Écosse fut une reine dont la sainteté personnelle transforma la vie d'un royaume, une femme de sang royal qui usa de sa position non pour le pouvoir mais pour le service de Dieu et des pauvres. Épouse du roi Malcolm III, elle apporta à la cour d'Écosse un raffinement de la foi et une piété qui rayonnaient du palais jusqu'au plus humble de ses sujets.
+
+Sa vie montre comment la sainteté peut fleurir dans l'état conjugal et public, et comment la charité et la réforme peuvent jaillir d'un foyer. Adonnée à la prière, à l'Écriture et aux œuvres de miséricorde, elle réforma les usages de l'Église d'Écosse, prit soin en personne des orphelins et des indigents et fit de sa maison royale une école de vertu chrétienne.
+
+Née vers 1045, petite-fille d'un roi anglais et élevée en exil en Hongrie et en Angleterre, Marguerite vint en Écosse après la conquête normande et épousa Malcolm vers 1070. Elle promut des synodes pour corriger les abus, fonda églises et monastères et établit un bac pour les pèlerins à l'endroit devenu Queensferry. Elle mourut en 1093, peu après avoir appris la mort de son époux, et fut canonisée par le pape Innocent IV en 1250.
+
+Honorée comme patronne de l'Écosse, sainte Marguerite demeure un modèle du saint usage de la richesse et de l'influence. Elle montre aux gouvernants comme aux familles que l'autorité s'exerce justement dans le service, et qu'une vie de prière et de charité peut marquer durablement toute une nation.
+$desc$),
+('saint-gertrude-virgin', 'Sainte Gertrude, vierge', $desc$
+Sainte Gertrude la Grande fut une moniale bénédictine allemande et une mystique dont les expériences intimes du Christ firent l'une des grandes voix de la spiritualité médiévale. Femme d'un profond savoir et d'une prière plus profonde encore, elle est particulièrement liée à la dévotion au Sacré-Cœur de Jésus, dont ses écrits comptent parmi les premiers témoins.
+
+Sa spiritualité se concentre sur l'amour sans mesure du Christ révélé dans son Cœur et sur l'union de l'âme avec lui par la liturgie et l'Écriture. Ses visions, consignées dans ses écrits, expriment un amour tendre et confiant, et son enseignement sur la confiance en la miséricorde divine et sur la valeur infinie de l'amour du Christ a nourri d'innombrables âmes.
+
+Née en 1256 et confiée dès l'enfance au monastère de Helfta, alors florissant centre de savoir et de mystique, Gertrude y passa toute sa vie. Une conversion survenue dans sa vingtaine la détourna des études profanes vers une dévotion sans partage, et elle consigna ses expériences mystiques dans le « Héraut de l'amour divin ». Elle mourut vers 1302, et bien que jamais formellement canonisée, son culte fut confirmé et sa fête étendue à l'Église universelle, le pape Innocent XI approuvant sa vénération.
+
+Sainte Gertrude demeure un guide vers la prière confiante et la dévotion au Cœur du Christ. Ses écrits continuent d'attirer les lecteurs vers une relation personnelle et aimante avec le Seigneur, et sa confiance en la miséricorde divine reste une consolation pour tous ceux qui se sentent indignes de l'amour de Dieu.
+$desc$),
+('saint-elizabeth-of-hungary-religious', 'Sainte Élisabeth de Hongrie, religieuse', $desc$
+Sainte Élisabeth de Hongrie fut une princesse et une jeune veuve dont la générosité radicale envers les pauvres fit l'une des saintes les plus aimées du Moyen Âge. Renonçant aux commodités de son rang, elle se donna tout entière au service des malades et des indigents et devint un modèle éclatant de la charité franciscaine vécue dans le monde.
+
+Sa vie proclame l'Évangile de la pauvreté et de la miséricorde, la vérité que l'amour du Christ est inséparable de l'amour de ses pauvres. Mariée jeune et veuve jeune, elle embrassa une vie de pénitence et de service sous l'inspiration franciscaine, distribuant ses biens, soignant les lépreux de ses propres mains et bâtissant un hôpital où elle prenait soin en personne des souffrants.
+
+Née en 1207, fille du roi de Hongrie, Élisabeth fut mariée à quatorze ans à Louis de Thuringe et lui donna trois enfants avant sa mort en croisade en 1227. Chassée de la cour, elle entra dans le Tiers-Ordre de saint François et passa ses dernières années dans la prière et le soin des pauvres à Marbourg, mourant en 1231 à vingt-quatre ans. Sa renommée fut si prompte que le pape Grégoire IX la canonisa en 1235, quatre ans seulement après sa mort.
+
+Patronne du Tiers-Ordre franciscain et des œuvres de charité, sainte Élisabeth demeure un modèle pour les jeunes, les veuves et tous ceux qui servent les pauvres. Son renoncement joyeux au privilège et son soin tendre des souffrants continuent d'inspirer des vies de charité concrète.
+$desc$),
+('the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', 'Dédicace des basiliques des saints Pierre et Paul, apôtres', $desc$
+Cette célébration commémore la dédicace des deux grandes basiliques romaines élevées sur les tombeaux des apôtres Pierre et Paul, les deux colonnes sur lesquelles, selon l'antique tradition romaine, l'Église de la ville fut fondée. Elle unit en une seule fête la mémoire du Prince des apôtres et de l'Apôtre des nations, dont le martyre a consacré Rome.
+
+Célébrer la dédicace de ces églises, c'est confesser le fondement apostolique de l'Église et l'intercession durable de ceux qui rendirent témoignage au Christ par leur sang. Les basiliques sont sacrées non d'abord par leur grandeur, mais parce qu'elles renferment les reliques des apôtres et marquent les lieux sanctifiés par leur prédication et leur mort, attirant des pèlerins de toute nation au cœur de la foi chrétienne.
+
+La première basilique Saint-Pierre fut bâtie par l'empereur Constantin sur le tombeau de l'apôtre au Vatican au IVe siècle et reconstruite dans sa forme actuelle aux XVIe et XVIIe siècles. La basilique Saint-Paul-hors-les-Murs, elle aussi d'origine constantinienne sur le lieu de sépulture de Paul sur la voie d'Ostie, fut détruite par un incendie en 1823 et fidèlement rebâtie dans les décennies suivantes. Leur commémoration commune est célébrée de longue date à Rome comme signe du témoignage partagé des apôtres.
+
+La fête invite les fidèles à renouveler leur lien avec l'Église apostolique et à rendre grâce pour le témoignage de Pierre et de Paul. Elle est l'occasion de méditer sur l'unité et l'universalité de l'Église fondée sur les apôtres, et sur le pèlerinage de la foi qui attire les croyants vers les tombeaux des martyrs.
+$desc$),
+('the-presentation-of-the-blessed-virgin-mary', 'Présentation de la Bienheureuse Vierge Marie', $desc$
+Ce mémoire célèbre la tradition selon laquelle l'enfant Marie fut offerte à Dieu au Temple par ses parents, consacrée à son service dès ses premières années. C'est une fête moins d'un événement attesté que d'une vérité profonde sur la consécration totale de Marie à Dieu, tout son être livré à sa volonté dès le commencement de sa vie.
+
+Le mystère honoré ici est la pleine disponibilité de Marie à Dieu, la disposition d'une âme entièrement consacrée avant même qu'elle ne le choisisse consciemment. La fête la contemple comme le vrai temple où le Verbe viendrait demeurer, et célèbre la grâce qui la prépara dès le premier instant à être la demeure de Dieu parmi les hommes.
+
+Cette célébration puise dans le Protévangile apocryphe de Jacques, qui raconte qu'Anne et Joachim conduisirent leur fille de trois ans au Temple pour accomplir un vœu. Célébrée en Orient chrétien depuis au moins le VIe siècle, la fête entra dans le calendrier occidental à la fin du Moyen Âge, fut supprimée puis rétablie, et se célèbre le 21 novembre comme mémoire honorant la consécration de Marie plutôt qu'un fait historique.
+
+La fête invite les fidèles à imiter l'offrande de Marie en consacrant leur propre vie à Dieu sans réserve. Elle est depuis longtemps liée à la prière pour ceux qui mènent la vie consacrée et demeure l'occasion de renouveler son propre don, apprenant de l'enfant du Temple ce que signifie appartenir tout entier au Seigneur.
+$desc$),
+('saint-cecilia-virgin-and-martyr', 'Sainte Cécile, vierge et martyre', $desc$
+Sainte Cécile est l'une des plus célèbres martyres de la Rome primitive, une vierge dont la piété et le courage font résonner le nom à travers les siècles. Honorée dans l'antique canon romain de la messe parmi les martyrs de la ville, elle est aimée surtout comme patronne de la musique sacrée, elle qui, dit-on, chantait Dieu dans son cœur au milieu même de ses souffrances.
+
+Son témoignage proclame la beauté de la virginité consacrée et la force d'une foi qui survit à la persécution. La tradition rapporte l'histoire d'une jeune femme qui convertit son époux et le frère de celui-ci, les conduisit au baptême et au martyre, et donna sa propre vie plutôt que de renier le Christ, chantant la louange de Dieu jusqu'au bout et devenant ainsi l'emblème d'un cœur tout tourné vers le ciel.
+
+La vénération de Cécile est très ancienne, attestée à Rome dès le IVe ou le Ve siècle, et une église portant son nom s'élève dans le quartier du Trastevere depuis l'Antiquité, traditionnellement sur le lieu de sa maison. Les récits de sa passion sont de forme légendaire et les détails de sa vie ne peuvent être établis avec certitude, mais l'antiquité et la constance de son culte sont hors de doute. Son association à la musique naquit à la fin du Moyen Âge et s'épanouit dans la grande tradition musicale de sa fête.
+
+Patronne des musiciens, des chanteurs et de la musique d'église, sainte Cécile continue d'inspirer l'offrande de la beauté à Dieu. Sa fête reste l'occasion de célébrer la musique sacrée comme une forme de prière et d'honorer la pureté courageuse qui fit d'elle, dans la mémoire de l'Église, une épouse tout entière donnée au Christ.
+$desc$),
+('saint-clement-i-pope-and-martyr', 'Saint Clément Ier, pape et martyr', $desc$
+Saint Clément Ier fut l'un des premiers successeurs de saint Pierre comme évêque de Rome et se dresse parmi les premiers témoins de l'exercice de l'autorité romaine dans l'Église universelle. Compté parmi les Pères apostoliques, on le rappelle à la fois pour son martyre et pour une lettre qui figure parmi les documents les plus précieux des premiers siècles chrétiens.
+
+Son importance tient surtout à sa Lettre aux Corinthiens, écrite à une communauté divisée pour rétablir l'ordre et l'obéissance, qui montre l'Église de Rome primitive intervenant avec autorité dans les affaires d'une autre Église. La lettre atteste la succession apostolique des ministres et le souci de l'Église de Rome pour l'unité et la paix de tout le corps des croyants.
+
+Clément fut évêque de Rome vers la fin du Ier siècle, compté traditionnellement comme le troisième ou le quatrième successeur de Pierre. Son épître fut si estimée qu'on la lisait publiquement dans certaines Églises à côté des Écritures. La tradition postérieure rapporte son exil et son martyre par noyade avec une ancre, et des reliques vénérées comme les siennes furent portées à Rome par les saints Cyrille et Méthode, dont l'œuvre missionnaire fut liée à sa mémoire.
+
+Saint Clément demeure un patron de l'unité et du bon ordre de l'Église et un témoin de l'antiquité de la primauté romaine. Sa lettre continue d'être lue comme un témoignage de la foi et de la structure de l'âge apostolique, et sa mémoire encourage la recherche de la paix et de la concorde au sein de la communauté chrétienne.
+$desc$),
+('saint-columban-abbot', 'Saint Colomban, abbé', $desc$
+Saint Colomban fut un moine irlandais dont les voyages missionnaires portèrent la ferveur du monachisme celtique au cœur de l'Europe continentale. Savant, abbé et prédicateur intrépide, il fonda une série de monastères devenus des centres de savoir et de renouveau et laissa une empreinte durable sur la civilisation chrétienne de l'Occident.
+
+Sa vie incarne l'idéal de la peregrinatio, l'exil volontaire du moine par amour du Christ, et la force réformatrice d'une vie commune disciplinée. Austère dans sa propre observance et hardi à affronter rois et évêques, il répandit une règle monastique et une rigoureuse discipline pénitentielle qui revivifièrent la foi dans des contrées relâchées.
+
+Né en Irlande vers 543 et formé au monastère de Bangor, Colomban partit vers 590 avec un groupe de compagnons pour la Gaule, où il fonda Luxeuil et d'autres maisons. Sa défense sans détour des usages irlandais et ses reproches à la cour franque entraînèrent son expulsion, et il gagna, à travers la Suisse, l'Italie du Nord, fondant le grand monastère de Bobbio, où il mourut en 615. Sa règle monastique fleurit longtemps avant de céder à celle de saint Benoît.
+
+Honoré comme l'un des pères du monachisme européen, saint Colomban a été invoqué comme patron d'une Europe unie forgée sur des racines chrétiennes. Son courage, son savoir et son zèle missionnaire continuent d'inspirer, et sa vie rappelle le pouvoir des hommes et des femmes consacrés de renouveler la foi des nations.
+$desc$),
+('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Saints André Dung-Lac, prêtre, et ses compagnons, martyrs', $desc$
+Ce mémoire honore les martyrs du Vietnam, une grande multitude de chrétiens vietnamiens et missionnaires qui donnèrent leur vie pour la foi durant les persécutions des XVIIe, XVIIIe et XIXe siècles. Représentés par le prêtre André Dung-Lac, ils comprennent des évêques, des prêtres et des laïcs de toute condition qui scellèrent de leur sang leur foi au Christ.
+
+Leur témoignage proclame l'universalité de l'Évangile et la disposition de croyants ordinaires à mourir plutôt que de renier leur foi. Soumis à d'atroces tortures, ils persévérèrent dans la fidélité au Christ et à l'Église, et leur constance devint la semence d'une communauté chrétienne qui a continué de croître et de subsister à travers les épreuves ultérieures.
+
+Les persécutions au Vietnam firent plusieurs milliers de victimes en quelque trois siècles, tandis que des souverains successifs cherchaient à étouffer la foi chrétienne apportée par les missionnaires et embrassée par le peuple. Parmi les martyrs figurait André Dung-Lac, prêtre autochtone décapité en 1839. Cent dix-sept de ces martyrs, appartenant à de nombreuses décennies de persécution, furent canonisés ensemble par le pape Jean-Paul II en 1988, et leur fête commune fut fixée au 24 novembre.
+
+Les martyrs du Vietnam sont une inspiration pour une Église qui, à chaque époque, connaît la persécution, et des patrons pour le peuple vietnamien dispersé à travers le monde. Leur mémoire encourage les fidèles à la constance dans l'épreuve et rappelle à toute l'Église le prix payé, et encore payé aujourd'hui, pour la fidélité à l'Évangile.
+$desc$),
+('saint-catherine-of-alexandria-virgin-and-martyr', 'Sainte Catherine d''Alexandrie, vierge et martyre', $desc$
+Sainte Catherine d'Alexandrie est l'une des plus célèbres vierges martyres de l'Antiquité chrétienne, une jeune femme réputée pour son savoir autant que pour son courage. Fameuse dans la légende comme une princesse qui confondit les philosophes païens par la force de ses arguments, elle devint l'une des saintes les plus populaires du monde médiéval et une patronne des savants.
+
+Son histoire exalte l'union de la foi et de la sagesse et l'invincible constance de la martyre. La tradition raconte l'histoire d'une jeune fille brillante et noble qui défendit la foi chrétienne devant un empereur, convertit les philosophes mêmes envoyés pour la réfuter, et endura le supplice de la roue garnie de pointes puis la mort par le glaive plutôt que d'abandonner le Christ, son nom à jamais lié à l'instrument de sa passion.
+
+Le culte de Catherine fleurit dès le haut Moyen Âge, surtout après que ses prétendues reliques furent vénérées au monastère du mont Sinaï qui porte son nom. Les détails historiques de sa vie ne peuvent être vérifiés et les récits de sa passion sont de caractère légendaire, si bien que son mémoire fut laissé facultatif dans le calendrier réformé ; mais l'antiquité et l'immense popularité de sa vénération assurèrent sa place. Elle fut comptée parmi les Quatorze Saints Auxiliaires et honorée comme l'une des voix entendues par Jeanne d'Arc.
+
+Patronne des philosophes, des étudiants et des théologiens, sainte Catherine continue de représenter l'harmonie de l'intelligence et de la foi. Sa légende, quel qu'en soit le fondement historique, a longtemps encouragé les croyants à défendre la vérité avec courage et à mettre tout savoir au service du Christ.
+$desc$),
+('saint-andrew-apostle', 'Saint André, apôtre', $desc$
+Saint André fut l'un des Douze et le frère de Simon-Pierre, honoré par la tradition comme le « premier appelé » parmi les apôtres. Pêcheur de Galilée qui laissa ses filets à la parole du Christ, il tient une place privilégiée comme celui qui le premier amena son frère à Jésus, et sa fête se dresse à juste titre au tournant de l'année liturgique.
+
+Son témoignage proclame la grâce de l'appel apostolique et l'élan missionnaire qui jaillit de la rencontre du Christ. Ayant trouvé le Messie, le premier geste d'André fut d'aller chercher son frère et de le conduire au Seigneur, geste qui fait de lui un modèle d'évangélisation, et son propre martyre acheva sa configuration au Maître qu'il avait suivi.
+
+André apparaît dans les Évangiles à l'appel des premiers disciples et à la multiplication des pains, et la tradition ancienne l'envoie prêcher en Grèce et dans les régions de la mer Noire. On dit qu'il fut crucifié à Patras sur une croix en forme d'X, devenue son emblème. Vénéré comme le fondateur du siège associé plus tard à Constantinople, il est honoré comme patron de l'Écosse, de la Grèce et de la Russie, et sa fête, le 30 novembre, tombe toujours près du début de l'Avent.
+
+Parce que sa fête marque la limite de l'année de l'Église et l'approche de l'Avent, saint André est lié au temps de l'attente de la venue du Seigneur. Premier à suivre le Christ et premier à lui amener un autre, il continue d'appeler les fidèles à répondre sans délai et à partager avec d'autres leur découverte du Sauveur.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- LA translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('all-saints', 'Omnium Sanctorum'),
-('the-commemoration-of-all-the-faithful-departed', 'Commemoratio Omnium Fidelium Defunctorum'),
-('saint-martin-de-porres-religious', 'Sanctus Martinus de Porres, religiosus'),
-('saint-charles-borromeo-bishop', 'Sanctus Carolus Borromeo, episcopus'),
-('the-dedication-of-the-lateran-basilica', 'Dedicatio Basilicae Lateranensis'),
-('saint-leo-the-great-pope-and-doctor-of-the-church', 'Sanctus Leo Magnus, papa et Ecclesiae doctor'),
-('saint-martin-of-tours-bishop', 'Sanctus Martinus Turonensis, episcopus'),
-('saint-josaphat-bishop-and-martyr', 'Sanctus Iosaphat, episcopus et martyr'),
-('saint-albert-the-great-bishop-and-doctor-of-the-church', 'Sanctus Albertus Magnus, episcopus et Ecclesiae doctor'),
-('saint-margaret-of-scotland', 'Sancta Margarita Scotiae'),
-('saint-gertrude-virgin', 'Sancta Gertrudis, virgo'),
-('saint-elizabeth-of-hungary-religious', 'Sancta Elisabeth Hungariae, religiosa'),
-('the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', 'Dedicatio Basilicarum Sanctorum Petri et Pauli'),
-('the-presentation-of-the-blessed-virgin-mary', 'Praesentatio Beatae Mariae Virginis'),
-('saint-cecilia-virgin-and-martyr', 'Sancta Caecilia, virgo et martyr'),
-('saint-clement-i-pope-and-martyr', 'Sanctus Clemens I, papa et martyr'),
-('saint-columban-abbot', 'Sanctus Columbanus, abbas'),
-('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Sancti Andreas Dung-Lac et Socii, martyres'),
-('saint-catherine-of-alexandria-virgin-and-martyr', 'Sancta Catharina Alexandrina, virgo et martyr'),
-('saint-andrew-apostle', 'Sanctus Andreas, Apostolus')
-) AS x(slug, name)
+('all-saints', 'Omnium Sanctorum', $desc$
+Sollemnitas Omnium Sanctorum in unam celebrationem colligit universam redemptorum multitudinem quae iam gloriam Dei participat, tam sanctos in albo relatos quorum nomina calendarium implent quam innumeros viros et mulieres quorum sanctitas soli Deo nota est. Est festum Ecclesiae triumphantis, laeta confessio sanctitatem esse ordinariam omnis baptizati vocationem et caelum iam plenum esse iis qui ad illud pervenerunt.
+
+In medio celebrationis stat doctrina de communione sanctorum: vivum vinculum quo coniunguntur Ecclesia peregrinans in terra, Ecclesia patiens quae purgatur, et Ecclesia gloriosa in caelo. Evangelium Beatitudinum, hoc die proclamatum, ipsam sanctorum imaginem proponit, ostendens beatitudinem non in mundi successu sed in paupertate spiritus, misericordia, cordis munditia et perseverantia propter iustitiam inveniri.
+
+Generalis martyrum commemoratio in Oriente iam saeculo quarto orta est, et Romae dedicatio Pantheon Mariae et omnibus martyribus a Bonifatio IV papa ineunte saeculo septimo facta huic observantiae certam sedem dedit. Gregorius III papa postea oratorium apud Sanctum Petrum omnibus sanctis dedicavit, et tempore Gregorii IV, saeculo nono, dies prima Novembris per totum Occidentem diffusa erat, commemoratione a martyribus ad omnes sanctos ampliata.
+
+Fidelibus hodiernis hoc festum est simul consolatio et provocatio: consolatio scire sanctos intercedere et finem vitae christianae revera esse assequibilem, provocatio quae admonet unumquemque vocari ut illorum numerum augeat. Invitat ad sinceram vitae examinationem ad Beatitudines mensuratae et ad renovatam fiduciam in gratia quae iam tot sanctos effecit.
+$desc$),
+('the-commemoration-of-all-the-faithful-departed', 'Commemoratio Omnium Fidelium Defunctorum', $desc$
+Statim post gaudium Omnium Sanctorum Ecclesia orationem suam convertit ad omnes qui mortui sunt necdum plene purgati, ad fideles defunctos qui Christi sunt sed plenitudinem gloriae eius exspectant. Est dies intercessionis potius quam luctus, quo vivi caritatem suam erga mortuos exercent per orationem, eleemosynam et praesertim per Eucharistiae oblationem.
+
+Haec commemoratio innititur antiquae persuasioni caritatis vincula morte non abrumpi et vivos defunctis per orationem subvenire posse, fidei in doctrina purificationis post mortem radicatae quam dogma purgatorii exprimit. Orare pro mortuis actus spei est, professio fidei in carnis resurrectione et fiducia Dei misericordiam opus salutis in iis qui in eius amicitia obierunt perficere.
+
+Haec celebratio formam stabilem accepit a sancto Odilone Cluniacensi qui, circa annum 998, diem secundam Novembris omnium defunctorum commemorationi per monasteria ordinis sui statuit, unde per totam Ecclesiam Latinam diffusa est. Postea orta est consuetudo, a Benedicto XV papa anno 1915 inter primi belli mundani stragem confirmata, sacerdotibus permittendi hoc die tres Missas celebrare, privilegium quod intensiorem Ecclesiae pro mortuorum multitudine orationem exprimebat.
+
+Hic dies unus e teneris anni christiani manet, fideles ad coemeteria, ad cereorum accensionem et ad orationem pro parentibus, amicis et omnibus oblitis defunctis ducens. Docet salutarem mortis memoriam et fidentem caritatem quae sepulcrum transcendit, unumquemque admonens Ecclesiam vivos et mortuos in una indivisa communione complecti.
+$desc$),
+('saint-martin-de-porres-religious', 'Sanctus Martinus de Porres, religiosus', $desc$
+Sanctus Martinus de Porres frater laicus dominicanus Limensis fuit, cuius humile ministerium et extraordinaria caritas eum unum ex sanctis Americae dilectissimis effecerunt. Filius nobilis Hispani et mulieris libertae originis Africanae, ab infantia reiectionem et paupertatem novit, sed in figuram mirae teneritudinis erga aegros, servos et derelictos crevit.
+
+Vita eius corpus praebet doctrinae evangelicae qua magnitudo in ministerio est nec quisquam extra amoris Dei attingentiam. Humillimis conventus sui officiis addictus, laborem servilem in oblationem amoris transformavit, et cura eius pauperum, orphanotrophii fundatio et prodigia orationi eius attributa sanctitatem manifestaverunt quae claustra generum societatis suae transcendebat.
+
+Limae anno 1579 natus, Martinus conventum dominicanum Sancti Rosarii ut famulus, deinde ut frater laicus professus ingressus est, ubi usque ad mortem anno 1639 ministravit. In Peru et longe ultra veneratus, a Gregorio XVI papa anno 1837 beatificatus et a Ioanne XXIII papa anno 1962 canonizatus est, qui eum ut exemplar iustitiae inter genera et caritatis christianae proposuit.
+
+Aetate racismo et divisionibus socialibus adhuc vulnerata, sanctus Martinus singulari vi loquitur ut patronus iustitiae socialis et omnium qui reconciliationi student. Exemplum eius fideles invitat ut sanctitatem in ordinariis officiis fideliter impletis inveniant et in omni paupere ac reiecto vultum Christi agnoscant.
+$desc$),
+('saint-charles-borromeo-bishop', 'Sanctus Carolus Borromeo, episcopus', $desc$
+Sanctus Carolus Borromeo archiepiscopus Mediolanensis fuit et una ex praecipuis figuris Reformationis catholicae, episcopus cuius indefessa navitas reformationibus Concilii Tridentini formam concretam dedit. Nobili genere natus et iuvenis ad summa officia evectus, vitam tamen austeritatis, laboris pastoralis et plenae Ecclesiae renovationi deditae elegit.
+
+Episcopatus eius exemplar pastoris reformatoris exprimit: in dioecesi sua residens, paroecias remotissimas per se visitans, seminaria ad rectam cleri formationem fundans, et aegrotis heroice se tradens tempore pestis quae Mediolanum percussit. Vita eius proclamat reformationem Ecclesiae a sanctitate et studio pastorum eius incipere.
+
+Anno 1538 in aristocratica familia Borromea natus et Pii IV papae nepos, Carolus partes decisivas egit in Concilio Tridentino ad finem perducendo et in Catechismo Romano conficiendo. Archiepiscopus Mediolanensis concilia provincialia habuit, praecepta accurata pro vita pastorali edidit et seminaria condidit, laboribus confectus anno 1584 quadraginta sex annorum moriens. A Paulo V papa anno 1610 canonizatus est.
+
+Inde ut patronus episcoporum, seminaristarum et catechistarum habitus, sanctus Carolus exemplar manet studii pastoralis et sapientiae in animarum ministerium totum collocatorum. Eos qui munera regunt provocat ut pro populo suo se impendant et reformationem primum in propria vita quaerant.
+$desc$),
+('the-dedication-of-the-lateran-basilica', 'Dedicatio Basilicae Lateranensis', $desc$
+Hoc festum dedicationem Basilicae Sancti Ioannis in Laterano commemorat, ecclesiae cathedralis episcopi Romani et, ut inscriptio frontis eius proclamat, matris et capitis omnium ecclesiarum Urbis et Orbis. Etsi plures primum de Sancto Petro cogitant, Lateranum est cathedralis propria papae, et eius dedicatio ab universa Ecclesia celebratur ut signum unitatis circa sedem Petri.
+
+Dedicationem aedificii per universam Ecclesiam celebrare mirum videri potest, sed ecclesia lapidea signum est altioris realitatis: templi vivi ex credentibus aedificati et unitatis omnium ecclesiarum localium cum Ecclesia Romana quae in caritate praesidet. Festum honorat Ecclesiam visibilem ut communionis sacramentum et ultra latercium marmorque ad Christum, verum fundamentum, dirigit.
+
+Basilica exstat in solo olim familiae Lateranorum, ab imperatore Constantino ineunte saeculo quarto Ecclesiae dato, et a Silvestro I papa circa annum 324 ut prima magna ecclesia publica Romae dedicata est. Saepe laesa, direpta et reaedificata per saecula, cathedralis Romae permansit, et universalis eius observantia a saeculo duodecimo diffusa est in honorem cathedralis papae.
+
+Festum fideles omnis terrae invitat ut vinculum suum cum episcopo Romano et cum tota communione catholica agnoscant. Occasio est gratias agendi pro Ecclesiae unitate et recordandi omnem ecclesiam lapideam, quantumvis humilem, signum esse vivi templi Dei ex ipsis fidelibus aedificati.
+$desc$),
+('saint-leo-the-great-pope-and-doctor-of-the-church', 'Sanctus Leo Magnus, papa et Ecclesiae doctor', $desc$
+Sanctus Leo Magnus unus ex pontificibus antiquitatis maximi momenti fuit, pastor et theologus cuius defensio fidei orthodoxae et vigorosa exercitatio muneris Petrini duraturam Ecclesiae notam impresserunt. Romam per tempus ruinae politicae et crisis doctrinalis rexit ea claritate et firmitate quae ei titulum «Magni» meruerunt.
+
+Theologicum eius opus in mysterio Incarnationis versatur, praesertim celebre Tomus eius, qui doctrinam exposuit in Christo duas naturas, divinam et humanam, in una persona uniri. Haec doctrina lapis Lydius orthodoxiae facta est et altam persuasionem expressit salutem hominum a vero Deo vere homine facto pendere.
+
+Papa anno 440 electus, Leo Ecclesiam plus quam viginti annos gubernavit, auctoritatem sedis Romanae asserens et haereses temporis sui aggrediens. Tomus eius in Concilio Chalcedonensi anno 451 acclamatus est, cuius Patres exclamaverunt Petrum per Leonem locutum esse, et traditio ei attribuit Attilam persuasisse ut Romae parceret anno 452. Anno 461 obiit et postea Ecclesiae doctor declaratus est, primus papa hunc titulum ferens.
+
+Sanctus Leo exemplar manet pastoris qui audaciam doctrinalem cum cura pastorali et regiminis peritia coniungit. Sermones eius, adhuc propter claritatem et profunditatem lecti, fidem alere pergunt, et exemplum eius hortatur ad veritatem Christi firmiter confitendam inter turbationes et mutationes.
+$desc$),
+('saint-martin-of-tours-bishop', 'Sanctus Martinus Turonensis, episcopus', $desc$
+Sanctus Martinus Turonensis inter sanctos Occidentis maxime veneratos numeratur, olim miles factus monachus et episcopus, cuius fama cultum confessorum diffudit, sanctorum qui Christo testimonium reddiderunt non martyrio sed vita heroicae virtutis. Imago iuvenis militis chlamydem suam mendico dividentis una ex maxime duraturis artis christianae facta est.
+
+Vita eius testatur radicalia caritatis postulata et sanctitatis possibilitatem in omni vitae statu. Sanguinem effundere ut miles renuens, spiritus potius bellum amplexus est, et indefessa eius ruris evangelizatio, delubrorum paganorum destructio et in peccatores mansuetudo Evangelium plene vixerunt.
+
+Circa annum 316 in hodierna Hungaria natus et in Italia educatus, Martinus in exercitu Romano militavit priusquam baptizaretur et unam ex primis communitatibus monasticis Galliae apud Ligugé conderet. Circa annum 371 episcopus Turonensis acclamatus, sedem suam ut monachus-episcopus rexit usque ad mortem anno 397, et sepulcrum eius Turonis unum ex magnis peregrinationis centris Europae mediaevalis factum est, vita eius a coaevo Sulpicio Severo relata.
+
+Patronus militum, pauperum et Galliae, sanctus Martinus figura dilecta manet cuius festum olim tempus Martinalium per totam Europam signabat. Liberalitas eius erga mendicum fideles vocare pergit ut Christum in egeno agnoscant et sine numero donent.
+$desc$),
+('saint-josaphat-bishop-and-martyr', 'Sanctus Iosaphat, episcopus et martyr', $desc$
+Sanctus Iosaphat Kuncevyc archiepiscopus ritus orientalis fuit qui vitam suam pro unitate inter christianos byzantinos Ucrainae et sedem Romanam dedit. Monachus et pastor magni studii, primus sanctus Ecclesiarum catholicarum orientalium factus est formaliter a Roma canonizatus, et martyrium eius laborem totius vitae pro communione obsignavit.
+
+Testimonium eius illustrat difficile et saepe dolorosum iter unitatis christianae, reconciliationem traditionum antiquarum diu divisarum. Liturgiae et spiritualitati byzantinae penitus addictus, populum suum ad plenam communionem cum Roma ducere quaesivit ritibus venerandis eius servatis, et martyr obiit propter illam ipsam visionem Ecclesiae simul orientalis et catholicae.
+
+Circa annum 1580 in Volhynia natus, Iosaphat monachus Ordinis Sancti Basilii et anno 1617 archiepiscopus Polocensis factus est, ubi ad unionem Brestae conclusam consolidandam laboravit. Studium eius reformatorium acrem oppositionem excitavit, et anno 1623 a turba Vitepsci occisus est. Ab Urbano VIII papa anno 1643 beatificatus et a Pio IX papa anno 1867 canonizatus est, prima formalis canonizatio catholici orientalis.
+
+Aetate reconciliationi christianorum adhuc studente, sanctus Iosaphat ut patronus incepti oecumenici et Ecclesiarum catholicarum orientalium stat. Vita eius fideles admonet unitatem donum pretiosum esse et fidelitatem simul traditioni et communioni summum sacrificium exigere posse.
+$desc$),
+('saint-albert-the-great-bishop-and-doctor-of-the-church', 'Sanctus Albertus Magnus, episcopus et Ecclesiae doctor', $desc$
+Sanctus Albertus Magnus frater dominicanus, episcopus et unus ex mentibus maxime encyclopaedicis Medii Aevi fuit, tam propter sanctitatem quam propter immensam doctrinae amplitudinem celebratus. Magister Thomae Aquinatis, dialogi fecundi inter fidem christianam et scientias naturae praecursor fuit et rarum titulum «Magni» iam vivens meruit.
+
+Opus eius intellectuale in eo consistit ut ostenderet fidem et rationem non inimicas sed socias esse, et studium naturae viam ad Creatorem eius esse. Operibus Aristotelis nuper recuperatis imbutus, philosophiam, theologiam et observationem mundi naturalis ad harmonicam synthesim adduxit, affirmans gratiam ordinem creatum perficere non destruere.
+
+In Suevia circa annum 1200 natus, Albertus Dominicanos ingressus est, Parisiis et Coloniae docuit et breviter episcopus Ratisbonensis fuit priusquam ad studium et praedicationem rediret. Scripta eius per theologiam, philosophiam, botanicam, zoologiam et astronomiam percurrerunt, et orthodoxiam discipuli sui Thomae post huius mortem defendit. Coloniae anno 1280 obiit, a Pio XI papa anno 1931 canonizatus et Ecclesiae doctor declaratus, deinde patronus scientiarum naturalium nominatus est.
+
+Sanctus Albertus patronus illustris scientificis et eruditis manet et testis contra omnem falsam oppositionem inter fidem et scientiam. Exemplum eius credentes hortatur ut veritatem ubicumque invenitur quaerant, certi omnem veram doctrinam ad Deum reducere.
+$desc$),
+('saint-margaret-of-scotland', 'Sancta Margarita Scotiae', $desc$
+Sancta Margarita Scotiae regina fuit cuius sanctitas personalis vitam regni transformavit, mulier regii sanguinis quae positione sua non ad potentiam sed ad Dei et pauperum ministerium usa est. Uxor Malcolmi III regis, ad aulam Scotiae fidei elegantiam et pietatem attulit quae a palatio usque ad humillimum subditorum pertingebant.
+
+Vita eius ostendit quomodo sanctitas in statu coniugali et publico florere possit, et quomodo caritas et reformatio ex domo fluere possint. Orationi, Scripturis et operibus misericordiae dedita, mores Ecclesiae Scotiae reformavit, orphanos et egenos per se curavit et domum regiam suam scholam virtutis christianae effecit.
+
+Circa annum 1045 nata, nepta regis Angli et in exsilio in Hungaria et Anglia educata, Margarita post conquisitionem Normannicam in Scotiam venit et Malcolmum circa annum 1070 in matrimonium duxit. Synodos ad abusus corrigendos promovit, ecclesias et monasteria fundavit et traiectum pro peregrinis apud locum qui Queensferry factus est instituit. Anno 1093 obiit, paulo post mortem mariti cognitam, et ab Innocentio IV papa anno 1250 canonizata est.
+
+Ut patrona Scotiae honorata, sancta Margarita exemplar manet sanctificati usus divitiarum et influxus. Regibus et familiis pariter ostendit auctoritatem recte in ministerio exerceri, et vitam orationis et caritatis totam nationem duraturo signo notare posse.
+$desc$),
+('saint-gertrude-virgin', 'Sancta Gertrudis, virgo', $desc$
+Sancta Gertrudis Magna monialis benedictina Germanica et mystica fuit, cuius intimae Christi experientiae eam unam ex magnis vocibus spiritualitatis mediaevalis effecerunt. Mulier profundae doctrinae et profundioris orationis, praesertim cum devotione ad Sacrum Cor Iesu coniungitur, cuius scripta inter primos testes numerantur.
+
+Spiritualitas eius in immenso Christi amore in Corde eius revelato et in unione animae cum illo per liturgiam et Scripturas versatur. Visiones eius, in scriptis relatae, tenerum et fidentem amorem exprimunt, et doctrina eius de fiducia in divina misericordia et de infinito valore amoris Christi innumeras animas aluit.
+
+Anno 1256 nata et infans monasterio Helftensi, tunc florenti doctrinae et mysticae centro, tradita, Gertrudis totam vitam intra eius muros egit. Conversio in vicesimis annis eam a studiis profanis ad plenam devotionem convertit, et experientias mysticas suas in «Legato divinae pietatis» consignavit. Circa annum 1302 obiit, et quamvis numquam formaliter canonizata, cultus eius confirmatus est et festum ad universam Ecclesiam extensum, Innocentio XI papa venerationem eius approbante.
+
+Sancta Gertrudis dux manet ad orationem fidentem et ad devotionem erga Cor Christi. Scripta eius lectores ad personalem et amantem cum Domino relationem trahere pergunt, et fiducia eius in divina misericordia consolatio manet omnibus qui se amore Dei indignos sentiunt.
+$desc$),
+('saint-elizabeth-of-hungary-religious', 'Sancta Elisabeth Hungariae, religiosa', $desc$
+Sancta Elisabeth Hungariae principissa et iuvenis vidua fuit cuius radicalis in pauperes liberalitas eam unam ex sanctis Medii Aevi dilectissimis effecit. Commodis dignitatis suae renuntians, tota se aegrorum et egenorum ministerio tradidit et exemplar splendidum caritatis franciscanae in mundo vitae facta est.
+
+Vita eius Evangelium paupertatis et misericordiae proclamat, veritatem amorem Christi ab amore pauperum eius inseparabilem esse. Iuvenis nupta et iuvenis vidua, vitam paenitentiae et ministerii sub inspiratione franciscana amplexa est, divitias suas distribuens, leprosos propriis manibus curans et nosocomium aedificans ubi patientes per se curabat.
+
+Anno 1207 nata, filia regis Hungariae, Elisabeth quattuordecim annorum Ludovico Thuringiae nupsit eique tres liberos peperit priusquam ille in cruciata anno 1227 moreretur. Ab aula pulsa, Tertium Ordinem Sancti Francisci ingressa est et annos reliquos in oratione et cura pauperum apud Marburgum egit, anno 1231 viginti quattuor annorum moriens. Tam celeris fuit fama eius ut Gregorius IX papa eam anno 1235, quattuor tantum annis post, canonizaret.
+
+Patrona Tertii Ordinis franciscani et operum caritatis, sancta Elisabeth exemplar manet iuvenibus, viduis et omnibus qui pauperibus serviunt. Laeta eius privilegii renuntiatio et tenera patientium cura vitas caritatis concretae inspirare pergunt.
+$desc$),
+('the-dedication-of-the-basilicas-of-saints-peter-and-paul-apostles', 'Dedicatio Basilicarum Sanctorum Petri et Pauli', $desc$
+Haec observantia dedicationem duarum magnarum basilicarum Romanarum super sepulcra apostolorum Petri et Pauli erectarum commemorat, geminarum columnarum super quas, secundum antiquam traditionem Romanam, Ecclesia Urbis fundata est. In unam celebrationem coniungit memoriam Principis apostolorum et Apostoli gentium, quorum martyrium Romam consecravit.
+
+Dedicationem harum ecclesiarum celebrare est apostolicum Ecclesiae fundamentum et duraturam intercessionem eorum qui Christo sanguine testimonium reddiderunt confiteri. Basilicae sacrae sunt non primum propter magnitudinem suam, sed quia reliquias apostolorum continent et loca praedicatione et morte eorum sanctificata signant, peregrinos ex omni natione ad cor fidei christianae trahentes.
+
+Prima Basilica Sancti Petri ab imperatore Constantino super sepulcrum apostoli in colle Vaticano saeculo quarto aedificata est et in praesentem formam magnificam saeculis sexto decimo et septimo decimo reaedificata. Basilica Sancti Pauli extra Muros, item originis Constantinianae super sepulturam Pauli in via Ostiensi, incendio anno 1823 deleta et decenniis sequentibus fideliter reaedificata est. Coniuncta earum commemoratio Romae diu ut signum communis testimonii apostolorum servatur.
+
+Festum fideles invitat ut vinculum suum cum Ecclesia apostolica renovent et pro testimonio Petri et Pauli gratias agant. Occasio est de unitate et universalitate Ecclesiae super apostolos fundatae meditandi, et de peregrinatione fidei quae credentes ad sepulcra martyrum trahit.
+$desc$),
+('the-presentation-of-the-blessed-virgin-mary', 'Praesentatio Beatae Mariae Virginis', $desc$
+Haec memoria traditionem celebrat qua puella Maria a parentibus in Templo Deo oblata est, ministerio eius a primis annis dedicata. Est festum minus eventus documentati quam profundae veritatis de plena Mariae Deo consecratione, toto eius esse voluntati eius ab initio vitae tradito.
+
+Mysterium hic honoratum est plena Mariae ad Deum disponibilitas, dispositio animae penitus consecratae antequam id conscie eligeret. Festum eam contemplatur ut verum templum in quo Verbum habitaturum erat, et gratiam celebrat quae eam a primo instanti ad habitationem Dei inter homines esse praeparavit.
+
+Haec celebratio ex apocrypho Protoevangelio Iacobi hauritur, quod narrat Annam et Ioachim filiam suam trium annorum ad Templum ad votum implendum adduxisse. In Oriente christiano a saeculo saltem sexto celebrata, festum in calendarium occidentale exeunte Medio Aevo intravit, suppressum et postea restitutum, et die vicesima prima Novembris ut memoria consecrationem Mariae potius quam factum historicum honorans servatur.
+
+Festum fideles invitat ut oblationem Mariae imitentur vitam suam Deo sine reservatione consecrantes. Cum oratione pro iis qui vitam consecratam agunt diu coniunctum est et occasio manet proprium donum renovandi, ab infante Templi discentes quid sit toti Domino pertinere.
+$desc$),
+('saint-cecilia-virgin-and-martyr', 'Sancta Caecilia, virgo et martyr', $desc$
+Sancta Caecilia una ex celeberrimis martyribus Romae primaevae est, virgo cuius pietas et fortitudo nomen eius per saecula resonare fecerunt. In antiquo canone Romano Missae inter martyres Urbis honorata, praesertim ut patrona musicae sacrae diligitur, quae, ut dicitur, Deo in corde suo inter ipsos cruciatus cantabat.
+
+Testimonium eius pulchritudinem virginitatis consecratae et robur fidei quae persecutionem superat proclamat. Traditio narrat historiam iuvenis mulieris quae maritum suum et fratrem eius convertit, eos ad baptismum et martyrium duxit, et vitam suam potius quam Christum negaret dedit, laudem Dei usque ad finem cantans et sic emblema cordis totius ad caelum conversi facta.
+
+Veneratio Caeciliae vetustissima est, Romae iam saeculo quarto vel quinto attestata, et ecclesia nomen eius ferens in regione Transtiberina ab antiquitate exstat, ex traditione in loco domus eius. Narrationes passionis eius forma legendaria sunt et vitae eius adiuncta certo stabiliri non possunt, sed vetustas et constantia cultus eius extra dubium sunt. Associatio eius cum musica exeunte Medio Aevo orta est et in magna traditione musicali festi eius effloruit.
+
+Patrona musicorum, cantorum et musicae ecclesiasticae, sancta Caecilia oblationem pulchritudinis Deo inspirare pergit. Festum eius occasio manet musicam sacram ut orationis formam celebrandi et puritatem fortem honorandi quae eam, in memoria Ecclesiae, sponsam toti Christo datam effecit.
+$desc$),
+('saint-clement-i-pope-and-martyr', 'Sanctus Clemens I, papa et martyr', $desc$
+Sanctus Clemens I inter primos successores sancti Petri ut episcopus Romae fuit et inter primos testes exercitationis auctoritatis Romanae in Ecclesia universali stat. Inter Patres apostolicos numeratus, memoratur simul propter martyrium et propter epistulam quae inter pretiosissima documenta primorum saeculorum christianorum figurat.
+
+Momentum eius maxime in Epistula ad Corinthios innititur, communitati divisae ad ordinem et oboedientiam restituendam scripta, quae Ecclesiam Romanam primaevam cum auctoritate in negotiis alterius Ecclesiae intervenientem ostendit. Epistula successionem apostolicam ministrorum testatur et sollicitudinem Ecclesiae Romanae pro unitate et pace totius corporis credentium.
+
+Clemens episcopus Romae circa finem saeculi primi fuit, ex traditione ut tertius vel quartus successor Petri numeratus. Epistula eius tanti aestimata est ut in quibusdam Ecclesiis publice iuxta Scripturas legeretur. Posterior traditio exsilium eius et martyrium submersione cum ancora narrat, et reliquiae ut eius venerata Romam a sanctis Cyrillo et Methodio, quorum opus missionarium memoriae eius coniunctum fuit, allatae sunt.
+
+Sanctus Clemens patronus unitatis et boni ordinis Ecclesiae manet et testis vetustatis primatus Romani. Epistula eius ut testimonium fidei et structurae aetatis apostolicae legi pergit, et memoria eius ad pacem et concordiam intra communitatem christianam quaerendam hortatur.
+$desc$),
+('saint-columban-abbot', 'Sanctus Columbanus, abbas', $desc$
+Sanctus Columbanus monachus Hibernus fuit cuius itinera missionaria fervorem monachismi celtici in cor Europae continentalis portaverunt. Eruditus, abbas et praedicator intrepidus, seriem monasteriorum condidit quae doctrinae et renovationis centra facta sunt et duraturam notam civilizationi christianae Occidentis reliquit.
+
+Vita eius ideale peregrinationis exprimit, voluntarium monachi exsilium ob amorem Christi, et vim reformatricem vitae communis disciplinatae. In propria observantia austerus et audax ad reges et episcopos pariter aggrediendos, regulam monasticam et rigorosam disciplinam paenitentialem diffudit quae fidem in regionibus remissis revivificaverunt.
+
+In Hibernia circa annum 543 natus et in monasterio Bangorensi formatus, Columbanus circa annum 590 cum comitum manu in Galliam profectus est, ubi Luxovium et alias domos condidit. Aperta eius consuetudinum Hibernicarum defensio et reprehensiones aulae Francicae expulsionem eius attulerunt, et per Helvetiam in Italiam septentrionalem iter fecit, magnum monasterium Bobiense condens, ubi anno 615 obiit. Regula eius monastica diu floruit priusquam illi sancti Benedicti cederet.
+
+Ut unus ex patribus monachismi Europaei honoratus, sanctus Columbanus ut patronus Europae unitae ex radicibus christianis conflatae invocatus est. Fortitudo, doctrina et studium missionarium eius inspirare pergunt, et vita eius admonet potentiam virorum ac mulierum consecratorum fidem nationum renovandi.
+$desc$),
+('saints-andrew-dung-lac-priest-and-companions-martyrs', 'Sancti Andreas Dung-Lac et Socii, martyres', $desc$
+Haec memoria martyres Vietnamiae honorat, magnam multitudinem christianorum Vietnamensium et missionariorum qui vitam suam pro fide inter persecutiones saeculorum septimi decimi, octavi decimi et noni decimi dederunt. A presbytero Andrea Dung-Lac repraesentati, comprehendunt episcopos, presbyteros et laicos omnis condicionis qui fidem suam in Christum sanguine obsignaverunt.
+
+Testimonium eorum universalitatem Evangelii proclamat et promptitudinem credentium ordinariorum potius mori quam fidem suam negare. Atrocibus cruciatibus subiecti, in fidelitate Christo et Ecclesiae perseveraverunt, et constantia eorum semen communitatis christianae facta est quae per posteriores tribulationes crescere et perdurare perrexit.
+
+Persecutiones in Vietnamia multa milia vitarum per tria fere saecula abstulerunt, dum successivi principes fidem christianam a missionariis allatam et a populo amplexam supprimere conabantur. Inter martyres fuit Andreas Dung-Lac, presbyter indigena anno 1839 decollatus. Centum decem et septem ex his martyribus, ex multis decenniis persecutionis desumpti, a Ioanne Paulo II papa anno 1988 simul canonizati sunt, et festum eorum commune die vicesima quarta Novembris statutum est.
+
+Martyres Vietnamiae inspiratio sunt Ecclesiae quae omni aetate persecutionem novit, et patroni populo Vietnamensi per orbem disperso. Memoria eorum fideles ad constantiam in tribulatione hortatur et universae Ecclesiae pretium admonet solutum, et adhuc hodie solvendum, pro fidelitate Evangelio.
+$desc$),
+('saint-catherine-of-alexandria-virgin-and-martyr', 'Sancta Catharina Alexandrina, virgo et martyr', $desc$
+Sancta Catharina Alexandrina una ex celeberrimis virginibus martyribus antiquitatis christianae est, iuvenis mulier tam propter doctrinam quam propter fortitudinem celebrata. In legenda famosa ut principissa quae philosophos paganos vi argumentorum confudit, una ex sanctis mundi mediaevalis popularissimis et patrona eruditorum facta est.
+
+Historia eius unionem fidei et sapientiae et invictam martyris constantiam exaltat. Traditio narrat historiam puellae praeclarae et nobilis quae fidem christianam coram imperatore defendit, ipsos philosophos ad eam refellendam missos convertit, et supplicium rotae aculeis instructae deinde mortem gladio potius quam Christum desereret pertulit, nomine eius in perpetuum instrumento passionis eius coniuncto.
+
+Cultus Catharinae ab alto Medio Aevo floruit, praesertim postquam putatae reliquiae eius in monasterio montis Sinai quod nomen eius fert veneratae sunt. Adiuncta historica vitae eius verificari non possunt et narrationes passionis eius indolis legendariae sunt, ita ut memoria eius in calendario reformato ad libitum relicta sit; sed vetustas et ingens popularitas venerationis eius locum eius firmaverunt. Inter Quattuordecim Auxiliatores numerata est et ut una ex vocibus a Ioanna Arcensi auditis honorata.
+
+Patrona philosophorum, studentium et theologorum, sancta Catharina harmoniam intellectus et fidei repraesentare pergit. Legenda eius, quodcumque eius fundamentum historicum, diu credentes hortata est ut veritatem cum fortitudine defenderent et omnem doctrinam in Christi ministerium collocarent.
+$desc$),
+('saint-andrew-apostle', 'Sanctus Andreas, Apostolus', $desc$
+Sanctus Andreas unus ex Duodecim et frater Simonis Petri fuit, in traditione ut «primus vocatus» inter apostolos honoratus. Piscator Galilaeae qui retia sua ad verbum Christi reliquit, locum peculiarem tenet ut is qui primus fratrem suum ad Iesum adduxit, et festum eius merito in conversione anni liturgici stat.
+
+Testimonium eius gratiam vocationis apostolicae et impetum missionarium qui ex occursu Christi fluit proclamat. Messia invento, primus actus Andreae fuit fratrem suum quaerere et ad Dominum ducere, gestus qui eum exemplar evangelizationis facit, et proprium martyrium configurationem eius Magistro quem secutus erat complevit.
+
+Andreas in Evangeliis ad vocationem primorum discipulorum et ad multiplicationem panum apparet, et antiqua traditio eum ad praedicandum in Graecia et in regionibus circa Pontum Euxinum mittit. Patris in cruce forma X, quae emblema eius facta est, crucifixus esse dicitur. Ut fundator sedis postea Constantinopoli associatae veneratus, ut patronus Scotiae, Graeciae et Russiae honoratur, et festum eius, die trigesima Novembris, semper prope initium Adventus cadit.
+
+Quia festum eius finem anni Ecclesiae et adventum Adventus signat, sanctus Andreas cum tempore exspectationis adventus Domini coniungitur. Ut primus qui Christum secutus est et primus qui alium ad eum adduxit, fideles vocare pergit ut sine mora respondeant et inventionem Salvatoris cum aliis communicent.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
