@@ -2636,8 +2636,6 @@ SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
 ('saint-justin-martyr', 'Saint Justin, martyr', $desc$
-La mémoire obligatoire de saint Justin, martyr, se pare de la couleur rouge propre aux martyrs.
-
 Cette célébration honore un laïc et philosophe qui, après avoir cherché la vérité à travers les écoles de la philosophie païenne, reconnut dans le christianisme l'accomplissement le plus profond de la raison elle-même — la « vraie philosophie ». Sa fête célèbre l'harmonie de la foi et de la raison, la vocation de l'intellectuel à mettre son savoir au service de l'Évangile, et le sceau ultime de cette vocation dans le martyre, par lequel Justin confirma de son sang les vérités qu'il avait défendues par sa plume.
 
 La commémoration de la mort de Justin — flagellé puis décapité à Rome sous le préfet Rusticus vers 165 — remonte à l'Antiquité chrétienne, et les Actes de son procès comptent parmi les plus anciens actes de martyrs authentiques conservés. Avant la réforme du calendrier consécutive au concile Vatican II, sa mémoire était fixée au 14 avril ; la révision de 1969 la déplaça au 1er juin, plus proche de la tradition ancienne — également suivie en Orient — qui le rattache au début de l'été, permettant à la fête de se dégager de la densité du cycle pascal.
@@ -2645,8 +2643,6 @@ La commémoration de la mort de Justin — flagellé puis décapité à Rome sou
 À une époque marquée par un dialogue renouvelé entre foi, culture et science, la fête de Justin revêt une portée pastorale particulière : elle offre un modèle d'engagement sans crainte avec la pensée contemporaine, faisant de la raison un pont plutôt qu'un obstacle vers la foi. Patron des philosophes et des apologistes, il est invoqué par tous ceux qui s'efforcent de rendre compte avec intelligence de l'espérance qui est en eux.
 $desc$),
 ('saints-marcellinus-and-peter-martyrs', 'Saints Marcellin et Pierre, martyrs', $desc$
-La mémoire facultative des saints Marcellin et Pierre se revêt du rouge propre aux martyrs.
-
 Cette fête commémore deux martyrs romains du début du IVe siècle, un exorciste et un prêtre, mis à mort durant la persécution de Dioclétien. Sa portée liturgique ne tient pas au détail biographique mais à leur inscription parmi les témoins que l'Église vénère sans interruption depuis l'Antiquité : leurs noms figurent dans le Canon romain lui-même, dans la liste des martyrs récitée après la consecration, unissant perpétuellement leur sacrifice à l'offrande eucharistique de toute l'Église.
 
 La dévotion à ces martyrs est attestée de manière remarquablement précoce : le pape Damase Ier composa une épitaphe pour leur tombeau sur la via Labicana, et Constantin y fit élever une basilique à la demande de sa mère Hélène, l'une des grandes basiliques funéraires de l'époque constantinienne. Leur commémoration est demeurée au calendrier romain à travers toutes les révisions ultérieures, signe de l'estime durable que l'Église de Rome porte à ses propres martyrs, même au fil des siècles de réformes calendaires.
@@ -2654,8 +2650,6 @@ La dévotion à ces martyrs est attestée de manière remarquablement précoce :
 Sur le plan pastoral, cette mémoire invite les fidèles à se souvenir de l'enracinement profond de l'Église dans le témoignage des martyrs, en particulier ceux dont l'histoire n'est pas conservée en détail mais dont la fidélité demeure pourtant tissée au cœur même de la liturgie eucharistique. Leur fête rappelle discrètement que la sainteté échappe souvent au récit détaillé, tout en restant éternellement présente devant l'autel.
 $desc$),
 ('saints-charles-lwanga-and-companions-martyrs', 'Saint Charles Lwanga et ses compagnons, martyrs', $desc$
-La mémoire obligatoire de saint Charles Lwanga et de ses compagnons se célèbre en rouge, signe de leur martyre. Son rang obligatoire dans le calendrier romain général reflète la portée universelle que l'Église attache à ce groupe de martyrs relativement récent.
-
 Cette mémoire célèbre le courage de jeunes chrétiens — pages et catéchumènes de la cour royale du Buganda — qui, entre 1885 et 1887, choisirent la mort plutôt que de trahir leur foi ou de se soumettre à des exigences contraires à la morale chrétienne. Sur le plan théologique, la fête offre une image de l'universalité et de la vitalité de l'Église, même en des terres nouvellement évangélisées, et atteste que la grâce du martyre, avec la vertu héroïque qu'elle suppose, ne se limite à aucune culture ni époque particulière mais fleurit partout où l'Évangile prend racine.
 
 Le pape Paul VI canonisa ce groupe en 1964, durant le concile Vatican II, et leur mémoire entra au calendrier romain général lors de la réforme qui suivit, faisant d'eux les premiers saints canonisés d'Afrique subsaharienne. Leur canonisation et leur inscription au calendrier marquèrent un moment significatif dans la reconnaissance par l'Église de la maturité et de la fécondité des jeunes Églises d'Afrique.
@@ -2663,8 +2657,6 @@ Le pape Paul VI canonisa ce groupe en 1964, durant le concile Vatican II, et leu
 Aujourd'hui, cette fête garde une forte résonance pastorale en Afrique et au-delà, mettant en lumière la fermeté devant la persécution, la pureté de vie et la fidélité à la conscience comme témoignages vivants pour une Église véritablement universelle. Elle est souvent célébrée avec une grande solennité en Ouganda, au sanctuaire de Namugongo, et encourage les jeunes du monde entier confrontés à la pression de compromettre leur foi.
 $desc$),
 ('saint-boniface-bishop-and-martyr', 'Saint Boniface, évêque et martyr', $desc$
-La mémoire obligatoire de saint Boniface, évêque et martyr, est revêtue de rouge en reconnaissance de son martyre. Son rang obligatoire souligne l'importance durable de ce saint dans l'histoire missionnaire de l'Église latine.
-
 Cette fête honore l'« apôtre de l'Allemagne », dont le ministre épiscopal incarna l'union de la discipline monastique, de l'obéissance ecclésiale à Rome et du zèle missionnaire dans l'évangélisation et l'organisation de l'Église chez les peuples germaniques. Liturgiquement, elle célèbre la vocation de l'évêque missionnaire qui pose les fondations institutionnelles — diocèses, monastères, conciles — sur lesquelles peut se bâtir une culture chrétienne durable, et elle honore la couronne du martyre qui scella l'œuvre de sa vie.
 
 Moine bénédictin anglais qui reçut sa mission directement de la papauté, Boniface réorganisa les Églises franque et germanique et fut tué par des païens à Dokkum, en Frise, en 754, alors qu'il attendait des convertis pour les confirmer. Sa fête est célébrée en Occident depuis peu après sa mort et demeure un point fixe du calendrier romain à travers toutes les grandes réformes, continuité rare qui reflète son rôle fondateur dans l'évangélisation de l'Europe du Nord.
@@ -2672,8 +2664,6 @@ Moine bénédictin anglais qui reçut sa mission directement de la papauté, Bon
 La mémoire de Boniface garde une importance particulière pour l'Église en Allemagne et aux Pays-Bas, où il est patron, et offre un modèle pour les évêques missionnaires d'aujourd'hui : fidélité à l'Église universelle unie à un travail patient et structurant d'évangélisation, entrepris sans souci de sa propre sécurité.
 $desc$),
 ('saint-norbert-bishop', 'Saint Norbert, évêque', $desc$
-La mémoire facultative de saint Norbert, évêque, a son observance dépendante des usages locaux ou des calendriers particuliers, notamment celui de l'ordre prémontré (norbertin), pour lequel ce jour revêt une solennité plus grande.
-
 Cette célébration honore un évêque et fondateur dont la vie témoigna de la réforme de la vie cléricale et religieuse au XIIe siècle, en particulier du renouveau de la vie commune et apostolique parmi les chanoines réguliers. Sur le plan théologique, la fête souligne le besoin permanent qu'a l'Église de réformer la vie consacrée selon l'Évangile, en unissant la prière contemplative au soin pastoral actif et à la prédication.
 
 Norbert fonda l'abbaye de Prémontré en 1120, dont l'ordre prémontré tire son nom, puis devint archevêque de Magdebourg, où il œuvra à restaurer la discipline ecclésiastique et à combattre l'hérésie. Sa fête entra au calendrier général en reconnaissance de son influence plus large sur les mouvements de réforme de son époque, et elle demeure liée à la région de son labeur épiscopal en Allemagne.
@@ -2681,8 +2671,6 @@ Norbert fonda l'abbaye de Prémontré en 1120, dont l'ordre prémontré tire son
 Pour les communautés religieuses qui suivent sa règle, comme pour l'Église tout entière, la mémoire de Norbert invite à réfléchir sur la manière dont les structures de vie commune et de prière peuvent servir, plutôt qu'entraver, un ministre pastoral efficace — préoccupation aussi actuelle pour le renouveau de la vie religieuse aujourd'hui qu'elle le fut au XIIe siècle.
 $desc$),
 ('saint-ephrem-deacon-and-doctor-of-the-church', 'Saint Éphrem, diacre et docteur de l''Église', $desc$
-La mémoire facultative de saint Éphrem, diacre et docteur de l'Église, cède la place aux textes propres du jour lorsqu'une communauté choisit de ne pas la célébrer, bien que de nombreuses communautés marquées par la tradition orientale lui accordent une attention particulière.
-
 Cette fête célèbre le don d'une théologie poétique et liturgique fait à toute l'Église par un diacre plutôt que par un prêtre ou un évêque, soulignant que le titre de docteur de l'Église tient à la profondeur de l'enseignement, non au rang de l'ordination. Les hymnes d'Éphrem, encore chantés dans les traditions liturgiques syriaques, expriment avec une beauté saisissante les mystères de l'Incarnation, de l'Eucharistie et de la place de Marie dans l'histoire du salut, lui valant le titre de « harpe de l'Esprit Saint ».
 
 Diacre de Nisibe puis d'Édesse au IVe siècle, Éphrem devint célèbre dans tout l'Orient chrétien pour ses hymnes théologiques composés contre les hérésies de son temps et en louange des sacrements. Le pape Benoît XV le déclara docteur de l'Église universelle en 1920, l'un des rares docteurs issus de la tradition syriaque, et sa mémoire fut fixée au calendrier romain pour refléter cette reconnaissance universelle d'un théologien étranger au monde latin et grec.
@@ -2690,8 +2678,6 @@ Diacre de Nisibe puis d'Édesse au IVe siècle, Éphrem devint célèbre dans to
 La fête d'Éphrem invite aujourd'hui l'Église latine à puiser dans les richesses de la théologie chrétienne orientale et à reconnaître dans la théologie chantée et poétique un véhicule légitime et puissant de la doctrine — rappel particulièrement précieux, dans le dialogue œcuménique avec les Églises syriaques, que l'autorité doctrinale authentique ne se limite pas à une seule famille liturgique.
 $desc$),
 ('saint-barnabas-apostle', 'Saint Barnabé, apôtre', $desc$
-La mémoire obligatoire de saint Barnabé, apôtre, se célèbre en vêtements rouges, selon la tradition qui honore les apôtres de la couleur du témoignage du sang, même lorsque, comme pour Barnabé, les circonstances de la mort ne sont pas expressement attestées par l'Écriture.
-
 Bien qu'il ne fasse pas partie des Douze, Barnabé est honoré du titre d'« apôtre » en raison de sa mission directe reçue de l'Esprit Saint pour le travail missionnaire aux côtés de Paul, rapportée dans les Actes des Apôtres. La fête célèbre son rôle de médiateur et d'encourageur au sein de l'Église naissante — présentant Paul converti aux apôtres méfiants de Jérusalem, puis collaborant avec lui lors des premiers voyages missionnaires qui portèrent l'Évangile au-delà de la Judée.
 
 La tradition ancienne, notamment les Actes apocryphes de Barnabé, le rattache à Chypre, où il est vénéré comme fondateur de l'Église locale, et sa commémoration est attestée dès les premiers siècles de la pratique liturgique chrétienne, en Orient comme en Occident. Sa mémoire est demeurée fixe au calendrier romain à travers toutes les grandes révisions, reflétant son importance scripturaire comme compagnon de Paul et figure apostolique nommée du Nouveau Testament.
@@ -2699,8 +2685,6 @@ La tradition ancienne, notamment les Actes apocryphes de Barnabé, le rattache �
 La fête honore aujourd'hui le ministre de l'encouragement (Barnabé signifie « fils de l'encouragement ») et de la réconciliation au sein de la communauté chrétienne, et rappelle que la mission apostolique dépend souvent de ceux qui bâtissent des ponts de confiance entre les nouveaux convertis et l'Église tout entière.
 $desc$),
 ('saint-anthony-of-padua-priest-and-doctor-of-the-church', 'Saint Antoine de Padoue, prêtre et docteur de l''Église', $desc$
-La mémoire obligatoire de saint Antoine de Padoue, prêtre et docteur de l'Église, compte parmi les mémoires les plus largement célébrées de l'année dans de nombreux pays, souvent marquée par des dévotions particulières telles que la bénédiction du pain ou des lys.
-
 Cette fête célèbre un frère franciscain réputé pour la clarté et la ferveur évangélique de sa prédication, ainsi que pour son exposition profonde et accessible de l'Écriture, qui lui valut le titre de Docteur évangélique. Sur le plan liturgique, elle honore la vocation du prédicateur qui unit une science profonde à une simplicité pastorale, rendant l'Évangile intelligible et vivant aussi bien pour les fidèles ordinaires que pour les savants.
 
 Ancien chanoine augustinien devenu franciscain et l'un des premiers disciples les plus doués de saint François, Antoine mourut en 1231 et fut canonisé l'année suivante, l'une des canonisations les plus rapides de l'histoire de l'Église, signe de la dévotion populaire immédiate et massive qu'il suscita. Le pape Pie XII le proclama docteur de l'Église en 1946, et sa fête est demeurée fixée au 13 juin, jour de sa mort, à travers toutes les réformes du calendrier.
@@ -2708,8 +2692,6 @@ Ancien chanoine augustinien devenu franciscain et l'un des premiers disciples le
 La mémoire d'Antoine garde aujourd'hui une immense vitalité pastorale, en particulier à travers les dévotions populaires liées à la recherche de ce qui est perdu — objets matériels, mais plus profondément foi ou direction perdues — faisant de lui l'un des intercesseurs les plus aimés de la vie dévotionnelle de l'Église universelle.
 $desc$),
 ('saint-romuald-abbot', 'Saint Romuald, abbé', $desc$
-La mémoire facultative de saint Romuald, abbé, observance facultative, est laissée à la discrétion locale ou communautaire, bien qu'elle revête une importance particulière pour les communautés monastiques de tradition camaldule.
-
 Cette fête honore un réformateur monastique dont la vie chercha à retrouver la rigueur et la solitude des anciens Pères du désert dans un cadre cénobitique structuré, unissant le retrait érémitique à la discipline monastique communautaire. Sur le plan théologique, elle célèbre la valeur permanente de la vie contemplative et de l'ascèse comme chemin de conversion radicale, et la confiance de l'Église que ce retrait du monde sert, plutôt qu'il n'abandonne, la communauté plus large des croyants.
 
 Romuald fonda de nombreux ermitages et monastères en Italie à la fin du Xe et au début du XIe siècle, en particulier l'ermitage de Camaldoli, dont la congrégation bénédictine camaldule tire son nom et son mélange caractéristique de vie érémitique et cénobitique. Sa mémoire entra au calendrier général en reconnaissance de cette contribution durable à la diversité des formes monastiques au sein de la famille bénédictine.
@@ -2717,8 +2699,6 @@ Romuald fonda de nombreux ermitages et monastères en Italie à la fin du Xe et 
 La fête de Romuald parle aujourd'hui à une Église attentive au renouveau des vocations contemplatives et à la soif humaine de silence et de solitude dans une culture d'activité et de bruit constants, offrant sa synthèse de solitude et de communauté comme un modèle encore vécu dans les maisons camaldules du monde entier.
 $desc$),
 ('saint-aloysius-gonzaga-religious', 'Saint Louis de Gonzague, religieux', $desc$
-La mémoire obligatoire de saint Louis de Gonzague, religieux, honore un saint dont le patronage de la jeunesse et des étudiants en a fait depuis longtemps une référence pour les écoles et universités catholiques.
-
 Cette célébration honore un jeune religieux dont la vie brève fut marquée par un renoncement radical au rang et aux privilèges mondains pour la vie consacrée, et par une pureté d'intention et une charité qui le menèrent à se donner au service des victimes de la peste. La fête célèbre la sainteté de la jeunesse comme une vocation pleine et sérieuse en elle-même, non une simple étape préparatoire, et met en lumière la charité qui se sacrifie, jusqu'au don de sa propre vie, comme le fruit d'une consecration authentique.
 
 Membre de la Compagnie de Jésus qui renonça à son héritage de marquis pour embrasser la pauvreté religieuse, Louis de Gonzague mourut en 1591 à l'âge de vingt-trois ans après avoir contracté une maladie en soignant les victimes de la peste à Rome. Il fut canonisé en 1726 puis déclaré patron de la jeunesse catholique par le pape Pie XI, sa fête étant maintenue comme obligatoire au calendrier romain général en reconnaissance de ce patronage durable.
@@ -2726,8 +2706,6 @@ Membre de la Compagnie de Jésus qui renonça à son héritage de marquis pour e
 Cette mémoire revêt une portée pastorale particulière pour les jeunes et ceux qui les accompagnent, offrant l'exemple de la manière dont les épreuves ordinaires de l'adolescence — ambition, attentes familiales, maîtrise de soi — peuvent être transfigurées par la grâce en un chemin de charité héroïque et de sainteté.
 $desc$),
 ('saint-paulinus-of-nola-bishop', 'Saint Paulin de Nole, évêque', $desc$
-Dans le calendrier romain général, la mémoire facultative de saint Paulin de Nole, évêque, partage sa date, le 22 juin, avec la mémoire facultative des saints Jean Fisher et Thomas More ; là où les deux sont facultatives, le célébrant ou la communauté peut choisir entre elles.
-
 La fête célèbre un évêque-poète dont la conversion, d'une vie de richesse, d'accomplissement littéraire et de charge publique vers une simplicité évangélique radicale, illustre l'appel évangélique au détachement comme condition d'un authentique disciplat. Sur le plan liturgique, la mémoire met en lumière la sanctification de la culture et des arts mis au service de la foi, puisque Paulin continua d'écrire de la poésie après sa conversion, désormais tournée vers la louange du Christ et des saints plutôt que vers l'ambition mondaine.
 
 Aristocrate romain et poète latin célèbre, ami et correspondant des saints Augustin, Jérôme et Martin de Tours, Paulin renonça à sa fortune considérable, fut ordonné prêtre, puis devint évêque de Nole en Campanie, où il mourut vers 431. Sa mémoire fut longtemps célébrée dans la région de Nole et entra dans le calendrier romain plus large en reconnaissance de sa signification plus vaste comme figure de pont entre culture classique et ascétisme chrétien.
@@ -2735,8 +2713,6 @@ Aristocrate romain et poète latin célèbre, ami et correspondant des saints Au
 La fête de Paulin parle aujourd'hui à ceux qui doivent discerner comment mettre talent, richesse et rang social au service de l'Évangile plutôt que de l'avancement personnel, offrant un exemple historiquement concret de conversion qui n'exigea pas d'abandonner les dons reçus, mais de les réorienter entièrement vers Dieu.
 $desc$),
 ('saints-john-fisher-bishop-and-thomas-more-martyrs', 'Saints Jean Fisher, évêque, et Thomas More, martyrs', $desc$
-La mémoire facultative des saints Jean Fisher, évêque, et Thomas More, martyrs, se revêt de rouge, couleur du martyre, et partage sa date, le 22 juin, avec la mémoire facultative de saint Paulin de Nole dans le calendrier romain général.
-
 La fête honore deux martyrs anglais, un évêque et un laïc, tous deux mis à mort pour avoir refusé de reconnaître la prétention du roi à la suprématie sur l'Église, refus fondé sur la fidélité à l'unité de l'Église sous le Siège romain. Sur le plan théologique, la mémoire célèbre la primauté de la conscience formée par la foi sur le pouvoir politique, et unit le témoignage des vocations ordonnée et laïque en un seul acte de fidélité jusqu'à la mort.
 
 Jean Fisher, évêque de Rochester, et Thomas More, ancien grand chancelier d'Angleterre, furent exécutés à quelques semaines d'intervalle en 1535 sous Henri VIII pour leur opposition à l'Acte de Suprématie. Canonisés ensemble par le pape Pie XI en 1935, au quatrième centenaire de leur mort, leur mémoire conjointe fut ensuite ajoutée au calendrier romain général, unissant un évêque et un homme d'État comme compagnons de martyre.
@@ -2744,7 +2720,7 @@ Jean Fisher, évêque de Rochester, et Thomas More, ancien grand chancelier d'An
 Leur fête garde une forte résonance contemporaine partout où les croyants subissent la pression de subordonner conscience et foi à l'autorité de l'État, et Thomas More en particulier est largement invoqué comme patron des hommes d'État, des juristes et des responsables politiques appelés à l'intégrité dans la vie publique.
 $desc$),
 ('the-nativity-of-saint-john-the-baptist', 'Nativité de saint Jean-Baptiste', $desc$
-La Solennité de la Nativité de saint Jean-Baptiste compte parmi les plus hauts degrés de la célébration liturgique, l'une des trois seules naissances conservées dans le calendrier romain (avec celles du Christ et de Marie), et elle se revêt de blanc, couleur de la joie et de la fête.
+La Solennité de la Nativité de saint Jean-Baptiste compte parmi les plus hauts degrés de la célébration liturgique, l'une des trois seules naissances conservées dans le calendrier romain (avec celles du Christ et de Marie).
 
 La solennité célèbre la naissance du dernier et du plus grand des prophètes, dont la propre conception et naissance furent marquées par une intervention divine et dont la mission fut entièrement orientée vers la préparation du chemin du Christ. Son placement six mois avant Noël reflète la propre chronologie de l'Évangile de Luc et porte un symbolisme théologique profond, lié depuis l'Antiquité aux paroles de Jean lui-même, « il faut qu'il croisse et que moi je diminue » — historiquement lié au tournant du soleil vers des jours plus courts après le solstice d'été, tout comme Noël est lié au retour du soleil après le solstice d'hiver.
 
@@ -2753,8 +2729,6 @@ La fête est d'origine ancienne, attestée en Orient comme en Occident dès le I
 La solennité continue d'attirer une immense dévotion populaire, particulièrement dans les cultures où subsistent les traditions de la Saint-Jean d'été (feux et bénédictions des eaux), et elle offre à l'Église une occasion annuelle de réfléchir sur la vocation du précurseur : désigner au-delà de soi-même le Christ, diminuant afin qu'il croisse.
 $desc$),
 ('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'Saint Cyrille d''Alexandrie, évêque et docteur de l''Église', $desc$
-La mémoire facultative de saint Cyrille d'Alexandrie, évêque et docteur de l'Église, a son observance laissée à la discrétion locale conformément à son rang.
-
 La fête honore le principal architecte théologique de la défense par l'Église de la véritable union des natures divine et humaine dans le Christ, et du titre de Marie Théotokos, Mère de Dieu, contre l'enseignement de Nestorius. La mémoire célèbre la revendication de la christologie orthodoxe à un moment charnière de l'histoire doctrinale, affirmant que l'unité même de la personne du Christ est inséparable de l'honneur dû à sa Mère.
 
 Patriarche d'Alexandrie au début du Ve siècle, Cyrille présida le concile d'Éphèse en 431, qui condamna le nestorianisme et proclama formellement le titre de Théotokos, décision d'une importance durable tant pour la christologie que pour la doctrine mariale. Déclaré docteur de l'Église par le pape Léon XIII en 1882, sa mémoire entra au calendrier romain en reconnaissance de cette contribution théologique fondatrice, encore citée dans les définitions christologiques ultérieures, y compris Chalcédoine.
@@ -2762,8 +2736,6 @@ Patriarche d'Alexandrie au début du Ve siècle, Cyrille présida le concile d'�
 La fête de Cyrille demeure aujourd'hui significative pour le dialogue œcuménique avec les Églises orthodoxes orientales, pour lesquelles il est une autorité considérable, et elle rappelle à toute l'Église que le langage théologique précis sur l'identité du Christ n'est jamais une question purement académique, mais touche directement à la réalité même du salut.
 $desc$),
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Saint Irénée, évêque, martyr et docteur de l''Église', $desc$
-Dans le calendrier romain général, la mémoire obligatoire de saint Irénée, évêque, martyr et docteur de l'Église, tombe à la veille de la solennité des saints Pierre et Paul, proximité qui situe son témoignage à la tradition apostolique juste avant la principale célébration par l'Église de ses fondations apostoliques. La mémoire se célèbre en rouge, reflétant sa vénération traditionnelle comme martyr.
-
 La fête honore le grand défenseur du IIe siècle de la tradition apostolique contre le gnosticisme, dont l'intuition théologique centrale — que l'unité et la vérité de l'Église sont garanties par une succession ininterrompue depuis les apôtres — demeure fondatrice pour l'ecclésiologie catholique. Son titre de « docteur de l'unité », conféré par le pape François en 2022, célèbre son labeur de toute une vie pour démontrer la cohérence de la « règle de foi » reçue des apôtres contre ceux qui la fragmentaient par des spéculations ésotériques.
 
 Disciple de Polycarpe, qui lui-même avait connu l'apôtre Jean, Irénée devint évêque de Lyon et écrivit Contre les hérésies, l'une des œuvres théologiques les plus importantes de l'Église ancienne. Longtemps vénéré comme martyr, bien que les preuves historiques des circonstances de sa mort soient moins certaines que pour d'autres témoins anciens, son titre de docteur fut formellement proclamé par le pape François dans la lettre apostolique Fidei Scriniarium, reflétant une appréciation renouvelée de sa portée œcuménique comme pont entre les traditions théologiques d'Orient et d'Occident.
@@ -2771,7 +2743,7 @@ Disciple de Polycarpe, qui lui-même avait connu l'apôtre Jean, Irénée devint
 La fête d'Irénée parle aujourd'hui avec force à une Église engagée dans le dialogue œcuménique et affrontant de nouvelles formes de fragmentation doctrinale, offrant sa vision de l'unité enracinée dans la tradition apostolique comme modèle pour maintenir la communion dans la diversité.
 $desc$),
 ('saints-peter-and-paul-apostles', 'Saints Pierre et Paul, apôtres', $desc$
-La Solennité des saints Pierre et Paul compte parmi les plus anciennes et les plus importantes célébrations du calendrier romain, observée en ornements rouges en l'honneur du martyre des apôtres, et traditionnellement avec une messe de vigile la veille au soir.
+La Solennité des saints Pierre et Paul compte parmi les plus anciennes et les plus importantes célébrations du calendrier romain, traditionnellement accompagnée d'une messe de vigile la veille au soir.
 
 La solennité célèbre les deux fondations jumelles de l'Église de Rome — Pierre, à qui furent données les clefs du royaume et confié le ministre de confirmer ses frères dans la foi, et Paul, apôtre des nations et théologien missionnaire prééminent — les honorant conjointement comme des piliers complémentaires d'une seule Église apostolique, plutôt qu'en concurrence l'un avec l'autre. Elle affirme l'unité de la mission de l'Église envers les circoncis et les nations, et l'enracinement du ministre pétrinien dans le témoignage partagé du martyre des deux apôtres à Rome.
 
@@ -2780,8 +2752,6 @@ La fête conjointe est attestée dès les premiers siècles du christianisme rom
 La fête garde une immense signification ecclésiale comme le jour où les nouveaux archevêques métropolitains reçoivent traditionnellement le pallium du pape à Rome, symbolisant leur communion avec le Siège de Pierre, et elle demeure chaque année une occasion privilégiée pour toute l'Église de réfléchir sur les dons complémentaires d'autorité et de mission qui soutiennent son unité.
 $desc$),
 ('the-first-martyrs-of-holy-roman-church', 'Les premiers martyrs de la sainte Église de Rome', $desc$
-Dans le calendrier romain général, la mémoire facultative des premiers martyrs de la sainte Église de Rome tombe le lendemain de la solennité des saints Pierre et Paul, formant une sorte de prolongement, à la manière d'une octave, de la commémoration du martyre romain de cette solennité, et se célèbre en rouge.
-
 La mémoire honore l'immense multitude, en grande partie anonyme, de chrétiens romains mis à mort sous Néron en l'an 64, la première grande vague de persécution subie par l'Église à Rome, distincte quoique étroitement liée aux martyres mêmes de Pierre et de Paul. Sur le plan théologique, la fête affirme que le fondement de l'Église à Rome ne repose pas seulement sur ses princes des apôtres, mais sur le sacrifice collectif de toute une communauté de fidèles.
 
 La persécution est rapportée par l'historien romain Tacite, qui décrit l'utilisation par Néron des chrétiens comme boucs émissaires du grand incendie de Rome, les soumettant à des exécutions publiques atroces ; l'Église a gardé leur mémoire depuis l'Antiquité, bien que la fête, sous sa forme et sa date actuelles, ait été placée au calendrier pour compléter, dans les jours suivant immédiatement, la solennité des deux princes des apôtres.
