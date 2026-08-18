@@ -128,3 +128,5 @@ Le lundi après le Baptême n'est pas forcément "Monday of the 2nd Week".
 
 C'est bien :
 Monday of the First Week in Ordinary Time
+
++++ need add after ash thrusday friday saturday

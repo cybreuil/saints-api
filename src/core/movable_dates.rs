@@ -466,7 +466,6 @@ pub fn immaculate_conception(year: i32) -> NaiveDate {
 /// - Eastertide:    Weeks 1–7 (Pentecost excluded)
 /// - Ordinary Time: Weeks 2–34
 pub fn week_number_in_season(date: NaiveDate, year: i32, config: LiturgicalConfig) -> Option<u32> {
-    let first_sunday_after_baptism = first_sunday_after_baptism(year, config);
     let easter = easter_sunday(year, config);
     let advent = first_advent_sunday(year);
 
@@ -500,17 +499,24 @@ pub fn week_number_in_season(date: NaiveDate, year: i32, config: LiturgicalConfi
     }
 
     // ── ORDINARY TIME (Part I) ────────────────────────────────────────────────
-    // From the Sunday after the Baptism of the Lord until Ash Wednesday.
-    // The week number is determined by the preceding Sunday.
-    let first_ot1 = first_sunday_after_baptism;
+    // From the day after the Baptism of the Lord (weekdays) up to the Sunday before Ash Wednesday.
+    // Week 1 comprises the days between the Baptism and the following Sunday; that Sunday is Week 2.
+    // We determine the liturgical week by normalizing to the Sunday that starts the liturgical week.
+    let baptism = baptism_of_the_lord(year, config);
+    let first_ot1_start_day = baptism + Duration::days(1);
     let last_ot1 = offset(first_lent, -1);
 
-    if date >= first_ot1 && date <= last_ot1 {
+    if date >= first_ot1_start_day && date <= last_ot1 {
+        // Sunday that starts the week containing the first OT day
+        let start_sunday = first_ot1_start_day
+            - Duration::days(first_ot1_start_day.weekday().num_days_from_sunday() as i64);
+
+        // Normalize current date to the Sunday starting its liturgical week
         let sunday = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
 
-        let weeks_from_start = ((sunday - first_ot1).num_days() / 7) as u32;
+        let weeks_from_start = ((sunday - start_sunday).num_days() / 7) as u32;
 
-        return Some(2 + weeks_from_start);
+        return Some(1 + weeks_from_start);
     }
 
     // ── ORDINARY TIME (Part II) ────────────────────────────────────────────────
