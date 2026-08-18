@@ -7086,7 +7086,7 @@ INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, m
 SELECT f.id, c.id, r.id, lc.id, 'movable', 'SUNDAY_WITHIN_CHRISTMAS_OCTAVE_OR_DEC30', 0, 'normal', FALSE, 'Wikipedia movable'
 FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
-JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'FEAST'
+JOIN liturgical_ranks r ON r.calendar_id = c.id AND r.code = 'SUNDAY_ORDINARY'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-holy-family-of-jesus-mary-and-joseph'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
