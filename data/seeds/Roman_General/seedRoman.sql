@@ -7288,52 +7288,244 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', x.name, NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('easter-sunday-of-the-resurrection-of-the-lord', 'Easter Sunday of the Resurrection of the Lord'),
-('monday-in-the-octave-of-easter', 'Monday in the Octave of Easter'),
-('tuesday-in-the-octave-of-easter', 'Tuesday in the Octave of Easter'),
-('wednesday-in-the-octave-of-easter', 'Wednesday in the Octave of Easter'),
-('thursday-in-the-octave-of-easter', 'Thursday in the Octave of Easter'),
-('friday-in-the-octave-of-easter', 'Friday in the Octave of Easter'),
-('saturday-in-the-octave-of-easter', 'Saturday in the Octave of Easter'),
-('second-sunday-of-easter-divine-mercy-sunday', 'Second Sunday of Easter (Divine Mercy Sunday)')
-) AS x(slug, name)
+('easter-sunday-of-the-resurrection-of-the-lord', 'Easter Sunday of the Resurrection of the Lord', $desc$
+Easter Sunday of the Resurrection of the Lord is the primordial Christian feast, celebrated from apostolic times as the Pascha of the new covenant. Its date was the subject of early controversy until the Council of Nicaea established the common principle that Easter be kept on the Sunday after the paschal full moon, and every subsequent Roman reform has treated this day as the immovable center of the movable year. The calendar revision of 1969 preserved that centrality while situating Easter Sunday more explicitly within the restored Paschal Triduum and the full fifty days of Paschaltide.
+
+Theologically, Easter is not merely the memory of Jesus' rising but the Church's sacramental entry into the victory by which death is conquered, sin is judged, and creation begins anew. The resurrection vindicates the Lord's person and mission, reveals the Cross as saving obedience rather than defeat, and grounds every doctrine of grace, justification, and future bodily resurrection. From this day all Christian hope, all sacramental life, and all preaching receive their light.
+
+Its liturgical character is unique: the Roman tradition calls it the solemnity of solemnities, the first day of the new creation, and the fountain from which the octave and the whole Easter season flow. White vesture, the renewal of baptismal consciousness, the frequent use of the Alleluia, and the precedence of this Sunday over every other observance all express that the Church is living from one incomparable event.
+
+For the faithful today, Easter Sunday is the annual measure of Christian realism. It summons believers to resist both despair and superficial optimism, because the resurrection announces a victory already won yet still unfolding in history, and it sends the baptized back into the world as witnesses that death does not have the final word.
+$desc$),
+('monday-in-the-octave-of-easter', 'Monday in the Octave of Easter', $desc$
+Monday in the Octave of Easter belongs to the ancient eight-day prolongation by which the Church treats the one Easter mystery as too great for a single day. In the Roman tradition the entire octave came to share the dignity of the feast itself, and the postconciliar reform preserved that structure by ranking each day as a solemnity of the Lord. The 1969 calendar thus reaffirmed that the Church does not depart at once from Easter morning, but remains within its first astonishment.
+
+The Gospel of this day recounts the women leaving the tomb, receiving the angelic message, and meeting the risen Christ as they hurry to tell the disciples. Their fear becomes proclamation, and the theology of the day centers on resurrection faith as something received in encounter and immediately entrusted as mission. The first heralds of Easter are sent not because they understand everything, but because the Lord has placed his joy upon them.
+
+Liturgically, Monday of the Octave stands within the white brightness of the Church's highest festal week. It continues the baptismal and eucharistic momentum of Easter Day, keeps the Gloria and Alleluia in their paschal force, and does not function as an ordinary feria, because the whole octave is one extended solemn celebration of the resurrection.
+
+Pastorally, this day reminds the faithful that Easter joy is not static contemplation alone; it becomes testimony. The women at the tomb model a discipleship that moves quickly from grief to obedience, inviting Christians to let the resurrection transform them into messengers of hope for others.
+$desc$),
+('tuesday-in-the-octave-of-easter', 'Tuesday in the Octave of Easter', $desc$
+Tuesday in the Octave of Easter continues a liturgical arrangement of very ancient pedigree, in which the paschal feast unfolds across eight privileged days as one single act of praise. The reform of the Roman calendar after the Second Vatican Council retained this octaval theology intact, refusing to reduce the resurrection to an isolated commemoration. Each day of the octave therefore shares in Easter's solemn rank and serves mystagogical deepening for the newly baptized and for the whole Church.
+
+Its Gospel presents Mary Magdalene at the tomb, weeping until the risen Lord calls her by name. The day's theology turns on recognition born from love: resurrection is not grasped merely by evidence, but by the Shepherd's voice that reconstitutes personal communion after the darkness of the Passion. Mary becomes apostola apostolorum because Easter restores both memory and mission in a single encounter.
+
+Within the liturgy, this Tuesday remains fully Easter rather than a return to ordinary sequence. White vesture, paschal chant, and the continuing solemnity of the octave place the assembly in the atmosphere of the garden where sorrow gives way to faith, and the day stands near the heart of the week as a witness that the resurrection addresses persons concretely and by name.
+
+For contemporary believers, Mary Magdalene's tears and recognition are pastorally decisive. The day speaks to those who seek Christ through confusion or grief, assuring them that the risen Lord is not an abstraction of doctrine alone but the living One who still calls disciples personally into restored communion and apostolic witness.
+$desc$),
+('wednesday-in-the-octave-of-easter', 'Wednesday in the Octave of Easter', $desc$
+Wednesday in the Octave of Easter stands within the oldest and most cherished octaval structure of the Roman year, a deliberate continuation of the paschal solemnity through an entire week. The postconciliar reform left this arrangement substantially untouched because it expressed something fundamental: Easter cannot be contained within one sunrise but reverberates through the Church's prayer as a single luminous week. Historically, these octave days were also prime moments of mystagogy for the neophytes newly clothed in baptismal grace.
+
+The Gospel traditionally proclaims the journey to Emmaus, where the disciples come to know the risen Christ in the opening of the Scriptures and the breaking of the bread. The day therefore bears a deeply ecclesial theology: the resurrection is recognized in the unity of word and sacrament, and the disappointed disciple becomes a missionary once Christ interprets suffering as ordered to glory. The Lord walks with the Church before she knows how near he is.
+
+Its liturgical character bridges Easter joy and catechesis. Still marked with the full festal dignity of the octave and clothed in white, the day reveals how the Church's assembly is itself shaped by the risen Christ's pattern: listening, blessing, breaking, recognizing, and returning in witness. Thus it belongs not only to memory but to the ongoing form of Christian worship.
+
+Pastorally, Wednesday in the Octave of Easter offers enduring consolation to Christians who find their expectations shattered. It teaches that the risen Lord often meets believers on the road of confusion, instructs them patiently through Scripture, and turns their hearts from discouragement to mission by making himself known in the Eucharistic mystery.
+$desc$),
+('thursday-in-the-octave-of-easter', 'Thursday in the Octave of Easter', $desc$
+Thursday in the Octave of Easter continues the Church's ancient practice of treating the whole week after Easter as one prolonged solemnity. The Roman books, both before and after the reform of 1969, give these days a privileged status that reflects the inexhaustible density of the resurrection mystery. Far from being a mere echo of Sunday, the day belongs to the Church's ordered contemplation of successive resurrection appearances.
+
+The Gospel shows the risen Christ standing among the disciples, offering peace, inviting them to see his hands and feet, and opening their minds to understand the Scriptures. Its theology is therefore strongly incarnational and apologetic in the noblest sense: the resurrection is no disembodied survival, but the glorified continuity of the crucified Lord whose wounds remain eloquent. Peace flows from the Passion transfigured, and mission arises from minds opened by divine teaching.
+
+Liturgically this Thursday shines with paschal white and the solemn cadence proper to the octave, yet it also has a catechetical firmness. It stands within the same festal current as Easter Day while pressing the Church to confess bodily resurrection, apostolic witness, and the scriptural unity of God's saving plan from Moses and the Prophets to Christ's Passover.
+
+For the faithful, the day is especially important in an age tempted either to sentimentalize resurrection or to reduce it to metaphor. Thursday in the Octave of Easter teaches Christians to profess a risen Lord who is real, wounded, glorified, and present, and it invites them to receive his peace without severing it from the Cross through which it came.
+$desc$),
+('friday-in-the-octave-of-easter', 'Friday in the Octave of Easter', $desc$
+Friday in the Octave of Easter belongs to the week that the Roman tradition holds as a single uninterrupted solemn rejoicing in the resurrection. Even Friday, ordinarily marked by penitential memory of the Passion, is here transfigured by the paschal victory; the ancient discipline of abstinence is not applied because the octave itself has the rank of a solemnity. The postconciliar calendar deliberately maintained this privileged treatment to show that Easter joy encompasses and interprets the wounds of Good Friday.
+
+Its Gospel recounts the appearance by the Sea of Tiberias, the miraculous catch, and the meal prepared by the risen Lord. The theology of the day unites resurrection, mission, and Eucharistic resonance: the crucified and risen Christ gathers his disciples again, provides what they cannot secure by themselves, and reveals that apostolic fruitfulness depends upon obedience to his word. The charcoal fire by the shore quietly begins the restoration of Peter and the renewal of the Church's mission.
+
+Liturgically, this Friday keeps white vesture and the full dignity of the octave, which prevents the day from collapsing back into ordinary Friday austerity. Situated late in the week, it gives the paschal celebration a missionary and ecclesial horizon, showing that resurrection joy naturally ripens into apostolic labor under the Lord's direction.
+
+Pastorally, the day comforts Christians who know the emptiness of labor without grace. It teaches that the risen Christ still meets the Church at the edge of her failed efforts, feeds her, commands her, and turns barren nets into abundance, so that ministry and daily work alike may be received as participation in his living action.
+$desc$),
+('saturday-in-the-octave-of-easter', 'Saturday in the Octave of Easter', $desc$
+Saturday in the Octave of Easter completes the ancient week in which the Church prolongs the one paschal solemnity through eight days of unbroken festal praise. In Roman usage this day historically belonged to the final mystagogical instruction of the newly baptized, and the modern calendar preserves its solemn character unchanged. The octave's close does not diminish Easter, but gathers the week's witnesses into a more mature confession before the Fifty Days continue.
+
+The Gospel of the day proclaims Christ's rebuke of unbelief and his sending of the disciples to preach the Gospel to the whole creation. Theologically, the day marks the transition from astonishment to apostolic commission: resurrection faith cannot remain enclosed among private experiences but must become universal proclamation. The risen Lord forms a missionary Church precisely by healing the slowness of heart that first resisted belief.
+
+Liturgically, this Saturday remains clothed in white and shares the octave's full festal rank, yet it also has a threshold quality, standing between the intense concentration of Easter Week and the broader unfolding of Paschaltide. As the octave nears its completion, the Church prays with the confidence that the same Lord who appeared to the Eleven now governs the mission that extends to the nations.
+
+Pastorally, the day calls believers beyond passive admiration of Easter mysteries. It urges the faithful to let the resurrection judge their hesitations, widen their horizons, and impel them toward evangelization, whether in explicit preaching, patient witness, or renewed fidelity in the ordinary places where Christ's Gospel must be heard.
+$desc$),
+('second-sunday-of-easter-divine-mercy-sunday', 'Second Sunday of Easter (Divine Mercy Sunday)', $desc$
+The Second Sunday of Easter closes the octave and has long held a distinctive place in the Roman tradition as Dominica in albis, the Sunday on which the newly baptized laid aside their white garments. The 1969 calendar preserved it as the octave day of Easter, and in 2000 Saint John Paul II officially attached to it the title Divine Mercy Sunday, confirming a pastoral emphasis that had grown from the revelations associated with Saint Faustina Kowalska while leaving the ancient paschal structure untouched. Thus the day joins venerable baptismal tradition to a modern articulation of the mercy flowing from the risen Christ.
+
+Its Gospel is John 20, with Christ bestowing peace, the Spirit, and the power to forgive sins, and then meeting Thomas in his unbelief. The theology of the day is therefore exquisitely paschal: the wounds remain in the glorified body, mercy becomes sacramental in the Church's ministry of reconciliation, and faith moves from sight to the confession, "My Lord and my God." Divine Mercy is not an added theme extrinsic to Easter; it is Easter read through the open side of the risen Crucified One.
+
+Liturgically, the day is both Sunday and octave day, retaining the highest Easter dignity in white vesture and concluding the privileged eight-day celebration. It stands at the hinge between the concentrated octave and the continuing Easter season, and its baptismal, penitential, and ecclesial accents make it one of the most theologically integrated Sundays of the year.
+
+For the faithful today, this Sunday offers a needed school of trust. It addresses doubters, penitents, and the wounded alike, inviting them to approach the risen Christ not in fear but in confidence that the Church's sacraments, especially Penance and the Eucharist, communicate the mercy that flows from his victorious Passion.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- FR translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', x.name, NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('easter-sunday-of-the-resurrection-of-the-lord', 'Dimanche de Pâques de la Résurrection du Seigneur'),
-('monday-in-the-octave-of-easter', 'Lundi dans l''Octave de Pâques'),
-('tuesday-in-the-octave-of-easter', 'Mardi dans l''Octave de Pâques'),
-('wednesday-in-the-octave-of-easter', 'Mercredi dans l''Octave de Pâques'),
-('thursday-in-the-octave-of-easter', 'Jeudi dans l''Octave de Pâques'),
-('friday-in-the-octave-of-easter', 'Vendredi dans l''Octave de Pâques'),
-('saturday-in-the-octave-of-easter', 'Samedi dans l''Octave de Pâques'),
-('second-sunday-of-easter-divine-mercy-sunday', 'Deuxième dimanche de Pâques (Dimanche de la Divine Miséricorde)')
-) AS x(slug, name)
+('easter-sunday-of-the-resurrection-of-the-lord', 'Dimanche de Pâques de la Résurrection du Seigneur', $desc$
+Le Dimanche de Pâques de la Résurrection du Seigneur est la fête chrétienne primordiale, célébrée dès l'époque apostolique comme la Pâque de l'Alliance nouvelle. Sa date fut l'objet de controverses anciennes jusqu'à ce que le concile de Nicée fixe le principe commun selon lequel Pâques serait célébrée le dimanche suivant la pleine lune pascale; toutes les réformes romaines ultérieures ont traité ce jour comme le centre immuable de l'année mobile. La révision du calendrier en 1969 a maintenu cette centralité tout en situant plus explicitement Pâques dans le Triduum pascal restauré et dans l'ensemble des cinquante jours.
+
+Théologiquement, Pâques n'est pas seulement le souvenir du relèvement de Jésus, mais l'entrée sacramentelle de l'Église dans la victoire où la mort est vaincue, le péché jugé et la création recommencée. La résurrection authentifie la personne et la mission du Seigneur, manifeste que la Croix est obéissance salvifique et non défaite, et fonde toute doctrine de la grâce, de la justification et de la résurrection future des corps. De ce jour procèdent la lumière de toute espérance chrétienne, de toute vie sacramentelle et de toute prédication.
+
+Son caractère liturgique est unique: la tradition romaine l'appelle la solennité des solennités, le premier jour de la création nouvelle et la source dont jaillissent l'octave et tout le temps pascal. Le blanc, le renouvellement de la conscience baptismale, l'usage insistant de l'Alléluia et la préséance absolue de ce dimanche sur toute autre célébration expriment que l'Église vit d'un événement sans égal.
+
+Pour les fidèles d'aujourd'hui, le Dimanche de Pâques demeure la mesure annuelle du réalisme chrétien. Il appelle les croyants à résister tout ensemble au désespoir et à l'optimisme superficiel, car la résurrection annonce une victoire déjà remportée mais encore en déploiement dans l'histoire, et elle renvoie les baptisés dans le monde comme témoins que la mort n'a pas le dernier mot.
+$desc$),
+('monday-in-the-octave-of-easter', 'Lundi dans l''Octave de Pâques', $desc$
+Le Lundi dans l'Octave de Pâques appartient à l'antique prolongement de huit jours par lequel l'Église traite l'unique mystère pascal comme trop grand pour être contenu en une seule journée. Dans la tradition romaine, toute l'octave a fini par partager la dignité de la fête elle-même, et la réforme postconciliaire a conservé cette structure en donnant à chacun de ses jours le rang de solennité du Seigneur. Le calendrier de 1969 a ainsi réaffirmé que l'Église ne quitte pas aussitôt le matin de Pâques, mais demeure dans son premier émerveillement.
+
+L'Évangile de ce jour raconte les femmes quittant le tombeau, recevant le message angélique et rencontrant le Ressuscité tandis qu'elles courent vers les disciples. La peur devient annonce, et la théologie du jour porte sur une foi pascale reçue dans la rencontre et aussitôt confiée comme mission. Les premières messagères de Pâques sont envoyées non parce qu'elles auraient tout compris, mais parce que le Seigneur a déposé en elles sa joie.
+
+Liturgiquement, ce lundi demeure dans l'éclat blanc de la semaine la plus festive de l'année. Il prolonge l'élan baptismal et eucharistique du jour de Pâques, maintient le Gloria et l'Alléluia dans toute leur vigueur pascale, et ne fonctionne pas comme une simple férie, puisque toute l'octave constitue une unique célébration solennelle de la résurrection.
+
+Sur le plan pastoral, ce jour rappelle aux fidèles que la joie de Pâques n'est pas une contemplation immobile. Elle devient témoignage. Les femmes du tombeau offrent le modèle d'un disciple qui passe rapidement du deuil à l'obéissance, invitant les chrétiens à laisser la résurrection faire d'eux des messagers d'espérance pour les autres.
+$desc$),
+('tuesday-in-the-octave-of-easter', 'Mardi dans l''Octave de Pâques', $desc$
+Le Mardi dans l'Octave de Pâques poursuit une organisation liturgique de très ancienne origine, où la fête pascale se déploie en huit jours privilégiés comme un seul acte de louange. La réforme du calendrier romain après le Concile Vatican II a conservé intacte cette théologie de l'octave, refusant de réduire la résurrection à une commémoration isolée. Chacun des jours de l'octave participe donc au rang solennel de Pâques et sert d'approfondissement mystagogique pour les néophytes comme pour toute l'Église.
+
+Son Évangile présente Marie Madeleine au tombeau, en pleurs, jusqu'à ce que le Ressuscité l'appelle par son nom. La théologie du jour se concentre ainsi sur la reconnaissance née de l'amour: la résurrection ne se saisit pas seulement par des preuves, mais par la voix du Pasteur qui rétablit la communion personnelle après la nuit de la Passion. Marie devient l'apôtre des apôtres parce que Pâques restaure en un même moment la mémoire et la mission.
+
+Dans la liturgie, ce mardi demeure pleinement pascal et ne marque aucun retour à la séquence ordinaire. Le blanc, le chant pascal et la solennité continue de l'octave placent l'assemblée dans l'atmosphère du jardin où la tristesse cède à la foi, et le jour témoigne que la résurrection rejoint les personnes concrètement, jusque dans leur nom.
+
+Pour les croyants d'aujourd'hui, les larmes puis la reconnaissance de Marie Madeleine ont une grande portée pastorale. Le jour parle à ceux qui cherchent le Christ dans la confusion ou le deuil et leur assure que le Ressuscité n'est pas seulement un objet de doctrine, mais le Vivant qui appelle encore chacun à une communion retrouvée et à un témoignage apostolique.
+$desc$),
+('wednesday-in-the-octave-of-easter', 'Mercredi dans l''Octave de Pâques', $desc$
+Le Mercredi dans l'Octave de Pâques se situe dans la plus ancienne et la plus chère des structures octavales de l'année romaine, continuation délibérée de la solennité pascale pendant toute une semaine. La réforme postconciliaire a laissé cet arrangement presque intact, parce qu'il exprime quelque chose de fondamental: Pâques ne saurait être contenue dans un seul lever de soleil, mais résonne dans la prière de l'Église comme une semaine unique de lumière. Historiquement, ces jours d'octave furent aussi les grands jours de la mystagogie des nouveaux baptisés.
+
+L'Évangile proclame traditionnellement le chemin d'Emmaüs, où les disciples reconnaissent le Ressuscité dans l'ouverture des Écritures et dans la fraction du pain. Le jour porte donc une théologie profondément ecclésiale: la résurrection se reconnaît dans l'unité de la Parole et du sacrement, et le disciple déçu devient missionnaire lorsque le Christ interprète la souffrance comme ordonnée à la gloire. Le Seigneur marche avec l'Église avant même qu'elle sache combien il lui est proche.
+
+Son caractère liturgique fait le lien entre la joie pascale et la catéchèse. Toujours marqué par la pleine dignité festive de l'octave et revêtu de blanc, le jour montre comment l'assemblée ecclésiale elle-même est façonnée par le Ressuscité selon un rythme précis: écouter, bénir, rompre, reconnaître et revenir pour témoigner. Il ne relève donc pas seulement de la mémoire, mais de la forme permanente du culte chrétien.
+
+Pastoralement, ce mercredi apporte une consolation durable aux chrétiens dont les attentes ont été brisées. Il enseigne que le Ressuscité rejoint souvent les croyants sur la route de la confusion, les instruit patiemment par les Écritures et fait passer leur cœur du découragement à la mission en se donnant à reconnaître dans le mystère eucharistique.
+$desc$),
+('thursday-in-the-octave-of-easter', 'Jeudi dans l''Octave de Pâques', $desc$
+Le Jeudi dans l'Octave de Pâques poursuit l'antique pratique de l'Église qui traite toute la semaine suivant Pâques comme une solennité prolongée. Les livres romains, avant comme après la réforme de 1969, donnent à ces jours un statut privilégié correspondant à la densité inépuisable du mystère de la résurrection. Loin de n'être qu'un simple écho du dimanche, ce jour appartient à la contemplation ordonnée des apparitions successives du Ressuscité.
+
+L'Évangile montre le Christ ressuscité se tenant au milieu des disciples, leur offrant la paix, les invitant à voir ses mains et ses pieds, et ouvrant leur intelligence à l'Écriture. Sa théologie est donc fortement incarnatoire et apologétique au meilleur sens du terme: la résurrection n'est pas une survie désincarnée, mais la continuité glorieuse du Seigneur crucifié dont les plaies demeurent éloquentes. La paix jaillit de la Passion transfigurée, et la mission naît d'esprits ouverts par l'enseignement divin.
+
+Liturgiquement, ce jeudi resplendit du blanc pascal et de la cadence solennelle propre à l'octave, tout en gardant une fermeté catéchétique. Il demeure dans le même courant festif que le jour de Pâques tout en pressant l'Église de confesser la résurrection corporelle, le témoignage apostolique et l'unité scripturaire du dessein salvifique de Dieu depuis Moïse et les prophètes jusqu'à la Pâque du Christ.
+
+Pour les fidèles, ce jour est particulièrement important à une époque tentée soit de sentimentaliser la résurrection, soit de la réduire à une métaphore. Le Jeudi dans l'Octave de Pâques apprend aux chrétiens à professer un Seigneur ressuscité réel, blessé, glorifié et présent, et les invite à recevoir sa paix sans la séparer de la Croix dont elle procède.
+$desc$),
+('friday-in-the-octave-of-easter', 'Vendredi dans l''Octave de Pâques', $desc$
+Le Vendredi dans l'Octave de Pâques appartient à la semaine que la tradition romaine tient pour une unique joie solennelle et ininterrompue de la résurrection. Même le vendredi, ordinairement marqué par la mémoire pénitentielle de la Passion, s'y trouve transfiguré par la victoire pascale; la discipline habituelle de l'abstinence ne s'applique pas, puisque l'octave possède la dignité d'une solennité. Le calendrier postconciliaire a maintenu délibérément ce traitement privilégié pour montrer que la joie de Pâques englobe et interprète les plaies du Vendredi saint.
+
+Son Évangile raconte l'apparition au bord de la mer de Tibériade, la pêche miraculeuse et le repas préparé par le Ressuscité. La théologie du jour unit résurrection, mission et résonance eucharistique: le Christ crucifié et ressuscité rassemble de nouveau ses disciples, leur donne ce qu'ils ne peuvent obtenir par eux-mêmes et révèle que la fécondité apostolique dépend de l'obéissance à sa parole. Le feu de braise sur le rivage inaugure discrètement le relèvement de Pierre et le renouvellement de la mission de l'Église.
+
+Liturgiquement, ce vendredi garde le blanc et la pleine dignité de l'octave, ce qui l'empêche de retomber dans l'austérité ordinaire des vendredis. Situé vers la fin de la semaine, il ouvre la célébration pascale sur un horizon missionnaire et ecclésial, montrant que la joie de la résurrection mûrit naturellement en labeur apostolique sous la conduite du Seigneur.
+
+Pastoralement, ce jour console les chrétiens qui connaissent le vide d'un travail sans grâce. Il enseigne que le Ressuscité rejoint encore l'Église au bord de ses efforts infructueux, la nourrit, la commande et transforme des filets stériles en abondance, afin que ministère et travail quotidien soient reçus comme participation à son action vivante.
+$desc$),
+('saturday-in-the-octave-of-easter', 'Samedi dans l''Octave de Pâques', $desc$
+Le Samedi dans l'Octave de Pâques achève l'antique semaine durant laquelle l'Église prolonge l'unique solennité pascale par huit jours de louange ininterrompue. Dans l'usage romain, ce jour appartenait historiquement aux dernières instructions mystagogiques des nouveaux baptisés, et le calendrier moderne en a conservé sans changement le caractère solennel. La clôture de l'octave ne diminue pas Pâques, mais recueille les témoins de la semaine dans une confession plus mûre avant que les cinquante jours ne se poursuivent.
+
+L'Évangile du jour proclame la réprimande faite par le Christ à l'incrédulité des disciples et son envoi à prêcher l'Évangile à toute la création. Théologiquement, ce jour marque le passage de l'étonnement à la mission apostolique: la foi en la résurrection ne peut rester enfermée dans des expériences privées, mais doit devenir proclamation universelle. Le Ressuscité forme une Église missionnaire précisément en guérissant la lenteur de cœur qui résistait d'abord à la foi.
+
+Liturgiquement, ce samedi demeure revêtu de blanc et partage pleinement le rang de l'octave, mais il possède aussi une qualité de seuil, entre la concentration intense de la semaine de Pâques et le déploiement plus large du temps pascal. Tandis que l'octave arrive à sa plénitude, l'Église prie avec la certitude que le même Seigneur qui s'est montré aux Onze gouverne maintenant la mission étendue aux nations.
+
+Pastoralement, ce jour appelle les croyants au-delà d'une admiration passive des mystères de Pâques. Il presse les fidèles de laisser la résurrection juger leurs hésitations, élargir leurs horizons et les pousser vers l'évangélisation, qu'il s'agisse d'une prédication explicite, d'un témoignage patient ou d'une fidélité renouvelée dans les lieux ordinaires où l'Évangile doit être entendu.
+$desc$),
+('second-sunday-of-easter-divine-mercy-sunday', 'Deuxième dimanche de Pâques (Dimanche de la Divine Miséricorde)', $desc$
+Le Deuxième dimanche de Pâques clôt l'octave et tient depuis longtemps une place distinctive dans la tradition romaine comme Dominica in albis, le dimanche où les nouveaux baptisés déposaient leurs vêtements blancs. Le calendrier de 1969 l'a conservé comme huitième jour de Pâques, et en 2000 saint Jean-Paul II y a officiellement rattaché le titre de Dimanche de la Divine Miséricorde, confirmant une insistance pastorale née des révélations associées à sainte Faustine Kowalska, sans altérer l'antique structure pascale. Ainsi ce jour unit une vénérable tradition baptismale à une formulation moderne de la miséricorde jaillissant du Christ ressuscité.
+
+Son Évangile est Jean 20, où le Christ donne la paix, l'Esprit et le pouvoir de remettre les péchés, puis rencontre Thomas dans son incrédulité. La théologie du jour est donc d'une grande pureté pascale: les plaies demeurent dans le corps glorifié, la miséricorde devient sacramentelle dans le ministère de réconciliation confié à l'Église, et la foi passe de la vue à la confession: « Mon Seigneur et mon Dieu ! » La Divine Miséricorde n'est pas un thème ajouté de l'extérieur à Pâques; elle est Pâques lue à travers le côté ouvert du Crucifié ressuscité.
+
+Liturgiquement, ce jour est tout à la fois dimanche et jour octave, gardant en blanc la plus haute dignité pascale et achevant la célébration privilégiée des huit jours. Il se situe à la charnière entre l'octave concentrée et le temps pascal qui se déploie ensuite; ses accents baptismaux, pénitentiels et ecclésiaux en font l'un des dimanches les plus intégrés théologiquement de toute l'année.
+
+Pour les fidèles aujourd'hui, ce dimanche offre une école indispensable de confiance. Il s'adresse aux doutants, aux pénitents et aux blessés, les invitant à s'approcher du Christ ressuscité non dans la peur mais dans l'assurance que les sacrements de l'Église, en particulier la Pénitence et l'Eucharistie, communiquent la miséricorde qui jaillit de sa Passion victorieuse.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- LA translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('easter-sunday-of-the-resurrection-of-the-lord', 'Dominica Resurrectionis Domini'),
-('monday-in-the-octave-of-easter', 'Feria II infra Octavam Paschae'),
-('tuesday-in-the-octave-of-easter', 'Feria III infra Octavam Paschae'),
-('wednesday-in-the-octave-of-easter', 'Feria IV infra Octavam Paschae'),
-('thursday-in-the-octave-of-easter', 'Feria V infra Octavam Paschae'),
-('friday-in-the-octave-of-easter', 'Feria VI infra Octavam Paschae'),
-('saturday-in-the-octave-of-easter', 'Sabbato infra Octavam Paschae'),
-('second-sunday-of-easter-divine-mercy-sunday', 'Dominica II Paschae seu de divina Misericordia')
-) AS x(slug, name)
+('easter-sunday-of-the-resurrection-of-the-lord', 'Dominica Resurrectionis Domini', $desc$
+Dominica Resurrectionis Domini est primarium festum christianum, iam ab aetate apostolica celebratum ut Pascha novi foederis. De die eius antiqua exstiterunt controversiae, donec Concilium Nicaenum commune principium statuit quo Pascha dominica post plenilunium paschale ageretur; omnes postea Romanae reformationes hunc diem tamquam centrum immobile anni mobilis tractaverunt. Calendarii recognitio anni MCMLXIX eandem centralitatem servavit, Pascha tamen clarius intra Triduum Paschale restitutum et totos quinquaginta dies collocans.
+
+Theologice Pascha non est tantum memoria Iesu resurgentis, sed sacramentalis Ecclesiae ingressus in victoriam qua mors vincitur, peccatum iudicatur et creatio denuo incipit. Resurrectio personam et missionem Domini comprobat, Crucem ostendit esse oboedientiam salvificam non ruinam, atque fundamentum praebet omni doctrinae de gratia, iustificatione et futura corporum resurrectione. Ex hoc die lux omnis spei christianae, omnis vitae sacramentalis et omnis praedicationis manat.
+
+Indoles liturgica huius diei omnino singularis est: traditio Romana eum appellat sollemnitatem sollemnitatum, primum diem novae creationis, fontem unde octava et totum tempus paschale profluunt. Color albus, renovata conscientia baptismalis, frequens usus Alleluia et praecedentia huius dominicae supra quamlibet aliam observantiam declarant Ecclesiam ex uno incomparabili eventu vivere.
+
+Fidelibus hodiernis Dominica Paschae annua mensura realismi christiani manet. Credentes vocat ut et desperationi et levi optimismi resistant, quoniam resurrectio victoriam iam partam sed in historia adhuc explicandam nuntiat, atque baptizatos in mundum remittit tamquam testes mortem ultimam vocem non habere.
+$desc$),
+('monday-in-the-octave-of-easter', 'Feria II infra Octavam Paschae', $desc$
+Feria II infra Octavam Paschae ad antiquam octo dierum extensionem pertinet qua Ecclesia unum Paschae mysterium nimis magnum iudicat ut uno tantum die contineatur. In traditione Romana tota octava paulatim eandem dignitatem cum ipso festo participare coepit, et instauratio post Concilium Vaticanum II hanc structuram servavit, singulis diebus octavae gradum sollemnitatis Domini attribuens. Sic calendarium anni MCMLXIX iterum confirmavit Ecclesiam a mane Paschatis statim non discedere, sed in primo stupore permanere.
+
+Evangelium huius diei mulieres a sepulcro redeuntes proponit, nuntium angelicum accipientes atque ipsum Christum resuscitatum obvium habentes dum ad discipulos currunt. Timor in proclamationem convertitur, et theologia diei in fide paschali consistit quae in occursu recipitur et statim in missionem traditur. Primae Paschae praecones mittuntur non quia omnia intellexerint, sed quia Dominus gaudium suum ipsis imposuit.
+
+Liturgice haec Feria II intra albam claritatem maximae Ecclesiae hebdomadae festivae stat. Momentum baptismale et eucharisticum diei Paschatis continuat, Gloria et Alleluia in pleno robore retinet, nec uti feria ordinaria intellegi potest, quia tota octava una est prolixa et sollemnis resurrectio celebratio.
+
+Pastoraliter hic dies fideles monet gaudium paschale non esse contemplationem immobilem tantum; in testimonium vertitur. Mulieres ad sepulcrum exemplum discipulatus praebent qui cito a luctu ad oboedientiam transit, christianos invitans ut resurrectio eos spem aliis nuntiantes efficiat.
+$desc$),
+('tuesday-in-the-octave-of-easter', 'Feria III infra Octavam Paschae', $desc$
+Feria III infra Octavam Paschae continuationem praebet ordinationis liturgicae antiquissimae, qua festum paschale per octo dies privilegiatos quasi unus actus laudis explicatur. Reformatio calendarii Romani post Concilium Vaticanum II hanc theologiam octavae integram servavit, nolens resurrectionem ad commemorandum momentum solitarium redigere. Unusquisque ergo dies octavae dignitatem sollemnem Paschae participat atque mystagogicum incrementum neophytis totique Ecclesiae offert.
+
+Evangelium Mariam Magdalenam ad sepulcrum flentem exhibet, donec Resuscitatus eam nomine vocat. Theologia igitur diei recognitionem ex amore natam respicit: resurrectio non solis argumentis comprehenditur, sed voce Pastoris qui communionem personalem post Passionis noctem restituit. Maria fit apostola apostolorum, quia Pascha uno occursu simul memoriam et missionem reparat.
+
+In liturgia haec Feria III plene paschalis manet neque ad ordinem communem reditus significat. Color albus, cantus paschalis et perseverans octavae sollemnitas congregationem in horti illius atmosphaeram inducunt, ubi tristitia cedit fidei; sic dies testatur resurrectionem personas concrete et nominatim contingere.
+
+Credentibus nostri temporis lacrimae et recognitio Mariae Magdalenae magni ponderis pastoralis sunt. Dies loquitur iis qui Christum per confusionem vel luctum quaerunt, eos certiores faciens Resuscitatum non solum doctrinae obiectum esse, sed Vivum qui discipulos adhuc personaliter ad communionem restauratam et ad testimonium apostolicum vocat.
+$desc$),
+('wednesday-in-the-octave-of-easter', 'Feria IV infra Octavam Paschae', $desc$
+Feria IV infra Octavam Paschae in antiquissima et carissima structura octavali anni Romani stat, deliberata continuatione sollemnitatis paschalis per totam hebdomadam. Reformatio postconciliaris hanc dispositionem fere intactam reliquit, quia aliquid fundamentale exprimebat: Pascha intra unum solum auroram contineri non potest, sed per orationem Ecclesiae quasi una lucida hebdomada resonat. Historice etiam hi dies octavae praecipua tempora mystagogiae erant pro neophytis nuper baptizatis.
+
+Evangelium iter Emmaus tradere solet, ubi discipuli Christum resuscitatum in aperitione Scripturarum et fractione panis cognoscunt. Inde dies theologia penitus ecclesiali pollet: resurrectio in unitate verbi et sacramenti agnoscitur, atque discipulus delusus missionarius efficitur cum Christus dolorem ad gloriam ordinatum interpretatur. Dominus cum Ecclesia ambulat antequam illa intellegat quam prope sit.
+
+Indoles liturgica huius diei inter gaudium paschale et catechesim pontem facit. Cum plena octavae dignitate festiva et colore albo insigniatur, ostendit ipsam congregationem ecclesialem forma Christi resurgentis componi: audire, benedicere, frangere, recognoscere et ad testimonium redire. Itaque dies ad memoriam tantum non pertinet, sed ad permanentem formam cultus christiani.
+
+Pastoraliter Feria IV infra Octavam Paschae perpetuam consolationem offert christianis quorum exspectationes confractae sunt. Docet Dominum resuscitatum saepe credentibus in via confusionis occurrere, eos per Scripturas patienter instruere, atque corda eorum a taedio ad missionem convertere se in mysterio eucharistico manifestando.
+$desc$),
+('thursday-in-the-octave-of-easter', 'Feria V infra Octavam Paschae', $desc$
+Feria V infra Octavam Paschae antiquam Ecclesiae consuetudinem prosequitur, qua tota hebdomada post Pascha tamquam una prolixa sollemnitas tractatur. Libri Romani, sive ante sive post reformationem anni MCMLXIX, his diebus statum privilegiatum tribuunt qui inexhaustam mysterii resurrectionis densitatem exprimit. Longe igitur ab eo quod tantum resonantia dominicae sit, hic dies ad ordinatam contemplationem apparitionum successive datarum pertinet.
+
+Evangelium Christum resuscitatum inter discipulos stantem ostendit, pacem offerentem, manus et pedes demonstrantem, eorumque mentes ad intellegendas Scripturas aperientem. Huius diei theologia ideo valde incarnatoria atque, optimo sensu, apologetica est: resurrectio non est inanis superstitis vita, sed gloriosa continuatio ipsius Domini crucifixi, cuius vulnera adhuc loquuntur. Pax ex Passione transfigurata manat, et missio ex mentibus divino magisterio apertis nascitur.
+
+Liturgice haec Feria V albo paschali et sollemni octavae gradu fulget, simul tamen quandam catecheticam firmitatem servat. In eodem festivo flumine ac dies Paschae stat, sed Ecclesiam urgere pergit ut resurrectionem corporalem, testimonium apostolicum et unitatem scripturae salutaris consilii Dei a Mose et Prophetis usque ad Pascha Christi profiteatur.
+
+Fidelibus hic dies praecipue magni momenti est aetate quae vel resurrectionem sentimentaliter mollire vel ad solam metaphoram redigere tentatur. Feria V infra Octavam Paschae christianos docet Dominum resuscitatum verum, vulneratum, glorificatum et praesentem profiteri, eosque invitat ut pacem eius accipiant nec a Cruce, unde venit, separent.
+$desc$),
+('friday-in-the-octave-of-easter', 'Feria VI infra Octavam Paschae', $desc$
+Feria VI infra Octavam Paschae ad hebdomadam pertinet quam traditio Romana unam continuamque resurrectionis laetitiam sollemnem existimat. Etiam feria sexta, quae alias memoria paenitentiali Passionis signatur, hic victoria paschali transfiguratur; disciplina communis abstinentiae non applicatur, quia ipsa octava dignitatem sollemnitatis obtinet. Calendarium postconciliarium hunc statum consulto servavit ut ostenderet gaudium paschale vulnera Feriae Sextae in Passione Domini amplecti atque interpretari.
+
+Evangelium apparitionem ad mare Tiberiadis, mirabilem capturam piscium et cenam a Domino paratam refert. Theologia diei resurrectionem, missionem et resonantiam eucharisticam coniungit: Christus crucifixus et resuscitatus discipulos iterum congregat, suppeditat quod per se consequi non valent, atque declarat fructum apostolicum ab oboedientia verbo eius pendere. Focus carbonum in litore iam tacite instaurationem Petri et renovationem missionis Ecclesiae incipit.
+
+Liturgice haec Feria VI colorem album et plenam octavae dignitatem servat, unde dies ad austeritatem feriarum sextarum ordinariam non redit. Cum ad finem hebdomadae vergat, celebrationi paschali prospectum missionarium et ecclesialem aperit, ostendens gaudium resurrectionis naturaliter in laborem apostolicum sub ductu Domini maturescere.
+
+Pastoraliter dies solatur christianos qui inanitatem laboris sine gratia experiuntur. Docet Resuscitatum Ecclesiae adhuc occurrere in limine conatuum irritorum, eam pascere, regere et retia sterilia in abundantiam vertere, ut ministerium et opus cotidianum tamquam participatio actionis eius viventis suscipiantur.
+$desc$),
+('saturday-in-the-octave-of-easter', 'Sabbato infra Octavam Paschae', $desc$
+Sabbatum infra Octavam Paschae complet antiquam hebdomadam qua Ecclesia unam paschalem sollemnitatem per octo dies continuatae laudis protrahit. In usu Romano hic dies historice ad ultimam neophytorum mystagogiam pertinebat, et calendarium hodiernum sollemnem eius indolem immutatam retinuit. Clausura octavae Pascha non minuit, sed testes totius hebdomadae in maturiorem confessionem colligit antequam quinquaginta dies pergant.
+
+Evangelium diei increpationem incredulitatis discipulorum et missionem ad Evangelium omni creaturae praedicandum profert. Theologice dies transitum notat ab admiratione ad apostolicam missionem: fides resurrectionis intra experientias privatas claudi non potest, sed in universalem proclamationem erumpere debet. Resuscitatus Ecclesiam missionariam format ipsam tarditatem cordis quae fidem initio recusabat sanando.
+
+Liturgice hoc Sabbatum albo vestitur et plenam octavae dignitatem participat, attamen quandam etiam indolem liminis habet inter arctam Hebdomadae Paschalis concentrationem et latiorem temporis paschalis progressionem. Dum octava ad complementum suum pervenit, Ecclesia cum fiducia orat eundem Dominum qui Undecim apparuit nunc missionem ad gentes extensam gubernare.
+
+Pastoraliter hic dies credentes ultra passivam paschalium mysteriorum admirationem provocat. Fideles urget ut resurrectionem dubitationes eorum iudicare, prospectus ampliare et ad evangelizationem impellere sinant, sive per apertam praedicationem sive per patientem testificationem sive per renovatam fidelitatem in locis ordinariis ubi Evangelium audiri debet.
+$desc$),
+('second-sunday-of-easter-divine-mercy-sunday', 'Dominica II Paschae seu de divina Misericordia', $desc$
+Dominica II Paschae octavam claudit et iamdiu locum proprium in traditione Romana obtinet ut Dominica in albis, qua neophyti vestes albas deponere solebant. Calendarium anni MCMLXIX eam ut diem octavum Paschae servavit, et anno MM sanctus Ioannes Paulus II titulum Dominicae de divina Misericordia ei publice adiunxit, pondus pastorale ex revelationibus sanctae Faustinae Kowalska ortum confirmans, antiqua tamen structura paschali intacta manente. Ita dies veterem traditionem baptismalem cum recentiore articulatione misericordiae ex Christo resuscitato fluentis coniungit.
+
+Evangelium est Ioannes XX, in quo Christus pacem, Spiritum et potestatem remittendi peccata largitur, deinde Thomam in eius incredulitate convenit. Theologia diei igitur exquisite paschalis est: vulnera in corpore glorificato permanent, misericordia in ministerio reconciliationis Ecclesiae sacramentalis efficitur, et fides a visione ad confessionem transit: Dominus meus et Deus meus. Divina Misericordia non est thema Paschae extrinsecus additum; ipsa est Pascha per latus apertum Crucifixi resuscitati intellectum.
+
+Liturgice hic dies simul dominica et dies octava est, summam dignitatem paschalem in albo retinens atque privilegiatam octo dierum celebrationem concludens. Stat in cardine inter octavam contractiorem et tempus paschale ulterius progrediens; accentus eius baptismales, paenitentiales et ecclesiales efficiunt ut inter dominicas anni theologice maxime compositas numeretur.
+
+Fidelibus hodiernis haec dominica necessariam scholae fiduciae rationem offert. Dubitantes, paenitentes et vulneratos alloquitur, eos invitans ut ad Christum resuscitatum non cum timore sed cum fiducia accedant, certi sacramenta Ecclesiae, praesertim Paenitentiam et Eucharistiam, misericordiam communicare quae ex eius Passione victoriosa manat.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
@@ -7373,41 +7565,161 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- TRANSLATIONS EN
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', x.name, NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-  ('third-sunday-of-easter',  'Third Sunday of Easter'),
-  ('fourth-sunday-of-easter', 'Fourth Sunday of Easter (Good Shepherd)'),
-  ('fifth-sunday-of-easter',  'Fifth Sunday of Easter'),
-  ('sixth-sunday-of-easter',  'Sixth Sunday of Easter'),
-  ('seventh-sunday-of-easter','Seventh Sunday of Easter')
-) AS x(slug, name) ON f.slug = x.slug
+  ('third-sunday-of-easter',  'Third Sunday of Easter', $desc$
+The Third Sunday of Easter belongs to the ancient paschal fifty days, but its present lectionary profile owes much to the postconciliar reform, which gave the Sundays of Eastertide a richer cycle of resurrection narratives and mystagogical catechesis. Rather than treating the season as a mere aftermath of Easter Day, the 1969 Missal and Lectionary let these Sundays unfold the Church's growth within the resurrection mystery. The Third Sunday thus stands as an early stage in the Church's passage from astonishment to stable faith.
+
+Its theological center is recognition of the risen Lord in Scripture, table fellowship, and obedient discipleship. Across the lectionary cycles, the Church hears of Emmaus, the apostolic kerygma, and the risen Christ's appearances that turn bewildered disciples into witnesses. The day teaches that resurrection faith is ecclesial and sacramental: the Lord is known where he opens the Scriptures, nourishes his own, and draws them into mission.
+
+Liturgically, this Sunday remains fully within the white joy of Eastertide and retains the dignity of the Lord's Day in the midst of the Fifty Days. It stands after the octave but before the more explicit preparation for Ascension and Pentecost, so its tone is one of settled paschal clarity rather than first astonishment or final sending. The Alleluia remains the Church's native speech because the season itself is still one great day of rejoicing.
+
+For the faithful, the Third Sunday of Easter is a summons to mature faith. It invites Christians to move beyond fleeting religious excitement and to recognize the risen Christ in the ordinary, stable places where he has promised to be found: the Scriptures, the Eucharist, the apostolic Church, and the demanding path of daily obedience.
+$desc$),
+  ('fourth-sunday-of-easter', 'Fourth Sunday of Easter (Good Shepherd)', $desc$
+The Fourth Sunday of Easter has long been marked in the Roman tradition by the figure of Christ the Good Shepherd, even though the thematic concentration became especially prominent through the modern lectionary. In the postconciliar calendar this Sunday also acquired added pastoral resonance through its close association with the Church's prayer for vocations, continuing a modern emphasis encouraged by Saint Paul VI. The reform therefore did not alter its paschal place, but deepened the Church's perception of its shepherding and ecclesial dimensions.
+
+Theologically, the day contemplates the risen Christ not only as one who has triumphed over death, but as the Shepherd who knows his own, lays down his life for them, and now leads them in glory. Resurrection reveals that the pastoral governance of Christ is inseparable from the Cross: the Shepherd reigns by self-giving love and gathers the flock through the wounds he has retained. The Church's ministries and vocations are intelligible only as participation in that one shepherding office.
+
+Liturgically, the Sunday stands in Easter's white season with serene confidence, midway between the octave and Pentecost. Its texts temper jubilation with attentiveness, because the flock must hear the Shepherd's voice, and its place within Paschaltide prevents any sentimental reduction of pastoral imagery by rooting it in the Paschal Mystery itself. The Lord's Day rank and paschal context make it one of the most beloved Sundays of the year.
+
+For contemporary believers, especially in communities praying for priests, deacons, religious, and holy families, this Sunday remains urgently pastoral. It teaches the faithful to discern authentic authority by conformity to the crucified and risen Shepherd and invites each baptized person to ask not only who will lead the flock, but how he or she is being called to hear and follow Christ more deeply.
+$desc$),
+  ('fifth-sunday-of-easter',  'Fifth Sunday of Easter', $desc$
+The Fifth Sunday of Easter emerged in its present richness through the renewal of the Roman Lectionary after the Second Vatican Council, which arranged the Easter season as a progressive contemplation of the Church's life in the risen Lord. Earlier forms of the Roman rite already gave this period a strongly ecclesial and mystical character, but the modern cycle highlights with greater breadth themes such as new creation, the heavenly Jerusalem, mutual charity, and abiding in Christ. The day thus shows Paschaltide moving from appearances of the risen Lord toward the shape of Christian existence in him.
+
+Its theology centers on communion. The risen Christ builds a people marked by the new commandment of love, by fruitful abiding as branches in the vine, and by hope for the dwelling place God prepares among humanity. Easter is therefore shown not as an isolated miracle but as the source of a transformed social and sacramental life in which charity becomes the visible form of resurrection.
+
+Liturgically, the Fifth Sunday remains radiant in paschal white while the season begins to turn more distinctly toward mission and consummation. It stands between Good Shepherd Sunday and the more explicit promise of the Spirit, showing that the Church's passage through Easter is not only about belief in Christ's victory but about being incorporated into his living Body by love, sacrament, and perseverance.
+
+Pastorally, this Sunday challenges the faithful to measure Easter authenticity by charity rather than sentiment. It asks whether parishes, households, and friendships actually bear the marks of the risen life - patience, self-gift, unity, and hope - and so calls Christians to embody in ordinary relationships the new world inaugurated by the Resurrection.
+$desc$),
+  ('sixth-sunday-of-easter',  'Sixth Sunday of Easter', $desc$
+The Sixth Sunday of Easter stands near the end of the paschal season and, in the reformed Roman lectionary, gathers together themes of love, mission, and the promised Advocate. As the Church moved through twentieth-century liturgical renewal, this Sunday came to be experienced more clearly as immediate preparation for Ascension and Pentecost, while preserving its ancient place within the Fifty Days. The 1969 calendar retained its structure as a Sunday of Easter and allowed the scriptural proclamation to show how the Church is readied for the gift of the Spirit.
+
+Its theological emphasis lies on divine indwelling and apostolic expansion. Christ promises the Paraclete, teaches that love is shown in keeping his word, and sends the Church outward even as the Acts of the Apostles portray the Gospel crossing cultural boundaries. The resurrection thus flowers into mission not by activism alone, but by the Spirit who makes believers dwell in the love of the Father and the Son.
+
+Liturgically, this Sunday remains clothed in white and belongs wholly to Easter, yet its position gives it a strongly expectant note. The joy of the season is now sharpened by promise: the Church stands between the accomplished victory of Easter and the imminent outpouring of Pentecost, learning to desire the Spirit whom Christ sends from the Father.
+
+For the faithful today, the Sixth Sunday of Easter is a school of interior mission. It teaches that evangelization without prayer and obedience becomes sterile, while prayer closed to mission becomes self-enclosed; the Spirit promised by Christ binds contemplation and apostolic courage together in one paschal life.
+$desc$),
+  ('seventh-sunday-of-easter','Seventh Sunday of Easter', $desc$
+The Seventh Sunday of Easter occupies a distinctive place in the Roman year as the Sunday between Ascension and Pentecost, though in some regions the pastoral transfer of Ascension affects the way the surrounding celebrations are experienced. Historically, the Roman calendar preserved this Sunday as the Church's liturgical pause of expectant prayer after the Lord's exaltation and before the descent of the Spirit. The postconciliar reform retained that position and allowed the day's scriptural pattern, especially Christ's priestly prayer and the Acts account of the disciples gathered with Mary, to emerge with particular clarity.
+
+Its theology is suspended between absence and promise. The exalted Christ intercedes for his own, prays for their unity, and leaves the Church not as abandoned but as gathered into persevering expectation. This Sunday reveals the Church in her cenacle identity: apostolic, Marian, praying, and poised to receive power from on high for mission.
+
+Liturgically, the day remains a white Sunday of Easter and yet has a contemplative sobriety within its joy. The Alleluia still sounds, but the accent falls less on the first shock of resurrection than on ecclesial communion, prayer, and readiness for Pentecost. It is the last great Sunday of Eastertide before the red fire of the Spirit crowns the season.
+
+Pastorally, the Seventh Sunday of Easter teaches believers how to inhabit times of waiting. It encourages communities not to mistake delay for abandonment, but to remain united in prayer, attentive to Christ's intercession, and open to the new mission that the Holy Spirit is preparing even when its shape is not yet visible.
+$desc$)
+) AS x(slug, name, description) ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- TRANSLATIONS FR
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', x.name, NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-  ('third-sunday-of-easter',  'Troisième dimanche de Pâques'),
-  ('fourth-sunday-of-easter', 'Quatrième dimanche de Pâques (Bon Pasteur)'),
-  ('fifth-sunday-of-easter',  'Cinquième dimanche de Pâques'),
-  ('sixth-sunday-of-easter',  'Sixième dimanche de Pâques'),
-  ('seventh-sunday-of-easter','Septième dimanche de Pâques')
-) AS x(slug, name) ON f.slug = x.slug
+  ('third-sunday-of-easter',  'Troisième dimanche de Pâques', $desc$
+Le Troisième dimanche de Pâques appartient depuis toujours aux cinquante jours pascals, mais son profil lectionnaire actuel doit beaucoup à la réforme postconciliaire, qui a donné aux dimanches du temps pascal un cycle plus riche de récits de résurrection et de catéchèse mystagogique. Au lieu de considérer la saison comme un simple prolongement du seul jour de Pâques, le Missel et le Lectionnaire de 1969 laissent ces dimanches déployer la croissance de l'Église à l'intérieur du mystère pascal. Ce troisième dimanche se présente ainsi comme une étape précoce dans le passage de l'étonnement à une foi stable.
+
+Son centre théologique est la reconnaissance du Ressuscité dans l'Écriture, la communion de table et l'obéissance du disciple. À travers les cycles liturgiques, l'Église entend Emmaüs, la prédication apostolique et les apparitions du Ressuscité qui transforment des disciples déconcertés en témoins. Le jour enseigne que la foi pascale est ecclésiale et sacramentelle: le Seigneur est connu là où il ouvre les Écritures, nourrit les siens et les entraîne dans la mission.
+
+Liturgiquement, ce dimanche demeure pleinement dans la joie blanche du temps pascal et garde toute la dignité du Jour du Seigneur au milieu des cinquante jours. Il vient après l'octave mais avant la préparation plus explicite à l'Ascension et à la Pentecôte; son ton est donc celui d'une clarté pascale désormais posée, plutôt que du premier bouleversement ou de l'envoi final. L'Alléluia reste la langue native de l'Église, puisque toute la saison est encore un seul grand jour de joie.
+
+Pour les fidèles, ce dimanche est un appel à une foi mûre. Il invite les chrétiens à dépasser les enthousiasmes religieux passagers et à reconnaître le Christ ressuscité dans les lieux ordinaires et stables où il a promis de se laisser trouver: les Écritures, l'Eucharistie, l'Église apostolique et le chemin exigeant de l'obéissance quotidienne.
+$desc$),
+  ('fourth-sunday-of-easter', 'Quatrième dimanche de Pâques (Bon Pasteur)', $desc$
+Le Quatrième dimanche de Pâques est marqué depuis longtemps dans la tradition romaine par la figure du Christ Bon Pasteur, même si cette concentration thématique est devenue particulièrement nette grâce au lectionnaire moderne. Dans le calendrier postconciliaire, ce dimanche a aussi pris une résonance pastorale accrue par son lien étroit avec la prière de l'Église pour les vocations, dans la ligne d'une insistance moderne encouragée par saint Paul VI. La réforme n'a donc pas changé sa place pascale, mais a approfondi la conscience de ses dimensions pastorales et ecclésiales.
+
+Théologiquement, le jour contemple le Christ ressuscité non seulement comme celui qui a triomphé de la mort, mais comme le Pasteur qui connaît les siens, donne sa vie pour eux et les conduit désormais dans la gloire. La résurrection révèle que la conduite pastorale du Christ est inséparable de la Croix: le Pasteur règne par l'amour livré et rassemble le troupeau à travers les blessures qu'il garde. Les ministères et les vocations dans l'Église ne se comprennent que comme participation à cet unique office pastoral.
+
+Liturgiquement, ce dimanche se tient dans la blancheur pascale avec une confiance paisible, à mi-chemin entre l'octave et la Pentecôte. Ses textes tempèrent la jubilation par l'écoute, car le troupeau doit entendre la voix du Pasteur, et sa place dans le temps pascal empêche toute réduction sentimentale de l'image pastorale en l'enracinant dans le mystère pascal lui-même. Son rang dominical et son contexte pascal en font l'un des dimanches les plus aimés de l'année.
+
+Pour les croyants d'aujourd'hui, surtout dans les communautés qui prient pour les prêtres, les diacres, la vie consacrée et les familles saintes, ce dimanche garde une urgence pastorale évidente. Il enseigne aux fidèles à discerner l'autorité authentique à sa conformité au Pasteur crucifié et ressuscité et invite chaque baptisé à se demander non seulement qui conduira le troupeau, mais comment lui-même est appelé à écouter et à suivre plus profondément le Christ.
+$desc$),
+  ('fifth-sunday-of-easter',  'Cinquième dimanche de Pâques', $desc$
+Le Cinquième dimanche de Pâques a reçu sa richesse actuelle grâce au renouvellement du Lectionnaire romain après le Concile Vatican II, qui a organisé le temps pascal comme une contemplation progressive de la vie de l'Église dans le Ressuscité. Les formes plus anciennes du rite romain donnaient déjà à cette période un caractère fortement ecclésial et mystique, mais le cycle moderne met plus largement en lumière des thèmes comme la création nouvelle, la Jérusalem céleste, la charité mutuelle et la demeure dans le Christ. Le jour montre ainsi le temps pascal passant des apparitions du Ressuscité à la forme même de l'existence chrétienne en lui.
+
+Sa théologie est centrée sur la communion. Le Christ ressuscité construit un peuple marqué par le commandement nouveau de l'amour, par la fécondité de la vigne et des sarments, et par l'espérance de la demeure que Dieu prépare parmi les hommes. Pâques apparaît alors non comme un miracle isolé, mais comme la source d'une vie sociale et sacramentelle transformée, où la charité devient la forme visible de la résurrection.
+
+Liturgiquement, le Cinquième dimanche demeure radieux dans le blanc pascal tandis que la saison s'oriente plus nettement vers la mission et l'accomplissement. Situé entre le dimanche du Bon Pasteur et la promesse plus explicite de l'Esprit, il montre que le passage de l'Église à travers Pâques ne consiste pas seulement à croire à la victoire du Christ, mais à être incorporée à son Corps vivant par l'amour, le sacrement et la persévérance.
+
+Pastoralement, ce dimanche met les fidèles au défi de mesurer l'authenticité pascale à la charité plutôt qu'au sentiment. Il demande si les paroisses, les familles et les amitiés portent réellement les marques de la vie ressuscitée - patience, don de soi, unité et espérance - et appelle ainsi les chrétiens à incarner dans les relations ordinaires le monde nouveau inauguré par la Résurrection.
+$desc$),
+  ('sixth-sunday-of-easter',  'Sixième dimanche de Pâques', $desc$
+Le Sixième dimanche de Pâques se situe vers la fin de la saison pascale et, dans le lectionnaire romain réformé, rassemble les thèmes de l'amour, de la mission et du Paraclet promis. Au cours du renouveau liturgique du XXe siècle, ce dimanche a été plus clairement perçu comme une préparation immédiate à l'Ascension et à la Pentecôte, tout en conservant sa place ancienne dans les cinquante jours. Le calendrier de 1969 en a maintenu la structure comme dimanche de Pâques et a laissé la proclamation scripturaire montrer comment l'Église est préparée au don de l'Esprit.
+
+Son accent théologique porte sur la demeure divine et l'expansion apostolique. Le Christ promet le Défenseur, enseigne que l'amour se montre dans la garde de sa parole et envoie l'Église au loin, tandis que les Actes des Apôtres décrivent le passage de l'Évangile à travers les frontières culturelles. La résurrection s'épanouit donc en mission, non par activisme seul, mais par l'Esprit qui fait demeurer les croyants dans l'amour du Père et du Fils.
+
+Liturgiquement, ce dimanche demeure revêtu de blanc et appartient tout entier à Pâques, mais sa position lui donne une note fortement expectante. La joie de la saison se resserre maintenant sous la forme de la promesse: l'Église se tient entre la victoire accomplie de Pâques et l'effusion imminente de la Pentecôte, apprenant à désirer l'Esprit que le Christ envoie d'auprès du Père.
+
+Pour les fidèles aujourd'hui, le Sixième dimanche de Pâques est une école de mission intérieure. Il enseigne qu'une évangélisation sans prière ni obéissance devient stérile, tandis qu'une prière fermée à la mission s'enferme sur elle-même; l'Esprit promis par le Christ unit contemplation et courage apostolique dans une unique vie pascale.
+$desc$),
+  ('seventh-sunday-of-easter','Septième dimanche de Pâques', $desc$
+Le Septième dimanche de Pâques occupe une place particulière dans l'année romaine comme dimanche entre l'Ascension et la Pentecôte, même si, dans certaines régions, le transfert pastoral de l'Ascension influe sur la manière dont l'ensemble est vécu. Historiquement, le calendrier romain a gardé ce dimanche comme la pause liturgique de l'Église dans une prière d'attente après l'exaltation du Seigneur et avant la descente de l'Esprit. La réforme postconciliaire a maintenu cette place et a permis au dessin scripturaire du jour, notamment la prière sacerdotale du Christ et le récit des disciples réunis avec Marie, d'apparaître avec une netteté particulière.
+
+Sa théologie se tient entre absence et promesse. Le Christ glorifié intercède pour les siens, prie pour leur unité et laisse l'Église non comme abandonnée, mais rassemblée dans une attente persévérante. Ce dimanche révèle l'Église dans son identité de cénacle: apostolique, mariale, priante et disposée à recevoir d'en haut la puissance pour la mission.
+
+Liturgiquement, le jour demeure un dimanche blanc de Pâques et pourtant possède une sobriété contemplative au cœur même de la joie. L'Alléluia continue de résonner, mais l'accent porte moins sur le premier choc de la résurrection que sur la communion ecclésiale, la prière et la préparation à la Pentecôte. Il est le dernier grand dimanche du temps pascal avant que le feu rouge de l'Esprit ne couronne la saison.
+
+Pastoralement, le Septième dimanche de Pâques apprend aux croyants à habiter les temps d'attente. Il encourage les communautés à ne pas prendre le délai pour un abandon, mais à demeurer unies dans la prière, attentives à l'intercession du Christ et ouvertes à la mission nouvelle que l'Esprit Saint prépare, même lorsque sa forme n'est pas encore visible.
+$desc$)
+) AS x(slug, name, description) ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- TRANSLATIONS LA
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-  ('third-sunday-of-easter',  'Dominica III Paschae'),
-  ('fourth-sunday-of-easter', 'Dominica IV Paschae (Boni Pastoris)'),
-  ('fifth-sunday-of-easter',  'Dominica V Paschae'),
-  ('sixth-sunday-of-easter',  'Dominica VI Paschae'),
-  ('seventh-sunday-of-easter','Dominica VII Paschae')
-) AS x(slug, name) ON f.slug = x.slug
+  ('third-sunday-of-easter',  'Dominica III Paschae', $desc$
+Dominica III Paschae ad antiquos quinquaginta dies paschales pertinet, sed praesentem lectionarii figuram multum debet reformationi postconciliari, quae dominicis temporis paschalis uberiorem narrationum resurrectionis et mystagogicae catecheseos ordinem dedit. Proinde tempus hoc non iam velut simplicem appendicem diei Paschatis tractat, sed ipsam Ecclesiae incrementum intra mysterium resurrectionis ostendit. Haec dominica ideo tamquam prima quaedam statio apparet in transitu ab admiratione ad firmam fidem.
+
+Theologicum eius centrum est recognitio Domini resuscitati in Scriptura, in mensae communione atque in oboedienti discipulatu. Per varios lectionum cyclos Ecclesia Emmaum, apostolicum praeconium et apparitiones Resuscitati audit, quibus discipuli perturbati in testes convertuntur. Dies docet fidem paschalem esse ecclesialem et sacramentalem: Dominus cognoscitur ubi Scripturas aperit, suos nutrit et eos in missionem attrahit.
+
+Liturgice haec dominica plene intra album gaudium temporis paschalis manet et omnem dignitatem diei dominici inter quinquaginta dies servat. Post octavam venit, sed ante expressiorem ad Ascensionem et Pentecosten praeparationem; ideo sonus eius est iam tranquilla claritas paschalis potius quam primus stupor aut extremus missus. Alleluia adhuc nativa Ecclesiae lingua est, quia totum tempus unum adhuc magnum gaudii diem constituit.
+
+Fidelibus haec Dominica III Paschae ad maturam fidem vocatio est. Christianos invitat ut transitorios religiosae excitationis motus superent et Christum resuscitatum agnoscant in ordinariis ac stabilibus locis ubi se reperiri promisit: in Scripturis, in Eucharistia, in Ecclesia apostolica et in ardua via cotidianae oboedientiae.
+$desc$),
+  ('fourth-sunday-of-easter', 'Dominica IV Paschae (Boni Pastoris)', $desc$
+Dominica IV Paschae iamdiu in traditione Romana figura Christi Boni Pastoris insignitur, etsi haec thematica concentratio per lectionarium recentius specialius emersit. In calendario postconciliari eadem dominica etiam peculiarem vim pastoralem accepit propter arctam coniunctionem cum oratione Ecclesiae pro vocationibus, secundum pondus recentioribus temporibus a sancto Paulo VI fultum. Reformatio igitur locum paschalem eius non mutavit, sed sensum dimensionum pastoralis et ecclesialis altius explicavit.
+
+Theologice dies Christum resuscitatum contemplatur non solum ut victorem mortis, sed ut Pastorem qui suos novit, pro eis animam ponit et nunc in gloria ducit. Resurrectio revelat regimen pastorale Christi a Cruce separari non posse: Pastor per amorem sui traditum regnat atque gregem per vulnera retenta congregat. Ministeria et vocationes in Ecclesia intellegi nequeunt nisi ut participatio illius unici muneris pastoralis.
+
+Liturgice haec dominica media quasi inter octavam et Pentecosten in serena albedine Paschae stat. Textus eius iubilum cum auscultatione componunt, quia grex vocem Pastoris audire debet, et locus eius intra tempus paschale impedit ne imago pastoralis in sentimentalem quandam tenuitatem resolvatur, cum in ipsum Mysterium Paschale radicetur. Gradus dominicalis et contextus paschalis faciunt ut inter dominicas anni maxime dilectas numeretur.
+
+Credentibus huius temporis, praesertim communitatibus pro sacerdotibus, diaconis, religiosis ac sanctis familiis orantibus, haec dominica urgens mansit. Docet fideles veram auctoritatem ex conformitate ad Pastorem crucifixum et resuscitatum discernere atque unumquemque baptizatum interrogat non solum quis gregem ducturus sit, sed quomodo ipse Christus altius audiendus et sequendus sit.
+$desc$),
+  ('fifth-sunday-of-easter',  'Dominica V Paschae', $desc$
+Dominica V Paschae praesentem suam ubertatem ex renovatione Lectionarii Romani post Concilium Vaticanum II accepit, quae tempus paschale tamquam progressivam contemplationem vitae Ecclesiae in Resuscitato ordinavit. Antiquiores formae Ritus Romani iam huic tempori indolem valde ecclesialem et mysticam tribuebant, sed cyclus recentior latius illustrat themata novae creationis, Ierusalem caelestis, mutuae caritatis et manendi in Christo. Sic dies ostendit Pascha ab apparitionibus Domini ad ipsam formam vitae christianae in ipso transire.
+
+Theologia huius dominicae circa communionem versatur. Christus resuscitatus populum aedificat signo mandati novi amoris, fructuosae manentiae sicut palmites in vite, atque spei habitationis quam Deus inter homines parat. Pascha igitur non tamquam miraculum solitarium, sed tamquam fons vitae socialis et sacramentalis transformatae apparet, in qua caritas forma visibilis resurrectionis efficitur.
+
+Liturgice Dominica V in albo paschali fulget, dum tempus magis distincte versus missionem et consummationem converti incipit. Inter Dominicam Boni Pastoris et expressiorem Spiritus promissionem sita, ostendit Ecclesiae transitum per Pascha non solum in fide victoriae Christi consistere, sed in incorporatione ad Corpus eius vivum per caritatem, sacramentum et perseverantiam.
+
+Pastoraliter haec dominica fideles provocat ut veritatem paschalem caritate potius quam affectu metiantur. Quaerit utrum paroeciae, familiae et amicitiae re vera notas vitae resuscitatae - patientiam, sui donationem, unitatem et spem - gerant, atque ita christianos vocat ut in ordinariis relationibus novum mundum a Resurrectione inauguratum incarnent.
+$desc$),
+  ('sixth-sunday-of-easter',  'Dominica VI Paschae', $desc$
+Dominica VI Paschae versus finem temporis paschalis stat et, in lectionario Romano instaurato, themata amoris, missionis et Paracliti promissi colligit. Per renovationem liturgicam saeculi vicesimi haec dominica clarius experta est quasi immediata ad Ascensionem et Pentecosten praeparatio, antiquo tamen loco intra quinquaginta dies servato. Calendarium anni MCMLXIX structuram eius ut dominicae paschalis retinuit atque scripturae proclamationi permisit ostendere quomodo Ecclesia ad donum Spiritus praeparetur.
+
+Accentus theologici ad inhabitationem divinam et ad expansionem apostolicam spectant. Christus Paraclitum promittit, docet amorem in custodia verbi sui apparere, et Ecclesiam foras mittit, dum Actus Apostolorum Evangelium per fines culturales transgredi demonstrant. Sic resurrectio in missionem floret non mera activitate, sed Spiritu qui credentes in amore Patris et Filii habitare facit.
+
+Liturgice haec dominica albo vestitur et tota Paschae est, attamen ipsius situs notam valde expectantem tribuit. Gaudium temporis iam promissione acuitur: Ecclesia inter victoriam Paschae completam et imminentem Pentecostes effusionem consistit, discens desiderare Spiritum quem Christus a Patre mittit.
+
+Fidelibus hodiernis Dominica VI Paschae schola missionis interioris est. Docet evangelizationem sine oratione et oboedientia sterilem fieri, orationem autem missioni clausam in se ipsam includi; Spiritus a Christo promissus contemplationem et apostolicam audaciam in una vita paschali coniungit.
+$desc$),
+  ('seventh-sunday-of-easter','Dominica VII Paschae', $desc$
+Dominica VII Paschae locum singularem in anno Romano occupat ut dominica inter Ascensionem et Pentecosten, etsi in quibusdam regionibus translatio pastoralis Ascensionis modum quo celebrationes circumstantes experiuntur afficit. Historice calendarium Romanum hanc dominicam servavit tamquam moram liturgicam Ecclesiae in oratione exspectante post exaltationem Domini et ante Spiritus descensum. Reformatio postconciliaris eundem locum retinuit atque schemati scripturistico diei, praesertim orationi sacerdotali Christi et narrationi de discipulis cum Maria congregatis, specialem claritatem dedit.
+
+Theologia eius inter absentiam et promissionem quasi suspensa est. Christus exaltatus pro suis intercedit, pro unitate eorum orat, et Ecclesiam non ut desertam, sed ut in expectatione perseverante congregatam relinquit. Haec dominica Ecclesiam in identitate cenaculi revelat: apostolicam, Marianam, orantem et paratam ad recipiendam virtutem desuper pro missione.
+
+Liturgice dies manet dominica alba Paschae, et tamen quandam contemplativam sobrietatem in medio gaudio habet. Alleluia adhuc sonat, sed accentus minus in primo resurrectionis ictu quam in communione ecclesiali, oratione et ad Pentecosten praeparatione ponitur. Est ultima magna dominica temporis paschalis antequam ruber Spiritus ignis coronam tempori imponat.
+
+Pastoraliter Dominica VII Paschae credentes docet quomodo tempora expectationis inhabitent. Communitates hortatur ne moram pro derelictione habeant, sed in oratione unitae permaneant, ad intercessionem Christi attentae sint, et ad novam missionem pateant quam Spiritus Sanctus parat, etiamsi figura eius nondum clare appareat.
+$desc$)
+) AS x(slug, name, description) ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- CELEBRATIONS (movable, EASTER_SUNDAY + offset)
@@ -7434,21 +7746,54 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- TRANSLATIONS
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', 'Easter Vigil in the Holy Night', NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'easter-vigil-in-the-holy-night'
+JOIN (VALUES
+('easter-vigil-in-the-holy-night', 'Easter Vigil in the Holy Night', $desc$
+The Easter Vigil in the Holy Night is the Church's most ancient and most exalted vigil, already praised by the Fathers and famously called by Saint Augustine the mother of all holy vigils. Over the centuries, however, pastoral and ceremonial developments had shifted it earlier in the day, obscuring something of its night character until the reform of Pius XII in 1951 and 1955 restored it to its proper place after nightfall. The postconciliar Missal received and consolidated that restoration, so that the 1969 Roman calendar situates the Vigil clearly at the heart of the Paschal Triduum.
+
+The theology of the Vigil is cosmic and sacramental. From the blessing of the new fire and the Paschal candle, through the great history of salvation in the readings, to Baptism and the first Eucharist of Easter, the Church celebrates the passage from darkness to light, from slavery to freedom, from death to life in Christ. No other liturgy so fully manifests the unity of creation, covenant, redemption, and ecclesial rebirth.
+
+Liturgically, the Vigil possesses a rank unlike any ordinary solemnity, belonging to the Paschal Triduum itself and opening Easter with white splendor after the sober stillness of Holy Saturday. Its multi-part structure - lucernarium, Liturgy of the Word, Baptismal Liturgy, and Eucharistic Liturgy - gives it an expansiveness that mirrors the fullness of the mystery being celebrated. The Vigil is not simply an anticipated Mass of Easter Sunday, but the night in which Easter sacramentally dawns.
+
+For the faithful, the Easter Vigil remains a privileged school of memory and hope. It teaches Christians to read their own lives through the great works of God, to renew baptismal identity with seriousness and joy, and to confess that Christ's resurrection is the decisive light by which every darkness, personal or historical, must finally be judged.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', 'Vigile pascale dans la Nuit sainte', NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'easter-vigil-in-the-holy-night'
+JOIN (VALUES
+('easter-vigil-in-the-holy-night', 'Vigile pascale dans la Nuit sainte', $desc$
+La Vigile pascale dans la Nuit sainte est la plus ancienne et la plus haute des vigiles de l'Église; les Pères l'ont célébrée avec ferveur et saint Augustin l'a fameusement appelée la mère de toutes les saintes vigiles. Au cours des siècles, pourtant, certaines évolutions pastorales et cérémonielles l'avaient déplacée plus tôt dans la journée, obscurcissant son caractère nocturne, jusqu'à ce que la réforme de Pie XII en 1951 puis en 1955 la rende à sa place propre après la tombée de la nuit. Le Missel postconciliaire a reçu et consolidé cette restauration, de sorte que le calendrier romain de 1969 situe clairement la Vigile au cœur du Triduum pascal.
+
+Sa théologie est cosmique et sacramentelle. Depuis la bénédiction du feu nouveau et du cierge pascal, en passant par la grande histoire du salut proclamée dans les lectures, jusqu'au Baptême et à la première Eucharistie de Pâques, l'Église célèbre le passage des ténèbres à la lumière, de l'esclavage à la liberté, de la mort à la vie dans le Christ. Aucune autre liturgie ne manifeste avec une telle plénitude l'unité de la création, de l'alliance, de la rédemption et de la renaissance ecclésiale.
+
+Liturgiquement, la Vigile possède un rang qui dépasse toute solennité ordinaire: elle appartient au Triduum pascal lui-même et ouvre Pâques dans la splendeur du blanc après le silence sobre du Samedi saint. Sa structure en plusieurs parties - lucernaire, liturgie de la Parole, liturgie baptismale et liturgie eucharistique - lui donne une ampleur qui reflète la plénitude du mystère célébré. La Vigile n'est pas simplement une messe anticipée du dimanche de Pâques, mais la nuit où Pâques se lève sacramentellement.
+
+Pour les fidèles, la Vigile pascale demeure une école privilégiée de mémoire et d'espérance. Elle apprend aux chrétiens à lire leur propre vie à la lumière des grandes œuvres de Dieu, à renouveler leur identité baptismale avec gravité et joie, et à confesser que la résurrection du Christ est la lumière décisive à partir de laquelle toute ténèbre, personnelle ou historique, doit finalement être jugée.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', 'Vigilia Paschalis in Nocte Sancta', NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'easter-vigil-in-the-holy-night'
+JOIN (VALUES
+('easter-vigil-in-the-holy-night', 'Vigilia Paschalis in Nocte Sancta', $desc$
+Vigilia Paschalis in Nocte Sancta est antiquissima simul atque excelsissima Ecclesiae vigilia, a Patribus summopere celebrata, quam sanctus Augustinus matrem omnium sanctarum vigiliarum insigniter appellavit. Processu tamen saeculorum rationes pastorales et caeremoniales celebrationem in horas maturiores transtulerant, unde aliquid ex propria nocturna indole obscurabatur, donec reformatio Pii XII annis MCMLI et MCMLV eam ad locum suum post noctis initium restituit. Missale postconciliarium hanc restitutionem recepit et confirmavit, ita ut calendarium Romanum anni MCMLXIX Vigiliam in ipso corde Tridui Paschalis collocet.
+
+Theologia Vigiliae cosmica est et sacramentalis. A benedictione ignis novi et cerei paschalis, per magnam salutis historiam in lectionibus enarratam, usque ad Baptismum et primam Paschae Eucharistiam, Ecclesia transitum celebrat de tenebris ad lucem, de servitute ad libertatem, de morte ad vitam in Christo. Nulla alia liturgia tam plene unitatem creationis, foederis, redemptionis et ecclesialis regenerationis manifestat.
+
+Liturgice Vigilia dignitatem possidet quae omnem communem sollemnitatem excedit: ad ipsum Triduum Paschale pertinet atque Pascha in splendore albo post sobriam Silentii Sabbati Sancti quietem aperit. Eius structura multiplicis partis - lucernarium, Liturgia Verbi, Liturgia Baptismalis et Liturgia Eucharistica - amplitudinem habet quae plenitudinem mysterii celebrati repraesentat. Vigilia non est simpliciter Missa anticipata dominicae Paschae, sed nox in qua Pascha sacramentaliter illucescit.
+
+Fidelibus Vigilia Paschalis schola praecipua memoriae et spei manet. Christianos docet vitam suam per magna Dei opera legere, identitatem baptismalem graviter simul et laete renovare, atque confiteri resurrectionem Christi esse lumen decisivum quo omnis tenebra, sive personalis sive historica, tandem iudicanda est.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- CELEBRATION (movable: Easter Sunday - 1, vigil)
@@ -7478,49 +7823,217 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- TRANSLATIONS EN
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', x.name, NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('palm-sunday-of-the-passion-of-the-lord', 'Palm Sunday of the Passion of the Lord'),
-('monday-of-holy-week', 'Monday of Holy Week'),
-('tuesday-of-holy-week', 'Tuesday of Holy Week'),
-('wednesday-of-holy-week', 'Wednesday of Holy Week'),
-('holy-thursday-evening-mass-of-the-lords-supper', 'Holy Thursday: Evening Mass of the Lord''s Supper'),
-('friday-of-the-passion-of-the-lord', 'Friday of the Passion of the Lord'),
-('holy-saturday', 'Holy Saturday')
-) AS x(slug, name)
+('palm-sunday-of-the-passion-of-the-lord', 'Palm Sunday of the Passion of the Lord', $desc$
+Palm Sunday of the Passion of the Lord unites two ancient liturgical traditions: the Jerusalem commemoration of Christ's royal entry with palms and procession, and the Roman proclamation of the Passion at the threshold of the Great Week. The twentieth-century reforms, especially those of Pius XII in 1955 and the Missal of 1969, gave the day its current title and more coherent structure, explicitly holding triumph and suffering together. The reform did not weaken the day's gravity; it clarified that the Church enters Holy Week by acclaiming the Messiah who reigns precisely through his Passion.
+
+Its theology is deliberately paradoxical. The same Christ who is greeted with hosannas is then heard in the Passion narrative moving toward abandonment, trial, and crucifixion, so that the Church may understand messianic kingship as obedient self-offering rather than worldly domination. Palm Sunday reveals how glory and humiliation belong to one saving mystery, and it trains the faithful to follow Christ beyond moments of enthusiasm into costly discipleship.
+
+Liturgically, the day ranks among the highest Sundays of the year and inaugurates Holy Week in red, the color that signifies both royal passion and martyr-like self-gift. The procession or solemn entrance, the long Passion Gospel, and the immediate proximity to the Paschal Triduum place the assembly at the hinge where Lent gives way to the direct contemplation of Christ's saving sufferings.
+
+For Christians today, Palm Sunday exposes the instability of superficial devotion and invites conversion of heart. It asks whether believers will remain with Christ when praise turns to scandal, and it teaches communities to enter the holiest days of the year not as spectators of ritual drama but as disciples prepared to walk the way of the Cross.
+$desc$),
+('monday-of-holy-week', 'Monday of Holy Week', $desc$
+Monday of Holy Week belongs to the privileged ferias that were given stronger coherence in the Roman calendar by the Holy Week reform of Pius XII and then retained in the postconciliar books. While these days do not possess the independent prominence of Palm Sunday or the Triduum, the modern liturgical arrangement deliberately preserves them as a contemplative approach to the Passion. They allow the Church to dwell with Christ in the final days before his sacrifice.
+
+The Gospel of this day traditionally recounts the anointing at Bethany, where Mary pours costly perfume upon the Lord in a gesture of love that anticipates his burial. Theologically, the day sets gratuitous devotion against the calculating spirit of betrayal: true discipleship recognizes the worth of Christ and pours itself out before the mystery of his approaching death. Love understands what cynicism cannot.
+
+Liturgically, Monday of Holy Week remains in violet and shares the heightened sobriety proper to the privileged ferias immediately before the Triduum. Its place after Palm Sunday and before the explicit betrayal narratives gives it the character of a still, fragrant pause in which the Church contemplates the beauty of adoration offered to the condemned Messiah.
+
+Pastorally, the day calls the faithful to examine what in their lives is reserved, guarded, or counted too precious to offer to Christ. Bethany becomes a school of lavish love, teaching that the preparation for Holy Week is not merely moral seriousness but generous worship, concrete service, and readiness to be misunderstood for the sake of devotion.
+$desc$),
+('tuesday-of-holy-week', 'Tuesday of Holy Week', $desc$
+Tuesday of Holy Week forms part of the final approach to the Paschal Triduum and, in the Roman reform of Holy Week, retained its privileged place as a day of intense scriptural concentration. The structure received after the mid-twentieth-century reforms and confirmed in the 1969 Missal lets the Church linger over the interior drama of the Last Supper before the Triduum begins liturgically. History and liturgy meet here in sober preparation rather than ceremonial climax.
+
+Its Gospel places side by side the prediction of Judas's betrayal and Peter's denial. The theological force of the day lies in exposing sin not only as open treachery but also as weakness, fear, and misplaced self-confidence within the circle of discipleship. Christ remains lucid and sovereign amid disloyalty, and his foreknowledge reveals that his Passion is not a trap laid by enemies alone but the obedience by which he freely gives himself.
+
+Liturgically, the day remains a violet privileged feria, quieter than the great rites to come but no less penetrating in its call to self-knowledge. Situated between Bethany's devotion and Spy Wednesday's consummating bargain, it places the Church in the upper room's tense atmosphere, where fidelity, presumption, and betrayal are all laid bare under the Lord's gaze.
+
+For the faithful, Tuesday of Holy Week is a severe mercy. It warns against complacency, teaches distrust of merely verbal loyalty, and encourages prayer for perseverance, so that disciples may learn to rely not on their own constancy but on the steadfast love of Christ who knows their frailty before they do.
+$desc$),
+('wednesday-of-holy-week', 'Wednesday of Holy Week', $desc$
+Wednesday of Holy Week, traditionally called Spy Wednesday, received no spectacular ritual additions in the modern reforms, yet its place in the Roman sequence became clearer as the last full feria before the Triduum. The Church has long used this day to contemplate Judas's arrangement with the chief priests, and the postconciliar calendar preserved that austere concentration. Historically, it functions as the dark threshold between the public ministry's close and the sacred rites of the Lord's Passover.
+
+Theologically, the day confronts the mystery of betrayal from within intimacy. Judas is not an external persecutor but one of the Twelve, and his bargaining reveals how proximity to holy things can coexist with a hardened heart. The day therefore warns that sin can take the form of calculating exchange, where relationship with God is subordinated to interest, power, or disappointment.
+
+Liturgically, this Wednesday remains clothed in violet and bears the tense stillness of an ending. It stands immediately before the Evening Mass of the Lord's Supper, so its austerity is not isolated but ordered to the Triduum's disclosure of what betrayal costs and what divine love is willing to endure. In that sense, the day sharpens the Church's entrance into the paschal mystery.
+
+Pastorally, Wednesday of Holy Week invites honest examination of conscience. It asks where disciples may be tempted to instrumentalize religion, to trade fidelity for advantage, or to let resentment mature into infidelity, and it urges a return to repentance before the sacred days unfold the mercy still offered by the betrayed Lord.
+$desc$),
+('holy-thursday-evening-mass-of-the-lords-supper', 'Holy Thursday: Evening Mass of the Lord''s Supper', $desc$
+The Evening Mass of the Lord's Supper opens the sacred Paschal Triduum and draws together ancient Roman and Jerusalem traditions surrounding the commemoration of the Last Supper. Over time its celebration had shifted earlier in the day, but the reform of Pius XII restored it to the evening, more fittingly reflecting the Gospel setting, and the postconciliar Missal preserved that restoration. Thus the contemporary Roman calendar presents Holy Thursday as the true liturgical threshold of the Triduum, not merely a devotional prelude to Good Friday.
+
+Its theology is inexhaustibly rich: the institution of the Eucharist, the commandment of fraternal charity, and the sacrificial priesthood all stand together in one mystery of self-giving love. Christ hands over not only bread and wine transformed into his Body and Blood, but also the pattern by which the Church is to live - a communion rooted in sacrificial service. The washing of feet, while not the center of the liturgy, manifests the form of authority born from the Eucharistic Christ.
+
+Liturgically, the Mass is celebrated in white with a solemnity proper to the Triduum, yet its joy remains marked by gravity because it opens directly toward Gethsemane and the Passion. The Gloria returns with ringing bells, the Eucharist is carried in procession to the place of repose, and the altar is stripped, allowing the Church to taste at once festal intimacy and impending desolation.
+
+For the faithful, Holy Thursday is an annual return to the sources of ecclesial life. It invites adoration of the Eucharistic Lord, gratitude for ordained ministry, conversion to humble service, and deeper awareness that communion with Christ at the altar must issue in charity, vigilance, and willingness to accompany him into the night of his surrender.
+$desc$),
+('friday-of-the-passion-of-the-lord', 'Friday of the Passion of the Lord', $desc$
+Friday of the Passion of the Lord is among the most ancient and austere observances in the Christian year, already attested in Jerusalem and early Rome as a day of fasting, Scripture, and veneration of the Cross without the celebration of Mass. The Roman rite's Good Friday liturgy was carefully revised in the twentieth century, especially under Pius XII, and the postconciliar books retained its basic structure while refining the texts of the universal intercessions and the proclamation of the Passion. The 1969 calendar firmly situates the day within the Paschal Triduum as the Church's most solemn commemoration of the Lord's death.
+
+Theologically, Good Friday contemplates the Cross not as tragic failure but as the hour of redemptive obedience in which the Lamb of God takes away the sin of the world. The Passion according to John, the solemn intercessions embracing the whole world, and the adoration of the holy Cross together proclaim that Christ reigns precisely from the wood of sacrifice. Here divine justice and divine mercy meet without confusion or compromise.
+
+Liturgically, the day has a stark nobility: red vesture, the prostration of the ministers, the absence of the Eucharistic Prayer, and Communion from the sacrament consecrated the previous evening. Its place in the Triduum, between the Supper and the Vigil, gives Good Friday a suspended quality, as though the whole Church stands before the pierced side of Christ in silence, intercession, and adoration.
+
+For believers today, Friday of the Passion of the Lord remains the Church's deepest school of compassion, repentance, and hope. It teaches the faithful to bring the wounds of the world to the Cross, to renounce every trivialization of sin, and to trust that no suffering honestly united to Christ's can remain outside the reach of redemption.
+$desc$),
+('holy-saturday', 'Holy Saturday', $desc$
+Holy Saturday is the ancient day of the Church's great silence, lying between the death of the Lord and the night of his resurrection. From early centuries it was marked by fasting, recollection, and waiting beside the tomb, while the Easter Vigil originally belonged to the following night rather than to the day itself; twentieth-century reform restored that distinction with renewed clarity. The postconciliar calendar preserves Holy Saturday as a day without Mass, poised entirely toward the Vigil that will break it open.
+
+Theologically, Holy Saturday is the liturgy of absence and hidden action. Christ rests in the tomb according to the flesh, descends to the dead, and brings even the realm of death under the reach of his redeeming presence. The day teaches that divine victory can be at work in utter stillness, when visible activity ceases and faith must live on promise alone.
+
+Liturgically, the Church on Holy Saturday abstains from the sacraments in their festive expression and remains in austere expectancy until nightfall. Violet vesture and the bare altar preserve the mood of waiting, while the day's place within the Triduum makes its silence itself liturgical - not emptiness, but the charged pause before the new creation's dawn.
+
+Pastorally, Holy Saturday speaks powerfully to all forms of human waiting, grief, and seeming abandonment. It invites the faithful to keep vigil where God seems hidden, to remember the dead in hope, and to learn that Christian faith includes patient endurance of the in-between, trusting that the silence of the tomb is not the end of the story.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- TRANSLATIONS FR
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', x.name, NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('palm-sunday-of-the-passion-of-the-lord', 'Dimanche des Rameaux et de la Passion du Seigneur'),
-('monday-of-holy-week', 'Lundi de la Semaine sainte'),
-('tuesday-of-holy-week', 'Mardi de la Semaine sainte'),
-('wednesday-of-holy-week', 'Mercredi de la Semaine sainte'),
-('holy-thursday-evening-mass-of-the-lords-supper', 'Jeudi saint : Messe du soir de la Cène du Seigneur'),
-('friday-of-the-passion-of-the-lord', 'Vendredi de la Passion du Seigneur'),
-('holy-saturday', 'Samedi saint')
-) AS x(slug, name)
+('palm-sunday-of-the-passion-of-the-lord', 'Dimanche des Rameaux et de la Passion du Seigneur', $desc$
+Le Dimanche des Rameaux et de la Passion du Seigneur unit deux traditions liturgiques anciennes: la commémoration hiérosolymitaine de l'entrée royale du Christ avec les rameaux et la procession, et la proclamation romaine de la Passion au seuil de la Grande Semaine. Les réformes du XXe siècle, surtout celles de Pie XII en 1955 et le Missel de 1969, ont donné au jour son titre actuel et une structure plus cohérente, tenant explicitement ensemble triomphe et souffrance. La réforme n'a pas atténué la gravité du jour; elle a clarifié que l'Église entre dans la Semaine sainte en acclamant le Messie qui règne précisément par sa Passion.
+
+Sa théologie est volontairement paradoxale. Le même Christ accueilli par les hosannas est ensuite entendu dans le récit de la Passion avançant vers l'abandon, le jugement et la crucifixion, afin que l'Église comprenne la royauté messianique comme oblation obéissante plutôt que domination mondaine. Ce dimanche révèle que gloire et humiliation appartiennent à un seul mystère de salut et forme les fidèles à suivre le Christ au-delà des moments d'enthousiasme, jusque dans un discipulat coûteux.
+
+Liturgiquement, ce jour compte parmi les plus hauts dimanches de l'année et inaugure la Semaine sainte en rouge, couleur à la fois de la passion royale et du don de soi poussé jusqu'au martyre. La procession ou l'entrée solennelle, le long Évangile de la Passion et la proximité immédiate du Triduum pascal placent l'assemblée au point charnière où le Carême cède à la contemplation directe des souffrances salvifiques du Christ.
+
+Pour les chrétiens d'aujourd'hui, le Dimanche des Rameaux met à nu l'instabilité d'une dévotion superficielle et invite à la conversion du cœur. Il demande si les croyants demeureront avec le Christ lorsque la louange deviendra scandale, et il apprend aux communautés à entrer dans les jours les plus saints de l'année non comme spectateurs d'un drame rituel, mais comme disciples prêts à marcher sur le chemin de la Croix.
+$desc$),
+('monday-of-holy-week', 'Lundi de la Semaine sainte', $desc$
+Le Lundi de la Semaine sainte appartient aux féries privilégiées dont la réforme de Pie XII puis les livres postconciliaires ont renforcé la cohérence dans le calendrier romain. Si ces jours ne possèdent pas le relief propre du Dimanche des Rameaux ou du Triduum, l'ordonnance liturgique moderne les conserve délibérément comme une approche contemplative de la Passion. Ils permettent à l'Église de demeurer avec le Christ dans les derniers jours qui précèdent son sacrifice.
+
+L'Évangile de ce jour rapporte traditionnellement l'onction à Béthanie, lorsque Marie répand un parfum précieux sur le Seigneur dans un geste d'amour qui anticipe son ensevelissement. Théologiquement, le jour oppose la dévotion gratuite à l'esprit calculateur de la trahison: le vrai disciple reconnaît le prix du Christ et se répand lui-même devant le mystère de sa mort prochaine. L'amour comprend ce que le cynisme demeure incapable de saisir.
+
+Liturgiquement, le Lundi saint reste vêtu de violet et partage la sobriété accentuée propre aux féries privilégiées immédiatement avant le Triduum. Sa place après les Rameaux et avant les récits explicites de la trahison lui donne le caractère d'une halte silencieuse et parfumée où l'Église contemple la beauté de l'adoration offerte au Messie condamné.
+
+Pastoralement, ce jour appelle les fidèles à examiner ce qu'ils gardent en réserve, protègent jalousement ou jugent trop précieux pour l'offrir au Christ. Béthanie devient une école d'amour sans mesure, enseignant que la préparation à la Semaine sainte n'est pas seulement sérieux moral, mais culte généreux, service concret et disponibilité à être incompris pour la cause de la dévotion.
+$desc$),
+('tuesday-of-holy-week', 'Mardi de la Semaine sainte', $desc$
+Le Mardi de la Semaine sainte fait partie de l'approche finale du Triduum pascal et, dans la réforme romaine de la Semaine sainte, a gardé sa place privilégiée comme jour de concentration scripturaire intense. La structure reçue après les réformes du milieu du XXe siècle et confirmée par le Missel de 1969 permet à l'Église de s'attarder sur le drame intérieur de la Dernière Cène avant que le Triduum ne commence liturgiquement. Histoire et liturgie s'y rencontrent dans une préparation grave plutôt que dans un sommet cérémoniel.
+
+Son Évangile met côte à côte l'annonce de la trahison de Judas et celle du reniement de Pierre. La force théologique du jour réside dans la mise à nu du péché non seulement comme trahison ouverte, mais encore comme faiblesse, peur et confiance mal placée au sein même du cercle des disciples. Le Christ demeure lucide et souverain au milieu de l'infidélité, et sa prescience révèle que sa Passion n'est pas seulement un piège tendu par ses ennemis, mais l'obéissance par laquelle il se livre librement.
+
+Liturgiquement, le jour demeure une féria privilégiée violette, plus discrète que les grands rites à venir mais non moins pénétrante dans son appel à la vérité sur soi. Situé entre la dévotion de Béthanie et le marché de Judas du Mercredi saint, il place l'Église dans l'atmosphère tendue du cénacle, où fidélité, présomption et trahison sont toutes dévoilées sous le regard du Seigneur.
+
+Pour les fidèles, le Mardi saint est une miséricorde sévère. Il met en garde contre la complaisance, enseigne à se défier d'une fidélité seulement verbale et encourage la prière pour la persévérance, afin que les disciples apprennent à s'appuyer non sur leur propre constance, mais sur l'amour fidèle du Christ qui connaît leur fragilité avant eux-mêmes.
+$desc$),
+('wednesday-of-holy-week', 'Mercredi de la Semaine sainte', $desc$
+Le Mercredi de la Semaine sainte, traditionnellement appelé mercredi de la trahison, n'a pas reçu d'ajouts rituels spectaculaires dans les réformes modernes; pourtant sa place dans la séquence romaine est devenue plus nette comme dernière féria complète avant le Triduum. L'Église utilise depuis longtemps ce jour pour contempler l'arrangement de Judas avec les grands prêtres, et le calendrier postconciliaire a conservé cette concentration austère. Historiquement, il fonctionne comme le seuil obscur entre la fin du ministère public et les rites sacrés de la Pâque du Seigneur.
+
+Théologiquement, le jour affronte le mystère de la trahison au sein même de l'intimité. Judas n'est pas un persécuteur extérieur, mais l'un des Douze, et son marchandage révèle comment la proximité des choses saintes peut coexister avec un cœur endurci. Le jour avertit donc que le péché peut prendre la forme d'un calcul d'échange, où la relation avec Dieu est subordonnée à l'intérêt, au pouvoir ou à la déception.
+
+Liturgiquement, ce mercredi demeure vêtu de violet et porte le silence tendu d'une fin. Il se tient immédiatement avant la Messe du soir de la Cène du Seigneur; son austérité n'est donc pas isolée, mais ordonnée à la révélation du prix de la trahison et de ce que l'amour divin consent à endurer. En ce sens, le jour aiguise l'entrée de l'Église dans le mystère pascal.
+
+Pastoralement, le Mercredi saint invite à un examen de conscience honnête. Il demande où les disciples sont tentés d'instrumentaliser la religion, d'échanger la fidélité contre un avantage ou de laisser le ressentiment mûrir en infidélité, et il presse à revenir au repentir avant que les jours sacrés ne déploient la miséricorde encore offerte par le Seigneur trahi.
+$desc$),
+('holy-thursday-evening-mass-of-the-lords-supper', 'Jeudi saint : Messe du soir de la Cène du Seigneur', $desc$
+La Messe du soir de la Cène du Seigneur ouvre le saint Triduum pascal et rassemble d'antiques traditions romaines et hiérosolymitaines entourant la commémoration de la Dernière Cène. Avec le temps, sa célébration avait été déplacée plus tôt dans la journée; la réforme de Pie XII la rétablit au soir, plus conformément au cadre évangélique, et le Missel postconciliaire a conservé cette restauration. Le calendrier romain contemporain présente ainsi le Jeudi saint comme le véritable seuil liturgique du Triduum, et non comme un simple prélude dévotionnel au Vendredi saint.
+
+Sa théologie est inépuisablement riche: l'institution de l'Eucharistie, le commandement de la charité fraternelle et le sacerdoce sacrificiel se tiennent ensemble dans un unique mystère d'amour livré. Le Christ ne transmet pas seulement le pain et le vin devenus son Corps et son Sang, mais encore la forme même selon laquelle l'Église doit vivre - une communion enracinée dans le service sacrificiel. Le lavement des pieds, sans être le centre de la liturgie, manifeste la figure de l'autorité née du Christ eucharistique.
+
+Liturgiquement, la Messe est célébrée en blanc avec la solennité propre au Triduum, mais sa joie demeure traversée de gravité parce qu'elle s'ouvre directement sur Gethsémani et la Passion. Le Gloria revient au son des cloches, l'Eucharistie est portée en procession au lieu de la réserve, puis l'autel est dépouillé, de sorte que l'Église goûte à la fois l'intimité festive et la désolation imminente.
+
+Pour les fidèles, le Jeudi saint est un retour annuel aux sources de la vie ecclésiale. Il invite à l'adoration du Seigneur eucharistique, à la gratitude pour le ministère ordonné, à la conversion au service humble et à une conscience plus profonde du fait que la communion avec le Christ à l'autel doit se déployer en charité, en vigilance et en disponibilité à l'accompagner dans la nuit de sa livraison.
+$desc$),
+('friday-of-the-passion-of-the-lord', 'Vendredi de la Passion du Seigneur', $desc$
+Le Vendredi de la Passion du Seigneur compte parmi les observances les plus anciennes et les plus austères de l'année chrétienne; Jérusalem comme la Rome primitive attestent déjà une journée de jeûne, d'Écriture et de vénération de la Croix sans célébration de la messe. La liturgie romaine du Vendredi saint a été soigneusement révisée au XXe siècle, surtout sous Pie XII, et les livres postconciliaires en ont gardé la structure fondamentale tout en affinant les textes de la grande prière universelle et de la proclamation de la Passion. Le calendrier de 1969 situe fermement ce jour dans le Triduum pascal comme la plus solennelle commémoration de la mort du Seigneur.
+
+Théologiquement, le Vendredi saint contemple la Croix non comme un échec tragique, mais comme l'heure de l'obéissance rédemptrice où l'Agneau de Dieu enlève le péché du monde. La Passion selon saint Jean, les solennelles intercessions embrassant le monde entier et l'adoration de la sainte Croix proclament ensemble que le Christ règne précisément depuis le bois du sacrifice. Ici justice divine et miséricorde divine se rencontrent sans confusion ni compromis.
+
+Liturgiquement, le jour possède une noblesse dépouillée: vêtements rouges, prosternation des ministres, absence de prière eucharistique et communion au sacrement consacré la veille. Sa place dans le Triduum, entre la Cène et la Vigile, donne au Vendredi saint une qualité suspendue, comme si toute l'Église se tenait devant le côté transpercé du Christ dans le silence, l'intercession et l'adoration.
+
+Pour les croyants d'aujourd'hui, le Vendredi de la Passion du Seigneur demeure l'école la plus profonde de compassion, de repentir et d'espérance. Il apprend aux fidèles à porter les blessures du monde à la Croix, à renoncer à toute banalisation du péché et à croire qu'aucune souffrance honnêtement unie à celle du Christ ne peut rester hors de la portée de la rédemption.
+$desc$),
+('holy-saturday', 'Samedi saint', $desc$
+Le Samedi saint est l'antique jour du grand silence de l'Église, entre la mort du Seigneur et la nuit de sa résurrection. Dès les premiers siècles, il fut marqué par le jeûne, le recueillement et l'attente auprès du tombeau, tandis que la Vigile pascale appartenait originellement à la nuit suivante plutôt qu'au jour lui-même; la réforme du XXe siècle a restauré cette distinction avec une clarté nouvelle. Le calendrier postconciliaire conserve le Samedi saint comme un jour sans messe, entièrement tendu vers la Vigile qui l'ouvrira.
+
+Théologiquement, le Samedi saint est la liturgie de l'absence et de l'action cachée. Le Christ repose au tombeau selon la chair, descend aux enfers et soumet même le royaume de la mort à la portée de sa présence rédemptrice. Le jour enseigne que la victoire divine peut être à l'œuvre dans une immobilité totale, lorsque toute activité visible cesse et que la foi ne vit plus que de la promesse.
+
+Liturgiquement, l'Église s'abstient ce jour-là de l'expression festive des sacrements et demeure dans une austère attente jusqu'à la nuit. Le violet et l'autel dépouillé gardent le climat de veille, tandis que la place du jour dans le Triduum fait de son silence lui-même un fait liturgique - non un vide, mais la pause chargée qui précède l'aube de la création nouvelle.
+
+Pastoralement, le Samedi saint parle avec force à toutes les formes d'attente humaine, de deuil et d'abandon apparent. Il invite les fidèles à veiller là où Dieu semble caché, à se souvenir des morts dans l'espérance et à apprendre que la foi chrétienne comprend la patience de l'entre-deux, dans la certitude que le silence du tombeau n'est pas le dernier mot de l'histoire.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- TRANSLATIONS LA
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('palm-sunday-of-the-passion-of-the-lord', 'Dominica in Palmis de Passione Domini'),
-('monday-of-holy-week', 'Feria II Hebdomadae Sanctae'),
-('tuesday-of-holy-week', 'Feria III Hebdomadae Sanctae'),
-('wednesday-of-holy-week', 'Feria IV Hebdomadae Sanctae'),
-('holy-thursday-evening-mass-of-the-lords-supper', 'Feria V in Cena Domini'),
-('friday-of-the-passion-of-the-lord', 'Feria VI in Passione Domini'),
-('holy-saturday', 'Sabbatum Sanctum')
-) AS x(slug, name)
+('palm-sunday-of-the-passion-of-the-lord', 'Dominica in Palmis de Passione Domini', $desc$
+Dominica in Palmis de Passione Domini duas antiquas traditiones liturgicas coniungit: Hierosolymitanam commemorationem ingressus regalis Christi cum ramis et processione, atque Romanam Passionis proclamationem in limine Hebdomadae Maioris. Reformationes saeculi vicesimi, praesertim Pii XII anno MCMLV et Missalis anno MCMLXIX, huic diei titulum praesentem et structuram magis cohaerentem dederunt, triumphum et passionem explicite copulantes. Reformatio gravitatem diei non minuit; potius declaravit Ecclesiam Hebdomadam Sanctam ingredi Messiam acclamatam, qui per ipsam Passionem regnat.
+
+Theologia huius diei consulto paradoxica est. Idem Christus qui hosannis excipitur deinde in narratione Passionis ad derelictionem, iudicium et crucifixionem procedens auditur, ut Ecclesia regnum messianicum intellegat esse oblationem oboedientem potius quam dominationem mundanam. Dominica haec ostendit gloriam et humiliationem ad unum mysterium salutis pertinere, fidelesque format ut Christum ultra momenta fervoris usque ad sumptuosum discipulatum sequantur.
+
+Liturgice dies inter praecipuas anni dominicas numeratur et Hebdomadam Sanctam colore rubro inaugurat, qui simul passionem regalem et martyrii morem sui donationis significat. Processio vel sollemnis introitus, longa Evangelii Passio, et immediata ad Triduum Paschale propinquitas congregationem in cardine collocant, ubi Quadragesima directae contemplationi salvificorum Christi dolorum cedit.
+
+Christianis hodiernis haec Dominica in Palmis instabilitatem superficialis devotionis detegit atque ad conversionem cordis vocat. Quaerit utrum credentes cum Christo permaneant cum laus in scandalum vertitur, et communitates docet dies sanctissimos anni non ut spectatores ritus dramatis, sed ut discipuli parati viam Crucis ingredi celebrari debere.
+$desc$),
+('monday-of-holy-week', 'Feria II Hebdomadae Sanctae', $desc$
+Feria II Hebdomadae Sanctae ad ferias privilegiatas pertinet quarum cohaerentia in calendario Romano per reformationem Pii XII roborata et in libris postconciliaribus retenta est. Etsi hi dies eandem eminentiam ac Dominica in Palmis vel Triduum non habent, ordinatio liturgica moderna eos consulto servat ut contemplativam ad Passionem accessum. Ita Ecclesiae conceditur ut cum Christo in ultimis diebus ante sacrificium eius maneat.
+
+Evangelium huius diei unctionem Bethaniae tradere solet, qua Maria pretiosum unguentum super Dominum effundit gesto amoris sepulturam eius praeveniente. Theologice dies gratuitam devotionem opponit spiritui calculosae proditionis: verus discipulus pretium Christi agnoscit et se ipsum coram mysterio mortis eius imminentis effundit. Amor intellegit quod cynismus percipere non potest.
+
+Liturgice Feria II Hebdomadae Sanctae violaceo vestitur et sobriam gravitatem privilegiatarum feriarum proxime Triduum antecedentium participat. Locus eius post Dominicam in Palmis et ante apertiores proditionis narrationes ei quendam silentem et fragrantem moram tribuit, in qua Ecclesia pulchritudinem adorationis Messiae damnato oblatae contemplatur.
+
+Pastoraliter hic dies fideles vocat ut examinent quid in vita sua reservatum, custoditum vel nimis pretiosum ad Christo offerendum existiment. Bethania fit schola amoris profusi, docens praeparationem ad Hebdomadam Sanctam non solam severitatem moralem esse, sed cultum generosum, ministerium concretum et promptitudinem ob devotionem male intellegi.
+$desc$),
+('tuesday-of-holy-week', 'Feria III Hebdomadae Sanctae', $desc$
+Feria III Hebdomadae Sanctae pars est ultimi aditus ad Triduum Paschale et, in Romana Hebdomadae Sanctae reformatione, locum suum privilegiatum tamquam diem intensa scripturarum concentratione insignitum retinuit. Structura post reformationes medii saeculi vicesimi recepta et a Missali anni MCMLXIX confirmata Ecclesiae permittit in interiore Cenae novissimae dramate immorari antequam Triduum liturgice incipiat. Historia et liturgia hic in gravem praeparationem, non in apicem caeremonialem, conveniunt.
+
+Evangelium proditionis Iudae praedictionem et Petri negationem iuxta se ponit. Vis theologica diei in eo est quod peccatum non solum ut aperta proditio, sed etiam ut infirmitas, timor et vana fiducia intra ipsum discipulorum circulum detegitur. Christus inter infidelitates lucidum et regium se ostendit, eiusque praescientia indicat Passionem non esse tantum insidias inimicorum, sed oboedientiam qua se libere tradit.
+
+Liturgice dies violacea feria privilegiata manet, quietior quam magni ritus venturi sed nihilominus acriorem ad veram sui cognitionem vocationem continens. Inter devotionem Bethaniae et pactum Iudae consummans collocatus, Ecclesiam in atmosphaeram cenaculi tensa introducit, ubi fidelitas, praesumptio et proditio sub conspectu Domini deteguntur.
+
+Fidelibus Feria III Hebdomadae Sanctae severa misericordia est. Adversus securitatem improvidam monet, a sola verbali fidelitate diffidere docet, atque orationem pro perseverantia fovet, ut discipuli non propriae constantiae sed stabili amoris Christi niti discant, qui fragilitatem eorum ante ipsos novit.
+$desc$),
+('wednesday-of-holy-week', 'Feria IV Hebdomadae Sanctae', $desc$
+Feria IV Hebdomadae Sanctae, quae tradito nomine saepe Dies Proditionis appellatur, nullas magnas caeremoniales additiones in modernis reformationibus accepit; tamen locus eius in serie Romana clarior factus est ut ultima feria integra ante Triduum. Ecclesia hunc diem iam diu ad contemplandum pactum Iudae cum principibus sacerdotum adhibet, et calendarium postconciliarium eandem austeram concentrationem servavit. Historice quasi obscurum limen fungitur inter finem publici ministerii et sacros ritus Paschae Domini.
+
+Theologice dies mysterium proditionis ex intima familiaritate ortae respicit. Iudas non est persecutor externus, sed unus ex Duodecim, et mercatus eius ostendit quomodo propinquitas rerum sanctarum cum corde obdurato coexistere possit. Hinc dies monet peccatum formam calculosae permutationis sumere posse, qua relatio ad Deum interesse, potentiae aut frustrationi subiicitur.
+
+Liturgice haec Feria IV violaceo vestitur et tensam cuiusdam finis quietem gerit. Stat immediate ante Missam in Cena Domini; ideo austeritas eius non est separata, sed ad Tridui revelationem quid proditio constet et quid amor divinus pati velit ordinatur. Hoc sensu ingressum Ecclesiae in mysterium paschale acuit.
+
+Pastoraliter Feria IV Hebdomadae Sanctae ad sincerum conscientiae examen invitat. Quaerit ubi discipuli religione uti velint ad utilitatem, ubi fidelitatem pro commodo mutare tententur, vel ubi amaritudo in infidelitatem maturescat, eosque urget ad paenitentiam reverti antequam dies sacri misericordiam a Domino prodito adhuc oblatam explicent.
+$desc$),
+('holy-thursday-evening-mass-of-the-lords-supper', 'Feria V in Cena Domini', $desc$
+Missa vespertina in Cena Domini sacrum Triduum Paschale aperit et antiquas Romanas atque Hierosolymitanas traditiones circa novissimae Cenae commemorationem colligit. Decursu temporum celebratio in horas matutinas translata fuerat; reformatio autem Pii XII eam ad vesperam restituit, Evangelico contextui aptius respondens, et Missale postconciliarium hanc restitutionem servavit. Ita calendarium Romanum hodiernum Feriam V in Cena Domini tamquam verum limen liturgicum Tridui, non tamquam simplicem devotionis prooemium, repraesentat.
+
+Theologia huius diei inexhausta est: institutio Eucharistiae, mandatum caritatis fraternae et sacerdotium sacrificiale in uno mysterio amoris se tradentis consistunt. Christus non tantum panem et vinum in Corpus et Sanguinem suum conversos tradit, sed ipsam etiam formam qua Ecclesia vivere debet - communionem in servitio sacrificii radicatam. Lotio pedum, quamvis centrum liturgiae non sit, figuram auctoritatis ex Christo eucharistico ortam manifestat.
+
+Liturgice Missa albo celebratur cum sollemnitate Triduo propria, gaudium tamen gravitate pervaditur quia directe ad Gethsemani et Passionem aperitur. Gloria cum tintinnabulis redit, Eucharistia ad locum repositionis in processione defertur, altare spoliatur, atque sic Ecclesia simul festam familiaritatem et imminentem desolationem degustat.
+
+Fidelibus Feria V in Cena Domini annuus reditus ad fontes vitae ecclesialis est. Invitat ad adorationem Domini eucharistici, ad gratiam pro ministerio ordinato, ad conversionem ad humile servitium, et ad altiorem conscientiam communionis cum Christo ad altare necessario in caritatem, vigilantiam et promptitudinem comitandi eum in nocte traditionis suae effluere debere.
+$desc$),
+('friday-of-the-passion-of-the-lord', 'Feria VI in Passione Domini', $desc$
+Feria VI in Passione Domini inter antiquissimas simul et austerissimas observantias anni christiani numeratur; iam Hierosolymae et Romae antiquae attestatur dies ieiunii, Scripturae et Crucis venerationis sine Missae celebratione. Liturgia Romana huius diei diligenter saeculo vicesimo recognita est, praesertim sub Pio XII, et libri postconciliarii structuram eius fundamentalem servaverunt, textibus magnae orationis universalis et Passionis proclamationis emendatis. Calendarium anni MCMLXIX hunc diem firmiter intra Triduum Paschale collocat ut sollemnissimam mortis Domini commemorationem.
+
+Theologice Feria VI in Passione Domini Crucem contemplatur non ut tragicum defectum, sed ut horam oboedientiae redemptricis, qua Agnus Dei peccatum mundi tollit. Passio secundum Ioannem, sollemnes intercessiones totum mundum complectentes et adoratio sanctae Crucis una proclamant Christum ex ipso ligno sacrificii regnare. Hic iustitia divina et misericordia divina sine confusione neque pacto conveniunt.
+
+Liturgice dies austeram nobilitatem habet: vestes rubras, prostrationem ministrorum, absentiam precis eucharisticae et Communionem e sacramento pridie consecrato. Locus eius in Triduo, inter Cenam et Vigiliam, Feriae Sextae qualitatem suspensam tribuit, quasi tota Ecclesia ante latus perforatum Christi in silentio, intercessione et adoratione consistat.
+
+Credentibus hodiernis Feria VI in Passione Domini profundissima schola compassionis, paenitentiae et spei manet. Fideles docet vulnera mundi ad Crucem deferre, omnem peccati levationem reicere, atque confidere nullam passionem quae sincere Passioni Christi coniungitur extra redemptionis ambitum manere posse.
+$desc$),
+('holy-saturday', 'Sabbatum Sanctum', $desc$
+Sabbatum Sanctum est antiquus dies magni Ecclesiae silentii, inter mortem Domini et noctem resurrectionis eius positus. A primis saeculis ieiunio, recollectione et expectatione iuxta sepulcrum signabatur, dum Vigilia Paschalis originarie ad sequentem noctem potius quam ad ipsum diem pertinebat; reformatio saeculi vicesimi hanc distinctionem novata claritate restituit. Calendarium postconciliarium Sabbatum Sanctum tamquam diem sine Missa, totum ad Vigiliam aperturam intentum, servat.
+
+Theologice Sabbatum Sanctum est liturgia absentiae et actionis absconditae. Christus secundum carnem in sepulcro quiescit, ad inferos descendit, atque ipsum mortis regnum praesentiae suae redemptrici subiicit. Dies docet victoriam divinam etiam in summa immobilitate operari posse, cum omnis actio visibilis cessat et fides sola promissione sustentatur.
+
+Liturgice Ecclesia in hoc die a sacramentorum festiva expressione abstinet et usque ad noctem in austera expectatione perseverat. Color violaceus et altare nudatum affectum vigiliae servant, dum locus diei intra Triduum efficit ut ipsum silentium liturgicum sit - non vacuum, sed gravida mora ante auroram novae creationis.
+
+Pastoraliter Sabbatum Sanctum vehementer loquitur ad omnes formas humanae expectationis, luctus et apparentis derelictionis. Fideles invitat ut illic vigiles maneant ubi Deus absconditus esse videtur, mortuorum in spe meminerint, et discant fidem christianam patientem huius medii temporis tolerantiam complecti, certi silentium sepulcri ultimam historiae vocem non esse.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
@@ -7561,46 +8074,190 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', x.name, NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('ash-wednesday', 'Ash Wednesday'),
-('first-sunday-of-lent', 'First Sunday of Lent'),
-('second-sunday-of-lent', 'Second Sunday of Lent'),
-('third-sunday-of-lent', 'Third Sunday of Lent'),
-('fourth-sunday-of-lent', 'Fourth Sunday of Lent'),
-('fifth-sunday-of-lent', 'Fifth Sunday of Lent')
-) AS x(slug, name)
+('ash-wednesday', 'Ash Wednesday', $desc$
+Ash Wednesday marks the formal beginning of Lent in the Roman rite, though the earliest centuries knew the paschal fast in simpler forms before the later development of a structured forty-day season. By the early Middle Ages the Roman Church had fixed this day as the opening of Quadragesima, and the imposition of ashes, first clearly attested for public penitents and then extended to all the faithful, became universal in the Latin West. The postconciliar reform preserved both the ashes and the penitential character of the day while clarifying its place as the communal entrance into Lent.
+
+Theologically, Ash Wednesday is a summons to truth. The ashes speak of mortality, repentance, and the need for conversion, yet they are not a gesture of despair; they locate human frailty within the mercy of the God who calls sinners back to covenant fidelity. The day teaches that Christian penance is not self-hatred but the acceptance of reality before God, so that grace may begin again where illusion ends.
+
+Liturgically, the day is a privileged violet feria that immediately changes the Church's tone from ordinary time to penitential pilgrimage. The proclamation of fasting, almsgiving, and prayer from the Sermon on the Mount, joined to the austere ritual of ashes, places the assembly on a path that leads toward baptismal renewal and the Paschal Mystery. Even without the rank of a Sunday or solemnity, its character is unmistakably decisive.
+
+For the faithful today, Ash Wednesday remains one of the Church's most direct evangelizing moments. It invites serious examination of life, concrete practices of penance and charity, and a recovery of the truth that conversion is communal as well as personal: the whole Church walks into Lent together, marked by humility yet sustained by hope.
+$desc$),
+('first-sunday-of-lent', 'First Sunday of Lent', $desc$
+The First Sunday of Lent has long stood at the beginning of the Church's great penitential journey and in the Roman tradition anchors the season's movement toward Easter. Its place and dignity remained stable through the postconciliar reform, while the expanded lectionary gave the day a richer three-year proclamation centered each year on Christ's temptation in the desert. The Sunday thus retains ancient continuity while speaking with renewed scriptural fullness.
+
+Its theology begins with combat. The Church contemplates Christ fasting and overcoming the tempter, not as a private ascetic episode, but as the recapitulation of Israel's testing and the inauguration of the new Adam's obedient victory. Lent starts here because Christian conversion is impossible apart from spiritual struggle, and because the baptized are called to share in Christ's triumph over lies, appetite, and presumption.
+
+Liturgically, this Sunday belongs among the highest Sundays of the year and wears violet as the sign of repentance, seriousness, and preparation. Coming immediately after Ash Wednesday, it sets the season's direction and admits no substitution by lesser observances; the Church gathers under the Word as a pilgrim people entering the desert with Christ.
+
+Pastorally, the First Sunday of Lent teaches believers to begin again without illusions of ease. It urges concrete renunciation, sharper discernment of temptation, and confidence that the same Lord who conquered in the wilderness accompanies his people through their own testing toward Easter freedom.
+$desc$),
+('second-sunday-of-lent', 'Second Sunday of Lent', $desc$
+The Second Sunday of Lent has, from very early Roman usage, balanced the austerity of the season with a revelation of glory. The transfiguration Gospel has long defined the day, and the postconciliar lectionary retained that ancient instinct across all three cycles, ensuring that Lent never becomes detached from the destiny toward which it tends. History and reform alike show the Church's wisdom in placing light on the mountain in the midst of penitential ascent.
+
+Theologically, the Transfiguration discloses who the suffering Christ truly is and what the baptized are being prepared to share. Moses and Elijah testify that the Law and the Prophets converge in him; the Father's voice commands listening; and the splendor glimpsed on the mountain interprets the road to Jerusalem not as meaningless loss but as the path to glory through obedience. Lent is therefore strengthened by hope, not contradicted by it.
+
+Liturgically, the Sunday remains violet and penitential, yet it carries a luminous tone within that austerity. Positioned after the temptation narrative and before the deeper catechumenal Sundays, it steadies the Church with contemplative vision, so that fasting and discipline are ordered to transformation in Christ rather than to mere self-improvement.
+
+For the faithful, the Second Sunday of Lent is a needed antidote to discouragement. It teaches Christians to remember, amid sacrifice and obscurity, the beauty of the Lord and the promised transfiguration of human life, and it encourages them to listen more attentively to the Son whom the Father reveals.
+$desc$),
+('third-sunday-of-lent', 'Third Sunday of Lent', $desc$
+The Third Sunday of Lent took on special richness in the restored catechumenal structure of the modern Roman lectionary. While older forms already gave the middle Sundays of Lent a strong penitential identity, the postconciliar reform highlighted in Year A the Samaritan woman at the well as the first of the great scrutiny Gospels for those preparing for baptism. Thus the day now carries both ancient Lenten seriousness and renewed mystagogical purpose.
+
+Its theology is one of thirst and true worship. Christ asks for water only to reveal himself as the giver of living water, exposing the disordered loves of the human heart while opening it to grace. The Samaritan woman becomes the figure of the soul and of the Church: confronted, purified, and finally sent to witness after encountering the Messiah who alone satisfies the deepest thirst.
+
+Liturgically, this Sunday remains among the privileged violet Sundays of Lent and often bears an explicitly catechumenal accent wherever the scrutinies are celebrated. Positioned at the season's midpoint, it presses the Church from general penance toward more searching purification, linking baptismal desire, conversion of life, and the worship of the Father in spirit and truth.
+
+Pastorally, the Third Sunday of Lent speaks directly to contemporary restlessness. It invites the faithful to name the wells from which they have tried to drink in vain, to allow Christ to uncover both wound and desire, and to discover that authentic conversion leads not to shame's paralysis but to missionary testimony.
+$desc$),
+('fourth-sunday-of-lent', 'Fourth Sunday of Lent', $desc$
+The Fourth Sunday of Lent, known as Laetare Sunday, has long provided a measured easing of the season's austerity within the Roman tradition. Its ancient entrance antiphon gave it its joyful name, and the possibility of rose vestments developed as a visible sign that Easter is drawing nearer. The postconciliar reform preserved both the Sunday's privileged place and, in Year A, its intimate connection with the Gospel of the man born blind, the second great scrutiny Gospel.
+
+Theologically, the day joins joy to illumination. The healing of the blind man reveals Christ as the light of the world, while the progressive opening of the man's eyes becomes an image of faith awakening through trial and confession. The Church rejoices not because penance is abandoned, but because divine light is already overcoming blindness and making the believer capable of true sight.
+
+Liturgically, the Sunday retains its high Lenten rank while allowing a distinct softening in tone. Rose may replace violet, flowers and organ may be used with greater freedom according to custom, and the catechumenal scrutiny accent can shape the celebration where Year A readings are employed. Situated just beyond the midpoint of Lent, it reminds the Church that penitence is ordered to joy.
+
+For the faithful, Laetare Sunday offers both encouragement and challenge. It consoles those weary in the Lenten struggle, yet it also asks whether they truly want to see, since illumination requires the humility to admit blindness and the courage to confess Christ before a doubtful world.
+$desc$),
+('fifth-sunday-of-lent', 'Fifth Sunday of Lent', $desc$
+The Fifth Sunday of Lent historically marked, in older Roman usage, the beginning of Passiontide, and although the specific sub-season was simplified in the reform after Vatican II, the day retained a heightened gravity as Lent turns immediately toward Holy Week. In the modern lectionary, Year A gives the raising of Lazarus as the third great scrutiny Gospel, preserving the ancient instinct that the last stage of Lent should focus on life, death, and the power of Christ to call forth the new creation. The reform thus changed structure more than substance.
+
+Its theology centers on resurrection before Easter and on the Lord's sovereignty in the face of death. Christ delays, weeps, commands, and calls Lazarus from the tomb, revealing that he is not only a teacher of immortality but the Resurrection and the Life in person. The day teaches that conversion requires leaving the graveclothes behind and entrusting even the most hopeless places of human existence to the voice of the Son of God.
+
+Liturgically, the Sunday remains violet and belongs to the privileged Lenten cycle immediately preceding Palm Sunday. Its position gives it an intensifying force: the Church now looks directly toward the Passion with the promise that the One who goes to die is himself the Lord of life. Where the scrutinies are celebrated, the day becomes especially baptismal and eschatological in tone.
+
+Pastorally, the Fifth Sunday of Lent addresses grief, fear, and spiritual deadness with unusual directness. It invites the faithful to bring before Christ the tombs they think sealed, to hear his command to come forth, and to prepare for Holy Week with renewed trust that God's final word over the human condition is life, not decay.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- FR translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', x.name, NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('ash-wednesday', 'Mercredi des Cendres'),
-('first-sunday-of-lent', 'Premier dimanche de Carême'),
-('second-sunday-of-lent', 'Deuxième dimanche de Carême'),
-('third-sunday-of-lent', 'Troisième dimanche de Carême'),
-('fourth-sunday-of-lent', 'Quatrième dimanche de Carême'),
-('fifth-sunday-of-lent', 'Cinquième dimanche de Carême')
-) AS x(slug, name)
+('ash-wednesday', 'Mercredi des Cendres', $desc$
+Le Mercredi des Cendres marque le commencement formel du Carême dans le rite romain, même si les premiers siècles ne connaissaient d'abord le jeûne pascal que sous des formes plus simples avant le développement ultérieur d'une saison structurée de quarante jours. Dès le haut Moyen Âge, l'Église romaine avait fixé ce jour comme ouverture de la Quadragésime, et l'imposition des cendres, d'abord clairement attestée pour les pénitents publics puis étendue à tous les fidèles, devint universelle en Occident latin. La réforme postconciliaire a conservé à la fois les cendres et le caractère pénitentiel du jour, tout en clarifiant sa place comme entrée communautaire dans le Carême.
+
+Théologiquement, le Mercredi des Cendres est un appel à la vérité. Les cendres parlent de mortalité, de repentir et du besoin de conversion, mais elles ne sont pas un geste de désespoir; elles situent la fragilité humaine dans la miséricorde du Dieu qui rappelle les pécheurs à la fidélité de l'alliance. Le jour enseigne que la pénitence chrétienne n'est pas haine de soi, mais acceptation du réel devant Dieu, afin que la grâce puisse recommencer là où l'illusion prend fin.
+
+Liturgiquement, c'est une féria privilégiée violette qui change immédiatement le ton de l'Église, du temps ordinaire au pèlerinage pénitentiel. La proclamation du jeûne, de l'aumône et de la prière dans le Sermon sur la montagne, jointe au rite austère des cendres, place l'assemblée sur un chemin qui conduit au renouvellement baptismal et au Mystère pascal. Sans avoir le rang d'un dimanche ou d'une solennité, son caractère est pourtant nettement décisif.
+
+Pour les fidèles d'aujourd'hui, le Mercredi des Cendres demeure l'un des moments les plus directement évangélisateurs de l'Église. Il invite à un sérieux examen de vie, à des pratiques concrètes de pénitence et de charité, et à redécouvrir que la conversion est à la fois personnelle et communautaire: toute l'Église entre ensemble en Carême, marquée d'humilité mais soutenue par l'espérance.
+$desc$),
+('first-sunday-of-lent', 'Premier dimanche de Carême', $desc$
+Le Premier dimanche de Carême se tient depuis longtemps au commencement du grand itinéraire pénitentiel de l'Église et, dans la tradition romaine, fixe le mouvement de la saison vers Pâques. Sa place et sa dignité sont demeurées stables à travers la réforme postconciliaire, tandis que le lectionnaire développé lui a donné une proclamation plus riche centrée chaque année sur les tentations du Christ au désert. Ce dimanche conserve donc une continuité ancienne tout en parlant avec une plénitude scripturaire renouvelée.
+
+Sa théologie commence par le combat. L'Église contemple le Christ jeûnant et vainquant le tentateur, non comme un épisode ascétique privé, mais comme la récapitulation de l'épreuve d'Israël et l'inauguration de la victoire obéissante du nouvel Adam. Le Carême débute ici parce que la conversion chrétienne est impossible sans lutte spirituelle, et parce que les baptisés sont appelés à participer au triomphe du Christ sur le mensonge, l'appétit désordonné et la présomption.
+
+Liturgiquement, ce dimanche compte parmi les plus hauts dimanches de l'année et porte le violet comme signe de repentir, de gravité et de préparation. Venues immédiatement après le Mercredi des Cendres, ses lectures fixent la direction de la saison et n'admettent pas d'observances moindres à leur place; l'Église se rassemble sous la Parole comme un peuple pèlerin entrant au désert avec le Christ.
+
+Pastoralement, le Premier dimanche de Carême apprend aux croyants à recommencer sans illusion de facilité. Il pousse à des renoncements concrets, à un discernement plus aigu des tentations et à la confiance que le même Seigneur qui a vaincu dans le désert accompagne son peuple à travers ses propres épreuves jusqu'à la liberté pascale.
+$desc$),
+('second-sunday-of-lent', 'Deuxième dimanche de Carême', $desc$
+Le Deuxième dimanche de Carême a très tôt équilibré, dans l'usage romain, l'austérité de la saison par une révélation de gloire. L'Évangile de la Transfiguration définit depuis longtemps ce jour, et le lectionnaire postconciliaire a maintenu cette antique intuition à travers les trois cycles, de sorte que le Carême ne soit jamais séparé de la fin vers laquelle il tend. Histoire et réforme montrent pareillement la sagesse de l'Église plaçant la lumière sur la montagne au milieu de l'ascension pénitentielle.
+
+Théologiquement, la Transfiguration révèle qui est vraiment le Christ souffrant et à quoi les baptisés sont préparés à participer. Moïse et Élie attestent que la Loi et les Prophètes convergent vers lui; la voix du Père commande de l'écouter; et la splendeur aperçue sur la montagne interprète la route de Jérusalem non comme une perte absurde, mais comme le chemin de la gloire à travers l'obéissance. Le Carême est donc fortifié par l'espérance et non contredit par elle.
+
+Liturgiquement, le dimanche demeure violet et pénitentiel, mais il porte une tonalité lumineuse à l'intérieur même de cette austérité. Placé après le récit des tentations et avant les dimanches catéchuménaux plus appuyés, il affermit l'Église par une vision contemplative, afin que jeûne et discipline soient ordonnés à la transformation dans le Christ plutôt qu'à une simple amélioration de soi.
+
+Pour les fidèles, le Deuxième dimanche de Carême est un antidote nécessaire au découragement. Il apprend aux chrétiens à se souvenir, au milieu du sacrifice et de l'obscurité, de la beauté du Seigneur et de la transfiguration promise à la vie humaine, et il les encourage à écouter plus attentivement le Fils que le Père révèle.
+$desc$),
+('third-sunday-of-lent', 'Troisième dimanche de Carême', $desc$
+Le Troisième dimanche de Carême a reçu une richesse particulière avec la structure catéchuménale restaurée du lectionnaire romain moderne. Si les formes plus anciennes donnaient déjà aux dimanches centraux du Carême une forte identité pénitentielle, la réforme postconciliaire a mis en valeur, en année A, la Samaritaine au puits comme premier des grands évangiles des scrutins pour ceux qui se préparent au baptême. Le jour porte ainsi à la fois le sérieux ancien du Carême et une finalité mystagogique renouvelée.
+
+Sa théologie est celle de la soif et du vrai culte. Le Christ demande à boire pour se révéler comme celui qui donne l'eau vive, mettant au jour les amours désordonnés du cœur humain tout en l'ouvrant à la grâce. La Samaritaine devient la figure de l'âme et de l'Église: confrontée, purifiée, puis envoyée témoigner après avoir rencontré le Messie qui seul comble la soif la plus profonde.
+
+Liturgiquement, ce dimanche demeure parmi les dimanches violets privilégiés du Carême et reçoit souvent un accent explicitement catéchuménal là où les scrutins sont célébrés. Placé au milieu de la saison, il pousse l'Église de la pénitence générale vers une purification plus incisive, reliant désir baptismal, conversion de vie et adoration du Père en esprit et en vérité.
+
+Pastoralement, le Troisième dimanche de Carême parle directement à l'inquiétude contemporaine. Il invite les fidèles à nommer les puits auxquels ils ont tenté de boire en vain, à laisser le Christ dévoiler blessure et désir, et à découvrir que la conversion authentique ne conduit pas à la paralysie de la honte mais au témoignage missionnaire.
+$desc$),
+('fourth-sunday-of-lent', 'Quatrième dimanche de Carême', $desc$
+Le Quatrième dimanche de Carême, connu comme Laetare, offre depuis longtemps dans la tradition romaine un allègement mesuré de l'austérité de la saison. Son antique antienne d'entrée lui a donné son nom joyeux, et la possibilité des ornements roses s'est développée comme signe visible de la proximité de Pâques. La réforme postconciliaire a conservé la place privilégiée de ce dimanche ainsi que, en année A, son lien intime avec l'Évangile de l'aveugle-né, deuxième grand Évangile des scrutins.
+
+Théologiquement, le jour unit la joie à l'illumination. La guérison de l'aveugle révèle le Christ comme lumière du monde, tandis que l'ouverture progressive des yeux du mendiant devient l'image d'une foi qui s'éveille à travers l'épreuve et la confession. L'Église se réjouit non parce que la pénitence serait abandonnée, mais parce que la lumière divine triomphe déjà de l'aveuglement et rend le croyant capable de voir vraiment.
+
+Liturgiquement, le dimanche conserve son haut rang quadragésimal tout en permettant un adoucissement distinct du ton. Le rose peut remplacer le violet, les fleurs et l'orgue peuvent être employés avec plus de liberté selon la coutume, et l'accent des scrutins peut marquer la célébration là où l'on utilise les lectures de l'année A. Situé un peu au-delà du milieu du Carême, il rappelle à l'Église que la pénitence est ordonnée à la joie.
+
+Pour les fidèles, le dimanche de Laetare offre à la fois encouragement et exigence. Il console ceux qui se fatiguent dans le combat du Carême, mais il demande aussi s'ils veulent vraiment voir, puisque l'illumination suppose l'humilité d'avouer sa cécité et le courage de confesser le Christ devant un monde dubitatif.
+$desc$),
+('fifth-sunday-of-lent', 'Cinquième dimanche de Carême', $desc$
+Le Cinquième dimanche de Carême marquait historiquement, dans l'ancien usage romain, le début du Temps de la Passion; même si cette sous-saison a été simplifiée après Vatican II, le jour a gardé une gravité accrue alors que le Carême se tourne immédiatement vers la Semaine sainte. Dans le lectionnaire moderne, l'année A donne la résurrection de Lazare comme troisième grand Évangile des scrutins, conservant l'intuition ancienne selon laquelle la dernière étape du Carême doit se concentrer sur la vie, la mort et la puissance du Christ appelant la création nouvelle. La réforme a donc modifié surtout la structure, beaucoup moins la substance.
+
+Sa théologie est centrée sur la résurrection avant Pâques et sur la souveraineté du Seigneur face à la mort. Le Christ tarde, pleure, commande et appelle Lazare hors du tombeau, révélant qu'il n'est pas seulement un maître de l'immortalité, mais la Résurrection et la Vie en personne. Le jour enseigne que la conversion exige de laisser derrière soi les bandelettes du tombeau et de confier même les lieux les plus désespérés de l'existence humaine à la voix du Fils de Dieu.
+
+Liturgiquement, le dimanche demeure violet et appartient au cycle quadragésimal privilégié qui précède immédiatement les Rameaux. Sa position lui donne une force d'intensification: l'Église regarde désormais directement vers la Passion avec la promesse que celui qui va mourir est lui-même le Seigneur de la vie. Là où les scrutins sont célébrés, le jour devient particulièrement baptismal et eschatologique.
+
+Pastoralement, le Cinquième dimanche de Carême s'adresse avec une rare franchise au deuil, à la peur et à l'engourdissement spirituel. Il invite les fidèles à présenter au Christ les tombeaux qu'ils croient scellés, à entendre son ordre de sortir, et à se préparer à la Semaine sainte avec une confiance renouvelée dans le fait que la parole finale de Dieu sur la condition humaine est la vie et non la corruption.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- LA translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('ash-wednesday', 'Feria IV Cinerum'),
-('first-sunday-of-lent', 'Dominica I in Quadragesima'),
-('second-sunday-of-lent', 'Dominica II in Quadragesima'),
-('third-sunday-of-lent', 'Dominica III in Quadragesima'),
-('fourth-sunday-of-lent', 'Dominica IV in Quadragesima'),
-('fifth-sunday-of-lent', 'Dominica V in Quadragesima')
-) AS x(slug, name)
+('ash-wednesday', 'Feria IV Cinerum', $desc$
+Feria IV Cinerum formale initium Quadragesimae in Ritu Romano signat, quamvis primi saeculi ieiunium paschale simplicioribus formis ante progressionem temporis quadraginta dierum structi novissent. Iam ineunte Medio Aevo Ecclesia Romana hunc diem velut Quadragesimae ingressum fixerant, atque impositio cinerum, primo pro publicis paenitentibus clare testata, deinde ad universos fideles extensa, in Occidente Latino communis facta est. Reformatio postconciliaris et cineres et indolem paenitentialem diei servavit, locum tamen eius tamquam communem ingressum in Quadragesimam clarius illustrans.
+
+Theologice Feria IV Cinerum ad veritatem vocat. Cineres mortalitatem, paenitentiam et conversionis necessitatem significant, sed gestus desperationis non sunt; fragilitatem humanam intra misericordiam Dei collocant, qui peccatores ad foederis fidelitatem revocat. Dies docet paenitentiam christianam non esse odium sui, sed receptionem veritatis coram Deo, ut gratia ibi denuo incipere possit ubi fallacia desinit.
+
+Liturgice dies est feria privilegiata violacea quae statim sonum Ecclesiae a tempore per annum ad iter paenitentiale commutat. Proclamatio ieiunii, eleemosynae et orationis ex Sermone in monte una cum austero ritu cinerum congregationem in viam ponit quae ad renovationem baptismalem et ad Mysterium Paschale ducit. Etsi gradum dominicae vel sollemnitatis non habet, indoles eius plane decisiva est.
+
+Fidelibus hodiernis Feria IV Cinerum unum e momentis Ecclesiae maxime evangelizantibus manet. Invitat ad gravem vitae examinationem, ad concretas paenitentiae et caritatis exercitationes, atque ad recuperandam veritatem conversionem simul personalem et communitariam esse: tota Ecclesia una in Quadragesimam ingreditur, humilitate signata sed spe sustentata.
+$desc$),
+('first-sunday-of-lent', 'Dominica I in Quadragesima', $desc$
+Dominica I in Quadragesima iamdiu in principio magni itineris paenitentialis Ecclesiae stat atque in traditione Romana cursum temporis ad Pascha dirigit. Locus et dignitas eius per reformationem postconciliariam stabiles manserunt, dum lectionarium ampliatum diem uberiori proclamatione circa tentationem Christi in deserto omni anno locupletavit. Sic haec dominica antiquam continuationem servat et renovata scripturistica plenitudine loquitur.
+
+Theologia eius a certamine incipit. Ecclesia Christum ieiunantem et tentatorem superantem contemplatur, non ut privatam asceticam scenam, sed ut recapitulatio probationis Israel et initium victoriae oboedientis novi Adae. Hic Quadragesima incipit, quia conversio christiana sine certamine spirituali impossibilis est, et quia baptizati vocantur ad triumphum Christi super mendacium, appetitum inordinatum et praesumptionem participandum.
+
+Liturgice haec dominica inter praecipuas anni dominicas numeratur et violaceo vestitur ut signum paenitentiae, gravitatis et praeparationis. Immediate post Feriam IV Cinerum veniens, directionem temporis constituit nec minoribus observantiis cedit; Ecclesia sub Verbo congregatur velut populus peregrinus cum Christo desertum ingrediens.
+
+Pastoraliter Dominica I in Quadragesima credentes docet quomodo sine facili spe de novo incipiant. Renuntiationes concretas, acutiorem tentationum discretionem et fiduciam postulat eundem Dominum qui in eremo vicit populum suum per proprias probationes ad libertatem paschalem comitari.
+$desc$),
+('second-sunday-of-lent', 'Dominica II in Quadragesima', $desc$
+Dominica II in Quadragesima iam ex antiquo Romano usu austeritatem temporis cum revelatione gloriae temperat. Evangelium Transfigurationis diu diem definivit, et lectionarium postconciliarium eandem antiquissimam mentem per tres cyclos servavit, ne Quadragesima umquam a fine ad quem tendit separetur. Historia et reformatio pariter ostendunt Ecclesiae sapientiam lucem in monte medio in ascensu paenitentiali collocandi.
+
+Theologice Transfiguratio manifestat quis vere sit Christus passurus et ad quid baptizati praeparentur participandum. Moyses et Elias testantur Legem et Prophetas in ipso convenire; vox Patris iubet ipsum audiri; splendor autem in monte visus viam Hierosolymitanam interpretatur non quasi inanem iacturam, sed quasi iter ad gloriam per oboedientiam. Quadragesima igitur spe confirmatur, non ab ea contraria redditur.
+
+Liturgice dominica manet violacea et paenitentialis, sed quandam luminosam notam intra ipsam austeritatem gerit. Post narrationem tentationis et ante profundiores catechumenales dominicas posita, Ecclesiam visione contemplativa corroborat, ut ieiunium et disciplina ad transformationem in Christo, non ad nudam sui meliorationem, ordinentur.
+
+Fidelibus Dominica II in Quadragesima necessarium contra taedium remedium est. Christianos docet meminisse, inter sacrificium et obscuritatem, pulchritudinis Domini et promissae humanae vitae transfigurationis, eosque hortatur ut Filium quem Pater revelat attentius audiant.
+$desc$),
+('third-sunday-of-lent', 'Dominica III in Quadragesima', $desc$
+Dominica III in Quadragesima peculiarem ubertatem accepit ex restituta structura catechumenali lectionarii Romani moderni. Etsi antiquiores formae iam mediis dominicis Quadragesimae validam identitatem paenitentialem tribuebant, reformatio postconciliaris in anno A Samaritanam ad puteum velut primum magnorum Evangeliorum scrutiniorum pro baptismo praeparandis extulit. Sic dies et antiquum Quadragesimae pondus et renovatum mystagogicum propositum gerit.
+
+Theologia huius diei est sitis atque veri cultus. Christus aquam petit ut se ipsum velut largitorem aquae vivae manifestet, amores inordinatos cordis humani detegens atque idem cor gratiae aperiens. Samaritana figura fit animae et Ecclesiae: convenitur, purificatur et tandem ad testimonium mittitur postquam Messiam, qui solus altissimam sitim satiat, invenit.
+
+Liturgice haec dominica inter privilegiatas Quadragesimae dominicas violaceas manet et saepe aperte catechumenalem accentum recipit ubi scrutinia celebrantur. In medio temporis posita, Ecclesiam a generali paenitentia ad acriorem purificationem urget, desiderium baptismale, conversionem vitae et Patris adorationem in spiritu et veritate coniungens.
+
+Pastoraliter Dominica III in Quadragesima directe inquietudini hodiernae loquitur. Fideles invitat ut puteos nominent ex quibus frustra bibere conati sunt, Christum sinant et vulnus et desiderium eorum revelare, ac detegant veram conversionem non ad stuporem pudoris, sed ad testimonium missionarium ducere.
+$desc$),
+('fourth-sunday-of-lent', 'Dominica IV in Quadragesima', $desc$
+Dominica IV in Quadragesima, quae Laetare vocatur, iamdiu in traditione Romana modicum relaxationis signum intra austeritatem temporis praebet. Antiqua antiphona introitus ei nomen laetum dedit, et facultas vestium rosacearum tamquam visibile signum Paschae iam appropinquantis evoluta est. Reformatio postconciliaris et locum privilegiatum huius dominicae et, anno A, intimam eius coniunctionem cum Evangelio de caeco nato, secundo magno scrutiniorum Evangelio, servavit.
+
+Theologice dies gaudium cum illuminatione coniungit. Caeci curatio Christum ut lucem mundi manifestat, dum oculorum mendici paulatina apertio imago fidei fit per probationem et confessionem excitatae. Ecclesia gaudet non quia paenitentia deponatur, sed quia lux divina iam caecitatem vincit atque credentem ad veram visionem aptum reddit.
+
+Liturgice dominica summum Quadragesimae gradum retinet, simul tamen distinctam soni mitigationem admittit. Rosaceus color loco violacei adhiberi potest, flores et organum latiore libertate secundum consuetudinem adhiberi possunt, et accentus scrutiniorum celebrationem informare valet ubi lectiones anni A sumuntur. Paulum ultra medium Quadragesimae sita, Ecclesiam monet paenitentiam ad gaudium ordinari.
+
+Fidelibus Dominica Laetare simul consolationem et provocationem offert. Eos qui in certamine quadragesimali fatigantur consolatur, sed etiam rogat utrum vere videre velint, quoniam illuminatio humilitatem postulat caecitatem confitendi et fortitudinem Christum coram mundo dubitante profitendi.
+$desc$),
+('fifth-sunday-of-lent', 'Dominica V in Quadragesima', $desc$
+Dominica V in Quadragesima historice, in veteri Romano usu, initium Temporis Passionis notabat; quamvis illa distincta subsectio post Vaticanum II simplicior facta sit, dies tamen graviorem vim retinuit dum Quadragesima statim ad Hebdomadam Sanctam convertitur. In lectionario moderno annus A resurrectionem Lazari tamquam tertium magnum Evangelium scrutiniorum proponit, antiquum instinctum servans quo ultima Quadragesimae pars de vita, morte et potestate Christi novam creationem evocantis agere debet. Reformatio igitur structuram magis quam substantiam mutavit.
+
+Theologia diei circa resurrectionem ante Pascha et circa Domini potestatem coram morte vertitur. Christus moratur, lacrimat, imperat et Lazarum e sepulcro vocat, ostendens se non solum magistrum immortalitatis, sed ipsam Resurrectionem et Vitam esse. Dies docet conversionem exigere ut linteamina sepulcri relinquantur et etiam desperatissima humanae existentiae loca voci Filii Dei committantur.
+
+Liturgice dominica violacea manet et ad privilegium Quadragesimae cyclum, qui statim Palmarium antecedit, pertinet. Locus eius vim intendendi habet: Ecclesia nunc directe ad Passionem respicit cum promissione eum qui moriturus est ipsum esse Dominum vitae. Ubi scrutinia celebrantur, dies peculiari modo baptismalem et eschatologicam notam accipit.
+
+Pastoraliter Dominica V in Quadragesima luctum, timorem et spiritualem torporem insolita directitudine alloquitur. Fideles invitat ut Christo sepulcra proponant quae clausa putant, imperium eius exeundi audiant, et ad Hebdomadam Sanctam renovata fiducia se parent quod ultimum Dei verbum super condicionem humanam vita sit, non corruptio.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
@@ -7641,43 +8298,163 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', x.name, NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('first-sunday-of-advent', 'First Sunday of Advent'),
-('second-sunday-of-advent', 'Second Sunday of Advent'),
-('third-sunday-of-advent', 'Third Sunday of Advent'),
-('fourth-sunday-of-advent', 'Fourth Sunday of Advent'),
-('december-24-advent-feria', '24 December (Advent Feria)')
-) AS x(slug, name)
+('first-sunday-of-advent', 'First Sunday of Advent', $desc$
+The First Sunday of Advent opens the liturgical year in the Roman rite and reflects a season whose present four-Sunday form emerged through the convergence of Roman, Gallican, and Frankish traditions. By the Middle Ages the Roman usage had settled into the pattern familiar today, and the reform following the Second Vatican Council preserved that structure while refining the lectionary so that Advent's double character - remembrance of Christ's first coming and expectation of his glorious return - would appear more clearly. The Church therefore begins her year not with arrival but with desire.
+
+Its theology is one of wakeful hope. The readings summon the faithful to vigilance, repentance, and longing for the Lord who comes in history, sacrament, and final judgment. Advent opens not by turning immediately to Bethlehem's sentiment, but by placing the whole Church beneath the horizon of the Parousia, so that Christmas itself may be received as part of a larger mystery of divine coming.
+
+Liturgically, this Sunday bears the high rank proper to the beginning of a strong season and is vested in violet, a color that here signifies sober longing more than penitential severity. Its texts, rich in prophetic promise and eschatological watchfulness, establish the tone for the weeks ahead and displace lesser observances, marking a clear transition from ordinary time to sacred expectation.
+
+For the faithful today, the First Sunday of Advent is a remedy against spiritual drift. It invites believers to recover the art of waiting, to judge the passing year in the light of eternity, and to begin again with disciplined hope, trusting that the Lord who once came in humility still comes and will come in glory.
+$desc$),
+('second-sunday-of-advent', 'Second Sunday of Advent', $desc$
+The Second Sunday of Advent stands within the mature Roman shape of a four-week Advent and, especially in the reformed lectionary, highlights the prophetic and preparatory mission of John the Baptist. The postconciliar calendar preserved the traditional place of this Sunday while giving broader scriptural room to Isaiah's promises of peace and the Baptist's summons to conversion. The day therefore deepens Advent from general watchfulness into concrete preparation.
+
+Its theology centers on the making of a way for the Lord. John appears as the last and greatest prophetic voice before Christ's public manifestation, calling hearts to repentance so that divine consolation may be received rather than ignored. Advent hope is shown here not as passive wishing, but as the moral and spiritual straightening of paths for the coming King.
+
+Liturgically, the day remains a violet Sunday of the highest seasonal rank, gathering prophetic consolation and ascetical urgency into a single act of prayer. Situated between the broad eschatological horizon of the first week and the more immediate joy of Gaudete, it gives the season a stern mercy: the Lord's coming is good news, but it demands readiness.
+
+Pastorally, the Second Sunday of Advent calls communities to honest reform. It invites the faithful to attend to those habits, injustices, and inner crookedness that impede grace, and it presents John the Baptist as a model of courageous truthfulness in a culture that prefers distraction to repentance.
+$desc$),
+('third-sunday-of-advent', 'Third Sunday of Advent', $desc$
+The Third Sunday of Advent, known as Gaudete Sunday from its entrance antiphon, has long marked a distinctive softening of Advent's restraint within the Roman tradition. Its joyful character and the optional use of rose vestments developed as signs that the Lord's coming is near, and the postconciliar reform preserved this inherited balance of expectation and gladness. The day remains one of the most recognizable moments of the Advent season.
+
+Its theology is joy rooted in nearness, not in completion. John the Baptist still stands in the liturgy, but now his witness points explicitly to the One already among the people, though not yet fully recognized. Christian joy here is not premature triumphalism; it is the exultation of those who know salvation is at hand and whose hearts are being enlarged to receive it.
+
+Liturgically, Gaudete Sunday remains within Advent and therefore does not abandon the season's seriousness, but it allows a visible and audible brightening. Rose may replace violet, the scriptural tone becomes more exultant, and the whole celebration functions as a gracious encouragement midway through the season. Its rank as an Advent Sunday ensures that this joy belongs to the whole Church and not merely to private sentiment.
+
+For believers today, the Third Sunday of Advent offers a deeply needed Christian understanding of joy. It teaches that joy can coexist with waiting, incompletion, and repentance, and it invites the faithful to cultivate gratitude, gentleness, and hopeful endurance in a world often suspicious of both holiness and happiness.
+$desc$),
+('fourth-sunday-of-advent', 'Fourth Sunday of Advent', $desc$
+The Fourth Sunday of Advent belongs to the final immediate preparation for the Nativity and, in the Roman rite, brings the season to its most concentrated form. The older Roman liturgy and the reformed lectionary alike place before the Church the events directly preceding the birth of Christ, especially the annunciation and the mystery of Joseph's obedience depending on the cycle. The postconciliar reform preserved this movement so that Advent closes not in abstraction, but in the concrete human circumstances through which the Word becomes flesh.
+
+Its theology centers on obedient receptivity. Whether the liturgy hears of Mary's fiat or Joseph's just and trusting response, the day contemplates the way divine promise enters history through faith-filled consent. The Incarnation is shown not as mythic inevitability but as the free, grace-enabled cooperation of those chosen to receive the Messiah.
+
+Liturgically, the Sunday remains violet and retains the privileged rank of the Advent season, yet its mood is more intimate than that of the earlier weeks. The prophetic horizon narrows to the house of David, to Nazareth, to the womb, and to the hidden acts of trust by which salvation history moves toward Christmas. The Church's prayer becomes concentrated expectancy.
+
+Pastorally, the Fourth Sunday of Advent teaches the faithful how to wait in a personal rather than merely seasonal way. It invites them to imitate the faith of Mary and Joseph, to consent to God's action in ordinary circumstances, and to prepare for Christmas by interior availability rather than by external activity alone.
+$desc$),
+('december-24-advent-feria', '24 December (Advent Feria)', $desc$
+The feria of 24 December represents the final daytime moment of Advent before the Christmas Vigil begins, and it belongs to the sequence of privileged ferias from 17 to 24 December that took on a particularly stable shape in the Roman rite. These days, marked by the great "O" Antiphons in the Divine Office, were carefully retained in the postconciliar reform precisely because they embody the Church's most intense immediate longing for the Messiah. The reform thus preserved their privileged status even while clarifying the distinction between the day of 24 December and the liturgical beginning of Christmas in the evening.
+
+Its theology is concentrated desire. The promises have converged; the names of the expected Savior are invoked one by one; and the Church stands at the very edge of fulfillment, praying with Israel's accumulated hope. This day is about nearness so complete that silence, recollection, and invocation become themselves forms of theological speech.
+
+Liturgically, 24 December by day remains a privileged Advent feria in violet, even though the evening already turns toward Christmas in white. That juxtaposition gives the day a rare delicacy: it belongs wholly to Advent and yet lives in the immediate penumbra of the Nativity. Its proper texts and place among the December ferias prevent the final hours of waiting from being swallowed up by festivity too soon.
+
+For the faithful, this day is a lesson in spiritual restraint and holy eagerness. It invites Christians to honor the last stretch of waiting, to pray with the O Antiphons, to let expectation ripen into adoration, and to enter Christmas not distracted and exhausted, but recollected and ready to receive the Savior.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- FR translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', x.name, NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('first-sunday-of-advent', 'Premier dimanche de l''Avent'),
-('second-sunday-of-advent', 'Deuxième dimanche de l''Avent'),
-('third-sunday-of-advent', 'Troisième dimanche de l''Avent'),
-('fourth-sunday-of-advent', 'Quatrième dimanche de l''Avent'),
-('december-24-advent-feria', '24 décembre (Férie de l''Avent)')
-) AS x(slug, name)
+('first-sunday-of-advent', 'Premier dimanche de l''Avent', $desc$
+Le Premier dimanche de l'Avent ouvre l'année liturgique dans le rite romain et reflète une saison dont la forme actuelle de quatre dimanches est née de la convergence de traditions romaines, gallicanes et franques. Au Moyen Âge, l'usage romain s'était fixé dans le schéma aujourd'hui familier, et la réforme suivant le Concile Vatican II a conservé cette structure tout en affinant le lectionnaire pour faire mieux apparaître le double caractère de l'Avent - mémoire de la première venue du Christ et attente de son retour glorieux. L'Église commence ainsi son année non par l'arrivée, mais par le désir.
+
+Sa théologie est celle d'une espérance vigilante. Les lectures appellent les fidèles à la veille, à la conversion et au désir du Seigneur qui vient dans l'histoire, dans les sacrements et au jugement final. L'Avent ne s'ouvre donc pas en se tournant d'abord vers le seul sentiment de Bethléem, mais en plaçant toute l'Église sous l'horizon de la Parousie, afin que Noël lui-même soit reçu comme une partie d'un mystère plus vaste de venue divine.
+
+Liturgiquement, ce dimanche porte le rang élevé propre à l'ouverture d'un temps fort et se célèbre en violet, couleur qui signifie ici davantage le désir grave que la pénitence stricte. Ses textes, riches de promesse prophétique et de vigilance eschatologique, établissent le ton des semaines à venir et écartent les observances moindres, marquant clairement le passage du temps ordinaire à l'attente sacrée.
+
+Pour les fidèles aujourd'hui, le Premier dimanche de l'Avent est un remède contre l'errance spirituelle. Il invite les croyants à retrouver l'art d'attendre, à juger l'année qui s'achève à la lumière de l'éternité et à recommencer avec une espérance disciplinée, dans la confiance que le Seigneur qui est venu dans l'humilité vient encore et viendra dans la gloire.
+$desc$),
+('second-sunday-of-advent', 'Deuxième dimanche de l''Avent', $desc$
+Le Deuxième dimanche de l'Avent s'inscrit dans la forme romaine mûre d'un Avent de quatre semaines et, surtout dans le lectionnaire réformé, met en lumière la mission prophétique et préparatoire de Jean Baptiste. Le calendrier postconciliaire a conservé la place traditionnelle de ce dimanche tout en donnant un espace scripturaire plus large aux promesses d'Isaïe sur la paix et à l'appel du Baptiste à la conversion. Le jour approfondit ainsi l'Avent, le faisant passer d'une vigilance générale à une préparation concrète.
+
+Sa théologie est centrée sur la préparation d'un chemin pour le Seigneur. Jean apparaît comme la dernière et la plus grande voix prophétique avant la manifestation publique du Christ, appelant les cœurs au repentir afin que la consolation divine soit reçue et non ignorée. L'espérance de l'Avent s'y montre non comme un simple souhait passif, mais comme le redressement moral et spirituel des sentiers pour la venue du Roi.
+
+Liturgiquement, ce jour demeure un dimanche violet du plus haut rang saisonnier, rassemblant en une seule prière consolation prophétique et urgence ascétique. Placé entre le large horizon eschatologique de la première semaine et la joie plus immédiate de Gaudete, il donne à la saison une miséricorde exigeante: la venue du Seigneur est une bonne nouvelle, mais elle demande une véritable préparation.
+
+Pastoralement, le Deuxième dimanche de l'Avent appelle les communautés à une réforme sincère. Il invite les fidèles à regarder en face les habitudes, les injustices et les courbures intérieures qui font obstacle à la grâce, et il présente Jean Baptiste comme modèle de vérité courageuse dans une culture qui préfère la distraction au repentir.
+$desc$),
+('third-sunday-of-advent', 'Troisième dimanche de l''Avent', $desc$
+Le Troisième dimanche de l'Avent, appelé Gaudete d'après son antienne d'entrée, marque depuis longtemps dans la tradition romaine un adoucissement distinct de la retenue propre à l'Avent. Son caractère joyeux et l'usage facultatif des ornements roses se sont développés comme signes que la venue du Seigneur est proche, et la réforme postconciliaire a conservé cet équilibre reçu entre attente et allégresse. Le jour demeure l'un des moments les plus reconnaissables de la saison de l'Avent.
+
+Sa théologie est celle de la joie enracinée dans la proximité, non dans l'achèvement déjà accompli. Jean Baptiste demeure encore dans la liturgie, mais son témoignage désigne maintenant plus explicitement Celui qui se tient déjà au milieu du peuple, quoique non encore pleinement reconnu. La joie chrétienne n'est donc pas ici un triomphalisme prématuré; elle est l'exultation de ceux qui savent le salut tout proche et dont le cœur s'élargit pour le recevoir.
+
+Liturgiquement, le dimanche de Gaudete demeure dans l'Avent et n'abandonne pas pour autant le sérieux de la saison, mais il permet un éclaircissement visible et audible. Le rose peut remplacer le violet, la tonalité scripturaire devient plus exultante, et toute la célébration fonctionne comme un encouragement miséricordieux au milieu du temps. Son rang de dimanche d'Avent assure que cette joie appartient à l'Église entière et non à un simple sentiment privé.
+
+Pour les croyants d'aujourd'hui, le Troisième dimanche de l'Avent offre une compréhension chrétienne profondément nécessaire de la joie. Il enseigne que la joie peut coexister avec l'attente, l'inachèvement et la pénitence, et il invite les fidèles à cultiver gratitude, douceur et persévérance espérante dans un monde souvent soupçonneux à l'égard de la sainteté comme du bonheur.
+$desc$),
+('fourth-sunday-of-advent', 'Quatrième dimanche de l''Avent', $desc$
+Le Quatrième dimanche de l'Avent appartient à la préparation immédiate de la Nativité et, dans le rite romain, porte la saison à sa forme la plus concentrée. L'ancienne liturgie romaine comme le lectionnaire réformé placent devant l'Église les événements qui précèdent directement la naissance du Christ, en particulier l'Annonciation et le mystère de l'obéissance de Joseph selon le cycle. La réforme postconciliaire a conservé ce mouvement, afin que l'Avent s'achève non dans l'abstraction, mais dans les circonstances humaines concrètes par lesquelles le Verbe se fait chair.
+
+Sa théologie est centrée sur l'accueil obéissant. Que la liturgie entende le fiat de Marie ou la réponse juste et confiante de Joseph, le jour contemple la manière dont la promesse divine entre dans l'histoire par le consentement rempli de foi. L'Incarnation apparaît non comme une fatalité mythique, mais comme la coopération libre, rendue possible par la grâce, de ceux qui sont choisis pour recevoir le Messie.
+
+Liturgiquement, le dimanche demeure violet et conserve le rang privilégié de la saison de l'Avent, mais son climat est plus intime que celui des semaines précédentes. L'horizon prophétique se resserre jusqu'à la maison de David, à Nazareth, au sein maternel et aux actes cachés de confiance par lesquels l'histoire du salut s'avance vers Noël. La prière de l'Église devient attente concentrée.
+
+Pastoralement, le Quatrième dimanche de l'Avent enseigne aux fidèles comment attendre d'une manière personnelle et non seulement saisonnière. Il les invite à imiter la foi de Marie et de Joseph, à consentir à l'action de Dieu dans les circonstances ordinaires et à préparer Noël par une disponibilité intérieure plutôt que par la seule agitation extérieure.
+$desc$),
+('december-24-advent-feria', '24 décembre (Férie de l''Avent)', $desc$
+La férie du 24 décembre représente le dernier moment diurne de l'Avent avant que ne commence la Vigile de Noël, et elle appartient à la suite des féries privilégiées du 17 au 24 décembre qui ont pris dans le rite romain une forme particulièrement stable. Ces jours, marqués par les grandes antiennes en « O » dans l'Office divin, ont été soigneusement maintenus par la réforme postconciliaire précisément parce qu'ils expriment le désir immédiat le plus intense de l'Église pour le Messie. La réforme a donc conservé leur statut privilégié tout en clarifiant la distinction entre la journée du 24 décembre et le commencement liturgique de Noël le soir.
+
+Sa théologie est celle du désir concentré. Les promesses ont convergé; les noms du Sauveur attendu sont invoqués l'un après l'autre; et l'Église se tient au bord même de l'accomplissement, priant avec toute l'espérance accumulée d'Israël. Ce jour parle de proximité au point que le silence, le recueillement et l'invocation deviennent eux-mêmes une parole théologique.
+
+Liturgiquement, le 24 décembre dans la journée demeure une féria privilégiée de l'Avent en violet, alors même que le soir s'oriente déjà vers Noël en blanc. Cette juxtaposition donne au jour une délicatesse rare: il appartient tout entier à l'Avent et vit pourtant dans la pénombre immédiate de la Nativité. Ses textes propres et sa place parmi les féries de décembre empêchent les dernières heures de l'attente d'être englouties trop tôt par la fête.
+
+Pour les fidèles, ce jour est une leçon de retenue spirituelle et d'impatience sainte. Il invite les chrétiens à honorer la dernière étape de l'attente, à prier avec les antiennes en O, à laisser le désir mûrir en adoration, et à entrer dans Noël non distraits et épuisés, mais recueillis et prêts à recevoir le Sauveur.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- LA translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('first-sunday-of-advent', 'Dominica I Adventus'),
-('second-sunday-of-advent', 'Dominica II Adventus'),
-('third-sunday-of-advent', 'Dominica III Adventus'),
-('fourth-sunday-of-advent', 'Dominica IV Adventus'),
-('december-24-advent-feria', 'Die 24 Decembris (Feria Adventus)')
-) AS x(slug, name)
+('first-sunday-of-advent', 'Dominica I Adventus', $desc$
+Dominica I Adventus annum liturgicum in Ritu Romano aperit atque tempus repraesentat cuius forma hodierna quattuor dominicarum e concursu traditionum Romanarum, Gallicanarum et Francicarum emersit. Iam Medio Aevo usus Romanus ad formam nunc familiarem compositus erat, et reformatio post Concilium Vaticanum II eandem structuram servavit, lectionario autem ita emendato ut duplex Adventus indoles - memoria prioris Christi adventus et exspectatio gloriosi reditus - clarius appareret. Ecclesia igitur annum suum non adventu iam completo, sed desiderio incipit.
+
+Theologia huius diei est vigilanter sperare. Lectiones fideles ad custodiam, conversionem et desiderium Domini vocant, qui in historia, in sacramentis et in ultimo iudicio venit. Adventus non statim ad affectum Bethlehemicum se convertendo aperitur, sed totam Ecclesiam sub horizonte Parusiae collocat, ut ipsum Natale pars maioris mysterii divini adventus suscipiatur.
+
+Liturgice haec dominica altum gradum initio temporis fortis proprium gerit et violaceo vestitur, colore qui hic sobriam cupiditatem magis quam strictam paenitentiam significat. Textus eius, promissione prophetica et vigilia eschatologica abundantes, sonum hebdomadibus venturis constituunt et minores observantias removent, apertam transitionem a tempore per annum ad sacram expectationem notantes.
+
+Fidelibus hodiernis Dominica I Adventus remedium est contra spiritualem vagationem. Credentes invitat ut artem exspectandi recuperent, annum transeuntem sub lumine aeternitatis iudicent, et cum spe disciplinata denuo incipiant, freti Domino qui olim in humilitate venit nunc quoque venire et in gloria venturum esse.
+$desc$),
+('second-sunday-of-advent', 'Dominica II Adventus', $desc$
+Dominica II Adventus intra maturam Romanam formam quattuor hebdomadarum Adventus stat et, praesertim in lectionario instaurato, missionem propheticam atque praeparatoriam Ioannis Baptistae illustrat. Calendarium postconciliarium locum huius dominicae traditum servavit, latiore tamen spatio scripturistico promissionibus Isaiae de pace et Baptistae ad conversionem vocationi dato. Ita dies Adventum de generali vigilantia ad concretam praeparationem altius ducit.
+
+Theologia diei in praeparatione viae Domini consistit. Ioannes apparet ut ultima ac maxima vox prophetica ante publicam Christi manifestationem, corda ad paenitentiam vocans ut consolatio divina recipiatur, non negligatur. Spes Adventus hic ostenditur non ut votum passivum, sed ut rectificatio moralis et spiritualis semitarum pro Rege venturo.
+
+Liturgice dies manet dominica violacea altissimi gradus temporalis, consolationem propheticam et urgentiam asceticam in unum orationis actum colligens. Inter amplum primi hebdomadis prospectum eschatologicum et laetiorem Gaudete proximitatem positus, tempora severam misericordiam tribuit: adventus Domini bonum nuntium est, sed praeparationem postulat.
+
+Pastoraliter Dominica II Adventus communitates ad sinceram reformationem vocat. Fideles invitat ut habitus, iniustitias et interiorem pravitatem quae gratiae obstacula ponunt agnoscant, atque Ioannem Baptistam exemplar veritatis fortis proponit in cultura quae distrahendi potius quam paenitendi studiosissima est.
+$desc$),
+('third-sunday-of-advent', 'Dominica III Adventus', $desc$
+Dominica III Adventus, quae ex introitus antiphona Gaudete appellatur, iamdiu in traditione Romana distinctam Adventus severitatis mitigationem designat. Eius indoles laeta et facultas rosacei coloris usurpandi tamquam signa Domini iam propinqui progressa sunt, atque reformatio postconciliaris hunc hereditarium aequilibrium expectationis et laetitiae servavit. Dies manet inter maxime cognoscibiles totius temporis Adventus.
+
+Theologia huius diei est gaudium in propinquitate radicatum, non in perfectione iam possessa. Ioannes Baptista adhuc in liturgia stat, sed testimonium eius nunc clarius ad eum dirigit qui iam inter populum adest, quamvis nondum plene agnoscatur. Gaudium christianum hic non est immaturus triumphalismus; est exsultatio eorum qui salutem adesse sciunt et quorum corda ad eam suscipiendam dilatantur.
+
+Liturgice Dominica Gaudete intra Adventum manet nec gravitatem temporis deserit, sed visibilem et audibilem claritatem admittit. Rosaceus color violaceum supplere potest, sonus scripturisticus exsultantior fit, et tota celebratio misericors mediae viae hortamentum efficit. Gradus eius ut dominicae Adventus efficit ut hoc gaudium ad totam Ecclesiam, non ad privatam solum affectionem, pertineat.
+
+Credentibus hodiernis Dominica III Adventus valde necessariam christiani gaudii intelligentiam offert. Docet gaudium cum expectatione, imperfecto statu et paenitentia coexistere posse, fidelesque invitat ut gratiam, mansuetudinem et perseverantem spem colant in mundo qui sanctitati pariter ac felicitati saepe diffidit.
+$desc$),
+('fourth-sunday-of-advent', 'Dominica IV Adventus', $desc$
+Dominica IV Adventus ad immediatam Nativitatis praeparationem pertinet atque in Ritu Romano tempus ad summam contractionem perducit. Antiqua liturgia Romana et lectionarium instauratum pariter ante Ecclesiam eventus directe nativitatem Christi praecedentes ponunt, praesertim Annuntiationem et mysterium oboedientiae Ioseph secundum cyclum. Reformatio postconciliaris hunc motum servavit, ut Adventus non in abstractione, sed in concretis humanis condicionibus per quas Verbum caro fit, claudatur.
+
+Theologia diei circa oboedientem receptionem versatur. Sive liturgia fiat Mariae sive iustum et fiduciale responsum Ioseph proponat, dies contemplatur quomodo promissio divina per fidelem consensum in historiam ingrediatur. Incarnatio non ut fatalitas mythica, sed ut libera cooperatio gratia possibilis facta eorum qui ad Messiam recipiendum electi sunt ostenditur.
+
+Liturgice dominica violacea manet et gradum privilegiatum temporis Adventus retinet, attamen affectum intimiorem quam priorum hebdomadarum habet. Horizontis prophetici amplitudo ad domum David, Nazareth, uterum atque absconditos fiduciae actus, quibus historia salutis ad Natale procedit, contrahitur. Oratio Ecclesiae fit expectationis summa concentratione plena.
+
+Pastoraliter Dominica IV Adventus fideles docet quomodo personaliter, non solum temporaliter, exspectare debeant. Invitat ut fidem Mariae et Ioseph imitentur, actioni Dei in ordinariis circumstantiis consentiant, et ad Natale per interiorem disponibilitatem magis quam per solam externam occupationem se parent.
+$desc$),
+('december-24-advent-feria', 'Die 24 Decembris (Feria Adventus)', $desc$
+Feria diei XXIV Decembris ultimum momentum diurnum Adventus repraesentat antequam Vigilia Nativitatis incipiat, atque ad seriem feriarum privilegiatarum a die XVII ad diem XXIV Decembris pertinet quae in Ritu Romano stabilissimam formam acceperunt. Hi dies, per magnas "O" antiphonas in Officio divino signati, a reformatione postconciliari diligenter retenti sunt, quia intensissimum et immediatum Ecclesiae desiderium Messiae exprimunt. Reformatio igitur statum eorum privilegiatum servavit, simul clarius distinguens diem XXIV Decembris a liturgico initio Nativitatis vesperi.
+
+Theologia huius diei est desiderium contractum atque intentum. Promissiones convenerunt; nomina Salvatoris exspectati singillatim invocantur; et Ecclesia in ipso impletionis limine consistit, cum tota Israelitica spe accumulata orans. Dies de tanta proximitate loquitur ut ipsum silentium, recollectio et invocatio formae sermonis theologici fiant.
+
+Liturgice dies XXIV Decembris per diem manet feria Adventus privilegiata colore violaceo, quamvis vesper iam ad Natale albo dirigatur. Haec iuxtapositio rarissimam subtilitatem diei tribuit: totus est Adventus et tamen in immediata Nativitatis penumbra vivit. Textus proprii et locus inter ferias Decembris efficiunt ne ultimae expectationis horae nimis cito a festivitate absorbeantur.
+
+Fidelibus hic dies documentum est spiritualis temperantiae et sancti desiderii. Christianos invitat ut extremam expectationis tractum honorent, cum antiphonis O orent, desiderium in adorationem maturescere sinant, atque Natale non distracti et fessi sed recollecti ac parati ad suscipiendum Salvatorem ingrediantur.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
@@ -7728,52 +8505,244 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- EN translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', x.name, NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('the-ascension-of-the-lord', 'The Ascension of the Lord'),
-('pentecost-sunday', 'Pentecost Sunday'),
-('blessed-virgin-mary-mother-of-the-church', 'Blessed Virgin Mary, Mother of the Church'),
-('the-most-holy-trinity', 'The Most Holy Trinity'),
-('the-most-holy-body-and-blood-of-christ', 'The Most Holy Body and Blood of Christ'),
-('the-most-sacred-heart-of-jesus', 'The Most Sacred Heart of Jesus'),
-('the-immaculate-heart-of-the-blessed-virgin-mary', 'The Immaculate Heart of the Blessed Virgin Mary'),
-('our-lord-jesus-christ-king-of-the-universe', 'Our Lord Jesus Christ, King of the Universe')
-) AS x(slug, name)
+('the-ascension-of-the-lord', 'The Ascension of the Lord', $desc$
+The Ascension of the Lord emerged very early as a distinct feast within the fifty days of Easter, even though in the earliest centuries Christ's resurrection, exaltation, and gift of the Spirit were often contemplated as a single paschal mystery. By the fourth century the fortieth day observance was firmly attested in East and West, shaped above all by Acts 1, and the Roman calendar has long kept it as a solemnity of the Lord. The reform after Vatican II preserved its traditional place on the fortieth day, while allowing episcopal conferences to transfer its celebration pastorally in some regions without diminishing its doctrinal importance.
+
+Theologically, the Ascension is not Christ's departure into absence but his enthronement in glorified humanity at the Father's right hand. It reveals that the one who descended has carried human nature into the divine life, where he intercedes as priest, reigns as Lord, and prepares a place for his members. The feast therefore safeguards both the realism of the Incarnation and the cosmic scope of redemption.
+
+Liturgically, the solemnity stands in white within the paschal season and serves as a hinge between Easter and Pentecost. Its texts are filled with majesty and mission: Christ is exalted, yet the Church is commissioned; the Lord is hidden from sight, yet he remains sacramentally and ecclesially present. The feast's rank and placement ensure that Easter joy widens into eschatological hope rather than collapsing into nostalgia.
+
+For the faithful today, the Ascension teaches how to live between visibility and faith. It invites Christians to seek the things that are above without abandoning earthly responsibility, to understand mission as participation in the reign of the exalted Christ, and to find hope in the truth that human life is already represented in heaven.
+$desc$),
+('pentecost-sunday', 'Pentecost Sunday', $desc$
+Pentecost Sunday, rooted in the Jewish feast of Weeks, was from the apostolic age understood as the outpouring of the Holy Spirit promised by the risen Christ. Very early Christian tradition linked it inseparably to the completion of Easter, and by late antiquity it possessed a fully developed solemnity with vigil and proper prayers. The postconciliar reform retained Pentecost as the culminating Sunday of the Fifty Days, even though the former octave was not preserved in the universal calendar, thereby emphasizing the unity of the paschal season from Resurrection to Spirit.
+
+Its theology is the birth of the Church in manifest power. The Spirit descends not merely as consolation, but as the divine gift who unites believers to Christ, reverses Babel by creating communion among peoples, and sends the apostolic Church outward in intelligible proclamation. Pentecost reveals that redemption is not complete until the risen Lord's life becomes interiorly active in his people through the Holy Spirit.
+
+Liturgically, the solemnity is celebrated in red, the color of fire and witness, and it closes Easter with one last great burst of festal intensity. Its readings, sequence, and prayers place the Church under the breath of the Paraclete, while its position at the end of Paschaltide shows that resurrection joy matures into mission, sanctification, and ecclesial unity. Pentecost is therefore both fulfillment and beginning.
+
+Pastorally, Pentecost Sunday remains indispensable for communities tempted either to reduce faith to institution or to sever spirituality from the Church. It calls the faithful to invoke the Spirit for holiness, courage, discernment, and reconciliation, and it reminds them that every genuine renewal in the Church must be both charismatic and ecclesial.
+$desc$),
+('blessed-virgin-mary-mother-of-the-church', 'Blessed Virgin Mary, Mother of the Church', $desc$
+The title Mother of the Church is ancient in theological substance, even if its liturgical celebration in the universal Roman calendar is recent. During the Second Vatican Council, Saint Paul VI solemnly proclaimed Mary Mater Ecclesiae in 1964, drawing together patristic and conciliar insights on her relationship to Christ and his Body. In 2018 Pope Francis inserted the memorial on the Monday after Pentecost into the General Roman Calendar, thereby giving stable liturgical form to a doctrine long cherished in the Church's devotion and teaching.
+
+Its theology rests on Mary's inseparable relation to the mystery of Christ and the Church. She is Mother of the Head and therefore, by grace, Mother of the members; at the Cross she receives the beloved disciple, and in the upper room she perseveres in prayer with the apostolic community awaiting the Spirit. The memorial therefore contemplates not a private Marian privilege alone, but Mary's maternal presence within the Church's very birth and life.
+
+Liturgically, the memorial follows immediately after Pentecost, an arrangement full of theological precision. The Church, newly contemplated in the fire of the Spirit, turns at once to the woman who was present at Calvary and in the cenacle, and white vesture underscores the purity and paschal serenity of this Marian observance within the long afterglow of Easter. Though of lower rank than the solemnities surrounding it, the memorial occupies a place of remarkable doctrinal density.
+
+For the faithful, this day offers a deeply ecclesial Marian devotion. It invites Christians to see Mary not as a figure distant from ordinary discipleship, but as mother, model, and intercessor for the Church's unity, holiness, and missionary fruitfulness, especially in times when the faithful need consolation, steadfastness, and deeper communion.
+$desc$),
+('the-most-holy-trinity', 'The Most Holy Trinity', $desc$
+The Solemnity of the Most Holy Trinity arose first in local medieval liturgical traditions before being extended to the universal Latin Church by Pope John XXII in the fourteenth century. Unlike feasts commemorating a discrete historical event, it emerged from the Church's desire to devote explicit praise to the mystery always implicit in every liturgy, baptism, and doxology. The reform of 1969 retained the solemnity on the Sunday after Pentecost, preserving its doctrinal function as the Church's contemplative response to the full revelation of the Father, Son, and Holy Spirit.
+
+Its theology reaches the summit of Christian doctrine. The Trinity is not a mathematical puzzle but the revealed life of God himself: the Father eternally begetting the Son, the Son eternally receiving all from the Father, and the Holy Spirit proceeding as the bond of divine love. The feast teaches that salvation history has a Trinitarian source and goal, and that grace draws believers into communion with the living God rather than into a merely moral system.
+
+Liturgically, the solemnity is celebrated in white on the first Sunday after Pentecost, as though the Church, having commemorated the missions of the Son and Spirit, now contemplates the eternal mystery from which those missions flow. Its rank as a solemnity of the Lord and its placement at the threshold of resumed Ordinary Time ensure that Christian life is interpreted from the outset as participation in Trinitarian communion.
+
+For the faithful today, Trinity Sunday invites adoration, intellectual humility, and renewed confidence in the coherence of Christian revelation. It reminds believers that prayer, sacrament, mission, and charity all originate in and return to the Triune God, and it encourages them to let the sign of the Cross, so often made, become a conscious confession of the God in whose name they live.
+$desc$),
+('the-most-holy-body-and-blood-of-christ', 'The Most Holy Body and Blood of Christ', $desc$
+The Solemnity of the Most Holy Body and Blood of Christ, historically Corpus Christi, arose in the thirteenth century through the influence of Saint Juliana of Liège and the wider Eucharistic devotion of the medieval West. Pope Urban IV gave the feast universal authorization in 1264 with the bull Transiturus de hoc mundo, and the texts traditionally associated with Saint Thomas Aquinas gave it enduring theological brilliance. The postconciliar reform retained the solemnity as a feast of the Lord, preserving its eucharistic processional and doctrinal character while integrating it into the renewed calendar after Trinity Sunday.
+
+Its theology is a concentrated confession of the Real Presence and of the sacrificial banquet of the new covenant. The Church honors not a symbol detached from the Paschal Mystery, but the living Body given up and the Blood poured out for the life of the world. Corpus Christi therefore guards eucharistic faith against reductionism and insists that adoration, communion, and sacrifice belong together.
+
+Liturgically, the solemnity is celebrated in white and traditionally extends beyond Mass into eucharistic procession, blessing, and public witness. Coming after the Easter and Pentecost cycle, it allows the Church to linger over the sacramental mode by which the risen and ascended Lord remains with his people. Its high rank and devotional expressions make it one of the clearest manifestations of Roman Catholic eucharistic identity.
+
+For the faithful, this day is both doctrinal and pastoral nourishment. It calls believers to deeper reverence at Mass, more intelligent participation in eucharistic worship, and renewed awareness that Christ's eucharistic presence binds the Church into one body and sends her outward to become what she receives.
+$desc$),
+('the-most-sacred-heart-of-jesus', 'The Most Sacred Heart of Jesus', $desc$
+The Solemnity of the Most Sacred Heart of Jesus developed from biblical and patristic meditation on the pierced side of Christ, but its modern liturgical form was decisively shaped by the seventeenth-century revelations received by Saint Margaret Mary Alacoque at Paray-le-Monial. Devotion spread through the support of Saint Claude de la Colombière, numerous religious communities, and the wider Catholic world, until Pope Pius IX extended the feast to the universal Church in 1856. Later teaching, especially Pius XII's encyclical Haurietis aquas in 1956, gave the devotion doctrinal depth, and the 1969 reform retained the solemnity as a major expression of Christological and affective piety.
+
+Its theology contemplates in the Heart of Christ the personal center of the Incarnate Word's human love and the visible sign of the divine charity that saves the world. The pierced Heart gathers together Incarnation, Passion, Eucharist, reparation, and mercy: it is the Heart that loved unto the end and still invites sinners into communion. The feast insists that divine love is not abstract benevolence but a love embodied, wounded, and victorious.
+
+Liturgically, the solemnity is celebrated in white on the Friday after the second Sunday after Pentecost, linking it closely to Corpus Christi and to the mysteries of the Paschal offering made sacramentally present. Its placement shows that devotion to the Sacred Heart is not a parallel spirituality detached from the liturgy, but an interior reading of the Lord's Paschal self-gift. The feast's rank underscores the centrality of this mystery in modern Catholic devotion.
+
+For the faithful today, the Sacred Heart remains a powerful antidote to cynicism, fear, and impersonal religion. It invites acts of trust, reparation, and consecration, but above all it calls Christians to be conformed to the charity of Christ himself, learning mercy, fidelity, and sacrificial love from the Heart opened for the life of the world.
+$desc$),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'The Immaculate Heart of the Blessed Virgin Mary', $desc$
+Devotion to the Immaculate Heart of Mary grew gradually from reflection on the Gospel image of Mary who keeps all things in her heart, and it took stronger liturgical form in the modern era through French spirituality, Marian piety, and the impact of Fatima. Pope Pius XII established a universal feast of the Immaculate Heart in 1944 on 22 August, but the postconciliar reform relocated the observance to the Saturday after the Sacred Heart, giving it a more transparent theological relation to Christ. The current memorial thus reflects both continuity of devotion and liturgical refinement.
+
+Its theology is wholly Christocentric and ecclesial. Mary's heart is honored not as a rival center of devotion, but as the perfectly receptive, faith-filled heart conformed to her Son - the heart that believed, suffered, interceded, and pondered the mysteries of salvation. The memorial shows what grace can accomplish in a human creature fully open to God's word.
+
+Liturgically, the memorial is celebrated in white immediately after the Sacred Heart, and this adjacency is itself a theological commentary. The Church contemplates first the redeeming Heart of Christ and then the maternal heart most perfectly attuned to it, revealing how Marian devotion remains ordered to and derived from Christ's saving mystery. Though of memorial rank, the observance occupies a cherished place in the rhythm of post-Pentecost solemnities.
+
+For the faithful, the Immaculate Heart offers a school of interior discipleship. It encourages pondering of God's word, purity of intention, compassionate solidarity with the suffering, and filial entrustment to the Mother who teaches the Church how to receive Christ without reserve.
+$desc$),
+('our-lord-jesus-christ-king-of-the-universe', 'Our Lord Jesus Christ, King of the Universe', $desc$
+The Solemnity of Our Lord Jesus Christ, King of the Universe was instituted by Pope Pius XI in 1925 through the encyclical Quas Primas, in response to growing secularism and the exclusion of Christ from public life. Originally assigned to the last Sunday of October, it carried a strong social and apologetic note in the interwar period. The reform of 1969 retained the feast but moved it to the final Sunday of the liturgical year and expanded the title, thereby placing Christ's kingship in a more explicitly eschatological setting without abandoning its doctrinal force.
+
+Its theology proclaims the universal sovereignty of the crucified and risen Lord. Christ reigns not by coercion but by truth, holiness, grace, justice, love, and peace; his kingdom is already present in mystery and yet awaits consummation when all things are subjected to him. The feast therefore resists both political reductionism and privatized religion by declaring that all history, all authority, and all human destiny find their meaning in Christ.
+
+Liturgically, the solemnity is celebrated in white at the end of Ordinary Time, immediately before Advent reopens the horizon of the Lord's coming. That position, fixed by the postconciliar reform, gives the day a powerful summative quality: the entire year culminates in the confession that the one born in humility, preached the kingdom, died, rose, and sent the Spirit now reigns over the cosmos. Its rank as a solemnity of the Lord makes it the crown of the liturgical cycle.
+
+For the faithful today, Christ the King remains a searching examination of loyalty. It asks where Christians have allowed political ideologies, private ambition, or cultural fashions to usurp the place that belongs to Christ alone, and it invites them to renew their allegiance to his kingdom through worship, moral integrity, service of the poor, and hope for the final renewal of all things.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- FR translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', x.name, NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('the-ascension-of-the-lord', 'Ascension du Seigneur'),
-('pentecost-sunday', 'Dimanche de la Pentecôte'),
-('blessed-virgin-mary-mother-of-the-church', 'Bienheureuse Vierge Marie, Mère de l''Église'),
-('the-most-holy-trinity', 'La Très Sainte Trinité'),
-('the-most-holy-body-and-blood-of-christ', 'Le Très Saint Corps et Sang du Christ'),
-('the-most-sacred-heart-of-jesus', 'Le Sacré-Cœur de Jésus'),
-('the-immaculate-heart-of-the-blessed-virgin-mary', 'Le Cœur Immaculé de la Bienheureuse Vierge Marie'),
-('our-lord-jesus-christ-king-of-the-universe', 'Notre Seigneur Jésus-Christ, Roi de l''Univers')
-) AS x(slug, name)
+('the-ascension-of-the-lord', 'Ascension du Seigneur', $desc$
+L'Ascension du Seigneur est apparue très tôt comme une fête distincte à l'intérieur des cinquante jours pascals, bien que les premiers siècles aient souvent contemplé en un seul mystère la résurrection du Christ, son exaltation et le don de l'Esprit. Dès le IVe siècle, l'observance du quarantième jour est fermement attestée en Orient comme en Occident, surtout à partir d'Actes 1, et le calendrier romain la garde depuis longtemps comme une solennité du Seigneur. La réforme après Vatican II en a conservé la place traditionnelle au quarantième jour, tout en permettant dans certaines régions le transfert pastoral de sa célébration sans rien diminuer de son importance doctrinale.
+
+Théologiquement, l'Ascension n'est pas le départ du Christ vers une absence, mais l'intronisation de son humanité glorifiée à la droite du Père. Elle révèle que celui qui est descendu a porté la nature humaine dans la vie divine, où il intercède comme prêtre, règne comme Seigneur et prépare une place pour ses membres. La fête sauvegarde ainsi à la fois le réalisme de l'Incarnation et la portée cosmique de la rédemption.
+
+Liturgiquement, la solennité se célèbre en blanc dans le temps pascal et sert de charnière entre Pâques et la Pentecôte. Ses textes sont pleins de majesté et de mission: le Christ est exalté, mais l'Église reçoit l'envoi; le Seigneur est caché aux regards, mais il demeure présent sacramentellement et ecclésialement. Le rang et la place de la fête assurent que la joie de Pâques s'élargit en espérance eschatologique au lieu de se dissoudre en nostalgie.
+
+Pour les fidèles aujourd'hui, l'Ascension enseigne comment vivre entre visibilité et foi. Elle invite les chrétiens à rechercher les réalités d'en haut sans abandonner les responsabilités terrestres, à comprendre la mission comme participation au règne du Christ exalté et à trouver l'espérance dans la vérité que la vie humaine est déjà représentée au ciel.
+$desc$),
+('pentecost-sunday', 'Dimanche de la Pentecôte', $desc$
+Le Dimanche de la Pentecôte, enraciné dans la fête juive des Semaines, a été compris dès l'époque apostolique comme l'effusion de l'Esprit Saint promise par le Christ ressuscité. Très tôt, la tradition chrétienne l'a liée inséparablement à l'achèvement de Pâques et, dès l'Antiquité tardive, elle possédait une solennité pleinement développée avec sa vigile et ses prières propres. La réforme postconciliaire a conservé la Pentecôte comme dimanche culminant des cinquante jours, même si l'ancienne octave n'a pas été maintenue au calendrier universel, accentuant ainsi l'unité de la saison pascale de la Résurrection à l'Esprit.
+
+Sa théologie est celle de la naissance de l'Église dans une puissance manifeste. L'Esprit descend non comme simple consolation, mais comme don divin qui unit les croyants au Christ, inverse Babel en créant la communion entre les peuples et envoie l'Église apostolique au dehors dans une proclamation intelligible. La Pentecôte révèle que la rédemption n'est pas achevée tant que la vie du Ressuscité n'est pas devenue intérieurement agissante dans son peuple par l'Esprit Saint.
+
+Liturgiquement, la solennité est célébrée en rouge, couleur du feu et du témoignage, et elle clôt Pâques par un dernier grand élan de plénitude festive. Ses lectures, sa séquence et ses prières placent l'Église sous le souffle du Paraclet, tandis que sa position à la fin du temps pascal montre que la joie de la résurrection mûrit en mission, en sanctification et en unité ecclésiale. La Pentecôte est donc à la fois accomplissement et commencement.
+
+Pastoralement, le Dimanche de la Pentecôte demeure indispensable pour des communautés tentées soit de réduire la foi à l'institution, soit de séparer la spiritualité de l'Église. Il appelle les fidèles à invoquer l'Esprit pour la sainteté, le courage, le discernement et la réconciliation, et il leur rappelle que tout renouveau authentique dans l'Église doit être à la fois charismatique et ecclésial.
+$desc$),
+('blessed-virgin-mary-mother-of-the-church', 'Bienheureuse Vierge Marie, Mère de l''Église', $desc$
+Le titre de Mère de l'Église est ancien dans sa substance théologique, même si sa célébration liturgique au calendrier romain universel est récente. Pendant le Concile Vatican II, saint Paul VI proclama solennellement Marie Mater Ecclesiae en 1964, rassemblant les intuitions patristiques et conciliaires sur son rapport au Christ et à son Corps. En 2018, le pape François a inscrit la mémoire au lundi après la Pentecôte dans le Calendrier romain général, donnant ainsi une forme liturgique stable à une doctrine longtemps chérie par la dévotion et l'enseignement de l'Église.
+
+Sa théologie repose sur le lien inséparable de Marie avec le mystère du Christ et de l'Église. Elle est Mère de la Tête et donc, par grâce, mère des membres; au pied de la Croix elle reçoit le disciple bien-aimé, et au Cénacle elle persévère dans la prière avec la communauté apostolique en attente de l'Esprit. La mémoire contemple donc non pas un privilège marial privé, mais la présence maternelle de Marie dans la naissance et la vie mêmes de l'Église.
+
+Liturgiquement, la mémoire suit immédiatement la Pentecôte, arrangement d'une grande précision théologique. L'Église, qui vient d'être contemplée dans le feu de l'Esprit, se tourne aussitôt vers la femme présente au Calvaire et au Cénacle, et le blanc souligne la pureté et la sérénité pascale de cette observance mariale dans la longue résonance de Pâques. D'un rang moindre que les solennités qui l'entourent, la mémoire occupe pourtant une place d'une remarquable densité doctrinale.
+
+Pour les fidèles, ce jour offre une dévotion mariale profondément ecclésiale. Il invite les chrétiens à voir Marie non comme une figure éloignée du discipulat ordinaire, mais comme mère, modèle et intercesseur pour l'unité, la sainteté et la fécondité missionnaire de l'Église, spécialement dans les temps où les fidèles ont besoin de consolation, de fermeté et d'une communion plus profonde.
+$desc$),
+('the-most-holy-trinity', 'La Très Sainte Trinité', $desc$
+La Solennité de la Très Sainte Trinité naquit d'abord dans des traditions liturgiques locales du Moyen Âge avant d'être étendue à toute l'Église latine par le pape Jean XXII au XIVe siècle. Contrairement aux fêtes commémorant un événement historique déterminé, elle est née du désir de l'Église de consacrer une louange explicite au mystère déjà impliqué dans toute liturgie, tout baptême et toute doxologie. La réforme de 1969 a maintenu la solennité au dimanche après la Pentecôte, en conservant sa fonction doctrinale de réponse contemplative de l'Église à la pleine révélation du Père, du Fils et du Saint-Esprit.
+
+Sa théologie atteint le sommet de la doctrine chrétienne. La Trinité n'est pas une énigme mathématique, mais la vie révélée de Dieu lui-même: le Père engendrant éternellement le Fils, le Fils recevant éternellement tout du Père et l'Esprit Saint procédant comme lien d'amour divin. La fête enseigne que l'histoire du salut a une source et une fin trinitaires, et que la grâce attire les croyants dans la communion avec le Dieu vivant plutôt que dans un simple système moral.
+
+Liturgiquement, la solennité est célébrée en blanc le premier dimanche après la Pentecôte, comme si l'Église, après avoir commémoré les missions du Fils et de l'Esprit, contemplait maintenant le mystère éternel dont ces missions procèdent. Son rang de solennité du Seigneur et sa place au seuil de la reprise du temps ordinaire assurent que la vie chrétienne soit comprise dès l'abord comme participation à la communion trinitaire.
+
+Pour les fidèles aujourd'hui, le dimanche de la Trinité invite à l'adoration, à l'humilité intellectuelle et à une confiance renouvelée dans la cohérence de la révélation chrétienne. Il rappelle que la prière, le sacrement, la mission et la charité ont tous leur origine et leur terme dans le Dieu Trine, et il encourage les croyants à faire du signe de la croix, si souvent tracé, une confession consciente du Dieu au nom duquel ils vivent.
+$desc$),
+('the-most-holy-body-and-blood-of-christ', 'Le Très Saint Corps et Sang du Christ', $desc$
+La Solennité du Très Saint Corps et Sang du Christ, historiquement Corpus Christi, est née au XIIIe siècle sous l'influence de sainte Julienne de Liège et de la large dévotion eucharistique de l'Occident médiéval. Le pape Urbain IV donna à la fête une autorisation universelle en 1264 par la bulle Transiturus de hoc mundo, et les textes traditionnellement associés à saint Thomas d'Aquin lui ont assuré un éclat théologique durable. La réforme postconciliaire a conservé la solennité comme fête du Seigneur, en préservant son caractère processionnel et doctrinal tout en l'intégrant au calendrier renouvelé après la Trinité.
+
+Sa théologie est une confession concentrée de la présence réelle et du banquet sacrificiel de l'alliance nouvelle. L'Église honore non pas un symbole détaché du Mystère pascal, mais le Corps vivant livré et le Sang répandu pour la vie du monde. Corpus Christi protège ainsi la foi eucharistique contre toute réduction et affirme que l'adoration, la communion et le sacrifice vont ensemble.
+
+Liturgiquement, la solennité est célébrée en blanc et se prolonge traditionnellement au-delà de la messe par la procession eucharistique, la bénédiction et le témoignage public. Venant après le cycle de Pâques et de la Pentecôte, elle permet à l'Église de s'attarder sur le mode sacramentel par lequel le Seigneur ressuscité et monté au ciel demeure avec son peuple. Son haut rang et ses expressions dévotionnelles en font l'une des manifestations les plus nettes de l'identité eucharistique catholique romaine.
+
+Pour les fidèles, ce jour est à la fois doctrine et nourriture pastorale. Il appelle à une révérence plus profonde à la messe, à une participation plus intelligente au culte eucharistique et à une conscience renouvelée que la présence eucharistique du Christ unifie l'Église en un seul corps et l'envoie au dehors pour devenir ce qu'elle reçoit.
+$desc$),
+('the-most-sacred-heart-of-jesus', 'Le Sacré-Cœur de Jésus', $desc$
+La Solennité du Sacré-Cœur de Jésus s'est développée à partir de la méditation biblique et patristique du côté transpercé du Christ, mais sa forme liturgique moderne a été décisivement façonnée par les révélations reçues au XVIIe siècle par sainte Marguerite-Marie Alacoque à Paray-le-Monial. La dévotion s'est répandue grâce au soutien de saint Claude de la Colombière, de nombreuses communautés religieuses et du monde catholique plus large, jusqu'à ce que le pape Pie IX étende la fête à l'Église universelle en 1856. L'enseignement ultérieur, surtout l'encyclique Haurietis aquas de Pie XII en 1956, lui a donné une profondeur doctrinale, et la réforme de 1969 a maintenu la solennité comme une grande expression de piété christologique et affective.
+
+Sa théologie contemple dans le Cœur du Christ le centre personnel de l'amour humain du Verbe incarné et le signe visible de la charité divine qui sauve le monde. Le Cœur transpercé rassemble Incarnation, Passion, Eucharistie, réparation et miséricorde: c'est le Cœur qui a aimé jusqu'à l'extrême et qui invite encore les pécheurs à la communion. La fête affirme que l'amour divin n'est pas une bienveillance abstraite, mais un amour incarné, blessé et victorieux.
+
+Liturgiquement, la solennité se célèbre en blanc le vendredi après le deuxième dimanche après la Pentecôte, ce qui la relie étroitement à Corpus Christi et aux mystères de l'offrande pascale rendue sacramentellement présente. Sa place montre que la dévotion au Sacré-Cœur n'est pas une spiritualité parallèle détachée de la liturgie, mais une lecture intérieure du don pascal du Seigneur. Le rang de la fête souligne la centralité de ce mystère dans la dévotion catholique moderne.
+
+Pour les fidèles aujourd'hui, le Sacré-Cœur demeure un puissant antidote au cynisme, à la peur et à la religion impersonnelle. Il invite aux actes de confiance, de réparation et de consécration, mais surtout il appelle les chrétiens à être configurés à la charité du Christ lui-même, apprenant du Cœur ouvert pour la vie du monde la miséricorde, la fidélité et l'amour sacrificiel.
+$desc$),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'Le Cœur Immaculé de la Bienheureuse Vierge Marie', $desc$
+La dévotion au Cœur Immaculé de Marie s'est développée progressivement à partir de la méditation de l'image évangélique de Marie qui garde toutes choses dans son cœur, et elle a pris une forme liturgique plus forte à l'époque moderne grâce à la spiritualité française, à la piété mariale et à l'impact de Fatima. Le pape Pie XII institua en 1944 une fête universelle du Cœur Immaculé au 22 août, mais la réforme postconciliaire déplaça l'observance au samedi après le Sacré-Cœur, lui donnant un rapport théologique plus transparent au Christ. La mémoire actuelle reflète ainsi à la fois la continuité de la dévotion et un affinage liturgique.
+
+Sa théologie est entièrement christocentrique et ecclésiale. Le cœur de Marie est honoré non comme un centre rival de dévotion, mais comme le cœur parfaitement réceptif, croyant et configuré à son Fils - le cœur qui a cru, souffert, intercédé et médité les mystères du salut. La mémoire montre ce que la grâce peut accomplir dans une créature humaine totalement ouverte à la parole de Dieu.
+
+Liturgiquement, la mémoire est célébrée en blanc immédiatement après le Sacré-Cœur, et cette proximité est déjà en elle-même un commentaire théologique. L'Église contemple d'abord le Cœur rédempteur du Christ, puis le cœur maternel qui lui fut le plus parfaitement accordé, montrant ainsi que la dévotion mariale demeure ordonnée au mystère sauveur du Christ et en dérive. Bien qu'elle n'ait que le rang de mémoire, l'observance occupe une place chère dans le rythme des solennités après la Pentecôte.
+
+Pour les fidèles, le Cœur Immaculé offre une école de discipulat intérieur. Il encourage la méditation de la parole de Dieu, la pureté d'intention, la solidarité compatissante avec les souffrants et l'abandon filial à la Mère qui apprend à l'Église à recevoir le Christ sans réserve.
+$desc$),
+('our-lord-jesus-christ-king-of-the-universe', 'Notre Seigneur Jésus-Christ, Roi de l''Univers', $desc$
+La Solennité de Notre Seigneur Jésus-Christ, Roi de l'Univers, fut instituée par le pape Pie XI en 1925 par l'encyclique Quas Primas, en réponse à la montée du sécularisme et à l'exclusion du Christ de la vie publique. D'abord fixée au dernier dimanche d'octobre, elle portait dans l'entre-deux-guerres une note fortement sociale et apologétique. La réforme de 1969 a conservé la fête mais l'a déplacée au dernier dimanche de l'année liturgique et a élargi son titre, plaçant ainsi la royauté du Christ dans un cadre plus explicitement eschatologique sans abandonner sa force doctrinale.
+
+Sa théologie proclame la souveraineté universelle du Seigneur crucifié et ressuscité. Le Christ règne non par contrainte mais par la vérité, la sainteté, la grâce, la justice, l'amour et la paix; son royaume est déjà présent dans le mystère, tout en attendant sa consommation lorsque tout lui sera soumis. La fête résiste donc à la fois au réductionnisme politique et à une religion privatisée en déclarant que toute l'histoire, toute autorité et toute destinée humaine trouvent leur sens dans le Christ.
+
+Liturgiquement, la solennité est célébrée en blanc à la fin du temps ordinaire, immédiatement avant que l'Avent ne rouvre l'horizon de la venue du Seigneur. Cette place, fixée par la réforme postconciliaire, donne au jour une puissante qualité de sommet récapitulatif: toute l'année culmine dans la confession que celui qui est né dans l'humilité, a prêché le Royaume, est mort, ressuscité et a envoyé l'Esprit règne maintenant sur le cosmos. Son rang de solennité du Seigneur en fait la couronne du cycle liturgique.
+
+Pour les fidèles aujourd'hui, le Christ Roi demeure un examen aigu de la loyauté. Il demande où les chrétiens ont laissé des idéologies politiques, l'ambition privée ou les modes culturelles usurper la place qui revient au Christ seul, et il les invite à renouveler leur allégeance à son Royaume par le culte, l'intégrité morale, le service des pauvres et l'espérance du renouvellement final de toutes choses.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- LA translations
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', x.name, NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
-('the-ascension-of-the-lord', 'Ascensio Domini'),
-('pentecost-sunday', 'Dominica Pentecostes'),
-('blessed-virgin-mary-mother-of-the-church', 'Beata Maria Virgo, Mater Ecclesiae'),
-('the-most-holy-trinity', 'Sanctissima Trinitas'),
-('the-most-holy-body-and-blood-of-christ', 'Sanctissimi Corporis et Sanguinis Christi'),
-('the-most-sacred-heart-of-jesus', 'Sacratissimum Cor Iesu'),
-('the-immaculate-heart-of-the-blessed-virgin-mary', 'Cor Immaculatum Beatae Mariae Virginis'),
-('our-lord-jesus-christ-king-of-the-universe', 'Domini Nostri Iesu Christi Universorum Regis')
-) AS x(slug, name)
+('the-ascension-of-the-lord', 'Ascensio Domini', $desc$
+Ascensio Domini valde mature ut distincta festivitas intra quinquaginta dies paschales emersit, quamquam primis saeculis resurrectio, exaltatio et Spiritus donum Christi saepe velut unum mysterium paschale contemplabantur. Iam saeculo quarto observantia quadragesimi diei in Oriente et Occidente firmiter testata est, praesertim ex Actibus Apostolorum primo capite formata, et calendarium Romanum eam diu ut sollemnitatem Domini servavit. Reformatio post Vaticanum II locum eius traditum die quadragesimo retinuit, licentia tamen in quibusdam regionibus translationis pastoralis concessa, salva plena festi vi doctrinali.
+
+Theologice Ascensio non est Christi discessus in absentiam, sed enthronizatio glorificatae humanitatis eius ad dexteram Patris. Revelat eum qui descendit naturam humanam in ipsam vitam divinam intulisse, ubi ut sacerdos intercedit, ut Dominus regnat et locum membris suis praeparat. Festum igitur simul realismum Incarnationis et cosmicam redemptionis amplitudinem custodit.
+
+Liturgice sollemnitas albo in tempore paschali celebratur et cardinem inter Pascha et Pentecosten constituit. Textus eius maiestate et missione replentur: Christus exaltatur, sed Ecclesia mittitur; Dominus subtrahitur aspectui, manet tamen sacramentaliter et ecclesialiter praesens. Gradus et collocatio festi efficiunt ut gaudium paschale in spem eschatologicam dilatetur nec in solam memoriam recidat.
+
+Fidelibus hodiernis Ascensio docet quomodo inter visibilitatem et fidem vivant. Christianos invitat ut quae sursum sunt quaerant sine terrena responsabilitate deserenda, missionem tamquam participationem regni Christi exaltati intellegant, et spem inveniant in veritate vitam humanam iam in caelis repraesentari.
+$desc$),
+('pentecost-sunday', 'Dominica Pentecostes', $desc$
+Dominica Pentecostes, quae in festo Hebdomadarum Iudaico radicatur, iam ab aetate apostolica ut effusio Spiritus Sancti a Christo resuscitato promissi intellecta est. Traditione christiana antiquissima inseparabiliter ad complementum Paschae relata est, et iam seriori antiquitate sollemnitatem plenam cum vigilia et precibus propriis habebat. Reformatio postconciliaris Pentecosten ut dominicam quinquaginta dierum culminantem servavit, quamvis pristina octava in calendario universali non retenta sit, ita unitatem temporis paschalis a Resurrectione usque ad Spiritum vehementius demonstrans.
+
+Theologia eius est manifesta nativitas Ecclesiae in virtute. Spiritus descendit non quasi simplex consolatio, sed ut divinum donum quod credentes Christo unit, Babel renit in communionem populorum convertendo, atque Ecclesiam apostolicam in intellegibilem proclamationem foras mittit. Pentecostes revelat redemptionem non esse completam donec vita Resuscitati per Spiritum Sanctum interius in populo eius operetur.
+
+Liturgice sollemnitas rubro celebratur, colore ignis et testimonii, atque Pascha uno ultimo magno impetu festivae plenitudinis concludit. Lectiones, sequentia et orationes Ecclesiam sub flatu Paracliti collocant, dum positio eius in fine temporis paschalis ostendit gaudium resurrectionis in missionem, sanctificationem et ecclesialem unitatem maturescere. Pentecostes ideo et impletio et initium est.
+
+Pastoraliter Dominica Pentecostes indispensabilis manet communitatibus quae vel fidem ad institutionem redigere vel spiritualitatem ab Ecclesia secernere tentantur. Fideles vocat ut Spiritum pro sanctitate, fortitudine, discretione et reconciliatione invocent, eosque monet omnem veram renovationem in Ecclesia simul charismaticam et ecclesialem esse debere.
+$desc$),
+('blessed-virgin-mary-mother-of-the-church', 'Beata Maria Virgo, Mater Ecclesiae', $desc$
+Titulus Mater Ecclesiae antiquus est quantum ad substantiam theologicam, etsi celebratio eius liturgica in universali calendario Romano recens sit. Tempore Concilii Vaticani II sanctus Paulus VI anno MCMLXIV Mariam Mater Ecclesiae sollemniter proclamavit, sententias patristicas et conciliares de relatione eius ad Christum et Corpus eius colligens. Anno MMXVIII Franciscus Pontifex memoriam in feriam secundam post Pentecosten Calendario Romano Generali inseruit, ita doctrinae diu in pietate et magisterio Ecclesiae carae stabilem formam liturgicam tribuens.
+
+Theologia eius in inseparabili Mariae relatione ad mysterium Christi et Ecclesiae nititur. Mater Capitis est et ideo, per gratiam, mater membrorum; ad Crucem discipulum dilectum accipit, et in cenaculo cum communitate apostolica Spiritum exspectante in oratione perseverat. Memoria igitur non de solo quodam privato privilegio Mariano, sed de ipsa maternali Mariae praesentia in ortu et vita Ecclesiae contemplatur.
+
+Liturgice memoria statim Pentecosten sequitur, quod summam theologicae subtilitatis rationem habet. Ecclesia, quae nuper in Spiritus igne contemplata est, continuo ad mulierem se convertit quae et ad Calvariae et in cenaculo aderat, et color albus puritatem atque paschalem serenitatem huius observationis Marianae in longo Paschae resonatu significat. Quamvis gradu inferior quam sollemnitates circumstantes sit, memoria locum insignis doctrinalis densitatis obtinet.
+
+Fidelibus hic dies devotionem Marianam penitus ecclesialem offert. Christianos invitat ut Mariam non tamquam figuram a communi discipulatu remotam, sed tamquam matrem, exemplar et intercessricem pro unitate, sanctitate et fructu missionario Ecclesiae videant, praesertim temporibus quibus fidelibus consolatio, constantia et profundior communio opus sunt.
+$desc$),
+('the-most-holy-trinity', 'Sanctissima Trinitas', $desc$
+Sollemnitas Sanctissimae Trinitatis primum in localibus traditionibus liturgicis medii aevi orta est, antequam a Papa Ioanne XXII saeculo quarto decimo ad universam Ecclesiam Latinam extenderetur. Dissimiliter a festis quae certum aliquod historicum eventum commemorant, orta est ex desiderio Ecclesiae explicite laudandi mysterium quod in omni liturgia, baptismo et doxologia semper implicite adest. Reformatio anni MCMLXIX sollemnitatem in dominica post Pentecosten servavit, doctrinalem eius functionem tamquam contemplativam Ecclesiae responsionem plenae Patris, Filii et Spiritus Sancti revelationi custodiens.
+
+Theologia huius diei culmen doctrinae christianae attingit. Trinitas non est quaestio mathematica, sed ipsa revelata Dei vita: Pater aeternaliter Filium generans, Filius aeternaliter a Patre omnia recipiens, et Spiritus Sanctus ut vinculum amoris divini procedens. Festum docet historiam salutis originem et finem trinitarios habere, atque gratiam credentes in communionem Dei viventis, non in nudum systema morale, attrahere.
+
+Liturgice sollemnitas albo celebratur in prima dominica post Pentecosten, quasi Ecclesia, missiones Filii et Spiritus commemorata, nunc aeternum mysterium ex quo illae missiones profluunt contemplaretur. Gradus eius ut sollemnitatis Domini et collocatio in limine resumpti Temporis per Annum efficit ut vita christiana ab initio tamquam participatio communionis trinitariae intellegatur.
+
+Fidelibus hodiernis Dominica Trinitatis adorationem, intellectualem humilitatem et renovatam fiduciam in cohaerentia revelationis christianae invitat. Meminit orationem, sacramentum, missionem et caritatem omnes ex Deo Trino oriri atque ad eum redire, eosque hortatur ut signum Crucis, tam frequenter factum, in consciam confessionem Dei, in cuius nomine vivunt, convertant.
+$desc$),
+('the-most-holy-body-and-blood-of-christ', 'Sanctissimi Corporis et Sanguinis Christi', $desc$
+Sollemnitas Sanctissimi Corporis et Sanguinis Christi, historice Corpus Christi appellata, saeculo tertio decimo orta est sub influxu sanctae Iulianae Leodiensis atque latioris devotionis eucharisticae occidentis medii aevi. Urbanus IV anno MCCLXIV bulla Transiturus de hoc mundo festum universaliter auctoritate munivit, et textus sancto Thomae Aquinati traditi ei perpetuum splendorem theologicum contulerunt. Reformatio postconciliaris sollemnitatem ut festum Domini servavit, processionalem et doctrinalem indolem eius retinens atque eam in calendarium renovatum post Trinitatem inserens.
+
+Theologia eius est compacta confessio praesentiae realis et convivii sacrificialis novi foederis. Ecclesia non symbolum a Mysterio Paschali avulsum honorat, sed ipsum Corpus vivum traditum et Sanguinem effusum pro vita mundi. Corpus Christi igitur fidem eucharisticam contra omnem reductionem custodit atque instat adorationem, communionem et sacrificium inter se coniungi.
+
+Liturgice sollemnitas albo celebratur et tradito more ultra Missam in processionem eucharisticam, benedictionem et publicum testimonium extenditur. Post cyclum Paschalem atque Pentecosten veniens, Ecclesiae concedit ut in modo sacramentali, quo Dominus resuscitatus et ascensus cum populo suo manet, immoretur. Altus eius gradus et devotae expressionis faciunt ut una clarissimarum manifestationum Romanae Catholicae identitatis eucharisticae sit.
+
+Fidelibus hic dies simul doctrina et nutrimentum pastorale est. Invitat ad altiorem reverentiam in Missa, ad intelligentiorem participationem in cultu eucharistico, et ad renovatam conscientiam praesentiam eucharisticam Christi Ecclesiam in unum corpus colligere atque eam mittere ut id efficiatur quod accipit.
+$desc$),
+('the-most-sacred-heart-of-jesus', 'Sacratissimum Cor Iesu', $desc$
+Sollemnitas Sacratissimi Cordis Iesu ex biblica et patristica meditatione lateris Christi perforati orta est, sed forma eius liturgica moderna praecipue a revelationibus saeculi septimi decimi sanctae Margaritae Mariae Alacoque Paray-le-Monial acceptis configurata est. Devotio per sanctum Claudium de la Colombière, multas communitates religiosas et latiorem orbem catholicum diffusa est, donec Pius IX anno MDCCCLVI festum ad universam Ecclesiam extenderet. Doctrina posterior, praesertim encyclicae Pii XII Haurietis aquas anno MCMLVI, devotioni altitudinem doctrinalem contulit, et reformatio anni MCMLXIX sollemnitatem velut magnam christologicae atque affectivae pietatis expressionem retinuit.
+
+Theologia huius diei in Corde Christi contemplatur centrum personale amoris humani Verbi Incarnati et visibile signum caritatis divinae mundum salvantis. Cor perforatum colligit Incarnationem, Passionem, Eucharistiam, reparationem et misericordiam: est Cor quod usque in finem dilexit et peccatores adhuc ad communionem invitat. Festum contendit amorem divinum non esse abstractam benevolentiam, sed amorem incarnatum, vulneratum et victorem.
+
+Liturgice sollemnitas albo celebratur feria sexta post alteram dominicam post Pentecosten, unde artissime cum Corpore Christi et cum mysteriis Paschalis oblationis sacramentaliter praesentis connectitur. Haec collocatio ostendit devotionem ad Sacratissimum Cor non esse paralellam spiritualitatem a liturgia separatam, sed interiorem lectionem paschalis Domini sui donationis. Gradus festi huius mysterii centralitatem in recentiore pietate catholica inculcat.
+
+Fidelibus hodiernis Sacratissimum Cor potens antidotum manet contra cynismum, timorem et impersonalem religionem. Invitat ad actus fiduciae, reparationis et consecrationis, sed ante omnia christianos vocat ut ipsi caritati Christi configurentur, misericordiam, fidelitatem et amorem sacrificantem a Corde pro vita mundi aperto discentes.
+$desc$),
+('the-immaculate-heart-of-the-blessed-virgin-mary', 'Cor Immaculatum Beatae Mariae Virginis', $desc$
+Devotio ad Immaculatum Cor Mariae paulatim ex meditatione evangelicae imaginis Mariae omnia in corde suo conservantis crevit, et validiorem formam liturgicam aetate moderna per spiritualitatem Gallicam, pietatem Marianam atque impulsum Fatimae accepit. Pius XII anno MCMXLIV universale festum Cordis Immaculati die XXII Augusti instituit, sed reformatio postconciliaris observationem ad sabbatum post Sacratissimum Cor transtulit, relationem theologicam ad Christum clariorem reddens. Memoria hodierna sic simul devotionis continuationem et liturgicam purificationem repraesentat.
+
+Theologia eius tota christocentrica atque ecclesialis est. Cor Mariae honoratur non ut centrum devotionis aemulum, sed ut cor perfecte receptivum, fide plenum et Filio suo conformissimum - cor quod credidit, passa est, intercessit et mysteria salutis meditata est. Memoria ostendit quid gratia in creatura humana verbo Dei penitus aperta efficere possit.
+
+Liturgice memoria albo celebratur statim post Sacratissimum Cor, atque ipsa vicinitas commentarius quidam theologicus est. Ecclesia primum Cor redemptorium Christi contemplatur, deinde cor maternum ei perfectissime consonum, ita demonstrans devotionem Marianam ad mysterium salvificum Christi ordinari et ex eo derivari. Quamquam gradu memoriae tantum est, observantia carum locum in rhythmo sollemnitatum post Pentecosten occupat.
+
+Fidelibus Cor Immaculatum scholam interioris discipulatus offert. Fovet meditationem verbi Dei, puritatem intentionis, compatientem cum laborantibus solidarietatem atque filialem commendationem Matri quae Ecclesiam docet quomodo Christum sine reservatione suscipiat.
+$desc$),
+('our-lord-jesus-christ-king-of-the-universe', 'Domini Nostri Iesu Christi Universorum Regis', $desc$
+Sollemnitas Domini Nostri Iesu Christi Universorum Regis a Pio XI anno MCMXXV per encyclicam Quas Primas instituta est, respondens crescenti saecularismo et exclusionis Christi e vita publica processui. Primo ultimo Octobris dominicae attributa, notam socialem atque apologeticam prae se ferebat, praesertim inter bella mundana. Reformatio anni MCMLXIX festum servavit sed ad ultimam dominicam anni liturgici transtulit atque titulum ampliavit, regnum Christi in clariore prospectu eschatologico collocans, salva doctrinae eius vi.
+
+Theologia eius universalem crucifixi et resuscitati Domini dominationem proclamat. Christus non vi cogendi, sed veritate, sanctitate, gratia, iustitia, amore et pace regnat; regnum eius iam in mysterio adest et tamen consummationem exspectat cum omnia ei subiicientur. Festum ideo et politicam reductionem et religionem privatam respuit, declarans omnem historiam, omnem auctoritatem et omnem humanam sortem sensum suum in Christo invenire.
+
+Liturgice sollemnitas albo celebratur in fine Temporis per Annum, statim ante Adventum qui adventus Domini horizontem denuo aperit. Hic locus, a reformatione postconciliari stabilitus, diei vim recapitulatoriam potentissimam tribuit: totus annus culminat in confessione illum qui in humilitate natus est, regnum praedicavit, mortuus est, resurrexit et Spiritum misit nunc super universum cosmos regnare. Gradus eius ut sollemnitatis Domini coronam cycli liturgici efficit.
+
+Fidelibus hodiernis Christus Rex perscrutans examinationem fidelitatis manet. Quaerit ubi christiani ideologias politicas, ambitionem privatam vel mores culturales locum Christo soli debitum occupare permiserint, eosque invitat ut suam erga Regnum eius fidelitatem per cultum, moralem integritatem, servitium pauperum et spem finalis omnium rerum renovationis renovent.
+$desc$)
+) AS x(slug, name, description)
 ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
