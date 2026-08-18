@@ -2798,7 +2798,7 @@ SELECT f.id, 'la', x.name, x.description
 FROM feasts f
 JOIN (VALUES
 ('saint-justin-martyr', 'Sanctus Iustinus, martyr', $desc$
-Die prima mensis Iunii memoria obligatoria Sancti Iustini, martyris, in Calendario Romano Generali recolitur. Color liturgicus ruber est, martyrii signum.
+Sancti Iustini, martyris et philosophi Christiani saeculi secundi, memoria in Calendario Romano Generali die prima mensis Iunii occurrit et ut memoria obligatoria, vestibus rubris martyrii propriis, celebratur.
 
 Haec celebratio virum laicum et philosophum honorat, qui, veritatem per scholas philosophiae paganae quaesitam, in Christianismo tandem invenit id quod ratio ipsa altissime desiderabat: veram philosophiam. Festum eius concordiam fidei et rationis celebrat, vocationem doctorum ut scientiam Evangelio subiciant, atque huius vocationis sigillum ultimum in martyrio, quo Iustinus sanguine confirmavit quae calamo defenderat.
 
@@ -2808,7 +2808,7 @@ Aetate nostra, qua dialogus inter fidem, culturam et scientiam renovatur, festum
 $desc$),
 
 ('saints-marcellinus-and-peter-martyrs', 'Sancti Marcellinus et Petrus, martyres', $desc$
-Die secunda mensis Iunii memoria ad libitum Sanctorum Marcellini et Petri, martyrum, agitur, colore rubro martyrii proprio.
+Festum Sanctorum Marcellini et Petri, martyrum Romanorum antiquissimae aetatis, in Calendario Romano Generali die secunda mensis Iunii occurrit et ut memoria ad libitum, vestibus rubris martyrii propriis, celebratur.
 
 Hi duo martyres Romani, exorcista et presbyter, fidem usque ad sanguinis effusionem servaverunt, testimonium reddentes Christo in ipsa urbe quae eos ad mortem damnavit. Eorum memoria Ecclesiam docet fidelitatem in persecutione, et unitatem inter clerum minorem maioremque in eodem certamine pro fide confirmat.
 
@@ -2818,7 +2818,7 @@ Horum martyrum exemplum fideles hodiernos invitat ad considerandum quomodo humil
 $desc$),
 
 ('saints-charles-lwanga-and-companions-martyrs', 'Sancti Carolus Lwanga et Socii, martyres', $desc$
-Die tertia mensis Iunii memoria obligatoria Sanctorum Caroli Lwanga et Sociorum, martyrum, in Calendario Romano recolitur, colore rubro insignita. Hoc festum peculiarem locum tenet, cum martyres recentiores et extra Europam passos celebret, testimonium universalitatis Ecclesiae praebens.
+Memoria Sanctorum Caroli Lwanga et Sociorum, martyrum Ugandensium saeculi undevicesimi, in Calendario Romano Generali die tertia mensis Iunii ut obligatoria, vestibus rubris martyrii signum ferentibus, recolitur. Hoc festum peculiarem locum tenet, cum martyres recentiores et extra Europam passos celebret, testimonium universalitatis Ecclesiae praebens.
 
 Horum iuvenum martyrum cultus theologiam martyrii in contextu novo illustrat: fidelitas Baptismo data praevaluit etiam contra potestatem regiam et minas mortis atrocissimae. Carolus et socii, pagi aulici regis, castitatem et fidem Christianam servare maluerunt quam voluntati regis Mwanga II obtemperare, sic Evangelium usque ad supremum sacrificium testificantes.
 
@@ -2828,7 +2828,7 @@ Horum martyrum exemplum praesertim iuvenes hodiernos alloquitur, eos invitans ut
 $desc$),
 
 ('saint-boniface-bishop-and-martyr', 'Sanctus Bonifatius, episcopus et martyr', $desc$
-Die quinta mensis Iunii memoria obligatoria Sancti Bonifatii, episcopi et martyris, recolitur, colore rubro martyrii. Hic dies illum honorat qui, monachus Anglus, ad gentes Germanicas evangelizandas se totum contulit atque episcopalem in illis regionibus Ecclesiam constituit.
+Sancti Bonifatii, episcopi et martyris, qui, monachus Anglus, ad gentes Germanicas evangelizandas se totum contulit atque episcopalem in illis regionibus Ecclesiam constituit, memoria in Calendario Romano Generali die quinta mensis Iunii ut obligatoria, vestibus rubris martyrii propriis, recolitur.
 
 Theologia huius festi in ipsa missione evangelizandi radicatur: Bonifatius, arborem sacram Donaris - vulgo "Thor" - propria manu succidens, non solum superstitionem paganam publice refutavit, sed etiam Crucem Christi supra idola veterum deorum triumphare ostendit. Eius vita exemplum praebet zeli apostolici qui culturas transformat sine violentia, sed potestate signi et verbi.
 
@@ -2838,7 +2838,7 @@ Bonifatii exemplum Ecclesiam hodiernam ad novam evangelizationem incitat, praese
 $desc$),
 
 ('saint-norbert-bishop', 'Sanctus Norbertus, episcopus', $desc$
-Die sexta mensis Iunii memoria ad libitum Sancti Norberti, episcopi, celebratur, colore albo insignita. Cum memoria ad libitum sit, eius celebratio optioni particularis Ecclesiae vel communitatis relinquitur.
+Sancti Norberti, episcopi et reformatoris vitae canonicalis saeculo duodecimo, memoria in Calendario Romano Generali die sexta mensis Iunii ut ad libitum, vestibus albis, celebratur; cum memoria ad libitum sit, eius celebratio optioni particularis Ecclesiae vel communitatis relinquitur.
 
 Norbertus, vita mutata a curiali in praedicatorem paenitentiae, exemplum praebet conversionis radicalis et zeli reformandae vitae clericalis et religiosae. Ordinem Praemonstratensem instituens, canonicos regulares secundum regulam Augustini viventes coniunxit vitae contemplativae cum ministerio pastorali actuoso, ita ut sanctitas personalis et cura animarum simul florerent.
 
@@ -2848,7 +2848,7 @@ Norbertus fideles hodiernos invitat ad considerandam vim conversionis interioris
 $desc$),
 
 ('saint-ephrem-deacon-and-doctor-of-the-church', 'Sanctus Ephraem, diaconus et Ecclesiae doctor', $desc$
-Die nona mensis Iunii memoria ad libitum Sancti Ephraem, diaconi et Ecclesiae doctoris, in Calendario Romano occurrit, colore albo. Sanctus, licet numquam presbyter factus sit, inter doctores Ecclesiae Latinae computatur ob eximiam doctrinae et poeseos sacrae excellentiam.
+Sancti Ephraem, diaconi et Ecclesiae doctoris, cuius carmina sacra Orientem Christianum saeculis illustraverunt, memoria in Calendario Romano die nona mensis Iunii ut ad libitum, vestibus albis, occurrit. Sanctus, licet numquam presbyter factus sit, inter doctores Ecclesiae Latinae computatur ob eximiam doctrinae et poeseos sacrae excellentiam.
 
 Ephraem, "Cithara Spiritus Sancti" appellatus, theologiam per hymnos et carmina magis quam per tractatus scholasticos exposuit, ostendens fidem posse pulchritudine verborum et musicae tam profunde quam ratione discursiva communicari. Eius opera Mariologiam, mysteria Incarnationis et Eucharistiae, necnon vitam asceticam, poetico modo illustrant, ita ut theologia et liturgia arte inseparabiliter iungantur.
 
@@ -2858,7 +2858,7 @@ Ephraem hodiernos invitat ad redintegrandam pulchritudinem in cultu divino et in
 $desc$),
 
 ('saint-barnabas-apostle', 'Sanctus Barnabas, Apostolus', $desc$
-Die undecima mensis Iunii memoria obligatoria Sancti Barnabae, Apostoli, celebratur, colore albo insignita. Quamvis inter Duodecim non numeretur, titulo apostolico ab antiquissima traditione ornatur, ob peculiare munus in prima Ecclesiae expansione.
+Sancti Barnabae, Apostoli et socii Pauli in prima Ecclesiae expansione, memoria in Calendario Romano Generali die undecima mensis Iunii ut obligatoria, vestibus albis, celebratur. Quamvis inter Duodecim non numeretur, titulo apostolico ab antiquissima traditione ornatur, ob peculiare munus in prima Ecclesiae expansione.
 
 Barnabas, cuius nomen "filius consolationis" interpretatur, imaginem exhibet discipuli qui, generositate et prudentia insignis, alios in fide confirmat et communitatem aedificat. Eius exemplum praesertim illos illuminat qui in Ecclesia munus mediationis et reconciliationis gerunt, sicut ipse Paulum, adhuc suspectum, Hierosolymitanae communitati commendavit.
 
@@ -2868,7 +2868,7 @@ Barnabae exemplum fideles hodiernos ad opus consolationis et incorporationis in 
 $desc$),
 
 ('saint-anthony-of-padua-priest-and-doctor-of-the-church', 'Sanctus Antonius Patavinus, presbyter et Ecclesiae doctor', $desc$
-Die tertia decima mensis Iunii memoria obligatoria Sancti Antonii Patavini, presbyteri et Ecclesiae doctoris, occurrit, colore albo. Inter sanctos popularissimos numeratur, cuius invocatio per totum orbem Christianum diffusa est.
+Sancti Antonii Patavini, presbyteri et Ecclesiae doctoris, memoria in Calendario Romano Generali die tertia decima mensis Iunii ut obligatoria, vestibus albis, occurrit. Inter sanctos popularissimos numeratur, cuius invocatio per totum orbem Christianum diffusa est.
 
 Antonius, frater Franciscanus, praedicator eximius contra haereses temporis sui - praesertim contra Catharos - exstitit, adeo ut "Malleus Haereticorum" vocaretur; eius eloquentia scientiam theologicam cum ardore apostolico et simplicitate evangelica coniunxit, ostendens praedicationem veram semper ex intima cum Deo unione oriri debere.
 
@@ -2878,7 +2878,7 @@ Antonii exemplum fideles hodiernos ad praedicationem simplicem et efficacem invi
 $desc$),
 
 ('saint-romuald-abbot', 'Sanctus Romualdus, abbas', $desc$
-Die undevicesima mensis Iunii memoria ad libitum Sancti Romualdi, abbatis, in Calendario Romano recolitur, colore albo. Cum memoria ad libitum sit, celebratio secundum consuetudinem particularium Ecclesiarum instituitur.
+Sancti Romualdi, abbatis et reformatoris vitae monasticae, memoria in Calendario Romano die undevicesima mensis Iunii ut ad libitum, vestibus albis, recolitur. Cum memoria ad libitum sit, celebratio secundum consuetudinem particularium Ecclesiarum instituitur.
 
 Romualdus vitam monasticam ad puritatem primaevam heremiticae disciplinae reducere studuit, coniungens solitudinem contemplativam cum vita communi fratrum, ita ut disciplina rigorosa et caritas fraterna simul in una forma vitae coalescerent. Eius exemplum ostendit quomodo silentium et paenitentia viam ad intimam cum Deo unionem aperiant.
 
@@ -2888,7 +2888,7 @@ Romualdi exemplum hodiernos invitat ad quaerendum in vita quotidiana spatia sile
 $desc$),
 
 ('saint-aloysius-gonzaga-religious', 'Sanctus Aloisius Gonzaga, religiosus', $desc$
-Die vicesima prima mensis Iunii memoria obligatoria Sancti Aloisii Gonzaga, religiosi, celebratur, colore albo insignita. Hic sanctus iuvenis inter patronos iuventutis praecipuum locum tenet, exemplum sanctitatis in ipso aetatis flore ostendens.
+Sancti Aloisii Gonzaga, religiosi et patroni praecipui iuventutis, memoria in Calendario Romano Generali die vicesima prima mensis Iunii ut obligatoria, vestibus albis, celebratur. Hic sanctus iuvenis inter patronos iuventutis praecipuum locum tenet, exemplum sanctitatis in ipso aetatis flore ostendens.
 
 Aloisius, hereditate nobili et gloria mundana sponte relictis, vitam religiosam in Societate Iesu elegit, ostendens quomodo gratia divina possit vincere etiam ambitiones et honores saeculares maxime blandientes. Eius mors, dum aegrotos peste laborantes caritative sublevat, caritatem heroicam usque ad supremum sacrificium exemplificat.
 
@@ -2898,7 +2898,7 @@ Aloisii exemplum praesertim iuvenes hodiernos alloquitur, eos invitans ut vocati
 $desc$),
 
 ('saint-paulinus-of-nola-bishop', 'Sanctus Paulinus Nolanus, episcopus', $desc$
-In Calendario Romano Generali, die vicesima secunda mensis Iunii memoria ad libitum Sancti Paulini Nolani, episcopi, occurrit, colore albo. Cum eodem die etiam memoria Sanctorum Ioannis Fisher et Thomae Mori celebretur, particulari Ecclesiae vel fidelibus optio relinquitur.
+Sancti Paulini Nolani, episcopi et poetae Christiani, memoria in Calendario Romano Generali die vicesima secunda mensis Iunii ut ad libitum, vestibus albis, occurrit. Cum eodem die etiam memoria Sanctorum Ioannis Fisher et Thomae Mori celebretur, particulari Ecclesiae vel fidelibus optio relinquitur.
 
 Paulinus, vir nobilis et opibus abundans, exemplum praebet renuntiationis evangelicae: divitiis et honoribus saecularibus sponte depositis, vitam episcopalem simplicem et poeticam elegit, ostendens quomodo cultura et eloquentia possint plene Evangelio subici, non extincta sed transformata.
 
@@ -2908,7 +2908,7 @@ Paulini exemplum hodiernos, praesertim homines cultos et opibus praeditos, invit
 $desc$),
 
 ('saints-john-fisher-bishop-and-thomas-more-martyrs', 'Sancti Ioannes Fisher et Thomas Morus, martyres', $desc$
-In Calendario Romano Generali, die vicesima secunda mensis Iunii memoria ad libitum Sanctorum Ioannis Fisher, episcopi, et Thomae Mori, martyrum, recolitur, colore rubro martyrii insignita. Optio celebrandi inter hanc memoriam et illam Sancti Paulini eodem die particulari Ecclesiae relinquitur.
+Sanctorum Ioannis Fisher, episcopi, et Thomae Mori, martyrum Anglorum, memoria in Calendario Romano Generali die vicesima secunda mensis Iunii ut ad libitum, vestibus rubris martyrii propriis, recolitur. Optio celebrandi inter hanc memoriam et illam Sancti Paulini eodem die particulari Ecclesiae relinquitur.
 
 Hi duo martyres Anglicani, episcopus alter, laicus alter, unitatem Ecclesiae et primatum Petrinum usque ad mortem defenderunt, recusantes Actum Supremationis regiae super Ecclesiam agnoscere. Eorum testimonium ostendit conscientiam rectam potestati civili, etiam summae, subiici non posse ubi fides et unitas Ecclesiae in periculum vocantur.
 
@@ -2918,7 +2918,7 @@ Horum martyrum exemplum hodiernos invitat ad fidelitatem conscientiae rectae eti
 $desc$),
 
 ('the-nativity-of-saint-john-the-baptist', 'Nativitas Sancti Ioannis Baptistae', $desc$
-Sollemnitas Nativitatis Sancti Ioannis Baptistae die vicesima quarta mensis Iunii celebratur, colore albo insignita, sex mensibus ante Nativitatem Domini secundum Evangelium Lucae collocata. Haec sollemnitas inter rarissimas est quae natalem diem non mortis sed ipsius ortus sancti recolunt, honore quem sola Beata Virgo Maria et Dominus Iesus praeterea in Calendario obtinent.
+Sollemnitas Nativitatis Sancti Ioannis Baptistae, praecursoris Domini, in Calendario Romano Generali die vicesima quarta mensis Iunii, vestibus albis, celebratur, sex mensibus ante Nativitatem Domini secundum Evangelium Lucae collocata. Haec sollemnitas inter rarissimas est quae natalem diem non mortis sed ipsius ortus sancti recolunt, honore quem sola Beata Virgo Maria et Dominus Iesus praeterea in Calendario obtinent.
 
 Ioannes, ultimus prophetarum Veteris Testamenti et primus testis Novi, in ipso ortu suo mysterium salutis annuntiat: eius nativitas mirabilis, sterilitate Elisabeth superata, praeparationem et gaudium adventus Messiae praesignat. Sollemnitas eius ideo non tantum vitam sancti particularis, sed ipsum mysterium Praecursoris celebrat, qui "viam Domini parare" ab utero matris destinatus est.
 
@@ -2928,7 +2928,7 @@ Fideles hodierni per hanc sollemnitatem invitantur ad considerandam vocationem p
 $desc$),
 
 ('saint-cyril-of-alexandria-bishop-and-doctor-of-the-church', 'Sanctus Cyrillus Alexandrinus, episcopus et Ecclesiae doctor', $desc$
-Die vicesima septima mensis Iunii memoria ad libitum Sancti Cyrilli Alexandrini, episcopi et Ecclesiae doctoris, occurrit, colore albo. Hic dies unum ex magnis defensoribus fidei Christologicae et Mariologicae honorat.
+Sancti Cyrilli Alexandrini, episcopi et Ecclesiae doctoris, memoria in Calendario Romano die vicesima septima mensis Iunii ut ad libitum, vestibus albis, occurrit. Hic dies unum ex magnis defensoribus fidei Christologicae et Mariologicae honorat.
 
 Cyrillus, adversus Nestorium pugnans, veritatem unius personae in Christo, Deo et homine, defendit, atque ex hac veritate consequenter titulum Beatae Virgini Mariae Theotokos, id est Deiparae, vindicavit. Eius theologia ostendit quomodo Mariologia semper ex Christologia proficiscatur, et quomodo defensio veri tituli Mariae ipsam fidem in Incarnationem Verbi tueatur.
 
@@ -2938,7 +2938,7 @@ Cyrilli exemplum fideles hodiernos invitat ad firmitatem in confessione plena my
 $desc$),
 
 ('saint-irenaeus-bishop-martyr-and-doctor-of-the-church', 'Sanctus Irenaeus, episcopus, martyr et Ecclesiae doctor', $desc$
-Die vicesima octava mensis Iunii memoria obligatoria Sancti Irenaei, episcopi, martyris et Ecclesiae doctoris, celebratur, colore rubro insignita, pridie sollemnitatis Sanctorum Petri et Pauli in Calendario Romano Generali. Titulus martyris, recentissime additus, huic memoriae peculiarem significationem confert inter festa mensis Iunii.
+Sancti Irenaei, episcopi, martyris et Ecclesiae doctoris, memoria in Calendario Romano Generali die vicesima octava mensis Iunii ut obligatoria, vestibus rubris, celebratur, pridie sollemnitatis Sanctorum Petri et Pauli. Titulus martyris, recentissime restitutus, huic memoriae peculiarem significationem confert inter festa mensis Iunii.
 
 Irenaeus, discipulus Polycarpi qui ipse a Ioanne Apostolo doctrinam acceperat, catenam traditionis apostolicae usque ad ipsos Apostolos viva voce transmisit, atque opere suo Adversus Haereses contra doctrinas gnosticas veritatem unitatis inter Deum Creatorem et Deum Redemptorem, atque integritatem historiae salutis, egregie defendit.
 
@@ -2948,7 +2948,7 @@ Irenaei exemplum hodiernos ad quaerendam veram unitatem Ecclesiae, per fidelem t
 $desc$),
 
 ('saints-peter-and-paul-apostles', 'Sancti Petrus et Paulus, Apostoli', $desc$
-Die vicesima nona mensis Iunii Sollemnitas Sanctorum Petri et Pauli, Apostolorum, agitur, colore albo insignita, inter praecipuas totius anni sollemnitates. Haec dies festum patronale urbis Romae constituit et, in multis regionibus, praeceptum manet.
+Sollemnitas Sanctorum Petri et Pauli, Apostolorum, in Calendario Romano Generali die vicesima nona mensis Iunii, vestibus albis, agitur, inter praecipuas totius anni sollemnitates. Haec dies festum patronale urbis Romae constituit et, in multis regionibus, praeceptum manet.
 
 Petrus et Paulus, licet vocatione et charismate diversissimi, unam eandemque Ecclesiam aedificant: alter fundamentum visibile unitatis et communionis, alter praeco audacissimus Evangelii ad gentes. Eorum coniuncta celebratio ostendit quomodo diversitas donorum in una eademque missione Ecclesiae ad unitatem convergat, potestate scilicet et amore.
 
@@ -2958,7 +2958,7 @@ Fideles hodierni per hanc sollemnitatem invitantur ad considerandam pulchritudin
 $desc$),
 
 ('the-first-martyrs-of-holy-roman-church', 'Sancti Primi Martyres Sanctae Romanae Ecclesiae', $desc$
-Die trigesima mensis Iunii memoria ad libitum Sanctorum Primorum Martyrum Sanctae Romanae Ecclesiae recolitur, colore rubro insignita, statim post sollemnitatem Sanctorum Petri et Pauli collocata. Hi martyres, licet nominibus fere omnes ignoti, primam magnam persecutionem Christianorum Romae passam repraesentant.
+Sanctorum Primorum Martyrum Sanctae Romanae Ecclesiae memoria in Calendario Romano Generali die trigesima mensis Iunii ut ad libitum, vestibus rubris, recolitur, statim post sollemnitatem Sanctorum Petri et Pauli collocata. Hi martyres, licet nominibus fere omnes ignoti, primam magnam persecutionem Christianorum Romae passam repraesentant.
 
 Horum martyrum anonymorum cultus ostendit quod sanctitas et fidelitas usque ad mortem non tantum insignibus personis, sed etiam multitudini fidelium simplicium, quorum nomina sola Deo nota sunt, propria est. Eorum memoria omnem persecutionis victimam, etiam ignotam mundo, tamquam testem authenticum Christi agnoscit.
 
@@ -7143,21 +7143,54 @@ ON CONFLICT (slug) DO NOTHING;
 
 -- TRANSLATIONS
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', 'Christmas Vigil', NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'christmas-vigil'
+JOIN (VALUES
+('christmas-vigil', 'Christmas Vigil', $desc$
+Christmas Vigil stands at the threshold of the Nativity and preserves the ancient instinct of the Roman liturgy to begin great mysteries with watchful anticipation. In the older books of the Roman Rite the day of 24 December already had a privileged and strongly preparatory character, but the postconciliar Missal gave the vigil its own proper formularies and thus more clearly distinguished the evening celebration from the Masses of Christmas itself. The reform of 1969 did not invent the vigil; it clarified its place as the Church's final liturgical waiting before the proclamation that the Word has become flesh.
+
+The theology of the vigil is one of expectancy at full tension. Its readings place the Church before the long history of promise, the Davidic hope, and the genealogy in which the Son of God enters human history without abolishing it. The mystery celebrated is not yet the manifestation of Bethlehem in all its joy, but the last moment of Israel's longing and the Church's contemplative hush before the Incarnation breaks into time.
+
+Within the calendar the celebration belongs to the closing stretch of Advent even as it already opens Christmas, which is why its character is liminal and richly nuanced. White vesture signals the light about to appear, yet the vigil retains the sobriety proper to a Church still waiting, and its rank as a privileged day prevents other observances from diluting this singular transition from expectation to fulfillment.
+
+Pastorally, Christmas Vigil teaches the faithful that Christian joy is deepest when it is prepared by longing, recollection, and prayer. It invites families and parishes to receive Christmas not as a hurried sentiment but as a divine event for which one keeps watch, reconciles, remembers the poor, and learns again to desire the coming of the Savior.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', 'Vigile de Noël', NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'christmas-vigil'
+JOIN (VALUES
+('christmas-vigil', 'Vigile de Noël', $desc$
+La Vigile de Noël se tient au seuil même de la Nativité et conserve l'antique intuition de la liturgie romaine d'ouvrir les grands mystères par une attente vigilante. Dans les livres plus anciens du rite romain, le 24 décembre possédait déjà un caractère privilégié et fortement préparatoire; toutefois, le Missel issu de la réforme postconciliaire a donné à la vigile ses formulaires propres, distinguant plus nettement la célébration du soir des messes de Noël elles-mêmes. La réforme de 1969 n'a donc pas créé cette vigile, mais elle en a précisé la place comme ultime veille liturgique avant l'annonce que le Verbe s'est fait chair.
+
+Sa théologie est celle d'une espérance tendue jusqu'à son accomplissement. Les lectures placent l'Église devant la longue histoire de la promesse, l'attente davidique et la généalogie dans laquelle le Fils de Dieu entre dans l'histoire humaine sans la supprimer. Le mystère célébré n'est pas encore la manifestation de Bethléem dans toute sa joie, mais le dernier instant du désir d'Israël et du silence contemplatif de l'Église avant que l'Incarnation n'éclate dans le temps.
+
+Dans le calendrier, cette célébration appartient aux dernières heures de l'Avent tout en ouvrant déjà Noël, d'où son caractère de passage, à la fois sobre et lumineux. Le blanc annonce la clarté qui va paraître, mais la vigile garde la retenue propre à une Église encore en attente, et son rang de jour privilégié empêche toute autre observance d'affaiblir cette transition unique de l'espérance à l'accomplissement.
+
+Sur le plan pastoral, la Vigile de Noël apprend aux fidèles que la joie chrétienne est la plus vraie lorsqu'elle a été préparée par le désir, le recueillement et la prière. Elle invite familles et communautés à accueillir Noël non comme une émotion précipitée, mais comme un événement divin pour lequel on veille, on se réconcilie, on se souvient des pauvres et l'on réapprend à désirer la venue du Sauveur.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', 'Vigilia Nativitatis Domini', NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'christmas-vigil'
+JOIN (VALUES
+('christmas-vigil', 'Vigilia Nativitatis Domini', $desc$
+Vigilia Nativitatis Domini in ipso limine sollemnitatis consistit atque antiquam mentem liturgiae Romanae servat, qua magna mysteria per vigilantem expectationem incipiuntur. In antiquioribus libris Ritus Romani dies XXIV mensis Decembris iam indolem privilegiatam et valde praeparatoriam habebat; Missale tamen post Concilium Vaticanum II recognitum huic vigiliae propria formularia attribuit, ut celebratio vespertina a Missis ipsius Nativitatis clarius distingueretur. Reformata ordinatio anni MCMLXIX vigiliam non instituit novam, sed locum eius tamquam ultimam Ecclesiae custodiam ante nuntium Verbum caro factum esse luculentius declaravit.
+
+Theologia huius celebrationis est spei ad summam tensionem adductae. Lectiones Ecclesiam sistunt ante longam historiam promissionis, ante spem davidicam et genealogiam in qua Filius Dei historiam humanam ingreditur, non abolens sed assumens. Hic nondum celebratur plena Bethlehemiticae manifestationis laetitia, sed ultimum momentum desiderii Israel et contemplativi Ecclesiae silentii antequam Incarnatio in tempus erumpat.
+
+In calendario haec celebratio ad extremum Adventus spatium pertinet et tamen iam Nativitatem aperit; ideo indoles eius liminalis est et mira moderatione cum lumine coniungitur. Color albus lucem iam appropinquantem significat, sed vigilia adhuc servat gravitatem Ecclesiae exspectantis, atque dignitas diei privilegiati efficit ne aliae observationes hunc singularem transitum ab expectatione ad impletionem obscurent.
+
+Pastoraliter Vigilia Nativitatis fideles docet gaudium christianum tunc esse profundissimum cum desiderio, recollectione et oratione praeparatur. Invitat familias et communitates ut Natale non tamquam festinum sensum accipiant, sed tamquam eventum divinum cui vigilando, reconciliando, pauperum meminendo et adventum Salvatoris denuo desiderando occurritur.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- CELEBRATION (fixed Dec 24, vigil)
@@ -7176,21 +7209,54 @@ INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ON CONFLICT (slug) DO NOTHING;
 
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'en', 'Sixth Day in the Octave of Christmas', NULL
+SELECT f.id, 'en', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'sixth-day-in-the-octave-of-christmas'
+JOIN (VALUES
+('sixth-day-in-the-octave-of-christmas', 'Sixth Day in the Octave of Christmas', $desc$
+The Sixth Day in the Octave of Christmas belongs to the ancient practice by which the Church extends the solemnity of the Lord's Nativity across eight days so that the mystery may be contemplated rather than exhausted in a single celebration. The Christmas octave took recognizable shape in late antiquity, and although the calendar reform following the Second Vatican Council simplified many octaval structures, it deliberately preserved this one as a privileged prolongation of the Incarnation. In the modern Roman calendar 30 December normally remains one of the white-clad days within that octave, unless displaced by the Holy Family according to the year's arrangement.
+
+Its theological accent is quiet but profound. The Church lingers not over a new event but over the radiance of the same mystery: the eternal Son truly entered the hidden fabric of human life, sanctifying time, family bonds, waiting, and ordinary growth. The Gospel traditionally heard on this day, with the prophetess Anna praising God in the Temple, gives the octave a contemplative tone, showing that those who persevere in hope are granted to recognize the Child as the redemption of Israel.
+
+Liturgically this day is not a separate solemnity competing with Christmas, but a facet of Christmas itself, held within the octave's unified celebration. Its white color, its proximity to the Holy Family and to the approaching Mother of God on 1 January, and its place among the proper texts of the octave give it the character of a sustained contemplation in which the Church keeps the feast by remaining near the crib and the Temple alike.
+
+For the faithful today, the Sixth Day in the Octave of Christmas is a needed correction to the tendency to let Christmas vanish as soon as the external festivities fade. It invites a slower discipleship: to praise with Anna, to dwell with the Child, to see grace at work in ordinary domestic life, and to let the Incarnation reorder the final days of the civil year with thanksgiving and interior peace.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'fr', 'Sixième jour dans l''Octave de Noël', NULL
+SELECT f.id, 'fr', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'sixth-day-in-the-octave-of-christmas'
+JOIN (VALUES
+('sixth-day-in-the-octave-of-christmas', 'Sixième jour dans l''Octave de Noël', $desc$
+Le sixième jour dans l'Octave de Noël relève de l'antique pratique par laquelle l'Église prolonge la solennité de la Nativité du Seigneur pendant huit jours, afin que le mystère soit contemplé au lieu d'être consommé en une seule célébration. L'octave de Noël a pris une forme reconnaissable dès l'Antiquité tardive et, si la réforme du calendrier après le Concile Vatican II a simplifié bien des octaves, elle a délibérément conservé celle-ci comme prolongement privilégié de l'Incarnation. Dans le calendrier romain actuel, le 30 décembre demeure normalement l'un de ces jours blancs de l'octave, sauf lorsqu'il est remplacé, selon l'année, par la Sainte Famille.
+
+Son accent théologique est discret mais profond. L'Église ne s'arrête pas à un événement nouveau, mais à l'irradiation du même mystère: le Fils éternel est véritablement entré dans la trame cachée de la vie humaine, sanctifiant le temps, les liens familiaux, l'attente et la croissance ordinaire. L'Évangile traditionnel de ce jour, où la prophétesse Anne rend grâce dans le Temple, donne à l'octave une tonalité contemplative et montre que ceux qui persévèrent dans l'espérance reçoivent la grâce de reconnaître en l'Enfant la rédemption d'Israël.
+
+Liturgiquement, ce jour n'est pas une solennité autonome rivalisant avec Noël, mais une face du mystère même de Noël, maintenue dans l'unité de l'octave. Le blanc, la proximité de la Sainte Famille et de la solennité de la Mère de Dieu au 1er janvier, ainsi que sa place parmi les textes propres de l'octave, lui donnent le caractère d'une contemplation prolongée où l'Église demeure à la fois près de la crèche et du Temple.
+
+Pour les fidèles d'aujourd'hui, ce sixième jour constitue un correctif salutaire à la tentation de laisser Noël disparaître dès que les signes extérieurs se dissipent. Il invite à une fidélité plus lente: louer avec Anne, demeurer auprès de l'Enfant, discerner la grâce à l'œuvre dans la vie domestique ordinaire et laisser l'Incarnation ordonner les derniers jours de l'année civile dans l'action de grâce et la paix intérieure.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 INSERT INTO feast_translations (feast_id, locale_code, name, description)
-SELECT f.id, 'la', 'Dies Sextus infra Octavam Nativitatis Domini', NULL
+SELECT f.id, 'la', x.name, x.description
 FROM feasts f
-WHERE f.slug = 'sixth-day-in-the-octave-of-christmas'
+JOIN (VALUES
+('sixth-day-in-the-octave-of-christmas', 'Dies Sextus infra Octavam Nativitatis Domini', $desc$
+Dies Sextus infra Octavam Nativitatis ad antiquam consuetudinem pertinet qua Ecclesia sollemnitatem Nativitatis Domini per octo dies extendit, ut mysterium non uno die exhauriatur sed diutius contemplandum proponatur. Octava Nativitatis iam in antiquitate seriori formam certiorem accepit; etsi instauratio calendarii post Concilium Vaticanum II multas structuras octavali more simpliciores reddidit, hanc tamen consulto servavit ut privilegiatam Incarnationis propagationem. In calendario Romano hodierno dies XXX mensis Decembris plerumque unus est e diebus albis intra octavam, nisi a festo Sanctae Familiae secundum anni rationem impediatur.
+
+Theologicus huius diei accentus quietus quidem est, sed altissimus. Ecclesia non novum eventum prosequitur, sed eandem mysterii lucem diutius intuetur: Filius aeternus vere intravit occultam humanae vitae texturam, sanctificans tempus, vincula domestica, expectationem atque communem incrementi legem. Evangelium huius diei, in quo Anna prophetissa in Templo Deum laudat, octavae contemplationis sonum auget atque ostendit eos qui in spe perseverant donari recognitione Pueri tamquam redemptionis Israel.
+
+Liturgice hic dies non est sollemnitas a Nativitate separata aut ei aemula, sed quasi una ex ipsius Nativitatis faciebus intra unitatem octavae servata. Color albus, propinquitas ad Sanctam Familiam et ad sollemnitatem Dei Genetricis diei I Ianuarii, necnon locus inter proprios octavae textus, efficiunt ut Ecclesia iuxta praesepe simulque iuxta Templum morando festum prosequatur.
+
+Fidelibus hodiernis Dies Sextus infra Octavam Nativitatis salubre remedium offert contra consuetudinem Natalem statim evanescere sinendi, ubi externa festa desinunt. Invitat ad discipulatum lentiorem: ut cum Anna laudent, apud Puerum permaneant, gratiam in ordinaria vita domestica operantem videant, atque Incarnationem extremos anni civilis dies gratiarum actione et pace interiori informare sinant.
+$desc$)
+) AS x(slug, name, description)
+ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- CELEBRATION (fixed Dec 30, octave)
