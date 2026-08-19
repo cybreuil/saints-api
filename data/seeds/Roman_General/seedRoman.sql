@@ -8069,7 +8069,7 @@ Liturgically, this Sunday belongs among the highest Sundays of the year and wear
 Pastorally, the First Sunday of Lent teaches believers to begin again without illusions of ease. It urges concrete renunciation, sharper discernment of temptation, and confidence that the same Lord who conquered in the wilderness accompanies his people through their own testing toward Easter freedom.
 $desc$),
 ('thursday-after-ash-wednesday', 'Thursday after Ash Wednesday', $desc$
-The Thursday after Ash Wednesday continues the opening days of Lent that lead into the season's first full week. Coming immediately after the ashes, it is kept in the Roman rite as a privileged ferial day of Lent, ordinarily in violet, though the precise rank, color, and permitted commemorations can vary between calendars and forms of the rite, since it is not a fixed universal solemnity but a Lenten weekday defined by its relation to the movable date of Easter.
+The Thursday after Ash Wednesday continues the opening days of Lent that lead into the season's first full week. Coming immediately after the ashes, it is a violet ferial day of Lent, privileged in the Roman tradition so that it is not simply set aside by lesser celebrations, and its date moves each year with Easter.
 
 Theologically, the day carries forward the summons of Ash Wednesday into sustained practice: the single, dramatic gesture of ashes must now be lived out through days of ordinary fidelity to fasting, prayer, and almsgiving. Its Gospel, drawn from Luke's teaching that whoever would save his life must lose it for Christ's sake, presses the logic of the Cross onto the whole shape of Lenten discipline, insisting that penance is not decoration but a real dying to self undertaken in hope of the resurrection.
 
@@ -8078,7 +8078,7 @@ Historically, this Thursday was in fact the last of the four days that extend Le
 For the faithful today, this Thursday marks the moment when the initial fervor of Ash Wednesday must become sustained practice rather than a single gesture. It invites Christians to settle into the rhythm of Lent, translating the ashes received days before into concrete and repeated acts of self-denial and charity that will carry them, week by week, toward Easter.
 $desc$),
 ('friday-after-ash-wednesday', 'Friday after Ash Wednesday', $desc$
-The Friday after Ash Wednesday is the first Friday of the Lenten season, observed in the Roman rite as a privileged ferial day, typically in violet, though as with other Lenten weekdays its exact rank, color, and the commemorations it may or may not admit can differ across calendars and historical forms of the rite.
+The Friday after Ash Wednesday is the first Friday of the Lenten season. It is a violet ferial day of Lent, privileged in the Roman tradition and, like every Lenten Friday, a day of abstinence, falling on a date that moves each year with Easter.
 
 Its Gospel, the question of why the disciples of John and the Pharisees fast while Jesus' disciples do not, gives the day its theological key: fasting is fitting once the Bridegroom has been taken away, and Lenten Fridays anticipate in a small way the great Friday of the Passion still weeks distant. Every Friday of the year already carries this Paschal memory, and the season's own first Friday makes that ordinary weekly discipline explicit and intensified.
 
@@ -8087,7 +8087,7 @@ The Friday fast is among the very oldest of Christian observances, attested alre
 Today the day invites the faithful to recover the ancient sense of Friday as a day set apart for penance and remembrance of the Cross, now deepened by the wider season of Lent. It is an opportunity to renew traditional practices of abstinence and prayer, letting a habit many keep loosely throughout the year regain its original seriousness during these first weeks of conversion.
 $desc$),
 ('saturday-after-ash-wednesday', 'Saturday after Ash Wednesday', $desc$
-The Saturday after Ash Wednesday closes the opening days of Lent before the season's first Sunday, kept in the Roman rite as a privileged ferial day, ordinarily in violet, although its precise rank, color, and the commemorations it may admit can vary between calendars and between older and newer forms of the rite.
+The Saturday after Ash Wednesday closes the opening days of Lent before the season's first Sunday. It is a violet ferial day of Lent, privileged and never simply displaced by lesser celebrations, falling on a date that moves each year with Easter.
 
 Its liturgy, centered on the call of Levi the tax collector and the Lord's saying that he has come to call sinners rather than the righteous, gives the day a note of mercy within penance: Lenten austerity exists not for its own sake but so that sinners may rise, like Levi, and follow Christ. It closes the four opening days on a hopeful note, preparing the Church to enter the temptation narrative of the First Sunday of Lent.
 
@@ -8150,7 +8150,7 @@ Liturgiquement, c'est une féria privilégiée violette qui change immédiatemen
 Pour les fidèles d'aujourd'hui, le Mercredi des Cendres demeure l'un des moments les plus directement évangélisateurs de l'Église. Il invite à un sérieux examen de vie, à des pratiques concrètes de pénitence et de charité, et à redécouvrir que la conversion est à la fois personnelle et communautaire: toute l'Église entre ensemble en Carême, marquée d'humilité mais soutenue par l'espérance.
 $desc$),
 ('thursday-after-ash-wednesday', 'Jeudi après le Mercredi des Cendres', $desc$
-Le Jeudi après le Mercredi des Cendres poursuit les premiers jours du Carême qui conduisent vers la première semaine complète de la saison. Venant immédiatement après les cendres, il est gardé dans le rite romain comme férie privilégiée de Carême, ordinairement en violet, bien que le rang précis, la couleur et les commémoraisons permises puissent varier selon les calendriers et les formes du rite, puisqu'il ne s'agit pas d'une solennité universelle fixe mais d'une férie de Carême définie par sa relation à la date mobile de Pâques.
+Le Jeudi après le Mercredi des Cendres poursuit les premiers jours du Carême qui conduisent vers la première semaine complète de la saison. Venant immédiatement après les cendres, il est une férie violette de Carême, privilégiée dans la tradition romaine de sorte qu'elle n'est pas simplement écartée par des célébrations de rang inférieur, et sa date se déplace chaque année avec Pâques.
 
 Théologiquement, ce jour prolonge l'appel du Mercredi des Cendres dans une pratique soutenue: le geste unique et spectaculaire des cendres doit désormais se vivre à travers des jours de fidélité ordinaire au jeûne, à la prière et à l'aumône. Son Évangile, tiré de l'enseignement de Luc selon lequel qui veut sauver sa vie la perdra à cause du Christ, applique la logique de la Croix à toute la forme de la discipline de Carême, insistant sur le fait que la pénitence n'est pas un ornement mais une véritable mort à soi-même entreprise dans l'espérance de la résurrection.
 
@@ -8159,7 +8159,7 @@ Historiquement, ce jeudi fut en réalité le dernier des quatre jours qui prolon
 Pour les fidèles d'aujourd'hui, ce jeudi marque le moment où la ferveur initiale du Mercredi des Cendres doit devenir une pratique durable plutôt qu'un geste isolé. Il invite les chrétiens à entrer dans le rythme du Carême, traduisant les cendres reçues quelques jours plus tôt en actes concrets et répétés de renoncement et de charité qui les mèneront, semaine après semaine, vers Pâques.
 $desc$),
 ('friday-after-ash-wednesday', 'Vendredi après le Mercredi des Cendres', $desc$
-Le Vendredi après le Mercredi des Cendres est le premier vendredi du temps du Carême, observé dans le rite romain comme férie privilégiée, typiquement en violet, bien que, comme pour les autres féries de Carême, son rang exact, sa couleur et les commémoraisons qu'il admet ou non puissent varier selon les calendriers et les formes historiques du rite.
+Le Vendredi après le Mercredi des Cendres est le premier vendredi du temps du Carême. Il est une férie violette de Carême, privilégiée dans la tradition romaine et, comme tout vendredi de Carême, jour d'abstinence, tombant à une date qui se déplace chaque année avec Pâques.
 
 Son Évangile, la question de savoir pourquoi les disciples de Jean et les pharisiens jeûnent alors que les disciples de Jésus ne jeûnent pas, donne à ce jour sa clé théologique: le jeûne convient une fois l'Époux enlevé, et les vendredis de Carême anticipent, à leur mesure, le grand Vendredi de la Passion encore à plusieurs semaines de distance. Chaque vendredi de l'année porte déjà cette mémoire pascale, et le premier vendredi de la saison rend explicite et intensifie cette discipline hebdomadaire ordinaire.
 
@@ -8168,7 +8168,7 @@ Le jeûne du vendredi compte parmi les observances chrétiennes les plus ancienn
 Aujourd'hui, ce jour invite les fidèles à retrouver le sens ancien du vendredi comme jour mis à part pour la pénitence et le souvenir de la Croix, désormais approfondi par la saison plus large du Carême. C'est l'occasion de renouveler les pratiques traditionnelles d'abstinence et de prière, permettant à une habitude que beaucoup gardent de façon relâchée durant l'année de retrouver son sérieux originel en ces premières semaines de conversion.
 $desc$),
 ('saturday-after-ash-wednesday', 'Samedi après le Mercredi des Cendres', $desc$
-Le Samedi après le Mercredi des Cendres clôt les premiers jours du Carême avant le premier dimanche de la saison; il est gardé dans le rite romain comme férie privilégiée, ordinairement en violet, bien que son rang précis, sa couleur et les commémoraisons qu'il peut admettre varient selon les calendriers et selon les formes anciennes et nouvelles du rite.
+Le Samedi après le Mercredi des Cendres clôt les premiers jours du Carême avant le premier dimanche de la saison. Il est une férie violette de Carême, privilégiée et jamais simplement supplantée par des célébrations de rang inférieur, tombant à une date qui se déplace chaque année avec Pâques.
 
 Sa liturgie, centrée sur l'appel de Lévi le publicain et la parole du Seigneur selon laquelle il est venu appeler non les justes mais les pécheurs, donne à ce jour une note de miséricorde au sein même de la pénitence: l'austérité du Carême n'existe pas pour elle-même, mais afin que les pécheurs se lèvent, comme Lévi, et suivent le Christ. Il clôt les quatre premiers jours sur une note d'espérance, préparant l'Église à entrer dans le récit des tentations du premier dimanche de Carême.
 
@@ -8240,7 +8240,7 @@ Liturgice dies est feria privilegiata violacea quae statim sonum Ecclesiae a tem
 Fidelibus hodiernis Feria IV Cinerum unum e momentis Ecclesiae maxime evangelizantibus manet. Invitat ad gravem vitae examinationem, ad concretas paenitentiae et caritatis exercitationes, atque ad recuperandam veritatem conversionem simul personalem et communitariam esse: tota Ecclesia una in Quadragesimam ingreditur, humilitate signata sed spe sustentata.
 $desc$),
 ('thursday-after-ash-wednesday', 'Feria V post Cineres', $desc$
-Feria V post Cineres primos Quadragesimae dies prosequitur qui ad primam integram temporis hebdomadam ducunt. Statim post cineres veniens, in Ritu Romano ut feria privilegiata Quadragesimae, plerumque violacea, servatur, quamvis gradus praecisus, color et commemorationes permissae inter varia kalendaria et formas ritus differre possint, cum non sit sollemnitas universalis fixa, sed feria Quadragesimalis ex relatione ad diem mobilem Paschae definita.
+Feria V post Cineres primos Quadragesimae dies prosequitur qui ad primam integram temporis hebdomadam ducunt. Statim post cineres veniens, feria violacea Quadragesimae est, in traditione Romana privilegiata ita ut celebrationibus inferioris gradus non simpliciter cedat, quae quotannis cum Paschate movetur.
 
 Theologice dies vocationem Feriae IV Cinerum in exercitium continuum producit: gestus ille unicus et insignis cinerum iam per dies fidelitatis ordinariae ieiunio, orationi et eleemosynae vivendus est. Evangelium eius, ex doctrina Lucae sumptum quod qui vitam suam salvare voluerit, eam propter Christum perdet, logicam Crucis toti formae disciplinae Quadragesimalis imponit, insistens paenitentiam non esse ornamentum sed veram sui ipsius mortem in spe resurrectionis susceptam.
 
@@ -8249,7 +8249,7 @@ Historice haec feria quinta revera ultimus fuit ex quattuor diebus qui Quadrages
 Fidelibus hodiernis haec feria quinta momentum signat quo fervor initialis Feriae IV Cinerum in exercitium diuturnum potius quam in unicum gestum vertendus est. Christianos invitat ut in rhythmum Quadragesimae se componant, cineres paucis ante diebus acceptos in actus concretos et repetitos abnegationis et caritatis transferentes, qui eos, hebdomada post hebdomadam, ad Pascha ducent.
 $desc$),
 ('friday-after-ash-wednesday', 'Feria VI post Cineres', $desc$
-Feria VI post Cineres prima dies Veneris temporis Quadragesimalis est, in Ritu Romano ut feria privilegiata, plerumque violacea, observata, quamvis, sicut aliae feriae Quadragesimales, gradus eius praecisus, color et commemorationes quas admittere vel non admittere possit, inter varia kalendaria et historicas ritus formas differant.
+Feria VI post Cineres prima feria sexta temporis Quadragesimalis est. Feria violacea Quadragesimae est, in traditione Romana privilegiata et, sicut omnes feriae sextae Quadragesimae, dies abstinentiae, quae quotannis cum Paschate movetur.
 
 Evangelium eius, quaestio cur discipuli Ioannis et Pharisaei ieiunent, discipuli autem Iesu non ieiunent, diei clavem theologicam praebet: ieiunium tunc convenit cum Sponsus ablatus fuerit, et feriae sextae Quadragesimae magnam illam Feriam Sextam Passionis, adhuc pluribus hebdomadibus distantem, modico modo anticipant. Omnis anni feria sexta hanc memoriam paschalem iam gerit, et prima feria sexta temporis hanc ordinariam disciplinam hebdomadalem explicitam et intensiorem reddit.
 
@@ -8258,7 +8258,7 @@ Ieiunium feriae sextae inter antiquissimas observantias christianas numeratur, i
 Hodie dies fideles invitat ut antiquum sensum feriae sextae, tamquam diei paenitentiae et memoriae Crucis seorsum positi, recuperent, nunc ampliore tempore Quadragesimae altius redditum. Occasio est renovandi traditionales praxes abstinentiae et orationis, sinens consuetudinem quam multi per annum leviter servant, his primis hebdomadibus conversionis pristinam gravitatem recuperare.
 $desc$),
 ('saturday-after-ash-wednesday', 'Sabbatum post Cineres', $desc$
-Sabbatum post Cineres primos Quadragesimae dies claudit ante primam temporis dominicam, in Ritu Romano ut feria privilegiata, plerumque violacea, servatum, quamvis gradus eius praecisus, color et commemorationes quas admittere possit inter varia kalendaria necnon inter antiquiores et recentiores ritus formas variare possint.
+Sabbatum post Cineres primos Quadragesimae dies claudit ante primam temporis dominicam. Feria violacea Quadragesimae est, privilegiata nec umquam a celebrationibus inferioris gradus simpliciter remota, quod quotannis cum Paschate movetur.
 
 Liturgia eius, circa vocationem Levi publicani et dictum Domini quod venerit vocare non iustos sed peccatores centrata, diei notam misericordiae intra ipsam paenitentiam tribuit: austeritas Quadragesimalis non propter se ipsam existit, sed ut peccatores, sicut Levi, surgant et Christum sequantur. Quattuor primos dies nota spei claudit, Ecclesiam ad narrationem tentationum Dominicae I in Quadragesima ingrediendam praeparans.
 
