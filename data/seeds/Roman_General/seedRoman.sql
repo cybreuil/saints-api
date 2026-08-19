@@ -8035,6 +8035,9 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 -- FEASTS
 INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ('ash-wednesday', 'Ash Wednesday', 'christological'),
+('thursday-after-ash-wednesday', 'Thursday after Ash Wednesday', 'christological'),
+('friday-after-ash-wednesday', 'Friday after Ash Wednesday', 'christological'),
+('saturday-after-ash-wednesday', 'Saturday after Ash Wednesday', 'christological'),
 ('first-sunday-of-lent', 'First Sunday of Lent', 'christological'),
 ('second-sunday-of-lent', 'Second Sunday of Lent', 'christological'),
 ('third-sunday-of-lent', 'Third Sunday of Lent', 'christological'),
@@ -8065,6 +8068,9 @@ Liturgically, this Sunday belongs among the highest Sundays of the year and wear
 
 Pastorally, the First Sunday of Lent teaches believers to begin again without illusions of ease. It urges concrete renunciation, sharper discernment of temptation, and confidence that the same Lord who conquered in the wilderness accompanies his people through their own testing toward Easter freedom.
 $desc$),
+('thursday-after-ash-wednesday', 'Thursday after Ash Wednesday', NULL),
+('friday-after-ash-wednesday', 'Friday after Ash Wednesday', NULL),
+('saturday-after-ash-wednesday', 'Saturday after Ash Wednesday', NULL),
 ('second-sunday-of-lent', 'Second Sunday of Lent', $desc$
 The Second Sunday of Lent has, from very early Roman usage, balanced the austerity of the season with a revelation of glory. The transfiguration Gospel has long defined the day, and the postconciliar lectionary retained that ancient instinct across all three cycles, ensuring that Lent never becomes detached from the destiny toward which it tends. History and reform alike show the Church's wisdom in placing light on the mountain in the midst of penitential ascent.
 
@@ -8119,6 +8125,9 @@ Liturgiquement, c'est une féria privilégiée violette qui change immédiatemen
 
 Pour les fidèles d'aujourd'hui, le Mercredi des Cendres demeure l'un des moments les plus directement évangélisateurs de l'Église. Il invite à un sérieux examen de vie, à des pratiques concrètes de pénitence et de charité, et à redécouvrir que la conversion est à la fois personnelle et communautaire: toute l'Église entre ensemble en Carême, marquée d'humilité mais soutenue par l'espérance.
 $desc$),
+('thursday-after-ash-wednesday', 'Jeudi après le Mercredi des Cendres', NULL),
+('friday-after-ash-wednesday', 'Vendredi après le Mercredi des Cendres', NULL),
+('saturday-after-ash-wednesday', 'Samedi après le Mercredi des Cendres', NULL),
 ('first-sunday-of-lent', 'Premier dimanche de Carême', $desc$
 Le Premier dimanche de Carême se tient depuis longtemps au commencement du grand itinéraire pénitentiel de l'Église et, dans la tradition romaine, fixe le mouvement de la saison vers Pâques. Sa place et sa dignité sont demeurées stables à travers la réforme postconciliaire, tandis que le lectionnaire développé lui a donné une proclamation plus riche centrée chaque année sur les tentations du Christ au désert. Ce dimanche conserve donc une continuité ancienne tout en parlant avec une plénitude scripturaire renouvelée.
 
@@ -8182,6 +8191,9 @@ Liturgice dies est feria privilegiata violacea quae statim sonum Ecclesiae a tem
 
 Fidelibus hodiernis Feria IV Cinerum unum e momentis Ecclesiae maxime evangelizantibus manet. Invitat ad gravem vitae examinationem, ad concretas paenitentiae et caritatis exercitationes, atque ad recuperandam veritatem conversionem simul personalem et communitariam esse: tota Ecclesia una in Quadragesimam ingreditur, humilitate signata sed spe sustentata.
 $desc$),
+('thursday-after-ash-wednesday', 'Feria V post Cineres', NULL),
+('friday-after-ash-wednesday', 'Feria VI post Cineres', NULL),
+('saturday-after-ash-wednesday', 'Sabbatum post Cineres', NULL),
 ('first-sunday-of-lent', 'Dominica I in Quadragesima', $desc$
 Dominica I in Quadragesima iamdiu in principio magni itineris paenitentialis Ecclesiae stat atque in traditione Romana cursum temporis ad Pascha dirigit. Locus et dignitas eius per reformationem postconciliariam stabiles manserunt, dum lectionarium ampliatum diem uberiori proclamatione circa tentationem Christi in deserto omni anno locupletavit. Sic haec dominica antiquam continuationem servat et renovata scripturistica plenitudine loquitur.
 
@@ -8240,6 +8252,9 @@ FROM feasts f
 JOIN calendars c ON c.code = 'ROMAN_GENERAL'
 JOIN (VALUES
 ('ash-wednesday', 'EASTER_SUNDAY', -46, 'FERIA_PRIVILEGED', 'PURPLE'),
+('thursday-after-ash-wednesday', 'EASTER_SUNDAY', -45, 'FERIA_PRIVILEGED', 'PURPLE'),
+('friday-after-ash-wednesday', 'EASTER_SUNDAY', -44, 'FERIA_PRIVILEGED', 'PURPLE'),
+('saturday-after-ash-wednesday', 'EASTER_SUNDAY', -43, 'FERIA_PRIVILEGED', 'PURPLE'),
 ('first-sunday-of-lent', 'EASTER_SUNDAY', -42, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE'),
 ('second-sunday-of-lent', 'EASTER_SUNDAY', -35, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE'),
 ('third-sunday-of-lent', 'EASTER_SUNDAY', -28, 'SUNDAY_ADVENT_LENT_EASTER', 'PURPLE'),
