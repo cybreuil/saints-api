@@ -1,6 +1,7 @@
 -- =========================================================
 -- Roman General Calendar - (EN/FR/LA)
 -- Calendar: ROMAN_GENERAL
+-- Revised By Pope Paul VI, 1969, after the Second Vatican Council (Vatican II)
 -- =========================================================
 
 BEGIN;

@@ -1,8 +1,8 @@
 BEGIN;
 
 -- ==========================================
--- TRIDENTINE CALENDAR 1962 - NEW SAINTS SEED
--- Saints not present in the Roman General 2002 calendar
+-- ROMAN CALENDAR 1960 - NEW SAINTS SEED
+-- ! Saints not present in the Roman General calendar
 -- ==========================================
 
 -- ==============

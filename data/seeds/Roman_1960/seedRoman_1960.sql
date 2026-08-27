@@ -1,6 +1,7 @@
 -- =========================================================
--- Tridentine Calendar 1962 - General Roman Calendar of 1960
--- Calendar: TRIDENTINE_1962
+-- General Roman Calendar of 1960 - as it is used in 1962 Missal
+-- Revised by Pope John XXIII in 1960, and used in the 1962 Missal.
+-- Calendar: ROMAN_1960
 -- Source: https://en.wikipedia.org/wiki/General_Roman_Calendar_of_1960
 -- Ranks: CLASS_I, CLASS_II, CLASS_III, COMM (commemoration), VIGIL
 -- =========================================================
@@ -21,7 +22,7 @@ INSERT INTO feasts (slug, default_name, feast_type) VALUES
 ('saint-martina-virgin-and-martyr', 'Saint Martina, Virgin and Martyr', 'saint'),
 ('saint-paul-the-first-hermit', 'Saint Paul the First Hermit', 'saint'),
 ('saint-marcellus-i-pope-and-martyr', 'Saint Marcellus I, Pope and Martyr', 'saint'),
-('the-holy-family-of-jesus-mary-and-joseph-1962', 'The Holy Family of Jesus, Mary and Joseph', 'christological'),
+('the-holy-family-of-jesus-mary-and-joseph-1960', 'The Holy Family of Jesus, Mary and Joseph', 'christological'),
 ('commemoration-of-saint-telesphorus', 'Commemoration of Saint Telesphorus, Pope and Martyr', 'saint'),
 ('commemoration-of-saint-hyginus', 'Commemoration of Saint Hyginus, Pope and Martyr', 'saint'),
 ('commemoration-of-saint-felix-of-nola', 'Commemoration of Saint Felix of Nola, Priest and Martyr', 'saint'),
@@ -157,7 +158,7 @@ JOIN (VALUES
 ('saint-martina-virgin-and-martyr', 'Saint Martina, Virgin and Martyr'),
 ('saint-paul-the-first-hermit', 'Saint Paul the First Hermit'),
 ('saint-marcellus-i-pope-and-martyr', 'Saint Marcellus I, Pope and Martyr'),
-('the-holy-family-of-jesus-mary-and-joseph-1962', 'The Holy Family of Jesus, Mary and Joseph'),
+('the-holy-family-of-jesus-mary-and-joseph-1960', 'The Holy Family of Jesus, Mary and Joseph'),
 ('commemoration-of-saint-telesphorus', 'Commemoration of Saint Telesphorus, Pope and Martyr'),
 ('commemoration-of-saint-hyginus', 'Commemoration of Saint Hyginus, Pope and Martyr'),
 ('commemoration-of-saint-felix-of-nola', 'Commemoration of Saint Felix of Nola, Priest and Martyr'),
@@ -284,7 +285,7 @@ JOIN (VALUES
 ('saint-martina-virgin-and-martyr', 'Sainte Martine, vierge et martyre'),
 ('saint-paul-the-first-hermit', 'Saint Paul ermite'),
 ('saint-marcellus-i-pope-and-martyr', 'Saint Marcellin Ier, pape et martyr'),
-('the-holy-family-of-jesus-mary-and-joseph-1962', 'La Sainte Famille de Jésus, Marie et Joseph'),
+('the-holy-family-of-jesus-mary-and-joseph-1960', 'La Sainte Famille de Jésus, Marie et Joseph'),
 ('commemoration-of-saint-telesphorus', 'Commémoration de saint Télesphore, pape et martyr'),
 ('commemoration-of-saint-hyginus', 'Commémoration de saint Hygin, pape et martyr'),
 ('commemoration-of-saint-felix-of-nola', 'Commémoration de saint Félix de Nole, prêtre et martyr'),
@@ -411,7 +412,7 @@ JOIN (VALUES
 ('saint-martina-virgin-and-martyr', 'Sancta Martina, virgo et martyr'),
 ('saint-paul-the-first-hermit', 'Sanctus Paulus Eremita'),
 ('saint-marcellus-i-pope-and-martyr', 'Sanctus Marcellus I, papa et martyr'),
-('the-holy-family-of-jesus-mary-and-joseph-1962', 'Sancta Familia Iesu, Mariae et Ioseph'),
+('the-holy-family-of-jesus-mary-and-joseph-1960', 'Sancta Familia Iesu, Mariae et Ioseph'),
 ('commemoration-of-saint-telesphorus', 'Commemoratio Sancti Telesphori, papae et martyris'),
 ('commemoration-of-saint-hyginus', 'Commemoratio Sancti Hygini, papae et martyris'),
 ('commemoration-of-saint-felix-of-nola', 'Commemoratio Sancti Felicis de Nola, presbyteri et martyris'),
@@ -523,13 +524,13 @@ ON f.slug = x.slug
 ON CONFLICT (feast_id, locale_code) DO NOTHING;
 
 -- =========================================================
--- SECTION 5a: CELEBRATIONS FOR NEW FEASTS (TRIDENTINE_1962)
+-- SECTION 5a: CELEBRATIONS FOR NEW FEASTS (ROMAN_1960)
 -- =========================================================
 
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, tcal.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
-JOIN calendars tcal ON tcal.code = 'TRIDENTINE_1962'
+JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN (VALUES
 -- JANUARY
 ('octave-day-of-the-nativity',                        1,  1, 'CLASS_I',   'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
@@ -664,13 +665,13 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
 -- SECTION 5b: CELEBRATIONS FOR EXISTING ROMAN_GENERAL FEASTS
---             (new celebration row for TRIDENTINE_1962)
+--             (new celebration row for ROMAN_1960)
 -- =========================================================
 
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, month, day, observance_type, is_optional, notes)
 SELECT f.id, tcal.id, r.id, lc.id, 'fixed', x.month, x.day, x.observance_type, x.is_optional, x.notes
 FROM feasts f
-JOIN calendars tcal ON tcal.code = 'TRIDENTINE_1962'
+JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN (VALUES
 -- January
 ('the-epiphany-of-the-lord',                              1,  6, 'CLASS_I',   'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
@@ -678,7 +679,7 @@ JOIN (VALUES
 ('saint-hilary-bishop-and-doctor-of-the-church',          1, 14, 'CLASS_III', 'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
 ('saint-anthony-abbot',                                   1, 17, 'CLASS_III', 'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
 ('saint-ignatius-of-antioch-bishop-and-martyr',           1, 20, 'CLASS_III', 'RED',   'normal', FALSE, 'Wikipedia 1960'),
--- Note: saints-fabian-and-sebastian (1, 20) is a new combined feast in Tridentine (Section 5a)
+-- Note: saints-fabian-and-sebastian (1, 20) is a new combined feast in ROMAN_1960 (Section 5a)
 -- saint-fabian-pope-and-martyr and saint-sebastian-martyr kept separately in RG at Jan 20
 ('saint-fabian-pope-and-martyr',                          1, 20, 'CLASS_III', 'RED',   'normal', FALSE, 'Wikipedia 1960'),
 ('saint-sebastian-martyr',                                1, 20, 'CLASS_III', 'RED',   'normal', FALSE, 'Wikipedia 1960'),
@@ -853,14 +854,14 @@ LEFT JOIN liturgical_colors lc ON lc.code = x.color_code
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- =========================================================
--- SECTION 6: MOVABLE FEASTS (TRIDENTINE_1962)
+-- SECTION 6: MOVABLE FEASTS (ROMAN_1960)
 -- =========================================================
 
 -- Most Holy Name of Jesus: Sunday between octave of Christmas and Epiphany (or Jan 2 if no Sunday)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
 SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'SUNDAY_BETWEEN_CHRISTMAS_OCTAVE_AND_EPIPHANY', 0, 'normal', FALSE, 'Wikipedia 1960 movable'
 FROM feasts f
-JOIN calendars tcal ON tcal.code = 'TRIDENTINE_1962'
+JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN liturgical_ranks r ON r.calendar_id = tcal.id AND r.code = 'CLASS_II'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-most-holy-name-of-jesus'
@@ -870,17 +871,17 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
 SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'FIRST_SUNDAY_AFTER_EPIPHANY', 0, 'normal', FALSE, 'Wikipedia 1960 movable'
 FROM feasts f
-JOIN calendars tcal ON tcal.code = 'TRIDENTINE_1962'
+JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN liturgical_ranks r ON r.calendar_id = tcal.id AND r.code = 'CLASS_II'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
-WHERE f.slug = 'the-holy-family-of-jesus-mary-and-joseph-1962'
+WHERE f.slug = 'the-holy-family-of-jesus-mary-and-joseph-1960'
 ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- Our Lord Jesus Christ the King: Last Sunday in October
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
 SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'LAST_SUNDAY_IN_OCTOBER', 0, 'normal', FALSE, 'Wikipedia 1960 movable'
 FROM feasts f
-JOIN calendars tcal ON tcal.code = 'TRIDENTINE_1962'
+JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN liturgical_ranks r ON r.calendar_id = tcal.id AND r.code = 'CLASS_I'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'our-lord-jesus-christ-the-king'
@@ -890,7 +891,7 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
 SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'FRIDAY_AFTER_PASSION_SUNDAY', 0, 'normal', FALSE, 'Wikipedia 1960 movable - Friday after I Sunday in Passiontide'
 FROM feasts f
-JOIN calendars tcal ON tcal.code = 'TRIDENTINE_1962'
+JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN liturgical_ranks r ON r.calendar_id = tcal.id AND r.code = 'COMM'
 LEFT JOIN liturgical_colors lc ON lc.code = 'WHITE'
 WHERE f.slug = 'the-seven-sorrows-of-the-blessed-virgin-mary'
