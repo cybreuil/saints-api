@@ -130,6 +130,7 @@ CREATE TABLE liturgical_seasons (
         'TRIDUUM',
         'EASTERTIDE',
         -- Traditionnal extra :
+        'THROUGHOUT_THE_YEAR',
         'SEPTUAGESIMA',
         'PASSIONTIDE',
         'POST_PENTECOST'

@@ -528,28 +528,22 @@ pub fn week_number_roman_general(
     None
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// ROMAN CALENDAR 1960
-// ─────────────────────────────────────────────────────────────────────────────
-
 /// Returns the liturgical week number within the traditional Roman Calendar
 /// (1960 rubrics / 1962 Missal).
 ///
-/// This function returns the week number for any day of the week,
-/// making it suitable for both Sundays ("2nd Sunday after Pentecost")
-/// and weekdays ("Tuesday of the 3rd Week after Pentecost").
+/// The numbering follows the traditional seasonal structure:
 ///
-/// Returns `None` when the period does not use a numbered seasonal week.
-///
-/// Coverage:
-/// - Advent:             Weeks 1–4
-/// - Septuagesima:       Weeks 1–3
-/// - Lent:               Weeks 1–4
-/// - Passiontide:        Weeks 1–2
-/// - Eastertide:         Weeks 1–7 (Pentecost excluded)
+/// - Advent: Weeks 1–4
+/// - Septuagesima: Weeks 1–3
+/// - Lent: Weeks 1–4
+/// - Passiontide: Weeks 1–2
+/// - Eastertide: Weeks 1–7
 /// - Time after Pentecost: numbered by Sundays after Pentecost
 ///
-/// Christmas Time has its own proper celebrations and is not numbered here.
+/// Trinity Sunday is a proper Sunday/feast, but does not reset the
+/// "Sundays after Pentecost" numbering: it is the first Sunday after Pentecost.
+///
+/// Christmas Time and the Triduum are not numbered here.
 pub fn week_number_roman_1960(date: NaiveDate, year: i32, config: LiturgicalConfig) -> Option<u32> {
     let easter = easter_sunday(year, config);
     let advent = first_advent_sunday(year);
@@ -557,11 +551,14 @@ pub fn week_number_roman_1960(date: NaiveDate, year: i32, config: LiturgicalConf
     let septuagesima = septuagesima_sunday(year, config);
     let ash_wednesday = ash_wednesday(year, config);
     let passion_sunday = passion_sunday(year, config);
+    let holy_thursday = holy_thursday(year, config);
     let pentecost = pentecost(year, config);
 
-    // ── ADVENT ────────────────────────────────────────────────────────────────
+    // ─────────────────────────────────────────────────────────────────────────
+    // ADVENT
+    // ─────────────────────────────────────────────────────────────────────────
+    //
     // First Sunday of Advent = Week 1.
-    // Advent has four Sundays.
     if date >= advent {
         let week = ((date - advent).num_days() / 7) as u32 + 1;
 
@@ -570,25 +567,29 @@ pub fn week_number_roman_1960(date: NaiveDate, year: i32, config: LiturgicalConf
         }
     }
 
-    // ── SEPTUAGESIMA ──────────────────────────────────────────────────────────
-    // Septuagesima Sunday = Week 1.
-    // Sexagesima Sunday   = Week 2.
-    // Quinquagesima       = Week 3.
+    // ─────────────────────────────────────────────────────────────────────────
+    // SEPTUAGESIMA
+    // ─────────────────────────────────────────────────────────────────────────
     //
-    // The period ends before Ash Wednesday.
+    // Septuagesima  = Week 1
+    // Sexagesima    = Week 2
+    // Quinquagesima = Week 3
+    //
+    // This period ends with Shrove Tuesday.
     if date >= septuagesima && date < ash_wednesday {
         let week = ((date - septuagesima).num_days() / 7) as u32 + 1;
 
-        if week <= 3 {
-            return Some(week);
-        }
+        return Some(week);
     }
 
-    // ── LENT ──────────────────────────────────────────────────────────────────
+    // ─────────────────────────────────────────────────────────────────────────
+    // LENT
+    // ─────────────────────────────────────────────────────────────────────────
+    //
     // First Sunday of Lent = Week 1.
     //
-    // Ash Wednesday belongs to the beginning of Lent, but the weekly
-    // numbering follows the Sunday beginning each liturgical week.
+    // Ash Wednesday belongs to the first week of Lent.
+    // Therefore we normalize dates to the Sunday starting their liturgical week.
     let first_lent = offset(easter, -42);
 
     if date >= ash_wednesday && date < passion_sunday {
@@ -601,23 +602,31 @@ pub fn week_number_roman_1960(date: NaiveDate, year: i32, config: LiturgicalConf
         }
     }
 
-    // ── PASSIONTIDE ───────────────────────────────────────────────────────────
-    // Passion Sunday = 1st Sunday of Passiontide.
+    // ─────────────────────────────────────────────────────────────────────────
+    // PASSIONTIDE
+    // ─────────────────────────────────────────────────────────────────────────
     //
-    // Passiontide runs from Passion Sunday through Holy Wednesday.
-    if date >= passion_sunday && date < holy_thursday(year, config) {
-        let week = ((date - passion_sunday).num_days() / 7) as u32 + 1;
+    // Passion Sunday = Week 1 of Passiontide.
+    //
+    // Passiontide begins on Passion Sunday and ends before Holy Thursday.
+    if date >= passion_sunday && date < holy_thursday {
+        let sunday = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
+
+        let week = ((sunday - passion_sunday).num_days() / 7) as u32 + 1;
 
         if week <= 2 {
             return Some(week);
         }
     }
 
-    // ── EASTERTIDE ────────────────────────────────────────────────────────────
-    // Easter Sunday = Week 1.
+    // ─────────────────────────────────────────────────────────────────────────
+    // EASTERTIDE
+    // ─────────────────────────────────────────────────────────────────────────
     //
-    // The seven weeks of Eastertide run through the Saturday before
-    // Pentecost. Pentecost itself is a proper solemnity.
+    // Easter Sunday = Week 1.
+    // The seven weeks of Eastertide run until the Saturday before Pentecost.
+    //
+    // Pentecost itself is a proper solemnity and is excluded.
     if date >= easter && date < pentecost {
         let week = ((date - easter).num_days() / 7) as u32 + 1;
 
@@ -626,20 +635,28 @@ pub fn week_number_roman_1960(date: NaiveDate, year: i32, config: LiturgicalConf
         }
     }
 
-    // ── TIME AFTER PENTECOST ──────────────────────────────────────────────────
-    // Trinity Sunday = 1st Sunday after Pentecost.
-    // The following Sunday = 2nd Sunday after Pentecost.
+    // ─────────────────────────────────────────────────────────────────────────
+    // TIME AFTER PENTECOST
+    // ─────────────────────────────────────────────────────────────────────────
     //
-    // Weekdays are associated with the Sunday starting their liturgical week.
+    // Trinity Sunday is the first Sunday after Pentecost.
+    //
+    // However, the traditional numbering is:
+    //
+    //   Trinity Sunday     = 1st Sunday after Pentecost
+    //   following Sunday   = 2nd Sunday after Pentecost
+    //   etc.
+    //
+    // Weekdays are assigned to the Sunday beginning their liturgical week.
     let first_sunday_after_pentecost = pentecost + Duration::days(7);
 
     let sunday_of_week = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
 
     if sunday_of_week >= first_sunday_after_pentecost && sunday_of_week < advent {
-        let weeks_from_trinity =
+        let weeks_from_start =
             ((sunday_of_week - first_sunday_after_pentecost).num_days() / 7) as u32;
 
-        return Some(1 + weeks_from_trinity);
+        return Some(1 + weeks_from_start);
     }
 
     // Christmas Time and the Triduum have proper celebrations.

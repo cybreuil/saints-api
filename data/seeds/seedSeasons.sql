@@ -13,6 +13,7 @@ INSERT INTO liturgical_seasons (code, default_name) VALUES
 ('EASTERTIDE', 'Eastertide'),
 
 -- Traditional Roman calendar (1960) Extra Seasons
+('THROUGHOUT_THE_YEAR', 'Time throughout the Year'),
 ('SEPTUAGESIMA', 'Septuagesima'),
 ('PASSIONTIDE', 'Passiontide'),
 ('POST_PENTECOST', 'Time after Pentecost')
@@ -35,6 +36,7 @@ INSERT INTO liturgical_season_translations (season_code, locale_code, label) VAL
 ('TRIDUUM', 'en', 'Paschal Triduum'),
 ('EASTERTIDE', 'en', 'Eastertide'),
 
+('THROUGHOUT_THE_YEAR', 'en', 'Time throughout the Year'),
 ('SEPTUAGESIMA', 'en', 'Septuagesima'),
 ('PASSIONTIDE', 'en', 'Passiontide'),
 ('POST_PENTECOST', 'en', 'Time after Pentecost'),
@@ -50,6 +52,7 @@ INSERT INTO liturgical_season_translations (season_code, locale_code, label) VAL
 ('TRIDUUM', 'fr', 'Triduum pascal'),
 ('EASTERTIDE', 'fr', 'Temps pascal'),
 
+('THROUGHOUT_THE_YEAR', 'fr', 'Temps tout au long de l''année'),
 ('SEPTUAGESIMA', 'fr', 'Temps de la Septuagésime'),
 ('PASSIONTIDE', 'fr', 'Temps de la Passion'),
 ('POST_PENTECOST', 'fr', 'Temps après la Pentecôte'),
@@ -65,6 +68,7 @@ INSERT INTO liturgical_season_translations (season_code, locale_code, label) VAL
 ('TRIDUUM', 'la', 'Triduum Paschale'),
 ('EASTERTIDE', 'la', 'Tempus Paschale'),
 
+('THROUGHOUT_THE_YEAR', 'la', 'Tempus per annum'),
 ('SEPTUAGESIMA', 'la', 'Tempus Septuagesimae'),
 ('PASSIONTIDE', 'la', 'Tempus Passionis'),
 ('POST_PENTECOST', 'la', 'Tempus post Pentecosten')
