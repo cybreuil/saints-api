@@ -37,9 +37,12 @@ run_sql "$ROOT_DIR/data/createTables.sql"
 echo "✅ Tables dropped and created."
 
 # 2) Seeds (order matters)
+
+# Places
 run_sql "$ROOT_DIR/data/seeds/seedPlaces.sql"
 echo "✅ Places seeded."
 
+#Roman Logic
 run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanSaints.sql"
 echo "✅ Roman saints seeded."
 
@@ -79,5 +82,12 @@ echo "✅ Roman France Feast Saints links seeded."
 
 # run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceSaintPatronages.sql"
 # echo "✅ Roman France saint patronages seeded."
+
+# Traditionnal
+run_sql "$ROOT_DIR/data/seeds/Roman_1960/seedRoman1960.sql"
+echo "✅ Roman 1960 seeded."
+
+run_sql "$ROOT_DIR/data/seeds/Roman_1960/seedRoman1960Saints.sql"
+echo "✅ Roman 1960 saints seeded."
 
 echo "✅ DB seeded."
