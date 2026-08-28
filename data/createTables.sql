@@ -541,9 +541,9 @@ INSERT INTO locales (code, native_name, english_name) VALUES
 -- Calendriers techniques
 INSERT INTO calendars (code, parent_id, date_system, easter_computation) VALUES
 ('ROMAN_GENERAL', NULL, 'gregorian', 'western'),
-('TRIDENTINE_1962', NULL, 'gregorian', 'western'),
-('ORTHODOX_RUSSIAN', NULL, 'julian', 'eastern'),
-('ORTHODOX_GREEK', NULL, 'gregorian', 'eastern');
+('ROMAN_1960', NULL, 'gregorian', 'western');
+-- ('ORTHODOX_RUSSIAN', NULL, 'julian', 'eastern'),
+-- ('ORTHODOX_GREEK', NULL, 'gregorian', 'eastern');
 
 -- Calendriers régionaux (héritage)
 INSERT INTO calendars (code, parent_id, date_system, easter_computation)
@@ -561,12 +561,12 @@ INSERT INTO calendar_translations (calendar_id, locale_code, name, description)
 SELECT c.id, 'fr', x.name, x.description
 FROM calendars c
 JOIN (VALUES
-    ('ROMAN_GENERAL', 'Calendrier romain général (1969+)', 'Forme ordinaire post-Vatican II'),
-    ('TRIDENTINE_1962', 'Calendrier traditionnel (1962)', 'Missel de 1962, forme extraordinaire'),
+    ('ROMAN_GENERAL', 'Calendrier romain général (1969+)', 'Forme ordinaire du rite romain, révisée après Vatican II par Paul VI'),
+    ('ROMAN_1960', 'Calendrier traditionnel (1960)', 'Missel de 1962, forme extraordinaire, pre-Vatican II, révisé par Jean XXIII'),
     ('ROMAN_FRANCE', 'Calendrier romain - France', 'Propre de France'),
-    ('ROMAN_ITALY', 'Calendrier romain - Italie', 'Propre d''Italie'),
-    ('ORTHODOX_RUSSIAN', 'Calendrier orthodoxe russe', 'Patriarcat de Moscou'),
-    ('ORTHODOX_GREEK', 'Calendrier orthodoxe grec', 'Nouveau calendrier')
+    ('ROMAN_ITALY', 'Calendrier romain - Italie', 'Propre d''Italie');
+    -- ('ORTHODOX_RUSSIAN', 'Calendrier orthodoxe russe', 'Patriarcat de Moscou'),
+    -- ('ORTHODOX_GREEK', 'Calendrier orthodoxe grec', 'Nouveau calendrier')
 ) AS x(code, name, description)
 ON c.code = x.code;
 
@@ -575,12 +575,12 @@ INSERT INTO calendar_translations (calendar_id, locale_code, name, description)
 SELECT c.id, 'en', x.name, x.description
 FROM calendars c
 JOIN (VALUES
-    ('ROMAN_GENERAL', 'General Roman Calendar (1969+)', 'Ordinary Form after Vatican II'),
-    ('TRIDENTINE_1962', 'Traditional Calendar (1962)', '1962 Missal, Extraordinary Form'),
+    ('ROMAN_GENERAL', 'General Roman Calendar (1969+)', 'Ordinary Form of the Roman Rite, revised after Vatican II by Paul VI'),
+    ('ROMAN_1960', 'Traditional Calendar (1960)', '1962 Missal, Extraordinary Form, pre-Vatican II, revised by John XXIII'),
     ('ROMAN_FRANCE', 'Roman Calendar - France', 'Proper of France'),
-    ('ROMAN_ITALY', 'Roman Calendar - Italy', 'Proper of Italy'),
-    ('ORTHODOX_RUSSIAN', 'Russian Orthodox Calendar', 'Moscow Patriarchate'),
-    ('ORTHODOX_GREEK', 'Greek Orthodox Calendar', 'New Calendar')
+    ('ROMAN_ITALY', 'Roman Calendar - Italy', 'Proper of Italy');
+    -- ('ORTHODOX_RUSSIAN', 'Russian Orthodox Calendar', 'Moscow Patriarchate'),
+    -- ('ORTHODOX_GREEK', 'Greek Orthodox Calendar', 'New Calendar')
 ) AS x(code, name, description)
 ON c.code = x.code;
 
@@ -589,12 +589,12 @@ INSERT INTO calendar_translations (calendar_id, locale_code, name, description)
 SELECT c.id, 'la', x.name, x.description
 FROM calendars c
 JOIN (VALUES
-    ('ROMAN_GENERAL', 'Calendarium Romanum Generale (1969+)', 'Forma ordinaria post Concilium Vaticanum II'),
-    ('TRIDENTINE_1962', 'Calendarium Traditionale (1962)', 'Missale Romanum anni 1962'),
+    ('ROMAN_GENERAL', 'Calendarium Romanum Generale (1969+)', 'Forma ordinaria Ritus Romani, post Concilium Vaticanum II a Paulo VI recognita'),
+    ('ROMAN_1960', 'Calendarium Traditionale (1960)', 'Missale Romanum anni 1962, forma extraordinaria, ante Concilium Vaticanum II, a Ioanne XXIII recognitum'),
     ('ROMAN_FRANCE', 'Calendarium Romanum - Gallia', 'Proprium Galliae'),
-    ('ROMAN_ITALY', 'Calendarium Romanum - Italia', 'Proprium Italiae'),
-    ('ORTHODOX_RUSSIAN', 'Calendarium Orthodoxum Russicum', 'Patriarchatus Moscoviae'),
-    ('ORTHODOX_GREEK', 'Calendarium Orthodoxum Graecum', 'Calendarium novum')
+    ('ROMAN_ITALY', 'Calendarium Romanum - Italia', 'Proprium Italiae');
+    -- ('ORTHODOX_RUSSIAN', 'Calendarium Orthodoxum Russicum', 'Patriarchatus Moscoviae'),
+    -- ('ORTHODOX_GREEK', 'Calendarium Orthodoxum Graecum', 'Calendarium novum')
 ) AS x(code, name, description)
 ON c.code = x.code;
 
@@ -690,7 +690,7 @@ CROSS JOIN (VALUES
     ('CLASS_III', 3),
     ('CLASS_IV', 4)
 ) AS x(code, precedence)
-WHERE c.code = 'TRIDENTINE_1962';
+WHERE c.code = 'ROMAN_1960';
 
 -- Traductions FR des rangs 1962
 INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
@@ -704,7 +704,7 @@ JOIN (VALUES
     ('CLASS_IV', 'IVe classe / férie')
 ) AS x(code, label)
 ON r.code = x.code
-WHERE c.code = 'TRIDENTINE_1962';
+WHERE c.code = 'ROMAN_1960';
 
 -- Traductions EN des rangs 1962
 INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
@@ -718,7 +718,7 @@ JOIN (VALUES
     ('CLASS_IV', 'Fourth Class / Feria')
 ) AS x(code, label)
 ON r.code = x.code
-WHERE c.code = 'TRIDENTINE_1962';
+WHERE c.code = 'ROMAN_1960';
 
 -- Traductions LA des rangs 1962
 INSERT INTO liturgical_rank_translations (rank_id, locale_code, label)
@@ -732,7 +732,7 @@ JOIN (VALUES
     ('CLASS_IV', 'Classis IV / Feria')
 ) AS x(code, label)
 ON r.code = x.code
-WHERE c.code = 'TRIDENTINE_1962';
+WHERE c.code = 'ROMAN_1960';
 
 -- Couleurs liturgiques
 INSERT INTO liturgical_colors (code, hex_color) VALUES
