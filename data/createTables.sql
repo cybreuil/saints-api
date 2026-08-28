@@ -128,7 +128,11 @@ CREATE TABLE liturgical_seasons (
         'ORDINARY_TIME',
         'LENT',
         'TRIDUUM',
-        'EASTERTIDE'
+        'EASTERTIDE',
+        -- Traditionnal extra :
+        'SEPTUAGESIMA',
+        'PASSIONTIDE',
+        'POST_PENTECOST'
     )),
     default_name TEXT NOT NULL
 );
