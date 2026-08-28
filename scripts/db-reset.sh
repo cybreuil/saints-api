@@ -42,6 +42,10 @@ echo "✅ Tables dropped and created."
 run_sql "$ROOT_DIR/data/seeds/seedPlaces.sql"
 echo "✅ Places seeded."
 
+# Seasons
+run_sql "$ROOT_DIR/data/seeds/seedSeasons.sql"
+echo "✅ Seasons seeded."
+
 #Roman Logic
 run_sql "$ROOT_DIR/data/seeds/Roman_General/seedRomanSaints.sql"
 echo "✅ Roman saints seeded."

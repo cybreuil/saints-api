@@ -15,6 +15,7 @@ pub fn to_liturgical_config(calendar: &Calendar) -> LiturgicalConfig {
             _ => EpiphanyMode::FixedJan6,
         },
         christ_king_mode: match calendar.code.as_str() {
+            "ROMAN_1960" => ChristKingMode::LastSundayOfOctober,
             _ => ChristKingMode::LastSundayBeforeAdvent,
         },
         ascension_mode: match calendar.code.as_str() {

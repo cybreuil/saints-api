@@ -32,6 +32,11 @@ pub enum MovableBase {
     SaintJoseph, // March 19 (fixed), but if it is inside Holy Week, back to the Saturday before Palm Sunday
     Annunciation, // March 25 (fixed), but if it is inside Holy Week or Easter Octave, moved to Monday after the Octave of Easter
     ImmaculateConception, // December 8 (fixed), but if it falls on a Sunday (Advent Sunday), moved to December 9
+    // Specific for 1960
+    SeptuagesimaSunday,
+    PassionSunday,
+    SundayBetweenChristmasOctaveAndEpiphany,
+    ChristTheKing,
 }
 
 impl TryFrom<&str> for MovableBase {
@@ -57,6 +62,12 @@ impl TryFrom<&str> for MovableBase {
             "SAINT_JOSEPH" => Ok(Self::SaintJoseph),
             "ANNUNCIATION" => Ok(Self::Annunciation),
             "IMMACULATE_CONCEPTION" => Ok(Self::ImmaculateConception),
+            "SEPTUAGESIMA_SUNDAY" => Ok(Self::SeptuagesimaSunday),
+            "PASSION_SUNDAY" => Ok(Self::PassionSunday),
+            "SUNDAY_BETWEEN_CHRISTMAS_OCTAVE_AND_EPIPHANY" => {
+                Ok(Self::SundayBetweenChristmasOctaveAndEpiphany)
+            }
+            "CHRIST_THE_KING" => Ok(Self::ChristTheKing),
             _ => Err(()),
         }
     }
@@ -81,6 +92,12 @@ impl MovableBase {
             Self::SaintJoseph => "SAINT_JOSEPH",
             Self::Annunciation => "ANNUNCIATION",
             Self::ImmaculateConception => "IMMACULATE_CONCEPTION",
+            Self::SeptuagesimaSunday => "SEPTUAGESIMA_SUNDAY",
+            Self::PassionSunday => "PASSION_SUNDAY",
+            Self::SundayBetweenChristmasOctaveAndEpiphany => {
+                "SUNDAY_BETWEEN_CHRISTMAS_OCTAVE_AND_EPIPHANY"
+            }
+            Self::ChristTheKing => "CHRIST_THE_KING",
         }
     }
 }
@@ -378,80 +395,40 @@ pub fn immaculate_conception(year: i32) -> NaiveDate {
     }
 }
 
-/// Returns the ordinal number (1-based) of a Sunday within its liturgical season.
-/// Returns `None` if the date is not a Sunday, or falls in Christmas time
-/// (where Sundays are individually seeded feasts).
+// Traditionnal
+/// Septuagesima Sunday is the ninth Sunday before Easter.
+pub fn septuagesima_sunday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), -63)
+}
+/// Passion Sunday is the second Sunday before Easter.
+pub fn passion_sunday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    offset(easter_sunday(year, config), -14)
+}
+/// Returns the Sunday between the Christmas Octave and Epiphany.
+/// Used by the traditional Roman Calendar (1960 rubrics / 1962 Missal)
+/// for the feast of the Most Holy Name of Jesus.
 ///
-/// Coverage:
-/// - Advent:        1st – 4th
-/// - Lent:          1st – 6th (6th = Palm Sunday)
-/// - Eastertide:    1st – 7th (1st = Easter; Pentecost excluded, it is seeded)
-/// - Ordinary Time: 2nd – 34th (counted backward from Christ the King)
-// pub fn sunday_number_in_season(
-//     date: NaiveDate,
-//     year: i32,
-//     config: LiturgicalConfig,
-// ) -> Option<u32> {
-//     if date.weekday() != Weekday::Sun {
-//         return None;
-//     }
+/// If there is no Sunday between December 26 and January 5,
+/// January 2 is used.
+pub fn sunday_between_christmas_octave_and_epiphany(year: i32) -> NaiveDate {
+    let mut date = NaiveDate::from_ymd_opt(year, 12, 26).unwrap();
 
-//     let first_sunday_after_baptism = first_sunday_after_baptism(year, config);
-//     let easter = easter_sunday(year, config);
-//     let advent = first_advent_sunday(year);
+    let end = NaiveDate::from_ymd_opt(year + 1, 1, 5).unwrap();
 
-//     // Ash Wednesday = Easter - 46; first Sunday of Lent = Easter - 42
-//     let first_lent = offset(easter, -42);
-//     // Christ the King = Sunday immediately before 1st Advent Sunday = 34th Sunday of OT
-//     let christ_king = christ_the_king(year, config);
+    while date <= end {
+        if date.weekday() == Weekday::Sun {
+            return date;
+        }
 
-//     // ── ADVENT ── 1st through 4th Sunday
-//     if date >= advent {
-//         let n = ((date - advent).num_days() / 7) as u32 + 1;
-//         if n <= 4 {
-//             return Some(n);
-//         }
-//     }
+        date += Duration::days(1);
+    }
 
-//     // ── LENT ── 1st through 6th Sunday (Palm Sunday is the 6th)
-//     if date >= first_lent && date < easter {
-//         let n = ((date - first_lent).num_days() / 7) as u32 + 1;
-//         return Some(n);
-//     }
+    NaiveDate::from_ymd_opt(year + 1, 1, 2).unwrap()
+}
 
-//     // ── EASTERTIDE ── 1st (Easter) through 7th Sunday
-//     // Pentecost (+49) is seeded separately; we stop at +42.
-//     if date >= easter && date <= offset(easter, 42) {
-//         let n = ((date - easter).num_days() / 7) as u32 + 1;
-//         return Some(n);
-//     }
-
-//     // ORDINARY TIME I: from the first Sunday after Baptism of the Lord
-//     // until the Sunday before Ash Wednesday.
-
-//     let first_ot1 = first_sunday_after_baptism;
-//     let last_ot1 = offset(first_lent, -7);
-
-//     if date >= first_ot1 && date <= last_ot1 {
-//         let n = ((date - first_ot1).num_days() / 7) as u32 + 2;
-//         return Some(n);
-//     }
-
-//     // ── ORDINARY TIME II ── Trinity Sunday (+7 after Pentecost) through Christ the King
-//     // Numbered backward from Christ the King (= 34th Sunday of OT).
-//     let first_ot2 = trinity_sunday(year, config);
-
-//     if date >= first_ot2 && date <= christ_king {
-//         let weeks_before_end = ((christ_king - date).num_days() / 7) as u32;
-//         return Some(34 - weeks_before_end);
-//     }
-
-//     // Christmas time: Holy Family, Baptism of the Lord, etc. are seeded individually.
-//     None
-// }
-
-// We know use calculator for week number so we can use it in feria
-/// Returns the liturgical week number within the current season.
+// We now use calculator for week number so we can use it in feria
+/// Returns the liturgical week number within the current season
+/// for the Roman General Calendar (1969+).
 ///
 /// This function returns the week number for any day of the week,
 /// making it suitable for both Sundays ("3rd Sunday of Lent")
@@ -465,7 +442,11 @@ pub fn immaculate_conception(year: i32) -> NaiveDate {
 /// - Lent:          Weeks 1–6 (Week 6 includes Palm Sunday)
 /// - Eastertide:    Weeks 1–7 (Pentecost excluded)
 /// - Ordinary Time: Weeks 2–34
-pub fn week_number_in_season(date: NaiveDate, year: i32, config: LiturgicalConfig) -> Option<u32> {
+pub fn week_number_roman_general(
+    date: NaiveDate,
+    year: i32,
+    config: LiturgicalConfig,
+) -> Option<u32> {
     let easter = easter_sunday(year, config);
     let advent = first_advent_sunday(year);
 
@@ -491,27 +472,33 @@ pub fn week_number_in_season(date: NaiveDate, year: i32, config: LiturgicalConfi
     }
 
     // ── EASTERTIDE ────────────────────────────────────────────────────────────
-    // Easter = Week 1, Seventh Sunday of Easter = Week 7.
-    // Pentecost is excluded because it is a proper solemnity.
-    if date >= easter && date <= offset(easter, 48) {
+    // Easter Sunday = Week 1.
+    // The Seventh Week of Easter runs until the Saturday before Pentecost.
+    // Pentecost itself is a proper solemnity and is excluded.
+    if date >= easter && date < pentecost(year, config) {
         let week = ((date - easter).num_days() / 7) as u32 + 1;
         return Some(week);
     }
 
     // ── ORDINARY TIME (Part I) ────────────────────────────────────────────────
-    // From the day after the Baptism of the Lord (weekdays) up to the Sunday before Ash Wednesday.
-    // Week 1 comprises the days between the Baptism and the following Sunday; that Sunday is Week 2.
-    // We determine the liturgical week by normalizing to the Sunday that starts the liturgical week.
+    // From the day after the Baptism of the Lord until the day before
+    // Ash Wednesday.
+    //
+    // The weekdays immediately following the Baptism belong to Week 1,
+    // while the first Sunday of Ordinary Time is Week 2.
+    //
+    // We determine the liturgical week by normalizing each date to
+    // the Sunday that starts that liturgical week.
     let baptism = baptism_of_the_lord(year, config);
     let first_ot1_start_day = baptism + Duration::days(1);
     let last_ot1 = offset(first_lent, -1);
 
     if date >= first_ot1_start_day && date <= last_ot1 {
-        // Sunday that starts the week containing the first OT day
+        // Sunday starting the first liturgical week of Ordinary Time.
         let start_sunday = first_ot1_start_day
             - Duration::days(first_ot1_start_day.weekday().num_days_from_sunday() as i64);
 
-        // Normalize current date to the Sunday starting its liturgical week
+        // Normalize current date to the Sunday starting its liturgical week.
         let sunday = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
 
         let weeks_from_start = ((sunday - start_sunday).num_days() / 7) as u32;
@@ -519,22 +506,161 @@ pub fn week_number_in_season(date: NaiveDate, year: i32, config: LiturgicalConfi
         return Some(1 + weeks_from_start);
     }
 
-    // ── ORDINARY TIME (Part II) ────────────────────────────────────────────────
+    // ── ORDINARY TIME (Part II) ───────────────────────────────────────────────
     // From Trinity Sunday until Christ the King.
-    // Count backwards from Week 34.
-    // Normalize to the Sunday starting the liturgical week so weekdays keep the same number.
+    //
+    // Count backwards from Christ the King, which is the 34th Sunday
+    // of Ordinary Time.
+    //
+    // Normalize to the Sunday starting the liturgical week so weekdays
+    // keep the same week number.
     let first_ot2 = trinity_sunday(year, config);
 
     let sunday_of_week = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
 
     if sunday_of_week >= first_ot2 && sunday_of_week <= christ_king {
         let weeks_before_end = ((christ_king - sunday_of_week).num_days() / 7) as u32;
+
         return Some(34 - weeks_before_end);
     }
 
     // Christmas Time has proper weekdays and Sundays.
     None
 }
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ROMAN CALENDAR 1960
+// ─────────────────────────────────────────────────────────────────────────────
+
+/// Returns the liturgical week number within the traditional Roman Calendar
+/// (1960 rubrics / 1962 Missal).
+///
+/// This function returns the week number for any day of the week,
+/// making it suitable for both Sundays ("2nd Sunday after Pentecost")
+/// and weekdays ("Tuesday of the 3rd Week after Pentecost").
+///
+/// Returns `None` when the period does not use a numbered seasonal week.
+///
+/// Coverage:
+/// - Advent:             Weeks 1–4
+/// - Septuagesima:       Weeks 1–3
+/// - Lent:               Weeks 1–4
+/// - Passiontide:        Weeks 1–2
+/// - Eastertide:         Weeks 1–7 (Pentecost excluded)
+/// - Time after Pentecost: numbered by Sundays after Pentecost
+///
+/// Christmas Time has its own proper celebrations and is not numbered here.
+pub fn week_number_roman_1960(date: NaiveDate, year: i32, config: LiturgicalConfig) -> Option<u32> {
+    let easter = easter_sunday(year, config);
+    let advent = first_advent_sunday(year);
+
+    let septuagesima = septuagesima_sunday(year, config);
+    let ash_wednesday = ash_wednesday(year, config);
+    let passion_sunday = passion_sunday(year, config);
+    let pentecost = pentecost(year, config);
+
+    // ── ADVENT ────────────────────────────────────────────────────────────────
+    // First Sunday of Advent = Week 1.
+    // Advent has four Sundays.
+    if date >= advent {
+        let week = ((date - advent).num_days() / 7) as u32 + 1;
+
+        if week <= 4 {
+            return Some(week);
+        }
+    }
+
+    // ── SEPTUAGESIMA ──────────────────────────────────────────────────────────
+    // Septuagesima Sunday = Week 1.
+    // Sexagesima Sunday   = Week 2.
+    // Quinquagesima       = Week 3.
+    //
+    // The period ends before Ash Wednesday.
+    if date >= septuagesima && date < ash_wednesday {
+        let week = ((date - septuagesima).num_days() / 7) as u32 + 1;
+
+        if week <= 3 {
+            return Some(week);
+        }
+    }
+
+    // ── LENT ──────────────────────────────────────────────────────────────────
+    // First Sunday of Lent = Week 1.
+    //
+    // Ash Wednesday belongs to the beginning of Lent, but the weekly
+    // numbering follows the Sunday beginning each liturgical week.
+    let first_lent = offset(easter, -42);
+
+    if date >= ash_wednesday && date < passion_sunday {
+        let sunday = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
+
+        let week = ((sunday - first_lent).num_days() / 7) as u32 + 1;
+
+        if week <= 4 {
+            return Some(week);
+        }
+    }
+
+    // ── PASSIONTIDE ───────────────────────────────────────────────────────────
+    // Passion Sunday = 1st Sunday of Passiontide.
+    //
+    // Passiontide runs from Passion Sunday through Holy Wednesday.
+    if date >= passion_sunday && date < holy_thursday(year, config) {
+        let week = ((date - passion_sunday).num_days() / 7) as u32 + 1;
+
+        if week <= 2 {
+            return Some(week);
+        }
+    }
+
+    // ── EASTERTIDE ────────────────────────────────────────────────────────────
+    // Easter Sunday = Week 1.
+    //
+    // The seven weeks of Eastertide run through the Saturday before
+    // Pentecost. Pentecost itself is a proper solemnity.
+    if date >= easter && date < pentecost {
+        let week = ((date - easter).num_days() / 7) as u32 + 1;
+
+        if week <= 7 {
+            return Some(week);
+        }
+    }
+
+    // ── TIME AFTER PENTECOST ──────────────────────────────────────────────────
+    // Trinity Sunday = 1st Sunday after Pentecost.
+    // The following Sunday = 2nd Sunday after Pentecost.
+    //
+    // Weekdays are associated with the Sunday starting their liturgical week.
+    let first_sunday_after_pentecost = pentecost + Duration::days(7);
+
+    let sunday_of_week = date - Duration::days(date.weekday().num_days_from_sunday() as i64);
+
+    if sunday_of_week >= first_sunday_after_pentecost && sunday_of_week < advent {
+        let weeks_from_trinity =
+            ((sunday_of_week - first_sunday_after_pentecost).num_days() / 7) as u32;
+
+        return Some(1 + weeks_from_trinity);
+    }
+
+    // Christmas Time and the Triduum have proper celebrations.
+    None
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// PUBLIC DISPATCHER
+// ─────────────────────────────────────────────────────────────────────────────
+
+/// Returns the liturgical week number according to the configured
+/// liturgical calendar.
+///
+/// The calculation differs between the Roman General Calendar (1969+)
+/// and the traditional Roman Calendar (1960 rubrics / 1962 Missal).
+// pub fn week_number_in_season(date: NaiveDate, year: i32, config: LiturgicalConfig) -> Option<u32> {
+//     match config.liturgical_system {
+//         LiturgicalSystem::RomanGeneral => week_number_roman_general(date, year, config),
+//         LiturgicalSystem::Roman1960 => week_number_roman_1960(date, year, config),
+//     }
+// }
 
 /// Resolves a movable date from its base and day offset.
 ///
@@ -568,5 +694,12 @@ pub fn resolve_movable_date(
         MovableBase::SaintJoseph => offset(saint_joseph(year, config), offset_days),
         MovableBase::Annunciation => offset(annunciation(year, config), offset_days),
         MovableBase::ImmaculateConception => offset(immaculate_conception(year), offset_days),
+        MovableBase::SeptuagesimaSunday => offset(septuagesima_sunday(year, config), offset_days),
+        MovableBase::PassionSunday => offset(passion_sunday(year, config), offset_days),
+        MovableBase::SundayBetweenChristmasOctaveAndEpiphany => offset(
+            sunday_between_christmas_octave_and_epiphany(year),
+            offset_days,
+        ),
+        MovableBase::ChristTheKing => offset(christ_the_king(year, config), offset_days),
     }
 }

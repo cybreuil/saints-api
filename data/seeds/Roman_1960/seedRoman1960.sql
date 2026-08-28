@@ -869,7 +869,7 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- The Holy Family: First Sunday after Epiphany
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
-SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'FIRST_SUNDAY_AFTER_EPIPHANY', 0, 'normal', FALSE, 'Wikipedia 1960 movable'
+SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'SUNDAY_AFTER_EPIPHANY', 0, 'normal', FALSE, 'Wikipedia 1960 movable'
 FROM feasts f
 JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN liturgical_ranks r ON r.calendar_id = tcal.id AND r.code = 'CLASS_II'
@@ -889,7 +889,7 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- Seven Sorrows of BVM (movable): Friday after First Sunday in Passiontide (2nd Sunday of Passion)
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
-SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'FRIDAY_AFTER_PASSION_SUNDAY', 0, 'normal', FALSE, 'Wikipedia 1960 movable - Friday after I Sunday in Passiontide'
+SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'PASSION_SUNDAY', 5, 'normal', FALSE, 'Wikipedia 1960 movable - Friday after I Sunday in Passiontide'
 FROM feasts f
 JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN liturgical_ranks r ON r.calendar_id = tcal.id AND r.code = 'COMM'
