@@ -78,6 +78,9 @@ echo "✅ ROMAN Feast Saints links seeded."
 run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFrance.sql"
 echo "✅ Roman France seeded."
 
+run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceFeastDescription.sql"
+echo "✅ Roman France feast descriptions seeded."
+
 run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceSaints.sql"
 echo "✅ Roman France saints seeded."
 
@@ -105,6 +108,9 @@ echo "✅ Roman 1960 seeded."
 # Spain Calendar seeding
 run_sql "$ROOT_DIR/data/seeds/Roman_Spain/seedRomanSpain.sql"
 echo "✅ Roman Spain seeded."
+
+run_sql "$ROOT_DIR/data/seeds/Roman_Spain/seedRomanSpainFeastDescription.sql"
+echo "✅ Roman Spain feast descriptions seeded."
 
 run_sql "$ROOT_DIR/data/seeds/Roman_Spain/seedRomanSpainSaints.sql"
 echo "✅ Roman Spain saints seeded."
