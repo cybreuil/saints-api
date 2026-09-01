@@ -85,6 +85,7 @@ pub async fn get_fixed_celebrations_by_date(
                c.movable_offset_days,
                c.notes,
                c.observance_type,
+               ct.description,
                f.default_name,
 			   f.feast_type,
 			   ft.name AS feast_name,
@@ -95,6 +96,9 @@ pub async fn get_fixed_celebrations_by_date(
 			   lr.precedence AS rank_precedence,
 			   lrt.label AS rank_label
         FROM celebrations c
+        LEFT JOIN celebration_translations ct
+			ON c.id = ct.celebration_id
+			AND ct.locale_code = $3
         LEFT JOIN feasts f
         	ON c.feast_id = f.id
         LEFT JOIN feast_translations ft
@@ -147,6 +151,7 @@ pub async fn get_movable_celebrations(
            c.movable_offset_days,
            c.notes,
            c.observance_type,
+           ct.description,
            f.default_name,
            f.feast_type,
            ft.name AS feast_name,
@@ -157,6 +162,9 @@ pub async fn get_movable_celebrations(
 		   lr.precedence AS rank_precedence,
 		   lrt.label AS rank_label
     FROM celebrations c
+    LEFT JOIN celebration_translations ct
+		ON c.id = ct.celebration_id
+		AND ct.locale_code = $1
     LEFT JOIN feasts f
     	ON c.feast_id = f.id
     LEFT JOIN feast_translations ft
