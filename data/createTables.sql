@@ -5,6 +5,7 @@ BEGIN;
 -- =========================================================
 
 -- Nettoyage des tables existantes (ordre inverse des dépendances)
+DROP TABLE IF EXISTS celebration_translations CASCADE;
 DROP TABLE IF EXISTS celebrations CASCADE;
 DROP TABLE IF EXISTS feast_saints CASCADE;
 -- DROP TABLE IF EXISTS feast_dates CASCADE;
@@ -439,6 +440,14 @@ CREATE TABLE celebrations (
 		OR
 		(date_kind = 'movable' AND movable_base IS NOT NULL AND month IS NULL AND day IS NULL)
 	)
+);
+
+-- Quick translations for celebrations (optional, can be used to override feast translations)
+CREATE TABLE celebration_translations (
+	celebration_id INTEGER NOT NULL REFERENCES celebrations(id) ON DELETE CASCADE,
+	locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
+	description TEXT,
+	PRIMARY KEY (celebration_id, locale_code)
 );
 
 -- =========================================================
