@@ -106,4 +106,10 @@ echo "✅ Roman 1960 seeded."
 run_sql "$ROOT_DIR/data/seeds/Roman_Spain/seedRomanSpain.sql"
 echo "✅ Roman Spain seeded."
 
+run_sql "$ROOT_DIR/data/seeds/Roman_Spain/seedRomanSpainSaints.sql"
+echo "✅ Roman Spain saints seeded."
+
+run_sql "$ROOT_DIR/data/seeds/Roman_Spain/seedRomanSpainFeastSaints.sql"
+echo "✅ Roman Spain Feast Saints links seeded."
+
 echo "✅ DB seeded."
