@@ -5,7 +5,6 @@ BEGIN;
 -- =========================================================
 
 -- Nettoyage des tables existantes (ordre inverse des dépendances)
-DROP TABLE IF EXISTS celebration_translations CASCADE;
 DROP TABLE IF EXISTS celebrations CASCADE;
 DROP TABLE IF EXISTS feast_saints CASCADE;
 -- DROP TABLE IF EXISTS feast_dates CASCADE;
