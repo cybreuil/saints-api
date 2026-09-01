@@ -557,7 +557,7 @@ FROM calendars
 WHERE code = 'ROMAN_GENERAL';
 
 INSERT INTO calendars (code, parent_id, date_system, easter_computation)
-SELECT 'ROMAN_ITALY', id, 'gregorian', 'western'
+SELECT 'ROMAN_SPAIN', id, 'gregorian', 'western'
 FROM calendars
 WHERE code = 'ROMAN_GENERAL';
 
@@ -569,7 +569,7 @@ JOIN (VALUES
     ('ROMAN_GENERAL', 'Calendrier romain général (1969+)', 'Forme ordinaire du rite romain, révisée après Vatican II par Paul VI'),
     ('ROMAN_1960', 'Calendrier traditionnel (1960)', 'Missel de 1962, forme extraordinaire, pre-Vatican II, révisé par Jean XXIII'),
     ('ROMAN_FRANCE', 'Calendrier romain - France', 'Propre de France'),
-    ('ROMAN_ITALY', 'Calendrier romain - Italie', 'Propre d''Italie')
+    ('ROMAN_SPAIN', 'Calendrier romain - Espagne', 'Propre d''Espagne')
     -- ('ORTHODOX_RUSSIAN', 'Calendrier orthodoxe russe', 'Patriarcat de Moscou'),
     -- ('ORTHODOX_GREEK', 'Calendrier orthodoxe grec', 'Nouveau calendrier')
 ) AS x(code, name, description)
@@ -583,7 +583,7 @@ JOIN (VALUES
     ('ROMAN_GENERAL', 'General Roman Calendar (1969+)', 'Ordinary Form of the Roman Rite, revised after Vatican II by Paul VI'),
     ('ROMAN_1960', 'Traditional Calendar (1960)', '1962 Missal, Extraordinary Form, pre-Vatican II, revised by John XXIII'),
     ('ROMAN_FRANCE', 'Roman Calendar - France', 'Proper of France'),
-    ('ROMAN_ITALY', 'Roman Calendar - Italy', 'Proper of Italy')
+    ('ROMAN_SPAIN', 'Roman Calendar - Spain', 'Proper of Spain')
     -- ('ORTHODOX_RUSSIAN', 'Russian Orthodox Calendar', 'Moscow Patriarchate'),
     -- ('ORTHODOX_GREEK', 'Greek Orthodox Calendar', 'New Calendar')
 ) AS x(code, name, description)
@@ -597,7 +597,7 @@ JOIN (VALUES
     ('ROMAN_GENERAL', 'Calendarium Romanum Generale (1969+)', 'Forma ordinaria Ritus Romani, post Concilium Vaticanum II a Paulo VI recognita'),
     ('ROMAN_1960', 'Calendarium Traditionale (1960)', 'Missale Romanum anni 1962, forma extraordinaria, ante Concilium Vaticanum II, a Ioanne XXIII recognitum'),
     ('ROMAN_FRANCE', 'Calendarium Romanum - Gallia', 'Proprium Galliae'),
-    ('ROMAN_ITALY', 'Calendarium Romanum - Italia', 'Proprium Italiae')
+    ('ROMAN_SPAIN', 'Calendarium Romanum - Hispania', 'Proprium Hispaniae')
     -- ('ORTHODOX_RUSSIAN', 'Calendarium Orthodoxum Russicum', 'Patriarchatus Moscoviae'),
     -- ('ORTHODOX_GREEK', 'Calendarium Orthodoxum Graecum', 'Calendarium novum')
 ) AS x(code, name, description)
