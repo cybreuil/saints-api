@@ -442,14 +442,6 @@ CREATE TABLE celebrations (
 	)
 );
 
--- Quick translations for celebrations (optional, can be used to override feast translations)
-CREATE TABLE celebration_translations (
-	celebration_id INTEGER NOT NULL REFERENCES celebrations(id) ON DELETE CASCADE,
-	locale_code TEXT NOT NULL REFERENCES locales(code) ON DELETE CASCADE,
-	description TEXT,
-	PRIMARY KEY (celebration_id, locale_code)
-);
-
 -- =========================================================
 -- 9) Auth tables
 -- =========================================================
