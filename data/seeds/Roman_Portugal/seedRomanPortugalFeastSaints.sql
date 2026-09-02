@@ -97,7 +97,7 @@ FROM (VALUES
    'primary'),
   ('saints-fructuosus-martin-of-dume-and-gerald-bishops',
    'saint-gerald-of-braga',
-   'primary'),
+   'primary')
 
   -- Marian / Christological specific feasts already linked in ROMAN_GENERAL
   -- our-lady-of-fatima -> saint-mary already exists
