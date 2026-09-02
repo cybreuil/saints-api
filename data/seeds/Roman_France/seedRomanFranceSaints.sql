@@ -190,63 +190,63 @@ $BIO$
   * Studies on late antique Gaul and the Christianization of Roman society.
   * Historical works on early medieval Paris and the cult of saints.
 $BIO$,
-  'Virgin'
+  'c. 422–502'
 ),
 (
   'saint-remigius',
   'Saint Remigius',
   'Bishop of Reims, Apostle of France',
   '',
-  'Bishop'
+  'c. 437–533'
 ),
 (
   'saint-bernadette-soubirous',
   'Saint Bernadette Soubirous',
   'Virgin, visionary of Lourdes',
   '',
-  'Virgin'
+  '1844–1879'
 ),
 (
   'saint-ivo-of-kermartin',
   'Saint Ivo of Kermartin',
   'Priest, patron saint of lawyers',
   '',
-  'Priest'
+  'c. 1253–1303'
 ),
 (
   'saint-joan-of-arc',
   'Saint Joan of Arc',
   'Virgin, secondary patroness of France',
   '',
-  'Virgin'
+  'c. 1412–1431'
 ),
 (
   'saint-pothinus',
   'Saint Pothinus',
   'Bishop of Lyon, martyr',
   '',
-  'Bishop and Martyr'
+  'c. 87–177'
 ),
 (
   'saint-blandina',
   'Saint Blandina',
   'Virgin martyr of Lyon',
   '',
-  'Virgin and Martyr'
+  'c. 162–177'
 ),
 (
   'saint-clotilde',
   'Saint Clotilde',
   'Queen of the Franks',
   '',
-  'Queen'
+  'c. 474–545'
 ),
 (
   'saint-caesarius-of-arles',
   'Saint Caesarius of Arles',
   'Bishop, Doctor of the Gauls',
   '',
-  'Bishop'
+  'c. 470–542'
 )
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
@@ -267,63 +267,63 @@ JOIN (VALUES
   'Sainte Geneviève',
   'Vierge et patronne de Paris',
   '',
-  'Vierge'
+  'v. 422–502'
 ),
 (
   'saint-remigius',
   'Saint Rémi',
   'Évêque de Reims, apôtre des Francs',
   '',
-  'Évêque'
+  'v. 437–533'
 ),
 (
   'saint-bernadette-soubirous',
   'Sainte Bernadette Soubirous',
   'Vierge, voyante de Lourdes',
   '',
-  'Vierge'
+  '1844–1879'
 ),
 (
   'saint-ivo-of-kermartin',
   'Saint Yves de Kermartin',
   'Prêtre, patron des avocats',
   '',
-  'Prêtre'
+  'v. 1253–1303'
 ),
 (
   'saint-joan-of-arc',
   'Sainte Jeanne d''Arc',
   'Vierge, patronne secondaire de la France',
   '',
-  'Vierge'
+  'v. 1412–1431'
 ),
 (
   'saint-pothinus',
   'Saint Pothin',
   'Évêque de Lyon, martyr',
   '',
-  'Évêque et Martyr'
+  'v. 87–177'
 ),
 (
   'saint-blandina',
   'Sainte Blandine',
   'Vierge martyre de Lyon',
   '',
-  'Vierge et Martyre'
+  'v. 162–177'
 ),
 (
   'saint-clotilde',
   'Sainte Clotilde',
   'Reine des Francs',
   '',
-  'Reine'
+  'v. 474–545'
 ),
 (
   'saint-caesarius-of-arles',
   'Saint Césaire d''Arles',
   'Évêque, docteur des Gaules',
   '',
-  'Évêque'
+  'v. 470–542'
 )
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug
@@ -344,63 +344,63 @@ JOIN (VALUES
   'Sancta Genovefa',
   'Virgo et patrona Parisiensis',
   '',
-  'Virgo'
+  'c. 422–502'
 ),
 (
   'saint-remigius',
   'Sanctus Remigius',
   'Episcopus Remensis, apostolus Francorum',
   '',
-  'Episcopus'
+  'c. 437–533'
 ),
 (
   'saint-bernadette-soubirous',
   'Sancta Bernadetta Soubirous',
   'Virgo et visionaria Lurdiensis',
   '',
-  'Virgo'
+  '1844–1879'
 ),
 (
   'saint-ivo-of-kermartin',
   'Sanctus Ivo de Kermartin',
   'Presbyter, patronus advocatorum',
   '',
-  'Presbyter'
+  'c. 1253–1303'
 ),
 (
   'saint-joan-of-arc',
   'Sancta Ioanna Arcensis',
   'Virgo et patrona secunda Galliae',
   '',
-  'Virgo'
+  'c. 1412–1431'
 ),
 (
   'saint-pothinus',
   'Sanctus Pothinius',
   'Episcopus Lugdunensis, martyr',
   '',
-  'Episcopus et Martyr'
+  'c. 87–177'
 ),
 (
   'saint-blandina',
   'Sancta Blandina',
   'Virgo et martyr Lugdunensis',
   '',
-  'Virgo et Martyr'
+  'c. 162–177'
 ),
 (
   'saint-clotilde',
   'Sancta Chrothildis',
   'Regina Francorum',
   '',
-  'Regina'
+  'c. 474–545'
 ),
 (
   'saint-caesarius-of-arles',
   'Sanctus Caesarius Arelatensis',
   'Episcopus, doctor Galliarum',
   '',
-  'Episcopus'
+  'c. 470–542'
 )
 ) AS x(slug, name, short_description, full_biography, life_label)
 ON s.slug = x.slug

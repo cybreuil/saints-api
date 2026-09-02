@@ -266,161 +266,161 @@ JOIN (VALUES
   'Saint Eulogius of Córdoba',
   'Priest and martyr of Córdoba',
   '',
-  'Priest and Martyr'
+  'c. 800–859'
 ),
 (
   'saint-fructuosus',
   'Saint Fructuosus',
   'Bishop of Tarragona and martyr',
   '',
-  'Bishop and Martyr'
+  '† 259'
 ),
 (
   'saint-augurius',
   'Saint Augurius',
   'Deacon and martyr of Tarragona',
   '',
-  'Deacon and Martyr'
+  '† 259'
 ),
 (
   'saint-eulogius',
   'Saint Eulogius',
   'Deacon and martyr of Tarragona',
   '',
-  'Deacon and Martyr'
+  '† 259'
 ),
 (
   'saint-ildephonsus-of-toledo',
   'Saint Ildephonsus of Toledo',
   'Archbishop of Toledo and Marian theologian',
   '',
-  'Bishop'
+  'c. 607–667'
 ),
 (
   'saint-hermenegild',
   'Saint Hermenegild',
   'Visigothic prince and martyr',
   '',
-  'Martyr'
+  'c. 564–586'
 ),
 (
   'saint-peter-of-saint-joseph-de-betancur',
   'Saint Peter of Saint Joseph de Betancur',
   'Missionary and founder of the Bethlehemite Brothers',
   '',
-  'Missionary'
+  '1626–1667'
 ),
 (
   'saint-isidore-of-seville',
   'Saint Isidore of Seville',
   'Bishop and Doctor of the Church',
   '',
-  'Bishop and Doctor'
+  'c. 560–636'
 ),
 (
   'saint-isidore-the-farmer',
   'Saint Isidore the Farmer',
   'Farmer and patron saint of Madrid',
   '',
-  'Layman'
+  'c. 1070–1130'
 ),
 (
   'saint-paschal-baylon',
   'Saint Paschal Baylon',
   'Franciscan friar devoted to the Eucharist',
   '',
-  'Religious'
+  '1540–1592'
 ),
 (
   'saint-joaquina-vedruna',
   'Saint Joaquina Vedruna',
   'Founder of the Carmelites of Charity',
   '',
-  'Virgin'
+  '1783–1854'
 ),
 (
   'saint-ferdinand',
   'Saint Ferdinand',
   'King of Castile and León',
   '',
-  'King'
+  'c. 1199–1252'
 ),
 (
   'saint-jose-de-anchieta',
   'Saint José de Anchieta',
   'Jesuit missionary and founder in Brazil',
   '',
-  'Missionary'
+  '1534–1597'
 ),
 (
   'saint-maria-micaela-of-the-blessed-sacrament',
   'Saint María Micaela of the Blessed Sacrament',
   'Founder of the Adorers, Handmaids of the Blessed Sacrament',
   '',
-  'Virgin'
+  '1809–1865'
 ),
 (
   'saint-pelagius',
   'Saint Pelagius',
   'Young martyr of Córdoba',
   '',
-  'Martyr'
+  'c. 912–925'
 ),
 (
   'saint-ezequiel-moreno',
   'Saint Ezequiel Moreno',
   'Augustinian Recollect bishop and missionary',
   '',
-  'Bishop'
+  '1848–1906'
 ),
 (
   'saint-teresa-of-jesus-jornet-and-ibars',
   'Saint Teresa of Jesus Jornet e Ibars',
   'Founder of the Little Sisters of the Poor',
   '',
-  'Virgin'
+  '1843–1897'
 ),
 (
   'saint-francis-borgia',
   'Saint Francis Borgia',
   'Jesuit priest and superior general',
   '',
-  'Priest'
+  '1510–1572'
 ),
 (
   'saint-thomas-of-villanova',
   'Saint Thomas of Villanova',
   'Archbishop of Valencia and Augustinian friar',
   '',
-  'Bishop'
+  'c. 1488–1555'
 ),
 (
   'saint-soledad-torres-acosta',
   'Saint Soledad Torres Acosta',
   'Founder of the Servants of Mary',
   '',
-  'Virgin'
+  '1826–1887'
 ),
 (
   'saint-peter-of-alcantara',
   'Saint Peter of Alcántara',
   'Franciscan friar and reformer',
   '',
-  'Priest'
+  '1499–1562'
 ),
 (
   'saint-leander',
   'Saint Leander',
   'Archbishop of Seville',
   '',
-  'Bishop'
+  'c. 534–600'
 ),
 (
   'saint-eulalia-of-merida',
   'Saint Eulalia of Mérida',
   'Virgin and martyr of Mérida',
   '',
-  'Virgin and Martyr'
+  'c. 290–304'
 )
 
 ) AS x(slug, name, short_description, full_biography, life_label)
@@ -450,161 +450,161 @@ JOIN (VALUES
   'Saint Euloge de Cordoue',
   'Prêtre et martyr de Cordoue',
   '',
-  'Prêtre et Martyr'
+  'v. 800–859'
 ),
 (
   'saint-fructuosus',
   'Saint Fructueux',
   'Évêque de Tarragone et martyr',
   '',
-  'Évêque et Martyr'
+  '† 259'
 ),
 (
   'saint-augurius',
   'Saint Augure',
   'Diacre et martyr de Tarragone',
   '',
-  'Diacre et Martyr'
+  '† 259'
 ),
 (
   'saint-eulogius',
   'Saint Euloge',
   'Diacre et martyr de Tarragone',
   '',
-  'Diacre et Martyr'
+  '† 259'
 ),
 (
   'saint-ildephonsus-of-toledo',
   'Saint Ildefonse de Tolède',
   'Archevêque de Tolède et théologien marial',
   '',
-  'Évêque'
+  'v. 607–667'
 ),
 (
   'saint-hermenegild',
   'Saint Herménégilde',
   'Prince wisigoth et martyr',
   '',
-  'Martyr'
+  'v. 564–586'
 ),
 (
   'saint-peter-of-saint-joseph-de-betancur',
   'Saint Pierre de Saint-Joseph de Betancur',
   'Missionnaire et fondateur des Frères de Bethléem',
   '',
-  'Missionnaire'
+  '1626–1667'
 ),
 (
   'saint-isidore-of-seville',
   'Saint Isidore de Séville',
   'Évêque et docteur de l''Église',
   '',
-  'Évêque et Docteur'
+  'v. 560–636'
 ),
 (
   'saint-isidore-the-farmer',
   'Saint Isidore le Laboureur',
   'Laboureur et patron de Madrid',
   '',
-  'Laïc'
+  'v. 1070–1130'
 ),
 (
   'saint-paschal-baylon',
   'Saint Pascal Baylon',
   'Religieux franciscain particulièrement attaché à l''Eucharistie',
   '',
-  'Religieux'
+  '1540–1592'
 ),
 (
   'saint-joaquina-vedruna',
   'Sainte Joaquina Vedruna',
   'Fondatrice des Carmélites de la Charité',
   '',
-  'Vierge'
+  '1783–1854'
 ),
 (
   'saint-ferdinand',
   'Saint Ferdinand',
   'Roi de Castille et de León',
   '',
-  'Roi'
+  'v. 1199–1252'
 ),
 (
   'saint-jose-de-anchieta',
   'Saint José de Anchieta',
   'Missionnaire jésuite et fondateur au Brésil',
   '',
-  'Missionnaire'
+  '1534–1597'
 ),
 (
   'saint-maria-micaela-of-the-blessed-sacrament',
   'Sainte María Micaela du Saint-Sacrement',
   'Fondatrice des Adoratrices, Servantes du Saint-Sacrement',
   '',
-  'Vierge'
+  '1809–1865'
 ),
 (
   'saint-pelagius',
   'Saint Pélage',
   'Jeune martyr de Cordoue',
   '',
-  'Martyr'
+  'v. 912–925'
 ),
 (
   'saint-ezequiel-moreno',
   'Saint Ézéchiel Moreno',
   'Évêque et missionnaire augustin récollet',
   '',
-  'Évêque'
+  '1848–1906'
 ),
 (
   'saint-teresa-of-jesus-jornet-and-ibars',
   'Sainte Thérèse de Jésus Jornet e Ibars',
   'Fondatrice des Petites Sœurs des Pauvres',
   '',
-  'Vierge'
+  '1843–1897'
 ),
 (
   'saint-francis-borgia',
   'Saint François Borgia',
   'Prêtre jésuite et supérieur général de la Compagnie de Jésus',
   '',
-  'Prêtre'
+  '1510–1572'
 ),
 (
   'saint-thomas-of-villanova',
   'Saint Thomas de Villeneuve',
   'Archevêque de Valence et religieux augustin',
   '',
-  'Évêque'
+  'v. 1488–1555'
 ),
 (
   'saint-soledad-torres-acosta',
   'Sainte Soledad Torres Acosta',
   'Fondatrice des Servantes de Marie',
   '',
-  'Vierge'
+  '1826–1887'
 ),
 (
   'saint-peter-of-alcantara',
   'Saint Pierre d''Alcántara',
   'Religieux franciscain et réformateur',
   '',
-  'Prêtre'
+  '1499–1562'
 ),
 (
   'saint-leander',
   'Saint Léandre',
   'Archevêque de Séville',
   '',
-  'Évêque'
+  'v. 534–600'
 ),
 (
   'saint-eulalia-of-merida',
   'Sainte Eulalie de Mérida',
   'Vierge et martyre de Mérida',
   '',
-  'Vierge et Martyre'
+  'v. 290–304'
 )
 
 ) AS x(slug, name, short_description, full_biography, life_label)
@@ -634,161 +634,161 @@ JOIN (VALUES
   'Sanctus Eulogius Cordubensis',
   'Presbyter et martyr Cordubensis',
   '',
-  'Presbyter et Martyr'
+  'c. 800–859'
 ),
 (
   'saint-fructuosus',
   'Sanctus Fructuosus',
   'Episcopus Tarraconensis et martyr',
   '',
-  'Episcopus et Martyr'
+  '† 259'
 ),
 (
   'saint-augurius',
   'Sanctus Augurius',
   'Diaconus et martyr Tarraconensis',
   '',
-  'Diaconus et Martyr'
+  '† 259'
 ),
 (
   'saint-eulogius',
   'Sanctus Eulogius',
   'Diaconus et martyr Tarraconensis',
   '',
-  'Diaconus et Martyr'
+  '† 259'
 ),
 (
   'saint-ildephonsus-of-toledo',
   'Sanctus Ildephonsus Toletanus',
   'Archiepiscopus Toletanus et theologus Marianus',
   '',
-  'Episcopus'
+  'c. 607–667'
 ),
 (
   'saint-hermenegild',
   'Sanctus Hermenegildus',
   'Princeps Visigothorum et martyr',
   '',
-  'Martyr'
+  'c. 564–586'
 ),
 (
   'saint-peter-of-saint-joseph-de-betancur',
   'Sanctus Petrus a Sancto Iosepho de Betancur',
   'Missionarius et fundator Fratrum Bethlehemitarum',
   '',
-  'Missionarius'
+  '1626–1667'
 ),
 (
   'saint-isidore-of-seville',
   'Sanctus Isidorus Hispalensis',
   'Episcopus et Ecclesiae Doctor',
   '',
-  'Episcopus et Doctor'
+  'c. 560–636'
 ),
 (
   'saint-isidore-the-farmer',
   'Sanctus Isidorus Agricola',
   'Agricola et patronus Matritensis',
   '',
-  'Laicus'
+  'c. 1070–1130'
 ),
 (
   'saint-paschal-baylon',
   'Sanctus Paschalis Baylon',
   'Religiosus Franciscanus Eucharistiae devotus',
   '',
-  'Religiosus'
+  '1540–1592'
 ),
 (
   'saint-joaquina-vedruna',
   'Sancta Ioachima Vedruna',
   'Fundatrix Carmelitarum Caritatis',
   '',
-  'Virgo'
+  '1783–1854'
 ),
 (
   'saint-ferdinand',
   'Sanctus Ferdinandus',
   'Rex Castellae et Legionis',
   '',
-  'Rex'
+  'c. 1199–1252'
 ),
 (
   'saint-jose-de-anchieta',
   'Sanctus Iosephus de Anchieta',
   'Missionarius Iesuita et fundator in Brasilia',
   '',
-  'Missionarius'
+  '1534–1597'
 ),
 (
   'saint-maria-micaela-of-the-blessed-sacrament',
   'Sancta Maria Michaela a Sanctissimo Sacramento',
   'Fundatrix Sororum Adoratricum Ancillarum Sanctissimi Sacramenti',
   '',
-  'Virgo'
+  '1809–1865'
 ),
 (
   'saint-pelagius',
   'Sanctus Pelagius',
   'Iuvenis martyr Cordubensis',
   '',
-  'Martyr'
+  'c. 912–925'
 ),
 (
   'saint-ezequiel-moreno',
   'Sanctus Ezechiel Moreno',
   'Episcopus et missionarius Augustinianus Recollectus',
   '',
-  'Episcopus'
+  '1848–1906'
 ),
 (
   'saint-teresa-of-jesus-jornet-and-ibars',
   'Sancta Teresia a Iesu Jornet et Ibars',
   'Fundatrix Parvarum Sororum Pauperum',
   '',
-  'Virgo'
+  '1843–1897'
 ),
 (
   'saint-francis-borgia',
   'Sanctus Franciscus Borgia',
   'Presbyter Iesuita et Praepositus Generalis Societatis Iesu',
   '',
-  'Presbyter'
+  '1510–1572'
 ),
 (
   'saint-thomas-of-villanova',
   'Sanctus Thomas a Villanova',
   'Archiepiscopus Valentinus et religiosus Augustinianus',
   '',
-  'Episcopus'
+  'c. 1488–1555'
 ),
 (
   'saint-soledad-torres-acosta',
   'Sancta Soledas Torres Acosta',
   'Fundatrix Sororum Servarum Mariae',
   '',
-  'Virgo'
+  '1826–1887'
 ),
 (
   'saint-peter-of-alcantara',
   'Sanctus Petrus de Alcantara',
   'Religiosus Franciscanus et reformator',
   '',
-  'Presbyter'
+  '1499–1562'
 ),
 (
   'saint-leander',
   'Sanctus Leander',
   'Archiepiscopus Hispalensis',
   '',
-  'Episcopus'
+  'c. 534–600'
 ),
 (
   'saint-eulalia-of-merida',
   'Sancta Eulalia Emeritensis',
   'Virgo et martyr Emeritensis',
   '',
-  'Virgo et Martyr'
+  'c. 290–304'
 )
 
 ) AS x(slug, name, short_description, full_biography, life_label)
