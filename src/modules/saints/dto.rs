@@ -117,11 +117,6 @@ pub struct LangQuery {
 pub struct RandomImagesQuery {
     pub count: Option<i32>,
 }
-// Answer for random endpoint, returns a list of random images
-#[derive(Debug, Serialize)]
-pub struct SaintImagesRandom {
-    pub images: Vec<SaintImage>,
-}
 
 // #[derive(Debug, Deserialize)]
 // pub struct CreateSaint {
