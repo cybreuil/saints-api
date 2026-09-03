@@ -1,7 +1,7 @@
 use sqlx::PgPool;
 
 use super::{
-    dto::{SaintDetailResponse, SaintListItem, SaintListItemComplete},
+    dto::{SaintDetailResponse, SaintImage, SaintListItem, SaintListItemComplete},
     repo,
 };
 use crate::core::{
@@ -68,6 +68,24 @@ pub async fn get_saint_by_slug(
         attributes,
         patronages,
     })
+}
+
+pub async fn get_random_saints_images(
+    pool: &PgPool,
+    count: i32,
+) -> Result<Vec<SaintImage>, ApiError> {
+    // Limitting the count to a reasonable range to avoid overloading the database or returning too many results.
+    let count = if count < 1 {
+        1
+    } else if count > 100 {
+        100
+    } else {
+        count
+    };
+
+    let images = repo::get_random_saints_images(pool, count).await?;
+
+    Ok(images)
 }
 
 // pub async fn get_saint(

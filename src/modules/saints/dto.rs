@@ -54,6 +54,7 @@ pub struct SaintDetail {
 #[derive(Debug, Serialize, FromRow)]
 pub struct SaintImage {
     pub id: i32,
+    pub saint_id: i32,
     pub image_url: String,
     pub title: String,
     pub image_type: Option<String>,
@@ -110,6 +111,18 @@ pub struct SaintDetailResponse {
 pub struct LangQuery {
     pub language_code: Option<String>,
 }
+
+// Query for the random endpoint, returns a list of random images
+#[derive(Debug, Deserialize)]
+pub struct RandomImagesQuery {
+    pub count: Option<i32>,
+}
+// Answer for random endpoint, returns a list of random images
+#[derive(Debug, Serialize)]
+pub struct SaintImagesRandom {
+    pub images: Vec<SaintImage>,
+}
+
 // #[derive(Debug, Deserialize)]
 // pub struct CreateSaint {
 //     pub slug: String,

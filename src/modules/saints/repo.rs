@@ -109,6 +109,7 @@ pub async fn get_saint_images(pool: &PgPool, saint_id: i32) -> Result<Vec<SaintI
         i.credit,
         i.license,
         i.source_url,
+        si.saint_id,
         si.sort_order,
         si.is_primary
     FROM saint_images si
@@ -228,4 +229,39 @@ pub async fn count_saints(pool: &PgPool) -> Result<i64, ApiError> {
         .await?;
 
     Ok(count)
+}
+
+pub async fn get_random_saints_images(
+    pool: &PgPool,
+    count: i32,
+) -> Result<Vec<SaintImage>, ApiError> {
+    let rows = sqlx::query_as::<_, SaintImage>(
+        r#"
+	SELECT
+		i.id,
+		i.image_url,
+		i.title,
+		i.image_type,
+		COALESCE(si.alt_text_override, i.alt_text) AS alt_text,
+		COALESCE(si.caption_override, i.caption)   AS caption,
+		i.creator,
+		i.date_label,
+		i.repository,
+		i.credit,
+		i.license,
+		i.source_url,
+		si.saint_id,
+		si.sort_order,
+		si.is_primary
+	FROM saint_images si
+	JOIN images i ON i.id = si.image_id
+	ORDER BY RANDOM()
+	LIMIT $1
+	"#,
+    )
+    .bind(count)
+    .fetch_all(pool)
+    .await?;
+
+    Ok(rows)
 }

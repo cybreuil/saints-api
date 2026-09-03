@@ -44,6 +44,16 @@ pub async fn get_saint_by_slug(
 
     Ok(HttpResponse::Ok().json(result))
 }
+
+pub async fn get_random_saints_images(
+    pool: web::Data<PgPool>,
+    query: web::Query<dto::RandomImagesQuery>,
+) -> Result<HttpResponse, ApiError> {
+    let count = query.count.unwrap_or(1);
+    let result = service::get_random_saints_images(pool.get_ref(), count).await?;
+
+    Ok(HttpResponse::Ok().json(result))
+}
 // pub async fn get_saint(
 //     pool: web::Data<PgPool>,
 //     path: web::Path<i32>,
