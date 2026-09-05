@@ -594,7 +594,7 @@ JOIN (
 -- Saint Henry
 ('saint-henry', '/saints/saint-henry_baer.webp', 1, TRUE, 'subject'),
 ('saint-henry', '/saints/saint-henry.webp', 2, FALSE, 'subject'),
-('saint-henry', '/saints/saint-henry_fuhricht.webp', 3, FALSE, 'subject'),
+('saint-henry', '/saints/saint-henry_fuhrich.webp', 3, FALSE, 'subject'),
 ('saint-henry', '/saints/saint-henry_2.webp', 4, FALSE, 'subject'),
 
 -- Saint Camillus de Lellis
