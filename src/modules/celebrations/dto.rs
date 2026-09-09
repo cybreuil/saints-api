@@ -43,6 +43,7 @@ pub struct SaintRow {
     pub saint_slug: String,
     pub saint_name: String,
     pub saint_century: Option<i16>,
+    pub saint_life_label: Option<String>,
     pub saint_image_url: Option<String>,
 }
 #[derive(Debug, Serialize)]
@@ -51,6 +52,7 @@ pub struct Saint {
     pub saint_slug: String,
     pub saint_name: String,
     pub saint_century: Option<i16>,
+    pub saint_life_label: Option<String>,
     pub saint_image_url: Option<String>,
 }
 impl From<SaintRow> for Saint {
@@ -60,6 +62,7 @@ impl From<SaintRow> for Saint {
             saint_slug: row.saint_slug,
             saint_name: row.saint_name,
             saint_century: row.saint_century,
+            saint_life_label: row.saint_life_label,
             saint_image_url: row.saint_image_url,
         }
     }

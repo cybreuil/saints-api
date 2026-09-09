@@ -201,6 +201,7 @@ pub async fn get_saints_for_feasts(
             s.id   AS saint_id,
             s.slug AS saint_slug,
             st.name AS saint_name,
+            st.life_label AS saint_life_label,
             s.century AS saint_century,
             img.image_url AS saint_image_url
         FROM feast_saints fs
