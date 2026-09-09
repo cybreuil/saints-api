@@ -113,16 +113,29 @@ fn build_occurrence(
     Ok((start, end))
 }
 
-fn overlap_with_year(
+// We now use intersect to keep real dates
+// fn overlap_with_year(
+//     start: NaiveDate,
+//     end: NaiveDate,
+//     year_start: NaiveDate,
+//     year_end: NaiveDate,
+// ) -> Option<(NaiveDate, NaiveDate)> {
+//     let start = start.max(year_start);
+//     let end = end.min(year_end);
+
+//     (start <= end).then_some((start, end))
+// }
+
+/// True if the occurrence [start, end] (inclusive) touches the civil year.
+/// The bounds are never clipped: a season that overlaps December 31st is
+/// returned whole, so `start`/`end` are always the real liturgical bounds.
+fn intersects_year(
     start: NaiveDate,
     end: NaiveDate,
     year_start: NaiveDate,
     year_end: NaiveDate,
-) -> Option<(NaiveDate, NaiveDate)> {
-    let start = start.max(year_start);
-    let end = end.min(year_end);
-
-    (start <= end).then_some((start, end))
+) -> bool {
+    start <= year_end && end >= year_start
 }
 
 pub fn build_intervals(
@@ -135,10 +148,19 @@ pub fn build_intervals(
     let mut intervals = Vec::with_capacity(rows.len() * 2);
 
     for row in rows {
-        if year > 1 {
-            let (start, end) = build_occurrence(row, year - 1, config)?;
+        // A season anchored in year-1 may spill into this year (Christmastide),
+        // and one anchored in this year may spill into year+1. Both anchors are
+        // evaluated; each occurrence is kept whole if it touches the civil year.
+        let anchors = if year > 1 {
+            vec![year - 1, year]
+        } else {
+            vec![year]
+        };
 
-            if let Some((start, end)) = overlap_with_year(start, end, year_start, year_end) {
+        for anchor_year in anchors {
+            let (start, end) = build_occurrence(row, anchor_year, config)?;
+
+            if intersects_year(start, end, year_start, year_end) {
                 intervals.push(SeasonInterval {
                     code: row.season_code.clone(),
                     segment_index: row.segment_index,
@@ -151,41 +173,15 @@ pub fn build_intervals(
                 });
             }
         }
-
-        let (start, end) = build_occurrence(row, year, config)?;
-
-        if let Some((start, end)) = overlap_with_year(start, end, year_start, year_end) {
-            intervals.push(SeasonInterval {
-                code: row.season_code.clone(),
-                segment_index: row.segment_index,
-                label: row.label.clone(),
-                start,
-                end,
-                color_code: row.color_code.clone(),
-                color_label: row.color_label.clone(),
-                hex_color: row.hex_color.clone(),
-            });
-        }
     }
 
     intervals.sort_by(|a, b| {
         a.start
             .cmp(&b.start)
-            .then(a.end.cmp(&b.end))
+            .then(b.end.cmp(&a.end)) // longest first when same start (LENT 0 before LENT 1 in 1960)
             .then_with(|| a.code.cmp(&b.code))
             .then(a.segment_index.cmp(&b.segment_index))
     });
-
-    let mut next_segment_index_by_code: HashMap<String, i16> = HashMap::new();
-
-    for interval in &mut intervals {
-        let next_segment_index = next_segment_index_by_code
-            .entry(interval.code.clone())
-            .or_insert(0);
-
-        interval.segment_index = *next_segment_index;
-        *next_segment_index += 1;
-    }
 
     Ok(intervals)
 }
@@ -225,24 +221,22 @@ mod tests {
     }
 
     #[test]
-    fn build_intervals_splits_cross_year_intervals_for_civil_year() {
+    fn build_intervals_keeps_cross_year_intervals_whole() {
         let rows = vec![
             fixed_row("CHRISTMASTIDE", 0, 12, 25, 1, 11),
             fixed_row("ORDINARY_TIME", 0, 1, 12, 2, 17),
             fixed_row("ORDINARY_TIME", 1, 5, 25, 11, 28),
         ];
-
-        let config = LiturgicalConfig::default();
-
-        let intervals = build_intervals(&rows, 2026, config).expect("intervals should build");
+        let intervals = build_intervals(&rows, 2026, LiturgicalConfig::default()).unwrap();
 
         assert_eq!(intervals.len(), 4);
 
+        // Christmastide anchored in 2025, whole, not clipped to 2026-01-01
         assert_eq!(intervals[0].code, "CHRISTMASTIDE");
         assert_eq!(intervals[0].segment_index, 0);
         assert_eq!(
             intervals[0].start,
-            NaiveDate::from_ymd_opt(2026, 1, 1).unwrap()
+            NaiveDate::from_ymd_opt(2025, 12, 25).unwrap()
         );
         assert_eq!(
             intervals[0].end,
@@ -251,35 +245,34 @@ mod tests {
 
         assert_eq!(intervals[1].code, "ORDINARY_TIME");
         assert_eq!(intervals[1].segment_index, 0);
-        assert_eq!(
-            intervals[1].start,
-            NaiveDate::from_ymd_opt(2026, 1, 12).unwrap()
-        );
-        assert_eq!(
-            intervals[1].end,
-            NaiveDate::from_ymd_opt(2026, 2, 17).unwrap()
-        );
 
         assert_eq!(intervals[2].code, "ORDINARY_TIME");
         assert_eq!(intervals[2].segment_index, 1);
-        assert_eq!(
-            intervals[2].start,
-            NaiveDate::from_ymd_opt(2026, 5, 25).unwrap()
-        );
-        assert_eq!(
-            intervals[2].end,
-            NaiveDate::from_ymd_opt(2026, 11, 28).unwrap()
-        );
 
+        // Christmastide anchored in 2026, whole, not clipped to 2026-12-31,
+        // and segment_index stays 0 (it is the same season, not a second segment)
         assert_eq!(intervals[3].code, "CHRISTMASTIDE");
-        assert_eq!(intervals[3].segment_index, 1);
+        assert_eq!(intervals[3].segment_index, 0);
         assert_eq!(
             intervals[3].start,
             NaiveDate::from_ymd_opt(2026, 12, 25).unwrap()
         );
         assert_eq!(
             intervals[3].end,
-            NaiveDate::from_ymd_opt(2026, 12, 31).unwrap()
+            NaiveDate::from_ymd_opt(2027, 1, 11).unwrap()
         );
+    }
+
+    #[test]
+    fn build_intervals_preserves_db_segment_index_when_same_start() {
+        // 1960 calendar: LENT 0 (full) and LENT 1 (Lent proper) share the same start.
+        let rows = vec![
+            fixed_row("LENT", 0, 2, 18, 4, 4),
+            fixed_row("LENT", 1, 2, 18, 3, 21),
+        ];
+        let intervals = build_intervals(&rows, 2026, LiturgicalConfig::default()).unwrap();
+
+        assert_eq!(intervals[0].segment_index, 0);
+        assert_eq!(intervals[1].segment_index, 1);
     }
 }
