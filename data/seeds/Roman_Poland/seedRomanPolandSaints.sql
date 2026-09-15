@@ -101,12 +101,12 @@ INSERT INTO saints (
   1941, 5, 28, FALSE,
   20,
   (SELECT id FROM places WHERE code='LUBIEN'),
-  (SELECT id FROM places WHERE code='Dzialdowo'),
+  (SELECT id FROM places WHERE code='DZIALDOWO'),
   (SELECT id FROM places WHERE code='PLOCK')
 ),
 (
   'blessed-michael-kozal', 'Blessed Michael Kozal',
-  1893, 9, 25, FALSE,
+  1893, 9, 27, FALSE,
   1943, 1, 26, FALSE,
   20,
   (SELECT id FROM places WHERE code='NOWY-FOLWARK'),
@@ -161,7 +161,7 @@ INSERT INTO saints (
 (
   'saint-bruno-boniface-of-querfurt', 'Saint Bruno Boniface of Querfurt',
   974, NULL, NULL, TRUE,
-  1009, 3, 9, FALSE,
+  1009, 2, 14, FALSE,
   11,
   (SELECT id FROM places WHERE code='QUERFURT'),
   NULL,
@@ -299,8 +299,8 @@ INSERT INTO saints (
   1003, 11, 11, FALSE,
   11,
   (SELECT id FROM places WHERE code='POLAND'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz')
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ'),
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ')
 ),
 (
   'saint-jan-of-poland', 'Saint Jan of Poland',
@@ -308,8 +308,8 @@ INSERT INTO saints (
   1003, 11, 11, FALSE,
   11,
   (SELECT id FROM places WHERE code='POLAND'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz')
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ'),
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ')
 ),
 (
   'saint-mateusz-of-poland', 'Saint Mateusz of Poland',
@@ -317,8 +317,8 @@ INSERT INTO saints (
   1003, 11, 11, FALSE,
   11,
   (SELECT id FROM places WHERE code='POLAND'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz')
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ'),
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ')
 ),
 (
   'saint-isaak-of-poland', 'Saint Isaak of Poland',
@@ -326,8 +326,8 @@ INSERT INTO saints (
   1003, 11, 11, FALSE,
   11,
   (SELECT id FROM places WHERE code='POLAND'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz')
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ'),
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ')
 ),
 (
   'saint-krystyn-of-poland', 'Saint Krystyn of Poland',
@@ -335,8 +335,8 @@ INSERT INTO saints (
   1003, 11, 11, FALSE,
   11,
   (SELECT id FROM places WHERE code='POLAND'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz'),
-  (SELECT id FROM places WHERE code='Miedzyrzecz')
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ'),
+  (SELECT id FROM places WHERE code='MIEDZYRZECZ')
 ),
 (
   'blessed-karolina-kozkowna', 'Blessed Karolina Kózkówna',

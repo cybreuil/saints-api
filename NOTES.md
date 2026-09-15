@@ -12,11 +12,12 @@ Outre le Martyrologe Romain, il y a les Martyrologes locaux : pour les pays (« 
 
 source: cassicia.com
 
-
 ---
-V1 images infos english - 
+
+V1 images infos english -
 V2 i18n table traduction image
-Pour les photos: 
+Pour les photos:
+
 - caravage
 - georges de la tour
 - zurbaran
@@ -28,35 +29,37 @@ Pour les photos:
 - del piombo
 
 ---
+
 Noli me tangere painting, maybe should add locution to mary magdalene paintings that
 
 ---
+
 Pour build cargo build;
 Mais pour build en prod: on utilisera
 cargo build --release: le build sera plus rapide et opti !
 
--- archi rework 
+-- archi rework
 src/
-  main.rs
+main.rs
 
-  core/
-    config.rs
-    db.rs
-    error.rs
+core/
+config.rs
+db.rs
+error.rs
 
-  middleware/
-    auth.rs
-    logger.rs
+middleware/
+auth.rs
+logger.rs
 
-  modules/
-    saints/
-      mod.rs
-      model.rs
-      dto.rs
-      repo.rs
-      service.rs
-      handlers.rs
-      routes.rs
+modules/
+saints/
+mod.rs
+model.rs
+dto.rs
+repo.rs
+service.rs
+handlers.rs
+routes.rs
 
     images/
       mod.rs
@@ -69,17 +72,19 @@ src/
 
     places/
 
-+
-Middlewares ideas:
-Checklist
-- [x] Request ID (X-Request-Id)
-- [x] Tracing + Logger
-- [x] CORS (configurable via env)
-- [x] Security headers (DefaultHeaders)
-- [x] Body limit (JsonConfig)
-- [x] Compression
-- [x] ErrorHandlers / central ApiError -> JSON
-- [x] Timeout (per-request)
-- [x] Rate limiter
-- [x] Auth middleware
-- [x] Health & /metrics
+- Middlewares ideas:
+  Checklist
+
+* [x] Request ID (X-Request-Id)
+* [x] Tracing + Logger
+* [x] CORS (configurable via env)
+* [x] Security headers (DefaultHeaders)
+* [x] Body limit (JsonConfig)
+* [x] Compression
+* [x] ErrorHandlers / central ApiError -> JSON
+* [x] Timeout (per-request)
+* [x] Rate limiter
+* [x] Auth middleware
+* [x] Health & /metrics
+
+Certains saints polonais ne sont que "bienheureux" : need optimization
