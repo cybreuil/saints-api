@@ -250,12 +250,38 @@ pub async fn get_saint_patronages(
     Ok(rows)
 }
 
-pub async fn count_saints(pool: &PgPool) -> Result<i64, ApiError> {
-    let count = sqlx::query_scalar!(r#"SELECT COUNT(*) as "count!" FROM saints"#)
-        .fetch_one(pool)
-        .await?;
+pub async fn count_saints(
+    pool: &PgPool,
+    language_code: &str,
+    q: Option<&str>,
+    century: Option<i16>,
+) -> Result<i64, sqlx::Error> {
+    let total = sqlx::query_scalar::<_, i64>(
+        r#"
+        SELECT COUNT(*)
+        FROM saints s
+        LEFT JOIN saint_translations st
+            ON st.saint_id = s.id
+            AND st.locale_code = $1
+        WHERE
+            (
+                $2::text IS NULL
+                OR s.default_name ILIKE '%' || $2 || '%'
+                OR st.name ILIKE '%' || $2 || '%'
+            )
+            AND (
+                $3::smallint IS NULL
+                OR s.century = $3
+            )
+        "#,
+    )
+    .bind(language_code)
+    .bind(q)
+    .bind(century)
+    .fetch_one(pool)
+    .await?;
 
-    Ok(count)
+    Ok(total)
 }
 
 pub async fn get_random_saints_images(
