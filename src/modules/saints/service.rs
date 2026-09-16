@@ -15,6 +15,9 @@ pub async fn list_saints_complete(
     page: i32,
     per_page: i32,
     language_code: Option<&str>,
+    century: Option<i16>,
+    q: Option<&str>,
+    sort: Option<&str>,
 ) -> Result<Paginated<SaintListItemComplete>, ApiError> {
     // If lang is invalid, we don't go for db
     let lang = validation::resolve_locale(language_code)?;
@@ -33,7 +36,8 @@ pub async fn list_saints_complete(
         )));
     }
 
-    let data = repo::list_saints_complete(pool, p.per_page, p.offset, lang).await?;
+    let data =
+        repo::list_saints_complete(pool, p.per_page, p.offset, lang, q, sort, century).await?;
 
     Ok(Paginated::new(&p, total, data))
 }

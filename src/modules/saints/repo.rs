@@ -9,35 +9,62 @@ pub async fn list_saints_complete(
     limit: i32,
     offset: i32,
     language_code: &str,
+    q: Option<&str>,
+    sort: Option<&str>,
+    century: Option<i16>,
 ) -> Result<Vec<SaintListItemComplete>, ApiError> {
     let rows = sqlx::query_as::<_, SaintListItemComplete>(
         r#"
-    SELECT
-        s.id,
-        s.slug,
-        s.default_name,
-        s.century,
-        st.name,
-        img.image_url
-    FROM saints s
-    LEFT JOIN saint_translations st
-        ON st.saint_id = s.id
-        AND st.locale_code = $1
-    LEFT JOIN LATERAL (
-        SELECT i.image_url
-        FROM saint_images si
-        JOIN images i ON i.id = si.image_id
-        WHERE si.saint_id = s.id
-        ORDER BY si.is_primary DESC, si.sort_order ASC
-        LIMIT 1
-    ) img ON TRUE
-    ORDER BY s.default_name ASC
-    LIMIT $2 OFFSET $3
-    "#,
+        SELECT
+            s.id,
+            s.slug,
+            s.default_name,
+            s.century,
+            st.name,
+            img.image_url
+        FROM saints s
+        LEFT JOIN saint_translations st
+            ON st.saint_id = s.id
+            AND st.locale_code = $1
+        LEFT JOIN LATERAL (
+            SELECT i.image_url
+            FROM saint_images si
+            JOIN images i ON i.id = si.image_id
+            WHERE si.saint_id = s.id
+            ORDER BY si.is_primary DESC, si.sort_order ASC
+            LIMIT 1
+        ) img ON TRUE
+        WHERE
+            (
+                $2::text IS NULL
+                OR s.default_name ILIKE '%' || $2 || '%'
+                OR st.name ILIKE '%' || $2 || '%'
+            )
+            AND (
+                $3::smallint IS NULL
+                OR s.century = $3
+            )
+        ORDER BY
+            CASE
+                WHEN $4 = 'century_asc' THEN s.century
+            END ASC,
+            CASE
+                WHEN $4 = 'century_desc' THEN s.century
+            END DESC,
+            CASE
+                WHEN $4 = 'name_desc' THEN s.default_name
+            END DESC,
+            s.default_name ASC
+        LIMIT $5
+        OFFSET $6
+        "#,
     )
-    .bind(language_code)
-    .bind(limit)
-    .bind(offset)
+    .bind(language_code) // $1
+    .bind(q) // $2
+    .bind(century) // $3
+    .bind(sort) // $4
+    .bind(limit) // $5
+    .bind(offset) // $6
     .fetch_all(pool)
     .await?;
 

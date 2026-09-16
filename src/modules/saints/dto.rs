@@ -24,10 +24,13 @@ pub struct SaintListItemComplete {
 }
 
 #[derive(Debug, Deserialize)]
-pub struct SaintQuery {
+pub struct SaintsListQuery {
     pub page: Option<i32>,
     pub per_page: Option<i32>,
     pub language_code: Option<String>,
+    pub century: Option<i16>,
+    pub q: Option<String>,
+    pub sort: Option<String>, // e.g., "name_asc", "name_desc", "birth_year_asc", "birth_year_desc"
 }
 
 #[derive(Debug, Serialize, FromRow)]

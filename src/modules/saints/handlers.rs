@@ -10,13 +10,16 @@ use super::service;
 
 pub async fn list_saints_complete(
     pool: web::Data<PgPool>,
-    query: web::Query<dto::SaintQuery>,
+    query: web::Query<dto::SaintsListQuery>,
 ) -> Result<HttpResponse, ApiError> {
     let result = service::list_saints_complete(
         pool.get_ref(),
         query.page.unwrap_or(1),
         query.per_page.unwrap_or(20),
         query.language_code.as_deref(),
+        query.century,
+        query.q.as_deref(),
+        query.sort.as_deref(),
     )
     .await?;
 
