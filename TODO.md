@@ -132,3 +132,5 @@ Monday of the First Week in Ordinary Time
 +++ need add after ash thrusday friday saturday
 
 ++ Need double check on places seeded
+
+++ need final push on traditional calendar logic
