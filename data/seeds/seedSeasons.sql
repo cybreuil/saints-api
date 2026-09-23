@@ -14,8 +14,14 @@ INSERT INTO liturgical_seasons (code, default_name) VALUES
 
 -- Traditional Roman calendar (1960) Extra Seasons
 ('THROUGHOUT_THE_YEAR', 'Time throughout the Year'),
+('CHRISTMAS', 'Christmas'),
+('EPIPHANY', 'Epiphany'),
 ('SEPTUAGESIMA', 'Septuagesima'),
 ('PASSIONTIDE', 'Passiontide'),
+('HOLY_WEEK', 'Holy Week'),
+('PASCHALTIDE', 'Paschaltide'),
+('ASCENSIONTIDE', 'Ascensiontide'),
+('PENTECOST_OCTAVE', 'Octave of Pentecost'),
 ('POST_PENTECOST', 'Time after Pentecost')
 ON CONFLICT (code) DO NOTHING;
 
@@ -37,8 +43,14 @@ INSERT INTO liturgical_season_translations (season_code, locale_code, label) VAL
 ('EASTERTIDE', 'en', 'Eastertide'),
 
 ('THROUGHOUT_THE_YEAR', 'en', 'Time throughout the Year'),
+('CHRISTMAS', 'en', 'Christmas'),
+('EPIPHANY', 'en', 'Epiphany'),
 ('SEPTUAGESIMA', 'en', 'Septuagesima'),
 ('PASSIONTIDE', 'en', 'Passiontide'),
+('HOLY_WEEK', 'en', 'Holy Week'),
+('PASCHALTIDE', 'en', 'Paschaltide'),
+('ASCENSIONTIDE', 'en', 'Ascensiontide'),
+('PENTECOST_OCTAVE', 'en', 'Octave of Pentecost'),
 ('POST_PENTECOST', 'en', 'Time after Pentecost'),
 
 -- =========================================================
@@ -53,8 +65,14 @@ INSERT INTO liturgical_season_translations (season_code, locale_code, label) VAL
 ('EASTERTIDE', 'fr', 'Temps pascal'),
 
 ('THROUGHOUT_THE_YEAR', 'fr', 'Temps tout au long de l''année'),
+('CHRISTMAS', 'fr', 'Temps de Noël'),
+('EPIPHANY', 'fr', 'Temps de l''Épiphanie'),
 ('SEPTUAGESIMA', 'fr', 'Temps de la Septuagésime'),
 ('PASSIONTIDE', 'fr', 'Temps de la Passion'),
+('HOLY_WEEK', 'fr', 'Semaine sainte'),
+('PASCHALTIDE', 'fr', 'Temps pascal'),
+('ASCENSIONTIDE', 'fr', 'Temps de l''Ascension'),
+('PENTECOST_OCTAVE', 'fr', 'Octave de la Pentecôte'),
 ('POST_PENTECOST', 'fr', 'Temps après la Pentecôte'),
 
 -- =========================================================
@@ -69,8 +87,14 @@ INSERT INTO liturgical_season_translations (season_code, locale_code, label) VAL
 ('EASTERTIDE', 'la', 'Tempus Paschale'),
 
 ('THROUGHOUT_THE_YEAR', 'la', 'Tempus per annum'),
+('CHRISTMAS', 'la', 'Tempus Nativitatis'),
+('EPIPHANY', 'la', 'Tempus Epiphaniae'),
 ('SEPTUAGESIMA', 'la', 'Tempus Septuagesimae'),
 ('PASSIONTIDE', 'la', 'Tempus Passionis'),
+('HOLY_WEEK', 'la', 'Hebdomada Sancta'),
+('PASCHALTIDE', 'la', 'Tempus Paschale'),
+('ASCENSIONTIDE', 'la', 'Tempus Ascensionis'),
+('PENTECOST_OCTAVE', 'la', 'Octava Pentecostes'),
 ('POST_PENTECOST', 'la', 'Tempus post Pentecosten')
 
 ON CONFLICT (season_code, locale_code) DO NOTHING;
