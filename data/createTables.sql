@@ -131,8 +131,14 @@ CREATE TABLE liturgical_seasons (
         'EASTERTIDE',
         -- Traditionnal extra :
         'THROUGHOUT_THE_YEAR',
+        'CHRISTMAS',
+        'EPIPHANY',
         'SEPTUAGESIMA',
         'PASSIONTIDE',
+        'HOLY_WEEK',
+        'PASCHALTIDE',
+        'ASCENSIONTIDE',
+        'PENTECOST_OCTAVE',
         'POST_PENTECOST'
     )),
     default_name TEXT NOT NULL
@@ -706,7 +712,9 @@ CROSS JOIN (VALUES
     ('CLASS_I', 1),
     ('CLASS_II', 2),
     ('CLASS_III', 3),
-    ('CLASS_IV', 4)
+    ('VIGIL', 4),
+    ('COMM', 5),
+    ('CLASS_IV', 6)
 ) AS x(code, precedence)
 WHERE c.code = 'ROMAN_1960';
 
@@ -719,6 +727,8 @@ JOIN (VALUES
     ('CLASS_I', 'Ire classe'),
     ('CLASS_II', 'IIe classe'),
     ('CLASS_III', 'IIIe classe'),
+    ('VIGIL', 'Vigile'),
+    ('COMM', 'Commémoraison'),
     ('CLASS_IV', 'IVe classe / férie')
 ) AS x(code, label)
 ON r.code = x.code
@@ -733,6 +743,8 @@ JOIN (VALUES
     ('CLASS_I', 'First Class'),
     ('CLASS_II', 'Second Class'),
     ('CLASS_III', 'Third Class'),
+    ('VIGIL', 'Vigil'),
+    ('COMM', 'Commemoration'),
     ('CLASS_IV', 'Fourth Class / Feria')
 ) AS x(code, label)
 ON r.code = x.code
@@ -747,6 +759,8 @@ JOIN (VALUES
     ('CLASS_I', 'Classis I'),
     ('CLASS_II', 'Classis II'),
     ('CLASS_III', 'Classis III'),
+    ('VIGIL', 'Vigilia'),
+    ('COMM', 'Commemoratio'),
     ('CLASS_IV', 'Classis IV / Feria')
 ) AS x(code, label)
 ON r.code = x.code

@@ -28,6 +28,7 @@ pub enum MovableBase {
     BaptismOfTheLord,
     AshWednesday,
     HolyThursday,
+    AscensionSunday,
     Epiphany,
     SaintJoseph, // March 19 (fixed), but if it is inside Holy Week, back to the Saturday before Palm Sunday
     Annunciation, // March 25 (fixed), but if it is inside Holy Week or Easter Octave, moved to Monday after the Octave of Easter
@@ -58,6 +59,7 @@ impl TryFrom<&str> for MovableBase {
             "BAPTISM_OF_THE_LORD" => Ok(Self::BaptismOfTheLord),
             "ASH_WEDNESDAY" => Ok(Self::AshWednesday),
             "HOLY_THURSDAY" => Ok(Self::HolyThursday),
+            "ASCENSION_SUNDAY" => Ok(Self::AscensionSunday),
             "EPIPHANY" => Ok(Self::Epiphany),
             "SAINT_JOSEPH" => Ok(Self::SaintJoseph),
             "ANNUNCIATION" => Ok(Self::Annunciation),
@@ -88,6 +90,7 @@ impl MovableBase {
             Self::BaptismOfTheLord => "BAPTISM_OF_THE_LORD",
             Self::AshWednesday => "ASH_WEDNESDAY",
             Self::HolyThursday => "HOLY_THURSDAY",
+            Self::AscensionSunday => "ASCENSION_SUNDAY",
             Self::Epiphany => "EPIPHANY",
             Self::SaintJoseph => "SAINT_JOSEPH",
             Self::Annunciation => "ANNUNCIATION",
@@ -324,6 +327,14 @@ pub fn ash_wednesday(year: i32, config: LiturgicalConfig) -> NaiveDate {
 /// Holy Thursday is 3 days before Easter Sunday.
 pub fn holy_thursday(year: i32, config: LiturgicalConfig) -> NaiveDate {
     offset(easter_sunday(year, config), -3)
+}
+
+/// Returns Ascension according to the configured calendar.
+pub fn ascension_sunday(year: i32, config: LiturgicalConfig) -> NaiveDate {
+    match config.ascension_mode {
+        AscensionMode::Thursday => offset(easter_sunday(year, config), 39),
+        AscensionMode::Sunday => offset(easter_sunday(year, config), 42),
+    }
 }
 
 /// Returns the date of Christ the King for the given year.
@@ -707,6 +718,7 @@ pub fn resolve_movable_date(
         MovableBase::BaptismOfTheLord => offset(baptism_of_the_lord(year, config), offset_days),
         MovableBase::AshWednesday => offset(ash_wednesday(year, config), offset_days),
         MovableBase::HolyThursday => offset(holy_thursday(year, config), offset_days),
+        MovableBase::AscensionSunday => offset(ascension_sunday(year, config), offset_days),
         MovableBase::Epiphany => offset(epiphany(year, config), offset_days),
         MovableBase::SaintJoseph => offset(saint_joseph(year, config), offset_days),
         MovableBase::Annunciation => offset(annunciation(year, config), offset_days),

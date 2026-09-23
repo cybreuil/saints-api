@@ -1,4 +1,4 @@
-use chrono::{Datelike, NaiveDate};
+use chrono::{Datelike, Duration, NaiveDate, Weekday};
 use sqlx::PgPool;
 use std::collections::{HashMap, HashSet};
 
@@ -6,7 +6,9 @@ use super::dto::{CelebrationByDateContext, CelebrationByDateResponse, Celebratio
 use super::repo;
 use crate::core::error::ApiError;
 use crate::core::movable_dates::{
-    resolve_movable_date, week_number_roman_general, LiturgicalConfig, MovableBase,
+    ash_wednesday, easter_sunday, first_advent_sunday, holy_thursday, palm_sunday, pentecost,
+    resolve_movable_date, week_number_roman_1960, week_number_roman_general, LiturgicalConfig,
+    MovableBase,
 };
 use crate::core::pagination::{Paginated, Pagination};
 use crate::core::validation;
@@ -140,6 +142,76 @@ async fn load_calendar_hierarchy(
     Ok(hierarchy)
 }
 
+fn has_principal_celebration(celebrations: &[CelebrationWithSaints]) -> bool {
+    celebrations
+        .iter()
+        .any(|c| c.rank_code.as_deref() != Some("COMM"))
+}
+
+fn has_class_i_or_ii(celebrations: &[CelebrationWithSaints]) -> bool {
+    celebrations
+        .iter()
+        .any(|c| matches!(c.rank_precedence, Some(precedence) if precedence <= 2))
+}
+
+fn roman_1960_feria_rank_code(date: NaiveDate, year: i32, config: LiturgicalConfig) -> &'static str {
+    let easter = easter_sunday(year, config);
+    let ash_wednesday = ash_wednesday(year, config);
+    let palm_sunday = palm_sunday(year, config);
+    let holy_thursday = holy_thursday(year, config);
+    let pentecost = pentecost(year, config);
+    let first_advent = first_advent_sunday(year);
+
+    if date == ash_wednesday
+        || (date > palm_sunday && date < easter)
+        || (date >= easter && date <= easter + Duration::days(6))
+        || (date >= pentecost && date <= pentecost + Duration::days(6))
+    {
+        return "CLASS_I";
+    }
+
+    if (date.month() == 12 && (17..=23).contains(&date.day()))
+        || (date.month() == 12 && (29..=31).contains(&date.day()))
+    {
+        return "CLASS_II";
+    }
+
+    if (date >= first_advent && date < NaiveDate::from_ymd_opt(year, 12, 17).unwrap())
+        || (date >= ash_wednesday && date < holy_thursday)
+    {
+        return "CLASS_III";
+    }
+
+    "CLASS_IV"
+}
+
+fn roman_1960_sunday_rank_code(date: NaiveDate, year: i32, config: LiturgicalConfig) -> &'static str {
+    let easter = easter_sunday(year, config);
+    let first_advent = first_advent_sunday(year);
+    let first_lent_sunday = easter - Duration::days(42);
+
+    if date == easter + Duration::days(7)
+        || (date >= first_advent && date < NaiveDate::from_ymd_opt(year, 12, 25).unwrap())
+        || (date >= first_lent_sunday && date < easter)
+    {
+        "CLASS_I"
+    } else {
+        "CLASS_II"
+    }
+}
+
+fn roman_1960_fallback_rank_code(
+    date: NaiveDate,
+    year: i32,
+    config: LiturgicalConfig,
+) -> &'static str {
+    if date.weekday() == Weekday::Sun {
+        roman_1960_sunday_rank_code(date, year, config)
+    } else {
+        roman_1960_feria_rank_code(date, year, config)
+    }
+}
+
 pub async fn get_celebrations_by_date(
     pool: &PgPool,
     year: i32,
@@ -227,10 +299,45 @@ pub async fn get_celebrations_by_date(
         .iter()
         .any(|calendar| calendar.code == "ROMAN_GENERAL");
 
+    let uses_roman_1960 = calendars
+        .iter()
+        .any(|calendar| calendar.code == "ROMAN_1960");
+
+    if uses_roman_1960
+        && (!has_principal_celebration(&celebrations_with_saints)
+            || (is_sunday && !has_class_i_or_ii(&celebrations_with_saints)))
+    {
+        let config = calendars::mapper::to_liturgical_config(&calendars[0]);
+        let rank_code = roman_1960_fallback_rank_code(date, year, config);
+
+        let rank = repo::get_rank_by_code(pool, "ROMAN_1960", rank_code, lang).await?;
+        let feast_type = if is_sunday {
+            "sunday".to_string()
+        } else {
+            "feria".to_string()
+        };
+
+        let week_number = week_number_roman_1960(date, year, config);
+
+        let feria_info = feria::build_feria_info(
+            date,
+            lang,
+            liturgical_season.as_ref().and_then(|s| s.label.as_deref()),
+            week_number,
+        );
+
+        celebrations_with_saints.push(CelebrationWithSaints::feria(
+            feria_info.label,
+            rank,
+            feast_type,
+        ));
+
+        celebrations_with_saints.sort_by_key(|c| c.rank_precedence.unwrap_or(i16::MAX));
+    }
+
     // Fallback Celebration (Feria / Sunday) for roman calendar or childs of Roman General
     // if no celebrations are found or if it's an Ordinary Sunday
-    if uses_roman_general && (celebrations_with_saints.is_empty())
-        || (is_sunday && is_ordinary_time)
+    if uses_roman_general && (celebrations_with_saints.is_empty() || (is_sunday && is_ordinary_time))
     {
         // Try to obtain a rank, climbing parents if necessary
         let mut last_error = None;

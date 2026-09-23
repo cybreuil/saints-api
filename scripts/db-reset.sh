@@ -97,9 +97,8 @@ echo "✅ Roman France Feast Saints links seeded."
 run_sql "$ROOT_DIR/data/seeds/Roman_1960/seedRoman1960.sql"
 echo "✅ Roman 1960 seeded."
 
-# WIP
-# run_sql "$ROOT_DIR/data/seeds/Roman_1960/seedRoman1960Seasons.sql"
-# echo "✅ Roman 1960 seasons seeded."
+run_sql "$ROOT_DIR/data/seeds/Roman_1960/seedRoman1960Seasons.sql"
+echo "✅ Roman 1960 seasons seeded."
 
 # run_sql "$ROOT_DIR/data/seeds/Roman_1960/seedRoman1960Saints.sql"
 # echo "✅ Roman 1960 saints seeded."

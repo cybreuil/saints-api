@@ -292,6 +292,39 @@ pub async fn get_ordinary_sunday_rank(
     Ok(rank)
 }
 
+pub async fn get_rank_by_code(
+    pool: &PgPool,
+    calendar_code: &str,
+    rank_code: &str,
+    language_code: &str,
+) -> Result<LiturgicalRankRow, ApiError> {
+    let rank = sqlx::query_as::<_, LiturgicalRankRow>(
+        r#"
+		SELECT
+			lr.id,
+			lr.code,
+			lr.precedence,
+			lrt.label
+		FROM liturgical_ranks lr
+		LEFT JOIN liturgical_rank_translations lrt
+			ON lr.id = lrt.rank_id
+			AND lrt.locale_code = $3
+		INNER JOIN calendars cal
+			ON cal.id = lr.calendar_id
+			AND cal.code = $1
+		WHERE lr.code = $2
+		LIMIT 1
+		"#,
+    )
+    .bind(calendar_code)
+    .bind(rank_code)
+    .bind(language_code)
+    .fetch_one(pool)
+    .await?;
+
+    Ok(rank)
+}
+
 pub async fn get_parent_calendar_code(
     pool: &PgPool,
     calendar_code: &str,

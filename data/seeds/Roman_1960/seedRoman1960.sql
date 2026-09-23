@@ -590,10 +590,10 @@ JOIN (VALUES
 ('saint-gregory-barbarigo-bishop',                    6, 17, 'CLASS_III', 'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
 ('saint-juliana-falconieri-virgin',                   6, 19, 'CLASS_III', 'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
 ('commemoration-of-saint-silverius',                  6, 20, 'COMM',      'RED',   'normal', FALSE, 'Wikipedia 1960'),
-('vigil-of-saint-john-the-baptist',                   6, 23, 'CLASS_II',  'VIOLET','normal', FALSE, 'Wikipedia 1960'),
+('vigil-of-saint-john-the-baptist',                   6, 23, 'CLASS_II',  'PURPLE','normal', FALSE, 'Wikipedia 1960'),
 ('saint-william-abbot',                               6, 25, 'CLASS_III', 'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
 ('saints-john-and-paul-martyrs',                      6, 26, 'CLASS_III', 'RED',   'normal', FALSE, 'Wikipedia 1960'),
-('vigil-of-saints-peter-and-paul',                    6, 28, 'CLASS_II',  'VIOLET','normal', FALSE, 'Wikipedia 1960'),
+('vigil-of-saints-peter-and-paul',                    6, 28, 'CLASS_II',  'PURPLE','normal', FALSE, 'Wikipedia 1960'),
 ('commemoration-of-saint-paul-apostle-june',          6, 30, 'CLASS_III', 'RED',   'normal', FALSE, 'Wikipedia 1960'),
 -- JULY
 ('the-most-precious-blood-of-our-lord',               7,  1, 'CLASS_I',   'RED',   'normal', FALSE, 'Wikipedia 1960'),
@@ -610,10 +610,10 @@ JOIN (VALUES
 ('commemoration-of-saints-abdon-and-sennen',          7, 30, 'COMM',      'RED',   'normal', FALSE, 'Wikipedia 1960'),
 -- AUGUST
 ('commemoration-of-holy-machabees',                   8,  1, 'COMM',      'RED',   'normal', FALSE, 'Wikipedia 1960'),
-('vigil-of-saint-laurence',                           8,  9, 'VIGIL',     'VIOLET','normal', FALSE, 'Wikipedia 1960'),
+('vigil-of-saint-laurence',                           8,  9, 'VIGIL',     'PURPLE','normal', FALSE, 'Wikipedia 1960'),
 ('commemoration-of-saints-tiburtius-and-susanna',     8, 11, 'COMM',      'RED',   'normal', FALSE, 'Wikipedia 1960'),
 ('commemoration-of-saints-hippolytus-and-cassian',    8, 13, 'COMM',      'RED',   'normal', FALSE, 'Wikipedia 1960'),
-('vigil-of-the-assumption',                           8, 14, 'CLASS_II',  'VIOLET','normal', FALSE, 'Wikipedia 1960'),
+('vigil-of-the-assumption',                           8, 14, 'CLASS_II',  'PURPLE','normal', FALSE, 'Wikipedia 1960'),
 ('saint-joachim-father-of-the-blessed-virgin-mary',   8, 16, 'CLASS_II',  'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
 ('saint-hyacinth-confessor',                          8, 17, 'CLASS_III', 'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
 ('commemoration-of-saint-agapitus-martyr',            8, 18, 'COMM',      'RED',   'normal', FALSE, 'Wikipedia 1960'),
@@ -653,7 +653,7 @@ JOIN (VALUES
 -- DECEMBER
 ('saint-bibiana-virgin-and-martyr',                   12,  2, 'CLASS_III', 'RED',   'normal', FALSE, 'Wikipedia 1960'),
 ('commemoration-of-saint-sabbas-abbot',               12,  5, 'COMM',      'WHITE', 'normal', FALSE, 'Wikipedia 1960'),
-('vigil-of-christmas',                                12, 24, 'CLASS_I',   'VIOLET','normal', FALSE, 'Wikipedia 1960'),
+('vigil-of-christmas',                                12, 24, 'CLASS_I',   'PURPLE','normal', FALSE, 'Wikipedia 1960'),
 ('fifth-day-within-octave-of-christmas',              12, 29, 'CLASS_II',  'WHITE', 'octave', FALSE, 'Wikipedia 1960'),
 ('sixth-day-within-octave-of-christmas',              12, 30, 'CLASS_II',  'WHITE', 'octave', FALSE, 'Wikipedia 1960'),
 ('seventh-day-within-octave-of-christmas',            12, 31, 'CLASS_II',  'WHITE', 'octave', FALSE, 'Wikipedia 1960')
@@ -879,7 +879,7 @@ ON CONFLICT (feast_id, calendar_id) DO NOTHING;
 
 -- Our Lord Jesus Christ the King: Last Sunday in October
 INSERT INTO celebrations (feast_id, calendar_id, rank_id, color_id, date_kind, movable_base, movable_offset_days, observance_type, is_optional, notes)
-SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'LAST_SUNDAY_IN_OCTOBER', 0, 'normal', FALSE, 'Wikipedia 1960 movable'
+SELECT f.id, tcal.id, r.id, lc.id, 'movable', 'CHRIST_THE_KING', 0, 'normal', FALSE, 'Wikipedia 1960 movable'
 FROM feasts f
 JOIN calendars tcal ON tcal.code = 'ROMAN_1960'
 JOIN liturgical_ranks r ON r.calendar_id = tcal.id AND r.code = 'CLASS_I'
