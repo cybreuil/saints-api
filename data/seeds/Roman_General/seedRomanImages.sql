@@ -772,7 +772,7 @@ INSERT INTO images (
 ('/saints/saint-lawrence_santacroce.webp', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Girolamo da Santacroce', '1520-1530', 'Courtauld Gallery', NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_champaigne_martyr.webp', 'The Martyrdom of Saint Lawrence', 'painting', 'The Martyrdom of Saint Lawrence Painting', 'Jean Baptiste de Champaigne', '1660', 'National Gallery of Art (Washington, D.C.)', NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_limosin.webp', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Jean Limosin', '17th Century', 'Museum of Fine Arts of Lyon', NULL, 'Public Domain', NULL),
-('/saints/saint-lawrence_calli.webp', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Giuseppe Calì', '1889', 'Saint Lawrence Church (Gozo)', NULL, 'Public Domain', NULL),
+('/saints/saint-lawrence_cali.webp', 'Saint Lawrence', 'painting', 'Saint Lawrence Painting', 'Giuseppe Calì', '1889', 'Saint Lawrence Church (Gozo)', NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_titian_martyr.webp', 'The Martyrdom of Saint Lawrence', 'painting', 'The Martyrdom of Saint Lawrence Painting', 'Titian', '1564-1567', 'El Escorial', NULL, 'Public Domain', NULL),
 ('/saints/saint-lawrence_strozzi.webp', 'Saint Lawrence Distributing the Treasures of the Church', 'painting', 'Saint Lawrence Distributing the Treasures of the Church Painting', 'Bernardo Strozzi', '1625', 'North Carolina Museum of Art', NULL, 'Public Domain', NULL),
 
