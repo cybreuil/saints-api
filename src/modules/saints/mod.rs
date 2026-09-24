@@ -4,6 +4,5 @@ pub mod router;
 // Internal module structure
 mod dto;
 mod handlers;
-mod model;
 mod repo;
 mod service;
