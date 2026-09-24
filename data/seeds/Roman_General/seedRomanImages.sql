@@ -27,6 +27,7 @@ INSERT INTO images (
   alt_text,
   creator,
   date_label,
+  -- WIP NEED CENTURY FOR FILTER
   repository,
   credit,
   license,

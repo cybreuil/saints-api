@@ -93,6 +93,12 @@ echo "✅ Roman France Feast Saints links seeded."
 # run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceSaintPatronages.sql"
 # echo "✅ Roman France saint patronages seeded."
 
+run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceImages.sql"
+echo "✅ Roman France images seeded."
+
+run_sql "$ROOT_DIR/data/seeds/Roman_France/seedRomanFranceSaintImages.sql"
+echo "✅ Roman France saint images seeded."
+
 # Traditionnal
 run_sql "$ROOT_DIR/data/seeds/Roman_1960/seedRoman1960.sql"
 echo "✅ Roman 1960 seeded."
