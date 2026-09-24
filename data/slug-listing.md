@@ -1,12 +1,11 @@
 (using
 for feasts:
 
-perl -0777 -ne "if (m/INSERT INTO feasts\s*\(slug,\s*default_name,\s*feast_type\)\s*VALUES(.*?)ON CONFLICT\s*\(slug\)\s*DO NOTHING/si) { my \$b=\$1; while (\$b =~ /\(\s*'((?:[^']|'')*)'\s*,/g) { my \$s=\$1; \$s=~s/''/'/g; print \"\$s\n\" } }" data/seeds/Roman_France/seedRomanFrance.sql | sort -u
-
+perl -0777 -ne "if (m/INSERT INTO feasts\s*\(slug,\s*default_name,\s*feast_type\)\s*VALUES(.*?)ON CONFLICT\s*\(slug\)\s*DO NOTHING/si) { my \$b=\$1; while (\$b =~ /\(\s*'((?:[^']|'')_)'\s_,/g) { my \$s=\$1; \$s=~s/''/'/g; print \"\$s\n\" } }" data/seeds/Roman_France/seedRomanFrance.sql | sort -u
 
 for saints:
 
-perl -0777 -ne "if (m/INSERT INTO saints\s*\([^)]*\)\s*VALUES(.*?)ON CONFLICT\s*\(slug\)\s*DO NOTHING/si) { \$b=\$1; while (\$b =~ /\(\s*'((?:[^']|'')*)'/g) { \$s=\$1; \$s=~s/''/'/g; print \"\$s\n\" } }" data/seeds/Roman_Spain/seedRomanSpainSaints.sql | sort -u
+perl -0777 -ne "if (m/INSERT INTO saints\s*\([^)]*\)\s*VALUES(._?)ON CONFLICT\s_\(slug\)\s*DO NOTHING/si) { \$b=\$1; while (\$b =~ /\(\s*'((?:[^']|'')*)'/g) { \$s=\$1; \$s=~s/''/'/g; print \"\$s\n\" } }" data/seeds/Roman_Spain/seedRomanSpainSaints.sql | sort -u
 
 )
 
@@ -498,7 +497,7 @@ saint-wenceslaus
 
 ---
 
-ROMAN_FRANCE 
+ROMAN_FRANCE
 
 -- feasts entities
 
@@ -703,3 +702,127 @@ saint-vincent-pallotti
 saint-zdzislawa
 saint-zygmunt-gorazdowski
 saint-zygmunt-szczesny-felinski
+
+---
+
+ROMAN_1960
+-- feasts entities
+blessed-virgin-mary-queen
+commemoration-of-holy-four-crowned-martyrs
+commemoration-of-holy-machabees
+commemoration-of-our-lady-of-mt-carmel
+commemoration-of-our-lady-of-ransom
+commemoration-of-saint-agapitus-martyr
+commemoration-of-saint-alexius
+commemoration-of-saint-boniface-martyr-may
+commemoration-of-saint-christina-virgin
+commemoration-of-saint-eustace
+commemoration-of-saint-evaristus
+commemoration-of-saint-felix-i-pope
+commemoration-of-saint-felix-of-nola
+commemoration-of-saint-giles-abbot
+commemoration-of-saint-gorgonius
+commemoration-of-saint-hilarion
+commemoration-of-saint-hyginus
+commemoration-of-saint-maurus-abbot
+commemoration-of-saint-pantaleon
+commemoration-of-saint-paul-apostle-june
+commemoration-of-saint-pius-i
+commemoration-of-saint-prisca
+commemoration-of-saint-sabbas-abbot
+commemoration-of-saints-abdon-and-sennen
+commemoration-of-saints-alexander-eventius-theodulus
+commemoration-of-saint-saturninus
+commemoration-of-saints-chrysanthus-and-daria
+commemoration-of-saints-faustinus-and-jovita
+commemoration-of-saints-hippolytus-and-cassian
+commemoration-of-saint-silverius
+commemoration-of-saint-simeon-bishop-and-martyr
+commemoration-of-saints-marcellinus-peter-erasmus
+commemoration-of-saints-marius-martha-audifax-abachum
+commemoration-of-saints-nazarius-celsus-victor-innocent
+commemoration-of-saints-primus-and-felician
+commemoration-of-saints-protus-and-hyacinth
+commemoration-of-saints-tiburtius-and-susanna
+commemoration-of-saint-telesphorus
+commemoration-of-saint-valentine
+commemoration-of-saint-zephyrinus
+commemoration-of-stigmata-of-saint-francis
+dedication-of-saint-michael-archangel
+fifth-day-within-octave-of-christmas
+maternity-of-the-blessed-virgin-mary
+octave-day-of-the-nativity
+our-lord-jesus-christ-the-king
+saint-andrew-avellino-confessor
+saint-andrew-corsini-bishop-and-confessor
+saint-angela-merici-virgin-june
+saint-anne-mother-of-the-blessed-virgin-mary
+saint-antoninus-archbishop
+saint-basil-the-great-bishop-and-doctor
+saint-bibiana-virgin-and-martyr
+saint-boniface-bishop-and-martyr
+saint-didacus-confessor
+saint-edward-king-and-confessor
+saint-felix-of-valois-confessor
+saint-francis-caracciolo-confessor
+saint-gabriel-of-our-lady-of-sorrows
+saint-gabriel-the-archangel
+saint-gregory-barbarigo-bishop
+saint-gregory-nazianzen-bishop-and-doctor
+saint-gregory-thaumaturgus-bishop
+saint-hermenegild-martyr
+saint-hyacinth-confessor
+saint-joachim-father-of-the-blessed-virgin-mary
+saint-john-capistran-confessor
+saint-john-gualbert-abbot
+saint-john-of-matha-confessor
+saint-john-of-san-facundo-confessor
+saint-joseph-of-cupertino-confessor
+saint-joseph-the-workman
+saint-juliana-falconieri-virgin
+saint-laurence-justinian-bishop
+saint-linus-pope-and-martyr
+saint-marcellus-i-pope-and-martyr
+saint-margaret-of-scotland-queen
+saint-martha-virgin
+saint-martina-virgin-and-martyr
+saint-monica-widow
+saint-nicholas-of-tolentino-confessor
+saint-paschal-baylon-confessor
+saint-paul-the-first-hermit
+saint-peter-celestine-pope
+saint-peter-martyr-op
+saint-peter-nolasco-confessor
+saint-peter-of-alcantara-confessor
+saint-philip-benizi-confessor
+saint-raphael-archangel
+saint-raymond-nonnatus-confessor
+saints-cletus-and-marcellinus-popes-and-martyrs
+saints-fabian-and-sebastian-martyrs
+saints-john-and-paul-martyrs
+saints-nereus-achilleus-domitilla-pancras-martyrs
+saints-soter-and-cajus-popes-and-martyrs
+saints-vincent-and-anastasius-martyrs
+saint-sylvester-abbot
+saint-thomas-of-villanova-bishop
+saint-timothy-bishop-and-martyr-1962
+saint-titus-bishop-and-confessor
+saint-ubald-bishop-and-confessor
+saint-venantius-martyr
+saint-william-abbot
+seven-holy-brothers-martyrs
+seventh-day-within-octave-of-christmas
+sixth-day-within-octave-of-christmas
+the-forty-holy-martyrs-of-sebaste
+the-holy-family-of-jesus-mary-and-joseph-1960
+the-most-precious-blood-of-our-lord
+the-seven-sorrows-of-the-blessed-virgin-mary
+vigil-of-christmas
+vigil-of-saint-john-the-baptist
+vigil-of-saint-laurence
+vigil-of-saints-peter-and-paul
+vigil-of-the-assumption
+
+---
+
+ROMAN_1960_FRANCE
