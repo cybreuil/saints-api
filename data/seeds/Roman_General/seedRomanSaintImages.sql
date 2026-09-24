@@ -1161,7 +1161,7 @@ JOIN (
 -- Saint Albert the Great
 ('saint-albert-the-great', '/saints/saint-albert-the-great_gomez.webp', 1, TRUE, 'subject'),
 ('saint-albert-the-great', '/saints/saint-albert-the-great.webp', 2, FALSE, 'subject'),
-('saint-albert-the-great', '/saints/saint-albert-the-great-&-thomas-aquinas.webp', 3, FALSE, 'subject'),
+('saint-albert-the-great', '/saints/saint-albert-the-great-&-thomas-aquinas_villamor.webp', 3, FALSE, 'subject'),
 
 -- Saint Margaret of Scotland
 ('saint-margaret-of-scotland', '/saints/saint-margaret-of-scotland_largillierre.webp', 1, TRUE, 'subject'),

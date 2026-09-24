@@ -1179,7 +1179,7 @@ INSERT INTO images (
 -- Saint Albert the Great
 ('/saints/saint-albert-the-great_gomez.webp', 'Saint Albert the Great', 'painting', 'Saint Albert the Great Painting', 'Vicente Salvador Gómez', '1660', 'Museu de Belles Arts de València', NULL, 'Public Domain', NULL),
 ('/saints/saint-albert-the-great.webp', 'Saint Albert the Great', 'painting', 'Saint Albert the Great Painting', NULL, NULL, NULL, NULL, 'Public Domain', NULL),
-('/saints/saint-albert-the-great-&-thomas-aquinas.webp', 'Saint Albert the Great & Saint Thomas Aquinas', 'painting', 'Saint Albert the Great & Saint Thomas Aquinas Painting', 'Alonso Antonio Villamor', NULL, NULL, NULL, 'Public Domain', NULL),
+('/saints/saint-albert-the-great-&-thomas-aquinas_villamor.webp', 'Saint Albert the Great & Saint Thomas Aquinas', 'painting', 'Saint Albert the Great & Saint Thomas Aquinas Painting', 'Alonso Antonio Villamor', NULL, NULL, NULL, 'Public Domain', NULL),
 
 -- Saint Margaret of Scotland
 ('/saints/saint-margaret-of-scotland_largillierre.webp', 'Saint Margaret of Scotland', 'painting', 'Saint Margaret of Scotland Painting', 'Nicolas de Largillierre', '1692', NULL, NULL, 'Public Domain', NULL),
