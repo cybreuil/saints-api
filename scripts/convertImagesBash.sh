@@ -7,7 +7,7 @@ set -euo pipefail
 # --src=PATH       (required)
 # --out=PATH       (required)
 # --sizes=1600,1024,640,320
-# --quality=80     (quality for webp master; smaller variants get smaller quality automatically)
+# --quality=95     (quality for webp master; smaller variants get smaller quality automatically)
 # --min-kb=0       (skip files <= this KB)
 # --dry=true       (dry run default)
 # --force=false    (force writing even if webp larger than original)
@@ -16,17 +16,18 @@ set -euo pipefail
 
 # Parse args (simple)
 for arg in "$@"; do
-  case $arg in
-    --src=*) SRC="${arg#*=}"; shift ;;
-    --out=*) OUT="${arg#*=}"; shift ;;
-    --sizes=*) SIZES="${arg#*=}"; shift ;;
-    --quality=*) QUALITY="${arg#*=}"; shift ;;
-    --min-kb=*) MINKB="${arg#*=}"; shift ;;
-    --dry=*) DRY="${arg#*=}"; shift ;;
-    --force=*) FORCE="${arg#*=}"; shift ;;
+  case "$arg" in
+    --src=*) SRC="${arg#*=}" ;;
+    --out=*) OUT="${arg#*=}" ;;
+    --sizes=*) SIZES="${arg#*=}" ;;
+    --quality=*) QUALITY="${arg#*=}" ;;
+    --min-kb=*) MINKB="${arg#*=}" ;;
+    --dry=*) DRY="${arg#*=}" ;;
+    --force=*) FORCE="${arg#*=}" ;;
     *) echo "Unknown arg: $arg"; exit 1 ;;
   esac
 done
+
 
 : "${SRC:?--src is required}"
 : "${OUT:?--out is required}"
@@ -37,10 +38,12 @@ DRY="${DRY:-true}"
 FORCE="${FORCE:-false}"
 
 # tools
-if command -v vipsthumbnail >/dev/null 2>&1; then
-  TOOL="vips"
-  echo "Using libvips (vipsthumbnail)"
-elif command -v magick >/dev/null 2>&1; then
+# Commented out vipsthumbnail check because it was causing issues on some systems. You can uncomment it if you want to prioritize libvips over ImageMagick.
+# if command -v vipsthumbnail >/dev/null 2>&1; then
+#   TOOL="vips"
+#   echo "Using libvips (vipsthumbnail)"
+# should be elif here line 46
+if command -v magick >/dev/null 2>&1; then
   TOOL="magick"
   echo "vipsthumbnail not found, using ImageMagick (magick)"
 elif command -v convert >/dev/null 2>&1; then
@@ -99,33 +102,17 @@ for ext in "${EXTS[@]}"; do
       tmpout=$(mktemp --suffix=.webp)
 
       if [ "$TOOL" = "vips" ]; then
-        # vipsthumbnail handles resizing and writing; try passing quality via [Q=...] suffix
-        # Note: vipsthumbnail converts format based on output extension.
-        # Use vips via vipsthumbnail with -s size and -o out
-        # For quality set using [] in -o param if supported.
-        # Some vips builds accept out.webp[Q=80]
-        # first try vipsthumbnail with quality token, fallback to simple vipsthumbnail then cwebp if needed.
-        if vipsthumbnail --version >/dev/null 2>&1; then
-          # try with quality hint
-          out_with_q="${tmpout}[Q=${q}]"
-          if vipsthumbnail "$srcfile" -s "$size" -o "$out_with_q" >/dev/null 2>&1; then
-            mv "$tmpout" "${tmpout}.done" 2>/dev/null || true
-            # vipsthumbnail wrote directly to tmpout (or tmpout.done) - ensure file exists
-            # sometimes vipsthumbnail writes to path without [] expansion; use tmpout path as reasonable fallback
-          else
-            # fallback: create jpeg/png temp then use cwebp if available, else magick fallback
-            if command -v cwebp >/dev/null 2>&1; then
-              tmppng=$(mktemp --suffix=.png)
-              vipsthumbnail "$srcfile" -s "$size" -o "$tmppng"
-              cwebp -q "$q" "$tmppng" -o "$tmpout" >/dev/null 2>&1 || true
-              rm -f "$tmppng"
-            else
-              # final fallback: vipsthumbnail direct to tmpout
-              vipsthumbnail "$srcfile" -s "$size" -o "$tmpout"
-            fi
-          fi
+        out_with_q="${tmpout}[Q=${q}]"
+
+        if ! vipsthumbnail "$srcfile" \
+            --size "$size" \
+            --output "$out_with_q"; then
+          echo "ERROR: vipsthumbnail failed for $rel size $size" >&2
+          rm -f "$tmpout"
+          continue
         fi
       fi
+
 
       if [ "$TOOL" = "magick" ]; then
         # ImageMagick: resize and convert. no upscaling due to '>' in geometry.
